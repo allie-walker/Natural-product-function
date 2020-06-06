@@ -1,0 +1,553 @@
+LOCUS       BGC0000538.1            7610 bp    DNA     linear   UNK 01-JAN-1980
+DEFINITION  Nisin Z biosynthetic gene cluster
+ACCESSION   BGC0000538
+VERSION     BGC0000538.1
+KEYWORDS    .
+SOURCE      
+  ORGANISM  .
+            .
+FEATURES             Location/Qualifiers
+     source          1..7610
+                     /db_xref="taxon:1358"
+                     /mol_type="genomic DNA"
+                     /organism="Lactococcus lactis"
+     cluster         1..7610
+                     /contig_edge="True"
+                     /cutoff=20000
+                     /extension=10000
+                     /note="Cluster number: 1"
+                     /note="Detection rule(s) for this cluster type:
+                     lantipeptide: (cluster(LANC_like,Flavoprotein) or
+                     cluster(LANC_like,Trp_halogenase) or
+                     cluster(LANC_like,p450) or (LANC_like & Pkinase) or
+                     (LANC_like & DUF4135) or cluster(LANC_like,Lant_dehyd_N) or
+                     cluster(LANC_like,Lant_dehyd_C) or
+                     cluster(LANC_like,adh_short) or
+                     cluster(LANC_like,adh_short_C2) or TIGR03731 or Antimicr18
+                     or Gallidermin or L_biotic_A or leader_d or leader_eh or
+                     leader_abc or mature_d or mature_ab or mature_a or mature_b
+                     or mature_ha or mature_h_beta or lacticin_l or lacticin_mat
+                     or LD_lanti_pre or strep_PEQAXS);"
+                     /product="lantipeptide"
+     CDS_motif       239..334
+                     /locus_tag="nisin"
+                     /note="leader peptide"
+                     /note="lantipeptide"
+                     /note="predicted leader seq:
+                     MSTKDFNLDLVSVSKKDSGASPRITSISLCTP"
+     gene            239..412
+                     /gene="nisin"
+     CDS             239..412
+                     /citation=[1]
+                     /codon_start=1
+                     /db_xref="GI:473017"
+                     /db_xref="GOA:P29559"
+                     /db_xref="InterPro:IPR000446"
+                     /db_xref="InterPro:IPR006079"
+                     /db_xref="PDB:1WCO"
+                     /db_xref="UniProtKB/Swiss-Prot:P29559"
+                     /function="antibiotic"
+                     /gene="nisin"
+                     /product="NisZ protein"
+                     /protein_id="CAA79467.1"
+                     /sec_met="Type: lantipeptide"
+                     /sec_met="Domains detected: TIGR03731 (E-value: 7.7e-25,
+                     bitscore: 75.5, seeds: 23); mature_a (E-value: 3.5e-08,
+                     bitscore: 21.5, seeds: 5)"
+                     /sec_met="Kind: biosynthetic"
+                     /transl_table=11
+                     /translation="MSTKDFNLDLVSVSKKDSGASPRITSISLCTPGCKTGALMGCNMK
+                     TATCNCSIHVSK"
+     PFAM_domain     254..352
+                     /aSTool="fullhmmer"
+                     /asDomain_id="fullhmmer_nisin_0001"
+                     /database="Pfam-A.hmm"
+                     /db_xref="PFAM: PF02052"
+                     /description="Gallidermin"
+                     /detection="hmmscan"
+                     /domain="Gallidermin"
+                     /evalue="4.20E-08"
+                     /label="nisin"
+                     /locus_tag="nisin"
+                     /note="Pfam-A.hmm-Hit: Gallidermin. Score: 33.1. E-value:
+                     4.2e-08. Domain range: 10..46."
+                     /note="ClusterFinder probability: 0.999999563135"
+                     /score="33.1"
+                     /translation="FNLDLVSVSKKDSGASPRITSISLCTPGCKTGA"
+     CDS_motif       335..412
+                     /locus_tag="nisin"
+                     /note="core peptide"
+                     /note="lantipeptide"
+                     /note="monoisotopic mass: 2467.1"
+                     /note="molecular weight: 2469.0"
+                     /note="alternative weights: 2487.0"
+                     /note="number of bridges: 4"
+                     /note="predicted core seq: GCKTGALMGCNMKTATCNCSIHVSK"
+                     /note="predicted class: lantipeptide"
+                     /note="score: 0.00"
+                     /note="RODEO score: 25"
+     gene            520..3501
+                     /gene="nisB"
+     CDS             520..3501
+                     /citation=[1]
+                     /citation=[2]
+                     /codon_start=1
+                     /db_xref="GI:473018"
+                     /db_xref="InterPro:IPR006826"
+                     /db_xref="InterPro:IPR006827"
+                     /db_xref="UniProtKB/TrEMBL:Q48673"
+                     /gene="nisB"
+                     /note="smCOG:
+                     SMCOG1155:Lantibiotic_dehydratase_domain_protein (Score:
+                     860.3; E-value: 2.8e-260);"
+                     /product="NisB protein"
+                     /protein_id="CAA79468.1"
+                     /sec_met="Type: lantipeptide"
+                     /sec_met="Domains detected: Lant_dehyd_N (E-value: 1.8e-25,
+                     bitscore: 77.8, seeds: 38); Lant_dehyd_C (E-value:
+                     5.2e-120, bitscore: 389.8, seeds: 37); Lant_dehydr_C
+                     (E-value: 2.5e-18, bitscore: 55.3, seeds: ?)"
+                     /sec_met="Kind: biosynthetic"
+                     /transl_table=11
+                     /translation="MIKSSFKAQPFLVRNTILSPNDKRSFTEYTQVIETVSKNKVFLEQ
+                     LLLANPKLYNVMQKYNAGLLKKKRVKKLFESIYKYYKRSYLRSTPFGLFSETSIGVFSK
+                     SSQYKLMGKTTKGIRLDTQWLIRLVHKMEVDFSKKLSFTRNNANYKFGDRVFQVYTINS
+                     SELEEVNIKYTNVYQIISEFCENDYQKYEDICETVTLCYGDEYRELSEQYLGSLIVNHY
+                     LISNLQKDLLSDFSWDTFLTKVEAIDEDKKYIIPLKKVQKFIQEYSEIEIGEGIEKLKE
+                     IYQEMSQILENDNYIQIDLISDSEINFDVKQKQQLEHLAEFLGNTTKSVRRTYLDDYKD
+                     KFIEKYGVDQEVQITELFDSTFGIGAPYNYNHPRNDFYESEPSTLYYSEEEREKYLSMY
+                     VEAVKNHNVINLDDLESHYQKMDLEKKSELQGLELFLNLAKEYEKDIFILGDIVGNNNL
+                     GGASGRFSALSPELTSYHRTIVDSVERENENKEITSCEIVFLPENIRHANVMHTSIMRR
+                     KVLPFFTSTSHNEVQLTNIYIGIDEKEKFYARDISTQEVLKFYITSMYNKTLFSNELRF
+                     LYEISLDDKFGNLPWELIYRDFDYIPRLVFDEIVISPAKWKIWGRDVNNKMTIRELIQS
+                     KEIPKEFYIVNGDNKVYLSQENPLDMEILESAIKKSSKRKDFIELQEYFEDENIINKGQ
+                     KGRVADVVVPFIRTRALGNEGRAFIREKRVSVERREKLPFNEWLYLKLYISINRQNEFL
+                     LSYLPDIQKIVANLGGKLFFLRYTDPKPHIRLRIKCSDLFLAYGSILEILKRSQKNRIM
+                     STFDISIYDQEVERYGGFDTLELSEAIFCADSKIIPNLLTLIKDTNNDWKVDDVSILVN
+                     YLYLKCFFQNDNKKILNFLNLVSPKKVKENVNEKIEHYLKLLKVDNLGDQIFYDKNFKE
+                     LKHAIKNLFLKMIAQDFELQKVYSIIDSIIHVHNNRLIGIERDKEKLIYYTLQRLFVSE
+                     EYMK"
+     PFAM_domain     643..918
+                     /aSTool="fullhmmer"
+                     /asDomain_id="fullhmmer_nisB_0003"
+                     /database="Pfam-A.hmm"
+                     /db_xref="PFAM: PF04737"
+                     /description="Lantibiotic dehydratase, N terminus"
+                     /detection="hmmscan"
+                     /domain="Lant_dehyd_N"
+                     /evalue="4.50E-22"
+                     /label="nisB"
+                     /locus_tag="nisB"
+                     /note="Pfam-A.hmm-Hit: Lant_dehyd_N. Score: 77.8. E-value:
+                     4.5e-22. Domain range: 0..96."
+                     /note="ClusterFinder probability: 0.999979272533"
+                     /score="77.8"
+                     /translation="FLEQLLLANPKLYNVMQKYNAGLLKKKRVKKLFESIYKYYKRSYL
+                     RSTPFGLFSETSIGVFSKSSQYKLMGKTTKGIRLDTQWLIRLVHKME"
+     PFAM_domain     1087..2538
+                     /aSTool="fullhmmer"
+                     /asDomain_id="fullhmmer_nisB_0001"
+                     /database="Pfam-A.hmm"
+                     /db_xref="PFAM: PF04738"
+                     /description="Lantibiotic dehydratase, C terminus"
+                     /detection="hmmscan"
+                     /domain="Lant_dehyd_C"
+                     /evalue="1.30E-116"
+                     /label="nisB"
+                     /locus_tag="nisB"
+                     /note="Pfam-A.hmm-Hit: Lant_dehyd_C. Score: 389.8. E-value:
+                     1.3e-116. Domain range: 1..497."
+                     /note="ClusterFinder probability: 0.999995234787"
+                     /score="389.8"
+                     /translation="KYEDICETVTLCYGDEYRELSEQYLGSLIVNHYLISNLQKDLLSD
+                     FSWDTFLTKVEAIDEDKKYIIPLKKVQKFIQEYSEIEIGEGIEKLKEIYQEMSQILEND
+                     NYIQIDLISDSEINFDVKQKQQLEHLAEFLGNTTKSVRRTYLDDYKDKFIEKYGVDQEV
+                     QITELFDSTFGIGAPYNYNHPRNDFYESEPSTLYYSEEEREKYLSMYVEAVKNHNVINL
+                     DDLESHYQKMDLEKKSELQGLELFLNLAKEYEKDIFILGDIVGNNNLGGASGRFSALSP
+                     ELTSYHRTIVDSVERENENKEITSCEIVFLPENIRHANVMHTSIMRRKVLPFFTSTSHN
+                     EVQLTNIYIGIDEKEKFYARDISTQEVLKFYITSMYNKTLFSNELRFLYEISLDDKFGN
+                     LPWELIYRDFDYIPRLVFDEIVISPAKWKIWGRDVNNKMTIRELIQSKEIPKEFYIVNG
+                     DNKVYLSQENPLDMEILESAIKKSSK"
+     PFAM_domain     2728..3459
+                     /aSTool="fullhmmer"
+                     /asDomain_id="fullhmmer_nisB_0002"
+                     /database="Pfam-A.hmm"
+                     /db_xref="PFAM: PF14028"
+                     /description="SpaB C-terminal domain"
+                     /detection="hmmscan"
+                     /domain="SpaB_C"
+                     /evalue="1.00E-29"
+                     /label="nisB"
+                     /locus_tag="nisB"
+                     /note="Pfam-A.hmm-Hit: SpaB_C. Score: 104.0. E-value:
+                     1e-29. Domain range: 0..282."
+                     /note="ClusterFinder probability: 0.998961773899"
+                     /score="104.0"
+                     /translation="WLYLKLYISINRQNEFLLSYLPDIQKIVANLGGKLFFLRYTDPKP
+                     HIRLRIKCSDLFLAYGSILEILKRSQKNRIMSTFDISIYDQEVERYGGFDTLELSEAIF
+                     CADSKIIPNLLTLIKDTNNDWKVDDVSILVNYLYLKCFFQNDNKKILNFLNLVSPKKVK
+                     ENVNEKIEHYLKLLKVDNLGDQIFYDKNFKELKHAIKNLFLKMIAQDFELQKVYSIIDS
+                     IIHVHNNRLIGIERDKEKLIYY"
+     gene            3512..5314
+                     /gene="nisT"
+     CDS             3512..5314
+                     /citation=[1]
+                     /citation=[2]
+                     /codon_start=1
+                     /db_xref="GI:473013"
+                     /db_xref="GOA:Q48669"
+                     /db_xref="HSSP:1R0W"
+                     /db_xref="InterPro:IPR003439"
+                     /db_xref="InterPro:IPR003593"
+                     /db_xref="InterPro:IPR011527"
+                     /db_xref="InterPro:IPR017871"
+                     /db_xref="InterPro:IPR017940"
+                     /db_xref="UniProtKB/TrEMBL:Q48669"
+                     /gene="nisT"
+                     /note="smCOG: SMCOG1000:ABC_transporter_ATP-binding_protein
+                     (Score: 161.2; E-value: 5.6e-49);"
+                     /product="NisT protein"
+                     /protein_id="CAA79469.1"
+                     /transl_table=11
+                     /translation="MDEVKEFTSKQFFNTLLTLPSTLKLIFQLEKRYAIYLIVLNAITA
+                     FVPLASLFIYQDLINSVLGSGRHLIYIIIIYFIVQVITTVLGQLESYVSGKFDMRLSYS
+                     INMRLMRTTSSLELSDYEQADMYNIIEKVTQDSTYKPFQLFNAIIVVLSSFISLLSSLF
+                     FIGTWNIGVAILLLIVPVLSLVLFLRVGQLEFLIQWQRASSERETWYIVYLLTHDFSFK
+                     EIKLNNISNYFIHKFGKLKKGFINQDLAIARKKTYFNIFLDFILNLINILTIFAMILSV
+                     RAGKLLIGNLVSLIQAISKINTYSQTMIQNIYIIYNTSLFMEQLFEFLKRESVVHKKIE
+                     DTEICNQDIGTVKVINLSYVYPNSNAFALKNINLSFEKGELAAIVGKNGSGKSTLVKII
+                     SGLYQPTMGIIQYDKMRNSLMPEEFYQKNISVLFQDFVKYELTIRENIGLSDLSSQWED
+                     EKIIKVLDNLGLDFLKTNNQYVLDTQLGNWFQEGRQLSGGQWQKIALARTFFKKASIYI
+                     LDEPSAALDPVAEKEIFDYFVALSENNISIFISHSLNAARKANKIVVMKDGQVEDVGSH
+                     DVLLRRCQYYQELYYSEQYEDNDE"
+     PFAM_domain     4610..5209
+                     /aSTool="fullhmmer"
+                     /asDomain_id="fullhmmer_nisT_0003"
+                     /database="Pfam-A.hmm"
+                     /db_xref="PFAM: PF02463"
+                     /description="RecF/RecN/SMC N terminal domain"
+                     /detection="hmmscan"
+                     /domain="SMC_N"
+                     /evalue="4.30E-10"
+                     /label="nisT"
+                     /locus_tag="nisT"
+                     /note="Pfam-A.hmm-Hit: SMC_N. Score: 39.1. E-value:
+                     4.3e-10. Domain range: 12..212."
+                     /note="ClusterFinder probability: 0.999661203342"
+                     /score="39.1"
+                     /translation="FALKNINLSFEKGELAAIVGKNGSGKSTLVKIISGLYQPTMGIIQ
+                     YDKMRNSLMPEEFYQKNISVLFQDFVKYELTIRENIGLSDLSSQWEDEKIIKVLDNLGL
+                     DFLKTNNQYVLDTQLGNWFQEGRQLSGGQWQKIALARTFFKKASIYILDEPSAALDPVA
+                     EKEIFDYFVALSENNISIFISHSLNAARKANKIVVMK"
+     PFAM_domain     4613..4714
+                     /aSTool="fullhmmer"
+                     /asDomain_id="fullhmmer_nisT_0006"
+                     /database="Pfam-A.hmm"
+                     /db_xref="PFAM: PF13476"
+                     /description="AAA domain"
+                     /detection="hmmscan"
+                     /domain="AAA_23"
+                     /evalue="2.40E-04"
+                     /label="nisT"
+                     /locus_tag="nisT"
+                     /note="Pfam-A.hmm-Hit: AAA_23. Score: 21.4. E-value:
+                     0.00024. Domain range: 8..41."
+                     /note="ClusterFinder probability: 0.992009949434"
+                     /score="21.4"
+                     /translation="ALKNINLSFEKGELAAIVGKNGSGKSTLVKIISG"
+     PFAM_domain     4616..4843
+                     /aSTool="fullhmmer"
+                     /asDomain_id="fullhmmer_nisT_0004"
+                     /database="Pfam-A.hmm"
+                     /db_xref="PFAM: PF13175"
+                     /description="AAA ATPase domain"
+                     /detection="hmmscan"
+                     /domain="AAA_15"
+                     /evalue="5.40E-03"
+                     /label="nisT"
+                     /locus_tag="nisT"
+                     /note="Pfam-A.hmm-Hit: AAA_15. Score: 15.8. E-value:
+                     0.0054. Domain range: 11..77."
+                     /note="ClusterFinder probability: 0.994926167362"
+                     /score="15.8"
+                     /translation="LKNINLSFEKGELAAIVGKNGSGKSTLVKIISGLYQPTMGIIQYD
+                     KMRNSLMPEEFYQKNISVLFQDFVKYELTIR"
+     PFAM_domain     4616..5080
+                     /aSTool="fullhmmer"
+                     /asDomain_id="fullhmmer_nisT_0001"
+                     /database="Pfam-A.hmm"
+                     /db_xref="PFAM: PF00005"
+                     /description="ABC transporter"
+                     /detection="hmmscan"
+                     /domain="ABC_tran"
+                     /evalue="1.50E-38"
+                     /label="nisT"
+                     /locus_tag="nisT"
+                     /note="Pfam-A.hmm-Hit: ABC_tran. Score: 132.1. E-value:
+                     1.5e-38. Domain range: 0..137."
+                     /note="ClusterFinder probability: 0.997074747143"
+                     /score="132.1"
+                     /translation="LKNINLSFEKGELAAIVGKNGSGKSTLVKIISGLYQPTMGIIQYD
+                     KMRNSLMPEEFYQKNISVLFQDFVKYELTIRENIGLSDLSSQWEDEKIIKVLDNLGLDF
+                     LKTNNQYVLDTQLGNWFQEGRQLSGGQWQKIALARTFFKKASIYILDEPSA"
+     PFAM_domain     4640..4702
+                     /aSTool="fullhmmer"
+                     /asDomain_id="fullhmmer_nisT_0007"
+                     /database="Pfam-A.hmm"
+                     /db_xref="PFAM: PF13555"
+                     /description="P-loop containing region of AAA domain"
+                     /detection="hmmscan"
+                     /domain="AAA_29"
+                     /evalue="1.10E-03"
+                     /label="nisT"
+                     /locus_tag="nisT"
+                     /note="Pfam-A.hmm-Hit: AAA_29. Score: 18.3. E-value:
+                     0.0011. Domain range: 19..41."
+                     /note="ClusterFinder probability: 0.993812285843"
+                     /score="18.3"
+                     /translation="EKGELAAIVGKNGSGKSTLVK"
+     PFAM_domain     4652..5170
+                     /aSTool="fullhmmer"
+                     /asDomain_id="fullhmmer_nisT_0002"
+                     /database="Pfam-A.hmm"
+                     /db_xref="PFAM: PF13304"
+                     /description="AAA domain"
+                     /detection="hmmscan"
+                     /domain="AAA_21"
+                     /evalue="1.20E-12"
+                     /label="nisT"
+                     /locus_tag="nisT"
+                     /note="Pfam-A.hmm-Hit: AAA_21. Score: 48.4. E-value:
+                     1.2e-12. Domain range: 0..299."
+                     /note="ClusterFinder probability: 0.997315264853"
+                     /score="48.4"
+                     /translation="LAAIVGKNGSGKSTLVKIISGLYQPTMGIIQYDKMRNSLMPEEFY
+                     QKNISVLFQDFVKYELTIRENIGLSDLSSQWEDEKIIKVLDNLGLDFLKTNNQYVLDTQ
+                     LGNWFQEGRQLSGGQWQKIALARTFFKKASIYILDEPSAALDPVAEKEIFDYFVALSEN
+                     NISIFISHSL"
+     PFAM_domain     5045..5161
+                     /aSTool="fullhmmer"
+                     /asDomain_id="fullhmmer_nisT_0005"
+                     /database="Pfam-A.hmm"
+                     /db_xref="PFAM: PF13175"
+                     /description="AAA ATPase domain"
+                     /detection="hmmscan"
+                     /domain="AAA_15"
+                     /evalue="5.60E-03"
+                     /label="nisT"
+                     /locus_tag="nisT"
+                     /note="Pfam-A.hmm-Hit: AAA_15. Score: 15.7. E-value:
+                     0.0056. Domain range: 370..408."
+                     /note="ClusterFinder probability: 0.992380545106"
+                     /score="15.7"
+                     /translation="KASIYILDEPSAALDPVAEKEIFDYFVALSENNISIFIS"
+     gene            5295..6551
+                     /gene="nisC"
+     CDS             5295..6551
+                     /citation=[1]
+                     /citation=[2]
+                     /codon_start=1
+                     /db_xref="GI:473014"
+                     /db_xref="InterPro:IPR007822"
+                     /db_xref="InterPro:IPR020468"
+                     /db_xref="UniProtKB/TrEMBL:Q48670"
+                     /gene="nisC"
+                     /note="smCOG:
+                     SMCOG1140:Lanthionine_synthetase_C_family_protein (Score:
+                     332.8; E-value: 4.6e-101);"
+                     /product="NisC protein"
+                     /protein_id="CAA79470.1"
+                     /sec_met="Type: lantipeptide"
+                     /sec_met="Domains detected: LANC_like (E-value: 1.1e-74,
+                     bitscore: 239.9, seeds: 47)"
+                     /sec_met="Kind: biosynthetic"
+                     /transl_table=11
+                     /translation="MRIMMNKKNIKRNVEKIIAQWDERTRKNKENFDFGELTLSTGLPG
+                     IILMLAELKNKDNSKIYQKKIDNYIEYIVSKLSTYGLLTGSLYSGAAGIALSILHLRED
+                     DEKYKNLLDSLNRYIEYFVIEKIEGFNLENITPPDYDVIEGLSGILSYLLLINDEQYDD
+                     LKILIINFLSNLTKENKGLISLYIKSENQMSQSESEMYPLGCLNMGLAHGLAGAGCILA
+                     YAHIKGYSNEASLSALQKIIFIYEKFELEIKNQFLWKDGLVADELKKEKVIREASFIRD
+                     AWCYGGPGISLLYLYGGLALDNDYFVDKAEKILESAMQRKLGIDSYMICHGYSGLIEIC
+                     SLFKRLLNTKKFDSYIEEFNVNSEQILEEYGDESGTGFLEGISGCILVLSKFEYSINFT
+                     YWRQALLLFDDFLKGGKRK"
+     PFAM_domain     5394..6488
+                     /aSTool="fullhmmer"
+                     /asDomain_id="fullhmmer_nisC_0001"
+                     /database="Pfam-A.hmm"
+                     /db_xref="PFAM: PF05147"
+                     /description="Lanthionine synthetase C-like protein"
+                     /detection="hmmscan"
+                     /domain="LANC_like"
+                     /evalue="6.50E-74"
+                     /label="nisC"
+                     /locus_tag="nisC"
+                     /note="Pfam-A.hmm-Hit: LANC_like. Score: 248.6. E-value:
+                     6.5e-74. Domain range: 1..348."
+                     /note="ClusterFinder probability: 0.997797740631"
+                     /score="248.6"
+                     /translation="FGELTLSTGLPGIILMLAELKNKDNSKIYQKKIDNYIEYIVSKLS
+                     TYGLLTGSLYSGAAGIALSILHLREDDEKYKNLLDSLNRYIEYFVIEKIEGFNLENITP
+                     PDYDVIEGLSGILSYLLLINDEQYDDLKILIINFLSNLTKENKGLISLYIKSENQMSQS
+                     ESEMYPLGCLNMGLAHGLAGAGCILAYAHIKGYSNEASLSALQKIIFIYEKFELEIKNQ
+                     FLWKDGLVADELKKEKVIREASFIRDAWCYGGPGISLLYLYGGLALDNDYFVDKAEKIL
+                     ESAMQRKLGIDSYMICHGYSGLIEICSLFKRLLNTKKFDSYIEEFNVNSEQILEEYGDE
+                     SGTGFLEGISGCILVLSKFEYSINF"
+     gene            6548..7285
+                     /gene="nisI"
+     CDS             6548..7285
+                     /citation=[1]
+                     /codon_start=1
+                     /db_xref="GI:473015"
+                     /db_xref="UniProtKB/TrEMBL:Q48671"
+                     /gene="nisI"
+                     /product="NisI protein"
+                     /protein_id="CAA79465.1"
+                     /transl_table=11
+                     /translation="MRKYLILIVALIGITGLSGCYQTSQKKVRFDEGSYTNFIYDNKSY
+                     FVTDKEIPQENVNNCKVKFYNLLIVDMKSEKLLSSSNKNSVTLVLNNIYEASDKSLCMG
+                     INDRYYKILPESDKGVVKALRLQNFDVTSDISDDNFVIDKNDSRKIDYMGNIYSISDTT
+                     VSDEELGEYQDVLAEVRVFDSVSGKSIPRSEWGRIDKDGSNSKQSRTEWDYGEIHSIRG
+                     KSLTEAFAVEINDDFKLATKVGN"
+     gene            7287..>7610
+                     /gene="nisP"
+     CDS             7287..>7610
+                     /citation=[1]
+                     /codon_start=1
+                     /db_xref="GI:581294"
+                     /db_xref="UniProtKB/TrEMBL:Q798W1"
+                     /gene="nisP"
+                     /product="NisP protein"
+                     /protein_id="CAA79466.1"
+                     /transl_table=11
+                     /translation="MKKILGFLFIVCSLGLSATVHGETTNSQQLLSNNINTELINHNSN
+                     AILSSTEGSTTDSINLGEQSTAVKSTTRTELDVTGAAKTLLQTSAVQKEMKVSLQETQV
+                     SSEF"
+ORIGIN
+        1 tagatatagg tttattgagt cttagacata cttgaatgac ctagtcttat aactatactg
+       61 acaatagaaa cattaacaaa tctaaaacag tcttaattct atcttgagaa agtattggca
+      121 ataatattat tgtcgataac gcgatcataa taaacggctc tgattaaatt ctgaagtttg
+      181 ttagatacaa tgatttcgtt cgaaggaact acaaataaat tataaggagg cactcaaaat
+      241 gagtacaaaa gattttaact tggatttggt atctgtttcg aagaaagatt caggtgcatc
+      301 accacgcatt acaagtattt cgctatgtac acccggttgt aaaacaggag ctctgatggg
+      361 ttgtaacatg aaaacagcaa cttgtaattg tagtattcac gtaagcaaat aaccaaatca
+      421 aaggatagta ttttgttagt tcagacatgg atactatcct atttttataa gttatttagg
+      481 gttgctaaat agcttataaa aataaagaga ggaaaaaaca tgataaaaag ttcatttaaa
+      541 gctcaaccgt ttttagtaag aaatacaata ttatctccaa acgataaacg gagttttact
+      601 gaatatactc aagtcattga gactgtaagt aaaaataaag tttttttgga acagttacta
+      661 ctagctaatc ctaaactcta taatgttatg cagaaatata atgctggtct gttaaagaag
+      721 aaaagggtta aaaaattatt tgaatctatt tacaagtatt ataagagaag ttatttacga
+      781 tcaactccat ttggattatt tagtgaaact tcaattggtg ttttttcgaa aagttcacag
+      841 tacaagttaa tgggaaagac tacaaagggt ataagattgg atactcagtg gttgattcgc
+      901 ctagttcata aaatggaagt agatttctca aaaaagttat catttactag aaataatgcg
+      961 aattataagt ttggagatcg agtttttcaa gtttatacca taaatagtag tgagcttgaa
+     1021 gaagtaaata ttaaatatac gaatgtttat caaattattt ctgaattttg tgagaatgac
+     1081 tatcaaaaat atgaagatat ttgtgaaact gtaacccttt gctatggaga cgaatataga
+     1141 gaactatcgg aacaatatct tggcagtctg atagttaatc attatttgat ctctaattta
+     1201 caaaaagatt tgttgtcaga tttttcttgg gacacttttt tgactaaagt tgaagcaata
+     1261 gatgaagata aaaaatatat aattcctctg aaaaaagttc aaaagtttat tcaagaatac
+     1321 tcagaaatag aaattggtga aggtattgag aaactgaaag aaatatatca ggaaatgtca
+     1381 caaattcttg agaatgataa ttatattcaa attgatttaa ttagtgatag tgaaataaat
+     1441 tttgatgtta aacaaaagca acaattagaa catttagctg agtttttagg aaatacgaca
+     1501 aaatctgtaa gaagaacata tttggatgac tataaggata aatttatcga aaaatatggt
+     1561 gtagatcaag aagtacaaat aacagaatta tttgattcca catttggcat aggagctcca
+     1621 tataattata atcatcctcg aaatgacttt tatgagtccg aaccgagtac tctatactat
+     1681 tcagaagagg agagagaaaa gtacctcagc atgtatgtag aagccgttaa aaatcataat
+     1741 gtaattaatc ttgacgactt agagtctcat tatcaaaaaa tggacttaga aaagaaaagt
+     1801 gaacttcaag ggttagaatt atttttgaat ttggcaaagg agtatgaaaa agatattttt
+     1861 attttagggg atatcgttgg aaataataat ttgggagggg catcaggtag attttctgca
+     1921 ctctctccgg agttaacaag ttatcataga acgatagtag attctgtcga aagagaaaat
+     1981 gagaataaag aaattacatc gtgtgaaata gtatttcttc cagaaaatat cagacatgct
+     2041 aacgttatgc atacatcaat tatgaggagg aaagtacttc cattttttac aagtacaagt
+     2101 cacaatgaag ttcagttaac taatatctat attggaatag acgaaaaaga aaaattttat
+     2161 gcacgagaca tttcaactca agaggtattg aaattctaca ttacaagcat gtacaataaa
+     2221 acgttattca gtaatgagct aagatttctt tacgaaattt cattagatga caagtttggt
+     2281 aatttacctt gggaacttat ttacagagac tttgattata ttccacgttt agtatttgac
+     2341 gaaatagtaa tatctcctgc taaatggaaa atttggggaa gggatgtaaa taataagatg
+     2401 acaataagag aacttattca aagcaaagaa attcccaaag agttttatat tgtcaatgga
+     2461 gataataaag tttatttatc acaggaaaac ccattggata tggaaatttt agagtcggcg
+     2521 ataaagaaga gctcaaaaag aaaagatttt atagagctac aagaatattt tgaagatgaa
+     2581 aatatcataa ataaaggaca aaaggggaga gttgccgatg ttgtagtgcc tttcattaga
+     2641 acgagagcat taggtaatga agggagagca tttataagag agaaaagagt ttcggttgaa
+     2701 cggcgtgaaa aactgccctt taacgagtgg ctttatctca agttgtacat ttctataaat
+     2761 cgtcaaaatg aatttttact gtcgtatctt ccagatattc agaaaatagt agcaaacctg
+     2821 ggtggaaaac tattcttcct aagatatact gatcctaaac cacatattag attgcgtata
+     2881 aaatgttcag atttattttt agcttacgga tctattcttg aaatcttaaa aaggagtcag
+     2941 aaaaatagga taatgtcaac ttttgatatt tctatttatg atcaagaagt agaaagatat
+     3001 ggtggatttg atactttaga gttatccgaa gcaatatttt gtgccgattc taaaattatt
+     3061 ccaaatttgc ttacattgat aaaagatact aataatgatt ggaaagtcga tgatgtatca
+     3121 atcttggtga attatttata tctgaaatgc ttctttcaga atgataacaa aaagattctt
+     3181 aattttttga atttagttag tcctaaaaag gttaaagaaa atgtcaatga aaagattgaa
+     3241 cattatctta aacttctgaa agttgataat ctaggtgacc aaatttttta tgacaagaat
+     3301 tttaaagaat taaagcatgc cataaaaaat ttatttttaa aaatgatagc tcaagatttt
+     3361 gaacttcaga aagtttattc aattattgac agtatcattc atgtccataa taaccgacta
+     3421 attggtattg aacgagataa agagaaatta atttattaca cacttcaaag gttgtttgtt
+     3481 tcggaagaat acatgaaatg aggactaata gatggatgaa gtgaaagaat tcacatcaaa
+     3541 acaatttttt aatactttac ttactcttcc aagcaccttg aagttaattt ttcagttgga
+     3601 aaaacgttat gcaatttatt taattgtgct aaatgctatc acagcttttg ttccgttggc
+     3661 tagtcttttt atttatcaag atttaataaa ctctgtgcta ggttcaggga gacatcttat
+     3721 ctatattatt atcatctatt ttattgttca agtgataaca acagttctgg gacagctgga
+     3781 aagttatgtt agtggaaaat ttgatatgcg actttcttac agtatcaata tgcgcctcat
+     3841 gaggactacc tcatctcttg aattaagtga ttatgagcag gctgatatgt ataatatcat
+     3901 agaaaaagtt actcaagaca gcacttacaa gccttttcag ctatttaatg ctatcattgt
+     3961 tgtgctttca tcgtttatct cattgctatc tagtctattt tttattggaa catggaacat
+     4021 tggggtagca attttactcc ttattgttcc agtattatct ttggtacttt ttctcagagt
+     4081 gggacaatta gagtttttaa tccagtggca gagagcaagt tctgaaagag aaacatggta
+     4141 tattgtatat ttattgactc atgatttttc atttaaagaa atcaaattaa ataatattag
+     4201 caattacttc attcataaat ttggaaaatt aaagaaagga tttatcaacc aagatttagc
+     4261 tattgctcgt aagaagacat atttcaatat ttttcttgat ttcattttga atttgataaa
+     4321 tattcttacg atatttgcta tgatcctttc ggtaagagca ggaaaacttc ttataggtaa
+     4381 tttggtaagt ctcatacaag ctatttctaa aatcaatact tattctcaaa caatgattca
+     4441 aaatatttac atcatttata atactagttt gtttatggaa caactttttg agtttttaaa
+     4501 gagagaaagt gtagttcaca aaaaaataga agatactgaa atatgcaatc aagatatagg
+     4561 aactgttaaa gtaattaatt tatcatatgt ttaccctaat tcgaatgcct ttgcactaaa
+     4621 gaatatcaat ttatcctttg aaaaaggaga attagctgct attgtaggaa aaaatggttc
+     4681 cgggaaaagt acactagtaa agataatttc aggattatat caaccaacta tgggaataat
+     4741 ccaatacgac aaaatgagaa atagtttgat gcctgaggag ttttatcaga aaaacatatc
+     4801 ggtgctgttc caagattttg tgaagtatga gttaacgata agagagaata taggattgag
+     4861 tgatttgtct tctcaatggg aagatgagaa aattattaaa gtactagata atttaggact
+     4921 cgattttttg aaaactaata atcaatatgt acttgatacg cagttaggaa attggtttca
+     4981 agaagggcgt caactttcag gaggtcagtg gcaaaaaatt gcattagcaa ggacattttt
+     5041 taagaaagct tcaatttata ttttagatga accaagtgct gcactcgatc ctgtagctga
+     5101 aaaagaaata tttgattatt ttgttgctct ttcggaaaat aatatttcaa ttttcatttc
+     5161 tcatagtttg aatgctgcca gaaaagcaaa taaaatcgtg gttatgaaag atggacaggt
+     5221 cgaagatgtt ggaagtcatg atgtccttct gagaagatgt caatactatc aagaacttta
+     5281 ttattcagag caatatgagg ataatgatga ataaaaaaaa tataaaaaga aatgttgaaa
+     5341 aaattattgc tcaatgggat gagagaacta gaaaaaataa agaaaacttc gatttcggag
+     5401 agttgactct ctctacagga ttgcctggta taattttaat gttagcggag ttaaaaaata
+     5461 aagataactc aaagatatat cagaaaaaga tagacaatta tattgaatat attgttagca
+     5521 aactttcaac atatgggctt ttaacaggat cgctttattc gggagcagct ggcattgcat
+     5581 taagtatcct acatttacga gaagatgacg aaaaatataa gaatcttctt gacagcctaa
+     5641 atagatatat cgaatatttc gtcatagaaa aaattgaagg gtttaatttg gaaaacatta
+     5701 ctcctcctga ttatgacgtg attgaaggtt tatctgggat actttcctat ctattattaa
+     5761 tcaacgacga gcaatatgat gatttgaaaa tactcattat caatttttta tcaaatctga
+     5821 ctaaagaaaa caaaggacta atatcgcttt acatcaaatc ggagaatcag atgtctcaat
+     5881 cagaaagtga gatgtatcca ctaggctgtt tgaatatggg attagcacat ggacttgctg
+     5941 gagcgggctg tatcttagct tatgcccaca taaaaggata tagtaatgaa gcctcgttgt
+     6001 cagctttgca aaaaattatt tttatttatg aaaagtttga acttgaaatt aaaaatcagt
+     6061 ttctatggaa agatggactt gtagcagatg aattaaaaaa agagaaagta attagggaag
+     6121 caagtttcat tagagatgca tggtgctatg gaggtccagg tattagtctg ctatacttat
+     6181 acggaggatt agcactggat aatgactatt ttgtagataa agcagaaaaa atattagagt
+     6241 cagctatgca aagaaaactt ggtattgatt catatatgat ttgccatggc tattctggtt
+     6301 taatagaaat ttgttcttta tttaagcggc tattaaatac aaaaaagttt gattcataca
+     6361 tagaagaatt taatgttaat agtgagcaaa ttcttgaaga atacggagat gaaagtggca
+     6421 cgggttttct tgaaggaata agtggctgta tactggtatt atcgaaattt gaatattcaa
+     6481 tcaattttac ttattggaga caagcactgt tactttttga tgattttttg aaaggaggga
+     6541 agaggaaatg agaaaatatt taatacttat tgtggcctta atagggataa caggtttatc
+     6601 agggtgttat caaacaagtc aaaaaaaggt gaggtttgac gaaggaagtt atactaattt
+     6661 tatttatgat aataaatcgt atttcgtaac tgataaggag attcctcagg agaacgttaa
+     6721 caattgcaaa gtaaaatttt ataacctgtt gattgttgac atgaaaagtg agaaactttt
+     6781 atcaagtagc aacaaaaata gtgtgacttt ggtcttaaat aatatttatg aggcttctga
+     6841 caagtcgcta tgtatgggta ttaacgacag atactataag atacttccag aaagtgataa
+     6901 gggggtggtc aaagctttga gattacaaaa ctttgatgtg acaagcgata tttctgatga
+     6961 taattttgtt attgataaaa atgattcacg aaaaattgac tatatgggaa atatttacag
+     7021 tatatcggac accaccgtat ctgatgaaga attgggagaa tatcaggatg ttttagctga
+     7081 agtacgtgtg tttgattcag ttagtggcaa aagtatcccg aggtctgaat gggggagaat
+     7141 tgataaggat ggttcaaatt ctaaacagag taggacggaa tgggattatg gcgaaatcca
+     7201 ttctattaga ggaaaatctc ttactgaagc atttgccgtt gagataaatg atgattttaa
+     7261 gcttgcaacg aaggtaggaa actagagtga aaaaaatact aggtttcctt tttatcgttt
+     7321 gttcgttggg tttatcagca actgtgcatg gggagacaac aaattcacaa cagttactct
+     7381 caaataatat taatacggaa ttaattaatc ataattctaa tgcaatttta tcttcaacag
+     7441 agggatcaac gactgattcg attaatctag gggagcagtc aactgcagta aaatcgacaa
+     7501 caaggactga attggatgta actggtgctg ctaaaacttt attacagaca tcagctgttc
+     7561 aaaaagaaat gaaagtttcg ttgcaagaaa ctcaagttag ttctgaattc
+//

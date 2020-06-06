@@ -1,0 +1,1355 @@
+LOCUS       BGC0000218.1            8737 bp    DNA     linear   UNK 01-JAN-1980
+DEFINITION  Doxorubicin biosynthetic gene cluster
+ACCESSION   BGC0000218
+VERSION     BGC0000218.1
+KEYWORDS    .
+SOURCE      
+  ORGANISM  .
+            .
+FEATURES             Location/Qualifiers
+     source          1..8737
+                     /db_xref="taxon:1950"
+                     /mol_type="genomic DNA"
+                     /organism="Streptomyces peucetius"
+                     /tissue_lib="ATCC 29050"
+     cluster         1..8737
+                     /contig_edge="True"
+                     /cutoff=20000
+                     /extension=20000
+                     /note="Cluster number: 1"
+                     /note="Detection rule(s) for this cluster type: t2pks:
+                     (t2ks or t2clf); otherks: (t2pks2 or hglE or hglD or
+                     ksIII);"
+                     /note="Monomers prediction: (mal)"
+                     /note="Structure image: structures/genecluster1.png"
+                     /probability="0.9960"
+                     /product="t2pks-otherks"
+     gene            28..783
+                     /gene="dnrH"
+     CDS             28..783
+                     /aSProdPred=""
+                     /codon_start=1
+                     /db_xref="GI:532241"
+                     /function="reductase"
+                     /gene="dnrH"
+                     /note="protein H; putative"
+                     /note="smCOG:
+                     SMCOG1001:short-chain_dehydrogenase/reductase_SDR (Score:
+                     205.0; E-value: 2.3e-62);"
+                     /product="daunorubicin-doxorubicin polyketide synthase"
+                     /protein_id="AAA65202.1"
+                     /sec_met="Type: none"
+                     /sec_met="Domains detected: adh_short_C2 (E-value: 3.1e-32,
+                     bitscore: 101.7, seeds: 47)"
+                     /sec_met="Kind: biosynthetic"
+                     /sec_met="NRPS/PKS subtype: PKS/NRPS-like protein"
+                     /sec_met="NRPS/PKS Domain: PKS_KR (6-165). E-value:
+                     3.1e-11. Score: 35.1; Predicted KR activity: inactive;
+                     Predicted KR stereochemistry: C2;"
+                     /transl_table=11
+                     /translation="MENTQRSVIVTGGGSGIGRAVARAFAARGDRVLVVGRTAGPLAET
+                     VDGHKDAHTLAVDITDPAAPEAVVREVRERLGGVVDVLVNNAATAAFGHLGELHRTAVE
+                     AQVATNLVAPVLLTQALLGPLETASGLVVNIGSAGALGRRAWPGNAVYGAAKAGLDLLT
+                     RSWAVELGPRGIRVVGVAPGVIGTGAGVRAGMSQEAYDGFLEAMGQRVPLGRVGRPEDV
+                     AWWVVRLADPEAAYASGAVLAVDGGLSVT"
+     cluster_border  28..8720
+                     /note="best prediction"
+                     /probability="0.995955694255"
+                     /tool="clusterfinder"
+     CDS_motif       46..456
+                     /aSTool="pksnrpsmotif"
+                     /asDomain_id="nrpspksmotif_dnrH_0001"
+                     /database="abmotifs"
+                     /detection="hmmscan"
+                     /evalue="1.90E-06"
+                     /label="PKSI-KR_m1"
+                     /locus_tag="dnrH"
+                     /motif="PKSI-KR_m1"
+                     /note="NRPS/PKS Motif: PKSI-KR_m1 (e-value: 1.9e-06,
+                     bit-score: 22.7)"
+                     /score="22.7"
+                     /translation="SVIVTGGGSGIGRAVARAFAARGDRVLVVGRTAGPLAETVDGHKD
+                     AHTLAVDITDPAAPEAVVREVRERLGGVVDVLVNNAATAAFGHLGELHRTAVEAQVATN
+                     LVAPVLLTQALLGPLETASGLVVNIGSAGALGR"
+     aSDomain        46..522
+                     /asDomain_id="nrpspksdomains_dnrH_KR1"
+                     /database="nrpspksdomains.hmm"
+                     /detection="hmmscan"
+                     /domain="PKS_KR"
+                     /evalue="3.10E-11"
+                     /label="dnrH_KR1"
+                     /locus_tag="dnrH"
+                     /score="35.1"
+                     /specificity="KR activity: inactive"
+                     /specificity="KR stereochemistry: C2"
+                     /translation="SVIVTGGGSGIGRAVARAFAARGDRVLVVGRTAGPLAETVDGHKD
+                     AHTLAVDITDPAAPEAVVREVRERLGGVVDVLVNNAATAAFGHLGELHRTAVEAQVATN
+                     LVAPVLLTQALLGPLETASGLVVNIGSAGALGRRAWPGNAVYGAAKAGLDLLTRS"
+     PFAM_domain     46..537
+                     /aSTool="fullhmmer"
+                     /asDomain_id="fullhmmer_dnrH_0002"
+                     /database="Pfam-A.hmm"
+                     /db_xref="PFAM: PF00106"
+                     /description="short chain dehydrogenase"
+                     /detection="hmmscan"
+                     /domain="adh_short"
+                     /evalue="3.10E-28"
+                     /label="dnrH"
+                     /locus_tag="dnrH"
+                     /note="Pfam-A.hmm-Hit: adh_short. Score: 98.7. E-value:
+                     3.1e-28. Domain range: 1..166."
+                     /note="ClusterFinder probability: 0.993793186263"
+                     /score="98.7"
+                     /translation="SVIVTGGGSGIGRAVARAFAARGDRVLVVGRTAGPLAETVDGHKD
+                     AHTLAVDITDPAAPEAVVREVRERLGGVVDVLVNNAATAAFGHLGELHRTAVEAQVATN
+                     LVAPVLLTQALLGPLETASGLVVNIGSAGALGRRAWPGNAVYGAAKAGLDLLTRSWAVE
+                     L"
+     PFAM_domain     49..339
+                     /aSTool="fullhmmer"
+                     /asDomain_id="fullhmmer_dnrH_0005"
+                     /database="Pfam-A.hmm"
+                     /db_xref="PFAM: PF13460"
+                     /description="NADH(P)-binding"
+                     /detection="hmmscan"
+                     /domain="NAD_binding_10"
+                     /evalue="2.50E-05"
+                     /label="dnrH"
+                     /locus_tag="dnrH"
+                     /note="Pfam-A.hmm-Hit: NAD_binding_10. Score: 24.3.
+                     E-value: 2.5e-05. Domain range: 0..74."
+                     /note="ClusterFinder probability: 0.995441461205"
+                     /score="24.3"
+                     /translation="VIVTGGGSGIGRAVARAFAARGDRVLVVGRTAGPLAETVDGHKDA
+                     HTLAVDITDPAAPEAVVREVRERLGGVVDVLVNNAATAAFGHLGELHRTAVE"
+     PFAM_domain     49..525
+                     /aSTool="fullhmmer"
+                     /asDomain_id="fullhmmer_dnrH_0003"
+                     /database="Pfam-A.hmm"
+                     /db_xref="PFAM: PF08659"
+                     /description="KR domain"
+                     /detection="hmmscan"
+                     /domain="KR"
+                     /evalue="5.70E-11"
+                     /label="dnrH"
+                     /locus_tag="dnrH"
+                     /note="Pfam-A.hmm-Hit: KR. Score: 42.3. E-value: 5.7e-11.
+                     Domain range: 2..163."
+                     /note="ClusterFinder probability: 0.999713815724"
+                     /score="42.3"
+                     /translation="VIVTGGGSGIGRAVARAFAARGDRVLVVGRTAGPLAETVDGHKDA
+                     HTLAVDITDPAAPEAVVREVRERLGGVVDVLVNNAATAAFGHLGELHRTAVEAQVATNL
+                     VAPVLLTQALLGPLETASGLVVNIGSAGALGRRAWPGNAVYGAAKAGLDLLTRSW"
+     PFAM_domain     49..531
+                     /aSTool="fullhmmer"
+                     /asDomain_id="fullhmmer_dnrH_0004"
+                     /database="Pfam-A.hmm"
+                     /db_xref="PFAM: PF01370"
+                     /description="NAD dependent epimerase/dehydratase family"
+                     /detection="hmmscan"
+                     /domain="Epimerase"
+                     /evalue="2.20E-05"
+                     /label="dnrH"
+                     /locus_tag="dnrH"
+                     /note="Pfam-A.hmm-Hit: Epimerase. Score: 24.0. E-value:
+                     2.2e-05. Domain range: 0..156."
+                     /note="ClusterFinder probability: 0.999844851738"
+                     /score="24.0"
+                     /translation="VIVTGGGSGIGRAVARAFAARGDRVLVVGRTAGPLAETVDGHKDA
+                     HTLAVDITDPAAPEAVVREVRERLGGVVDVLVNNAATAAFGHLGELHRTAVEAQVATNL
+                     VAPVLLTQALLGPLETASGLVVNIGSAGALGRRAWPGNAVYGAAKAGLDLLTRSWAV"
+     PFAM_domain     70..774
+                     /aSTool="fullhmmer"
+                     /asDomain_id="fullhmmer_dnrH_0001"
+                     /database="Pfam-A.hmm"
+                     /db_xref="PFAM: PF13561"
+                     /description="Enoyl-(Acyl carrier protein) reductase"
+                     /detection="hmmscan"
+                     /domain="adh_short_C2"
+                     /evalue="5.10E-29"
+                     /label="dnrH"
+                     /locus_tag="dnrH"
+                     /note="Pfam-A.hmm-Hit: adh_short_C2. Score: 101.7. E-value:
+                     5.1e-29. Domain range: 5..241."
+                     /note="ClusterFinder probability: 0.97726168341"
+                     /score="101.7"
+                     /translation="SGIGRAVARAFAARGDRVLVVGRTAGPLAETVDGHKDAHTLAVDI
+                     TDPAAPEAVVREVRERLGGVVDVLVNNAATAAFGHLGELHRTAVEAQVATNLVAPVLLT
+                     QALLGPLETASGLVVNIGSAGALGRRAWPGNAVYGAAKAGLDLLTRSWAVELGPRGIRV
+                     VGVAPGVIGTGAGVRAGMSQEAYDGFLEAMGQRVPLGRVGRPEDVAWWVVRLADPEAAY
+                     ASGAVLAVDGGLS"
+     gene            complement(918..1865)
+                     /gene="dpsF"
+     CDS             complement(918..1865)
+                     /aSProdPred=""
+                     /codon_start=1
+                     /db_xref="GI:532242"
+                     /function="cyclase"
+                     /gene="dpsF"
+                     /note="protein F; putative"
+                     /note="smCOG: SMCOG1128:cyclase/dehydrase (Score: 410.6;
+                     E-value: 7e-125);"
+                     /product="daunorubicin-doxorubicin polyketide synthase"
+                     /protein_id="AAA65203.1"
+                     /sec_met="NRPS/PKS subtype: PKS/NRPS-like protein"
+                     /sec_met="NRPS/PKS Domain: Polyketide_cyc2 (7-149).
+                     E-value: 1.8e-18. Score: 58.9;"
+                     /sec_met="NRPS/PKS Domain: Polyketide_cyc2 (156-311).
+                     E-value: 1.7e-08. Score: 26.5;"
+                     /transl_table=11
+                     /translation="MSELPLQQTEHEIHTSAAPDAVFAVLADARAWPAVFPPSVHVEQV
+                     EHTGSSERIRIWATANGSLRTWTSRRELDERARRIRFRQEVSAHPVAAMGGEWIVEEAG
+                     DGGTRVRLTHDFRAVDDDPETIGWIHRAVDRNSEAELASLRTALERPDGTAPTTFEDTV
+                     VVRGRAEDVYDFLHRSDLWKKRLSHVARIAVKEEEPGLQHMEMDTLTADGSVHTTASVR
+                     VCFPERRVIVYKQLRTPPLLALHLGRWSVRPADDGDGIAVTSAHTVSVARSAIPGVLGA
+                     GASETDAVDFVRRALGRNSLLTLEAARQYAESSA"
+     PFAM_domain     complement(933..1394)
+                     /aSTool="fullhmmer"
+                     /asDomain_id="fullhmmer_dpsF_0002"
+                     /database="Pfam-A.hmm"
+                     /db_xref="PFAM: PF10604"
+                     /description="Polyketide cyclase / dehydrase and lipid
+                     transport"
+                     /detection="hmmscan"
+                     /domain="Polyketide_cyc2"
+                     /evalue="3.00E-06"
+                     /label="dpsF"
+                     /locus_tag="dpsF"
+                     /note="Pfam-A.hmm-Hit: Polyketide_cyc2. Score: 27.4.
+                     E-value: 3e-06. Domain range: 2..138."
+                     /note="ClusterFinder probability: 0.992963703541"
+                     /score="27.4"
+                     /translation="TFEDTVVVRGRAEDVYDFLHRSDLWKKRLSHVARIAVKEEEPGLQ
+                     HMEMDTLTADGSVHTTASVRVCFPERRVIVYKQLRTPPLLALHLGRWSVRPADDGDGIA
+                     VTSAHTVSVARSAIPGVLGAGASETDAVDFVRRALGRNSLLTLEAARQYA"
+     aSDomain        complement(933..1397)
+                     /asDomain_id="nrpspksdomains_dpsF_Xdom02"
+                     /database="nrpspksdomains.hmm"
+                     /detection="hmmscan"
+                     /domain="Polyketide_cyc"
+                     /domain_subtype="Polyketide_cyc2"
+                     /evalue="1.70E-08"
+                     /locus_tag="dpsF"
+                     /score="26.5"
+                     /translation="TTFEDTVVVRGRAEDVYDFLHRSDLWKKRLSHVARIAVKEEEPGL
+                     QHMEMDTLTADGSVHTTASVRVCFPERRVIVYKQLRTPPLLALHLGRWSVRPADDGDGI
+                     AVTSAHTVSVARSAIPGVLGAGASETDAVDFVRRALGRNSLLTLEAARQYA"
+     PFAM_domain     complement(993..1361)
+                     /aSTool="fullhmmer"
+                     /asDomain_id="fullhmmer_dpsF_0004"
+                     /database="Pfam-A.hmm"
+                     /db_xref="PFAM: PF03364"
+                     /description="Polyketide cyclase / dehydrase and lipid
+                     transport"
+                     /detection="hmmscan"
+                     /domain="Polyketide_cyc"
+                     /evalue="5.40E-05"
+                     /label="dpsF"
+                     /locus_tag="dpsF"
+                     /note="Pfam-A.hmm-Hit: Polyketide_cyc. Score: 23.1.
+                     E-value: 5.4e-05. Domain range: 4..125."
+                     /note="ClusterFinder probability: 0.996182889208"
+                     /score="23.1"
+                     /translation="AEDVYDFLHRSDLWKKRLSHVARIAVKEEEPGLQHMEMDTLTADG
+                     SVHTTASVRVCFPERRVIVYKQLRTPPLLALHLGRWSVRPADDGDGIAVTSAHTVSVAR
+                     SAIPGVLGAGASETDAVDF"
+     PFAM_domain     complement(1419..1844)
+                     /aSTool="fullhmmer"
+                     /asDomain_id="fullhmmer_dpsF_0001"
+                     /database="Pfam-A.hmm"
+                     /db_xref="PFAM: PF10604"
+                     /description="Polyketide cyclase / dehydrase and lipid
+                     transport"
+                     /detection="hmmscan"
+                     /domain="Polyketide_cyc2"
+                     /evalue="2.90E-16"
+                     /label="dpsF"
+                     /locus_tag="dpsF"
+                     /note="Pfam-A.hmm-Hit: Polyketide_cyc2. Score: 59.9.
+                     E-value: 2.9e-16. Domain range: 2..139."
+                     /note="ClusterFinder probability: 0.993213664472"
+                     /score="59.9"
+                     /translation="QTEHEIHTSAAPDAVFAVLADARAWPAVFPPSVHVEQVEHTGSSE
+                     RIRIWATANGSLRTWTSRRELDERARRIRFRQEVSAHPVAAMGGEWIVEEAGDGGTRVR
+                     LTHDFRAVDDDPETIGWIHRAVDRNSEAELASLRTALE"
+     aSDomain        complement(1419..1844)
+                     /asDomain_id="nrpspksdomains_dpsF_Xdom01"
+                     /database="nrpspksdomains.hmm"
+                     /detection="hmmscan"
+                     /domain="Polyketide_cyc"
+                     /domain_subtype="Polyketide_cyc2"
+                     /evalue="1.80E-18"
+                     /locus_tag="dpsF"
+                     /score="58.9"
+                     /translation="QTEHEIHTSAAPDAVFAVLADARAWPAVFPPSVHVEQVEHTGSSE
+                     RIRIWATANGSLRTWTSRRELDERARRIRFRQEVSAHPVAAMGGEWIVEEAGDGGTRVR
+                     LTHDFRAVDDDPETIGWIHRAVDRNSEAELASLRTALE"
+     PFAM_domain     complement(1518..1820)
+                     /aSTool="fullhmmer"
+                     /asDomain_id="fullhmmer_dpsF_0003"
+                     /database="Pfam-A.hmm"
+                     /db_xref="PFAM: PF03364"
+                     /description="Polyketide cyclase / dehydrase and lipid
+                     transport"
+                     /detection="hmmscan"
+                     /domain="Polyketide_cyc"
+                     /evalue="2.10E-09"
+                     /label="dpsF"
+                     /locus_tag="dpsF"
+                     /note="Pfam-A.hmm-Hit: Polyketide_cyc. Score: 37.4.
+                     E-value: 2.1e-09. Domain range: 1..103."
+                     /note="ClusterFinder probability: 0.994690583074"
+                     /score="37.4"
+                     /translation="SAAPDAVFAVLADARAWPAVFPPSVHVEQVEHTGSSERIRIWATA
+                     NGSLRTWTSRRELDERARRIRFRQEVSAHPVAAMGGEWIVEEAGDGGTRVRLTHDF"
+     gene            complement(1895..2680)
+                     /gene="dpsE"
+     CDS             complement(1895..2680)
+                     /aSProdPred=""
+                     /codon_start=1
+                     /db_xref="GI:532243"
+                     /function="reductase"
+                     /gene="dpsE"
+                     /note="protein E; putative"
+                     /note="smCOG:
+                     SMCOG1001:short-chain_dehydrogenase/reductase_SDR (Score:
+                     263.1; E-value: 3.9e-80);"
+                     /product="daunorubicin-doxorubicin polyketide synthase"
+                     /protein_id="AAA65204.1"
+                     /sec_met="Type: none"
+                     /sec_met="Domains detected: adh_short (E-value: 1.3e-41,
+                     bitscore: 131.8, seeds: 230)"
+                     /sec_met="Kind: biosynthetic"
+                     /sec_met="NRPS/PKS subtype: PKS/NRPS-like protein"
+                     /sec_met="NRPS/PKS Domain: PKS_KR (7-159). E-value:
+                     4.6e-15. Score: 47.5; Predicted KR activity: inactive;
+                     Predicted KR stereochemistry: C1;"
+                     /transl_table=11
+                     /translation="MSEAADRVALVTGGTSGIGLAVVRKLAQDGTRVFLCARDESAITG
+                     TVKELQASGLEVDGAPCDVRSTADVDRLVQTARNRFGPIDIVVNNAGRGGGGVTAEITD
+                     DLWLDVVDTNLSGAFRVTRAVLTGGAMQEHGWGRIISIASTGGKQGVALGAPYSASKSG
+                     LIGFTKAVALELAKTGITVNAVCPGYVETPMAQGVRQRYAAFWGITEDDVLEKFQAKIP
+                     LGRYSMPEEVAGMVHYLASDSADSITAQAINVCGGLGSY"
+     CDS_motif       complement(1904..2185)
+                     /aSTool="pksnrpsmotif"
+                     /asDomain_id="nrpspksmotif_dpsE_0002"
+                     /database="abmotifs"
+                     /detection="hmmscan"
+                     /evalue="4.75E+02"
+                     /label="PKSI-KR_m1"
+                     /locus_tag="dpsE"
+                     /motif="PKSI-KR_m1"
+                     /note="NRPS/PKS Motif: PKSI-KR_m1 (e-value: 475.0,
+                     bit-score: -4.2)"
+                     /score="-4.2"
+                     /translation="GFTKAVALELAKTGITVNAVCPGYVETPMAQGVRQRYAAFWGITE
+                     DDVLEKFQAKIPLGRYSMPEEVAGMVHYLASDSADSITAQAINVCGGLG"
+     PFAM_domain     complement(1907..2635)
+                     /aSTool="fullhmmer"
+                     /asDomain_id="fullhmmer_dpsE_0002"
+                     /database="Pfam-A.hmm"
+                     /db_xref="PFAM: PF13561"
+                     /description="Enoyl-(Acyl carrier protein) reductase"
+                     /detection="hmmscan"
+                     /domain="adh_short_C2"
+                     /evalue="9.50E-26"
+                     /label="dpsE"
+                     /locus_tag="dpsE"
+                     /note="Pfam-A.hmm-Hit: adh_short_C2. Score: 91.0. E-value:
+                     9.5e-26. Domain range: 5..240."
+                     /note="ClusterFinder probability: 0.997769811538"
+                     /score="91.0"
+                     /translation="SGIGLAVVRKLAQDGTRVFLCARDESAITGTVKELQASGLEVDGA
+                     PCDVRSTADVDRLVQTARNRFGPIDIVVNNAGRGGGGVTAEITDDLWLDVVDTNLSGAF
+                     RVTRAVLTGGAMQEHGWGRIISIASTGGKQGVALGAPYSASKSGLIGFTKAVALELAKT
+                     GITVNAVCPGYVETPMAQGVRQRYAAFWGITEDDVLEKFQAKIPLGRYSMPEEVAGMVH
+                     YLASDSADSITAQAINVCGGL"
+     PFAM_domain     complement(2156..2659)
+                     /aSTool="fullhmmer"
+                     /asDomain_id="fullhmmer_dpsE_0001"
+                     /database="Pfam-A.hmm"
+                     /db_xref="PFAM: PF00106"
+                     /description="short chain dehydrogenase"
+                     /detection="hmmscan"
+                     /domain="adh_short"
+                     /evalue="2.20E-38"
+                     /label="dpsE"
+                     /locus_tag="dpsE"
+                     /note="Pfam-A.hmm-Hit: adh_short. Score: 131.8. E-value:
+                     2.2e-38. Domain range: 1..166."
+                     /note="ClusterFinder probability: 0.997752499548"
+                     /score="131.8"
+                     /translation="VALVTGGTSGIGLAVVRKLAQDGTRVFLCARDESAITGTVKELQA
+                     SGLEVDGAPCDVRSTADVDRLVQTARNRFGPIDIVVNNAGRGGGGVTAEITDDLWLDVV
+                     DTNLSGAFRVTRAVLTGGAMQEHGWGRIISIASTGGKQGVALGAPYSASKSGLIGFTKA
+                     VALEL"
+     PFAM_domain     complement(2195..2656)
+                     /aSTool="fullhmmer"
+                     /asDomain_id="fullhmmer_dpsE_0003"
+                     /database="Pfam-A.hmm"
+                     /db_xref="PFAM: PF08659"
+                     /description="KR domain"
+                     /detection="hmmscan"
+                     /domain="KR"
+                     /evalue="4.00E-17"
+                     /label="dpsE"
+                     /locus_tag="dpsE"
+                     /note="Pfam-A.hmm-Hit: KR. Score: 62.4. E-value: 4e-17.
+                     Domain range: 2..154."
+                     /note="ClusterFinder probability: 0.999879878631"
+                     /score="62.4"
+                     /translation="ALVTGGTSGIGLAVVRKLAQDGTRVFLCARDESAITGTVKELQAS
+                     GLEVDGAPCDVRSTADVDRLVQTARNRFGPIDIVVNNAGRGGGGVTAEITDDLWLDVVD
+                     TNLSGAFRVTRAVLTGGAMQEHGWGRIISIASTGGKQGVALGAPYSASKS"
+     aSDomain        complement(2204..2659)
+                     /asDomain_id="nrpspksdomains_dpsE_KR1"
+                     /database="nrpspksdomains.hmm"
+                     /detection="hmmscan"
+                     /domain="PKS_KR"
+                     /evalue="4.60E-15"
+                     /label="dpsE_KR1"
+                     /locus_tag="dpsE"
+                     /score="47.5"
+                     /specificity="KR activity: inactive"
+                     /specificity="KR stereochemistry: C1"
+                     /translation="VALVTGGTSGIGLAVVRKLAQDGTRVFLCARDESAITGTVKELQA
+                     SGLEVDGAPCDVRSTADVDRLVQTARNRFGPIDIVVNNAGRGGGGVTAEITDDLWLDVV
+                     DTNLSGAFRVTRAVLTGGAMQEHGWGRIISIASTGGKQGVALGAPYSA"
+     PFAM_domain     complement(2243..2653)
+                     /aSTool="fullhmmer"
+                     /asDomain_id="fullhmmer_dpsE_0005"
+                     /database="Pfam-A.hmm"
+                     /db_xref="PFAM: PF13460"
+                     /description="NADH(P)-binding"
+                     /detection="hmmscan"
+                     /domain="NAD_binding_10"
+                     /evalue="1.40E-04"
+                     /label="dpsE"
+                     /locus_tag="dpsE"
+                     /note="Pfam-A.hmm-Hit: NAD_binding_10. Score: 21.9.
+                     E-value: 0.00014. Domain range: 1..100."
+                     /note="ClusterFinder probability: 0.998926862092"
+                     /score="21.9"
+                     /translation="LVTGGTSGIGLAVVRKLAQDGTRVFLCARDESAITGTVKELQASG
+                     LEVDGAPCDVRSTADVDRLVQTARNRFGPIDIVVNNAGRGGGGVTAEITDDLWLDVVDT
+                     NLSGAFRVTRAVLTGGAMQEHGWGRIISIASTG"
+     CDS_motif       complement(2291..2653)
+                     /aSTool="pksnrpsmotif"
+                     /asDomain_id="nrpspksmotif_dpsE_0001"
+                     /database="abmotifs"
+                     /detection="hmmscan"
+                     /evalue="2.73E-05"
+                     /label="PKSI-KR_m1"
+                     /locus_tag="dpsE"
+                     /motif="PKSI-KR_m1"
+                     /note="NRPS/PKS Motif: PKSI-KR_m1 (e-value: 2.726e-05,
+                     bit-score: 19.0)"
+                     /score="19.0"
+                     /translation="LVTGGTSGIGLAVVRKLAQDGTRVFLCARDESAITGTVKELQASG
+                     LEVDGAPCDVRSTADVDRLVQTARNRFGPIDIVVNNAGRGGGGVTAEITDDLWLDVVDT
+                     NLSGAFRVTRAVLTGGA"
+     PFAM_domain     complement(2294..2656)
+                     /aSTool="fullhmmer"
+                     /asDomain_id="fullhmmer_dpsE_0004"
+                     /database="Pfam-A.hmm"
+                     /db_xref="PFAM: PF01370"
+                     /description="NAD dependent epimerase/dehydratase family"
+                     /detection="hmmscan"
+                     /domain="Epimerase"
+                     /evalue="1.80E-06"
+                     /label="dpsE"
+                     /locus_tag="dpsE"
+                     /note="Pfam-A.hmm-Hit: Epimerase. Score: 27.5. E-value:
+                     1.8e-06. Domain range: 0..107."
+                     /note="ClusterFinder probability: 0.999948350268"
+                     /score="27.5"
+                     /translation="ALVTGGTSGIGLAVVRKLAQDGTRVFLCARDESAITGTVKELQAS
+                     GLEVDGAPCDVRSTADVDRLVQTARNRFGPIDIVVNNAGRGGGGVTAEITDDLWLDVVD
+                     TNLSGAFRVTRAVLTGG"
+     PFAM_domain     complement(2510..2653)
+                     /aSTool="fullhmmer"
+                     /asDomain_id="fullhmmer_dpsE_0006"
+                     /database="Pfam-A.hmm"
+                     /db_xref="PFAM: PF05368"
+                     /description="NmrA-like family"
+                     /detection="hmmscan"
+                     /domain="NmrA"
+                     /evalue="7.50E-03"
+                     /label="dpsE"
+                     /locus_tag="dpsE"
+                     /note="Pfam-A.hmm-Hit: NmrA. Score: 15.5. E-value: 0.0075.
+                     Domain range: 1..47."
+                     /note="ClusterFinder probability: 0.999957587723"
+                     /score="15.5"
+                     /translation="LVTGGTSGIGLAVVRKLAQDGTRVFLCARDESAITGTVKELQASG
+                     LEV"
+     CDS             2872..3261
+                     /codon_start=1
+                     /db_xref="GI:532244"
+                     /note="ORF8; putative"
+                     /product="anthraquinol monooxygenase"
+                     /protein_id="AAA65205.1"
+                     /transl_table=11
+                     /translation="MPQPEPNDAGSGSVTFVNRFTLSGSAEDFEAAFAETAEFLCRRPG
+                     FRWHALLVPADTGPGSADARPQYVNIAVWDDEASFRAAVAHPEFPAHAAALRALSTSEP
+                     TLYRHRQIRVAPDVPAVSGPGGRTT"
+     PFAM_domain     2911..3153
+                     /aSTool="fullhmmer"
+                     /asDomain_id="fullhmmer_AAA65205.1_0001"
+                     /database="Pfam-A.hmm"
+                     /db_xref="PFAM: PF03992"
+                     /description="Antibiotic biosynthesis monooxygenase"
+                     /detection="hmmscan"
+                     /domain="ABM"
+                     /evalue="5.90E-20"
+                     /label="AAA65205.1"
+                     /locus_tag="AAA65205.1"
+                     /note="Pfam-A.hmm-Hit: ABM. Score: 71.0. E-value: 5.9e-20.
+                     Domain range: 1..77."
+                     /note="ClusterFinder probability: 0.998435620884"
+                     /score="71.0"
+                     /translation="VTFVNRFTLSGSAEDFEAAFAETAEFLCRRPGFRWHALLVPADTG
+                     PGSADARPQYVNIAVWDDEASFRAAVAHPEFPAHAA"
+     gene            3258..4517
+                     /gene="dpsA"
+     CDS             3258..4517
+                     /aSProdPred=""
+                     /codon_start=1
+                     /db_xref="GI:532245"
+                     /function="3-oxoacyl:ACP synthase"
+                     /gene="dpsA"
+                     /note="protein A"
+                     /note="smCOG: SMCOG1022:Beta-ketoacyl_synthase (Score:
+                     476.4; E-value: 1.4e-144);"
+                     /product="daunorubicin-doxorubicin polyketide synthase"
+                     /protein_id="AAA65206.1"
+                     /sec_met="Type: t2pks"
+                     /sec_met="Domains detected: t2ks (E-value: 1.3e-223,
+                     bitscore: 731.7, seeds: 25)"
+                     /sec_met="Kind: biosynthetic"
+                     /sec_met="NRPS/PKS subtype: PKS/NRPS-like protein"
+                     /sec_met="NRPS/PKS Domain: PKS_KS (4-394). E-value:
+                     1.5e-53. Score: 173.8;"
+                     /transl_table=11
+                     /translation="MNRRIVITGIGVVAPGAVGTKPFWELLLSGTTATRAISTFDATPF
+                     RSRIAAECDFDPVAAGLSAEQARRLDRAGQFALVAGQEALADSGLRIDEDSAHRVGVCV
+                     GTAVGCTQKLESEYVALSAGGAHWVVDPGRGSPELYDYFVPSSLAAEVAWLAGAEGPVN
+                     IVSAGCTSGIDSIGYACELIREGTVDAMVAGGVDAPIAPITVACFDAIRATSDHNDTPE
+                     TASRPFSRSRNGFVLGEGGAIVVLEEAEAAVRRGARIYAEIGGYASRGNAYHMTGLRAD
+                     GAEMAAAITAALDEARRDPSDVDYVNAHGTATKQNDRHETSAFKRSLGEHAYRVPISSI
+                     KSMIGHSLGAVGSLEVAATALAVEYGVIPPTANLHDPDPELDLDYVPLTAREKRVRHAL
+                     TVGSGFGGFQSAMLLSRLER"
+     PFAM_domain     3264..4010
+                     /aSTool="fullhmmer"
+                     /asDomain_id="fullhmmer_dpsA_0001"
+                     /database="Pfam-A.hmm"
+                     /db_xref="PFAM: PF00109"
+                     /description="Beta-ketoacyl synthase, N-terminal domain"
+                     /detection="hmmscan"
+                     /domain="ketoacyl-synt"
+                     /evalue="1.40E-59"
+                     /label="dpsA"
+                     /locus_tag="dpsA"
+                     /note="Pfam-A.hmm-Hit: ketoacyl-synt. Score: 201.6.
+                     E-value: 1.4e-59. Domain range: 1..254."
+                     /note="ClusterFinder probability: 0.99979599972"
+                     /score="201.6"
+                     /translation="RRIVITGIGVVAPGAVGTKPFWELLLSGTTATRAISTFDATPFRS
+                     RIAAECDFDPVAAGLSAEQARRLDRAGQFALVAGQEALADSGLRIDEDSAHRVGVCVGT
+                     AVGCTQKLESEYVALSAGGAHWVVDPGRGSPELYDYFVPSSLAAEVAWLAGAEGPVNIV
+                     SAGCTSGIDSIGYACELIREGTVDAMVAGGVDAPIAPITVACFDAIRATSDHNDTPETA
+                     SRPFSRSRNGFVLGEGGAIVVLEEAEA"
+     aSDomain        3270..4439
+                     /asDomain_id="nrpspksdomains_dpsA_Xdom01"
+                     /database="nrpspksdomains.hmm"
+                     /detection="hmmscan"
+                     /domain="PKS_KS"
+                     /evalue="1.50E-53"
+                     /locus_tag="dpsA"
+                     /score="173.8"
+                     /translation="IVITGIGVVAPGAVGTKPFWELLLSGTTATRAISTFDATPFRSRI
+                     AAECDFDPVAAGLSAEQARRLDRAGQFALVAGQEALADSGLRIDEDSAHRVGVCVGTAV
+                     GCTQKLESEYVALSAGGAHWVVDPGRGSPELYDYFVPSSLAAEVAWLAGAEGPVNIVSA
+                     GCTSGIDSIGYACELIREGTVDAMVAGGVDAPIAPITVACFDAIRATSDHNDTPETASR
+                     PFSRSRNGFVLGEGGAIVVLEEAEAAVRRGARIYAEIGGYASRGNAYHMTGLRADGAEM
+                     AAAITAALDEARRDPSDVDYVNAHGTATKQNDRHETSAFKRSLGEHAYRVPISSIKSMI
+                     GHSLGAVGSLEVAATALAVEYGVIPPTANLHDPDPELDLDYVPLTAREKR"
+     PFAM_domain     3735..3848
+                     /aSTool="fullhmmer"
+                     /asDomain_id="fullhmmer_dpsA_0003"
+                     /database="Pfam-A.hmm"
+                     /db_xref="PFAM: PF00108"
+                     /description="Thiolase, N-terminal domain"
+                     /detection="hmmscan"
+                     /domain="Thiolase_N"
+                     /evalue="2.40E-03"
+                     /label="dpsA"
+                     /locus_tag="dpsA"
+                     /note="Pfam-A.hmm-Hit: Thiolase_N. Score: 16.9. E-value:
+                     0.0024. Domain range: 78..116."
+                     /note="ClusterFinder probability: 0.999890316945"
+                     /score="16.9"
+                     /translation="GPVNIVSAGCTSGIDSIGYACELIREGTVDAMVAGGVD"
+     PFAM_domain     4035..4382
+                     /aSTool="fullhmmer"
+                     /asDomain_id="fullhmmer_dpsA_0002"
+                     /database="Pfam-A.hmm"
+                     /db_xref="PFAM: PF02801"
+                     /description="Beta-ketoacyl synthase, C-terminal domain"
+                     /detection="hmmscan"
+                     /domain="Ketoacyl-synt_C"
+                     /evalue="3.90E-38"
+                     /label="dpsA"
+                     /locus_tag="dpsA"
+                     /note="Pfam-A.hmm-Hit: Ketoacyl-synt_C. Score: 129.9.
+                     E-value: 3.9e-38. Domain range: 0..119."
+                     /note="ClusterFinder probability: 0.999898936776"
+                     /score="129.9"
+                     /translation="YAEIGGYASRGNAYHMTGLRADGAEMAAAITAALDEARRDPSDVD
+                     YVNAHGTATKQNDRHETSAFKRSLGEHAYRVPISSIKSMIGHSLGAVGSLEVAATALAV
+                     EYGVIPPTANLH"
+     gene            4523..5800
+                     /gene="dpsB"
+     CDS             4523..5800
+                     /aSProdPred=""
+                     /codon_start=1
+                     /db_xref="GI:532246"
+                     /function="unknown"
+                     /gene="dpsB"
+                     /note="protein B"
+                     /note="smCOG: SMCOG1093:Beta-ketoacyl_synthase (Score:
+                     612.5; E-value: 4.5e-186);"
+                     /product="daunorubicin-doxorubicin polyketide synthase"
+                     /protein_id="AAA65207.1"
+                     /sec_met="Type: t2pks"
+                     /sec_met="Domains detected: t2clf (E-value: 5.5e-186,
+                     bitscore: 607.3, seeds: 26)"
+                     /sec_met="Kind: biosynthetic"
+                     /sec_met="NRPS/PKS subtype: PKS/NRPS-like protein"
+                     /sec_met="NRPS/PKS Domain: PKS_KS (86-422). E-value:
+                     2.5e-25. Score: 80.8;"
+                     /transl_table=11
+                     /translation="MTGTAARTASSQLHASPAGRRGLRGRAVVTGLGIVAPNGLGVGAY
+                     WDAVLNGRNGIGPLRRFTGDGRLGRLAGEVSDFVPEDHLPKRLLAQTDPMTQYALAAAE
+                     WALRESGCSPSSPLEAGVITASASGGFAFGQRELQNLWSKGPAHVSAYMSFAWFYAVNT
+                     GQIAIRHDLRGPVGVVVAEQAGGLDALAHARRKVRGGAELIVSGAVDSSLCPYGMAAQV
+                     KSGRLSGSDNPTAGYLPFDRRAAGHVPGEGGAILTVEDAERAAERGAKVYGSIAGYGAS
+                     FDPPPGSGRPSALARAVETALADAGLDGSDIAVVFADGAAVPELDAAEAEALASVFGPR
+                     RVPVTVPKTLTGRLYSGAGPLDVATALLALRDEVVPATAHVDPDPDLPLDVVTGRPRSL
+                     ADARAALLVARGYGGFNSALVVRGAA"
+     PFAM_domain     4598..5305
+                     /aSTool="fullhmmer"
+                     /asDomain_id="fullhmmer_dpsB_0001"
+                     /database="Pfam-A.hmm"
+                     /db_xref="PFAM: PF00109"
+                     /description="Beta-ketoacyl synthase, N-terminal domain"
+                     /detection="hmmscan"
+                     /domain="ketoacyl-synt"
+                     /evalue="7.40E-46"
+                     /label="dpsB"
+                     /locus_tag="dpsB"
+                     /note="Pfam-A.hmm-Hit: ketoacyl-synt. Score: 156.6.
+                     E-value: 7.4e-46. Domain range: 2..252."
+                     /note="ClusterFinder probability: 0.999906405906"
+                     /score="156.6"
+                     /translation="RAVVTGLGIVAPNGLGVGAYWDAVLNGRNGIGPLRRFTGDGRLGR
+                     LAGEVSDFVPEDHLPKRLLAQTDPMTQYALAAAEWALRESGCSPSSPLEAGVITASASG
+                     GFAFGQRELQNLWSKGPAHVSAYMSFAWFYAVNTGQIAIRHDLRGPVGVVVAEQAGGLD
+                     ALAHARRKVRGGAELIVSGAVDSSLCPYGMAAQVKSGRLSGSDNPTAGYLPFDRRAAGH
+                     VPGEGGAILTVEDA"
+     aSDomain        4781..5788
+                     /asDomain_id="nrpspksdomains_dpsB_Xdom01"
+                     /database="nrpspksdomains.hmm"
+                     /detection="hmmscan"
+                     /domain="PKS_KS"
+                     /evalue="2.50E-25"
+                     /locus_tag="dpsB"
+                     /score="80.8"
+                     /translation="RLLAQTDPMTQYALAAAEWALRESGCSPSSPLEAGVITASASGGF
+                     AFGQRELQNLWSKGPAHVSAYMSFAWFYAVNTGQIAIRHDLRGPVGVVVAEQAGGLDAL
+                     AHARRKVRGGAELIVSGAVDSSLCPYGMAAQVKSGRLSGSDNPTAGYLPFDRRAAGHVP
+                     GEGGAILTVEDAERAAERGAKVYGSIAGYGASFDPPPGSGRPSALARAVETALADAGLD
+                     GSDIAVVFADGAAVPELDAAEAEALASVFGPRRVPVTVPKTLTGRLYSGAGPLDVATAL
+                     LALRDEVVPATAHVDPDPDLPLDVVTGRPRSLADARAALLVARGYGGFNSALVVR"
+     PFAM_domain     5336..5668
+                     /aSTool="fullhmmer"
+                     /asDomain_id="fullhmmer_dpsB_0002"
+                     /database="Pfam-A.hmm"
+                     /db_xref="PFAM: PF02801"
+                     /description="Beta-ketoacyl synthase, C-terminal domain"
+                     /detection="hmmscan"
+                     /domain="Ketoacyl-synt_C"
+                     /evalue="4.10E-26"
+                     /label="dpsB"
+                     /locus_tag="dpsB"
+                     /note="Pfam-A.hmm-Hit: Ketoacyl-synt_C. Score: 91.1.
+                     E-value: 4.1e-26. Domain range: 0..119."
+                     /note="ClusterFinder probability: 0.99987836212"
+                     /score="91.1"
+                     /translation="YGSIAGYGASFDPPPGSGRPSALARAVETALADAGLDGSDIAVVF
+                     ADGAAVPELDAAEAEALASVFGPRRVPVTVPKTLTGRLYSGAGPLDVATALLALRDEVV
+                     PATAHVD"
+     gene            5797..6858
+                     /gene="dpsC"
+     CDS             5797..6858
+                     /codon_start=1
+                     /db_xref="GI:532247"
+                     /function="unknown"
+                     /gene="dpsC"
+                     /note="protein C"
+                     /note="smCOG:
+                     SMCOG1084:3-oxoacyl-(acyl_carrier_protein)_synthase_III
+                     (Score: 118.5; E-value: 5.1e-36);"
+                     /product="daunorubicin-doxorubicin polyketide synthase"
+                     /protein_id="AAA65208.1"
+                     /sec_met="Type: otherks"
+                     /sec_met="Domains detected: ksIII (E-value: 2.1e-96,
+                     bitscore: 311.7, seeds: 7)"
+                     /sec_met="Kind: biosynthetic"
+                     /transl_table=11
+                     /translation="MSVPQGAPGDLYVAGCGVWLPPPVTTEQALAAGHCDRRLASSTRM
+                     LSVAVADKETPAEMAALAAQTALDRSGVAPAHVDLVLHASLYFQGHHLWAPSSYVQRVA
+                     VGNRCPAMEVRQVSNGGMAALELARAYLLAAPDRVAALITTGDRMHPPGFDRWSSDPGT
+                     VYADGGTALVLSRQGGFARLRSLVTVSEPVLEGMHRGGHPFGPPSPEEQRAVDLDAHKR
+                     AYVAEAGSSFSVARVSAGQEEALTGALEAAGAGLDDISRVVLPHMGWRRLSAAYFNKWH
+                     IQPERTTWEFGRRTGHLGGGDPIAGFDHLVGSGRLAPGELCLLVSVGAGFSWSCAVVEL
+                     LERPSWAAAPAAR"
+     PFAM_domain     6133..6333
+                     /aSTool="fullhmmer"
+                     /asDomain_id="fullhmmer_dpsC_0002"
+                     /database="Pfam-A.hmm"
+                     /db_xref="PFAM: PF08545"
+                     /description="3-Oxoacyl-[acyl-carrier-protein (ACP)]
+                     synthase III"
+                     /detection="hmmscan"
+                     /domain="ACP_syn_III"
+                     /evalue="4.80E-06"
+                     /label="dpsC"
+                     /locus_tag="dpsC"
+                     /note="Pfam-A.hmm-Hit: ACP_syn_III. Score: 26.1. E-value:
+                     4.8e-06. Domain range: 1..68."
+                     /note="ClusterFinder probability: 0.999840348653"
+                     /score="26.1"
+                     /translation="EVRQVSNGGMAALELARAYLLAAPDRVAALITTGDRMHPPGFDRW
+                     SSDPGTVYADGGTALVLSRQGG"
+     PFAM_domain     6541..6813
+                     /aSTool="fullhmmer"
+                     /asDomain_id="fullhmmer_dpsC_0001"
+                     /database="Pfam-A.hmm"
+                     /db_xref="PFAM: PF08541"
+                     /description="3-Oxoacyl-[acyl-carrier-protein (ACP)]
+                     synthase III C terminal"
+                     /detection="hmmscan"
+                     /domain="ACP_syn_III_C"
+                     /evalue="6.50E-20"
+                     /label="dpsC"
+                     /locus_tag="dpsC"
+                     /note="Pfam-A.hmm-Hit: ACP_syn_III_C. Score: 70.9. E-value:
+                     6.5e-20. Domain range: 0..89."
+                     /note="ClusterFinder probability: 0.999513686843"
+                     /score="70.9"
+                     /translation="LEAAGAGLDDISRVVLPHMGWRRLSAAYFNKWHIQPERTTWEFGR
+                     RTGHLGGGDPIAGFDHLVGSGRLAPGELCLLVSVGAGFSWSCAVVE"
+     gene            6869..7882
+                     /gene="dpsD"
+     CDS             6869..7882
+                     /aSProdPred="mal"
+                     /codon_start=1
+                     /db_xref="GI:532248"
+                     /function="acyltransferase"
+                     /gene="dpsD"
+                     /note="protein D; putative"
+                     /note="smCOG:
+                     SMCOG1021:malonyl_CoA-acyl_carrier_protein_transacylase
+                     (Score: 251.6; E-value: 2.9e-76);"
+                     /product="daunorubicin-doxorubicin polyketide synthase"
+                     /protein_id="AAA65209.1"
+                     /sec_met="Type: none"
+                     /sec_met="Domains detected: PKS_AT (E-value: 3.2e-66,
+                     bitscore: 212.9, seeds: 1682); PKS_AT (E-value: 3.2e-66,
+                     bitscore: 212.9, seeds: 1682)"
+                     /sec_met="Kind: biosynthetic"
+                     /sec_met="NRPS/PKS subtype: PKS/NRPS-like protein"
+                     /sec_met="NRPS/PKS Domain: PKS_AT (8-290). E-value:
+                     1.6e-65. Score: 212.9; Substrate specificity predictions:
+                     mal (PKS signature), mal (Minowa), mal (consensus);"
+                     /transl_table=11
+                     /translation="MDAPAILLMFPGQGSQHARMAVGLYGSEPAFTAAMDEVFDAYDDA
+                     GDSEGGRLRADWLSDHPAVPLDHVTRSQPLLFAVDYALGRMVMATTGRPWALLGHSVGE
+                     MAAAALAGVFTLRDAAGLLLDRVRRLAQAPPGGMLAVAAAEDVLGPYLGNGEVVVAAVN
+                     SPRQTILAGPVASLAGVARALREAGLTCREVPSLTAFHSPMLAPIAAGAAERFASTRVA
+                     PSIPLRSGYRPGAVTGQLAADPSYWAGHPLETVRFWPALDAMLGSRTGVVCLETGPGQG
+                     LSTIARRHPTVRFGKNSVVPLLPPQAGTAEVDRTSVAAALAAVREQGTVLSGRPGR"
+     CDS_motif       6890..6943
+                     /aSTool="pksnrpsmotif"
+                     /asDomain_id="nrpspksmotif_dpsD_0001"
+                     /database="abmotifs"
+                     /detection="hmmscan"
+                     /evalue="8.80E-06"
+                     /label="PKSI-AT-mM_m1"
+                     /locus_tag="dpsD"
+                     /motif="PKSI-AT-mM_m1"
+                     /note="NRPS/PKS Motif: PKSI-AT-mM_m1 (e-value: 8.8e-06,
+                     bit-score: 18.1)"
+                     /score="18.1"
+                     /translation="LMFPGQGSQHARMAVGLY"
+     PFAM_domain     6893..7660
+                     /aSTool="fullhmmer"
+                     /asDomain_id="fullhmmer_dpsD_0001"
+                     /database="Pfam-A.hmm"
+                     /db_xref="PFAM: PF00698"
+                     /description="Acyl transferase domain"
+                     /detection="hmmscan"
+                     /domain="Acyl_transf_1"
+                     /evalue="6.00E-36"
+                     /label="dpsD"
+                     /locus_tag="dpsD"
+                     /note="Pfam-A.hmm-Hit: Acyl_transf_1. Score: 124.3.
+                     E-value: 6e-36. Domain range: 2..255."
+                     /note="ClusterFinder probability: 0.999784346094"
+                     /score="124.3"
+                     /translation="MFPGQGSQHARMAVGLYGSEPAFTAAMDEVFDAYDDAGDSEGGRL
+                     RADWLSDHPAVPLDHVTRSQPLLFAVDYALGRMVMATTGRPWALLGHSVGEMAAAALAG
+                     VFTLRDAAGLLLDRVRRLAQAPPGGMLAVAAAEDVLGPYLGNGEVVVAAVNSPRQTILA
+                     GPVASLAGVARALREAGLTCREVPSLTAFHSPMLAPIAAGAAERFASTRVAPSIPLRSG
+                     YRPGAVTGQLAADPSYWAGHPLETVRFWPALDAM"
+     aSDomain        6893..7738
+                     /asDomain_id="nrpspksdomains_dpsD_AT1"
+                     /database="nrpspksdomains.hmm"
+                     /detection="hmmscan"
+                     /domain="PKS_AT"
+                     /evalue="1.60E-65"
+                     /label="dpsD_AT1"
+                     /locus_tag="dpsD"
+                     /score="212.9"
+                     /specificity="PKS signature: mal"
+                     /specificity="Minowa: mal"
+                     /specificity="consensus: mal"
+                     /translation="MFPGQGSQHARMAVGLYGSEPAFTAAMDEVFDAYDDAGDSEGGRL
+                     RADWLSDHPAVPLDHVTRSQPLLFAVDYALGRMVMATTGRPWALLGHSVGEMAAAALAG
+                     VFTLRDAAGLLLDRVRRLAQAPPGGMLAVAAAEDVLGPYLGNGEVVVAAVNSPRQTILA
+                     GPVASLAGVARALREAGLTCREVPSLTAFHSPMLAPIAAGAAERFASTRVAPSIPLRSG
+                     YRPGAVTGQLAADPSYWAGHPLETVRFWPALDAMLGSRTGVVCLETGPGQGLSTIARRH
+                     P"
+     CDS_motif       7085..7117
+                     /aSTool="pksnrpsmotif"
+                     /asDomain_id="nrpspksmotif_dpsD_0002"
+                     /database="abmotifs"
+                     /detection="hmmscan"
+                     /evalue="4.30E-03"
+                     /label="PKSI-AT-M_m2"
+                     /locus_tag="dpsD"
+                     /motif="PKSI-AT-M_m2"
+                     /note="NRPS/PKS Motif: PKSI-AT-M_m2 (e-value: 0.0043,
+                     bit-score: 10.2)"
+                     /score="10.2"
+                     /translation="QPLLFAVDYAL"
+     CDS_motif       7145..7246
+                     /aSTool="pksnrpsmotif"
+                     /asDomain_id="nrpspksmotif_dpsD_0003"
+                     /database="abmotifs"
+                     /detection="hmmscan"
+                     /evalue="3.90E-15"
+                     /label="PKSI-AT-M_m3"
+                     /locus_tag="dpsD"
+                     /motif="PKSI-AT-M_m3"
+                     /note="NRPS/PKS Motif: PKSI-AT-M_m3 (e-value: 3.9e-15,
+                     bit-score: 47.9)"
+                     /score="47.9"
+                     /translation="RPWALLGHSVGEMAAAALAGVFTLRDAAGLLLDR"
+     CDS_motif       7346..7384
+                     /aSTool="pksnrpsmotif"
+                     /asDomain_id="nrpspksmotif_dpsD_0004"
+                     /database="abmotifs"
+                     /detection="hmmscan"
+                     /evalue="6.40E-04"
+                     /label="PKSI-AT-M_m5"
+                     /locus_tag="dpsD"
+                     /motif="PKSI-AT-M_m5"
+                     /note="NRPS/PKS Motif: PKSI-AT-M_m5 (e-value: 0.00064,
+                     bit-score: 13.0)"
+                     /score="13.0"
+                     /translation="AAVNSPRQTILAG"
+     CDS_motif       7604..7639
+                     /aSTool="pksnrpsmotif"
+                     /asDomain_id="nrpspksmotif_dpsD_0005"
+                     /database="abmotifs"
+                     /detection="hmmscan"
+                     /evalue="8.00E-03"
+                     /label="PKSI-AT-M_m8"
+                     /locus_tag="dpsD"
+                     /motif="PKSI-AT-M_m8"
+                     /note="NRPS/PKS Motif: PKSI-AT-M_m8 (e-value: 0.008,
+                     bit-score: 9.9)"
+                     /score="9.9"
+                     /translation="YWAGHPLETVRF"
+     CDS_motif       7847..7867
+                     /aSTool="pksnrpsmotif"
+                     /asDomain_id="nrpspksmotif_dpsD_0006"
+                     /database="abmotifs"
+                     /detection="hmmscan"
+                     /evalue="2.50E+01"
+                     /label="PKSI-AT-M_m5"
+                     /locus_tag="dpsD"
+                     /motif="PKSI-AT-M_m5"
+                     /note="NRPS/PKS Motif: PKSI-AT-M_m5 (e-value: 25.0,
+                     bit-score: -1.0)"
+                     /score="-1.0"
+                     /translation="QGTVLSG"
+     CDS             complement(7860..8720)
+                     /aSProdPred=""
+                     /codon_start=1
+                     /db_xref="GI:532249"
+                     /function="unknown"
+                     /note="ORF5"
+                     /note="smCOG: SMCOG1089:methyltransferase (Score: 95.5;
+                     E-value: 5.8e-29);"
+                     /protein_id="AAA65210.1"
+                     /sec_met="NRPS/PKS subtype: PKS/NRPS-like protein"
+                     /sec_met="NRPS/PKS Domain: oMT (43-95). E-value: 3.3e-08.
+                     Score: 23.5;"
+                     /transl_table=11
+                     /translation="MQDSSYKEQVTQAFDQSSSTYDRLGVEFFTPMGRPLVEISEPVTG
+                     ERVLDIGCGRGACLFPAAEKVGPQGRVHGIDIAPGMIEEARKEAAERGLRNIALDVMDA
+                     ETPELPARSFDLVMGSYSVIFLPDAVGALARYAGILDHGGRIAFTSPVFRAGTFPFLPP
+                     EFTPLIPQALLEHLPEQWRPEALVRRFNSWLERAEDLLRTLERCGYTSVAVTDEPVRMT
+                     ALSSEAWVDWSHTQGMRLLWQNLPQAQRTELRARLVEGLDKLSDATGALAIDVPVRFVT
+                     ARVAH"
+     PFAM_domain     complement(8085..8621)
+                     /aSTool="fullhmmer"
+                     /asDomain_id="fullhmmer_AAA65210.1_0006"
+                     /database="Pfam-A.hmm"
+                     /db_xref="PFAM: PF13489"
+                     /description="Methyltransferase domain"
+                     /detection="hmmscan"
+                     /domain="Methyltransf_23"
+                     /evalue="1.20E-12"
+                     /label="AAA65210.1"
+                     /locus_tag="AAA65210.1"
+                     /note="Pfam-A.hmm-Hit: Methyltransf_23. Score: 47.8.
+                     E-value: 1.2e-12. Domain range: 10..159."
+                     /note="ClusterFinder probability: 0.993479060602"
+                     /score="47.8"
+                     /translation="RPLVEISEPVTGERVLDIGCGRGACLFPAAEKVGPQGRVHGIDIA
+                     PGMIEEARKEAAERGLRNIALDVMDAETPELPARSFDLVMGSYSVIFLPDAVGALARYA
+                     GILDHGGRIAFTSPVFRAGTFPFLPPEFTPLIPQALLEHLPEQWRPEALVRRFNSWLER
+                     AEDLLRTLERCGYTSV"
+     PFAM_domain     complement(8238..8588)
+                     /aSTool="fullhmmer"
+                     /asDomain_id="fullhmmer_AAA65210.1_0001"
+                     /database="Pfam-A.hmm"
+                     /db_xref="PFAM: PF13847"
+                     /description="Methyltransferase domain"
+                     /detection="hmmscan"
+                     /domain="Methyltransf_31"
+                     /evalue="3.40E-19"
+                     /label="AAA65210.1"
+                     /locus_tag="AAA65210.1"
+                     /note="Pfam-A.hmm-Hit: Methyltransf_31. Score: 68.9.
+                     E-value: 3.4e-19. Domain range: 3..113."
+                     /note="ClusterFinder probability: 0.996844967747"
+                     /score="68.9"
+                     /translation="GERVLDIGCGRGACLFPAAEKVGPQGRVHGIDIAPGMIEEARKEA
+                     AERGLRNIALDVMDAETPELPARSFDLVMGSYSVIFLPDAVGALARYAGILDHGGRIAF
+                     TSPVFRAGTFPFL"
+     PFAM_domain     complement(8268..8588)
+                     /aSTool="fullhmmer"
+                     /asDomain_id="fullhmmer_AAA65210.1_0003"
+                     /database="Pfam-A.hmm"
+                     /db_xref="PFAM: PF12847"
+                     /description="Methyltransferase domain"
+                     /detection="hmmscan"
+                     /domain="Methyltransf_18"
+                     /evalue="1.80E-14"
+                     /label="AAA65210.1"
+                     /locus_tag="AAA65210.1"
+                     /note="Pfam-A.hmm-Hit: Methyltransf_18. Score: 54.2.
+                     E-value: 1.8e-14. Domain range: 1..112."
+                     /note="ClusterFinder probability: 0.996510103837"
+                     /score="54.2"
+                     /translation="GERVLDIGCGRGACLFPAAEKVGPQGRVHGIDIAPGMIEEARKEA
+                     AERGLRNIALDVMDAETPELPARSFDLVMGSYSVIFLPDAVGALARYAGILDHGGRIAF
+                     TSP"
+     PFAM_domain     complement(8277..8576)
+                     /aSTool="fullhmmer"
+                     /asDomain_id="fullhmmer_AAA65210.1_0002"
+                     /database="Pfam-A.hmm"
+                     /db_xref="PFAM: PF08241"
+                     /description="Methyltransferase domain"
+                     /detection="hmmscan"
+                     /domain="Methyltransf_11"
+                     /evalue="1.80E-16"
+                     /label="AAA65210.1"
+                     /locus_tag="AAA65210.1"
+                     /note="Pfam-A.hmm-Hit: Methyltransf_11. Score: 60.4.
+                     E-value: 1.8e-16. Domain range: 0..95."
+                     /note="ClusterFinder probability: 0.996029546868"
+                     /score="60.4"
+                     /translation="LDIGCGRGACLFPAAEKVGPQGRVHGIDIAPGMIEEARKEAAERG
+                     LRNIALDVMDAETPELPARSFDLVMGSYSVIFLPDAVGALARYAGILDHGGRIAF"
+     PFAM_domain     complement(8277..8588)
+                     /aSTool="fullhmmer"
+                     /asDomain_id="fullhmmer_AAA65210.1_0007"
+                     /database="Pfam-A.hmm"
+                     /db_xref="PFAM: PF13659"
+                     /description="Methyltransferase domain"
+                     /detection="hmmscan"
+                     /domain="Methyltransf_26"
+                     /evalue="1.10E-10"
+                     /label="AAA65210.1"
+                     /locus_tag="AAA65210.1"
+                     /note="Pfam-A.hmm-Hit: Methyltransf_26. Score: 41.5.
+                     E-value: 1.1e-10. Domain range: 0..113."
+                     /note="ClusterFinder probability: 0.993265155255"
+                     /score="41.5"
+                     /translation="GERVLDIGCGRGACLFPAAEKVGPQGRVHGIDIAPGMIEEARKEA
+                     AERGLRNIALDVMDAETPELPARSFDLVMGSYSVIFLPDAVGALARYAGILDHGGRIAF
+                     "
+     PFAM_domain     complement(8280..8696)
+                     /aSTool="fullhmmer"
+                     /asDomain_id="fullhmmer_AAA65210.1_0004"
+                     /database="Pfam-A.hmm"
+                     /db_xref="PFAM: PF01209"
+                     /description="ubiE/COQ5 methyltransferase family"
+                     /detection="hmmscan"
+                     /domain="Ubie_methyltran"
+                     /evalue="4.80E-13"
+                     /label="AAA65210.1"
+                     /locus_tag="AAA65210.1"
+                     /note="Pfam-A.hmm-Hit: Ubie_methyltran. Score: 48.7.
+                     E-value: 4.8e-13. Domain range: 7..150."
+                     /note="ClusterFinder probability: 0.999114162132"
+                     /score="48.7"
+                     /translation="QVTQAFDQSSSTYDRLGVEFFTPMGRPLVEISEPVTGERVLDIGC
+                     GRGACLFPAAEKVGPQGRVHGIDIAPGMIEEARKEAAERGLRNIALDVMDAETPELPAR
+                     SFDLVMGSYSVIFLPDAVGALARYAGILDHGGRIA"
+     PFAM_domain     complement(8283..8576)
+                     /aSTool="fullhmmer"
+                     /asDomain_id="fullhmmer_AAA65210.1_0005"
+                     /database="Pfam-A.hmm"
+                     /db_xref="PFAM: PF08242"
+                     /description="Methyltransferase domain"
+                     /detection="hmmscan"
+                     /domain="Methyltransf_12"
+                     /evalue="1.30E-12"
+                     /label="AAA65210.1"
+                     /locus_tag="AAA65210.1"
+                     /note="Pfam-A.hmm-Hit: Methyltransf_12. Score: 48.0.
+                     E-value: 1.3e-12. Domain range: 0..99."
+                     /note="ClusterFinder probability: 0.995854373124"
+                     /score="48.0"
+                     /translation="LDIGCGRGACLFPAAEKVGPQGRVHGIDIAPGMIEEARKEAAERG
+                     LRNIALDVMDAETPELPARSFDLVMGSYSVIFLPDAVGALARYAGILDHGGRI"
+     PFAM_domain     complement(8307..8579)
+                     /aSTool="fullhmmer"
+                     /asDomain_id="fullhmmer_AAA65210.1_0008"
+                     /database="Pfam-A.hmm"
+                     /db_xref="PFAM: PF13649"
+                     /description="Methyltransferase domain"
+                     /detection="hmmscan"
+                     /domain="Methyltransf_25"
+                     /evalue="1.20E-08"
+                     /label="AAA65210.1"
+                     /locus_tag="AAA65210.1"
+                     /note="Pfam-A.hmm-Hit: Methyltransf_25. Score: 35.2.
+                     E-value: 1.2e-08. Domain range: 0..95."
+                     /note="ClusterFinder probability: 0.995211448148"
+                     /score="35.2"
+                     /translation="VLDIGCGRGACLFPAAEKVGPQGRVHGIDIAPGMIEEARKEAAER
+                     GLRNIALDVMDAETPELPARSFDLVMGSYSVIFLPDAVGALARYAG"
+     PFAM_domain     complement(8361..8588)
+                     /aSTool="fullhmmer"
+                     /asDomain_id="fullhmmer_AAA65210.1_0015"
+                     /database="Pfam-A.hmm"
+                     /db_xref="PFAM: PF07021"
+                     /description="Methionine biosynthesis protein MetW"
+                     /detection="hmmscan"
+                     /domain="MetW"
+                     /evalue="9.70E-03"
+                     /label="AAA65210.1"
+                     /locus_tag="AAA65210.1"
+                     /note="Pfam-A.hmm-Hit: MetW. Score: 15.3. E-value: 0.0097.
+                     Domain range: 13..82."
+                     /note="ClusterFinder probability: 0.997616813366"
+                     /score="15.3"
+                     /translation="GERVLDIGCGRGACLFPAAEKVGPQGRVHGIDIAPGMIEEARKEA
+                     AERGLRNIALDVMDAETPELPARSFDLVMGS"
+     PFAM_domain     complement(8367..8591)
+                     /aSTool="fullhmmer"
+                     /asDomain_id="fullhmmer_AAA65210.1_0012"
+                     /database="Pfam-A.hmm"
+                     /db_xref="PFAM: PF06325"
+                     /description="Ribosomal protein L11 methyltransferase
+                     (PrmA)"
+                     /detection="hmmscan"
+                     /domain="PrmA"
+                     /evalue="2.80E-03"
+                     /label="AAA65210.1"
+                     /locus_tag="AAA65210.1"
+                     /note="Pfam-A.hmm-Hit: PrmA. Score: 16.8. E-value: 0.0028.
+                     Domain range: 160..230."
+                     /note="ClusterFinder probability: 0.99984263612"
+                     /score="16.8"
+                     /translation="TGERVLDIGCGRGACLFPAAEKVGPQGRVHGIDIAPGMIEEARKE
+                     AAERGLRNIALDVMDAETPELPARSFDLVM"
+     PFAM_domain     complement(8367..8597)
+                     /aSTool="fullhmmer"
+                     /asDomain_id="fullhmmer_AAA65210.1_0011"
+                     /database="Pfam-A.hmm"
+                     /db_xref="PFAM: PF05175"
+                     /description="Methyltransferase small domain"
+                     /detection="hmmscan"
+                     /domain="MTS"
+                     /evalue="1.70E-04"
+                     /label="AAA65210.1"
+                     /locus_tag="AAA65210.1"
+                     /note="Pfam-A.hmm-Hit: MTS. Score: 20.9. E-value: 0.00017.
+                     Domain range: 28..103."
+                     /note="ClusterFinder probability: 0.999917927262"
+                     /score="20.9"
+                     /translation="PVTGERVLDIGCGRGACLFPAAEKVGPQGRVHGIDIAPGMIEEAR
+                     KEAAERGLRNIALDVMDAETPELPARSFDLVM"
+     PFAM_domain     complement(8394..8591)
+                     /aSTool="fullhmmer"
+                     /asDomain_id="fullhmmer_AAA65210.1_0013"
+                     /database="Pfam-A.hmm"
+                     /db_xref="PFAM: PF01728"
+                     /description="FtsJ-like methyltransferase"
+                     /detection="hmmscan"
+                     /domain="FtsJ"
+                     /evalue="1.70E-03"
+                     /label="AAA65210.1"
+                     /locus_tag="AAA65210.1"
+                     /note="Pfam-A.hmm-Hit: FtsJ. Score: 18.3. E-value: 0.0017.
+                     Domain range: 22..80."
+                     /note="ClusterFinder probability: 0.999692605345"
+                     /score="18.3"
+                     /translation="TGERVLDIGCGRGACLFPAAEKVGPQGRVHGIDIAPGMIEEARKE
+                     AAERGLRNIALDVMDAETPEL"
+     PFAM_domain     complement(8403..8597)
+                     /aSTool="fullhmmer"
+                     /asDomain_id="fullhmmer_AAA65210.1_0009"
+                     /database="Pfam-A.hmm"
+                     /db_xref="PFAM: PF02390"
+                     /description="Putative methyltransferase"
+                     /detection="hmmscan"
+                     /domain="Methyltransf_4"
+                     /evalue="2.20E-06"
+                     /label="AAA65210.1"
+                     /locus_tag="AAA65210.1"
+                     /note="Pfam-A.hmm-Hit: Methyltransf_4. Score: 26.8.
+                     E-value: 2.2e-06. Domain range: 20..80."
+                     /note="ClusterFinder probability: 0.999328939182"
+                     /score="26.8"
+                     /translation="PVTGERVLDIGCGRGACLFPAAEKVGPQGRVHGIDIAPGMIEEAR
+                     KEAAERGLRNIALDVMDAET"
+     PFAM_domain     complement(8406..8591)
+                     /aSTool="fullhmmer"
+                     /asDomain_id="fullhmmer_AAA65210.1_0010"
+                     /database="Pfam-A.hmm"
+                     /db_xref="PFAM: PF01135"
+                     /description="Protein-L-isoaspartate(D-aspartate)
+                     O-methyltransferase (PCMT)"
+                     /detection="hmmscan"
+                     /domain="PCMT"
+                     /evalue="1.70E-05"
+                     /label="AAA65210.1"
+                     /locus_tag="AAA65210.1"
+                     /note="Pfam-A.hmm-Hit: PCMT. Score: 24.4. E-value: 1.7e-05.
+                     Domain range: 72..134."
+                     /note="ClusterFinder probability: 0.99981544066"
+                     /score="24.4"
+                     /translation="TGERVLDIGCGRGACLFPAAEKVGPQGRVHGIDIAPGMIEEARKE
+                     AAERGLRNIALDVMDAE"
+     PFAM_domain     complement(8433..8591)
+                     /aSTool="fullhmmer"
+                     /asDomain_id="fullhmmer_AAA65210.1_0014"
+                     /database="Pfam-A.hmm"
+                     /db_xref="PFAM: PF02353"
+                     /description="Mycolic acid cyclopropane synthetase"
+                     /detection="hmmscan"
+                     /domain="CMAS"
+                     /evalue="5.10E-03"
+                     /label="AAA65210.1"
+                     /locus_tag="AAA65210.1"
+                     /note="Pfam-A.hmm-Hit: CMAS. Score: 15.9. E-value: 0.0051.
+                     Domain range: 61..112."
+                     /note="ClusterFinder probability: 0.999739441692"
+                     /score="15.9"
+                     /translation="TGERVLDIGCGRGACLFPAAEKVGPQGRVHGIDIAPGMIEEARKE
+                     AAERGLRN"
+     aSDomain        complement(8436..8591)
+                     /asDomain_id="nrpspksdomains_AAA65210_Xdom01"
+                     /database="nrpspksdomains.hmm"
+                     /detection="hmmscan"
+                     /domain="MT"
+                     /domain_subtype="oMT"
+                     /evalue="3.30E-08"
+                     /locus_tag="AAA65210.1"
+                     /score="23.5"
+                     /translation="TGERVLDIGCGRGACLFPAAEKVGPQGRVHGIDIAPGMIEEARKE
+                     AAERGLR"
+     PFAM_domain     complement(8442..8597)
+                     /aSTool="fullhmmer"
+                     /asDomain_id="fullhmmer_AAA65210.1_0016"
+                     /database="Pfam-A.hmm"
+                     /db_xref="PFAM: PF13679"
+                     /description="Methyltransferase domain"
+                     /detection="hmmscan"
+                     /domain="Methyltransf_32"
+                     /evalue="9.00E-03"
+                     /label="AAA65210.1"
+                     /locus_tag="AAA65210.1"
+                     /note="Pfam-A.hmm-Hit: Methyltransf_32. Score: 15.6.
+                     E-value: 0.009. Domain range: 22..77."
+                     /note="ClusterFinder probability: 0.941680296493"
+                     /score="15.6"
+                     /translation="PVTGERVLDIGCGRGACLFPAAEKVGPQGRVHGIDIAPGMIEEAR
+                     KEAAERG"
+ORIGIN
+        1 tccaccggcg gtgcctagcc tcgccgcatg gagaacacac agcgatccgt gatcgtgacc
+       61 ggcggcggct ccggcatcgg acgagccgtc gcccgcgcct tcgccgcccg gggcgaccgc
+      121 gtcctcgtcg tgggcaggac cgccggtccg ctggccgaga cggtggacgg gcacaaggac
+      181 gcgcacacgt tggccgtgga catcaccgac cccgcggcgc cggaggcggt cgtccgggag
+      241 gtgcgcgagc ggctcggcgg cgtggtcgac gtgctcgtga acaatgccgc cacggccgcc
+      301 ttcgggcacc tgggagagct gcaccgcacc gcggtggagg cacaggtggc cacgaacctc
+      361 gtggcccccg tgctgctcac ccaggccctg ctcggccccc tggagaccgc ttccggcctg
+      421 gtggtgaaca tcggttcggc gggcgcactc ggccggcggg cctggccggg gaacgcggtg
+      481 tacggggcgg ccaaggccgg cctggacctg ctgacgcggt cctgggccgt ggaactcggt
+      541 ccccgcggca ttcgcgtggt cggtgtcgcc ccgggagtga tcgggacggg cgcgggggtc
+      601 cgggccggga tgtcccagga ggcgtacgac gggttcctgg aagccatggg gcagcgcgtc
+      661 ccgctcggcc gtgtgggccg gcccgaggac gtcgcgtggt gggtggtgcg gctcgccgat
+      721 cccgaagccg cgtacgccag cggtgccgtg ctggccgtgg acgggggtct ctcggtgacg
+      781 tgaggcccgc ccggccggac acccgcaggt cgccctccgc tcgccggagg gcgacctgcg
+      841 ggtgtccggc cagggacgcg gcgggccccg cccctaggga gtcgggacag ggcccgtgcg
+      901 ggctcgggac gctcgcctca ggcgctggac tcggcgtact gcctggccgc ttccagggtc
+      961 agcagactgt tgcggcccag ggcccggcgg acgaagtcca cggcgtccgt ctcactcgcc
+     1021 cccgcaccga ggacgccggg gatcgccgag cgggccacgg acacggtgtg ggccgacgtg
+     1081 acggcgatcc cgtccccgtc gtcggcggga cggaccgacc aacggccgag atggagcgcg
+     1141 agcagcggcg gcgtgcgcag ctgcttgtag acgatgacgc ggcgttcggg gaagcacact
+     1201 cgcaccgacg cggtggtgtg caccgagccg tccgcggtga gggtgtccat ctccatgtgc
+     1261 tggagccccg gttcctcctc cttgaccgcg atccgcgcga cgtgggagag ccgcttcttc
+     1321 cagaggtcgc tgcggtggag gaagtcgtag acgtcctcgg cacggccgcg gacgacgacg
+     1381 gtgtcctcga aggtcgtcgg cgcggtgccg tcgggtcgtt ccagcgcggt gcgcagggac
+     1441 gccagttccg cttcgctgtt gcggtccacg gcccggtgga tccagccgat cgtctccggg
+     1501 tcgtcgtcca cggcccggaa gtcgtgcgtc agccgcaccc gggtgccgcc gtcgccggct
+     1561 tcctcgacga tccattcgcc gcccatggcg gcgacgggat gggcggacac ctcctgccgg
+     1621 aaacggatgc gccgggcccg ctcgtcgagc tcgcgccgcg acgtccaggt gcgcagcgag
+     1681 ccgttggcgg tggcccagat gcggatgcgc tcgctggagc cggtgtgctc gacctgttcg
+     1741 acgtggacac tgggcgggaa cacggcgggc caggcccgtg cgtcggccag cacggcgaac
+     1801 acggcgtccg gcgcggcgga ggtgtggatc tcgtgctcgg tctgctgaag cggcaactcg
+     1861 gacatctgcc ttcctgagct cgggtcgcgg acggtcagta gctgccgagg ccaccacaga
+     1921 cgttgatggc ctgggccgtg atcgagtcgg cgctgtcgga ggccaggtag tgcaccatcc
+     1981 cggccacctc ctcgggcatc gagtagcgtc cgagggggat cttcgcctgg aacttctcca
+     2041 ggacgtcgtc ctcggtgatc ccccagaagg cggcgtagcg ctgccgcacg ccctgtgcca
+     2101 tgggcgtctc gacgtacccg gggcagacgg cgttgacggt gatgcccgtc ttggccagct
+     2161 ccagcgcgac ggccttcgtg aagccgatca ggccgctctt ggaggcggag tagggggcgc
+     2221 cgagggccac tccctgcttg ccgccggtgg aggcgatgct gatgatccgg ccccagccgt
+     2281 gctcctgcat ggcgccgccg gtgaggacgg cgcgggtgac ccggaaggcc ccgctgaggt
+     2341 tggtgtcgac gacgtcgagc cacaggtcgt ccgtgatctc ggcggtcacg cctccaccgc
+     2401 cgcggccggc gttgttgacg acgatgtcga tcggcccgaa gcggttccgg gccgtttgga
+     2461 ccagccggtc gacgtcggcg gtgctccgca cgtcgcaggg cgcgccgtcc acctccagtc
+     2521 ccgatgcctg aagttccttc acggtgccgg tgatggcgct ctcgtcacga gcgcacagga
+     2581 acacccgggt cccgtcctgg gcgagcttgc gcaccaccgc gagaccgatg ccgctggttc
+     2641 ccccggtgac gagtgcgacc cggtcggctg cctcggacat ggtcctccct tcgacggagg
+     2701 gcccaccctc acatctcgcg ctcgagccgc gcttgacgac ccggcttcca gagggggtcg
+     2761 agcggcgccg cagagcctcg gagtccggcg tgaccgcacc tgtgcggact cggccgcacc
+     2821 gtctcaccga cgtccacccc acacctggac caacggaccc gtggagcagc gatgccacag
+     2881 ccagaaccga acgacgccgg ctccgggtcg gtgacgttcg tcaaccgatt caccctgagc
+     2941 ggatccgccg aggacttcga ggcggcgttc gccgaaacgg ccgagttcct gtgtcgccgg
+     3001 cccggcttcc gctggcacgc cctgctggtg ccggccgaca ccggtcccgg ctcggcggac
+     3061 gcccgcccgc agtacgtgaa catcgcggtc tgggacgacg aggcctcctt ccgcgccgcc
+     3121 gtggcacacc cggagttccc ggcccacgcg gccgcccttc gggccctgag caccagcgaa
+     3181 ccgaccctgt accggcaccg tcagatccgt gtcgcgccgg acgtcccggc cgtgagcggg
+     3241 cccggagggc ggacgacgtg aaccggcgga tcgtcatcac cgggatcggc gtggtggctc
+     3301 ccggcgccgt cgggaccaag ccgttctggg agctgctgct gtccggaacc accgccaccc
+     3361 gcgccatcag cactttcgac gccacgccct tccgttcccg tatcgccgcc gagtgcgact
+     3421 tcgatccggt ggcggcgggg ctgtccgcgg agcaggcccg gcgcctcgac cgggccgggc
+     3481 agttcgcgct ggtcgccggt caggaggcgc tcgccgacag cgggctgcga atcgatgagg
+     3541 actccgcgca ccgggtcggg gtgtgcgtgg gcaccgccgt cggctgcacg cagaaactgg
+     3601 agtccgagta cgtcgctctc agcgcgggcg gagcgcactg ggtcgtggac cccggccggg
+     3661 ggtcgcccga gctgtacgac tacttcgtgc cgagttccct cgccgccgaa gtggcctggc
+     3721 tcgccggggc ggaggggccc gtgaacatcg tctcggccgg gtgcacctcg gggatcgact
+     3781 ccatcgggta cgcctgcgag ctcatccgcg aggggacggt ggacgccatg gtcgcgggag
+     3841 gcgtggacgc acccatcgcg ccgatcacgg tggcctgctt cgacgccatc agggcgacct
+     3901 ccgaccacaa cgacaccccc gagaccgcct cgcgtccctt cagccgcagc cgcaacggct
+     3961 ttgtgctggg cgagggcggt gcgatcgtgg tcctggaaga ggcggaggcg gccgtgcgca
+     4021 ggggcgcgcg gatctacgcc gagatcggcg ggtacgcctc acgcggcaac gcgtaccaca
+     4081 tgaccgggct gcgcgcagac ggcgccgaga tggcggcggc gatcaccgcg gccctcgacg
+     4141 aggcccgccg cgacccctcg gacgtggact acgtcaacgc ccacggaacg gcgacgaagc
+     4201 agaacgaccg gcacgagacc tccgcgttca agcgctccct gggggagcac gcgtaccggg
+     4261 tgcccatcag ctccatcaag tcgatgatcg gtcactccct gggcgctgtc ggctcgctcg
+     4321 aagtggcggc gaccgcactg gccgtggagt acggggtgat cccgccgacc gcgaatctgc
+     4381 acgacccgga tccggaactc gacctggact acgtgccgct gacggcacga gaaaagcggg
+     4441 tgcggcacgc gctgacggtg ggcagcggct tcggcggctt ccagagcgcc atgctgctga
+     4501 gccgtctcga gaggtgagct ccatgacagg taccgcggca cggaccgcgt cttcgcagct
+     4561 ccacgcatcg cccgcgggcc gacggggcct caggggccgc gcggtggtga cgggtctcgg
+     4621 gatcgtcgcc cccaacgggc tgggggtggg cgcgtattgg gacgccgtcc tgaacggccg
+     4681 caacggcatc ggaccgctgc ggcggttcac cggcgacggc cgcctgggcc ggctggccgg
+     4741 tgaggtgagc gacttcgtcc ccgaggacca tctgccgaag cggctgctgg cgcagaccga
+     4801 tccgatgacc cagtacgcgc tggccgccgc ggagtgggcc ctgcgggagt ccggctgctc
+     4861 cccgtcctcg ccgctggagg cgggggtgat cacggccagc gcgtccggcg gcttcgcctt
+     4921 cggccagcgg gagttgcaga atctttggag caagggaccg gcccacgtca gcgcctacat
+     4981 gtcgttcgcc tggttctacg ccgtcaacac cgggcagatc gccatccggc acgatctgcg
+     5041 cggcccggtc ggcgtggtgg tggccgagca ggcgggcggc ctcgacgccc tcgcccacgc
+     5101 tcgccgcaag gtccggggcg gagccgagct gatcgtctcg ggcgccgtgg actcgtcgct
+     5161 gtgcccgtac ggcatggcgg cccaggtgaa gtccggccgg ctgagcggct cggacaaccc
+     5221 gacagccggg tatctgccgt tcgaccggcg ggcggccgga catgtgcccg gcgagggagg
+     5281 cgcgatcctc accgtcgagg acgcggagcg ggccgccgag cggggcgcga aagtgtacgg
+     5341 gtcgatcgcc gggtacggcg cgagcttcga cccgccgccc ggctccggcc gcccctccgc
+     5401 cctcgcccgt gccgtcgaga cggcgctggc cgacgccggg ctggacggct ccgacatagc
+     5461 cgtggtgttc gccgacggcg cggccgtccc cgaactggac gcagccgagg cggaggctct
+     5521 ggcgtcggtc ttcgggccgc gccgggtccc ggtgaccgtc cccaagactc tcaccggccg
+     5581 gctgtattcg ggcgccgggc cgctggacgt ggcgaccgcg ctgctggcgc tgcgggacga
+     5641 ggtggtcccg gcgaccgccc acgtcgaccc cgacccggac ctgccgctcg acgtggtgac
+     5701 cgggcggccc cggtccctgg ccgacgccag ggcggccctc ctcgtcgccc gcggctacgg
+     5761 gggcttcaac agcgctctgg tggtccgggg ggcggcgtga gcgtgccgca gggggcgccc
+     5821 ggggaccttt acgtggccgg ttgcggcgtc tggctgcccc cgccggtgac cacggaacag
+     5881 gccctggccg ccggccactg cgaccgcagg ctcgcctcct cgacgcggat gctgtcggtg
+     5941 gcggtcgccg acaaggagac accggccgaa atggcggcct tggcggccca gaccgctctg
+     6001 gaccgctccg gcgtcgcacc ggcccacgtc gacctcgtcc tgcacgccag tctgtacttc
+     6061 caggggcacc atctgtgggc tccctcctcc tacgtccagc gggtggccgt cgggaaccgc
+     6121 tgccccgcca tggaggtgcg gcaggtgtcc aacggcggca tggccgccct ggaactggcc
+     6181 cgcgcgtacc tgcttgccgc cccggaccgg gtggccgctc tcatcacgac aggcgaccgg
+     6241 atgcatccgc cgggcttcga ccgctggagc agcgaccccg gcacggtgta cgccgacggt
+     6301 ggtaccgccc tcgtgctgtc ccggcagggc ggtttcgccc ggctgcgcag cctggtgacg
+     6361 gtctccgaac cggtgctgga gggcatgcac cggggcgggc acccgttcgg cccgccgtct
+     6421 ccggaggagc agcgggccgt ggacctggac gcgcacaagc gggcgtacgt ggccgaggcg
+     6481 ggaagctcgt tcagcgtcgc ccgggtctcg gcgggccagg aggaggctct gaccggcgcg
+     6541 ctggaggcgg ccggggccgg actcgacgac atcagccggg tcgtgctgcc gcacatgggg
+     6601 tggcgccggc tgagcgccgc ctacttcaac aagtggcaca tccaacccga gcggaccact
+     6661 tgggagttcg ggcggcggac cggccacctg gggggcggtg acccgatcgc cgggttcgac
+     6721 caccttgtgg gctccggccg cctcgccccg ggggagctgt gtctgctggt cagcgtcggc
+     6781 gccggcttca gctggtcgtg cgccgtcgtg gagttgctgg aacgcccgtc gtgggcggcc
+     6841 gccccggccg cccggtgagg agcccgtcat ggatgcgccc gcgattctcc tgatgttccc
+     6901 cgggcagggg tcccagcatg cgcggatggc cgtcggcctg tacggatccg aaccggcctt
+     6961 cacggccgcc atggacgagg tcttcgacgc gtacgacgac gccggcgaca gtgagggcgg
+     7021 gcggctgcgt gccgactggc tgagcgacca tccggccgtg ccattggacc acgtcacccg
+     7081 gtcccagccg ttgttgttcg cggtggacta cgccctcggc cggatggtga tggccacgac
+     7141 gggccggccg tgggccctgc tcgggcacag cgtcggcgaa atggcggcgg ccgcgctcgc
+     7201 cggggtgttc acgctgcgcg acgcggccgg cctcctgctg gaccgggtgc gacggctggc
+     7261 ccaggcaccg cccgggggaa tgctggcggt cgccgcggcc gaggacgtgc tgggcccgta
+     7321 tctcgggaat ggggaggtgg tggtcgcggc cgtcaactcg ccccgccaga ccatcctcgc
+     7381 cggacccgtc gcatcgctcg ccggggtcgc ccgggcgctg cgggaggcag ggcttacgtg
+     7441 ccgtgaggtg ccctcgctga ccgccttcca cagtccgatg ctggccccga tcgcggcggg
+     7501 ggcggccgag cggttcgcat ccacgcgcgt ggcgccgtcc atccccctcc gctccgggta
+     7561 ccggccgggt gcggtgaccg ggcaactggc cgccgacccg tcgtactggg ccgggcatcc
+     7621 cctggagacg gtccgcttct ggccggcact ggacgcgatg ctcggctccc gcacgggcgt
+     7681 cgtctgcctg gagacggggc cggggcaggg gctgagcacc atcgcccgcc gccatccgac
+     7741 ggtgcggttc gggaagaact cggtggtgcc gctgctgccg ccgcaggccg gcaccgccga
+     7801 ggtggaccgg acgtccgtgg cggcggcgct ggccgcggtg cgcgagcagg gcaccgtgct
+     7861 cagtgggcga cccgggcggt gacgaagcgg acgggcacgt cgatggcgag ggccccggtg
+     7921 gcgtcgctca gcttgtcgag tccctcgacg agccgtgcgc gcagttccgt tcgctgggcc
+     7981 tgcgggaggt tctgccacag cagacgcatg ccctgggtgt gggaccagtc cacccacgcc
+     8041 tcgctggaca gggccgtcat ccgcaccggc tcgtcggtga cggcgaccga ggtgtagccg
+     8101 cagcgttcca gggtgcggag gagatcctcg gcccgctcca gccagctgtt gaaccgccgg
+     8161 accagcgcct cgggccgcca ctgctcgggc aggtgctcca gcagcgcctg cgggatgagc
+     8221 ggggtgaact ccggtggcag gaacgggaac gtgccggcgc ggaagaccgg gctggtgaac
+     8281 gcgatcctgc cgccgtggtc caggattccg gcgtagcgcg ccagcgcccc caccgcgtcc
+     8341 ggcaggaaga tgacgctgta gctccccatg accaggtcga aggagcgcgc cgggagttcg
+     8401 ggcgtctccg cgtccatcac atcgagggcg atattccgca gaccgcgttc ggcggcttcc
+     8461 ttgcgagctt cctcgatcat tccgggagca atgtcgattc cgtggacgcg cccctgagga
+     8521 ccgacctttt ccgcagccgg aaaaaggcat gcgccgcgcc cgcagccgat gtcgagcact
+     8581 cgttcaccgg tgaccggctc cgagatttcc accaggggcc gacccatggg cgtgaagaat
+     8641 tccactccca gtcggtcgta ggtcgacgac gactggtcga aggcctgagt tacctgctct
+     8701 ttgtaggacg aatcctgcac cgtcggctcc tgcctct
+//

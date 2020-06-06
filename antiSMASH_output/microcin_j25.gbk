@@ -1,0 +1,401 @@
+LOCUS       BGC0000581.1            4803 bp    DNA     linear   UNK 01-JAN-1980
+DEFINITION  Microcin J25 biosynthetic gene cluster
+ACCESSION   BGC0000581
+VERSION     BGC0000581.1
+KEYWORDS    .
+SOURCE      
+  ORGANISM  .
+            .
+FEATURES             Location/Qualifiers
+     source          1..4803
+                     /db_xref="taxon:562"
+                     /mol_type="genomic DNA"
+                     /organism="Escherichia coli"
+                     /plasmid="pTUC100"
+                     /strain="AY25"
+     cluster         1..4803
+                     /contig_edge="True"
+                     /cutoff=20000
+                     /extension=10000
+                     /note="Cluster number: 1"
+                     /note="Detection rule(s) for this cluster type: microcin:
+                     (micJ25 or mcjC); lassopeptide:
+                     (cluster(PF13471,PF00733));"
+                     /product="microcin-lassopeptide"
+     gene            complement(62..238)
+                     /gene="mcjA"
+     CDS             complement(62..238)
+                     /codon_start=1
+                     /db_xref="GI:4731432"
+                     /gene="mcjA"
+                     /product="microcin J25 precursor"
+                     /protein_id="AAD28494.1"
+                     /sec_met="Type: microcin"
+                     /sec_met="Domains detected: micJ25 (E-value: 1.1e-28,
+                     bitscore: 87.0, seeds: 5)"
+                     /sec_met="Kind: biosynthetic"
+                     /transl_table=11
+                     /translation="MIKHFHFNKLSSGKKNNVPSPAKGVIQIKKSASQLTKGGAGHVPE
+                     YFVGIGTPISFYG"
+     gene            578..1204
+                     /gene="mcjB"
+     CDS             578..1204
+                     /codon_start=1
+                     /db_xref="GI:4731433"
+                     /function="maturation of microcin J25"
+                     /gene="mcjB"
+                     /product="McjB"
+                     /protein_id="AAD28495.1"
+                     /sec_met="Type: lassopeptide"
+                     /sec_met="Domains detected: PF13471 (E-value: 3.6e-25,
+                     bitscore: 76.5, seeds: 84)"
+                     /sec_met="Kind: biosynthetic"
+                     /transl_table=11
+                     /translation="MIRYCLTSYREDLVILDIINDSFSIVPDAGSLLKERDKLLKEFPQ
+                     LSYFFDSEYHIGSVSRNSDTSFLEERWFLPEPDKTLYKCSLFKRFILLLKVFYYSWNIE
+                     KKGMAWIFISNKKENRLYSLNEEHLIRKEISNLSIIFHLNIFKSDCLTYSYALKRILNS
+                     RNIDAHLVIGVRTQPFYSHSWVEVGGQVINDAPNMRDKLSVIAEI"
+     PFAM_domain     857..1195
+                     /aSTool="fullhmmer"
+                     /asDomain_id="fullhmmer_mcjB_0001"
+                     /database="Pfam-A.hmm"
+                     /db_xref="PFAM: PF13471"
+                     /description="Transglutaminase-like superfamily"
+                     /detection="hmmscan"
+                     /domain="Transglut_core3"
+                     /evalue="1.30E-21"
+                     /label="mcjB"
+                     /locus_tag="mcjB"
+                     /note="Pfam-A.hmm-Hit: Transglut_core3. Score: 76.5.
+                     E-value: 1.3e-21. Domain range: 1..116."
+                     /note="ClusterFinder probability: 0.977594971235"
+                     /score="76.5"
+                     /translation="LKVFYYSWNIEKKGMAWIFISNKKENRLYSLNEEHLIRKEISNLS
+                     IIFHLNIFKSDCLTYSYALKRILNSRNIDAHLVIGVRTQPFYSHSWVEVGGQVINDAPN
+                     MRDKLSVIA"
+     gene            1207..2535
+                     /gene="mcjC"
+     CDS             1207..2535
+                     /codon_start=1
+                     /db_xref="GI:4731434"
+                     /function="maturation of microcin J25"
+                     /gene="mcjC"
+                     /note="smCOG:
+                     SMCOG1177:asparagine_synthase_(glutamine-hydrolyzing)
+                     (Score: 33.3; E-value: 1.443e-09);"
+                     /product="McjC"
+                     /protein_id="AAD28496.1"
+                     /sec_met="Type: microcin-lassopeptide"
+                     /sec_met="Domains detected: mcjC (E-value: 0.0, bitscore:
+                     1073.8, seeds: 3); PF00733 (E-value: 5e-11, bitscore: 30.9,
+                     seeds: 104)"
+                     /sec_met="Kind: biosynthetic"
+                     /transl_table=11
+                     /translation="MEIFNVKLNDTSIRIIFCKTLSAFRTENTIVMLKGKAVSNGKPVS
+                     TEEIARVVEEKGVSEVIENLDGVFCILIYHFNDLLIGKSIQSGPALFYCKKNMDIFVSD
+                     KISDIKFLNPDMTFSLNITMAEHYLSGNRIATQESLITGIYKVNNGEFIKFNNQLKPVL
+                     LRDEFSITKKNNSTIDSIIDNIEMMRDNRKIALLFSGGLDSALIFHTLKESGNKFCAYH
+                     FFSDESDDSEKYFAKEYCSKYGVDFISVNKNINFNEKLYFNLNPNSPDEIPLIFEQTDE
+                     EGEGQPPIDDDLLYLCGHGGDHIFGQNPSELFGIDAYRSHGLMFMHKKIVEFSNLKGKR
+                     YKDIIFSNISAFINTSNGCSPAKQEHVSDMKLASAQFFATDYTGKINKLTPFLHKNIIQ
+                     HYAGLPVFSLFNQHFDRYPVRYEAFQRFGSDIFWKKTKRSSSS"
+     PFAM_domain     1759..1959
+                     /aSTool="fullhmmer"
+                     /asDomain_id="fullhmmer_mcjC_0001"
+                     /database="Pfam-A.hmm"
+                     /db_xref="PFAM: PF00733"
+                     /description="Asparagine synthase"
+                     /detection="hmmscan"
+                     /domain="Asn_synthase"
+                     /evalue="1.80E-07"
+                     /label="mcjC"
+                     /locus_tag="mcjC"
+                     /note="Pfam-A.hmm-Hit: Asn_synthase. Score: 30.9. E-value:
+                     1.8e-07. Domain range: 9..78."
+                     /note="ClusterFinder probability: 0.994151919967"
+                     /score="30.9"
+                     /translation="IEMMRDNRKIALLFSGGLDSALIFHTLKESGNKFCAYHFFSDESD
+                     DSEKYFAKEYCSKYGVDFISVN"
+     PFAM_domain     1786..1968
+                     /aSTool="fullhmmer"
+                     /asDomain_id="fullhmmer_mcjC_0003"
+                     /database="Pfam-A.hmm"
+                     /db_xref="PFAM: PF01171"
+                     /description="PP-loop family"
+                     /detection="hmmscan"
+                     /domain="ATP_bind_3"
+                     /evalue="2.70E-03"
+                     /label="mcjC"
+                     /locus_tag="mcjC"
+                     /note="Pfam-A.hmm-Hit: ATP_bind_3. Score: 17.2. E-value:
+                     0.0027. Domain range: 1..68."
+                     /note="ClusterFinder probability: 0.995690822695"
+                     /score="17.2"
+                     /translation="IALLFSGGLDSALIFHTLKESGNKFCAYHFFSDESDDSEKYFAKE
+                     YCSKYGVDFISVNKNI"
+     PFAM_domain     1789..1956
+                     /aSTool="fullhmmer"
+                     /asDomain_id="fullhmmer_mcjC_0002"
+                     /database="Pfam-A.hmm"
+                     /db_xref="PFAM: PF06508"
+                     /description="Queuosine biosynthesis protein QueC"
+                     /detection="hmmscan"
+                     /domain="QueC"
+                     /evalue="9.60E-04"
+                     /label="mcjC"
+                     /locus_tag="mcjC"
+                     /note="Pfam-A.hmm-Hit: QueC. Score: 18.4. E-value: 0.00096.
+                     Domain range: 2..59."
+                     /note="ClusterFinder probability: 0.997890882598"
+                     /score="18.4"
+                     /translation="ALLFSGGLDSALIFHTLKESGNKFCAYHFFSDESDDSEKYFAKEY
+                     CSKYGVDFISV"
+     gene            2754..4496
+                     /gene="mcjD"
+     CDS             2754..4496
+                     /codon_start=1
+                     /db_xref="GI:4731435"
+                     /function="confers immunity"
+                     /gene="mcjD"
+                     /note="ABC transporter homolog"
+                     /note="smCOG: SMCOG1288:ABC_transporter_related_protein
+                     (Score: 186.6; E-value: 1.3e-56);"
+                     /product="McjD"
+                     /protein_id="AAD28497.1"
+                     /transl_table=11
+                     /translation="MERKQKNSLFNYIYSLMDVRGKFLFFSMLFITSLSSIIISISPLI
+                     LAKITDLLSGSLSNFSYEYLVLLACLYMFCVISNKASVFLFMILQSSLRINMQKKMSLK
+                     YLRELYNENITNLSKNNAGYTTQSLNQASNDIYILVRNVSQNILSPVIQLISTIVVVLS
+                     TKDWFSAGVFFLYILVFVIFNTRLTGSLASLRKHSMDITLNSYSLLSDTVDNMIAAKKN
+                     NALRLISERYEDALTQENNAQKKYWLLSSKVLLLNSLLAVILFGSVFIYNILGVLNGVV
+                     SIGHFIMITSYIILLSTPVENIGALLSEIRQSMSSLAGFIQRHAENKATSPSIPFLNME
+                     RKLNLSIRELSFSYSDDKKILNSVSLDLFTGKMYSLTGPSGSGKSTLVKIISGYYKNYF
+                     GDIYLNDISLRNISDEDLNDAIYYLTQDDYIFMDTLRFNLRLANYDASENEIFKVLKLA
+                     NLSVVNNEPVSLDTHLINRGNNYSGGQKQRISLARLFLRKPAIIIIDEATSALDYINES
+                     EILSSIRTHFPDALIINISHRINLLECSDCVYVLNEGNIVASGHFRDLMVSNEYISGLA
+                     SVTE"
+     PFAM_domain     2835..3653
+                     /aSTool="fullhmmer"
+                     /asDomain_id="fullhmmer_mcjD_0006"
+                     /database="Pfam-A.hmm"
+                     /db_xref="PFAM: PF00664"
+                     /description="ABC transporter transmembrane region"
+                     /detection="hmmscan"
+                     /domain="ABC_membrane"
+                     /evalue="3.80E-04"
+                     /label="mcjD"
+                     /locus_tag="mcjD"
+                     /note="Pfam-A.hmm-Hit: ABC_membrane. Score: 19.9. E-value:
+                     0.00038. Domain range: 2..275."
+                     /note="ClusterFinder probability: 0.995924501379"
+                     /score="19.9"
+                     /translation="MLFITSLSSIIISISPLILAKITDLLSGSLSNFSYEYLVLLACLY
+                     MFCVISNKASVFLFMILQSSLRINMQKKMSLKYLRELYNENITNLSKNNAGYTTQSLNQ
+                     ASNDIYILVRNVSQNILSPVIQLISTIVVVLSTKDWFSAGVFFLYILVFVIFNTRLTGS
+                     LASLRKHSMDITLNSYSLLSDTVDNMIAAKKNNALRLISERYEDALTQENNAQKKYWLL
+                     SSKVLLLNSLLAVILFGSVFIYNILGVLNGVVSIGHFIMITSYIILLSTPV"
+     PFAM_domain     3822..3959
+                     /aSTool="fullhmmer"
+                     /asDomain_id="fullhmmer_mcjD_0008"
+                     /database="Pfam-A.hmm"
+                     /db_xref="PFAM: PF03193"
+                     /description="Protein of unknown function, DUF258"
+                     /detection="hmmscan"
+                     /domain="DUF258"
+                     /evalue="1.80E-03"
+                     /label="mcjD"
+                     /locus_tag="mcjD"
+                     /note="Pfam-A.hmm-Hit: DUF258. Score: 17.5. E-value:
+                     0.0018. Domain range: 21..66."
+                     /note="ClusterFinder probability: 0.996126298761"
+                     /score="17.5"
+                     /translation="DKKILNSVSLDLFTGKMYSLTGPSGSGKSTLVKIISGYYKNYFGD
+                     I"
+     PFAM_domain     3834..4280
+                     /aSTool="fullhmmer"
+                     /asDomain_id="fullhmmer_mcjD_0001"
+                     /database="Pfam-A.hmm"
+                     /db_xref="PFAM: PF00005"
+                     /description="ABC transporter"
+                     /detection="hmmscan"
+                     /domain="ABC_tran"
+                     /evalue="7.40E-28"
+                     /label="mcjD"
+                     /locus_tag="mcjD"
+                     /note="Pfam-A.hmm-Hit: ABC_tran. Score: 97.5. E-value:
+                     7.4e-28. Domain range: 0..137."
+                     /note="ClusterFinder probability: 0.995934882612"
+                     /score="97.5"
+                     /translation="LNSVSLDLFTGKMYSLTGPSGSGKSTLVKIISGYYKNYFGDIYLN
+                     DISLRNISDEDLNDAIYYLTQDDYIFMDTLRFNLRLANYDASENEIFKVLKLANLSVVN
+                     NEPVSLDTHLINRGNNYSGGQKQRISLARLFLRKPAIIIIDEATS"
+     PFAM_domain     3855..4400
+                     /aSTool="fullhmmer"
+                     /asDomain_id="fullhmmer_mcjD_0002"
+                     /database="Pfam-A.hmm"
+                     /db_xref="PFAM: PF02463"
+                     /description="RecF/RecN/SMC N terminal domain"
+                     /detection="hmmscan"
+                     /domain="SMC_N"
+                     /evalue="2.50E-06"
+                     /label="mcjD"
+                     /locus_tag="mcjD"
+                     /note="Pfam-A.hmm-Hit: SMC_N. Score: 26.9. E-value:
+                     2.5e-06. Domain range: 20..209."
+                     /note="ClusterFinder probability: 0.999578508916"
+                     /score="26.9"
+                     /translation="LFTGKMYSLTGPSGSGKSTLVKIISGYYKNYFGDIYLNDISLRNI
+                     SDEDLNDAIYYLTQDDYIFMDTLRFNLRLANYDASENEIFKVLKLANLSVVNNEPVSLD
+                     THLINRGNNYSGGQKQRISLARLFLRKPAIIIIDEATSALDYINESEILSSIRTHFPDA
+                     LIINISHRINLLECSDCVY"
+     PFAM_domain     3861..3917
+                     /aSTool="fullhmmer"
+                     /asDomain_id="fullhmmer_mcjD_0007"
+                     /database="Pfam-A.hmm"
+                     /db_xref="PFAM: PF13555"
+                     /description="P-loop containing region of AAA domain"
+                     /detection="hmmscan"
+                     /domain="AAA_29"
+                     /evalue="6.40E-04"
+                     /label="mcjD"
+                     /locus_tag="mcjD"
+                     /note="Pfam-A.hmm-Hit: AAA_29. Score: 19.2. E-value:
+                     0.00064. Domain range: 21..40."
+                     /note="ClusterFinder probability: 0.994957660986"
+                     /score="19.2"
+                     /translation="TGKMYSLTGPSGSGKSTLV"
+     PFAM_domain     3864..4052
+                     /aSTool="fullhmmer"
+                     /asDomain_id="fullhmmer_mcjD_0003"
+                     /database="Pfam-A.hmm"
+                     /db_xref="PFAM: PF13173"
+                     /description="AAA domain"
+                     /detection="hmmscan"
+                     /domain="AAA_14"
+                     /evalue="7.10E-04"
+                     /label="mcjD"
+                     /locus_tag="mcjD"
+                     /note="Pfam-A.hmm-Hit: AAA_14. Score: 19.4. E-value:
+                     0.00071. Domain range: 1..68."
+                     /note="ClusterFinder probability: 0.995418390794"
+                     /score="19.4"
+                     /translation="GKMYSLTGPSGSGKSTLVKIISGYYKNYFGDIYLNDISLRNISDE
+                     DLNDAIYYLTQDDYIFMD"
+     PFAM_domain     3879..4097
+                     /aSTool="fullhmmer"
+                     /asDomain_id="fullhmmer_mcjD_0005"
+                     /database="Pfam-A.hmm"
+                     /db_xref="PFAM: PF13207"
+                     /description="AAA domain"
+                     /detection="hmmscan"
+                     /domain="AAA_17"
+                     /evalue="4.10E-04"
+                     /label="mcjD"
+                     /locus_tag="mcjD"
+                     /note="Pfam-A.hmm-Hit: AAA_17. Score: 21.1. E-value:
+                     0.00041. Domain range: 3..58."
+                     /note="ClusterFinder probability: 0.993596535332"
+                     /score="21.1"
+                     /translation="LTGPSGSGKSTLVKIISGYYKNYFGDIYLNDISLRNISDEDLNDA
+                     IYYLTQDDYIFMDTLRFNLRLANYDASE"
+     PFAM_domain     3879..4313
+                     /aSTool="fullhmmer"
+                     /asDomain_id="fullhmmer_mcjD_0004"
+                     /database="Pfam-A.hmm"
+                     /db_xref="PFAM: PF13304"
+                     /description="AAA domain"
+                     /detection="hmmscan"
+                     /domain="AAA_21"
+                     /evalue="9.60E-05"
+                     /label="mcjD"
+                     /locus_tag="mcjD"
+                     /note="Pfam-A.hmm-Hit: AAA_21. Score: 22.4. E-value:
+                     9.6e-05. Domain range: 3..279."
+                     /note="ClusterFinder probability: 0.993428149028"
+                     /score="22.4"
+                     /translation="LTGPSGSGKSTLVKIISGYYKNYFGDIYLNDISLRNISDEDLNDA
+                     IYYLTQDDYIFMDTLRFNLRLANYDASENEIFKVLKLANLSVVNNEPVSLDTHLINRGN
+                     NYSGGQKQRISLARLFLRKPAIIIIDEATSALDYINESEIL"
+ORIGIN
+        1 aagcttctga tatgtgattt attgttgata gacaaaatga cagagttctt ctttcagaat
+       61 atcagccata gaaagatata ggtgtaccaa tccccacaaa atactcaggc acatgtcctg
+      121 caccaccttt tgtgagttgc gatgctgatt tttttatttg tataaccccc tttgcaggag
+      181 atggaacatt atttttttta ccagaagaca gtttattaaa atgaaaatgc ttaatcattt
+      241 ttacgttcct tatttgatgg aaatagtatg atgattttta cagaggaacc tcacgtcctt
+      301 ctgttagaat tttattagca caaaatacaa ttgagatcaa taatcattac gctttagtaa
+      361 tttatcaata aaatcattta gatacaaaca tccataaact aatcaatctg caaaagtggt
+      421 caaatttagt acaatatttt ggatttttat acatttttct aattatttca gaatatttag
+      481 ccatcaatta agaaaaaaat ttagcttgta gataaattca gaagttttat tattccaatt
+      541 gagtgtaaag gcataactac aggagggagt gtgcaaaatg atccgttact gcttaaccag
+      601 ttatagagag gatcttgtta tcctggatat aattaatgat agtttcagca tagtgcctga
+      661 cgcaggtagc ttgctaaaag aaagagataa attgcttaaa gaattcccac aactatctta
+      721 cttttttgac agtgaatatc atattggaag tgtttctcgt aatagtgaca cttcttttct
+      781 tgaagaacgc tggtttctac cagaacctga caaaacatta tataagtgtt ctctatttaa
+      841 acgatttata ttattactca aagtctttta ctatagctgg aatattgaaa aaaaagggat
+      901 ggcatggatt ttcataagta ataaaaaaga gaataggcta tactccttga atgaagagca
+      961 tcttatccgg aaagaaatta gtaatctttc cattatcttt catcttaata tttttaaatc
+     1021 tgactgtctt acctattcat acgcactaaa aagaattctt aattccagaa atattgatgc
+     1081 tcatcttgtt attggtgtaa ggacacaacc tttttatagc cactcttggg tggaggttgg
+     1141 gggacaagtt atcaatgatg ctcccaatat gcgggataaa ttatctgtta ttgcagagat
+     1201 atagttatgg aaatatttaa tgtcaagtta aatgatactt caattagaat tattttctgt
+     1261 aaaacgcttt ctgccttccg gacagaaaat accatcgtta tgctcaaagg aaaagcagtt
+     1321 tcaaatggca aacctgtatc cacagaggag attgccagag tagtggaaga aaaaggtgtt
+     1381 tcagaagtaa tagaaaattt agatggtgtt ttctgtatcc taatttatca ttttaatgat
+     1441 ctccttatag ggaaaagcat tcaatcaggc cccgctctat tttattgtaa aaagaatatg
+     1501 gatatttttg tttcggataa aatttctgat atcaaatttt tgaatccaga tatgacattc
+     1561 agtctaaata taacaatggc agaacattat ctgtcaggaa atcgaatagc aacccaggaa
+     1621 tcactaatca ctggcattta caaagtaaat aatggtgagt ttataaaatt taataatcag
+     1681 ttgaaacctg tgctacttcg tgatgagttt agtattacca aaaagaacaa ttcaactatc
+     1741 gacagtatca ttgataatat tgagatgatg cgggataata gaaaaatagc cctattattt
+     1801 tccggaggat tggattctgc attaattttt cacacactta aagaatcagg taacaaattc
+     1861 tgcgcttatc attttttttc tgatgaatct gatgacagtg aaaagtattt tgctaaggaa
+     1921 tactgttcaa aatatggagt tgattttata tctgttaata aaaacatcaa ctttaatgaa
+     1981 aaactttatt tcaatttaaa tcctaatagt ccggacgaaa tccctttgat atttgaacag
+     2041 acagatgaag aaggtgaagg tcagcccccc atagacgatg atttattata tctatgtggt
+     2101 cacggtggag atcatatttt cggacaaaat ccttcagaac tttttggcat tgatgcatat
+     2161 cgaagtcatg gcttgatgtt tatgcataaa aaaatagtag aattttccaa tctcaaggga
+     2221 aagagatata aagatatcat attttcaaat atttccgcat tcattaatac atccaacgga
+     2281 tgttctccag caaagcaaga gcacgtatca gatatgaaac ttgcctctgc tcagtttttt
+     2341 gcaactgatt atacaggaaa aattaataaa ctaactccat tcctgcataa aaatattatc
+     2401 cagcattatg ctggcttacc agtttttagt ctatttaacc agcactttga tcgttatccc
+     2461 gttcgttatg aagcgtttca acgatttggt tcagatattt tctggaaaaa aaccaaacgg
+     2521 tcatcttcat catgactaat attcagaatt ctatccggta aaaaggatga actagtgaat
+     2581 acaataaaac agtcaggatt aattgaaata ttaggcatta accatattga attggaaagc
+     2641 attttgtatg aaaatacgac tacacgtctg acaatggaac taccatatat acttaactta
+     2701 taccgtctgg caaaattcat tcaacttcaa tccattgatt ataaaggtta attatggaaa
+     2761 gaaaacagaa aaactcatta tttaattata tttattcatt aatggatgta agaggtaaat
+     2821 ttttattctt ttccatgtta ttcattacat cattatcatc gataatcata tctatttcac
+     2881 cattgattct tgcaaagatt acagatttac tgtctggctc attgtcaaat tttagttatg
+     2941 aatatctggt tttacttgcc tgtttataca tgttttgcgt tatatctaat aaagcaagtg
+     3001 tttttttatt tatgatactg caaagtagtc tacgtattaa catgcagaaa aaaatgtcgc
+     3061 taaagtattt gagagaattg tataacgaaa atataactaa cttgagtaaa aataatgctg
+     3121 gatatacaac gcaaagtctt aaccaggctt caaatgacat ttatattctt gtgagaaatg
+     3181 tttcccagaa tatcctgtca cctgttatac aacttatttc cactattgtt gttgttttat
+     3241 ctacgaagga ctggttttct gccggtgtgt tttttctcta tattctggta tttgtaattt
+     3301 ttaataccag actgactggc agtttagcgt ctctcagaaa acacagcatg gatatcactc
+     3361 ttaactctta tagtctgtta tctgatactg ttgataacat gatagcagct aaaaagaata
+     3421 atgcattaag acttatttct gaacgttatg aagatgctct cactcaggaa aacaatgctc
+     3481 agaaaaaata ctggttactc agttctaaag ttcttttatt gaactcttta cttgctgtaa
+     3541 tattatttgg ttctgtattc atatataata ttttaggtgt gctgaatggt gtagttagta
+     3601 tcggccactt cattatgatt acatcatata tcattcttct ttcaacgcca gtggaaaata
+     3661 taggggcatt gctaagtgag atcaggcagt caatgtctag cctggcaggt tttattcaac
+     3721 gtcatgccga gaataaagcc acatctcctt caataccttt tctcaacatg gagcgaaaat
+     3781 taaacctgtc cataagagag ctttcattta gctatagtga tgataaaaaa atacttaatt
+     3841 cagtcagtct tgaccttttt accggaaaaa tgtattcatt aaccggaccc agtggttcag
+     3901 gaaaatccac ccttgtaaaa ataatatcag gttactataa aaattacttt ggagacattt
+     3961 atctgaatga tatatcctta cgtaatatca gtgatgagga tttgaatgat gctatttact
+     4021 acctaacaca agatgattat atttttatgg atacactacg atttaatctc cggctcgcaa
+     4081 attacgacgc gtcagaaaat gaaatattta aagttcttaa actggcaaat ctttctgtcg
+     4141 tcaacaatga accagtgagt ctggatacac accttataaa cagaggcaat aactattcag
+     4201 gagggcaaaa acaacgaatt tcgttagcgc gactgttttt gagaaaacct gcaataatta
+     4261 ttattgatga agccacatcg gctctggatt atattaatga atcagaaatt ttatcatcaa
+     4321 taagaactca ttttcctgat gcgttaatta taaatattag tcaccgaata aatcttctgg
+     4381 agtgttccga ttgtgtttat gtattgaatg aaggaaatat tgttgcttct ggccatttca
+     4441 gggatttgat ggtcagcaat gaatacatat cgggactggc ttctgttact gaataaaata
+     4501 tctgactcct gctctgtatt cagaaaggga gtcgcttgga aaacggaatt tttcccacgt
+     4561 taagagaatt gggttgcacg agtggttaca tcccggcaag ctaagcccca gaatgtaagg
+     4621 gttgttcgaa atgctctgac cgtccgctaa tcgtttagct tacttcttcc gcacatcccc
+     4681 ttgcgtaaat gtacagaatt gtacgatttc ggacaccaaa accgctgttg tcccgccatt
+     4741 ctggctattc ctgaaagtta tttgactaaa aaatagtctt aacgtggttt attttccgaa
+     4801 ttc
+//

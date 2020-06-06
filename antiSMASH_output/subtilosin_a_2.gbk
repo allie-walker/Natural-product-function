@@ -1,0 +1,600 @@
+LOCUS       BGC0000602.1            7358 bp    DNA     linear   UNK 01-JAN-1980
+DEFINITION  Subtilosin A biosynthetic gene cluster
+ACCESSION   BGC0000602
+VERSION     BGC0000602.1
+KEYWORDS    .
+SOURCE      
+  ORGANISM  .
+            .
+FEATURES             Location/Qualifiers
+     source          1..7358
+                     /db_xref="taxon:703612"
+                     /mol_type="genomic DNA"
+                     /organism="Bacillus subtilis subsp. spizizenii ATCC 6633"
+                     /strain="ATCC 6633"
+     cluster         1..7358
+                     /contig_edge="True"
+                     /cutoff=20000
+                     /extension=10000
+                     /note="Cluster number: 1"
+                     /note="Detection rule(s) for this cluster type:
+                     sactipeptide: (subtilosin or thuricin or TIGR04404 or
+                     TIGR03973); head_to_tail: (Subtilosin_A or skfc);"
+                     /product="sactipeptide-head_to_tail"
+     sig_peptide     367..390
+                     /gene="sbo"
+     CDS_motif       367..399
+                     /locus_tag="sbo"
+                     /note="leader peptide"
+                     /note="sactipeptide"
+                     /note="predicted leader seq: MKKAVIVENK"
+     gene            367..498
+                     /gene="sbo"
+     CDS             367..498
+                     /codon_start=1
+                     /db_xref="GI:20387046"
+                     /db_xref="GOA:O07623"
+                     /db_xref="PDB:1PXQ"
+                     /db_xref="UniProtKB/Swiss-Prot:O07623"
+                     /function="cyclic peptide antibiotic"
+                     /gene="sbo"
+                     /product="subtilosin A"
+                     /protein_id="CAD23198.1"
+                     /sec_met="Type: head_to_tail"
+                     /sec_met="Domains detected: Subtilosin_A (E-value: 1.7e-31,
+                     bitscore: 97.4, seeds: 2)"
+                     /sec_met="Kind: biosynthetic"
+                     /transl_table=11
+                     /translation="MKKAVIVENKGCATCSIGAACLVDGPIPDFEIAGATGLFGLWG"
+     mat_peptide     391..495
+                     /experiment="experimental evidence, no additional details
+                     recorded"
+                     /gene="sbo"
+                     /product="subtilosin A"
+     PFAM_domain     391..495
+                     /aSTool="fullhmmer"
+                     /asDomain_id="fullhmmer_sbo_0001"
+                     /database="Pfam-A.hmm"
+                     /db_xref="PFAM: PF11420"
+                     /description="Bacteriocin subtilosin A"
+                     /detection="hmmscan"
+                     /domain="Subtilosin_A"
+                     /evalue="3.20E-28"
+                     /label="sbo"
+                     /locus_tag="sbo"
+                     /note="Pfam-A.hmm-Hit: Subtilosin_A. Score: 97.4. E-value:
+                     3.2e-28. Domain range: 0..35."
+                     /note="ClusterFinder probability: 0.999965514645"
+                     /score="97.4"
+                     /translation="NKGCATCSIGAACLVDGPIPDFEIAGATGLFGLWG"
+     CDS_motif       400..498
+                     /locus_tag="sbo"
+                     /note="core peptide"
+                     /note="predicted core seq:
+                     GCATCSIGAACLVDGPIPDFEIAGATGLFGLWG"
+                     /note="sactipeptide"
+                     /note="RODEO score: 32"
+     gene            643..1989
+                     /gene="ywiA"
+     CDS             643..1989
+                     /codon_start=1
+                     /db_xref="GI:20387047"
+                     /db_xref="GOA:P71011"
+                     /db_xref="UniProtKB/Swiss-Prot:P71011"
+                     /function="putative role in subtilosin biosynthesis"
+                     /gene="ywiA"
+                     /product="ywiA protein"
+                     /protein_id="CAD23199.1"
+                     /sec_met="Type: sactipeptide"
+                     /sec_met="Domains detected: PF04055 (E-value: 1.4e-24,
+                     bitscore: 76.5, seeds: 518); subtilosin (E-value: 0.0,
+                     bitscore: 1078.3, seeds: 6); PF05402 (E-value: 1.5e-09,
+                     bitscore: 27.2, seeds: 461); PF13186 (E-value: 2.5e-12,
+                     bitscore: 36.4, seeds: 195)"
+                     /sec_met="Kind: biosynthetic"
+                     /transl_table=11
+                     /translation="MFIEQMFPFINESVRVHQLPEGGVLEIDYLRDNVSISDFEYLDLN
+                     KTAYELCMRMDGQKTAEQILAEQCAVYDESPEDHKDWYYDMLNMLLNKQVVQLENQSTR
+                     HAINTSGSNEFPMPLHATFELTHRCNLKCAHCYLESSPEALGTVSIEQFKKTADMLFDN
+                     GVLTCEITGGEIFVHPNANEILDYVCKKFKKVAVLTNGTLMRKESLELLKAYKQKIIVG
+                     ISLDSVNSEIHDSFRGRKGSFAQTCKTIKLLSDHGIFVRVAMSVFEKNMWEIHDMAQKV
+                     RDLGAKAFSYNWVDDFGRGRDIVHPTKNAEQHRKFMEYEQNIIDEFKDLIPIIPYERKR
+                     AANCGAGWKSIVISPFGEVRPCALFPKEFSLGNIFHDSYESIFNSPLVHKLWQAQAPRF
+                     SEHCMKDKCPFSSYCGGCYLKGLNSNKYHRKNICSWAKNEQLEDVVQLI"
+     PFAM_domain     757..933
+                     /aSTool="fullhmmer"
+                     /asDomain_id="fullhmmer_ywiA_0003"
+                     /database="Pfam-A.hmm"
+                     /db_xref="PFAM: PF05402"
+                     /description="Coenzyme PQQ synthesis protein D (PqqD)"
+                     /detection="hmmscan"
+                     /domain="PqqD"
+                     /evalue="1.30E-09"
+                     /label="ywiA"
+                     /locus_tag="ywiA"
+                     /note="Pfam-A.hmm-Hit: PqqD. Score: 37.9. E-value: 1.3e-09.
+                     Domain range: 12..68."
+                     /note="ClusterFinder probability: 0.989563074912"
+                     /score="37.9"
+                     /translation="FEYLDLNKTAYELCMRMDGQKTAEQILAEQCAVYDESPEDHKDWY
+                     YDMLNMLLNKQVVQ"
+     PFAM_domain     1012..1479
+                     /aSTool="fullhmmer"
+                     /asDomain_id="fullhmmer_ywiA_0001"
+                     /database="Pfam-A.hmm"
+                     /db_xref="PFAM: PF04055"
+                     /description="Radical SAM superfamily"
+                     /detection="hmmscan"
+                     /domain="Radical_SAM"
+                     /evalue="2.20E-22"
+                     /label="ywiA"
+                     /locus_tag="ywiA"
+                     /note="Pfam-A.hmm-Hit: Radical_SAM. Score: 79.9. E-value:
+                     2.2e-22. Domain range: 1..164."
+                     /note="ClusterFinder probability: 0.993136749715"
+                     /score="79.9"
+                     /translation="ELTHRCNLKCAHCYLESSPEALGTVSIEQFKKTADMLFDNGVLTC
+                     EITGGEIFVHPNANEILDYVCKKFKKVAVLTNGTLMRKESLELLKAYKQKIIVGISLDS
+                     VNSEIHDSFRGRKGSFAQTCKTIKLLSDHGIFVRVAMSVFEKNMWEIHDMAQ"
+     PFAM_domain     1015..1266
+                     /aSTool="fullhmmer"
+                     /asDomain_id="fullhmmer_ywiA_0004"
+                     /database="Pfam-A.hmm"
+                     /db_xref="PFAM: PF13394"
+                     /description="4Fe-4S single cluster domain"
+                     /detection="hmmscan"
+                     /domain="Fer4_14"
+                     /evalue="4.00E-06"
+                     /label="ywiA"
+                     /locus_tag="ywiA"
+                     /note="Pfam-A.hmm-Hit: Fer4_14. Score: 26.8. E-value:
+                     4e-06. Domain range: 3..96."
+                     /note="ClusterFinder probability: 0.949900339232"
+                     /score="26.8"
+                     /translation="LTHRCNLKCAHCYLESSPEALGTVSIEQFKKTADMLFDNGVLTCE
+                     ITGGEIFVHPNANEILDYVCKKFKKVAVLTNGTLMRKES"
+     PFAM_domain     1015..1338
+                     /aSTool="fullhmmer"
+                     /asDomain_id="fullhmmer_ywiA_0005"
+                     /database="Pfam-A.hmm"
+                     /db_xref="PFAM: PF13353"
+                     /description="4Fe-4S single cluster domain"
+                     /detection="hmmscan"
+                     /domain="Fer4_12"
+                     /evalue="1.90E-04"
+                     /label="ywiA"
+                     /locus_tag="ywiA"
+                     /note="Pfam-A.hmm-Hit: Fer4_12. Score: 21.5. E-value:
+                     0.00019. Domain range: 10..124."
+                     /note="ClusterFinder probability: 0.913678023332"
+                     /score="21.5"
+                     /translation="LTHRCNLKCAHCYLESSPEALGTVSIEQFKKTADMLFDNGVLTCE
+                     ITGGEIFVHPNANEILDYVCKKFKKVAVLTNGTLMRKESLELLKAYKQKIIVGISLDSV
+                     NSEI"
+     PFAM_domain     1672..1866
+                     /aSTool="fullhmmer"
+                     /asDomain_id="fullhmmer_ywiA_0002"
+                     /database="Pfam-A.hmm"
+                     /db_xref="PFAM: PF13186"
+                     /description="Iron-sulfur cluster-binding domain"
+                     /detection="hmmscan"
+                     /domain="SPASM"
+                     /evalue="4.20E-10"
+                     /label="ywiA"
+                     /locus_tag="ywiA"
+                     /note="Pfam-A.hmm-Hit: SPASM. Score: 39.7. E-value:
+                     4.2e-10. Domain range: 0..63."
+                     /note="ClusterFinder probability: 0.990250648496"
+                     /score="39.7"
+                     /translation="CGAGWKSIVISPFGEVRPCALFPKEFSLGNIFHDSYESIFNSPLV
+                     HKLWQAQAPRFSEHCMKDKC"
+     gene            2002..2163
+                     /gene="ywhR"
+     CDS             2002..2163
+                     /codon_start=1
+                     /db_xref="GI:20387048"
+                     /db_xref="GOA:P71010"
+                     /db_xref="UniProtKB/Swiss-Prot:P71010"
+                     /gene="ywhR"
+                     /product="ywhR protein"
+                     /protein_id="CAD23200.1"
+                     /transl_table=11
+                     /translation="MSPAQRRILLYILSFIFVIGAVVYFVKSDYLFTLIFIAIAILFGM
+                     RARKADSR"
+     PFAM_domain     2020..2133
+                     /aSTool="fullhmmer"
+                     /asDomain_id="fullhmmer_ywhR_0001"
+                     /database="Pfam-A.hmm"
+                     /db_xref="PFAM: PF12650"
+                     /description="Domain of unknown function (DUF3784)"
+                     /detection="hmmscan"
+                     /domain="DUF3784"
+                     /evalue="6.50E-04"
+                     /label="ywhR"
+                     /locus_tag="ywhR"
+                     /note="Pfam-A.hmm-Hit: DUF3784. Score: 19.5. E-value:
+                     0.00065. Domain range: 46..86."
+                     /note="ClusterFinder probability: 0.880691408894"
+                     /score="19.5"
+                     /translation="RILLYILSFIFVIGAVVYFVKSDYLFTLIFIAIAILFG"
+     gene            2160..2879
+                     /gene="ywhQ"
+     CDS             2160..2879
+                     /codon_start=1
+                     /db_xref="GI:20387049"
+                     /db_xref="GOA:P71009"
+                     /db_xref="UniProtKB/Swiss-Prot:P71009"
+                     /gene="ywhQ"
+                     /note="smCOG: SMCOG1000:ABC_transporter_ATP-binding_protein
+                     (Score: 126.4; E-value: 2.4e-38);"
+                     /product="ywhQ protein"
+                     /protein_id="CAD23201.1"
+                     /transl_table=11
+                     /translation="MSILDIHDVSVWYERDNVILEHVDLHLEKGAVYGLLGVNGAGKTT
+                     LINTLTGVNRNYSGGFTLCGIEAEAGMPQKTSDQLKIHRYFAADYPLLFTEITAKDYVS
+                     FVHSLYQKDFSERQFASLAEAFHFSKYINRRISELSLGNRQKVVLMTGLLLRAPLFILD
+                     EPLVGLDVESIEVFYQKMREYCEEGGTILFSSHLLDVVQRFCDFAAILHNKQIQKVIPI
+                     GEETDLRREFFEVIGHE"
+     PFAM_domain     2217..2657
+                     /aSTool="fullhmmer"
+                     /asDomain_id="fullhmmer_ywhQ_0001"
+                     /database="Pfam-A.hmm"
+                     /db_xref="PFAM: PF00005"
+                     /description="ABC transporter"
+                     /detection="hmmscan"
+                     /domain="ABC_tran"
+                     /evalue="9.70E-21"
+                     /label="ywhQ"
+                     /locus_tag="ywhQ"
+                     /note="Pfam-A.hmm-Hit: ABC_tran. Score: 74.5. E-value:
+                     9.7e-21. Domain range: 0..136."
+                     /note="ClusterFinder probability: 0.850754064871"
+                     /score="74.5"
+                     /translation="LEHVDLHLEKGAVYGLLGVNGAGKTTLINTLTGVNRNYSGGFTLC
+                     GIEAEAGMPQKTSDQLKIHRYFAADYPLLFTEITAKDYVSFVHSLYQKDFSERQFASLA
+                     EAFHFSKYINRRISELSLGNRQKVVLMTGLLLRAPLFILDEPL"
+     PFAM_domain     2493..2747
+                     /aSTool="fullhmmer"
+                     /asDomain_id="fullhmmer_ywhQ_0002"
+                     /database="Pfam-A.hmm"
+                     /db_xref="PFAM: PF13304"
+                     /description="AAA domain"
+                     /detection="hmmscan"
+                     /domain="AAA_21"
+                     /evalue="3.90E-07"
+                     /label="ywhQ"
+                     /locus_tag="ywhQ"
+                     /note="Pfam-A.hmm-Hit: AAA_21. Score: 30.3. E-value:
+                     3.9e-07. Domain range: 211..297."
+                     /note="ClusterFinder probability: 0.832802064711"
+                     /score="30.3"
+                     /translation="KDFSERQFASLAEAFHFSKYINRRISELSLGNRQKVVLMTGLLLR
+                     APLFILDEPLVGLDVESIEVFYQKMREYCEEGGTILFSSH"
+     gene            2824..4182
+                     /gene="ywhP"
+     CDS             2824..4182
+                     /codon_start=1
+                     /db_xref="GI:20387050"
+                     /db_xref="GOA:Q8RKH4"
+                     /db_xref="UniProtKB/Swiss-Prot:Q8RKH4"
+                     /gene="ywhP"
+                     /product="ywhP protein"
+                     /protein_id="CAD23202.1"
+                     /transl_table=11
+                     /translation="MGRRPICGGNFLRLSAMNNIFPIMSLLFKQLYSRQGKKDAIRIAA
+                     GLVILAVFEIGLIRQAGIDESVLGKTYIILALLLMNTYMVFLSVTSQWKESYMKLSCLL
+                     PISSRSFWLAQSVVLFVDTCLRRTLFFFILPLFLFGNGTLSGAQTLFWLGRFSFFTVYS
+                     ILFGVMLSNHFVKKKNSMFLLHAAVFAFVCLSAAFMPAVTIPLCAVHMLWAVIIDFPVF
+                     LQAPPHQSKMHFFMRRSEFSFYKREWNRFISSKAMLLNYVVMAAFSGFFSFQMMNTGIF
+                     NQQVIYIVISALLLICSPIALLYSIEKNDRMLLITLPIKRRTMFWAKYRFYSGLLAGGF
+                     LLVAIIVGFISGRPISALTFVQCMELLLAGAFIRLTADEKRPSFGWQTEQQLWSGFSKY
+                     RSYLFCLPLFLATLAGTAVSLAVIPIAALIIVYYLQKQDGGFFDTSKRERIGS"
+     PFAM_domain     2965..3411
+                     /aSTool="fullhmmer"
+                     /asDomain_id="fullhmmer_ywhP_0001"
+                     /database="Pfam-A.hmm"
+                     /db_xref="PFAM: PF12730"
+                     /description="ABC-2 family transporter protein"
+                     /detection="hmmscan"
+                     /domain="ABC2_membrane_4"
+                     /evalue="8.00E-03"
+                     /label="ywhP"
+                     /locus_tag="ywhP"
+                     /note="Pfam-A.hmm-Hit: ABC2_membrane_4. Score: 15.3.
+                     E-value: 0.008. Domain range: 23..179."
+                     /note="ClusterFinder probability: 0.817351451783"
+                     /score="15.3"
+                     /translation="VILAVFEIGLIRQAGIDESVLGKTYIILALLLMNTYMVFLSVTSQ
+                     WKESYMKLSCLLPISSRSFWLAQSVVLFVDTCLRRTLFFFILPLFLFGNGTLSGAQTLF
+                     WLGRFSFFTVYSILFGVMLSNHFVKKKNSMFLLHAAVFAFVCLSA"
+     PFAM_domain     3556..4026
+                     /aSTool="fullhmmer"
+                     /asDomain_id="fullhmmer_ywhP_0002"
+                     /database="Pfam-A.hmm"
+                     /db_xref="PFAM: PF12730"
+                     /description="ABC-2 family transporter protein"
+                     /detection="hmmscan"
+                     /domain="ABC2_membrane_4"
+                     /evalue="8.20E-07"
+                     /label="ywhP"
+                     /locus_tag="ywhP"
+                     /note="Pfam-A.hmm-Hit: ABC2_membrane_4. Score: 28.4.
+                     E-value: 8.2e-07. Domain range: 0..131."
+                     /note="ClusterFinder probability: 0.804314903576"
+                     /score="28.4"
+                     /translation="KREWNRFISSKAMLLNYVVMAAFSGFFSFQMMNTGIFNQQVIYIV
+                     ISALLLICSPIALLYSIEKNDRMLLITLPIKRRTMFWAKYRFYSGLLAGGFLLVAIIVG
+                     FISGRPISALTFVQCMELLLAGAFIRLTADEKRPSFGWQTEQQLWSGFSKYRS"
+     PFAM_domain     3574..3942
+                     /aSTool="fullhmmer"
+                     /asDomain_id="fullhmmer_ywhP_0003"
+                     /database="Pfam-A.hmm"
+                     /db_xref="PFAM: PF13346"
+                     /description="ABC-2 family transporter protein"
+                     /detection="hmmscan"
+                     /domain="ABC2_membrane_5"
+                     /evalue="7.20E-06"
+                     /label="ywhP"
+                     /locus_tag="ywhP"
+                     /note="Pfam-A.hmm-Hit: ABC2_membrane_5. Score: 25.4.
+                     E-value: 7.2e-06. Domain range: 6..126."
+                     /note="ClusterFinder probability: 0.793618741196"
+                     /score="25.4"
+                     /translation="FISSKAMLLNYVVMAAFSGFFSFQMMNTGIFNQQVIYIVISALLL
+                     ICSPIALLYSIEKNDRMLLITLPIKRRTMFWAKYRFYSGLLAGGFLLVAIIVGFISGRP
+                     ISALTFVQCMELLLAGAFI"
+     gene            4172..5332
+                     /gene="ywhO"
+     CDS             4172..5332
+                     /codon_start=1
+                     /db_xref="GI:20387051"
+                     /db_xref="GOA:Q8RKH3"
+                     /db_xref="InterPro:IPR007863"
+                     /db_xref="UniProtKB/Swiss-Prot:Q8RKH3"
+                     /gene="ywhO"
+                     /product="ywhO protein"
+                     /protein_id="CAD23203.1"
+                     /transl_table=11
+                     /translation="MAVNLLKTQQFSTISIAASFLKPIESAAEPEEETIYFYSAAAHLK
+                     QQIIDAFGYAAGCRFMYSANLFFDQQLKTCGTRLIHPSFNKNLHLDALMKTFADMSFPS
+                     SLSADAVEKAKDELLLKIEKKFADPFSYSAARLAEEAFGNPMYGTAMFGRKDRIQAIHP
+                     QRFLNATDFIVDLLSQHKQLNILGHVQACDIPGHASQTSAVTAGRFLVNRHVFETETRS
+                     AAGPSVLTLGFDCGEMKDASDYIKIQLIDGLLGKYGHSALFKHFREKDLAVYHVITRYD
+                     IMNNLLLVSICTNQLHEKEIPPRVLEAVSHFSADERELEQAKQFFRNEMLLQFDSPEGL
+                     LAYMGILRRFSCTKEDLLDGISAVTCRDVLQFITTINYIGAHVVRG"
+     PFAM_domain     4853..5143
+                     /aSTool="fullhmmer"
+                     /asDomain_id="fullhmmer_ywhO_0001"
+                     /database="Pfam-A.hmm"
+                     /db_xref="PFAM: PF05193"
+                     /description="Peptidase M16 inactive domain"
+                     /detection="hmmscan"
+                     /domain="Peptidase_M16_C"
+                     /evalue="1.20E-04"
+                     /label="ywhO"
+                     /locus_tag="ywhO"
+                     /note="Pfam-A.hmm-Hit: Peptidase_M16_C. Score: 21.8.
+                     E-value: 0.00012. Domain range: 80..182."
+                     /note="ClusterFinder probability: 0.785202512948"
+                     /score="21.8"
+                     /translation="VLTLGFDCGEMKDASDYIKIQLIDGLLGKYGHSALFKHFREKDLA
+                     VYHVITRYDIMNNLLLVSICTNQLHEKEIPPRVLEAVSHFSADERELEQAKQ"
+     gene            5337..6620
+                     /gene="ywhN"
+     CDS             5337..6620
+                     /codon_start=1
+                     /db_xref="GI:20387052"
+                     /db_xref="GOA:Q8RKH2"
+                     /db_xref="InterPro:IPR001431"
+                     /db_xref="InterPro:IPR011765"
+                     /db_xref="UniProtKB/Swiss-Prot:Q8RKH2"
+                     /gene="ywhN"
+                     /product="ywhN protein"
+                     /protein_id="CAD23204.1"
+                     /sec_met="Type: none"
+                     /sec_met="Domains detected: Peptidase_M16 (E-value:
+                     1.8e-16, bitscore: 49.6, seeds: ?)"
+                     /sec_met="Kind: biosynthetic"
+                     /transl_table=11
+                     /translation="MEKKAFFQQLDERTDIRYTDSGMKIIRLKFPRAHLRLCNVKIDFG
+                     SRDVCLQAESGDTLLPYGTAHFLEHLLFWHNGRNLYTDFFAHGALLNAFTTYTDTNFMF
+                     TSLPDRLRQTIPILLDALWNHSFDKKMITQEKAVITSEIQTAHLNHQLYYHYQLISMLS
+                     PASPAAVFPAGRIEDIEALDIRDLQKAYNAAYQPQRMTLFLIGGSEDTEALLPPHLRLE
+                     KRPNHKAERKIISACPPPALSQKMVLGNEERIEDTWTGLQVGAIPGQNNLLTLKLYWDI
+                     ASRILFQLDSPFFQEIQQTYRLEIDCLSAEAHMYEDGGFLILHSQGAHSSAYIDVASYY
+                     VTQQKQQIETWLQYGKDSLTDAIIYDSDYVRKCFEWAAECDRCDCTFLDMYRIIHDMNS
+                     QDFLSLIDALASSKKAVIHVSQKEAIGQ"
+     PFAM_domain     5520..5804
+                     /aSTool="fullhmmer"
+                     /asDomain_id="fullhmmer_ywhN_0001"
+                     /database="Pfam-A.hmm"
+                     /db_xref="PFAM: PF00675"
+                     /description="Insulinase (Peptidase family M16)"
+                     /detection="hmmscan"
+                     /domain="Peptidase_M16"
+                     /evalue="7.00E-13"
+                     /label="ywhN"
+                     /locus_tag="ywhN"
+                     /note="Pfam-A.hmm-Hit: Peptidase_M16. Score: 48.5. E-value:
+                     7e-13. Domain range: 30..129."
+                     /note="ClusterFinder probability: 0.799961696246"
+                     /score="48.5"
+                     /translation="YGTAHFLEHLLFWHNGRNLYTDFFAHGALLNAFTTYTDTNFMFTS
+                     LPDRLRQTIPILLDALWNHSFDKKMITQEKAVITSEIQTAHLNHQLYYHY"
+     PFAM_domain     5883..6320
+                     /aSTool="fullhmmer"
+                     /asDomain_id="fullhmmer_ywhN_0002"
+                     /database="Pfam-A.hmm"
+                     /db_xref="PFAM: PF05193"
+                     /description="Peptidase M16 inactive domain"
+                     /detection="hmmscan"
+                     /domain="Peptidase_M16_C"
+                     /evalue="2.90E-03"
+                     /label="ywhN"
+                     /locus_tag="ywhN"
+                     /note="Pfam-A.hmm-Hit: Peptidase_M16_C. Score: 17.3.
+                     E-value: 0.0029. Domain range: 2..149."
+                     /note="ClusterFinder probability: 0.858495023919"
+                     /score="17.3"
+                     /translation="DIRDLQKAYNAAYQPQRMTLFLIGGSEDTEALLPPHLRLEKRPNH
+                     KAERKIISACPPPALSQKMVLGNEERIEDTWTGLQVGAIPGQNNLLTLKLYWDIASRIL
+                     FQLDSPFFQEIQQTYRLEIDCLSAEAHMYEDGGFLILHSQGA"
+     gene            6617..7318
+                     /gene="ywhM"
+     CDS             6617..7318
+                     /codon_start=1
+                     /db_xref="GI:20387053"
+                     /db_xref="GOA:Q8RKH1"
+                     /db_xref="UniProtKB/Swiss-Prot:Q8RKH1"
+                     /gene="ywhM"
+                     /product="ywhM protein"
+                     /protein_id="CAD23205.1"
+                     /transl_table=11
+                     /translation="MSKSTVFTVLLLLLGMAAYSFGWVQAVAEAAAQYVQIFNNDALRL
+                     GLLACIAAVLMLPAFLYLHYVTQSVKNMTAAFQKLTQSHQSCCDFQHHRLCSRYAEEVK
+                     SLRDRYKNVRQTYVMAAVLCQVIIFGCMFEIVKAVPFRLHTPPIVSTGMALLLILYLLF
+                     YMRMYLLKLFQHGTLFKKILACVLTGAGIGWMLSFTISELLFLIILAAIQQIGSFIYKR
+                     FSNRGFTSLDL"
+     PFAM_domain     6767..7108
+                     /aSTool="fullhmmer"
+                     /asDomain_id="fullhmmer_ywhM_0001"
+                     /database="Pfam-A.hmm"
+                     /db_xref="PFAM: PF11026"
+                     /description="Protein of unknown function (DUF2721)"
+                     /detection="hmmscan"
+                     /domain="DUF2721"
+                     /evalue="9.10E-03"
+                     /label="ywhM"
+                     /locus_tag="ywhM"
+                     /note="Pfam-A.hmm-Hit: DUF2721. Score: 15.6. E-value:
+                     0.0091. Domain range: 2..114."
+                     /note="ClusterFinder probability: 0.998076174141"
+                     /score="15.6"
+                     /translation="IAAVLMLPAFLYLHYVTQSVKNMTAAFQKLTQSHQSCCDFQHHRL
+                     CSRYAEEVKSLRDRYKNVRQTYVMAAVLCQVIIFGCMFEIVKAVPFRLHTPPIVSTGMA
+                     LLLILYLLFY"
+ORIGIN
+        1 tcatcctcga tcacagactt cacatggagt gttatcggtg tctcttgctt cattttgaca
+       61 cgtccttttc atcattccac tttgacttga atagtataat cattccgttt gtaaacttca
+      121 actgcttcta tcttaccatc attgctcatc agatttgaag ataaacctca taaaaagcat
+      181 ttccttaata gaagagaaaa tgatatcact aattaccttt aggaaatgtt acatttttcc
+      241 gaaatctatc attttcattt cacattttct tcaaaatata cgtattgaat tggtaattta
+      301 atagttttat cataaaagta caacatagat ctgctagaaa aaaacaaaaa aagggaggat
+      361 tcaattatga aaaaagctgt cattgtggaa aacaaaggtt gtgcaacatg ctcgatcgga
+      421 gccgcttgtc tagtggacgg tcctatccct gattttgaaa ttgccggtgc tacaggtcta
+      481 ttcggtctat ggggataaga ttctccaaaa gggcatagtc attctgctat gcccttttta
+      541 gtaaattaca atttttaact aaaatatacc tcttggatct acctcttggt tatacataca
+      601 caatcgtttt tcatttgaat catatgtata ggggatggta ttttgtttat agagcagatg
+      661 tttccattta ttaatgaaag tgtaagagtt caccagcttc ctgagggcgg cgtgttagaa
+      721 atcgactact tgcgcgataa tgtctccatt tctgactttg agtatttgga tcttaacaaa
+      781 acggcttacg agctctgcat gcgaatggat gggcaaaaaa cggctgaaca gattttagcg
+      841 gaacaatgcg ccgtgtacga tgaatcaccg gaagaccata aggattggta ttacgatatg
+      901 ctcaacatgc tcctgaacaa gcaggtcgtc cagcttgaaa atcagtccac ccgccacgcg
+      961 atcaacacga gcggaagcaa tgaatttccg atgccgctgc acgccacctt tgagctgacg
+     1021 caccgctgta atttgaaatg cgcccactgt tatttggaaa gttcgccgga agcgctcggc
+     1081 accgtgtcga ttgagcaatt caagaaaacg gctgatatgc tgtttgacaa cggtgtattg
+     1141 acatgcgaaa tcacgggcgg agaaattttt gtccatccga acgccaatga gattcttgac
+     1201 tatgtgtgta aaaagttcaa aaaggtcgct gtcttaacga acggaacact catgcgaaaa
+     1261 gagagcctgg agcttctgaa agcttacaaa caaaaaatca tcgtcggcat ttctctcgat
+     1321 agtgtcaatt ccgagatcca tgactccttt agagggagaa aaggctcttt tgcccaaact
+     1381 tgtaaaacga taaaattgtt gagtgaccac ggtatatttg tcagagtcgc catgtccgtt
+     1441 ttcgaaaaaa acatgtggga aatccacgat atggcccaaa aggttcggga tctcggggca
+     1501 aaggcgttct cttacaattg ggttgatgat ttcggaagag gcagagatat tgtccacccc
+     1561 acaaaaaatg ccgagcagca ccgcaaattt atggagtacg agcaaaatat cattgatgag
+     1621 tttaaagatc tgattccgat tattccctat gagagaaaac gcgcggcaaa ttgcggcgct
+     1681 ggctggaagt ccattgtgat cagcccgttc ggggaagtac gtccgtgtgc gctctttcca
+     1741 aaggaatttt cattgggaaa tatttttcat gattcatatg aaagcatctt taactcccct
+     1801 ctcgtccata aactgtggca agcgcaggcg ccgcggttca gcgagcattg catgaaagac
+     1861 aaatgcccgt tcagcagcta ttgcggaggc tgttacttaa aagggctgaa ctctaacaaa
+     1921 tatcaccgaa aaaacatttg ctcttgggca aaaaatgaac aattagaaga cgtggtccag
+     1981 cttatttagg agggaaacga tttgtcacca gcacaaagaa gaattttact gtatatcctt
+     2041 tcatttatct ttgtcatcgg cgcagtcgtc tattttgtca aaagcgatta tctatttacg
+     2101 ctgattttca tagccattgc cattcttttc gggatgcgcg cgcggaaggc tgactcgcga
+     2161 tgagcatttt ggatatacac gatgtatccg tttggtatga acgggacaac gtcatcttag
+     2221 agcacgtgga cttacactta gaaaaaggcg ccgtttacgg attgcttggg gtaaacggtg
+     2281 ccggcaaaac aacactgatc aatacgctga caggagtgaa ccgcaattac agcgggggct
+     2341 ttacgctgtg cggcattgaa gctgaggccg gcatgccgca gaaaacatca gatcaactga
+     2401 agattcaccg ttacttcgcc gctgattatc cgctgctgtt tacagaaatt acggcgaagg
+     2461 actatgtgtc tttcgtccat tcgctttatc aaaaggattt ttcagagcga cagtttgcca
+     2521 gtttggctga ggcctttcat ttttcaaaat acatcaacag gagaatctcg gagctgtcct
+     2581 tggggaacag gcaaaaggtt gtgttgatga caggattatt gctgcgggct cccctgttta
+     2641 ttttggatga gccgctcgtc ggtttggatg tggaatcaat agaggtcttt tatcagaaaa
+     2701 tgcgggagta ctgtgaggaa ggcggaacca ttttgttttc ttcccatctg ctcgatgtcg
+     2761 tgcagagatt ttgtgatttt gcggccattc tgcacaacaa acagatccaa aaggtcattc
+     2821 cgattgggga ggagaccgat ctgcggcggg aattttttga ggttatcggc catgaataac
+     2881 atattcccca tcatgtcgtt gctgttcaaa cagctgtaca gccggcaagg gaaaaaggac
+     2941 gctatccgca ttgctgcagg gcttgtgatt ctcgccgtgt ttgaaatcgg gctgatccga
+     3001 caagccggca ttgacgaatc ggtgttggga aaaacgtata tcatattggc gcttctctta
+     3061 atgaacacgt atatggtgtt tctttccgtg acatcacaat ggaaggaatc ttatatgaag
+     3121 ctgagctgtc tgctgccgat ttcatcacgg agcttttggc tcgcccagag tgtcgttctg
+     3181 tttgtcgata cctgtttgag aagaacgtta ttctttttta ttttaccgct gttcttattt
+     3241 ggaaacggaa cgctgtcagg ggcgcaaaca ttgttttggc ttggcagatt ttcgtttttt
+     3301 accgtttact cgattctatt cggagttatg ctaagcaacc atttcgtcaa aaagaagaac
+     3361 tcgatgtttc tgctgcatgc ggcggtattc gcctttgtat gcctcagtgc cgcttttatg
+     3421 ccggccgtca cgatcccgct atgcgcggtt cacatgctat gggcggtgat cattgacttt
+     3481 ccggtctttc tgcaggcgcc tccgcatcag agcaagatgc atttttttat gcggcgatct
+     3541 gaattttcgt tttacaaaag agaatggaac cgatttattt cttctaaagc gatgctgtta
+     3601 aattacgtgg tgatggcggc gttcagcgga ttcttttcgt tccagatgat gaacactggc
+     3661 atcttcaatc agcaagtgat ttatattgtg atttccgctc tattgctgat ttgctcgccg
+     3721 atcgcccttt tgtactctat tgaaaaaaac gatcgcatgc tgctcatcac gcttccaatt
+     3781 aaaagaagaa cgatgttttg ggcgaaatat cgcttttatt caggcctatt ggcaggcgga
+     3841 tttctccttg tcgctatcat tgtgggcttc atcagcggcc gaccgatttc agcccttact
+     3901 tttgtgcagt gtatggaatt gctgctggcg ggagcgttta tccggttaac cgcagatgaa
+     3961 aaaaggccgt ccttcggctg gcagacagag cagcagctct ggagcggatt ttcaaaatac
+     4021 cgatcttatt tattttgtct tccccttttc ttagccacat tagccggcac cgctgtctcc
+     4081 ttggcggtga ttccaattgc cgcgctgatc atagtctatt acctgcaaaa acaggatggt
+     4141 ggtttctttg atacaagcaa aagagaacgg attggcagtt aacctgctga agactcaaca
+     4201 attttcaaca atctcaatcg ccgcgagctt tctaaaaccg atcgaaagcg cggcggagcc
+     4261 tgaagaagaa acaatctatt tttacagcgc ggctgcacat ctgaagcagc aaatcattga
+     4321 cgctttcggt tatgccgccg gctgccgctt tatgtattca gcgaaccttt tttttgacca
+     4381 gcagctgaaa acctgcggaa cccgtttgat tcacccatca tttaacaaga atcttcatct
+     4441 tgatgccctg atgaagacat ttgcagacat gtccttccct tcttctcttt cagccgatgc
+     4501 tgttgaaaag gcaaaggatg aactgctgct gaaaatcgaa aagaaattcg ctgacccctt
+     4561 ctcctactcg gcagcccgct tggcggagga ggccttcgga aacccgatgt acggcacagc
+     4621 catgtttggc cgaaaagaca ggatacaggc aatccatcca caacggtttc taaatgcaac
+     4681 ggatttcatc gtagatttat tgtcccagca taaacagctg aacatattgg gacatgtaca
+     4741 agcatgtgat attccgggac atgcctcgca aacatccgcc gtgacggccg gaagattcct
+     4801 cgtgaaccgg catgtttttg aaacagagac acgcagcgca gcaggtcctt ccgtcttgac
+     4861 actcggattt gactgcgggg agatgaaaga tgccagcgat tatatcaaaa tccagctgat
+     4921 agacggattg ctcggaaagt acggacattc cgcattattc aagcacttcc gcgaaaagga
+     4981 tctggcagtc tatcatgtca tcacccgata cgacatcatg aacaatttgc tgcttgtttc
+     5041 aatatgtacg aatcagcttc acgagaaaga gattcccccg cgcgttttgg aagctgtctc
+     5101 acatttttca gccgatgagc gggagctaga acaggcaaag caatttttcc gcaatgaaat
+     5161 gctgcttcaa ttcgattctc ccgaagggct tttagcctat atgggaatcc tgcgccgctt
+     5221 ctcctgcacg aaagaagact tgctggatgg catctcagcg gttacgtgcc gcgatgtatt
+     5281 gcaattcata acgactatta attatatcgg agctcatgta gtaaggggat gaagagatgg
+     5341 agaagaaagc cttttttcaa cagctggatg aacgaaccga tattagatac acagacagcg
+     5401 ggatgaaaat aatcagattg aaattccccc gcgcccattt gcggctgtgc aatgtgaaaa
+     5461 tcgattttgg aagccgggat gtctgcttac aggcagaatc aggcgacacg cttctcccgt
+     5521 atggcacagc gcatttttta gagcatcttc tcttctggca taatggccgc aatctgtaca
+     5581 ctgatttttt tgcgcatggc gcgcttttaa acgcgttcac cacctacacc gataccaatt
+     5641 tcatgtttac ctcattgccg gatcgactca gacagacgat ccccatcctg cttgatgcgt
+     5701 tatggaacca ctcatttgac aagaagatga taactcagga aaaagctgtg attacaagcg
+     5761 aaattcaaac agcacacctc aatcatcagc tctattacca ttatcagctg atcagcatgc
+     5821 tttctcccgc ctcacctgcc gccgtcttcc ccgcaggcag aatcgaggac attgaggcgc
+     5881 tggacatccg tgatttacaa aaagcctaca atgccgccta tcagcctcag cggatgacgc
+     5941 tgtttttgat cggaggctca gaagacacgg aagccctttt gccccctcac ctccggctgg
+     6001 aaaagcgtcc aaatcataaa gcagaaagaa aaatcatctc cgcatgccct ccaccagccc
+     6061 tctcacaaaa aatggtgctg ggtaatgagg agcggattga agacacatgg accggattac
+     6121 aggttggcgc aattcccggg caaaacaatc tgttgacatt aaagctttat tgggacatcg
+     6181 catctcgcat tctatttcaa ttagattcac cattttttca agagatacag caaacatacc
+     6241 gcctggaaat cgattgcttg tcagccgagg ctcacatgta tgaggatggc ggttttttga
+     6301 ttcttcacag tcaaggggcg cattcttcgg cttatattga tgttgcttcc tactatgtca
+     6361 cacagcaaaa acaacagatt gagacttggc tccaatacgg caaggattct ttgacggacg
+     6421 cgatcattta tgacagcgat tatgttcgca aatgcttcga atgggcggcc gagtgtgaca
+     6481 ggtgcgattg cacatttctc gacatgtacc gaatcattca cgatatgaat agccaagatt
+     6541 tcttgtctct cattgatgca ttggcatctt ctaaaaaagc ggtcattcac gtttctcaga
+     6601 aagaggcgat cggacaatga gcaaaagcac tgtctttacc gtgttgttgt tgctcttagg
+     6661 tatggcggct tattccttcg gctgggttca agccgtcgcc gaagccgcag cgcaatatgt
+     6721 acagatattc aataacgatg ctttgcggct cggactgctg gcttgtatcg ctgccgttct
+     6781 gatgctgcct gcttttctct atcttcacta tgtcacccaa tccgtaaaaa acatgacagc
+     6841 agcttttcag aaactcacac agtctcatca aagctgctgt gatttccagc atcacagatt
+     6901 atgcagccgt tatgcagaag aggtcaaatc gctgcgtgac aggtataaaa acgtccgtca
+     6961 aacatacgtg atggctgctg tattatgcca agtcatcata ttcggctgca tgttcgaaat
+     7021 cgttaaagcc gtccctttcc gccttcacac gcctcctatc gtttcaacgg gaatggcatt
+     7081 gttactgatt ttgtatttat tgttttacat gcgaatgtac ttgctgaagc tttttcaaca
+     7141 tggcaccctg ttcaaaaaaa ttcttgcatg cgtgctgaca ggagccggga ttgggtggat
+     7201 gctcagtttc accataagtg aactgctgtt tctgatcatc ctggctgcca tccagcagat
+     7261 cggatcattt atttataaac gattctctaa tcgcggcttc acttctctag acctatgaaa
+     7321 tagctacatc tcaatcgcag acggacccgt gtcgaccg
+//
