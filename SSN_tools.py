@@ -162,7 +162,7 @@ def generateSSNFeatureMatrix(clusters, SSN_pfam_names, SSN_feature_names, includ
                 ssn_membership =findSSNMembership(c, sequence, ssn_seq_filename, i, included_clusters[pfam_name_dictionary[pfam]], blast_exe)
                 for cluster in ssn_membership:
                     if pfam_name_dictionary[pfam] + "_" + cluster not in SSN_feature_names:
-                        print "no match"
+                        print("no match")
                         continue
                     SSN_feature_matrix[j,SSN_feature_names.index(pfam_name_dictionary[pfam] + "_" + cluster)] +=1  
             i+= 1
@@ -230,7 +230,7 @@ def findSSNMembership(cluster_name, sequence, ssn_seq_filename, ssn_index, inclu
             temp_fasta = open("temp_file/seq1.fasta", 'w')
             waiting = False
         except:
-            print "file error!!"
+            print("file error!!")
             
     temp_fasta.write(">"+cluster_name+"\n")
     temp_fasta.write(sequence[0])
@@ -244,7 +244,7 @@ def findSSNMembership(cluster_name, sequence, ssn_seq_filename, ssn_index, inclu
                     temp_fasta = open("temp_file/seq2.fasta", 'w')
                     waiting = False
                 except:
-                    print "file error!!"
+                    print("file error!!")
                                     
             temp_fasta.write(">"+cluster +"\n")
             temp_fasta.write(seq)

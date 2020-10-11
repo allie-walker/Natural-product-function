@@ -90,7 +90,7 @@ def getFeatureName(i, pfam_list, card_list, smCOG_list):
     merged_list = pfam_list+card_list+smCOG_list
     return merged_list[i]
     if i < len(pfam_list):
-         print pfam_list[-3]
+         #print(pfam_list[-3])
          return pfam_list[i]
     elif i < len(pfam_list)+len(card_list):
         return card_list[i-len(pfam_list)]
