@@ -39,7 +39,7 @@ def readFeatureList(filename):
     in_file = open(filename,'r')
     feature_list = []
     for line in in_file:
-        feature_list.append(line.replace("\n",""))
+        feature_list.append(line.replace("\n","").replace("\r",""))
     return feature_list
 
 def readClassesMatrix(filename):

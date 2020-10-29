@@ -147,26 +147,39 @@ def makePFAMNameDictionary(SSN_pfam_names, SSN_feature_names):
         i+=1
     return pfam_name_dictionary
 
-def generateSSNFeatureMatrix(clusters, SSN_pfam_names, SSN_feature_names, included_clusters, blast_exe):
+def generateSSNFeatureMatrix(clusters, SSN_pfam_names, SSN_feature_names, included_clusters, blast_exe,genome_name, data_path):
     pfam_name_dictionary =makePFAMNameDictionary(SSN_pfam_names, SSN_feature_names)
     SSN_feature_matrix = np.zeros((len(clusters), len(SSN_feature_names)))
     j = 0
     for c in clusters:
+        print(c)
         filename = c 
 
         i = 0
         for pfam in SSN_pfam_names:
             pfam_sequences = findAllPFAMSeqs(filename, pfam)
             for sequence in pfam_sequences:
-                ssn_seq_filename = "SSN/gene_sequences/" + pfam_name_dictionary[pfam] +"_domains.fasta"
-                ssn_membership =findSSNMembership(c, sequence, ssn_seq_filename, i, included_clusters[pfam_name_dictionary[pfam]], blast_exe)
+                if len(sequence) == 0:
+                    continue
+                #print pfam
+                #print sequence
+                ssn_seq_filename = data_path + "SSN/gene_sequences/" + pfam_name_dictionary[pfam] +"_domains.fasta"
+                ssn_membership =findSSNMembership(c, sequence, ssn_seq_filename, i, included_clusters[pfam_name_dictionary[pfam]], blast_exe,genome_name,data_path)
+                print(ssn_membership)
                 for cluster in ssn_membership:
+                    #print pfam_name_dictionary[pfam] + "_" + cluster
                     if pfam_name_dictionary[pfam] + "_" + cluster not in SSN_feature_names:
                         print("no match")
                         continue
+                    #print "match"
                     SSN_feature_matrix[j,SSN_feature_names.index(pfam_name_dictionary[pfam] + "_" + cluster)] +=1  
+                    #print c 
+                    #print cluster
+                    #print ""
             i+= 1
+        print(SSN_feature_matrix[j,:])
         j += 1
+    #print SSN_feature_matrix
     return SSN_feature_matrix
 
 def getGeneName(network_fn):
@@ -184,7 +197,7 @@ def getGeneName(network_fn):
 def parseBLAST(blast_out):
     return
 
-def findSSNMembership(cluster_name, sequence, ssn_seq_filename, ssn_index, included_clusters, blast_exe):
+def findSSNMembership(cluster_name, sequence, ssn_seq_filename, ssn_index, included_clusters, blast_exe, genome_name,data_path):
     #read all the sequences from the sequence file, discard any with the same name as current cluster
     #print cluster_name
     #print ssn_seq_filename
@@ -199,8 +212,8 @@ def findSSNMembership(cluster_name, sequence, ssn_seq_filename, ssn_index, inclu
     sequences_in_SSN = {}
     gene_ids_in_SSN = {}
     SSN_filename = SSN_filenames[ssn_index]
-    node_to_gene = getGeneName("SSN/" +SSN_filename)
-    SSN_map_file =open("SSN/" +SSN_map_filenames[ssn_index] + ".txt")
+    node_to_gene = getGeneName(data_path+"SSN/" +SSN_filename)
+    SSN_map_file =open(data_path+"SSN/" +SSN_map_filenames[ssn_index] + ".txt")
     for line in SSN_map_file:
         #print line
         if "UniProt" in line:
@@ -224,13 +237,12 @@ def findSSNMembership(cluster_name, sequence, ssn_seq_filename, ssn_index, inclu
     threshold = ssn_thresholds[ssn_index]
     waiting = True
     while waiting:
-        temp_fasta = open("temp_file/seq1.fasta", 'w')
-        waiting = False
         try:
-            temp_fasta = open("temp_file/seq1.fasta", 'w')
+            temp_fasta = open(data_path+"temp_file/"+genome_name+"seq1.fasta", 'w')
             waiting = False
         except:
             print("file error!!")
+            
             
     temp_fasta.write(">"+cluster_name+"\n")
     temp_fasta.write(sequence[0])
@@ -241,10 +253,11 @@ def findSSNMembership(cluster_name, sequence, ssn_seq_filename, ssn_index, inclu
             waiting = True
             while waiting:
                 try:
-                    temp_fasta = open("temp_file/seq2.fasta", 'w')
+                    temp_fasta = open(data_path+"temp_file/"+genome_name+"seq2.fasta", 'w')
                     waiting = False
                 except:
                     print("file error!!")
+                    
                                     
             temp_fasta.write(">"+cluster +"\n")
             temp_fasta.write(seq)
@@ -252,7 +265,8 @@ def findSSNMembership(cluster_name, sequence, ssn_seq_filename, ssn_index, inclu
             gap_open = '11' 
             gap_extend = '1'
             comp_based = 2
-            cline = '{0} -query temp_file/seq1.fasta -subject temp_file/seq2.fasta -gapopen {1} -gapextend {2} -comp_based_stats {3} -use_sw_tback -outfmt \"6\" -max_hsps 1 -evalue {4}'.format(blast_exe,gap_open,gap_extend,comp_based,5)
+            cline = '{0} -query {1}temp_file/{2}seq1.fasta -subject {1}temp_file/{2}seq2.fasta -gapopen {3} -gapextend {4} -comp_based_stats {5} -use_sw_tback -outfmt \"6\" -max_hsps 1 -evalue {6}'.format(blast_exe,data_path,genome_name,gap_open,gap_extend,comp_based,5)
+            #cline = 'blastp -query /home/asw23/antismash_on_full_genome/temp_file/seq1.fasta'
             child = subprocess.Popen(cline,stdout=subprocess.PIPE, shell=True)
             my_out,my_err = child.communicate()
             score = 0
@@ -263,7 +277,6 @@ def findSSNMembership(cluster_name, sequence, ssn_seq_filename, ssn_index, inclu
             if len(my_out.split()) >=12:
                 score = float(my_out.split()[11])
                 score = -1*math.log10((2**(-1*score))*len(sequence[0])*len(seq))
-            #print score
             
             if score > threshold:
                     #print threshold
@@ -271,7 +284,7 @@ def findSSNMembership(cluster_name, sequence, ssn_seq_filename, ssn_index, inclu
                     clusters_with_match.append(cluster)
                     break
             
-            cline = '{0} -query temp_file/seq2.fasta -subject temp_file/seq1.fasta -gapopen {1} -gapextend {2} -comp_based_stats {3} -use_sw_tback -outfmt \"6\" -max_hsps 1 -evalue {4}'.format(blast_exe,gap_open,gap_extend,comp_based,5)
+            cline = '{0} -query {1}temp_file/{2}seq2.fasta -subject {1}temp_file/{2}seq1.fasta -gapopen {3} -gapextend {4} -comp_based_stats {5} -use_sw_tback -outfmt \"6\" -max_hsps 1 -evalue {6}'.format(blast_exe,data_path,genome_name,gap_open,gap_extend,comp_based,5)
             #child = subprocess.Popen(cline,shell=True,stdout=subprocess.PIPE,close_fds=True)
             child = subprocess.Popen(cline,stdout=subprocess.PIPE,shell=True)
             my_out,my_err = child.communicate()
