@@ -23,6 +23,7 @@ Instructions for python notebook:
 Throughout the cells the classification variable determines which binary classification problem predictions are made for. Options are "antibacterial", "antieuk" (which predicts antifungal, antitumor, or cytotoxic activity), "antifungal", "cytotoxic_antitumor", "antigramneg", or "antigrampos.
 
 Cells 1-4 contain methods for processing the training data. These only need to be run if the training set data have been updated.
+
 Cell 5 contains methods used by cells 6-7 and should be run before running those cells.
 Cell 6 determines optimal parameters for the different classifiers.
 Cell 7 performs cross validation and evaluates classifers by various metrics.
