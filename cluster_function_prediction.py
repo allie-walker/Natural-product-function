@@ -33,26 +33,38 @@ SSN_pfam_names = ["Thiolase, N-terminal domain","ABC transporter","Acyl transfer
 
 #read arguments given by user
 parser = argparse.ArgumentParser()
-
-#TODO: add arguments for writing features
 parser.add_argument('antismash_results',help='file containing the antismash results for the cluster in a genbank file')
 parser.add_argument('rgi_results',help='file containing the rgi results for the cluster')
 parser.add_argument('--output', help='set directory to write predictions to, default write to current directory') 
 parser.add_argument('--seed', help='random seed to use for training classifiers',type=int) 
-parser.add_argument('--no_SNN', help="don't use pfam subfamilies in classification, program will run faster with only small impact on accuracy (default: use sub-PFAMs)", nargs='?', default=False, const=True)
+parser.add_argument('--no_SSN', help="don't use pfam subfamilies in classification, program will run faster with only small impact on accuracy (default: use sub-PFAMs)", nargs='?', default=False, const=True)
+parser.add_argument('--blastp_path', help="path to blastp executable, only neeeded if using SSN, default is blastp")
+parser.add_argument('--write_features', help='set directory to write features to, default do not write features') 
+
 args = parser.parse_args()
 
 data_path = os.path.dirname(sys.argv[0]) + "/"
-#TODO: FIX no_SSN option!!
-#TODO: blastp path
+
+if args.write_features == None:
+    write_features = False
+    feature_dir = ""
+else:
+    write_features = True
+    feature_dir = args.write_features
 
 if args.seed == None:
     seed = 0
 else:
     seed = args.seed
+    
+if args.blastp_path == None:
+    blastp_path = "blastp"
+else:
+    blastp_path = args.blastp_path
 
 antismash_infilename = args.antismash_results
 rgi_infilename = args.rgi_results
+no_SSN = args.no_SSN
 
 if args.output == None:
     out_directory = ""
@@ -276,24 +288,28 @@ for i in range(0, len(SSN_list)):
     SSN_list[i] = SSN_list[i].replace("\n","")
 
 included_SSN_clusters =  {}
-for pfam_name in SSN_list:
-    base = pfam_name[0:pfam_name.rfind("_")]
-    if base not in included_SSN_clusters:
-        included_SSN_clusters[base] = []
-    numbering = pfam_name[pfam_name.rfind("_")+1:len(pfam_name)].replace("\r","")
-    included_SSN_clusters[base].append(numbering.replace("\n",""))    
+if not no_SSN:
+    for pfam_name in SSN_list:
+        base = pfam_name[0:pfam_name.rfind("_")]
+        if base not in included_SSN_clusters:
+            included_SSN_clusters[base] = []
+        numbering = pfam_name[pfam_name.rfind("_")+1:len(pfam_name)].replace("\r","")
+        included_SSN_clusters[base].append(numbering.replace("\n",""))    
+
 cluster_name = antismash_infilename
 
 if "/" in cluster_name:
     cluster_name = cluster_name[cluster_name.rfind("/")+1:len(cluster_name)]
-cluster_name = cluster_name[0:cluster_name.find(".gbk")]    
-test_SSN_feature_matrix = SSN_tools.generateSSNFeatureMatrix([antismash_infilename], SSN_pfam_names, SSN_list, included_SSN_clusters, "blastp",cluster_name, data_path) 
+cluster_name = cluster_name[0:cluster_name.find(".gbk")] 
+if not no_SSN:   
+    test_SSN_feature_matrix = SSN_tools.generateSSNFeatureMatrix([antismash_infilename], SSN_pfam_names, SSN_list, included_SSN_clusters, blastp_path,cluster_name, data_path) 
 
 #make the feature matrices for the cluster
 training_features = np.concatenate((training_pfam_features, training_card_features), axis=1)
 training_features = np.concatenate((training_features,  training_smCOG_features), axis=1)
 training_features = np.concatenate((training_features,  training_CDS_features), axis=1)
-training_features = np.concatenate((training_features,  training_SSN_features), axis=1)
+if not no_SSN:
+    training_features = np.concatenate((training_features,  training_SSN_features), axis=1)
 training_features = np.concatenate((training_features,  training_pks_nrps_type_features), axis=1)
 training_features = np.concatenate((training_features,  training_pk_signature_features), axis=1)
 training_features = np.concatenate((training_features,  training_pk_minowa_features), axis=1)
@@ -313,9 +329,9 @@ i = 0
 (test_features, i) = tools.addToFeatureMatrix(test_features, i, smCOGs, used_smCOG_list)
 (test_features, i) = tools.addToFeatureMatrix(test_features, i, CDS_motifs, used_CDS_list)
 
-
-test_features[0,i:i+test_SSN_feature_matrix.shape[1]] = test_SSN_feature_matrix
-i += test_SSN_feature_matrix.shape[1]
+if not no_SSN:
+    test_features[0,i:i+test_SSN_feature_matrix.shape[1]] = test_SSN_feature_matrix
+    i += test_SSN_feature_matrix.shape[1]
 
 
 
@@ -329,7 +345,8 @@ i += test_SSN_feature_matrix.shape[1]
 (test_features, i) = tools.addToFeatureMatrix(test_features, i, nrp_monomers_predicat, used_nrp_predicat_list)
 (test_features, i) = tools.addToFeatureMatrix(test_features, i, nrp_monomers_sandpuma, used_nrp_sandpuma_list)
 
-test_features_out =open("features/" + antismash_infilename[antismash_infilename.rfind("/"):antismash_infilename.rfind(".")]+".csv",'w')
+if write_features:
+    test_features_out =open(feature_dir + "/" + antismash_infilename[antismash_infilename.rfind("/"):antismash_infilename.rfind(".")]+".csv",'w')
 for f in test_features[0]:
     test_features_out.write(str(f)+",")
 test_features_out.close()
