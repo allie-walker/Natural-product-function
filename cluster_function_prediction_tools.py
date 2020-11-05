@@ -2,7 +2,7 @@
 """
 Created on Tue Mar 26 14:43:23 2019
 
-@author: allis
+@author: Allison Walker
 """
 import os
 from sklearn.svm import SVC

@@ -2,7 +2,7 @@
 """
 Created on Wed Mar  6 11:14:09 2019
 
-@author: allis
+@author: Allison Walker
 """
 
 from Bio import SeqIO

@@ -3,7 +3,7 @@
 """
 Created on Tue Mar 26 11:38:35 2019
 
-@author: allis
+@author: Allison Walker
 """
 
 
@@ -347,9 +347,9 @@ if not no_SSN:
 
 if write_features:
     test_features_out =open(feature_dir + "/" + antismash_infilename[antismash_infilename.rfind("/"):antismash_infilename.rfind(".")]+".csv",'w')
-for f in test_features[0]:
-    test_features_out.write(str(f)+",")
-test_features_out.close()
+    for f in test_features[0]:
+        test_features_out.write(str(f)+",")
+    test_features_out.close()
 
 #do classifications
 is_not_unknown_indices = readFeatureFiles.getNotUnknownIndices(is_unknown)
