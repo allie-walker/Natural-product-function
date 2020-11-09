@@ -46,7 +46,7 @@ Instructions for command line tool:
 
 To run the command line tool enter:
 
-python cluster_function_prediction.py <filename of antismash cluster gbk file> <filename of rgi txt file>
+python cluster_function_prediction.py "filename of antismash cluster gbk file" "filename of rgi txt file"
   
 optional arguments include:
 
