@@ -3,11 +3,11 @@
 Natural_product_BGC_activity_prediction.ipnyb is an python notebook containing code to optimize, train, and use machine learning models to predict natural product
 activity from biosynthetic gene clusters. We have also provided a command line version of the script in the cluster_function_prediction.py. The activity prediction program requires ouptut files from antiSMASH and Resistance Gene Identifier (RGI). Both the command line tool and the python notebook require other files in the repository directory.
 
-Code is developed to run in python 3. Packages required:
-Biopython
-Numpy
-Scikit learn
-Matplotlib
+Code is developed to run in python 3 (3.8.3). Packages required, version used for publication in parentheses:<br/>
+Biopython (1.77)<br/>
+Numpy (1.18.5)<br/>
+Scikit learn (0.23.1)<br/>
+Matplotlib (3.2.2)<br/>
 
 To generate the proper files, antiSMASH should be run with the command:
 
@@ -46,7 +46,7 @@ Instructions for command line tool:
 
 To run the command line tool enter:
 
-python cluster_function_prediction.py <filename of antismash cluster gbk file> <filename of rgi txt file>
+python cluster_function_prediction.py "filename of antismash cluster gbk file" "filename of rgi txt file"
   
 optional arguments include:
 
