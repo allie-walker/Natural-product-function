@@ -5,7 +5,8 @@ Created on Tue Mar 26 11:38:35 2019
 
 @author: Allison Walker
 """
-
+#TODO: add error handling for reading of files
+#TODO: warning for not finding any features
 
 import argparse
 import cluster_function_prediction_tools as tools
@@ -40,6 +41,9 @@ parser.add_argument('--seed', help='random seed to use for training classifiers'
 parser.add_argument('--no_SSN', help="don't use pfam subfamilies in classification, program will run faster with only small impact on accuracy (default: use sub-PFAMs)", nargs='?', default=False, const=True)
 parser.add_argument('--blastp_path', help="path to blastp executable, only neeeded if using SSN, default is blastp")
 parser.add_argument('--write_features', help='set directory to write features to, default do not write features') 
+parser.add_argument('--antismash_version', help='version of antismash used to generate antismash input file, supported versions are 4 and 5, defualt 5') 
+parser.add_argument('--rgi_version', help='version of rgi used to generate antismash input file, supported versions are 3 and 5, default 5') 
+
 
 args = parser.parse_args()
 
@@ -71,6 +75,25 @@ if args.output == None:
 else:
     out_directory = args.output
     
+if args.rgi_version == "5":
+    rgi_version = 5
+elif args.rgi_version == "3":
+    rgi_version = 3
+elif args.rgi_version == None:
+    rgi_version = 5
+else:
+    print("please enter a valid rgi version, program currently accepts output from versions 3 and 5")
+    exit()
+    
+if args.antismash_version == "5":
+    antismash_version = 5
+elif args.antismash_version == "4":
+    antismash_verison = 4
+elif args.antismash_verify == None:
+    antismash_version = 5
+else:
+    print("please enter a valid antismash version, program currently accepts output from versions 4 and 5")
+    exit()
     
 #check validity of files and directories given by user
 if not tools.checkIfFileExists(antismash_infilename, "antismash") or not tools.checkIfFileExists(rgi_infilename, "rgi"):
@@ -126,7 +149,7 @@ try:
     training_nrp_predicat_features = readFeatureFiles.readFeatureMatrix(data_path+"gene_feature_matrices/nrp_predicat.csv")
     training_nrp_sandpuma_features = readFeatureFiles.readFeatureMatrix(data_path+"gene_feature_matrices/nrp_sandpuma.csv")
 except:
-    print("did not find file containing training data")
+    print("did not find file containing training data, please keep script located in directory downloaded from github")
     exit()
 #read the antismash input file
 try:
