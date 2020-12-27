@@ -84,9 +84,9 @@ if not os.access(out_directory, os.W_OK):
 
 #read the list of features
 try:
-    used_pfam_list = readFeatureFiles.readFeatureList(data_path+"feature_matrices/pfam_list.txt")
+    used_pfam_list = readFeatureFiles.readFeatureList(data_path+"feature_matrices/PFAM_list.txt")
     used_CDS_list = readFeatureFiles.readFeatureList(data_path+"feature_matrices/CDS_motifs_list.txt")
-    used_smCOG_list = readFeatureFiles.readFeatureList(data_path+"feature_matrices/smCOG_list.txt")
+    used_smCOG_list = readFeatureFiles.readFeatureList(data_path+"feature_matrices/SMCOG_list.txt")
     used_pks_nrps_type_list = readFeatureFiles.readFeatureList(data_path+"feature_matrices/pks_nrps_type_list.txt")
     used_pk_signature_list = readFeatureFiles.readFeatureList(data_path+"feature_matrices/pk_signature_list.txt")
     used_pk_minowa_list = readFeatureFiles.readFeatureList(data_path+"feature_matrices/pk_minowa_list.txt")
@@ -106,10 +106,10 @@ try:
     is_unknown = readFeatureFiles.readClassesMatrix(data_path+"feature_matrices/is_unknown.csv")
     targets_gram_pos = readFeatureFiles.readClassesMatrix(data_path+"feature_matrices/targets_gram_pos.csv")
     targets_gram_neg = readFeatureFiles.readClassesMatrix(data_path+"feature_matrices/targets_gram_neg.csv")
-    full_cluster_list = readFeatureFiles.readClusterList(data_path+"feature_matrices/cluster_list.txt")
+    full_cluster_list = readFeatureFiles.readClusterList(data_path+"feature_matrices/cluster_list_CARD.txt")
     
     training_pfam_features = readFeatureFiles.readFeatureMatrix(data_path+"feature_matrices/PFAM.csv")
-    training_card_features = readFeatureFiles.readFeatureMatrix(data_path+"feature_matrices/CARD_genes.csv")
+    training_card_features = readFeatureFiles.readFeatureMatrix(data_path+"feature_matrices/CARD_gene.csv")
     training_smCOG_features = readFeatureFiles.readFeatureMatrix(data_path+"feature_matrices/SMCOG.csv")
     training_SSN_features = readFeatureFiles.readFeatureMatrix(data_path+"feature_matrices/SSN.csv")
     #SSN_calc_features = readFeatureFiles.readFeatureMatrixFloat("gene_feature_matrices/test_compounds_SSN.csv")
@@ -129,6 +129,7 @@ except:
     print("did not find file containing training data")
     exit()
 #read the antismash input file
+
 try:
     record = SeqIO.read(open(antismash_infilename, 'rU'),"genbank")
 except:
@@ -282,7 +283,7 @@ for line in in_file:
 in_file.close()
     
 #read SSN features
-SSN_list = readFeatureFiles.readFeatureList(data_path+"gene_feature_matrices/SSN_list.txt")
+SSN_list = readFeatureFiles.readFeatureList(data_path+"feature_matrices/SSN_list.txt")
 for i in range(0, len(SSN_list)):
     SSN_list[i] = SSN_list[i].replace("\r","")
     SSN_list[i] = SSN_list[i].replace("\n","")
@@ -467,4 +468,3 @@ tools.writeProbabilitiesToFile(outfile, "antifugnal or antitumor or cytotoxic", 
 tools.writeProbabilitiesToFile(outfile, "antifungal", tree_antifungal_prob, log_antifungal_prob, svm_antifungal_prob)
 tools.writeProbabilitiesToFile(outfile, "antitumor or cytotoxic", tree_antitumor_prob, log_antitumor_prob, svm_antitumor_prob)
 outfile.close()
-
