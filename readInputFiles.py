@@ -54,16 +54,17 @@ def readAntismash4(as_features):
     nrp_monomers_pHMM = {}
     nrp_monomers_predicat = {}
     nrp_monomers_sandpuma= {}
-    subtype = ""
-    pks_signature = ""
-    minowa = ""
-    consensus = ""
-    stachelhaus = ""
-    nrpspredictor = ""
-    pHMM = ""
-    predicat = ""
-    sandpuma = ""
+    
     for feature in as_features:
+        subtype = ""
+        pks_signature = ""
+        minowa = ""
+        consensus = ""
+        stachelhaus = ""
+        nrpspredictor = ""
+        pHMM = ""
+        predicat = ""
+        sandpuma = ""
         if feature.type == "CDS" and "sec_met" in feature.qualifiers:
            (subtype, pks_signature, minowa, consensus, stachelhaus, nrpspredictor, pHMM, predicat, sandpuma)= processSecMetFeature(feature)
         if subtype != "":
@@ -260,7 +261,7 @@ def readInputFiles(as_features, as_version, rgi_infile, rgi_version, training_fe
     (test_features, i) = tools.addToFeatureMatrix(test_features, i, CDS_motifs, used_CDS_list)
     if len(test_SSN_matrix) > 0:
         test_features[0,i:i+test_SSN_matrix.shape[1]] = test_SSN_matrix
-        i += test_SSN_matrix.shape[1]    
+        i += test_SSN_matrix.shape[1] 
     if as_version ==4:        
         (test_features, i) = tools.addToFeatureMatrix(test_features, i, pks_nrp_subtypes, used_pks_nrps_type_list)
         (test_features, i) = tools.addToFeatureMatrix(test_features, i, pk_monomers_signature, used_pk_signature_list)
