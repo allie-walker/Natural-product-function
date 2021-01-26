@@ -110,10 +110,10 @@ if not os.access(out_directory, os.W_OK):
 
 #read the list of features
 try:    
+    training_SSN_features = readFeatureFiles.readFeatureMatrix(data_path+"feature_matrices/SSN.csv")
     if antismash_version == 4:  
         training_pfam_features = readFeatureFiles.readFeatureMatrix(data_path+"feature_matrices/PFAM.csv")
         training_smCOG_features = readFeatureFiles.readFeatureMatrix(data_path+"feature_matrices/SMCOG.csv")
-        training_SSN_features = readFeatureFiles.readFeatureMatrix(data_path+"feature_matrices/SSN.csv")
         #SSN_calc_features = readFeatureFiles.readFeatureMatrixFloat("gene_feature_matrices/test_compounds_SSN.csv")
         training_CDS_features = readFeatureFiles.readFeatureMatrix(data_path+"feature_matrices/CDS_motifs.csv")
         
@@ -128,10 +128,10 @@ try:
         training_nrp_predicat_features = readFeatureFiles.readFeatureMatrix(data_path+"feature_matrices/nrp_predicat.csv")
         training_nrp_sandpuma_features = readFeatureFiles.readFeatureMatrix(data_path+"feature_matrices/nrp_sandpuma.csv")
     elif antismash_version == 5:
-        pfam_features = readFeatureFiles.readFeatureMatrix(data_path+"gene_feature_matrices/PFAM5.csv")
-        smCOG_features = readFeatureFiles.readFeatureMatrix(data_path+"gene_feature_matrices/SMCOG5.csv")
-        CDS_features = readFeatureFiles.readFeatureMatrix(data_path+"gene_feature_matrices/CDS_motifs5.csv")        
-        pk_consensus_features = readFeatureFiles.readFeatureMatrix(data_path+"gene_feature_matrices/pk_nrp_consensus5.csv")
+        training_pfam_features = readFeatureFiles.readFeatureMatrix(data_path+"feature_matrices/PFAM5.csv")
+        training_smCOG_features = readFeatureFiles.readFeatureMatrix(data_path+"feature_matrices/SMCOG5.csv")
+        training_CDS_features = readFeatureFiles.readFeatureMatrix(data_path+"feature_matrices/CDS_motifs5.csv")        
+        training_pk_consensus_features = readFeatureFiles.readFeatureMatrix(data_path+"feature_matrices/pk_nrp_consensus5.csv")
 
         
     if rgi_version == 3:
@@ -159,6 +159,11 @@ except:
     print("error reading antismash output file")
     exit()
 as_features = record.features
+try:
+    rgi_infile = open(rgi_infilename, 'r')
+except:
+   print("error reading rgi output file")
+   exit() 
 
 #make the feature matrices for the cluster
 training_features = np.concatenate((training_pfam_features, training_card_features), axis=1)
@@ -177,7 +182,7 @@ if antismash_version == 4:
     training_features = np.concatenate((training_features,  training_nrp_predicat_features), axis=1)
     training_features = np.concatenate((training_features,  training_nrp_sandpuma_features), axis=1)
 else:
-    training_features = np.concatenate((training_features,  pk_consensus_features), axis=1)
+    training_features = np.concatenate((training_features,  training_pk_consensus_features), axis=1)
 
 original_training_features = training_features
 
@@ -205,10 +210,9 @@ if "/" in cluster_name:
 cluster_name = cluster_name[0:cluster_name.find(".gbk")] 
 if not no_SSN:   
     test_SSN_feature_matrix= SSN_tools.generateSSNFeatureMatrix([antismash_infilename], SSN_pfam_names, SSN_list, included_SSN_clusters, blastp_path,cluster_name, data_path) 
-    test_features = readInputFiles.readInputFiles(as_features, antismash_version, rgi_infilename, rgi_version, training_features, data_path, test_SSN_feature_matrix)
+    test_features = readInputFiles.readInputFiles(as_features, antismash_version, rgi_infile, rgi_version, training_features, data_path, test_SSN_feature_matrix)
 else:
-    test_features = readInputFiles.readInputFiles(as_features, antismash_version, rgi_infilename, rgi_version, training_features, data_path, [])
-
+    test_features = readInputFiles.readInputFiles(as_features, antismash_version, rgi_infile, rgi_version, training_features, data_path, [])
 
 
 if write_features:

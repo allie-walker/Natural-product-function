@@ -142,18 +142,28 @@ def readAntismash4(as_features):
 
 def readAntismash5(as_features):
     score_cutoff = 20
-    CDS_motif_list = []
-    smCOG_list = []
     CDS_motifs = {}
     smCOGs = {}
     pfam_counts = {}
+    pk_monomers_consensus = {}
     for feature in as_features:
+        consensus = ""
+        if feature.type == "aSDomain":
+            if "specificity" not in feature.qualifiers:
+                continue
+            for f in feature.qualifiers["specificity"]:
+                if "consensus" in f:
+                    consensus = f.split(":")[1].replace('"','')
+        if consensus != "" and "no_call" not in consensus and "N/A" not in consensus and "n/a" not in consensus:
+            if consensus not in pk_monomers_consensus:
+                pk_monomers_consensus[consensus] = 0
+            pk_monomers_consensus[consensus] += 1
+            
         if feature.type == "CDS_motif":
             if 'label' not in feature.qualifiers: #this happens for ripp sequences
                 continue
             motif_name = feature.qualifiers['label'][0]
-            if motif_name not in CDS_motif_list:
-                CDS_motif_list.append(motif_name)
+            if motif_name not in CDS_motifs:
                 CDS_motifs[motif_name] =0
             CDS_motifs[motif_name] += 1
         elif feature.type == "CDS":
@@ -163,25 +173,29 @@ def readAntismash5(as_features):
                         if ":" not in note or "(" not in note:
                             continue
                         smCOG_type = note[note.index(":")+2:note.rfind("(")-1]
-                        if smCOG_type not in smCOG_list:
-                            smCOG_list.append(smCOG_type)
+                        if smCOG_type not in smCOGs:
                             smCOGs[smCOG_type] = 0
                         smCOGs[smCOG_type] += 1
         elif feature.type == "PFAM_domain":
             score = float(feature.qualifiers["score"][0])
             if score <score_cutoff:
                 continue
+            domain_description = feature.qualifiers["description"][0]
+            pfam_id = feature.qualifiers["db_xref"][0]
+            pfam_id = pfam_id[pfam_id.find(" ")+1:len(pfam_id)]
+            if domain_description not in pfam_counts:
+                pfam_counts[domain_description] = 0
+            pfam_counts[domain_description] += 1                
             
-    return
+    return (pfam_counts, CDS_motifs, smCOGs, pk_monomers_consensus)
 
 
 
 def readRGIFile3(rgi_infile):
-    in_file = open(rgi_infile, 'r')
     e_value_threshold = 0.1
     resistance_genes = {}
     resistance_genes_list = []
-    for line in in_file:
+    for line in rgi_infile:
         if "ORF_ID" in line:
             continue
         entries = line.split("\t")
@@ -195,11 +209,25 @@ def readRGIFile3(rgi_infile):
         if best_hit not in resistance_genes:
             resistance_genes[best_hit] = 0
         resistance_genes[best_hit] += 1
-    in_file.close()        
+    rgi_infile.close()        
     return resistance_genes
 
 def readRGIFile5(rgi_infile):
-    return
+    bit_score_threshold = 40
+    resistance_genes = {}
+    for line in rgi_infile:
+        if "ORF_ID" in line:
+            continue
+        entries = line.split("\t")
+        bit_score = float(entries[7])
+        if bit_score > bit_score_threshold:
+            continue
+        best_hit = entries[8]
+        if best_hit not in resistance_genes:
+            resistance_genes[best_hit] = 0
+        resistance_genes[best_hit] += 1
+    rgi_infile.close()
+    return resistance_genes
 
 def readInputFiles(as_features, as_version, rgi_infile, rgi_version, training_features, data_path, test_SSN_matrix):
     CDS_motifs = {}
@@ -231,23 +259,23 @@ def readInputFiles(as_features, as_version, rgi_infile, rgi_version, training_fe
             used_CDS_list = readFeatureFiles.readFeatureList(data_path+"feature_matrices/CDS_motifs_list.txt")
             used_smCOG_list = readFeatureFiles.readFeatureList(data_path+"feature_matrices/SMCOG_list.txt")
         if as_version == 5:
-            used_pfam_list = readFeatureFiles.readFeatureList("gene_feature_matrices/pfam_list5.txt")
-            used_smCOG_list = readFeatureFiles.readFeatureList("gene_feature_matrices/smCOG_list5.txt")
-            used_CDS_list = readFeatureFiles.readFeatureList("gene_feature_matrices/CDS_motifs_list5.txt")    
-            used_pk_consensus_list = readFeatureFiles.readFeatureList("gene_feature_matrices/pk_nrp_consensus_list5.txt")
+            used_pfam_list = readFeatureFiles.readFeatureList(data_path+"feature_matrices/pfam_list5.txt")
+            used_smCOG_list = readFeatureFiles.readFeatureList(data_path+"feature_matrices/smCOG_list5.txt")
+            used_CDS_list = readFeatureFiles.readFeatureList(data_path+"feature_matrices/CDS_motifs_list5.txt")    
+            used_pk_consensus_list = readFeatureFiles.readFeatureList(data_path+"feature_matrices/pk_nrp_consensus_list5.txt")
         if rgi_version == 3:
             used_resistance_genes_list = readFeatureFiles.readFeatureList(data_path+"feature_matrices/CARD_gene_list.txt")
         else:
-            used_resistance_genes_list = readFeatureFiles.readFeatureList("gene_feature_matrices/CARD5_gene_list.txt")
+            used_resistance_genes_list = readFeatureFiles.readFeatureList(data_path+"feature_matrices/CARD5_gene_list.txt")
     except:
         print("did not find file containing training data, please keep script located in directory downloaded from github")
         exit()
+
     if as_version == 4:
         (pfam_counts, smCOGs, CDS_motifs, pks_nrp_subtypes, pk_monomers_signature, pk_monomers_minowa, \
             pk_monomers_consensus, nrp_monomers_stachelhaus, nrp_monomers_nrps_predictor, nrp_monomers_pHMM, nrp_monomers_predicat, nrp_monomers_sandpuma) = readAntismash4(as_features)
     else:
-        readAntismash5(as_features)
-        
+        (pfam_counts, CDS_motifs, smCOGs, pk_monomers_consensus) = readAntismash5(as_features)
     if rgi_version == 3:
         resistance_genes = readRGIFile3(rgi_infile)
     else:
@@ -273,6 +301,6 @@ def readInputFiles(as_features, as_version, rgi_infile, rgi_version, training_fe
         (test_features, i) = tools.addToFeatureMatrix(test_features, i, nrp_monomers_predicat, used_nrp_predicat_list)
         (test_features, i) = tools.addToFeatureMatrix(test_features, i, nrp_monomers_sandpuma, used_nrp_sandpuma_list)
     else:
-        (test_features, i) = tools.addToFeatureMatrix(test_features, i, pk_monomers_signature, used_pk_signature_list)
+        (test_features, i) = tools.addToFeatureMatrix(test_features, i, pk_monomers_consensus, used_pk_consensus_list)
         
     return test_features
