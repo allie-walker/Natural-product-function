@@ -153,6 +153,7 @@ except:
     exit()
 
 #read the antismash input file
+
 try:
     record = SeqIO.read(open(antismash_infilename, 'rU'),"genbank")
 except:
