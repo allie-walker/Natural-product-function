@@ -1,7 +1,7 @@
 # Natural-product-function
 
 Natural_product_BGC_activity_prediction.ipnyb is an python notebook containing code to optimize, train, and use machine learning models to predict natural product
-activity from biosynthetic gene clusters. We have also provided a command line version of the script in the cluster_function_prediction.py. The activity prediction program requires ouptut files from antiSMASH and Resistance Gene Identifier (RGI) (the txt file not the JSON). We used antiSMASH version 4.0 but the code should also work with output files for newer versions of antiSMASH. We used RGI version 3.2.1 with database version 1.1.9, some annotations have been changed in newer versions so our predictions may not work as well on files made with new versions of RGI. Both the command line tool and the python notebook require other files in the repository directory.
+activity from biosynthetic gene clusters. We have also provided a command line version of the script in the cluster_function_prediction.py. The activity prediction program requires ouptut files from antiSMASH and Resistance Gene Identifier (RGI) (the txt file not the JSON). We used antiSMASH version 4.0 and RGI version 3.2.1 with database version 1.1.9, to produce the results described in our manuscript. Since our initial development of the tool newer versions of antiSMASH and RGI were released, we have added support for antiSMASH 5 and RGI 5 to the command line version of our tool and are planning to add support to the python notebook version. Initial analysis showed no significant change in classifier accuracy when updating to the newer versions of antiSMASH and RGI. 
 
 Code is developed to run in python 3 (3.8.3). Packages required, version used for publication in parentheses:<br/>
 Biopython (1.77)<br/>
@@ -9,15 +9,14 @@ Numpy (1.18.5)<br/>
 Scikit learn (0.23.1)<br/>
 Matplotlib (3.2.2)<br/>
 
-To generate the proper files, antiSMASH should be run with the command:
+To generate the proper files, antiSMASH 4 should be run with the command:
 
 antismash --verbose --outputfolder OUTPUT_FOLDER --statusfile status.txt --full-hmmer --borderpredict INPUT_FILE
 
-and RGI shoud be run with the command:
+and RGI 3 shoud be run with the command:
 
 rgi -i INPUT_FASTA_FILE -o OUTPUT_FILE --loose_criteria YES --verbose ON
 
-antiSMASh and RGI can also be run on their respective webservers with the proper arguments turned on.
 
 Instructions for python notebook:
 Throughout the cells the classification variable determines which binary classification problem predictions are made for. Options are "antibacterial", "antieuk" (which predicts antifungal, antitumor, or cytotoxic activity), "antifungal", "cytotoxic_antitumor", "antigramneg", or "antigrampos.
@@ -43,6 +42,7 @@ Cell 10 runs the predictions on the features extracted by cell 9. The classifica
 
 
 Instructions for command line tool:
+requirements.txt contains all required packages for the command line tool.
 
 To run the command line tool enter:
 
@@ -59,3 +59,7 @@ optional arguments include:
 --blastp_path - path to blastp executable, by default assumes blastp is already in PATH variable
 
 --write_features - directory to write features to, if not defined features will not be saved
+
+--antismash_version antiSMASH version used to generate antiSMASH input file, support for 4 or 5, default 5
+
+--rgi_version RGI version to generate RGI input file, support for 3 or 5, default 5
