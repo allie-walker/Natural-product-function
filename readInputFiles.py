@@ -4,6 +4,7 @@ Created on Fri Jan  8 10:45:34 2021
 
 @author: allis
 """
+#TODO: add handling of RGI files to check for bit score vs e-value scoring
 import cluster_function_prediction_tools as tools
 import numpy as np
 import readFeatureFiles
