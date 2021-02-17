@@ -4,10 +4,10 @@ Created on Fri Jan  8 10:45:34 2021
 
 @author: allis
 """
-#TODO: add handling of RGI files to check for bit score vs e-value scoring
 import cluster_function_prediction_tools as tools
 import numpy as np
 import readFeatureFiles
+import warnings
 
 def processSecMetFeature(feature):
     subtype = ""
@@ -215,13 +215,21 @@ def readRGIFile3(rgi_infile):
 
 def readRGIFile5(rgi_infile):
     bit_score_threshold = 40
+    e_value_threshold = 0.1
     resistance_genes = {}
+    use_bit_score = True
     for line in rgi_infile:
         if "ORF_ID" in line:
+            if line.split("\t")[7] == "Best_Hit_evalue":
+                warnings.warn('training set was generated using bit scores but RGI output has e-values, will use e-value threshold but this could increase error in predictions')
+                use_bit_score = False
             continue
         entries = line.split("\t")
         bit_score = float(entries[7])
-        if bit_score > bit_score_threshold:
+        if use_bit_score:
+            if bit_score > bit_score_threshold:
+                continue
+        elif bit_score < e_value_threshold:
             continue
         best_hit = entries[8]
         if best_hit not in resistance_genes:
