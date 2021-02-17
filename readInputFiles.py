@@ -9,6 +9,20 @@ import numpy as np
 import readFeatureFiles
 import warnings
 
+def checkForHits(feature_vector, pfam_list, resistance_list):
+    pfam_vector = feature_vector[0,0:len(pfam_list)]
+    resistance_vector = feature_vector[0,len(pfam_list):len(pfam_list)+len(resistance_list)]
+    remaining_vector = feature_vector[0,len(pfam_list)+len(resistance_list):feature_vector.shape[1]]
+    for f in remaining_vector:
+        print(f)
+    if np.sum(pfam_vector) == 0:
+        warnings.warn("no pfam features found, make sure to run antiSMASH with --fullhmmer option")
+        warnings.warn("if antiSMASH was run with fullhmmer then this BGC does not have enough similarity to the training set for useful predictions")
+    if np.sum(resistance_vector) == 0:
+        warnings.warn("no resistance features found, double check RGI input file")
+    if np.sum(remaining_vector) == 0:
+        warnings.warn("no CDS or smCOG features found, double check antiSMASH input file")
+
 def processSecMetFeature(feature):
     subtype = ""
     pks_signature = ""
@@ -290,6 +304,8 @@ def readInputFiles(as_features, as_version, rgi_infile, rgi_version, training_fe
     else:
          resistance_genes = readRGIFile5(rgi_infile)
     
+    
+    
     test_features = np.zeros((1, training_features.shape[1]))
     i = 0
     (test_features, i) = tools.addToFeatureMatrix(test_features, i, pfam_counts, used_pfam_list)
@@ -311,5 +327,5 @@ def readInputFiles(as_features, as_version, rgi_infile, rgi_version, training_fe
         (test_features, i) = tools.addToFeatureMatrix(test_features, i, nrp_monomers_sandpuma, used_nrp_sandpuma_list)
     else:
         (test_features, i) = tools.addToFeatureMatrix(test_features, i, pk_monomers_consensus, used_pk_consensus_list)
-        
+    checkForHits(test_features, used_pfam_list, used_resistance_genes_list)    
     return test_features
