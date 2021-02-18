@@ -13,8 +13,6 @@ def checkForHits(feature_vector, pfam_list, resistance_list):
     pfam_vector = feature_vector[0,0:len(pfam_list)]
     resistance_vector = feature_vector[0,len(pfam_list):len(pfam_list)+len(resistance_list)]
     remaining_vector = feature_vector[0,len(pfam_list)+len(resistance_list):feature_vector.shape[1]]
-    for f in remaining_vector:
-        print(f)
     if np.sum(pfam_vector) == 0:
         warnings.warn("no pfam features found, make sure to run antiSMASH with --fullhmmer option")
         warnings.warn("if antiSMASH was run with fullhmmer then this BGC does not have enough similarity to the training set for useful predictions")
