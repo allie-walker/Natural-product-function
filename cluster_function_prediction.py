@@ -72,7 +72,7 @@ rgi_infilename = args.rgi_results
 no_SSN = args.no_SSN
 
 if args.output == None:
-    out_directory = ""
+    out_directory = "./"
 else:
     out_directory = args.output
     
@@ -151,6 +151,7 @@ try:
 except:
     print("did not find file containing training data, please keep script located in directory downloaded from github")
     exit()
+
 
 #read the antismash input file
 
@@ -238,6 +239,8 @@ y_vars = []
 y_vars = is_antibacterial
 y_vars = y_vars[is_not_unknown_indices]
 
+
+
 #antibacterial predictions
 svm_params = {"kernel":'rbf',"C":10,"gamma":0.1}
 tree_params = {"depth":100,"n":50}
@@ -317,8 +320,7 @@ print("probabilities of antifungal activity:")
 print("tree classifier: " + str(tree_antifungal_prob[0,1])  + " logistic regression classifier: " + str(log_antifungal_prob[0,1]) + " svm classifier: " + str(svm_antifungal_prob[0,1]))
 print("probabilities of antitumor or cytotoxic activity:")
 print("tree classifier: " + str(tree_antitumor_prob[0,1])  + " logistic regression classifier: " + str(log_antitumor_prob[0,1]) + " svm classifier: " + str(svm_antitumor_prob[0,1]))
-
-                        
+                      
 #write output
 
 
