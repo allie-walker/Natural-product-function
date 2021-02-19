@@ -240,7 +240,8 @@ def findSSNMembership(cluster_name, sequence, ssn_seq_filename, ssn_index, inclu
         try:
             temp_fasta = open(data_path+"temp_file/"+genome_name+"seq1.fasta", 'w')
             waiting = False
-        except:
+        except Exception as e:
+            print(e)
             print("file error!!")
             
             
