@@ -63,3 +63,10 @@ optional arguments include:
 --antismash_version antiSMASH version used to generate antiSMASH input file, support for 4 or 5, default 5
 
 --rgi_version RGI version to generate RGI input file, support for 3 or 5, default 5
+
+We have also supplied a Dockerfile that can be used to create a Docker image to run the command line tool. To create the docker image use the command:
+docker build -t function_prediction_docker_img .
+
+To run the docker use the command:
+docker run --volume EXACT_PATH_TO_DIRECTORY_WITH_INPUTS_AND_OUTPUTS:/src/input function_prediction_docker_image ./input/ANTISMASH_FILENAME ./input/RGI_FILENAME --output ./input/OUTPUT_FOLDERNAME
+additional arguments from the command line tool can also be added to this command
