@@ -239,9 +239,9 @@ def readRGIFile5(rgi_infile):
         entries = line.split("\t")
         bit_score = float(entries[7])
         if use_bit_score:
-            if bit_score > bit_score_threshold:
+            if bit_score < bit_score_threshold:
                 continue
-        elif bit_score < e_value_threshold:
+        elif bit_score > e_value_threshold:
             continue
         best_hit = entries[8]
         if best_hit not in resistance_genes:
