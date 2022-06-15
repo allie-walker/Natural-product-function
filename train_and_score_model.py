@@ -116,6 +116,7 @@ def writeCurve(outfile, x_axis, y_axis):
 #parameters
 #classification to train classifiers on 
 #options: antibacterial, antieuk (defined as antifungal, antitumor, or cytotoxic), antifungal, cytotoxic_antitumor, antigramneg, antigrampos
+#TODO: change to iterate through all classifications
 classification = "antibacterial" 
 #set random seed so results are consistent
 random.seed(1)
@@ -197,28 +198,22 @@ features = np.concatenate((features,  nrp_sandpuma_features), axis=1)
 y_vars = []
 if classification == "antibacterial":
     y_vars = is_antibacterial
-    y_vars = y_vars[is_not_unknown_indices]
-    features = features[is_not_unknown_indices,:]
+    y_vars = y_vars[is_not_unknown_indices]   
 if classification == "antieuk":
     y_vars = is_antieuk
     y_vars = y_vars[is_not_unknown_indices]
-    features = features[is_not_unknown_indices,:]
 if classification == "antifungal":
     y_vars = (is_antifungal >= 1).astype(int)
     y_vars = y_vars[is_not_unknown_indices]
-    features = features[is_not_unknown_indices,:]
 if classification == "cytotoxic_antitumor":
     y_vars = (is_cytotoxic >= 1).astype(int)
     y_vars = y_vars[is_not_unknown_indices]
-    features = features[is_not_unknown_indices,:]
 if classification == "antigramneg":
     y_vars = is_gram_neg
     y_vars = y_vars[is_not_unknown_indices_gram]
-    features = features[is_not_unknown_indices_gram,:]
 if classification == "antigrampos":
     y_vars = is_gram_pos
     y_vars = y_vars[is_not_unknown_indices_gram]
-    features = features[is_not_unknown_indices_gram,:]
     
 #randomize order of features
 new_order = makeRandomOrder(0, y_vars)
