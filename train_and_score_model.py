@@ -16,6 +16,9 @@ from sklearn.svm import SVC
 from sklearn import preprocessing
 import matplotlib.pyplot as plt
 from matplotlib import cm
+from sklearn.metrics import balanced_accuracy_score
+from sklearn.metrics import roc_curve
+from sklearn.metrics import precision_recall_curve
 
 def readFeatureMatrix(filename):
     in_file = open(filename,'r')
@@ -97,6 +100,19 @@ def validateClassifier(outfile, classifier, features, y_vars, regression):
     avg_accuracy /= 10.0
     return avg_accuracy
 
+def randomizeFeatures(seed, features):
+    np.random.seed(seed)
+    random_features = features
+    for i in range(0, features.shape[1]):
+        y_vars_range = np.arange(features.shape[0])
+        np.random.shuffle(y_vars_range)
+        random_features[y_vars_range,:]
+    return random_features
+
+def writeCurve(outfile, x_axis, y_axis):
+    for i in range(0, min(x_axis.shape[0], y_axis.shape[0])):
+        outfile.write(str(x_axis[i]) + "," + str(y_axis[i]) + "\n")
+        
 #parameters
 #classification to train classifiers on 
 #options: antibacterial, antieuk (defined as antifungal, antitumor, or cytotoxic), antifungal, cytotoxic_antitumor, antigramneg, antigrampos
@@ -106,6 +122,8 @@ random.seed(1)
 #include features from SSN 
 include_SSN = True
 
+#TODO: add csv file list and label list as argument inputs, should be read from directory
+#TODO: test antiSMASH6
 pfam_features = readFeatureMatrix("feature_matrices/PFAM.csv")
 card_features = readFeatureMatrix("feature_matrices/CARD_gene.csv")
 smCOG_features = readFeatureMatrix("feature_matrices/SMCOG.csv")
@@ -141,6 +159,8 @@ nrp_predicat_list = readFeatureFiles.readFeatureList("feature_matrices/nrp_predi
 nrp_sandpuma_list = readFeatureFiles.readFeatureList("feature_matrices/nrp_sandpuma_list.txt")
 
 #read classes
+#TODO: add argument with directory with class labels
+#TODO: change is_unknown to give information about specific labels that migth be unknown
 is_antibacterial = readFeatureFiles.readClassesMatrix("feature_matrices/is_antibacterial.csv")
 is_antifungal = readFeatureFiles.readClassesMatrix("feature_matrices/is_antifungal.csv")
 is_cytotoxic = readFeatureFiles.readClassesMatrix("feature_matrices/is_cytotoxic.csv")
@@ -206,6 +226,7 @@ y_vars = y_vars[new_order]
 features = features[new_order,:]
 
 #parameter values to test for logistic regression
+#TODO: change variable search to a grid search
 l1_ratios = [.5, .2, .05, .1, .01, .001, .0001]
 alphas = [.5, .3, .2, .1, .01,  .001,  .0001,.00001,.000001]
 log_accuracies = {}
@@ -380,3 +401,302 @@ for d in max_depths:
             optimal_n = n
 print("Extra random trees maximum accuracy: " + str(max_accuracy_forest))
 print("Optimal depth: " + str(d) + " optimal n estimators: " + str(optimal_n))
+
+
+#scoring model starts here
+#parameters
+#TODO: iterate through all classifications
+classification = "antibacterial" 
+#set random seed so results are consistent
+random.seed(1)
+#include features from SSN 
+include_SSN = True 
+#parameters for classifiers
+#TODO: get optimal parameters from search above
+log_params = {}
+log_params["antibacterial"] = {"l1_ratio":.05,"alpha":.01}
+log_params["antigrampos"] = {"l1_ratio":.001,"alpha":.001}
+log_params["antigramneg"] = {"l1_ratio":.05,"alpha":.001}
+log_params["antieuk"] = {"l1_ratio":.001,"alpha":.001}
+log_params["antifungal"] = {"l1_ratio":.0001,"alpha":.01}
+log_params["cytotoxic_antitumor"] = {"l1_ratio":.001,"alpha":.001}
+
+svm_params = {}
+svm_params["antibacterial"] = {"kernel":'rbf',"C":10,"gamma":0.1}
+svm_params["antigrampos"] = {"kernel":'rbf',"C":10,"gamma":.01}
+svm_params["antigramneg"] = {"kernel":'rbf',"C":10,"gamma":0.01}
+svm_params["antieuk"] = {"kernel":'linear',"C":.1}
+svm_params["antifungal"] = {"kernel":'rbf',"C":10,"gamma":0.1}
+svm_params["cytotoxic_antitumor"] = {"kernel":'rbf',"C":100,"gamma":0.1}
+
+forest_params = {}
+forest_params["antibacterial"] = {"depth":100,"n":50}
+forest_params["antigrampos"] = {"depth":100,"n":50}
+forest_params["antigramneg"] = {"depth":100,"n":25}
+forest_params["antieuk"] = {"depth":None,"n":25}
+forest_params["antifungal"] = {"depth":50,"n":50}
+forest_params["cytotoxic_antitumor"] = {"depth":50,"n":100}
+
+
+#make randomly shuffled version of features
+features_rand = randomizeFeatures(0, features)
+
+y_vars = []
+if classification == "antibacterial":
+    y_vars = is_antibacterial
+    y_vars = y_vars[is_not_unknown_indices]
+    features = features[is_not_unknown_indices,:]
+    
+if classification == "antieuk":
+    y_vars = is_antieuk
+    y_vars = y_vars[is_not_unknown_indices]
+    features = features[is_not_unknown_indices,:]
+
+    
+if classification == "antifungal":
+    y_vars = (is_antifungal >= 1).astype(int)
+    y_vars = y_vars[is_not_unknown_indices]
+    features = features[is_not_unknown_indices,:]
+    
+if classification == "cytotoxic_antitumor":
+    y_vars = (is_cytotoxic >= 1).astype(int)
+    y_vars = y_vars[is_not_unknown_indices]
+    features = features[is_not_unknown_indices,:]
+    
+if classification == "antigramneg":
+    y_vars = is_gram_neg
+    y_vars = y_vars[is_not_unknown_indices_gram]
+    features = features[is_not_unknown_indices_gram,:]
+    
+if classification == "antigrampos":
+    y_vars = is_gram_pos
+    y_vars = y_vars[is_not_unknown_indices_gram]
+    features = features[is_not_unknown_indices_gram,:]
+    
+#reorder features
+new_order = makeRandomOrder(0, y_vars)
+y_vars = y_vars[new_order]
+features = features[new_order,:]
+features_rand = features_rand[new_order, :]
+
+#initialize classifiers
+opt_log_params = log_params[classification]
+log_classifier = SGDClassifier(loss='log',penalty='elasticnet',max_iter=100,alpha=opt_log_params["alpha"],l1_ratio=opt_log_params["l1_ratio"],tol=None)
+
+opt_svm_params = svm_params[classification]
+if opt_svm_params['kernel'] == "linear":
+    svm_classifier = SVC(kernel="linear",C=opt_svm_params["C"], probability=True)
+else:
+    svm_classifier = SVC(kernel="rbf",C=opt_svm_params["C"], gamma=opt_svm_params["gamma"], probability=True)
+    
+opt_forest_params = forest_params[classification]
+tree_classifier = ExtraTreesClassifier(bootstrap=True,max_features="auto",n_estimators=opt_forest_params["n"], max_depth=opt_forest_params["depth"], random_state=0)
+
+#do analysis, write to file, and visualize
+output_fname_base = "classifier_metrics/" + classification + "_"
+
+#output files
+roc_out = open(output_fname_base + "roc.txt", 'w')
+pr_out = open(output_fname_base + "precision_recall.txt", 'w')
+accuracy_out = open(output_fname_base + "accuracy.txt", "w")
+balanced_accuracy_out = open(output_fname_base + "balanced_accuracy.txt", "w")
+#TODO: also output precision, recall, and aroc
+#TODO: make separate output file for each classification type
+
+#cross validation
+#store results in dictionary for visualization
+roc_curves = {}
+roc_curves["log"] = {}
+roc_curves["svm"] = {}
+roc_curves["tree"] = {}
+roc_curves["rnd_log"] = {}
+roc_curves["rnd_svm"] = {}
+roc_curves["rnd_tree"] = {}
+
+pr_curves = {}
+pr_curves["log"] = {}
+pr_curves["svm"] = {}
+pr_curves["tree"] = {}
+pr_curves["rnd_log"] = {}
+pr_curves["rnd_svm"] = {}
+pr_curves["rnd_tree"] = {}
+
+accuracies = {}
+accuracies["log"] = []
+accuracies["svm"] = []
+accuracies["tree"] = []
+accuracies["rnd_log"] = []
+accuracies["rnd_svm"] = []
+accuracies["rnd_tree"] = []
+
+b_accuracies = {}
+b_accuracies["log"] = []
+b_accuracies["svm"] = []
+b_accuracies["tree"] = []
+b_accuracies["rnd_log"] = []
+b_accuracies["rnd_svm"] = []
+b_accuracies["rnd_tree"] = []
+
+for i in range(0, 10):
+    (training_x, training_y, val_x, val_y) = splitData(features, y_vars, i, 10)
+    (rnd_training_x, rnd_training_y, rnd_val_x, rnd_val_y) = splitData(features_rand, y_vars, i, 10)
+    min_max_scaler = preprocessing.MinMaxScaler()
+    scaled_training_x = min_max_scaler.fit_transform(training_x)
+    scaled_val_x = min_max_scaler.transform(val_x)
+    scaled_rnd_training_x = min_max_scaler.fit_transform(rnd_training_x)
+    scaled_rnd_val_x = min_max_scaler.transform(rnd_val_x)
+    
+    #metrics for classifiers fit to real data
+    svm_classifier.fit(scaled_training_x, training_y)
+    tree_classifier.fit(training_x, training_y)
+    log_classifier.fit(scaled_training_x, training_y)
+    
+    accuracy_out.write(str(svm_classifier.score(scaled_val_x, val_y))+",")
+    accuracy_out.write(str(log_classifier.score(scaled_val_x, val_y))+",")
+    accuracy_out.write(str(tree_classifier.score(val_x, val_y))+",")
+    accuracies["log"].append(log_classifier.score(scaled_val_x, val_y))
+    accuracies["svm"].append(svm_classifier.score(scaled_val_x, val_y))
+    accuracies["tree"].append(tree_classifier.score(val_x, val_y))
+    
+    balanced_accuracy_out.write(str(balanced_accuracy_score(val_y,svm_classifier.predict(scaled_val_x))) + ",")
+    balanced_accuracy_out.write(str(balanced_accuracy_score(val_y,log_classifier.predict(scaled_val_x))) + ",")
+    balanced_accuracy_out.write(str(balanced_accuracy_score(val_y,tree_classifier.predict(val_x))) + ",")
+    b_accuracies["log"].append(balanced_accuracy_score(val_y,log_classifier.predict(scaled_val_x)))
+    b_accuracies["svm"].append(balanced_accuracy_score(val_y,svm_classifier.predict(scaled_val_x)))
+    b_accuracies["tree"].append(balanced_accuracy_score(val_y,tree_classifier.predict(val_x)))
+    
+    tree_probabilities = tree_classifier.predict_proba(val_x)
+    log_probabilities = log_classifier.predict_proba(scaled_val_x)
+    svm_probabilities = svm_classifier.predict_proba(scaled_val_x)
+    
+    fpr, tpr, thresholds = roc_curve(val_y, tree_probabilities[:,1])
+    roc_curves["tree"][i] = (fpr, tpr)
+    fpr, tpr, thresholds = roc_curve(val_y, svm_probabilities[:,1])
+    roc_curves["svm"][i] = (fpr, tpr)
+    fpr, tpr, thresholds = roc_curve(val_y, log_probabilities[:,1])
+    roc_curves["log"][i] = (fpr, tpr)
+    
+    precision, recall, thresholds = precision_recall_curve(val_y, tree_probabilities[:,1])
+    pr_curves["tree"][i] = (recall, precision)
+    precision, recall, thresholds = precision_recall_curve(val_y, svm_probabilities[:,1])
+    pr_curves["svm"][i] = (recall, precision)
+    precision, recall, thresholds = precision_recall_curve(val_y, log_probabilities[:,1])
+    pr_curves["log"][i] = (recall, precision)
+    
+    
+    #metrics for classifiers fit to randomly scrambled data
+    svm_classifier.fit(scaled_rnd_training_x, rnd_training_y)
+    tree_classifier.fit(rnd_training_x, rnd_training_y)
+    log_classifier.fit(scaled_rnd_training_x, rnd_training_y)
+    
+    accuracy_out.write(str(svm_classifier.score(scaled_rnd_val_x, rnd_val_y))+",")
+    accuracy_out.write(str(log_classifier.score(scaled_rnd_val_x, rnd_val_y))+",")
+    accuracy_out.write(str(tree_classifier.score(rnd_val_x, rnd_val_y))+",")
+    accuracies["rnd_log"].append(log_classifier.score(scaled_rnd_val_x, rnd_val_y))
+    accuracies["rnd_svm"].append(svm_classifier.score(scaled_rnd_val_x, rnd_val_y))
+    accuracies["rnd_tree"].append(tree_classifier.score(rnd_val_x, rnd_val_y))
+    
+    balanced_accuracy_out.write(str(balanced_accuracy_score(rnd_val_y,svm_classifier.predict(scaled_rnd_val_x))) + ",")
+    balanced_accuracy_out.write(str(balanced_accuracy_score(rnd_val_y,log_classifier.predict(scaled_rnd_val_x))) + ",")
+    balanced_accuracy_out.write(str(balanced_accuracy_score(rnd_val_y,tree_classifier.predict(rnd_val_x))) + ",")
+    b_accuracies["rnd_log"].append(balanced_accuracy_score(rnd_val_y,log_classifier.predict(scaled_rnd_val_x)))
+    b_accuracies["rnd_svm"].append(balanced_accuracy_score(rnd_val_y,svm_classifier.predict(scaled_rnd_val_x)))
+    b_accuracies["rnd_tree"].append(balanced_accuracy_score(rnd_val_y,tree_classifier.predict(rnd_val_x)))
+    
+    tree_probabilities = tree_classifier.predict_proba(rnd_val_x)
+    log_probabilities = log_classifier.predict_proba(scaled_rnd_val_x)
+    svm_probabilities = svm_classifier.predict_proba(scaled_rnd_val_x)
+    
+    fpr, tpr, thresholds = roc_curve(rnd_val_y, tree_probabilities[:,1])
+    roc_curves["rnd_tree"][i] = (fpr, tpr)
+    fpr, tpr, thresholds = roc_curve(rnd_val_y, svm_probabilities[:,1])
+    roc_curves["rnd_svm"][i] = (fpr, tpr)
+    fpr, tpr, thresholds = roc_curve(rnd_val_y, log_probabilities[:,1])
+    roc_curves["rnd_log"][i] = (fpr, tpr)
+    
+    precision, recall, thresholds = precision_recall_curve(rnd_val_y, tree_probabilities[:,1])
+    pr_curves["rnd_tree"][i] = (recall, precision)
+    recision, recall, thresholds = precision_recall_curve(rnd_val_y, svm_probabilities[:,1])
+    pr_curves["rnd_svm"][i] = (recall, precision)
+    precision, recall, thresholds = precision_recall_curve(rnd_val_y, log_probabilities[:,1])
+    pr_curves["rnd_log"][i] = (recall, precision)
+    
+    balanced_accuracy_out.write("\n")
+    accuracy_out.write("\n")
+    
+accuracy_out.close()
+balanced_accuracy_out.close()
+
+#write ROC and pr curves for one trial
+writeCurve(roc_out, roc_curves["svm"][0][0],roc_curves["svm"][0][1])
+writeCurve(roc_out, roc_curves["log"][0][0],roc_curves["log"][0][1])
+writeCurve(roc_out, roc_curves["tree"][0][0],roc_curves["tree"][0][1])
+writeCurve(roc_out, roc_curves["rnd_svm"][0][0],roc_curves["rnd_svm"][0][1])
+writeCurve(roc_out, roc_curves["rnd_log"][0][0],roc_curves["rnd_log"][0][1])
+writeCurve(roc_out, roc_curves["rnd_tree"][0][0],roc_curves["rnd_tree"][0][1])
+roc_out.close()
+
+writeCurve(pr_out, pr_curves["svm"][0][0],pr_curves["svm"][0][1])
+writeCurve(pr_out, pr_curves["log"][0][0],pr_curves["log"][0][1])
+writeCurve(pr_out, pr_curves["tree"][0][0],pr_curves["tree"][0][1])
+writeCurve(pr_out, pr_curves["rnd_svm"][0][0],pr_curves["rnd_svm"][0][1])
+writeCurve(pr_out, pr_curves["rnd_log"][0][0],pr_curves["rnd_log"][0][1])
+writeCurve(pr_out, pr_curves["rnd_tree"][0][0],pr_curves["rnd_tree"][0][1])
+pr_out.close
+
+#visualize results
+fig, axs = plt.subplots(3, figsize=(15, 12))
+cmap = cm.get_cmap('jet')
+colors = []
+for i in range(0, 6):
+    colors.append(cmap(i*1.0/6.0))
+    
+mean_log_acc = np.mean(b_accuracies["log"])
+mean_svm_acc = np.mean(b_accuracies["svm"])
+mean_tree_acc = np.mean(b_accuracies["tree"])
+mean_rnd_log_acc =np.mean(b_accuracies["rnd_log"])
+mean_rnd_svm_acc = np.mean(b_accuracies["rnd_svm"])
+mean_rnd_tree_acc = np.mean(b_accuracies["rnd_tree"])
+
+mean_log_sd = np.std(b_accuracies["log"])
+mean_svm_sd = np.std(b_accuracies["svm"])
+mean_tree_sd = np.std(b_accuracies["tree"])
+mean_rnd_log_sd =np.std(b_accuracies["rnd_log"])
+mean_rnd_svm_sd = np.std(b_accuracies["rnd_svm"])
+mean_rnd_tree_sd = np.std(b_accuracies["rnd_tree"])
+
+bar_labels = ["log", "svm", "tree", "rnd log", "rnd svm", "rnd tree"]
+x_pos = np.arange(len(bar_labels))
+means = [mean_log_acc, mean_svm_acc, mean_tree_acc, mean_rnd_log_acc, mean_rnd_svm_acc, mean_rnd_tree_acc]
+error = [mean_log_sd, mean_svm_sd, mean_tree_sd, mean_rnd_log_sd, mean_rnd_svm_sd, mean_rnd_tree_sd]
+axs[0].bar(x_pos, means, yerr=error, align='center', capsize=10, color=(colors[0], colors[2], colors[5],colors[0], colors[2], colors[5]))
+axs[0].set_xticks(x_pos)
+axs[0].set_xticklabels(bar_labels)
+axs[0].set_title("Balanced Accuracy of Classifiers")
+axs[0].set_ylabel("Balanced Accuracy")
+
+axs[1].plot(roc_curves["log"][0][0], roc_curves["log"][0][1], color=colors[0], label='log')
+axs[1].plot(roc_curves["svm"][0][0], roc_curves["svm"][0][1], color=colors[2], label='svm')
+axs[1].plot(roc_curves["tree"][0][0], roc_curves["tree"][0][1], color=colors[5], label='tree')
+for i in range(1, 10):
+    axs[1].plot(roc_curves["log"][i][0], roc_curves["log"][i][1], color=colors[0])
+    axs[1].plot(roc_curves["svm"][i][0], roc_curves["svm"][i][1], color=colors[2])
+    axs[1].plot(roc_curves["tree"][i][0], roc_curves["tree"][i][1], color=colors[5])
+axs[1].set_title("ROC")
+axs[1].set_ylabel("TPR")
+axs[1].set_xlabel("FPR")
+axs[1].legend()
+
+
+axs[2].plot(pr_curves["log"][0][0], pr_curves["log"][0][1], color=colors[0], label='log')
+axs[2].plot(pr_curves["svm"][0][0], pr_curves["svm"][0][1], color=colors[2], label='svm')
+axs[2].plot(pr_curves["tree"][0][0], pr_curves["tree"][0][1], color=colors[5], label='tree')
+for i in range(1, 10):
+    axs[2].plot(pr_curves["log"][i][0], pr_curves["log"][i][1], color=colors[0])
+    axs[2].plot(pr_curves["svm"][i][0], pr_curves["svm"][i][1], color=colors[2])
+    axs[2].plot(pr_curves["tree"][i][0], pr_curves["tree"][i][1], color=colors[5])
+axs[2].set_title("precision-recall curve")
+axs[2].set_ylabel("precision")
+axs[2].set_xlabel("recall")
+axs[2].legend()
+fig.tight_layout(pad=2.0)
