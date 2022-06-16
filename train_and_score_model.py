@@ -440,33 +440,27 @@ y_vars = []
 if classification == "antibacterial":
     y_vars = is_antibacterial
     y_vars = y_vars[is_not_unknown_indices]
-    features = features[is_not_unknown_indices,:]
     
 if classification == "antieuk":
     y_vars = is_antieuk
     y_vars = y_vars[is_not_unknown_indices]
-    features = features[is_not_unknown_indices,:]
 
     
 if classification == "antifungal":
     y_vars = (is_antifungal >= 1).astype(int)
     y_vars = y_vars[is_not_unknown_indices]
-    features = features[is_not_unknown_indices,:]
     
 if classification == "cytotoxic_antitumor":
     y_vars = (is_cytotoxic >= 1).astype(int)
     y_vars = y_vars[is_not_unknown_indices]
-    features = features[is_not_unknown_indices,:]
     
 if classification == "antigramneg":
     y_vars = is_gram_neg
     y_vars = y_vars[is_not_unknown_indices_gram]
-    features = features[is_not_unknown_indices_gram,:]
     
 if classification == "antigrampos":
     y_vars = is_gram_pos
     y_vars = y_vars[is_not_unknown_indices_gram]
-    features = features[is_not_unknown_indices_gram,:]
     
 #reorder features
 new_order = makeRandomOrder(0, y_vars)
