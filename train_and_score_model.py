@@ -19,19 +19,8 @@ from matplotlib import cm
 from sklearn.metrics import balanced_accuracy_score
 from sklearn.metrics import roc_curve
 from sklearn.metrics import precision_recall_curve
+import sys
 
-def readFeatureMatrix(filename):
-    in_file = open(filename,'r')
-    feature_matrix = []
-    for line in in_file:
-        if "," not in line:
-            continue
-        entries = line.split(",")
-        feature_matrix.append([])
-        for i in range(0,len(entries)-1):
-            feature_matrix[len(feature_matrix)-1].append(int(entries[i]))
-    in_file.close()
-    return np.array(feature_matrix)
 
 #reads file with a list of feature names
 def readFeatureList(filename):
@@ -103,10 +92,9 @@ def validateClassifier(outfile, classifier, features, y_vars, regression):
 def randomizeFeatures(seed, features):
     np.random.seed(seed)
     random_features = features
-    for i in range(0, features.shape[1]):
-        y_vars_range = np.arange(features.shape[0])
-        np.random.shuffle(y_vars_range)
-        random_features[y_vars_range,:]
+    y_vars_range = np.arange(features.shape[0])
+    np.random.shuffle(y_vars_range)
+    random_features = random_features[y_vars_range,:]        
     return random_features
 
 def writeCurve(outfile, x_axis, y_axis):
@@ -120,55 +108,26 @@ def writeCurve(outfile, x_axis, y_axis):
 classification = "antibacterial" 
 #set random seed so results are consistent
 random.seed(1)
-#include features from SSN 
-include_SSN = True
 
-#TODO: add csv file list and label list as argument inputs, should be read from directory
+
+training_set_dir = "feature_matrices/antismash4rgi3"
+#TODO: add feature directory as an argument
 #TODO: test antiSMASH6
-pfam_features = readFeatureMatrix("feature_matrices/PFAM.csv")
-card_features = readFeatureMatrix("feature_matrices/CARD_gene.csv")
-smCOG_features = readFeatureMatrix("feature_matrices/SMCOG.csv")
-SSN_features = readFeatureMatrix("feature_matrices/SSN.csv")
-CDS_features = readFeatureMatrix("feature_matrices/CDS_motifs.csv")
-
-pks_nrps_type_features = readFeatureFiles.readFeatureMatrix("feature_matrices/pks_nrps_type.csv")
-pk_signature_features = readFeatureFiles.readFeatureMatrix("feature_matrices/pk_signature.csv")
-pk_minowa_features = readFeatureFiles.readFeatureMatrix("feature_matrices/pk_minowa.csv")
-pk_consensus_features = readFeatureFiles.readFeatureMatrix("feature_matrices/pk_consensus.csv")
-
-nrp_stachelhaus_features = readFeatureFiles.readFeatureMatrix("feature_matrices/nrp_stachelhaus.csv")
-nrp_nrpspredictor_features = readFeatureFiles.readFeatureMatrix("feature_matrices/nrp_nrpspredictor.csv")
-nrp_pHMM_features = readFeatureFiles.readFeatureMatrix("feature_matrices/nrp_pHMM.csv")
-nrp_predicat_features = readFeatureFiles.readFeatureMatrix("feature_matrices/nrp_predicat.csv")
-nrp_sandpuma_features = readFeatureFiles.readFeatureMatrix("feature_matrices/nrp_sandpuma.csv")
-
-pfam_list = readFeatureFiles.readFeatureList("feature_matrices/PFAM_list.txt")
-card_list = readFeatureFiles.readFeatureList("feature_matrices/CARD_gene_list.txt")
-smCOG_list = readFeatureFiles.readFeatureList("feature_matrices/SMCOG_list.txt")
-SSN_list = readFeatureFiles.readFeatureList("feature_matrices/SSN_list.txt")
-CDS_list = readFeatureFiles.readFeatureList("feature_matrices/CDS_motifs_list.txt")
-
-pks_nrps_type_list = readFeatureFiles.readFeatureList("feature_matrices/pks_nrps_type_list.txt")
-pk_signature_list = readFeatureFiles.readFeatureList("feature_matrices/pk_signature_list.txt")
-pk_minowa_list = readFeatureFiles.readFeatureList("feature_matrices/pk_minowa_list.txt")
-pk_consensus_list = readFeatureFiles.readFeatureList("feature_matrices/pk_consensus_list.txt")
-
-nrp_stachelhaus_list = readFeatureFiles.readFeatureList("feature_matrices/nrp_stachelhaus_list.txt")
-nrp_nrpspredictor_list = readFeatureFiles.readFeatureList("feature_matrices/nrp_nrpspredictor_list.txt")
-nrp_pHMM_list = readFeatureFiles.readFeatureList("feature_matrices/nrp_pHMM_list.txt")
-nrp_predicat_list = readFeatureFiles.readFeatureList("feature_matrices/nrp_predicat_list.txt")
-nrp_sandpuma_list = readFeatureFiles.readFeatureList("feature_matrices/nrp_sandpuma_list.txt")
+feature_dir = training_set_dir  + "/features/"
+feature_type_list = readFeatureFiles.getFeatureFilesList(feature_dir)
+features = readFeatureFiles.readFeatures(feature_dir, feature_type_list)
+feature_list = readFeatureFiles.readFeatureNames(feature_dir, feature_type_list)
 
 #read classes
-#TODO: add argument with directory with class labels
+#TODO: change so that these are read from training set directory
 #TODO: change is_unknown to give information about specific labels that migth be unknown
-is_antibacterial = readFeatureFiles.readClassesMatrix("feature_matrices/is_antibacterial.csv")
-is_antifungal = readFeatureFiles.readClassesMatrix("feature_matrices/is_antifungal.csv")
-is_cytotoxic = readFeatureFiles.readClassesMatrix("feature_matrices/is_cytotoxic.csv")
-is_unknown = readFeatureFiles.readClassesMatrix("feature_matrices/is_unknown.csv")
-targets_gram_pos = readFeatureFiles.readClassesMatrix("feature_matrices/targets_gram_pos.csv")
-targets_gram_neg = readFeatureFiles.readClassesMatrix("feature_matrices/targets_gram_neg.csv")
-full_cluster_list = readFeatureFiles.readClusterList("feature_matrices/cluster_list_CARD.txt")
+is_antibacterial = readFeatureFiles.readClassesMatrix("feature_matrices/antismash4rgi3/classifications/is_antibacterial.csv")
+is_antifungal = readFeatureFiles.readClassesMatrix("feature_matrices/antismash4rgi3/classifications/is_antifungal.csv")
+is_cytotoxic = readFeatureFiles.readClassesMatrix("feature_matrices/antismash4rgi3/classifications/is_cytotoxic.csv")
+is_unknown = readFeatureFiles.readClassesMatrix("feature_matrices/antismash4rgi3/classifications/is_unknown.csv")
+targets_gram_pos = readFeatureFiles.readClassesMatrix("feature_matrices/antismash4rgi3/classifications/targets_gram_pos.csv")
+targets_gram_neg = readFeatureFiles.readClassesMatrix("feature_matrices/antismash4rgi3/classifications/targets_gram_neg.csv")
+full_cluster_list = readFeatureFiles.readClusterList(training_set_dir + "/cluster_list.txt")
 is_not_unknown_indices = readFeatureFiles.getNotUnknownIndices(is_unknown)
 target_unannotated = is_antibacterial*((targets_gram_pos+targets_gram_neg)<1)
 is_not_unknown_indices_gram =  readFeatureFiles.getNotUnknownIndices(is_unknown + target_unannotated)
@@ -178,47 +137,41 @@ is_antieuk = ((is_antifungal + is_cytotoxic)>=1).astype(int)
 is_gram_pos = (targets_gram_pos >= 1).astype(int)
 is_gram_neg = (targets_gram_neg >= 1).astype(int)
 
-#concatenate all features into one matrix
-features = np.concatenate((pfam_features, card_features), axis=1)
-features = np.concatenate((features,  smCOG_features), axis=1)
-features = np.concatenate((features,  CDS_features), axis=1)
-if include_SSN:
-    features = np.concatenate((features,  SSN_features), axis=1)
-features = np.concatenate((features,  pks_nrps_type_features), axis=1)
-features = np.concatenate((features,  pk_signature_features), axis=1)
-features = np.concatenate((features,  pk_minowa_features), axis=1)
-features = np.concatenate((features,  pk_consensus_features), axis=1)
-features = np.concatenate((features,  nrp_stachelhaus_features), axis=1)
-features = np.concatenate((features,  nrp_nrpspredictor_features), axis=1)
-features = np.concatenate((features,  nrp_pHMM_features), axis=1)
-features = np.concatenate((features,  nrp_predicat_features), axis=1)
-features = np.concatenate((features,  nrp_sandpuma_features), axis=1)
 
 #process features for chosen classification
 y_vars = []
 if classification == "antibacterial":
     y_vars = is_antibacterial
-    y_vars = y_vars[is_not_unknown_indices]   
+    y_vars = y_vars[is_not_unknown_indices]
+    features = features[is_not_unknown_indices,:]
 if classification == "antieuk":
     y_vars = is_antieuk
     y_vars = y_vars[is_not_unknown_indices]
+    features = features[is_not_unknown_indices,:]
 if classification == "antifungal":
     y_vars = (is_antifungal >= 1).astype(int)
     y_vars = y_vars[is_not_unknown_indices]
+    features = features[is_not_unknown_indices,:]
 if classification == "cytotoxic_antitumor":
     y_vars = (is_cytotoxic >= 1).astype(int)
     y_vars = y_vars[is_not_unknown_indices]
+    features = features[is_not_unknown_indices,:]
 if classification == "antigramneg":
     y_vars = is_gram_neg
     y_vars = y_vars[is_not_unknown_indices_gram]
+    features = features[is_not_unknown_indices_gram,:]
 if classification == "antigrampos":
     y_vars = is_gram_pos
     y_vars = y_vars[is_not_unknown_indices_gram]
-    
+    features = features[is_not_unknown_indices_gram,:]
+
+ 
 #randomize order of features
 new_order = makeRandomOrder(0, y_vars)
 y_vars = y_vars[new_order]
 features = features[new_order,:]
+features_rand = randomizeFeatures(0, features)   
+
 
 #parameter values to test for logistic regression
 #TODO: change variable search to a grid search
@@ -433,40 +386,6 @@ forest_params["antifungal"] = {"depth":50,"n":50}
 forest_params["cytotoxic_antitumor"] = {"depth":50,"n":100}
 
 
-#make randomly shuffled version of features
-features_rand = randomizeFeatures(0, features)
-
-y_vars = []
-if classification == "antibacterial":
-    y_vars = is_antibacterial
-    y_vars = y_vars[is_not_unknown_indices]
-    
-if classification == "antieuk":
-    y_vars = is_antieuk
-    y_vars = y_vars[is_not_unknown_indices]
-
-    
-if classification == "antifungal":
-    y_vars = (is_antifungal >= 1).astype(int)
-    y_vars = y_vars[is_not_unknown_indices]
-    
-if classification == "cytotoxic_antitumor":
-    y_vars = (is_cytotoxic >= 1).astype(int)
-    y_vars = y_vars[is_not_unknown_indices]
-    
-if classification == "antigramneg":
-    y_vars = is_gram_neg
-    y_vars = y_vars[is_not_unknown_indices_gram]
-    
-if classification == "antigrampos":
-    y_vars = is_gram_pos
-    y_vars = y_vars[is_not_unknown_indices_gram]
-    
-#reorder features
-new_order = makeRandomOrder(0, y_vars)
-y_vars = y_vars[new_order]
-features = features[new_order,:]
-features_rand = features_rand[new_order, :]
 
 #initialize classifiers
 opt_log_params = log_params[classification]
