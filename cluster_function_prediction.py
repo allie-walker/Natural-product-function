@@ -16,6 +16,7 @@ import SSN_tools
 import readFeatureFiles
 import numpy as np
 import readInputFiles
+import joblib
 
 SSN_pfam_names = ["Thiolase, N-terminal domain","ABC transporter","Acyl transferase domain","AAA domain",
                  "ABC-2 family transporter protein","Acyl-CoA dehydrogenase, C-terminal domain","Acyl-CoA dehydrogenase, N-terminal domain",
@@ -167,6 +168,7 @@ except:
    print("error reading rgi output file")
    exit() 
 
+
 #make the feature matrices for the cluster
 training_features = np.concatenate((training_pfam_features, training_card_features), axis=1)
 training_features = np.concatenate((training_features,  training_smCOG_features), axis=1)
@@ -240,15 +242,18 @@ y_vars = is_antibacterial
 y_vars = y_vars[is_not_unknown_indices]
 
 
-
+#TODO: load pretrained model for all versions of classifier for all prediction methods
 #antibacterial predictions
 svm_params = {"kernel":'rbf',"C":10,"gamma":0.1}
 tree_params = {"depth":100,"n":50}
 log_params = {"l1_ratio":.05,"alpha":.01}
 
-tree_bacterial_prob = tools.treePrediction(training_features, y_vars, test_features, tree_params, seed)
-log_bacterial_prob = tools.logPrediction(training_features, y_vars, test_features, log_params, seed)
-svm_bacterial_prob = tools.svmPrediction(training_features, y_vars, test_features, svm_params, seed)
+if antismash_version == 4 and rgi_version == 3:
+    svm_bacterial_prob, tree_bacterial_prob, log_bacterial_prob = joblib.load("trained_models/antismash4rgi3_antibacterial.sav")
+else:
+    tree_bacterial_prob = tools.treePrediction(training_features, y_vars, test_features, tree_params, seed)
+    log_bacterial_prob = tools.logPrediction(training_features, y_vars, test_features, log_params, seed)
+    svm_bacterial_prob = tools.svmPrediction(training_features, y_vars, test_features, svm_params, seed)
 
 #antieuk predictions
 y_vars = is_antieuk

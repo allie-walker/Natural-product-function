@@ -20,7 +20,7 @@ from sklearn.metrics import balanced_accuracy_score
 from sklearn.metrics import roc_curve
 from sklearn.metrics import precision_recall_curve
 import sys
-
+import joblib
 
 #reads file with a list of feature names
 def readFeatureList(filename):
@@ -111,6 +111,7 @@ random.seed(1)
 
 
 training_set_dir = "feature_matrices/antismash4rgi3"
+training_set_name = training_set_dir[training_set_dir.find("/"):len(training_set_dir)]
 #TODO: add feature directory as an argument
 #TODO: test antiSMASH6
 feature_dir = training_set_dir  + "/features/"
@@ -446,6 +447,7 @@ b_accuracies["rnd_svm"] = []
 b_accuracies["rnd_tree"] = []
 
 for i in range(0, 10):
+    #TODO: change to scikit learn splitting method
     (training_x, training_y, val_x, val_y) = splitData(features, y_vars, i, 10)
     (rnd_training_x, rnd_training_y, rnd_val_x, rnd_val_y) = splitData(features_rand, y_vars, i, 10)
     min_max_scaler = preprocessing.MinMaxScaler()
@@ -608,3 +610,17 @@ axs[2].set_ylabel("precision")
 axs[2].set_xlabel("recall")
 axs[2].legend()
 fig.tight_layout(pad=2.0)
+
+#train model on entire dataset and write model
+scaled_x = min_max_scaler.fit_transform(features)
+svm_classifier.fit(scaled_x, y_vars)
+tree_classifier.fit(features, y_vars)
+log_classifier.fit(scaled_x, y_vars)
+
+#print train accuracy
+print("SVM train balanced accuracy: " +str(balanced_accuracy_score(y_vars,svm_classifier.predict(scaled_x))))
+print("Log train balanced accuracy: " + str(balanced_accuracy_score(y_vars,log_classifier.predict(scaled_x))))
+print("Log train balanced accuracy: " + str(balanced_accuracy_score(y_vars,tree_classifier.predict(features))))
+
+outfilename = "trained_models/" + training_set_name +"_" + classification +".sav"
+joblib.dump([svm_classifier, tree_classifier, log_classifier], outfilename)
