@@ -44,9 +44,9 @@ Cell 10 runs the predictions on the features extracted by cell 9. The classifica
 Instructions for command line tool:
 requirements.txt contains all required packages for the command line tool.
 
-To run the command line tool enter:
+To run the command line tool enter (you may need to use chmod to make the python script executable first):
 
-python cluster_function_prediction.py "filename of antismash cluster gbk file" "filename of rgi txt file"
+./cluster_function_prediction.py "filename of antismash cluster gbk file" "filename of rgi txt file"
   
 optional arguments include:
 
