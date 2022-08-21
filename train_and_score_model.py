@@ -110,7 +110,7 @@ classification = "antibacterial"
 random.seed(1)
 
 
-training_set_dir = "feature_matrices/antismash4rgi3"
+training_set_dir = "feature_matrices/antismash6"
 training_set_name = training_set_dir[training_set_dir.find("/"):len(training_set_dir)]
 #TODO: add feature directory as an argument
 #TODO: test antiSMASH6
