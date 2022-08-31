@@ -2,6 +2,7 @@
 """
 Created on Wed Jun 15 14:10:16 2022
 
+
 @author: Allison Walker
 Trains model parameters based on training set
 Training set should be represented by a set of csv files with features and csv files with data labels
@@ -170,6 +171,7 @@ random.seed(1)
 
 
 
+#training_set_dir = "feature_matrices/antismash6"
 training_set_dir = "feature_matrices/antismash4rgi3"
 training_set_name = training_set_dir[training_set_dir.find("/"):len(training_set_dir)]
 #TODO: add feature directory as an argument
@@ -293,8 +295,6 @@ random.seed(1)
 include_SSN = True 
 #parameters for classifiers
 #TODO: get optimal parameters from search above
-
-
 #do analysis, write to file, and visualize
 b_accuracies, roc_curves, pr_curves = train_model_tools.assessModel(classification, best_svm, best_log, best_tree, features, y_vars)
 
