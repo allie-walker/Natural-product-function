@@ -158,214 +158,234 @@ def validateClassifier(outfile, classifier, features, y_vars, regression):
 
 
         
-
+training_set_dir = "feature_matrices/antismash6_notigrfam"
+#training_set_dir = "feature_matrices/antismash4rgi3"
         
 #parameters
 #classification to train classifiers on 
 #options: antibacterial, antieuk (defined as antifungal, antitumor, or cytotoxic), antifungal, cytotoxic_antitumor, antigramneg, antigrampos
 #TODO: change to iterate through all classifications
-classifications = ["antibacteria", "antieuk","antifungal", "cytotoxic_antitumor", "antigramneg","antigrampos"]
-classification = "antibacterial" 
+classifications = ["antibacterial", "antieuk","antifungal", "cytotoxic_antitumor", "antigramneg","antigrampos"]
+#classification = "antibacterial" 
 #set random seed so results are consistent
 random.seed(1)
 
 
-
-#training_set_dir = "feature_matrices/antismash6"
-training_set_dir = "feature_matrices/antismash4rgi3"
 training_set_name = training_set_dir[training_set_dir.find("/"):len(training_set_dir)]
 #TODO: add feature directory as an argument
 #TODO: test antiSMASH6
 feature_dir = training_set_dir  + "/features/"
 feature_type_list = readFeatureFiles.getFeatureFilesList(feature_dir)
 features = readFeatureFiles.readFeatures(feature_dir, feature_type_list)
+original_features = features
 feature_list = readFeatureFiles.readFeatureNames(feature_dir, feature_type_list)
 
 #read classes
 #TODO: change so that these are read from training set directory
 #TODO: change is_unknown to give information about specific labels that migth be unknown
-is_antibacterial = readFeatureFiles.readClassesMatrix("feature_matrices/antismash4rgi3/classifications/is_antibacterial.csv")
-is_antifungal = readFeatureFiles.readClassesMatrix("feature_matrices/antismash4rgi3/classifications/is_antifungal.csv")
-is_cytotoxic = readFeatureFiles.readClassesMatrix("feature_matrices/antismash4rgi3/classifications/is_cytotoxic.csv")
-is_unknown = readFeatureFiles.readClassesMatrix("feature_matrices/antismash4rgi3/classifications/is_unknown.csv")
-targets_gram_pos = readFeatureFiles.readClassesMatrix("feature_matrices/antismash4rgi3/classifications/targets_gram_pos.csv")
-targets_gram_neg = readFeatureFiles.readClassesMatrix("feature_matrices/antismash4rgi3/classifications/targets_gram_neg.csv")
+is_antibacterial = readFeatureFiles.readClassesMatrix(training_set_dir  +"/classifications/is_antibacterial.csv")
+is_antifungal = readFeatureFiles.readClassesMatrix(training_set_dir  +"/classifications/is_antifungal.csv")
+is_cytotoxic = readFeatureFiles.readClassesMatrix(training_set_dir  +"/classifications/is_cytotoxic.csv")
+is_unknown_antibacterial = readFeatureFiles.readClassesMatrix(training_set_dir  +"/classifications/is_unknown.csv")
+is_unknown_antifungal = readFeatureFiles.readClassesMatrix(training_set_dir  +"/classifications/is_unknown.csv")
+is_unknown_antitumor = readFeatureFiles.readClassesMatrix(training_set_dir  +"/classifications/is_unknown.csv")
+is_unknown_antieuk = readFeatureFiles.readClassesMatrix(training_set_dir  +"/classifications/is_unknown.csv")
+
+targets_gram_pos = readFeatureFiles.readClassesMatrix(training_set_dir  +"/classifications/targets_gram_pos.csv")
+targets_gram_neg = readFeatureFiles.readClassesMatrix(training_set_dir  +"/classifications/targets_gram_neg.csv")
 full_cluster_list = readFeatureFiles.readClusterList(training_set_dir + "/cluster_list.txt")
-is_not_unknown_indices = readFeatureFiles.getNotUnknownIndices(is_unknown)
+is_not_unknown_indices_antibacterial = readFeatureFiles.getNotUnknownIndices(is_unknown_antibacterial)
+is_not_unknown_indices_antifungal = readFeatureFiles.getNotUnknownIndices(is_unknown_antifungal)
+is_not_unknown_indices_antitumor = readFeatureFiles.getNotUnknownIndices(is_unknown_antitumor)
+is_not_unknown_indices_antieuk = readFeatureFiles.getNotUnknownIndices(is_unknown_antibacterial)
+
+is_not_unknown_indices_dictionary = {}
+is_not_unknown_indices_dictionary['antibacterial'] = is_not_unknown_indices_antibacterial
+is_not_unknown_indices_dictionary['antieuk'] = is_not_unknown_indices_antieuk
+is_not_unknown_indices_dictionary['antifungal'] = is_not_unknown_indices_antifungal
+is_not_unknown_indices_dictionary['cytotoxic_antitumor'] = is_not_unknown_indices_antitumor
+
+
 target_unannotated = is_antibacterial*((targets_gram_pos+targets_gram_neg)<1)
-is_not_unknown_indices_gram =  readFeatureFiles.getNotUnknownIndices(is_unknown + target_unannotated)
+is_not_unknown_indices_gram =  readFeatureFiles.getNotUnknownIndices(is_unknown_antibacterial + target_unannotated)
 
 is_antibacterial = (is_antibacterial >= 1).astype(int)
 is_antieuk = ((is_antifungal + is_cytotoxic)>=1).astype(int)
 is_gram_pos = (targets_gram_pos >= 1).astype(int)
 is_gram_neg = (targets_gram_neg >= 1).astype(int)
 
-
-#process features for chosen classification
-y_vars = []
-if classification == "antibacterial":
-    y_vars = is_antibacterial
-    y_vars = y_vars[is_not_unknown_indices]
-    features = features[is_not_unknown_indices,:]
-if classification == "antieuk":
-    y_vars = is_antieuk
-    y_vars = y_vars[is_not_unknown_indices]
-    features = features[is_not_unknown_indices,:]
-if classification == "antifungal":
-    y_vars = (is_antifungal >= 1).astype(int)
-    y_vars = y_vars[is_not_unknown_indices]
-    features = features[is_not_unknown_indices,:]
-if classification == "cytotoxic_antitumor":
-    y_vars = (is_cytotoxic >= 1).astype(int)
-    y_vars = y_vars[is_not_unknown_indices]
-    features = features[is_not_unknown_indices,:]
-if classification == "antigramneg":
-    y_vars = is_gram_neg
-    y_vars = y_vars[is_not_unknown_indices_gram]
-    features = features[is_not_unknown_indices_gram,:]
-if classification == "antigrampos":
-    y_vars = is_gram_pos
-    y_vars = y_vars[is_not_unknown_indices_gram]
-    features = features[is_not_unknown_indices_gram,:]
+for classification in classifications:
+    print(classification)
+    #process features for chosen classification
+    y_vars = []
+    
+    if classification == "antibacterial":
+        is_not_unknown_indices = is_not_unknown_indices_dictionary[classification]
+        y_vars = is_antibacterial
+        y_vars = y_vars[is_not_unknown_indices]
+        features = original_features[is_not_unknown_indices,:]
+    if classification == "antieuk":
+        is_not_unknown_indices = is_not_unknown_indices_dictionary[classification]
+        y_vars = is_antieuk
+        y_vars = y_vars[is_not_unknown_indices]
+        features = original_features[is_not_unknown_indices,:]
+    if classification == "antifungal":
+        is_not_unknown_indices = is_not_unknown_indices_dictionary[classification]
+        y_vars = (is_antifungal >= 1).astype(int)
+        y_vars = y_vars[is_not_unknown_indices]
+        features = original_features[is_not_unknown_indices,:]
+    if classification == "cytotoxic_antitumor":
+        is_not_unknown_indices = is_not_unknown_indices_dictionary[classification]
+        y_vars = (is_cytotoxic >= 1).astype(int)
+        y_vars = y_vars[is_not_unknown_indices]
+        features = original_features[is_not_unknown_indices,:]
+    if classification == "antigramneg":
+        y_vars = is_gram_neg
+        y_vars = y_vars[is_not_unknown_indices_gram]
+        features = original_features[is_not_unknown_indices_gram,:]
+    if classification == "antigrampos":
+        y_vars = is_gram_pos
+        y_vars = y_vars[is_not_unknown_indices_gram]
+        features = original_features[is_not_unknown_indices_gram,:]
 
  
-#randomize order of features
-new_order = makeRandomOrder(0, y_vars)
-y_vars = y_vars[new_order]
-features = features[new_order,:]
+    #randomize order of features
+    new_order = makeRandomOrder(0, y_vars)
+    y_vars = y_vars[new_order]
+    features = features[new_order,:]
+    
+    
+    
+    #parameter values to test for logistic regression
 
-
-
-#parameter values to test for logistic regression
-#TODO: change variable search to a grid search
-log_params = [{'log__loss':['log'], 'log__penalty':['elasticnet'], 'log__max_iter':[100],\
+    log_params = [{'log__loss':['log'], 'log__penalty':['elasticnet'], 'log__max_iter':[100],\
                'log__alpha':[.5, .3, .2, .1, .01,  .001,  .0001,.00001,.000001],\
               'log__l1_ratio':[.5, .2, .05, .1, .01, .001, .0001], 'log__tol':[None]}]
-log_pipeline = Pipeline([('mms',MinMaxScaler()),('log',SGDClassifier())])
-gs_log = GridSearchCV(log_pipeline,param_grid=log_params,scoring='accuracy',cv=5)
-gs_log.fit(features, y_vars)
-writeCVResults("classifier_optimization/log_"+classification,gs_log.cv_results_,"log__l1_ratio", "log__alpha")
-
-
-    
-#parameter values to test for SVM classifier
-c_values = [100, 10, 1, .5, .1, .01]
-svm_params = [{'svm__kernel':['linear'], 'svm__C':c_values, 'svm__probability':[True]}, \
+    log_pipeline = Pipeline([('mms',MinMaxScaler()),('log',SGDClassifier())])
+    gs_log = GridSearchCV(log_pipeline,param_grid=log_params,scoring='accuracy',cv=5)
+    gs_log.fit(features, y_vars)
+    writeCVResults("classifier_optimization/" + training_set_name + "/log_"+classification,gs_log.cv_results_,"log__l1_ratio", "log__alpha")    
+        
+    #parameter values to test for SVM classifier
+    c_values = [100, 10, 1, .5, .1, .01]
+    svm_params = [{'svm__kernel':['linear'], 'svm__C':c_values, 'svm__probability':[True]}, \
               {'svm__kernel':['rbf'], 'svm__C':c_values, 'svm__gamma':[.01, .1, 1, 10], 'svm__probability':[True]}]
-svm_pipeline = Pipeline([('mms',MinMaxScaler()),('svm',SVC())])
-gs_svm = GridSearchCV(svm_pipeline, param_grid=svm_params, scoring='accuracy',cv=5)
-gs_svm.fit(features, y_vars)
-writeCVResults3Vars("classifier_optimization/svm_"+classification,gs_svm.cv_results_,"svm__kernel","svm__gamma", "svm__C")
-
-            
-random.seed(1)            
-#parameters for random forest classifier
-tree_params = [{'max_features':['auto'], 'criterion':['gini'], 'bootstrap':[True],\
-                'max_depth':[10, 20, 50, 100, 1000, None], \
-                'n_estimators':[1, 5, 10, 15, 25, 50, 100]}]
-gs_tree = GridSearchCV(ExtraTreesClassifier(), param_grid=tree_params, scoring='accuracy',cv=5)
-gs_tree.fit(features, y_vars)
-writeCVResults("classifier_optimization/RF_"+classification,gs_tree.cv_results_,"max_depth", "n_estimators")
-
-
-#
-#print optimal parameters
-print("Logistic regression")
-print("optimal accuracy: " + str(gs_log.best_score_))
-print("best params: " + str(gs_log.best_params_))
-print()
-print("Support vector machine")
-print("optimal accuracy: " + str(gs_svm.best_score_))
-print("best params: " + str(gs_svm.best_params_))
-print()
-print("Random forest")
-print("optimal accuracy: " + str(gs_tree.best_score_))
-print("best params: " + str(gs_tree.best_params_))
-print()
-
-
-#asses model
-best_log = gs_log.best_estimator_
-best_svm = gs_svm.best_estimator_
-best_tree = gs_tree.best_estimator_
-
-#set random seed so results are consistent
-random.seed(1)
-#include features from SSN 
-include_SSN = True 
-#parameters for classifiers
-#TODO: get optimal parameters from search above
-#do analysis, write to file, and visualize
-b_accuracies, roc_curves, pr_curves = train_model_tools.assessModel(classification, best_svm, best_log, best_tree, features, y_vars)
-
-
-#visualize results
-fig, axs = plt.subplots(3, figsize=(15, 12))
-cmap = cm.get_cmap('jet')
-colors = []
-for i in range(0, 6):
-    colors.append(cmap(i*1.0/6.0))
+    svm_pipeline = Pipeline([('mms',MinMaxScaler()),('svm',SVC())])
+    gs_svm = GridSearchCV(svm_pipeline, param_grid=svm_params, scoring='accuracy',cv=5)
+    gs_svm.fit(features, y_vars)
+    writeCVResults3Vars("classifier_optimization/" + training_set_name + "/svm_"+classification,gs_svm.cv_results_,"svm__kernel","svm__gamma", "svm__C")
     
-mean_log_acc = np.mean(b_accuracies["log"])
-mean_svm_acc = np.mean(b_accuracies["svm"])
-mean_tree_acc = np.mean(b_accuracies["tree"])
-mean_rnd_log_acc =np.mean(b_accuracies["rnd_log"])
-mean_rnd_svm_acc = np.mean(b_accuracies["rnd_svm"])
-mean_rnd_tree_acc = np.mean(b_accuracies["rnd_tree"])
-
-mean_log_sd = np.std(b_accuracies["log"])
-mean_svm_sd = np.std(b_accuracies["svm"])
-mean_tree_sd = np.std(b_accuracies["tree"])
-mean_rnd_log_sd =np.std(b_accuracies["rnd_log"])
-mean_rnd_svm_sd = np.std(b_accuracies["rnd_svm"])
-mean_rnd_tree_sd = np.std(b_accuracies["rnd_tree"])
-
-bar_labels = ["log", "svm", "tree", "rnd log", "rnd svm", "rnd tree"]
-x_pos = np.arange(len(bar_labels))
-means = [mean_log_acc, mean_svm_acc, mean_tree_acc, mean_rnd_log_acc, mean_rnd_svm_acc, mean_rnd_tree_acc]
-error = [mean_log_sd, mean_svm_sd, mean_tree_sd, mean_rnd_log_sd, mean_rnd_svm_sd, mean_rnd_tree_sd]
-axs[0].bar(x_pos, means, yerr=error, align='center', capsize=10, color=(colors[0], colors[2], colors[5],colors[0], colors[2], colors[5]))
-axs[0].set_xticks(x_pos)
-axs[0].set_xticklabels(bar_labels)
-axs[0].set_title("Balanced Accuracy of Classifiers")
-axs[0].set_ylabel("Balanced Accuracy")
-
-axs[1].plot(roc_curves["log"][0][0], roc_curves["log"][0][1], color=colors[0], label='log')
-axs[1].plot(roc_curves["svm"][0][0], roc_curves["svm"][0][1], color=colors[2], label='svm')
-axs[1].plot(roc_curves["tree"][0][0], roc_curves["tree"][0][1], color=colors[5], label='tree')
-for i in range(1, 10):
-    axs[1].plot(roc_curves["log"][i][0], roc_curves["log"][i][1], color=colors[0])
-    axs[1].plot(roc_curves["svm"][i][0], roc_curves["svm"][i][1], color=colors[2])
-    axs[1].plot(roc_curves["tree"][i][0], roc_curves["tree"][i][1], color=colors[5])
-axs[1].set_title("ROC")
-axs[1].set_ylabel("TPR")
-axs[1].set_xlabel("FPR")
-axs[1].legend()
-
-
-axs[2].plot(pr_curves["log"][0][0], pr_curves["log"][0][1], color=colors[0], label='log')
-axs[2].plot(pr_curves["svm"][0][0], pr_curves["svm"][0][1], color=colors[2], label='svm')
-axs[2].plot(pr_curves["tree"][0][0], pr_curves["tree"][0][1], color=colors[5], label='tree')
-for i in range(1, 10):
-    axs[2].plot(pr_curves["log"][i][0], pr_curves["log"][i][1], color=colors[0])
-    axs[2].plot(pr_curves["svm"][i][0], pr_curves["svm"][i][1], color=colors[2])
-    axs[2].plot(pr_curves["tree"][i][0], pr_curves["tree"][i][1], color=colors[5])
-axs[2].set_title("precision-recall curve")
-axs[2].set_ylabel("precision")
-axs[2].set_xlabel("recall")
-axs[2].legend()
-fig.tight_layout(pad=2.0)
-fig.savefig('classifier_optimization/' + classification + '.pdf')  
-
-#train model on entire dataset and write model
-best_svm.fit(features, y_vars)
-best_tree.fit(features, y_vars)
-best_log.fit(features, y_vars)
-
-#print train accuracy
-print("SVM train balanced accuracy: " +str(balanced_accuracy_score(y_vars,best_svm.predict(features))))
-print("Log train balanced accuracy: " + str(balanced_accuracy_score(y_vars,best_log.predict(features))))
-print("Log train balanced accuracy: " + str(balanced_accuracy_score(y_vars,best_tree.predict(features))))
-
-outfilename = "trained_models/" + training_set_name +"_" + classification +".sav"
-joblib.dump([best_svm, best_tree, best_log], outfilename)
+                
+    random.seed(1)            
+    #parameters for random forest classifier
+    tree_params = [{'max_features':['auto'], 'criterion':['gini'], 'bootstrap':[True],\
+                    'max_depth':[10, 20, 50, 100, 1000, None], \
+                'n_estimators':[1, 5, 10, 15, 25, 50, 100]}]
+    gs_tree = GridSearchCV(ExtraTreesClassifier(), param_grid=tree_params, scoring='accuracy',cv=5)
+    gs_tree.fit(features, y_vars)
+    writeCVResults("classifier_optimization/" + training_set_name + "/RF_"+classification,gs_tree.cv_results_,"max_depth", "n_estimators")
+    
+    
+    #print optimal parameters
+    print("Logistic regression")
+    print("optimal accuracy: " + str(gs_log.best_score_))
+    print("best params: " + str(gs_log.best_params_))
+    print()
+    print("Support vector machine")
+    print("optimal accuracy: " + str(gs_svm.best_score_))
+    print("best params: " + str(gs_svm.best_params_))
+    print()
+    print("Random forest")
+    print("optimal accuracy: " + str(gs_tree.best_score_))
+    print("best params: " + str(gs_tree.best_params_))
+    print()
+    
+    
+    #asses model
+    best_log = gs_log.best_estimator_
+    best_svm = gs_svm.best_estimator_
+    best_tree = gs_tree.best_estimator_
+    
+    #set random seed so results are consistent
+    random.seed(1)
+    #include features from SSN 
+    include_SSN = True 
+    #parameters for classifiers
+    #do analysis, write to file, and visualize
+    output_fname_base = "classifier_metrics/" + training_set_name + "/" + classification + "_"
+    b_accuracies, roc_curves, pr_curves = train_model_tools.assessModel(output_fname_base, best_svm, best_log, best_tree, features, y_vars)
+        
+    
+    #visualize results
+    fig, axs = plt.subplots(3, figsize=(15, 12))
+    cmap = cm.get_cmap('jet')
+    colors = []
+    for i in range(0, 6):
+        colors.append(cmap(i*1.0/6.0))
+        
+    mean_log_acc = np.mean(b_accuracies["log"])
+    mean_svm_acc = np.mean(b_accuracies["svm"])
+    mean_tree_acc = np.mean(b_accuracies["tree"])
+    mean_rnd_log_acc =np.mean(b_accuracies["rnd_log"])
+    mean_rnd_svm_acc = np.mean(b_accuracies["rnd_svm"])
+    mean_rnd_tree_acc = np.mean(b_accuracies["rnd_tree"])
+    
+    mean_log_sd = np.std(b_accuracies["log"])
+    mean_svm_sd = np.std(b_accuracies["svm"])
+    mean_tree_sd = np.std(b_accuracies["tree"])
+    mean_rnd_log_sd =np.std(b_accuracies["rnd_log"])
+    mean_rnd_svm_sd = np.std(b_accuracies["rnd_svm"])
+    mean_rnd_tree_sd = np.std(b_accuracies["rnd_tree"])
+    
+    bar_labels = ["log", "svm", "tree", "rnd log", "rnd svm", "rnd tree"]
+    x_pos = np.arange(len(bar_labels))
+    means = [mean_log_acc, mean_svm_acc, mean_tree_acc, mean_rnd_log_acc, mean_rnd_svm_acc, mean_rnd_tree_acc]
+    error = [mean_log_sd, mean_svm_sd, mean_tree_sd, mean_rnd_log_sd, mean_rnd_svm_sd, mean_rnd_tree_sd]
+    axs[0].bar(x_pos, means, yerr=error, align='center', capsize=10, color=(colors[0], colors[2], colors[5],colors[0], colors[2], colors[5]))
+    axs[0].set_xticks(x_pos)
+    axs[0].set_xticklabels(bar_labels)
+    axs[0].set_title("Balanced Accuracy of Classifiers")
+    axs[0].set_ylabel("Balanced Accuracy")
+    
+    axs[1].plot(roc_curves["log"][0][0], roc_curves["log"][0][1], color=colors[0], label='log')
+    axs[1].plot(roc_curves["svm"][0][0], roc_curves["svm"][0][1], color=colors[2], label='svm')
+    axs[1].plot(roc_curves["tree"][0][0], roc_curves["tree"][0][1], color=colors[5], label='tree')
+    for i in range(1, 10):
+        axs[1].plot(roc_curves["log"][i][0], roc_curves["log"][i][1], color=colors[0])
+        axs[1].plot(roc_curves["svm"][i][0], roc_curves["svm"][i][1], color=colors[2])
+        axs[1].plot(roc_curves["tree"][i][0], roc_curves["tree"][i][1], color=colors[5])
+    axs[1].set_title("ROC")
+    axs[1].set_ylabel("TPR")
+    axs[1].set_xlabel("FPR")
+    axs[1].legend()
+    
+    
+    axs[2].plot(pr_curves["log"][0][0], pr_curves["log"][0][1], color=colors[0], label='log')
+    axs[2].plot(pr_curves["svm"][0][0], pr_curves["svm"][0][1], color=colors[2], label='svm')
+    axs[2].plot(pr_curves["tree"][0][0], pr_curves["tree"][0][1], color=colors[5], label='tree')
+    for i in range(1, 10):
+        axs[2].plot(pr_curves["log"][i][0], pr_curves["log"][i][1], color=colors[0])
+        axs[2].plot(pr_curves["svm"][i][0], pr_curves["svm"][i][1], color=colors[2])
+        axs[2].plot(pr_curves["tree"][i][0], pr_curves["tree"][i][1], color=colors[5])
+    axs[2].set_title("precision-recall curve")
+    axs[2].set_ylabel("precision")
+    axs[2].set_xlabel("recall")
+    axs[2].legend()
+    fig.tight_layout(pad=2.0)
+    fig.savefig('classifier_optimization/' + training_set_name + "/" + classification + '.pdf')  
+    
+    #train model on entire dataset and write model
+    best_svm.fit(features, y_vars)
+    best_tree.fit(features, y_vars)
+    best_log.fit(features, y_vars)
+    
+    #print train accuracy
+    print("SVM train balanced accuracy: " +str(balanced_accuracy_score(y_vars,best_svm.predict(features))))
+    print("Log train balanced accuracy: " + str(balanced_accuracy_score(y_vars,best_log.predict(features))))
+    print("Log train balanced accuracy: " + str(balanced_accuracy_score(y_vars,best_tree.predict(features))))
+    
+    outfilename = "trained_models/" + training_set_name +"_" + classification +".sav"
+    joblib.dump([best_svm, best_tree, best_log], outfilename)
+    
+   #TODO: add holdout set analysis in separate file?
+   #TODO: add feature scoring

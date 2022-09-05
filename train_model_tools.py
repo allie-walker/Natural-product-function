@@ -24,9 +24,8 @@ def writeCurve(outfile, x_axis, y_axis):
     for i in range(0, min(x_axis.shape[0], y_axis.shape[0])):
         outfile.write(str(x_axis[i]) + "," + str(y_axis[i]) + "\n")
 
-def assessModel(classification, svm_model, log_model, tree_model, features, y_vars):
+def assessModel(output_fname_base, svm_model, log_model, tree_model, features, y_vars):
     random.seed(1)
-    output_fname_base = "classifier_metrics/" + classification + "_"
     features_rand = randomizeFeatures(0, features)   
     
     #output files
