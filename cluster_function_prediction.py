@@ -45,7 +45,7 @@ if args.write_features == None:
     feature_dir = ""
 else:
     write_features = True
-    feature_dir = args.write_features
+    write_feature_dir = args.write_features
 
 if args.seed == None:
     seed = 0
@@ -101,9 +101,41 @@ if not os.access(out_directory, os.W_OK):
     print("You do not have permission to write to the given output directory, please use a different directory")
     exit()    
 
+#figure out appropriate model name
+if antismash_version == 4 and rgi_version == 3 and database_version == 1:
+    model_name = "antismash4rgi3"
+elif antismash_version == 4 and rgi_version == 5 and database_version == 1:
+    model_name = "antismash4rgi5"
+elif antismash_version == 4 and rgi_version == 0 and database_version == 1:
+    model_name = "antismash4"
+elif antismash_version == 5 and rgi_version == 3 and database_version == 1:
+    model_name = "antismash5rgi3"
+elif antismash_version == 5 and rgi_version == 5 and database_version == 1:
+    model_name = "antismash5rgi5"
+elif antismash_version == 5 and rgi_version == 0 and database_version == 1:
+    model_name = "antismash5"
+elif antismash_version == 6 and rgi_version == 3 and database_version == 1:
+    model_name = "antismash6rgi3"
+elif antismash_version == 6 and rgi_version == 5 and database_version == 1:
+    model_name = "antismash6rgi5"
+elif antismash_version == 6 and rgi_version == 0 and database_version == 1:
+    model_name = "antismash6"
+else:
+    #TODO: throw error
+    print("options not compatible with this version")
+    exit()
+try:    
+    feature_dir = data_path + "feature_matrices/" + model_name  + "/features/"
+    feature_type_list = readFeatureFiles.getFeatureFilesList(feature_dir)
+    training_features = readFeatureFiles.readFeatures(feature_dir, feature_type_list)
+    feature_list = readFeatureFiles.readFeatureNames(feature_dir, feature_type_list)
+except:
+    print("did not find file containing training data, please keep script located in directory downloaded from github")
+
+
 #read the list of features
 #TODO: automate this?
-try:    
+"""try:    
     training_SSN_features = readFeatureFiles.readFeatureMatrix(data_path+"feature_matrices/SSN.csv")
     if antismash_version == 4:  
         training_pfam_features = readFeatureFiles.readFeatureMatrix(data_path+"feature_matrices/PFAM.csv")
@@ -144,7 +176,7 @@ try:
     full_cluster_list = readFeatureFiles.readClusterList(data_path+"feature_matrices/cluster_list_CARD.txt")        
 except:
     print("did not find file containing training data, please keep script located in directory downloaded from github")
-    exit()
+    exit()"""
 
 
 #read the antismash input file
@@ -161,7 +193,7 @@ except:
    print("error reading rgi output file")
    exit() 
 
-
+"""
 #make the feature matrices for the cluster
 training_features = np.concatenate((training_pfam_features, training_card_features), axis=1)
 training_features = np.concatenate((training_features,  training_smCOG_features), axis=1)
@@ -181,24 +213,12 @@ if antismash_version == 4:
 else:
     training_features = np.concatenate((training_features,  training_pk_consensus_features), axis=1)
 
-original_training_features = training_features
+original_training_features = training_features"""
 
 
     
-#read SSN features
-SSN_list = readFeatureFiles.readFeatureList(data_path+"feature_matrices/SSN_list.txt")
-for i in range(0, len(SSN_list)):
-    SSN_list[i] = SSN_list[i].replace("\r","")
-    SSN_list[i] = SSN_list[i].replace("\n","")
 
-included_SSN_clusters =  {}
-if not no_SSN:
-    for pfam_name in SSN_list:
-        base = pfam_name[0:pfam_name.rfind("_")]
-        if base not in included_SSN_clusters:
-            included_SSN_clusters[base] = []
-        numbering = pfam_name[pfam_name.rfind("_")+1:len(pfam_name)].replace("\r","")
-        included_SSN_clusters[base].append(numbering.replace("\n",""))    
+
 
 cluster_name = antismash_infilename
 
@@ -209,11 +229,12 @@ if not no_SSN:
     print("SSNs no lonter supported in this version, please use version 1 for SSNs features")
     exit()
 else:
-    test_features = readInputFiles.readInputFiles(as_features, antismash_version, rgi_infile, rgi_version, training_features, data_path, [])
+    test_features = readInputFiles.readInputFiles(as_features, antismash_version, rgi_infile, rgi_version, training_features, feature_dir, [])
 
 
+#TODO: fix this for webserver
 if write_features:
-    test_features_out =open(feature_dir + "/" + antismash_infilename[antismash_infilename.rfind("/"):antismash_infilename.rfind(".")]+".csv",'w')
+    test_features_out =open(write_feature_dir + "/" + antismash_infilename[antismash_infilename.rfind("/"):antismash_infilename.rfind(".")]+".csv",'w')
     for f in test_features[0]:
         test_features_out.write(str(f)+",")
     test_features_out.close()
@@ -221,61 +242,38 @@ if write_features:
 
 #Load appropriate pretrained model
 try:
-    if antismash_version == 4 and rgi_version == 3 and database_version == 1:
-        model_name = "antismash4rgi3"
-    elif antismash_version == 4 and rgi_version == 5 and database_version == 1:
-        model_name = "antismash4rgi5"
-    elif antismash_version == 4 and rgi_version == 0 and database_version == 1:
-        model_name = "antismash4"
-    elif antismash_version == 5 and rgi_version == 3 and database_version == 1:
-        model_name = "antismash5rgi3"
-    elif antismash_version == 5 and rgi_version == 5 and database_version == 1:
-        model_name = "antismash5rgi5"
-    elif antismash_version == 5 and rgi_version == 0 and database_version == 1:
-        model_name = "antismash5"
-    elif antismash_version == 6 and rgi_version == 3 and database_version == 1:
-        model_name = "antismash6rgi3"
-    elif antismash_version == 6 and rgi_version == 5 and database_version == 1:
-        model_name = "antismash6rgi5"
-    elif antismash_version == 6 and rgi_version == 0 and database_version == 1:
-        model_name = "antismash6"
-    else:
-        #throw error
-        print("options not compatible with this version")
-        exit()
+    svm_bacterial, tree_bacterial, log_bacterial = joblib.load(data_path+"trained_models/" + model_name + "_antibacterial.sav")
+    svm_bacterial_prob = svm_bacterial.predict_proba(test_features)
+    tree_bacterial_prob = tree_bacterial.predict_proba(test_features)
+    log_bacterial_prob = log_bacterial.predict_proba(test_features)
+
+    svm_antieuk, tree_antieuk, log_antieuk = joblib.load(data_path+"trained_models/" + model_name + "_antieuk.sav")
+    svm_antieuk_prob = svm_antieuk.predict_proba(test_features)
+    tree_antieuk_prob = tree_antieuk.predict_proba(test_features)
+    log_antieuk_prob = log_antieuk.predict_proba(test_features)
+
+    svm_antifungal, tree_antifungal, log_antifungal = joblib.load(data_path+"trained_models/" + model_name + "_antifungal.sav")
+    svm_antifungal_prob = svm_antifungal.predict_proba(test_features)
+    tree_antifungal_prob = tree_antifungal.predict_proba(test_features)
+    log_antifungal_prob = log_antifungal.predict_proba(test_features)
+
+    svm_antitumor, tree_antitumor, log_antitumor = joblib.load(data_path+"trained_models/" + model_name + "_cytotoxic_antitumor.sav")
+    svm_antitumor_prob = svm_antitumor.predict_proba(test_features)
+    tree_antitumor_prob = tree_antitumor.predict_proba(test_features)
+    log_antitumor_prob = log_antitumor.predict_proba(test_features)
+    
+    svm_antigramneg, tree_antigramneg, log_antigramneg = joblib.load(data_path+"trained_models/" + model_name + "_antigramneg.sav")
+    svm_antigramneg_prob = svm_antigramneg.predict_proba(test_features)
+    tree_antigramneg_prob = tree_antigramneg.predict_proba(test_features)
+    log_antigramneg_prob = log_antigramneg.predict_proba(test_features)
+
+    svm_antigrampos, tree_antigrampos, log_antigrampos = joblib.load(data_path+"trained_models/" + model_name + "_antigrampos.sav")
+    svm_antigrampos_prob = svm_antigrampos.predict_proba(test_features)
+    tree_antigrampos_prob = tree_antigrampos.predict_proba(test_features)
+    log_antigrampos_prob = log_antigrampos.predict_proba(test_features)
 except:
    print("could not find pretrained model, make sure all data files are in correct location")
    exit() 
-
-svm_bacterial, tree_bacterial, log_bacterial = joblib.load(data_path+"trained_models/" + model_name + "_antibacterial.sav")
-svm_bacterial_prob = svm_bacterial.predict_proba(test_features)
-tree_bacterial_prob = tree_bacterial.predict_proba(test_features)
-log_bacterial_prob = log_bacterial.predict_proba(test_features)
-
-svm_antieuk, tree_antieuk, log_antieuk = joblib.load(data_path+"trained_models/" + model_name + "_antieuk.sav")
-svm_antieuk_prob = svm_antieuk.predict_proba(test_features)
-tree_antieuk_prob = tree_antieuk.predict_proba(test_features)
-log_antieuk_prob = log_antieuk.predict_proba(test_features)
-
-svm_antifungal, tree_antifungal, log_antifungal = joblib.load(data_path+"trained_models/" + model_name + "_antifungal.sav")
-svm_antifungal_prob = svm_antifungal.predict_proba(test_features)
-tree_antifungal_prob = tree_antifungal.predict_proba(test_features)
-log_antifungal_prob = log_antifungal.predict_proba(test_features)
-
-svm_antitumor, tree_antitumor, log_antitumor = joblib.load(data_path+"trained_models/" + model_name + "_cytotoxic_antitumor.sav")
-svm_antitumor_prob = svm_antitumor.predict_proba(test_features)
-tree_antitumor_prob = tree_antitumor.predict_proba(test_features)
-log_antitumor_prob = log_antitumor.predict_proba(test_features)
-    
-svm_antigramneg, tree_antigramneg, log_antigramneg = joblib.load(data_path+"trained_models/" + model_name + "_antigramneg.sav")
-svm_antigramneg_prob = svm_antigramneg.predict_proba(test_features)
-tree_antigramneg_prob = tree_antigramneg.predict_proba(test_features)
-log_antigramneg_prob = log_antigramneg.predict_proba(test_features)
-
-svm_antigrampos, tree_antigrampos, log_antigrampos = joblib.load(data_path+"trained_models/" + model_name + "_antigrampos.sav")
-svm_antigrampos_prob = svm_antigrampos.predict_proba(test_features)
-tree_antigrampos_prob = tree_antigrampos.predict_proba(test_features)
-log_antigrampos_prob = log_antigrampos.predict_proba(test_features)
 
 #TODO: make more machine readable for webserver
 #print the results

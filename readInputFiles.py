@@ -284,6 +284,7 @@ def readInputFiles(as_features, as_version, rgi_infile, rgi_version, training_fe
             used_smCOG_list = readFeatureFiles.readFeatureList(data_path+"feature_matrices/smCOG_list5.txt")
             used_CDS_list = readFeatureFiles.readFeatureList(data_path+"feature_matrices/CDS_motifs_list5.txt")    
             used_pk_consensus_list = readFeatureFiles.readFeatureList(data_path+"feature_matrices/pk_nrp_consensus_list5.txt")
+        #TODO: as version 6
         if rgi_version == 3:
             used_resistance_genes_list = readFeatureFiles.readFeatureList(data_path+"feature_matrices/CARD_gene_list.txt")
         else:
