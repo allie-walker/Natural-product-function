@@ -18,21 +18,6 @@ import numpy as np
 import readInputFiles
 import joblib
 
-SSN_pfam_names = ["Thiolase, N-terminal domain","ABC transporter","Acyl transferase domain","AAA domain",
-                 "ABC-2 family transporter protein","Acyl-CoA dehydrogenase, C-terminal domain","Acyl-CoA dehydrogenase, N-terminal domain",
-                 "Alcohol dehydrogenase GroES-like domain","Alpha/beta hydrolase family","Aminotransferase class I and II",
-                 "Beta-ketoacyl synthase, C-terminal domain","Beta-ketoacyl synthase, N-terminal domain","Cytochrome P450","DegT/DnrJ/EryC1/StrS aminotransferase family",
-                 "Enoyl-(Acyl carrier protein) reductase","Erythronolide synthase docking","FAD binding domain","Glycosyl transferase family 2",
-                 "Glycosyltransferase family 28 N-terminal domain","Glycosyl transferases group 1","Glycosyltransferase like family 2","Glyoxalase/Bleomycin resistance protein/Dioxygenase superfamily",
-                 "KR domain","Lanthionine synthetase C-like protein",
-                 "Major Facilitator Superfamily","Methyltransferase small domain","Methyltransferase domain",
-                 "NAD dependent epimerase/dehydratase family","NDP-hexose 2,3-dehydratase",
-                 "O-methyltransferase","Oxidoreductase family, C-terminal alpha/beta domain","Oxidoreductase family, NAD-binding Rossmann fold",
-                 "Phosphopantetheine attachment site","Polyketide cyclase / dehydrase and lipid transport","Polyketide synthase dehydratase",
-                 "Protein of unknown function (DUF1205)",
-                 "short chain dehydrogenase","SnoaL-like domain","SpaB C-terminal domain",
-                 "Sugar (and other) transporter","transcriptional_regulatory_protein,_c_terminal_domains","Thioesterase superfamily","ubiE/COQ5 methyltransferase family","UDP-glucoronosyl and UDP-glucosyl transferase","YcaO-like family",
-                 "Zinc-binding dehydrogenase","pyridine_nucleotide-disulphide_oxidoreductase"]
 
 #read arguments given by user
 parser = argparse.ArgumentParser()
@@ -40,12 +25,16 @@ parser.add_argument('antismash_results',help='file containing the antismash resu
 parser.add_argument('rgi_results',help='file containing the rgi results for the cluster')
 parser.add_argument('--output', help='set directory to write predictions to, default write to current directory') 
 parser.add_argument('--seed', help='random seed to use for training classifiers',type=int) 
-parser.add_argument('--no_SSN', help="don't use pfam subfamilies in classification, program will run faster with only small impact on accuracy (default: use sub-PFAMs)", nargs='?', default=False, const=True)
+parser.add_argument('--no_SSN', help="deprecated: use v1 for SSN features", nargs='?', default=True, const=True)
 parser.add_argument('--blastp_path', help="path to blastp executable, only neeeded if using SSN, default is blastp")
 parser.add_argument('--write_features', help='set directory to write features to, default do not write features') 
-parser.add_argument('--antismash_version', help='version of antismash used to generate antismash input file, supported versions are 4 and 5, defualt 5') 
+parser.add_argument('--antismash_version', help='version of antismash used to generate antismash input file, supported versions are 4 and 5, enter 0 for not using an rgi file, defualt 0') 
 parser.add_argument('--rgi_version', help='version of rgi used to generate antismash input file, supported versions are 3 and 5, default 5') 
+parser.add_argument('--webserver_output', help="output more basic machine readable format", nargs='?', default=False, const=True)
+parser.add_argument('--database_version', help='version of database, default 1') 
 
+
+#TODO: remove ssn and all related code
 
 args = parser.parse_args()
 
@@ -82,7 +71,7 @@ if args.rgi_version == "5":
 elif args.rgi_version == "3":
     rgi_version = 3
 elif args.rgi_version == None:
-    rgi_version = 5
+    rgi_version = 0
 else:
     print("please enter a valid rgi version, program currently accepts output from versions 3 and 5")
     exit()
@@ -97,6 +86,9 @@ elif args.antismash_version == None:
 else:
     print("please enter a valid antismash version, program currently accepts output from versions 4 and 5")
     exit()
+    
+database_version = 1
+#TODO: add parsing for different database versions
 
     
 #check validity of files and directories given by user
@@ -110,6 +102,7 @@ if not os.access(out_directory, os.W_OK):
     exit()    
 
 #read the list of features
+#TODO: automate this?
 try:    
     training_SSN_features = readFeatureFiles.readFeatureMatrix(data_path+"feature_matrices/SSN.csv")
     if antismash_version == 4:  
@@ -213,8 +206,8 @@ if "/" in cluster_name:
     cluster_name = cluster_name[cluster_name.rfind("/")+1:len(cluster_name)]
 cluster_name = cluster_name[0:cluster_name.find(".gbk")] 
 if not no_SSN:   
-    test_SSN_feature_matrix= SSN_tools.generateSSNFeatureMatrix([antismash_infilename], SSN_pfam_names, SSN_list, included_SSN_clusters, blastp_path,cluster_name, data_path) 
-    test_features = readInputFiles.readInputFiles(as_features, antismash_version, rgi_infile, rgi_version, training_features, data_path, test_SSN_feature_matrix)
+    print("SSNs no lonter supported in this version, please use version 1 for SSNs features")
+    exit()
 else:
     test_features = readInputFiles.readInputFiles(as_features, antismash_version, rgi_infile, rgi_version, training_features, data_path, [])
 
@@ -225,93 +218,66 @@ if write_features:
         test_features_out.write(str(f)+",")
     test_features_out.close()
 
-#do classifications
-is_not_unknown_indices = readFeatureFiles.getNotUnknownIndices(is_unknown)
-target_unannotated = is_antibacterial*((targets_gram_pos+targets_gram_neg)<1)
-is_not_unknown_indices_gram =  readFeatureFiles.getNotUnknownIndices(is_unknown + target_unannotated)
 
-is_antibacterial = (is_antibacterial >= 1).astype(int)
-is_antieuk = ((is_antifungal + is_cytotoxic)>=1).astype(int)
-is_gram_pos = (targets_gram_pos >= 1).astype(int)
-is_gram_neg = (targets_gram_neg >= 1).astype(int)
+#Load appropriate pretrained model
+try:
+    if antismash_version == 4 and rgi_version == 3 and database_version == 1:
+        model_name = "antismash4rgi3"
+    elif antismash_version == 4 and rgi_version == 5 and database_version == 1:
+        model_name = "antismash4rgi5"
+    elif antismash_version == 4 and rgi_version == 0 and database_version == 1:
+        model_name = "antismash4"
+    elif antismash_version == 5 and rgi_version == 3 and database_version == 1:
+        model_name = "antismash5rgi3"
+    elif antismash_version == 5 and rgi_version == 5 and database_version == 1:
+        model_name = "antismash5rgi5"
+    elif antismash_version == 5 and rgi_version == 0 and database_version == 1:
+        model_name = "antismash5"
+    elif antismash_version == 6 and rgi_version == 3 and database_version == 1:
+        model_name = "antismash6rgi3"
+    elif antismash_version == 6 and rgi_version == 5 and database_version == 1:
+        model_name = "antismash6rgi5"
+    elif antismash_version == 6 and rgi_version == 0 and database_version == 1:
+        model_name = "antismash6"
+    else:
+        #throw error
+        print("options not compatible with this version")
+        exit()
+except:
+   print("could not find pretrained model, make sure all data files are in correct location")
+   exit() 
 
-training_features = training_features[is_not_unknown_indices,:]
+svm_bacterial, tree_bacterial, log_bacterial = joblib.load(data_path+"trained_models/" + model_name + "_antibacterial.sav")
+svm_bacterial_prob = svm_bacterial.predict_proba(test_features)
+tree_bacterial_prob = tree_bacterial.predict_proba(test_features)
+log_bacterial_prob = log_bacterial.predict_proba(test_features)
 
-y_vars = []
-y_vars = is_antibacterial
-y_vars = y_vars[is_not_unknown_indices]
+svm_antieuk, tree_antieuk, log_antieuk = joblib.load(data_path+"trained_models/" + model_name + "_antieuk.sav")
+svm_antieuk_prob = svm_antieuk.predict_proba(test_features)
+tree_antieuk_prob = tree_antieuk.predict_proba(test_features)
+log_antieuk_prob = log_antieuk.predict_proba(test_features)
 
+svm_antifungal, tree_antifungal, log_antifungal = joblib.load(data_path+"trained_models/" + model_name + "_antifungal.sav")
+svm_antifungal_prob = svm_antifungal.predict_proba(test_features)
+tree_antifungal_prob = tree_antifungal.predict_proba(test_features)
+log_antifungal_prob = log_antifungal.predict_proba(test_features)
 
-#TODO: load pretrained model for all versions of classifier for all prediction methods
-#antibacterial predictions
-svm_params = {"kernel":'rbf',"C":10,"gamma":0.1}
-tree_params = {"depth":100,"n":50}
-log_params = {"l1_ratio":.05,"alpha":.01}
+svm_antitumor, tree_antitumor, log_antitumor = joblib.load(data_path+"trained_models/" + model_name + "_cytotoxic_antitumor.sav")
+svm_antitumor_prob = svm_antitumor.predict_proba(test_features)
+tree_antitumor_prob = tree_antitumor.predict_proba(test_features)
+log_antitumor_prob = log_antitumor.predict_proba(test_features)
+    
+svm_antigramneg, tree_antigramneg, log_antigramneg = joblib.load(data_path+"trained_models/" + model_name + "_antigramneg.sav")
+svm_antigramneg_prob = svm_antigramneg.predict_proba(test_features)
+tree_antigramneg_prob = tree_antigramneg.predict_proba(test_features)
+log_antigramneg_prob = log_antigramneg.predict_proba(test_features)
 
-if antismash_version == 4 and rgi_version == 3:
-    svm_bacterial_prob, tree_bacterial_prob, log_bacterial_prob = joblib.load("trained_models/antismash4rgi3_antibacterial.sav")
-else:
-    tree_bacterial_prob = tools.treePrediction(training_features, y_vars, test_features, tree_params, seed)
-    log_bacterial_prob = tools.logPrediction(training_features, y_vars, test_features, log_params, seed)
-    svm_bacterial_prob = tools.svmPrediction(training_features, y_vars, test_features, svm_params, seed)
+svm_antigrampos, tree_antigrampos, log_antigrampos = joblib.load(data_path+"trained_models/" + model_name + "_antigrampos.sav")
+svm_antigrampos_prob = svm_antigrampos.predict_proba(test_features)
+tree_antigrampos_prob = tree_antigrampos.predict_proba(test_features)
+log_antigrampos_prob = log_antigrampos.predict_proba(test_features)
 
-#antieuk predictions
-y_vars = is_antieuk
-y_vars = y_vars[is_not_unknown_indices]
-svm_params = {"kernel":'linear',"C":.1}
-tree_params = {"depth":None,"n":25}
-log_params = {"l1_ratio":.001,"alpha":.001}
-
-tree_antieuk_prob = tools.treePrediction(training_features, y_vars, test_features, tree_params, seed)
-log_antieuk_prob = tools.logPrediction(training_features, y_vars, test_features, log_params, seed)
-svm_antieuk_prob = tools.svmPrediction(training_features, y_vars, test_features, svm_params, seed)
-
-
-#antifungal predictions
-y_vars = (is_antifungal >= 1).astype(int)
-y_vars = y_vars[is_not_unknown_indices]
-svm_params = {"kernel":'rbf',"C":10,"gamma":0.1}
-tree_params = {"depth":50,"n":50}
-log_params = {"l1_ratio":.0001,"alpha":.01}
-
-tree_antifungal_prob = tools.treePrediction(training_features, y_vars, test_features, tree_params, seed)
-log_antifungal_prob = tools.logPrediction(training_features, y_vars, test_features, log_params, seed)
-svm_antifungal_prob = tools.svmPrediction(training_features, y_vars, test_features, svm_params, seed)
-
-#cytotox and antitumor predictons
-y_vars = (is_cytotoxic >= 1).astype(int)
-y_vars = y_vars[is_not_unknown_indices]
-svm_params = {"kernel":'rbf',"C":100,"gamma":0.1}
-tree_params = {"depth":50,"n":100}
-log_params = {"l1_ratio":.001,"alpha":.001}
-
-tree_antitumor_prob = tools.treePrediction(training_features, y_vars, test_features, tree_params, seed)
-log_antitumor_prob = tools.logPrediction(training_features, y_vars, test_features, log_params, seed)
-svm_antitumor_prob = tools.svmPrediction(training_features, y_vars, test_features, svm_params, seed)
-
-#antigram negative predictions
-y_vars = is_gram_neg
-y_vars = y_vars[is_not_unknown_indices_gram]
-training_features = original_training_features[is_not_unknown_indices_gram,:]
-svm_params = {"kernel":'rbf',"C":10,"gamma":0.01}
-tree_params = {"depth":100,"n":25}
-log_params = {"l1_ratio":.05,"alpha":.001}
-
-tree_antigramneg_prob = tools.treePrediction(training_features, y_vars, test_features, tree_params, seed)
-log_antigramneg_prob = tools.logPrediction(training_features, y_vars, test_features, log_params, seed)
-svm_antigramneg_prob = tools.svmPrediction(training_features, y_vars, test_features, svm_params, seed)
-
-#antigram positive predictions
-y_vars = is_gram_pos
-y_vars = y_vars[is_not_unknown_indices_gram]
-svm_params = {"kernel":'rbf',"C":10,"gamma":.01}
-tree_params = {"depth":100,"n":50}
-log_params = {"l1_ratio":.001,"alpha":.001}
-
-tree_antigrampos_prob = tools.treePrediction(training_features, y_vars, test_features, tree_params, seed)
-log_antigrampos_prob = tools.logPrediction(training_features, y_vars, test_features, log_params, seed)
-svm_antigrampos_prob = tools.svmPrediction(training_features, y_vars, test_features, svm_params, seed)
-
+#TODO: make more machine readable for webserver
 #print the results
 print("probabilities of antibacterial activity:")
 print("tree classifier: " + str(tree_bacterial_prob[0,1])  + " logistic regression classifier: " + str(log_bacterial_prob[0,1]) + " svm classifier: " + str(svm_bacterial_prob[0,1]))
@@ -327,7 +293,7 @@ print("probabilities of antitumor or cytotoxic activity:")
 print("tree classifier: " + str(tree_antitumor_prob[0,1])  + " logistic regression classifier: " + str(log_antitumor_prob[0,1]) + " svm classifier: " + str(svm_antitumor_prob[0,1]))
                       
 #write output
-
+#TODO: remove for webserver?
 
 try:
     if out_directory == "":

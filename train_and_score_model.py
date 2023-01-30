@@ -164,15 +164,24 @@ def validateClassifier(outfile, classifier, features, y_vars, regression):
 #classification to train classifiers on 
 #options: antibacterial, antieuk (defined as antifungal, antitumor, or cytotoxic), antifungal, cytotoxic_antitumor, antigramneg, antigrampos
 #TODO: change to iterate through all classifications
-classifications = ["antibacteria", "antieuk","antifungal", "cytotoxic_antitumor", "antigramneg","antigrampos"]
+classifications = ["antibacterial", "antieuk","antifungal", "cytotoxic_antitumor", "antigramneg","antigrampos"]
 classification = "antibacterial" 
 #set random seed so results are consistent
 random.seed(1)
 
 
 
+
+#training_set_dir = "feature_matrices/antismash4"
+#training_set_dir = "feature_matrices/antismash4rgi3"
+#training_set_dir = "feature_matrices/antismash4rgi5"
+#training_set_dir = "feature_matrices/antismash5"
+#training_set_dir = "feature_matrices/antismash5rgi3"
+#training_set_dir = "feature_matrices/antismash5rgi5"
 #training_set_dir = "feature_matrices/antismash6"
-training_set_dir = "feature_matrices/antismash4rgi3"
+#training_set_dir = "feature_matrices/antismash6rgi3"
+training_set_dir = "feature_matrices/antismash6rgi5"
+
 training_set_name = training_set_dir[training_set_dir.find("/"):len(training_set_dir)]
 #TODO: add feature directory as an argument
 #TODO: test antiSMASH6
@@ -184,12 +193,12 @@ feature_list = readFeatureFiles.readFeatureNames(feature_dir, feature_type_list)
 #read classes
 #TODO: change so that these are read from training set directory
 #TODO: change is_unknown to give information about specific labels that migth be unknown
-is_antibacterial = readFeatureFiles.readClassesMatrix("feature_matrices/antismash4rgi3/classifications/is_antibacterial.csv")
-is_antifungal = readFeatureFiles.readClassesMatrix("feature_matrices/antismash4rgi3/classifications/is_antifungal.csv")
-is_cytotoxic = readFeatureFiles.readClassesMatrix("feature_matrices/antismash4rgi3/classifications/is_cytotoxic.csv")
-is_unknown = readFeatureFiles.readClassesMatrix("feature_matrices/antismash4rgi3/classifications/is_unknown.csv")
-targets_gram_pos = readFeatureFiles.readClassesMatrix("feature_matrices/antismash4rgi3/classifications/targets_gram_pos.csv")
-targets_gram_neg = readFeatureFiles.readClassesMatrix("feature_matrices/antismash4rgi3/classifications/targets_gram_neg.csv")
+is_antibacterial = readFeatureFiles.readClassesMatrix(training_set_dir + "/classifications/is_antibacterial.csv")
+is_antifungal = readFeatureFiles.readClassesMatrix(training_set_dir + "/classifications/is_antifungal.csv")
+is_cytotoxic = readFeatureFiles.readClassesMatrix(training_set_dir + "/classifications/is_cytotoxic.csv")
+is_unknown = readFeatureFiles.readClassesMatrix(training_set_dir + "/classifications/is_unknown.csv")
+targets_gram_pos = readFeatureFiles.readClassesMatrix(training_set_dir + "/classifications/targets_gram_pos.csv")
+targets_gram_neg = readFeatureFiles.readClassesMatrix(training_set_dir + "/classifications/targets_gram_neg.csv")
 full_cluster_list = readFeatureFiles.readClusterList(training_set_dir + "/cluster_list.txt")
 is_not_unknown_indices = readFeatureFiles.getNotUnknownIndices(is_unknown)
 target_unannotated = is_antibacterial*((targets_gram_pos+targets_gram_neg)<1)
@@ -237,7 +246,6 @@ features = features[new_order,:]
 
 
 #parameter values to test for logistic regression
-#TODO: change variable search to a grid search
 log_params = [{'log__loss':['log'], 'log__penalty':['elasticnet'], 'log__max_iter':[100],\
                'log__alpha':[.5, .3, .2, .1, .01,  .001,  .0001,.00001,.000001],\
               'log__l1_ratio':[.5, .2, .05, .1, .01, .001, .0001], 'log__tol':[None]}]
