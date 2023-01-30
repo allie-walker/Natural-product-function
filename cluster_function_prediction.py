@@ -229,6 +229,7 @@ if not no_SSN:
     print("SSNs no lonter supported in this version, please use version 1 for SSNs features")
     exit()
 else:
+    #TODO: need to fix this for antismash6
     test_features = readInputFiles.readInputFiles(as_features, antismash_version, rgi_infile, rgi_version, training_features, feature_dir, [])
 
 
