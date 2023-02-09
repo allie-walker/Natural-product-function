@@ -165,7 +165,7 @@ def validateClassifier(outfile, classifier, features, y_vars, regression):
 #options: antibacterial, antieuk (defined as antifungal, antitumor, or cytotoxic), antifungal, cytotoxic_antitumor, antigramneg, antigrampos
 #TODO: change to iterate through all classifications
 classifications = ["antibacterial", "antieuk","antifungal", "cytotoxic_antitumor", "antigramneg","antigrampos"]
-classification = "antieuk" 
+classification = "antigramneg" 
 #set random seed so results are consistent
 random.seed(1)
 
