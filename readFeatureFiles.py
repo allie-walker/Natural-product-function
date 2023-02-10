@@ -19,14 +19,15 @@ def getFeatureFilesList(dir_name):
         file_list = os.listdir(dir_name)
     except:
         sys.exit("Feature directory not found")
-  
+    
     #get all csv
     csv_files = [f for f in file_list if ".csv" in f]
+    
     if len(csv_files) == 0:
         sys.exit("No csv files found in directory")
    
     feature_type_list = [f[0:f.find(".csv")] for f in csv_files]
-
+    
     return feature_type_list
 
 def readFeatures(dir_name, feature_type_list):
@@ -57,7 +58,21 @@ def readFeatureNames(dir_name, feature_type_list):
             feature_list = current_list
         else:
             feature_list = feature_list + current_list
+        i += 1
     return feature_list
+
+def readFeaturesByType(dir_name, feature_type_list):
+    """Reads features and returns a dictionary matching type to list of features
+    """
+    featureTypeDict = {}
+    for f in feature_type_list:
+        in_file = f + "_list.txt"
+        try:
+            current_list = readFeatureList(dir_name + in_file)
+        except:
+            sys.exit("No matching label file found for " + f + ".csv, this label file should be called " + in_file)
+        featureTypeDict[f] = current_list
+    return featureTypeDict
 
 #TODO: write this method
 def readClassifications(dir_name):

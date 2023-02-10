@@ -124,13 +124,24 @@ else:
     #TODO: throw error
     print("options not compatible with this version")
     exit()
-try:    
-    feature_dir = data_path + "feature_matrices/" + model_name  + "/features/"
+try:
+    feature_dir = data_path + "feature_matrices/" + model_name  + "/features/"   
     feature_type_list = readFeatureFiles.getFeatureFilesList(feature_dir)
+    feature_type_list_lower = [f.lower() for f in feature_type_list]
+    feature_type_list_sort_ind = [i[0] for i in sorted(enumerate(feature_type_list_lower), key=lambda x:x[1])]
+    feature_type_list_sorted = []
+    for i in feature_type_list_sort_ind:
+        feature_type_list_sorted.append(feature_type_list[i])
+    feature_type_list = feature_type_list_sorted
+    print(feature_type_list)
     training_features = readFeatureFiles.readFeatures(feature_dir, feature_type_list)
     feature_list = readFeatureFiles.readFeatureNames(feature_dir, feature_type_list)
+    feature_list_by_type = readFeatureFiles.readFeaturesByType(feature_dir, feature_type_list)
+    print(training_features.shape)
+    print(len(feature_list))
 except:
     print("did not find file containing training data, please keep script located in directory downloaded from github")
+
 
 
 #read the list of features
@@ -230,8 +241,10 @@ if not no_SSN:
     exit()
 else:
     #TODO: need to fix this for antismash6
-    test_features = readInputFiles.readInputFiles(as_features, antismash_version, rgi_infile, rgi_version, training_features, feature_dir, [])
-
+    print("here")
+    print(feature_type_list)
+    test_features = readInputFiles.readInputFiles(as_features, antismash_version, rgi_infile, rgi_version, training_features, feature_type_list, feature_list_by_type, data_path+ "feature_matrices/"+model_name)
+print("here2")
 
 #TODO: fix this for webserver
 if write_features:
@@ -275,7 +288,7 @@ try:
 except:
    print("could not find pretrained model, make sure all data files are in correct location")
    exit() 
-
+print("here2")
 #TODO: make more machine readable for webserver
 #print the results
 print("probabilities of antibacterial activity:")

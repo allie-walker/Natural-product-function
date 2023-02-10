@@ -166,27 +166,33 @@ def validateClassifier(outfile, classifier, features, y_vars, regression):
 #TODO: change to iterate through all classifications
 classifications = ["antibacterial", "antieuk","antifungal", "cytotoxic_antitumor", "antigramneg","antigrampos"]
 classification = "antigramneg" 
-#set random seed so results are consistent
+#set random seed so antibacterial are consistent
 random.seed(1)
 
 
 
 
 #training_set_dir = "feature_matrices/antismash4"
-#training_set_dir = "feature_matrices/antismash4rgi3"
+training_set_dir = "feature_matrices/antismash4rgi3"
 #training_set_dir = "feature_matrices/antismash4rgi5"
 #training_set_dir = "feature_matrices/antismash5"
 #training_set_dir = "feature_matrices/antismash5rgi3"
 #training_set_dir = "feature_matrices/antismash5rgi5"
 #training_set_dir = "feature_matrices/antismash6"
 #training_set_dir = "feature_matrices/antismash6rgi3"
-training_set_dir = "feature_matrices/antismash6rgi5"
+#training_set_dir = "feature_matrices/antismash6rgi5"
 
 training_set_name = training_set_dir[training_set_dir.find("/"):len(training_set_dir)]
 #TODO: add feature directory as an argument
 #TODO: test antiSMASH6
 feature_dir = training_set_dir  + "/features/"
 feature_type_list = readFeatureFiles.getFeatureFilesList(feature_dir)
+feature_type_list_lower = [f.lower() for f in feature_type_list]
+feature_type_list_sort_ind = [i[0] for i in sorted(enumerate(feature_type_list_lower), key=lambda x:x[1])]
+feature_type_list_sorted = []
+for i in feature_type_list_sort_ind:
+    feature_type_list_sorted.append(feature_type_list[i])
+feature_type_list = feature_type_list_sorted
 features = readFeatureFiles.readFeatures(feature_dir, feature_type_list)
 feature_list = readFeatureFiles.readFeatureNames(feature_dir, feature_type_list)
 
@@ -208,7 +214,6 @@ is_antibacterial = (is_antibacterial >= 1).astype(int)
 is_antieuk = ((is_antifungal + is_cytotoxic)>=1).astype(int)
 is_gram_pos = (targets_gram_pos >= 1).astype(int)
 is_gram_neg = (targets_gram_neg >= 1).astype(int)
-
 
 #process features for chosen classification
 y_vars = []
@@ -242,6 +247,7 @@ if classification == "antigrampos":
 new_order = makeRandomOrder(0, y_vars)
 y_vars = y_vars[new_order]
 features = features[new_order,:]
+
 
 
 
