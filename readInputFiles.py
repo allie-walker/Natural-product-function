@@ -269,40 +269,6 @@ def readInputFiles(as_features, as_version, rgi_infile, rgi_version, training_fe
     nrp_monomers_pHMM = {}
     nrp_monomers_predicat = {}
     nrp_monomers_sandpuma= {}
-    try:
-            
-        """if as_version == 4:
-            print("here1")
-            print(data_path+"features/pks_nrps_type_list.txt")
-            used_pks_nrps_type_list = readFeatureFiles.readFeatureList(data_path+"/features/pks_nrps_type_list.txt")
-            used_pk_signature_list = readFeatureFiles.readFeatureList(data_path+"/features/pk_signature_list.txt")
-            used_pk_minowa_list = readFeatureFiles.readFeatureList(data_path+"/features/pk_minowa_list.txt")
-            used_pk_consensus_list = readFeatureFiles.readFeatureList(data_path+"/features/pk_consensus_list.txt")
-            
-            used_nrp_stachelhaus_list = readFeatureFiles.readFeatureList(data_path+"/features/nrp_stachelhaus_list.txt")
-            used_nrp_nrps_predictor_list = readFeatureFiles.readFeatureList(data_path+"/features/nrp_nrpspredictor_list.txt")
-            used_nrp_pHMM_list = readFeatureFiles.readFeatureList(data_path+"/features/nrp_pHMM_list.txt")
-            used_nrp_predicat_list = readFeatureFiles.readFeatureList(data_path+"/features/nrp_predicat_list.txt")
-            used_nrp_sandpuma_list = readFeatureFiles.readFeatureList(data_path+"/features/nrp_sandpuma_list.txt")
-        
-        
-            used_pfam_list = readFeatureFiles.readFeatureList(data_path+"/features/PFAM_list.txt")
-            used_CDS_list = readFeatureFiles.readFeatureList(data_path+"/features/CDS_motifs_list.txt")
-            used_smCOG_list = readFeatureFiles.readFeatureList(data_path+"/features/SMCOG_list.txt")
-            print("here2")
-        if as_version == 5:
-            used_pfam_list = readFeatureFiles.readFeatureList(data_path+"/features/pfam_list5.txt")
-            used_smCOG_list = readFeatureFiles.readFeatureList(data_path+"/features/smCOG_list5.txt")
-            used_CDS_list = readFeatureFiles.readFeatureList(data_path+"/features/CDS_motifs_list5.txt")    
-            used_pk_consensus_list = readFeatureFiles.readFeatureList(data_path+"/features/pk_nrp_consensus_list5.txt")
-        #TODO: as version 6
-        if rgi_version == 3:
-            used_resistance_genes_list = readFeatureFiles.readFeatureList(data_path+"/features/CARD_gene_list.txt")
-        else:
-            used_resistance_genes_list = readFeatureFiles.readFeatureList(data_path+"/features/CARD5_gene_list.txt")"""
-    except:
-        print("did not find file containing training data, please keep script located in directory downloaded from github")
-        exit()
 
     if as_version == 4:
         as_results = readAntismash4(as_features)
@@ -323,7 +289,6 @@ def readInputFiles(as_features, as_version, rgi_infile, rgi_version, training_fe
     pfam_start_index = 0
     pfam_end_index =0
     for t in training_features_types:
-        print(t)
         if t in as_results:
             if t == "PFAM":
                 pfam_start_index = i
@@ -331,12 +296,10 @@ def readInputFiles(as_features, as_version, rgi_infile, rgi_version, training_fe
             if t == "PFAM":
                 pfam_end_index = i
         elif "CARD" in t:
-            print(resistance_genes)
             card_start_index = i
             (test_features, i) = tools.addToFeatureMatrix(test_features, i, resistance_genes, feature_list_by_type[t])
             card_end_index = i
         else:
-            print(t)
             raise Exception("Unknown feature type")
 
     checkForHits(test_features, (pfam_start_index, pfam_end_index), (card_start_index, card_end_index))

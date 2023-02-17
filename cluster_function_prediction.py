@@ -7,6 +7,7 @@ Created on Tue Mar 26 11:38:35 2019
 """
 #TODO: add error handling for reading of files
 #TODO: warning for not finding any features
+#TODO: handle not having rgi file
 
 import argparse
 import cluster_function_prediction_tools as tools
@@ -22,7 +23,7 @@ import joblib
 #read arguments given by user
 parser = argparse.ArgumentParser()
 parser.add_argument('antismash_results',help='file containing the antismash results for the cluster in a genbank file')
-parser.add_argument('rgi_results',help='file containing the rgi results for the cluster')
+parser.add_argument('--rgi_results',help='file containing the rgi results for the cluster')
 parser.add_argument('--output', help='set directory to write predictions to, default write to current directory') 
 parser.add_argument('--seed', help='random seed to use for training classifiers',type=int) 
 parser.add_argument('--no_SSN', help="deprecated: use v1 for SSN features", nargs='?', default=True, const=True)
@@ -37,8 +38,10 @@ parser.add_argument('--database_version', help='version of database, default 1')
 #TODO: remove ssn and all related code
 
 args = parser.parse_args()
-
-data_path = os.path.dirname(sys.argv[0]) + "/"
+if not args.webserver_output:
+    data_path = os.path.dirname(sys.argv[0]) + "/"
+else:
+    data_path = "./"
 
 if args.write_features == None:
     write_features = False
@@ -65,13 +68,13 @@ if args.output == None:
     out_directory = "./"
 else:
     out_directory = args.output
-    
-if args.rgi_version == "5":
+ 
+if  args.rgi_version == None and rgi_infilename == None:
+    rgi_version = 0
+elif args.rgi_version == "5":
     rgi_version = 5
 elif args.rgi_version == "3":
-    rgi_version = 3
-elif args.rgi_version == None:
-    rgi_version = 0
+    rgi_version = 3    
 else:
     print("please enter a valid rgi version, program currently accepts output from versions 3 and 5")
     exit()
@@ -92,7 +95,9 @@ database_version = 1
 
     
 #check validity of files and directories given by user
-if not tools.checkIfFileExists(antismash_infilename, "antismash") or not tools.checkIfFileExists(rgi_infilename, "rgi"):
+if not tools.checkIfFileExists(antismash_infilename, "antismash"):
+    exit()
+if rgi_infilename is not None and rgi_version != 0 and tools.checkIfFileExists(rgi_infilename, "rgi"):
     exit()
 if not os.path.isdir(out_directory):
     print("The given out directory does not exist, please enter a valid directory")
@@ -146,49 +151,6 @@ except:
 
 #read the list of features
 #TODO: automate this?
-"""try:    
-    training_SSN_features = readFeatureFiles.readFeatureMatrix(data_path+"feature_matrices/SSN.csv")
-    if antismash_version == 4:  
-        training_pfam_features = readFeatureFiles.readFeatureMatrix(data_path+"feature_matrices/PFAM.csv")
-        training_smCOG_features = readFeatureFiles.readFeatureMatrix(data_path+"feature_matrices/SMCOG.csv")
-        #SSN_calc_features = readFeatureFiles.readFeatureMatrixFloat("gene_feature_matrices/test_compounds_SSN.csv")
-        training_CDS_features = readFeatureFiles.readFeatureMatrix(data_path+"feature_matrices/CDS_motifs.csv")
-        
-        training_pks_nrps_type_features = readFeatureFiles.readFeatureMatrix(data_path+"feature_matrices/pks_nrps_type.csv")
-        training_pk_signature_features = readFeatureFiles.readFeatureMatrix(data_path+"feature_matrices/pk_signature.csv")
-        training_pk_minowa_features = readFeatureFiles.readFeatureMatrix(data_path+"feature_matrices/pk_minowa.csv")
-        training_pk_consensus_features = readFeatureFiles.readFeatureMatrix(data_path+"feature_matrices/pk_consensus.csv")
-        
-        training_nrp_stachelhaus_features = readFeatureFiles.readFeatureMatrix(data_path+"feature_matrices/nrp_stachelhaus.csv")
-        training_nrp_nrpspredictor_features = readFeatureFiles.readFeatureMatrix(data_path+"feature_matrices/nrp_nrpspredictor.csv")
-        training_nrp_pHMM_features = readFeatureFiles.readFeatureMatrix(data_path+"feature_matrices/nrp_pHMM.csv")
-        training_nrp_predicat_features = readFeatureFiles.readFeatureMatrix(data_path+"feature_matrices/nrp_predicat.csv")
-        training_nrp_sandpuma_features = readFeatureFiles.readFeatureMatrix(data_path+"feature_matrices/nrp_sandpuma.csv")
-    elif antismash_version == 5:
-        training_pfam_features = readFeatureFiles.readFeatureMatrix(data_path+"feature_matrices/PFAM5.csv")
-        training_smCOG_features = readFeatureFiles.readFeatureMatrix(data_path+"feature_matrices/SMCOG5.csv")
-        training_CDS_features = readFeatureFiles.readFeatureMatrix(data_path+"feature_matrices/CDS_motifs5.csv")        
-        training_pk_consensus_features = readFeatureFiles.readFeatureMatrix(data_path+"feature_matrices/pk_nrp_consensus5.csv")
-
-        
-    if rgi_version == 3:
-        training_card_features = readFeatureFiles.readFeatureMatrix(data_path+"feature_matrices/CARD_gene.csv")        
-        used_resistance_genes_list = readFeatureFiles.readFeatureList(data_path+"feature_matrices/CARD_gene_list.txt")
-    elif rgi_version == 5:
-        training_card_features = readFeatureFiles.readFeatureMatrix(data_path+"feature_matrices/CARD5_genes.csv")
-        used_resistance_genes_list = readFeatureFiles.readFeatureList(data_path+"feature_matrices/CARD5_gene_list.txt")
-    
-    is_antibacterial = readFeatureFiles.readClassesMatrix(data_path+"feature_matrices/is_antibacterial.csv")
-    is_antifungal = readFeatureFiles.readClassesMatrix(data_path+"feature_matrices/is_antifungal.csv")
-    is_cytotoxic = readFeatureFiles.readClassesMatrix(data_path+"feature_matrices/is_cytotoxic.csv")
-    is_unknown = readFeatureFiles.readClassesMatrix(data_path+"feature_matrices/is_unknown.csv")
-    targets_gram_pos = readFeatureFiles.readClassesMatrix(data_path+"feature_matrices/targets_gram_pos.csv")
-    targets_gram_neg = readFeatureFiles.readClassesMatrix(data_path+"feature_matrices/targets_gram_neg.csv")
-    full_cluster_list = readFeatureFiles.readClusterList(data_path+"feature_matrices/cluster_list_CARD.txt")        
-except:
-    print("did not find file containing training data, please keep script located in directory downloaded from github")
-    exit()"""
-
 
 #read the antismash input file
 
@@ -198,36 +160,13 @@ except:
     print("error reading antismash output file")
     exit()
 as_features = record.features
-try:
-    rgi_infile = open(rgi_infilename, 'r')
-except:
-   print("error reading rgi output file")
-   exit() 
-
-"""
-#make the feature matrices for the cluster
-training_features = np.concatenate((training_pfam_features, training_card_features), axis=1)
-training_features = np.concatenate((training_features,  training_smCOG_features), axis=1)
-training_features = np.concatenate((training_features,  training_CDS_features), axis=1)
-if not no_SSN:
-    training_features = np.concatenate((training_features,  training_SSN_features), axis=1)
-if antismash_version == 4:
-    training_features = np.concatenate((training_features,  training_pks_nrps_type_features), axis=1)
-    training_features = np.concatenate((training_features,  training_pk_signature_features), axis=1)
-    training_features = np.concatenate((training_features,  training_pk_minowa_features), axis=1)
-    training_features = np.concatenate((training_features,  training_pk_consensus_features), axis=1)
-    training_features = np.concatenate((training_features,  training_nrp_stachelhaus_features), axis=1)
-    training_features = np.concatenate((training_features,  training_nrp_nrpspredictor_features), axis=1)
-    training_features = np.concatenate((training_features,  training_nrp_pHMM_features), axis=1)
-    training_features = np.concatenate((training_features,  training_nrp_predicat_features), axis=1)
-    training_features = np.concatenate((training_features,  training_nrp_sandpuma_features), axis=1)
-else:
-    training_features = np.concatenate((training_features,  training_pk_consensus_features), axis=1)
-
-original_training_features = training_features"""
-
-
-    
+rgi_infile = None
+if rgi_infilename is not None and rgi_version != 0:
+    try:
+        rgi_infile = open(rgi_infilename, 'r')
+    except:
+        print("error reading rgi output file")
+        exit() 
 
 
 
@@ -237,7 +176,7 @@ if "/" in cluster_name:
     cluster_name = cluster_name[cluster_name.rfind("/")+1:len(cluster_name)]
 cluster_name = cluster_name[0:cluster_name.find(".gbk")] 
 if not no_SSN:   
-    print("SSNs no lonter supported in this version, please use version 1 for SSNs features")
+    print("SSNs no longer supported in this version, please use version 1 for SSNs features")
     exit()
 else:
     #TODO: need to fix this for antismash6
@@ -288,7 +227,7 @@ try:
 except:
    print("could not find pretrained model, make sure all data files are in correct location")
    exit() 
-print("here2")
+
 #TODO: make more machine readable for webserver
 #print the results
 print("probabilities of antibacterial activity:")
