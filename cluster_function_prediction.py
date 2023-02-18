@@ -32,13 +32,14 @@ parser.add_argument('--write_features', help='set directory to write features to
 parser.add_argument('--antismash_version', help='version of antismash used to generate antismash input file, supported versions are 4 and 5, enter 0 for not using an rgi file, defualt 0') 
 parser.add_argument('--rgi_version', help='version of rgi used to generate antismash input file, supported versions are 3 and 5, default 5') 
 parser.add_argument('--webserver_output', help="output more basic machine readable format", nargs='?', default=False, const=True)
+parser.add_argument('--on_webserver', help="change data dir path for webserver", nargs='?', default=False, const=True)
 parser.add_argument('--database_version', help='version of database, default 1') 
 
 
 #TODO: remove ssn and all related code
 
 args = parser.parse_args()
-if not args.webserver_output:
+if not args.on_webserver:
     data_path = os.path.dirname(sys.argv[0]) + "/"
 else:
     data_path = "./"
@@ -76,7 +77,7 @@ elif args.rgi_version == "5":
 elif args.rgi_version == "3":
     rgi_version = 3    
 else:
-    print("please enter a valid rgi version, program currently accepts output from versions 3 and 5")
+    print("ERROR: please enter a valid rgi version, program currently accepts output from versions 3 and 5")
     exit()
 
 antismash_version = 5    
@@ -87,7 +88,7 @@ elif args.antismash_version == "4":
 elif args.antismash_version == None:
     antismash_version = 5
 else:
-    print("please enter a valid antismash version, program currently accepts output from versions 4 and 5")
+    print("ERROR: please enter a valid antismash version, program currently accepts output from versions 4 and 5")
     exit()
     
 database_version = 1
@@ -100,10 +101,10 @@ if not tools.checkIfFileExists(antismash_infilename, "antismash"):
 if rgi_infilename is not None and rgi_version != 0 and tools.checkIfFileExists(rgi_infilename, "rgi"):
     exit()
 if not os.path.isdir(out_directory):
-    print("The given out directory does not exist, please enter a valid directory")
+    print("ERROR: The given out directory does not exist, please enter a valid directory")
     exit()
 if not os.access(out_directory, os.W_OK):
-    print("You do not have permission to write to the given output directory, please use a different directory")
+    print("ERROR: You do not have permission to write to the given output directory, please use a different directory")
     exit()    
 
 #figure out appropriate model name
@@ -127,7 +128,7 @@ elif antismash_version == 6 and rgi_version == 0 and database_version == 1:
     model_name = "antismash6"
 else:
     #TODO: throw error
-    print("options not compatible with this version")
+    print("ERROR: options not compatible with this version")
     exit()
 try:
     feature_dir = data_path + "feature_matrices/" + model_name  + "/features/"   
@@ -138,14 +139,11 @@ try:
     for i in feature_type_list_sort_ind:
         feature_type_list_sorted.append(feature_type_list[i])
     feature_type_list = feature_type_list_sorted
-    print(feature_type_list)
     training_features = readFeatureFiles.readFeatures(feature_dir, feature_type_list)
     feature_list = readFeatureFiles.readFeatureNames(feature_dir, feature_type_list)
     feature_list_by_type = readFeatureFiles.readFeaturesByType(feature_dir, feature_type_list)
-    print(training_features.shape)
-    print(len(feature_list))
 except:
-    print("did not find file containing training data, please keep script located in directory downloaded from github")
+    print("ERROR: did not find file containing training data, please keep script located in directory downloaded from github")
 
 
 
@@ -157,7 +155,7 @@ except:
 try:
     record = SeqIO.read(open(antismash_infilename, 'rU'),"genbank")
 except:
-    print("error reading antismash output file")
+    print("ERROR: error reading antismash output file")
     exit()
 as_features = record.features
 rgi_infile = None
@@ -165,7 +163,7 @@ if rgi_infilename is not None and rgi_version != 0:
     try:
         rgi_infile = open(rgi_infilename, 'r')
     except:
-        print("error reading rgi output file")
+        print("ERROR: error reading rgi output file")
         exit() 
 
 
@@ -176,14 +174,12 @@ if "/" in cluster_name:
     cluster_name = cluster_name[cluster_name.rfind("/")+1:len(cluster_name)]
 cluster_name = cluster_name[0:cluster_name.find(".gbk")] 
 if not no_SSN:   
-    print("SSNs no longer supported in this version, please use version 1 for SSNs features")
+    print("ERROR: SSNs no longer supported in this version, please use version 1 for SSNs features")
     exit()
 else:
     #TODO: need to fix this for antismash6
-    print("here")
-    print(feature_type_list)
     test_features = readInputFiles.readInputFiles(as_features, antismash_version, rgi_infile, rgi_version, training_features, feature_type_list, feature_list_by_type, data_path+ "feature_matrices/"+model_name)
-print("here2")
+
 
 #TODO: fix this for webserver
 if write_features:
@@ -225,40 +221,56 @@ try:
     tree_antigrampos_prob = tree_antigrampos.predict_proba(test_features)
     log_antigrampos_prob = log_antigrampos.predict_proba(test_features)
 except:
-   print("could not find pretrained model, make sure all data files are in correct location")
+   print("ERROR: could not find pretrained model, make sure all data files are in correct location")
    exit() 
 
 #TODO: make more machine readable for webserver
 #print the results
-print("probabilities of antibacterial activity:")
-print("tree classifier: " + str(tree_bacterial_prob[0,1])  + " logistic regression classifier: " + str(log_bacterial_prob[0,1]) + " svm classifier: " + str(svm_bacterial_prob[0,1]))
-print("probabilities of anti-gram positive activity:")
-print("tree classifier: " + str(tree_antigrampos_prob[0,1])  + " logistic regression classifier: " + str(log_antigrampos_prob[0,1]) + " svm classifier: " + str(svm_antigrampos_prob[0,1]))
-print("probabilities of anti-gram negative activity:")
-print("tree classifier: " + str(tree_antigramneg_prob[0,1])  + " logistic regression classifier: " + str(log_antigramneg_prob[0,1]) + " svm classifier: " + str(svm_antigramneg_prob[0,1]))
-print("probabilities of antifungal or antitumor or cytotoxic activity:")
-print("tree classifier: " + str(tree_antieuk_prob[0,1])  + " logistic regression classifier: " + str(log_antieuk_prob[0,1]) + " svm classifier: " + str(svm_antieuk_prob[0,1]))
-print("probabilities of antifungal activity:")
-print("tree classifier: " + str(tree_antifungal_prob[0,1])  + " logistic regression classifier: " + str(log_antifungal_prob[0,1]) + " svm classifier: " + str(svm_antifungal_prob[0,1]))
-print("probabilities of antitumor or cytotoxic activity:")
-print("tree classifier: " + str(tree_antitumor_prob[0,1])  + " logistic regression classifier: " + str(log_antitumor_prob[0,1]) + " svm classifier: " + str(svm_antitumor_prob[0,1]))
+if not args.webserver_output:
+    print("probabilities of antibacterial activity:")
+    print("tree classifier: " + str(tree_bacterial_prob[0,1])  + " logistic regression classifier: " + str(log_bacterial_prob[0,1]) + " svm classifier: " + str(svm_bacterial_prob[0,1]))
+    print("probabilities of anti-gram positive activity:")
+    print("tree classifier: " + str(tree_antigrampos_prob[0,1])  + " logistic regression classifier: " + str(log_antigrampos_prob[0,1]) + " svm classifier: " + str(svm_antigrampos_prob[0,1]))
+    print("probabilities of anti-gram negative activity:")
+    print("tree classifier: " + str(tree_antigramneg_prob[0,1])  + " logistic regression classifier: " + str(log_antigramneg_prob[0,1]) + " svm classifier: " + str(svm_antigramneg_prob[0,1]))
+    print("probabilities of antifungal or antitumor or cytotoxic activity:")
+    print("tree classifier: " + str(tree_antieuk_prob[0,1])  + " logistic regression classifier: " + str(log_antieuk_prob[0,1]) + " svm classifier: " + str(svm_antieuk_prob[0,1]))
+    print("probabilities of antifungal activity:")
+    print("tree classifier: " + str(tree_antifungal_prob[0,1])  + " logistic regression classifier: " + str(log_antifungal_prob[0,1]) + " svm classifier: " + str(svm_antifungal_prob[0,1]))
+    print("probabilities of antitumor or cytotoxic activity:")
+    print("tree classifier: " + str(tree_antitumor_prob[0,1])  + " logistic regression classifier: " + str(log_antitumor_prob[0,1]) + " svm classifier: " + str(svm_antitumor_prob[0,1]))
                       
-#write output
-#TODO: remove for webserver?
+    #write output
 
-try:
-    if out_directory == "":
-        outfile = open(cluster_name + ".txt",'w')
-    else:
-        outfile = open(out_directory + "/" +cluster_name + ".txt",'w')
-except:
-    print("couldn't open output file, please provide an output directory that can be written to")
-    exit()
+    try:
+        if out_directory == "":
+            outfile = open(cluster_name + ".txt",'w')
+        else:
+            outfile = open(out_directory + "/" +cluster_name + ".txt",'w')
+    except:
+        print("couldn't open output file, please provide an output directory that can be written to")
+        exit()
 
-tools.writeProbabilitiesToFile(outfile, "antibacterial", tree_bacterial_prob, log_bacterial_prob, svm_bacterial_prob)
-tools.writeProbabilitiesToFile(outfile, "anti-gram positive", tree_antigrampos_prob, log_antigrampos_prob, svm_antigrampos_prob)
-tools.writeProbabilitiesToFile(outfile, "anti-gram negative", tree_antigramneg_prob, log_antigramneg_prob, svm_antigramneg_prob)
-tools.writeProbabilitiesToFile(outfile, "antifugnal or antitumor or cytotoxic", tree_antieuk_prob, log_antieuk_prob, svm_antieuk_prob)
-tools.writeProbabilitiesToFile(outfile, "antifungal", tree_antifungal_prob, log_antifungal_prob, svm_antifungal_prob)
-tools.writeProbabilitiesToFile(outfile, "antitumor or cytotoxic", tree_antitumor_prob, log_antitumor_prob, svm_antitumor_prob)
-outfile.close()
+    tools.writeProbabilitiesToFile(outfile, "antibacterial", tree_bacterial_prob, log_bacterial_prob, svm_bacterial_prob)
+    tools.writeProbabilitiesToFile(outfile, "anti-gram positive", tree_antigrampos_prob, log_antigrampos_prob, svm_antigrampos_prob)
+    tools.writeProbabilitiesToFile(outfile, "anti-gram negative", tree_antigramneg_prob, log_antigramneg_prob, svm_antigramneg_prob)
+    tools.writeProbabilitiesToFile(outfile, "antifugnal or antitumor or cytotoxic", tree_antieuk_prob, log_antieuk_prob, svm_antieuk_prob)
+    tools.writeProbabilitiesToFile(outfile, "antifungal", tree_antifungal_prob, log_antifungal_prob, svm_antifungal_prob)
+    tools.writeProbabilitiesToFile(outfile, "antitumor or cytotoxic", tree_antitumor_prob, log_antitumor_prob, svm_antitumor_prob)
+    outfile.close()
+else:
+    #will have format Success: \n
+    print("Success:")
+    #ab: tree, log, svm
+    print(str(tree_bacterial_prob[0,1])  + "," + str(log_bacterial_prob[0,1]) + "," + str(svm_bacterial_prob[0,1]))
+    #agrampos: tree, log, svm
+    print(str(tree_antigrampos_prob[0,1])  + "," + str(log_antigrampos_prob[0,1]) + "," + str(svm_antigrampos_prob[0,1]))
+    #antigramneg: tree, log, svm
+    print(str(tree_antigramneg_prob[0,1])  + "," + str(log_antigramneg_prob[0,1]) + "," + str(svm_antigramneg_prob[0,1]))
+    #antieuk: tree, log, svm
+    print(str(tree_antieuk_prob[0,1])  + "," + str(log_antieuk_prob[0,1]) + "," + str(svm_antieuk_prob[0,1]))
+    #antifungal: tree, log, svm
+    print(str(tree_antifungal_prob[0,1])  + "," + str(log_antifungal_prob[0,1]) + "," + str(svm_antifungal_prob[0,1]))
+    #antitumor: tree, log, svm
+    print(str(tree_antitumor_prob[0,1])  + "," + str(log_antitumor_prob[0,1]) + " ," + str(svm_antitumor_prob[0,1]))
+   
