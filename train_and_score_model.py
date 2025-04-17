@@ -173,12 +173,12 @@ random.seed(1)
 
 
 #training_set_dir = "feature_matrices/antismash4"
-training_set_dir = "feature_matrices/antismash4rgi3"
+#training_set_dir = "feature_matrices/antismash4rgi3"
 #training_set_dir = "feature_matrices/antismash4rgi5"
 #training_set_dir = "feature_matrices/antismash5"
 #training_set_dir = "feature_matrices/antismash5rgi3"
 #training_set_dir = "feature_matrices/antismash5rgi5"
-#training_set_dir = "feature_matrices/antismash6"
+training_set_dir = "feature_matrices/antismash6"
 #training_set_dir = "feature_matrices/antismash6rgi3"
 #training_set_dir = "feature_matrices/antismash6rgi5"
 
