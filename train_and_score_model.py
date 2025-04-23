@@ -155,30 +155,29 @@ def validateClassifier(outfile, classifier, features, y_vars, regression):
         outfile.write(str(score) + ",")
     avg_accuracy /= 10.0
     return avg_accuracy
-
-
-        
+    
 
         
 #parameters
 #classification to train classifiers on 
 #options: antibacterial, antieuk (defined as antifungal, antitumor, or cytotoxic), antifungal, cytotoxic_antitumor, antigramneg, antigrampos
-#TODO: change to iterate through all classifications
+#TODO: change to iterate through all classifications/add as argument
+#TODO: add training set as argument
 classifications = ["antibacterial", "antieuk","antifungal", "cytotoxic_antitumor", "antigramneg","antigrampos"]
-classification = "antigramneg" 
+classification = "antibacterial" 
 #set random seed so antibacterial are consistent
 random.seed(1)
 
 
 
 
-#training_set_dir = "feature_matrices/antismash4"
+training_set_dir = "feature_matrices/antismash4"
 #training_set_dir = "feature_matrices/antismash4rgi3"
 #training_set_dir = "feature_matrices/antismash4rgi5"
 #training_set_dir = "feature_matrices/antismash5"
 #training_set_dir = "feature_matrices/antismash5rgi3"
 #training_set_dir = "feature_matrices/antismash5rgi5"
-training_set_dir = "feature_matrices/antismash6"
+#training_set_dir = "feature_matrices/antismash6"
 #training_set_dir = "feature_matrices/antismash6rgi3"
 #training_set_dir = "feature_matrices/antismash6rgi5"
 
@@ -305,8 +304,7 @@ best_tree = gs_tree.best_estimator_
 
 #set random seed so results are consistent
 random.seed(1)
-#include features from SSN 
-include_SSN = True 
+
 #parameters for classifiers
 #TODO: get optimal parameters from search above
 #do analysis, write to file, and visualize
@@ -334,6 +332,17 @@ mean_rnd_log_sd =np.std(b_accuracies["rnd_log"])
 mean_rnd_svm_sd = np.std(b_accuracies["rnd_svm"])
 mean_rnd_tree_sd = np.std(b_accuracies["rnd_tree"])
 
+accuracy_outfile = open("classifier_optimization/" + training_set_name +"_" + classification + ".csv" ,'w')
+accuracy_outfile.write("log,svm,tree,rnd_log,rnd_svm,rnd_tree\n")
+for i in range(0, len(b_accuracies["log"])):
+    accuracy_outfile.write(str(b_accuracies["log"][i]) + ",")
+    accuracy_outfile.write(str(b_accuracies["svm"][i]) + ",")
+    accuracy_outfile.write(str(b_accuracies["tree"][i]) + ",")
+    accuracy_outfile.write(str(b_accuracies["rnd_log"][i]) + ",")
+    accuracy_outfile.write(str(b_accuracies["rnd_svm"][i]) + ",")
+    accuracy_outfile.write(str(b_accuracies["rnd_tree"][i]) + "\n")
+accuracy_outfile.close()
+    
 bar_labels = ["log", "svm", "tree", "rnd log", "rnd svm", "rnd tree"]
 x_pos = np.arange(len(bar_labels))
 means = [mean_log_acc, mean_svm_acc, mean_tree_acc, mean_rnd_log_acc, mean_rnd_svm_acc, mean_rnd_tree_acc]
