@@ -12,9 +12,9 @@ import readInputFiles
 
 #parameters
 feature_count_threshold = 5 #features must occur more then this number of times in dataset to be included
-include_RGI = False
+RGI_type = "None" #None, 5, 3
 input_dir = "antiSMASH6_output/"
-output_dir = "feature_matrices/antismash6_tigrfam/"
+output_dir = "feature_matrices/antismash6/"
 RGI_input_dir = "RGI_output/"
 
 def makeCountsandList(feature_dir):
@@ -97,7 +97,7 @@ NRPS_PKS_list = filterLowCounts(NRPS_PKS_list, NRPS_PKS_total_counts, feature_co
 tigrfam_list = filterLowCounts(tigrfam_list, tigrfam_total_counts, feature_count_threshold)
 
 #write data to files
-cluster_list_out = open(output_dir + "cluster_list_antiSMASH.txt", 'w')
+cluster_list_out = open(output_dir + "cluster_list.txt", 'w')
 for cluster in CDS_motifs:
     cluster_list_out.write(cluster + "\n")   
 cluster_list_out.close()
@@ -111,4 +111,174 @@ writeFeatureMatrixFile(tigrfam_counts, tigrfam_list, output_dir + "features/", "
 #RGI parameters
 e_value_threshold = 0.1 #e value must be less than this threshold for resistance marker to be considered a feature
 threshold = 5 #number of times feature must occur in dataset to be included
+bit_score_threshold = 40 #threshold for RGI5
 
+if RGI_type == "3":
+    resistance_genes = {}
+    resistance_genes_list = []
+    total_counts = {}
+    for f in sorted(os.listdir(input_dir),key=str.lower):
+        if ".txt" not in f:
+            continue
+        in_file = open(input_dir + f, 'r')
+        cluster_name = f[0:f.index(".")]
+        resistance_genes[cluster_name] = {}
+        for line in in_file:
+            if "ORF_ID" in line:
+                continue
+            entries = line.split("\t")
+            e_value = float(entries[7])
+            if e_value > e_value_threshold:
+                continue
+            best_hit = entries[8]
+            hit_names = entries[11]
+            if best_hit not in resistance_genes_list:
+                resistance_genes_list.append(best_hit)
+                total_counts[best_hit] = 0
+            total_counts[best_hit] += 1
+            if best_hit not in resistance_genes[cluster_name]:
+                resistance_genes[cluster_name][best_hit] = 0
+            resistance_genes[cluster_name][best_hit] += 1
+        in_file.close()
+        
+    new_resistance_genes_list = []
+    for gene in resistance_genes_list:
+        if total_counts[gene] >= threshold:
+            new_resistance_genes_list.append(gene)
+    resistance_genes_list = new_resistance_genes_list
+
+    writeFeatureMatrixFile(resistance_genes, resistance_genes_list, output_dir + "features/", "CARD_gene")
+    cluster_list = open(output_dir + "cluster_list_CARD.txt",'w')
+    for cluster in resistance_genes:
+        cluster_list.write(cluster + "\n")
+    cluster_list.close()
+    
+elif RGI_type == "5":
+    for f in sorted(os.listdir(input_dir),key=str.lower):
+        if ".txt" not in f:
+            continue
+        in_file = open(input_dir + f, 'r')
+        cluster_name = f[0:f.index(".")]
+        resistance_genes[cluster_name] = {}
+        for line in in_file:
+            if "ORF_ID" in line:
+                continue
+            entries = line.split("\t")
+            bit_score = float(entries[7])
+            if bit_score < bit_score_threshold:
+                continue
+            best_hit = entries[8]
+            if best_hit not in resistance_genes_list:
+                resistance_genes_list.append(best_hit)
+                total_counts[best_hit] = 0
+                total_counts[best_hit] += 1
+            if best_hit not in resistance_genes[cluster_name]:
+                resistance_genes[cluster_name][best_hit] = 0
+            resistance_genes[cluster_name][best_hit] += 1
+        in_file.close()
+
+    new_resistance_genes_list = []
+    threshold = 5
+    for gene in resistance_genes_list:
+        if total_counts[gene] >= threshold:
+            new_resistance_genes_list.append(gene)
+    resistance_genes_list = new_resistance_genes_list
+
+    resistance_output = open(output_dir + "features/" + "CARD_genes.csv",'w')
+    cluster_list = open(output_dir + "cluster_list_CARD5.txt",'w')
+    resistance_list_out = open(output_dir + "features/" + "CARD_gene_list.txt",'w')
+    for cluster in resistance_genes:
+        for gene in resistance_genes_list:
+            if gene not in resistance_genes[cluster]:
+                resistance_output.write("0,")
+            else:
+                #resistance_output.write("1,")
+                resistance_output.write(str(resistance_genes[cluster][gene])+",")
+        resistance_output.write("\n")
+        cluster_list.write(cluster + "\n")
+    cluster_list.close()
+    resistance_output.close()
+    for gene in resistance_genes_list:
+        resistance_list_out.write(gene + "\n")
+    resistance_list_out.close()
+
+#read BGC classifications
+cluster_info = open("cluster_list.csv",'r',encoding='cp1252') #a spreadsheet with all clusters to be used and their classifications
+is_antibacterial = {}
+is_antifungal = {}
+is_cytotoxic = {}
+is_unknown = {}
+targets_gram_pos = {}
+targets_gram_neg = {}
+for line in cluster_info:
+    entries = line.split(",")
+    cluster_name = entries[0]
+    if entries[1] == "yes":
+        is_antibacterial[cluster_name] = 1
+    else:
+        is_antibacterial[cluster_name] = 0
+        
+    if entries[2] == "yes":
+        is_antifungal[cluster_name] = 1
+    else:
+        is_antifungal[cluster_name] = 0
+    
+    if "cytotoxic" in entries[3] or "antitumor" in entries[3] or "anti-tumor" in entries[3] or "proliferative" in entries[3]:
+        is_cytotoxic[cluster_name] = 1
+    else:
+        is_cytotoxic[cluster_name] = 0
+        
+    if "unknown" in entries[3]:
+        is_unknown[cluster_name] =1
+    else:
+        is_unknown[cluster_name]=0
+        
+    if "gram pos" in entries[7]:
+        targets_gram_pos[cluster_name] = 1
+    else:
+        targets_gram_pos[cluster_name] = 0
+    if "gram neg" in entries[7]:
+        targets_gram_neg[cluster_name] = 1
+    else:
+        targets_gram_neg[cluster_name] = 0
+        
+#write classses
+antibacterial_out = open(output_dir + "classifications/is_antibacterial.csv",'w')
+antifungal_out = open(output_dir + "classifications/is_antifungal.csv",'w')
+cytotoxic_out = open(output_dir + "classifications/is_cytotoxic.csv",'w')
+unknown_out = open(output_dir + "classifications/is_unknown.csv",'w')
+targets_gram_pos_out = open(output_dir + "classifications/targets_gram_pos.csv",'w')
+targets_gram_neg_out = open(output_dir + "classifications/targets_gram_neg.csv",'w')
+
+#read cluster list from features
+cluster_list_input = open(output_dir + "/cluster_list.txt")
+cluster_list = []
+for line in cluster_list_input:
+    c = line.replace("\n", "")
+    cluster_list.append(c)
+cluster_list_input.close()
+
+#only write clusters that have feature data
+for c in cluster_list:
+    if c in is_antibacterial:
+        antibacterial_out.write(str(is_antibacterial[c])+"\n")
+        antifungal_out.write(str(is_antifungal[c]) + "\n")
+        cytotoxic_out.write(str(is_cytotoxic[c]) + "\n")
+        unknown_out.write(str(is_unknown[c]) + "\n")
+        targets_gram_neg_out.write(str(targets_gram_neg[c])+"\n")
+        targets_gram_pos_out.write(str(targets_gram_pos[c])+"\n")
+    else:
+        print("cluster " + c + " is not in class spreadsheet")
+        antibacterial_out.write("0\n")
+        antifungal_out.write("0\n")
+        cytotoxic_out.write("0\n")
+        unknown_out.write("1\n")
+        targets_gram_neg_out.write("0\n")
+        targets_gram_pos_out.write("0\n")
+        
+antibacterial_out.close()
+antifungal_out.close()
+cytotoxic_out.close()
+unknown_out.close()
+targets_gram_neg_out.close()
+targets_gram_pos_out.close()
