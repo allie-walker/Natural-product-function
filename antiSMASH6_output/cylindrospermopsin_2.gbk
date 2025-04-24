@@ -1,0 +1,819 @@
+LOCUS       BGC0000979.1            6921 bp    DNA     linear   UNK 01-JAN-1980
+DEFINITION  Cylindrospermopsin biosynthetic gene cluster.
+ACCESSION   BGC0000979
+VERSION     BGC0000979.1
+KEYWORDS    .
+SOURCE      
+  ORGANISM  .
+            .
+COMMENT     ##antiSMASH-Data-START##
+            Version      :: 6.1.0
+            Run date     :: 2022-09-19 20:54:20
+            ##antiSMASH-Data-END##
+FEATURES             Location/Qualifiers
+     gene            complement(<1..997)
+                     /gene="cyrC"
+     CDS             complement(<1..997)
+                     /NRPS_PKS="Domain: PKS_KS(Hybrid-KS) (34-331). E-value:
+                     4.1e-124. Score: 406.5. Matches aSDomain:
+                     nrpspksdomains_cyrC_PKS_KS.1"
+                     /NRPS_PKS="type: PKS/NRPS-like protein"
+                     /codon_start=1
+                     /db_xref="GI:295293731"
+                     /gene="cyrC"
+                     /gene_functions="biosynthetic-additional
+                     (rule-based-clusters) hyb_KS"
+                     /gene_functions="biosynthetic-additional (smcogs)
+                     SMCOG1022:Beta-ketoacyl synthase (Score: 181.1; E-value:
+                     6e-55)"
+                     /gene_kind="biosynthetic-additional"
+                     /product="polyketide synthase"
+                     /protein_id="ADF88260.1"
+                     /sec_met_domain="hyb_KS (E-value: 7.7e-135, bitscore:
+                     437.6, seeds: 33, tool: rule-based-clusters)"
+                     /transl_table=11
+                     /translation="MSQPNYGILMKNALNEINSLRSQLAAVEAQKNESIAIVGMSCRFP
+                     GGATTPERFWVLLREGISAITEIPADRWDVDKYYDADPTSSGKMHTRYGGFLNEVDTFE
+                     PSFFNIAAREAVSMDPQQRLLLEVSWEALESGNIVPATLFDSSTGVFIGIGGSNYKSLM
+                     IENRSRIGKTDLYELSGTDVSVAAGRISYVLGLMGPSFVIDTACSSSLVSVHQACQSLR
+                     QRECDLALAGGVGLLIDPDEMIGLSQGGMLAPDGSCKTFDANANGYVRGEGCGMIVLKR
+                     LSDATADGDNILAIIRGSMVNHDGHSSGLTAPRGPAQVSVIKQALDRAGIA"
+     source          1..6921
+                     /collection_date="2004"
+                     /country="Germany"
+                     /db_xref="taxon:459665"
+                     /mol_type="genomic DNA"
+                     /organism="Aphanizomenon sp. 10E9"
+                     /strain="10E9"
+     misc_feature    <1..>6921
+                     /note="cylindrospermopsin biosynthesis gene cluster"
+     protocluster    1..6921
+                     /aStool="rule-based-clusters"
+                     /category="NRPS"
+                     /contig_edge="True"
+                     /core_location="[2738:>6921](+)"
+                     /cutoff="0"
+                     /detection_rule="cds((PP-binding or NAD_binding_4) and
+                     (AMP-binding or A-OX))"
+                     /neighbourhood="20000"
+                     /product="NRPS-like"
+                     /protocluster_number="1"
+                     /tool="antismash"
+     proto_core      2739..>6921
+                     /aStool="rule-based-clusters"
+                     /tool="antismash"
+                     /cutoff="0"
+                     /detection_rule="cds((PP-binding or NAD_binding_4) and
+                     (AMP-binding or A-OX))"
+                     /neighbourhood="20000"
+                     /product="NRPS-like"
+                     /protocluster_number="1"
+     protocluster    1..6921
+                     /aStool="rule-based-clusters"
+                     /category="PKS"
+                     /contig_edge="True"
+                     /core_location="[2738:>6921](+)"
+                     /cutoff="20000"
+                     /detection_rule="cds(PKS_AT and (PKS_KS or ene_KS or mod_KS
+                     or hyb_KS or itr_KS or tra_KS))"
+                     /neighbourhood="20000"
+                     /product="T1PKS"
+                     /protocluster_number="2"
+                     /tool="antismash"
+     proto_core      2739..>6921
+                     /aStool="rule-based-clusters"
+                     /tool="antismash"
+                     /cutoff="20000"
+                     /detection_rule="cds(PKS_AT and (PKS_KS or ene_KS or mod_KS
+                     or hyb_KS or itr_KS or tra_KS))"
+                     /neighbourhood="20000"
+                     /product="T1PKS"
+                     /protocluster_number="2"
+     cand_cluster    1..6921
+                     /SMILES="NC([*])C(=O)O"
+                     /candidate_cluster_number="1"
+                     /contig_edge="True"
+                     /detection_rules="cds(PKS_AT and (PKS_KS or ene_KS or
+                     mod_KS or hyb_KS or itr_KS or tra_KS))"
+                     /detection_rules="cds((PP-binding or NAD_binding_4) and
+                     (AMP-binding or A-OX))"
+                     /kind="chemical_hybrid"
+                     /product="T1PKS"
+                     /product="NRPS-like"
+                     /protoclusters="2"
+                     /protoclusters="1"
+                     /tool="antismash"
+     region          1..6921
+                     /candidate_cluster_numbers="1"
+                     /contig_edge="True"
+                     /product="T1PKS"
+                     /product="NRPS-like"
+                     /region_number="1"
+                     /rules="cds(PKS_AT and (PKS_KS or ene_KS or mod_KS or
+                     hyb_KS or itr_KS or tra_KS))"
+                     /rules="cds((PP-binding or NAD_binding_4) and (AMP-binding
+                     or A-OX))"
+                     /tool="antismash"
+     PFAM_domain     complement(5..121)
+                     /aSDomain="Ketoacyl-synt_C"
+                     /aSTool="fullhmmer"
+                     /database="34.0"
+                     /db_xref="PF02801.24"
+                     /description="Beta-ketoacyl synthase, C-terminal domain"
+                     /detection="hmmscan"
+                     /domain_id="fullhmmer_cyrC_0002"
+                     /evalue="1.80E-05"
+                     /label="cyrC"
+                     /locus_tag="cyrC"
+                     /protein_end="331"
+                     /protein_start="292"
+                     /score="24.8"
+                     /tool="antismash"
+                     /translation="LAIIRGSMVNHDGHSSGLTAPRGPAQVSVIKQALDRAGI"
+     aSDomain        complement(5..895)
+                     /ASF="found active site cysteine: True, scaffold matched
+                     GSSS: True"
+                     /aSDomain="PKS_KS"
+                     /aSTool="nrps_pks_domains"
+                     /database="nrpspksdomains.hmm"
+                     /detection="hmmscan"
+                     /domain_id="nrpspksdomains_cyrC_PKS_KS.1"
+                     /domain_subtype="Hybrid-KS"
+                     /evalue="4.10E-124"
+                     /label="cyrC_PKS_KS.1"
+                     /locus_tag="cyrC"
+                     /protein_end="331"
+                     /protein_start="34"
+                     /score="406.5"
+                     /tool="antismash"
+                     /translation="IAIVGMSCRFPGGATTPERFWVLLREGISAITEIPADRWDVDKYY
+                     DADPTSSGKMHTRYGGFLNEVDTFEPSFFNIAAREAVSMDPQQRLLLEVSWEALESGNI
+                     VPATLFDSSTGVFIGIGGSNYKSLMIENRSRIGKTDLYELSGTDVSVAAGRISYVLGLM
+                     GPSFVIDTACSSSLVSVHQACQSLRQRECDLALAGGVGLLIDPDEMIGLSQGGMLAPDG
+                     SCKTFDANANGYVRGEGCGMIVLKRLSDATADGDNILAIIRGSMVNHDGHSSGLTAPRG
+                     PAQVSVIKQALDRAGI"
+     PFAM_domain     complement(143..901)
+                     /aSDomain="ketoacyl-synt"
+                     /aSTool="fullhmmer"
+                     /database="34.0"
+                     /db_xref="PF00109.28"
+                     /description="Beta-ketoacyl synthase, N-terminal domain"
+                     /detection="hmmscan"
+                     /domain_id="fullhmmer_cyrC_0001"
+                     /evalue="3.30E-95"
+                     /label="cyrC"
+                     /locus_tag="cyrC"
+                     /protein_end="285"
+                     /protein_start="32"
+                     /score="318.5"
+                     /tool="antismash"
+                     /translation="ESIAIVGMSCRFPGGATTPERFWVLLREGISAITEIPADRWDVDK
+                     YYDADPTSSGKMHTRYGGFLNEVDTFEPSFFNIAAREAVSMDPQQRLLLEVSWEALESG
+                     NIVPATLFDSSTGVFIGIGGSNYKSLMIENRSRIGKTDLYELSGTDVSVAAGRISYVLG
+                     LMGPSFVIDTACSSSLVSVHQACQSLRQRECDLALAGGVGLLIDPDEMIGLSQGGMLAP
+                     DGSCKTFDANANGYVRGEGCGMIVLKRLSDA"
+     CDS_motif       complement(179..217)
+                     /aSTool="nrps_pks_domains"
+                     /database="abmotifs"
+                     /detection="hmmscan"
+                     /domain_id="nrpspksmotif_cyrC_0003"
+                     /evalue="1.10E-05"
+                     /label="PKSI-KS_m4"
+                     /locus_tag="cyrC"
+                     /protein_end="273"
+                     /protein_start="260"
+                     /score="18.0"
+                     /tool="antismash"
+                     /translation="FDANANGYVRGEG"
+     CDS_motif       complement(359..406)
+                     /aSTool="nrps_pks_domains"
+                     /database="abmotifs"
+                     /detection="hmmscan"
+                     /domain_id="nrpspksmotif_cyrC_0002"
+                     /evalue="3.90E-07"
+                     /label="PKSI-KS_m3"
+                     /locus_tag="cyrC"
+                     /protein_end="213"
+                     /protein_start="197"
+                     /score="21.8"
+                     /tool="antismash"
+                     /translation="GPSFVIDTACSSSLVS"
+     CDS_motif       complement(617..643)
+                     /aSTool="nrps_pks_domains"
+                     /database="abmotifs"
+                     /detection="hmmscan"
+                     /domain_id="nrpspksmotif_cyrC_0001"
+                     /evalue="3.50E-03"
+                     /label="PKSI-KS_m2"
+                     /locus_tag="cyrC"
+                     /protein_end="127"
+                     /protein_start="118"
+                     /score="10.1"
+                     /tool="antismash"
+                     /translation="DPQQRLLLE"
+     gene            1549..2724
+                     /gene="cyrA"
+     CDS             1549..2724
+                     /codon_start=1
+                     /db_xref="GI:295293732"
+                     /gene="cyrA"
+                     /product="amidinotransferase"
+                     /protein_id="ADF88261.1"
+                     /transl_table=11
+                     /translation="MQTRIVNSWNEWDELKEMVVGIADGAYFEPTEPGNRPALRDKNIA
+                     KMFSFPSGPKKQEVTEKANEELNGLVALLESQGVTVRRPEKHNFGLSVKTPFFEVENQY
+                     CAVCPRDVMITFGNEILEATMSRRSRFFEYLPYRKLVYEYWHKDPDMIWNTAPKPTMQN
+                     AMYREDFWEWLMEDRFERMHDFEFCVTQDEVIFDAADCSRFGRDIFVQESMTTNRAGIR
+                     WLKRHLEPRGFRVHDIHFPLDIFPSHIDCTFVPLAPGVVLVNPDRPIKEGEEKLFMDNG
+                     WQFIEAPLPTSTDDEMPMFCQSSKWLAMNVLSISPKKVICEEQEHPLHELLDKHGFEVY
+                     LIPFRNVFEFGGSLHCATWDIHRTGTCEDYFPKLNYTPVTASTNGVSRFII"
+     PFAM_domain     2470..2637
+                     /aSDomain="ADI"
+                     /aSTool="fullhmmer"
+                     /database="34.0"
+                     /db_xref="PF02274.19"
+                     /description="Arginine deiminase"
+                     /detection="hmmscan"
+                     /domain_id="fullhmmer_cyrA_0003"
+                     /evalue="1.10E-05"
+                     /label="cyrA"
+                     /locus_tag="cyrA"
+                     /protein_end="363"
+                     /protein_start="307"
+                     /score="24.7"
+                     /tool="antismash"
+                     /translation="AMNVLSISPKKVICEEQEHPLHELLDKHGFEVYLIPFRNVFEFGG
+                     SLHCATWDIHR"
+     gene            2739..>6921
+                     /gene="cyrB"
+     CDS             2739..>6921
+                     /NRPS_PKS="Domain: AMP-binding (28-469). E-value: 5.5e-100.
+                     Score: 326.6. Matches aSDomain:
+                     nrpspksdomains_cyrB_AMP-binding.1"
+                     /NRPS_PKS="Domain: PCP (582-649). E-value: 3e-19. Score:
+                     60.9. Matches aSDomain: nrpspksdomains_cyrB_PCP.1"
+                     /NRPS_PKS="Domain: PKS_KS(Hybrid-KS) (676-1110). E-value:
+                     9.9e-159. Score: 520.6. Matches aSDomain:
+                     nrpspksdomains_cyrB_PKS_KS.1"
+                     /NRPS_PKS="Domain: PKS_AT (1210-1393). E-value: 1.1e-71.
+                     Score: 233.5. Matches aSDomain:
+                     nrpspksdomains_cyrB_PKS_AT.1"
+                     /NRPS_PKS="type: PKS/NRPS-like protein"
+                     /codon_start=1
+                     /db_xref="GI:295293733"
+                     /gene="cyrB"
+                     /gene_functions="biosynthetic (rule-based-clusters) T1PKS:
+                     PKS_AT"
+                     /gene_functions="biosynthetic (rule-based-clusters) T1PKS:
+                     hyb_KS"
+                     /gene_functions="biosynthetic (rule-based-clusters)
+                     NRPS-like: AMP-binding"
+                     /gene_functions="biosynthetic (rule-based-clusters)
+                     NRPS-like: PP-binding"
+                     /gene_functions="biosynthetic-additional (smcogs)
+                     SMCOG1002:AMP-dependent synthetase and ligase (Score:
+                     334.9; E-value: 1.1e-101)"
+                     /gene_kind="biosynthetic"
+                     /product="mixed nonribosomal peptide synthetase/ polyketide
+                     synthase"
+                     /protein_id="ADF88262.1"
+                     /sec_met_domain="AMP-binding (E-value: 1.6e-111, bitscore:
+                     360.4, seeds: 400, tool: rule-based-clusters)"
+                     /sec_met_domain="PP-binding (E-value: 5.9e-14, bitscore:
+                     40.2, seeds: 164, tool: rule-based-clusters)"
+                     /sec_met_domain="PKS_AT (E-value: 6e-73, bitscore: 233.5,
+                     seeds: 1682, tool: rule-based-clusters)"
+                     /sec_met_domain="hyb_KS (E-value: 1.2e-170, bitscore:
+                     555.6, seeds: 33, tool: rule-based-clusters)"
+                     /transl_table=11
+                     /translation="MQERESPQILFDGNGTQSEFPDSCIHHLFEDQAAKRPDAIALIDG
+                     EQSLTYGELNVRANHLAQHLLSLGCQPDDLLAICIERSAELFIGLLGILKAGCAYVPLD
+                     VGYPADRIEYMLRDSDARILLTSTDVAKKLALTIPALQECQTVYLDQEIFEYDFHFLAI
+                     AKLLHNQYLRLLHFYFYTLIQQCQATSVSQGIQTQVLPNNLAYCIYTSGSTGNPKGILM
+                     EHRSLVNMLWWHQQTRPSVQGVRTLQFCAVSFDFSCHEIFSTLCLGGILVLVPEAVRQN
+                     PFALAEFISQQKIEKLFLPVIALLQLSEAVNGNKSTSLALCEVITTGEQMQITPAVANL
+                     FQKTGAMLHNHYGATEFQDATTHTLKGNPEGWPTLVPVGRPLHNVQVYILDEAQQPVPL
+                     GGEGEFCIGGIGLARGYHNLPDLTNEKFIPNPFGANENAKKLYRTGDLARYLPDGTIEH
+                     LGRIDHQVKIRGFRVELGEIESVLASHQAVRECAVVAREIAGHTQLVGYIIAKDTLNLS
+                     FDKLEPILRQYSEAVLPEYMIPTRFINISNMPLTPSGKLDRRALPDPKGDRPALSTPLV
+                     KPRTQTEKRLAEIWGSYLAVDIVGTHDNFFDLGGTSLLLTQAHKFLCETFNINLSAVSL
+                     FQYPTIQTLAQYIDCQGDTTSSDTASRHKKVRKKQSGDSNDIAIISVAGRFPGAETIEQ
+                     FWHNLCNGVESITLFSDDELEQTLPELFNNPAYVKAGAVLEGVELFDATFFGYSPKEAA
+                     VTDPQQRILLECAWEAFERAGYNPETYPEPVGVYAGSSLSTYLLNNIGSALGIITEQPF
+                     IETDMEQFQAKIGNDRSYLATRISYKLNLKGPSVNVQTACSTSLVAVHMACQSLISGEC
+                     QMALAGGISVVVPQKGGYLYEEGMVRSQDGHCRAFDAEAQGTIFGNGGGLVLLKRLQDA
+                     LDDNDNIMAVIKATAINNDGALKMGYTAPSVDGQADVISEAIAIADIDASTIGYVEAHG
+                     TATQLGDPIEVAGLARAFQRSTDSVLGKQQCAIGSVKTNIGHLDEAAGIAGLIKAALAL
+                     QYGQIPPSLHYANPNPRIDFDATPFFVNTELREWSRNGYPLRAGVSSFGVGGTNSHIVL
+                     EESPVKQPTLFSSLPERSHHLLTLSAHTQEALHELVQRYIQHNETHLDIDLGDLCFTAN
+                     TGRKHFEHRLAVVAESIPGLQAQLETAQTAISAQKKNAPPTIAFLFTGQGSQYINMGRT
+                     LYDTESTFRAALDRCETILQNLGIESILSVIFGSSEHGLSLDDTAYTQPALFAIEYALY
+                     QLWKSWGIQPSVVIGHSVGEYVSACVAGVFSLEDGLKLIAERGRLIQALPRDGSMVSVM
+                     ASEKRIADIILPYGGQVGIAAINGPQSVVISGQQQAIDAICAILETEGIKS"
+     aSDomain        2823..4145
+                     /aSDomain="AMP-binding"
+                     /aSTool="nrps_pks_domains"
+                     /database="nrpspksdomains.hmm"
+                     /detection="hmmscan"
+                     /domain_id="nrpspksdomains_cyrB_AMP-binding.1"
+                     /evalue="5.50E-100"
+                     /label="cyrB_AMP-binding.1"
+                     /locus_tag="cyrB"
+                     /protein_end="469"
+                     /protein_start="28"
+                     /score="326.6"
+                     /specificity="consensus: X"
+                     /tool="antismash"
+                     /translation="FEDQAAKRPDAIALIDGEQSLTYGELNVRANHLAQHLLSLGCQPD
+                     DLLAICIERSAELFIGLLGILKAGCAYVPLDVGYPADRIEYMLRDSDARILLTSTDVAK
+                     KLALTIPALQECQTVYLDQEIFEYDFHFLAIAKLLHNQYLRLLHFYFYTLIQQCQATSV
+                     SQGIQTQVLPNNLAYCIYTSGSTGNPKGILMEHRSLVNMLWWHQQTRPSVQGVRTLQFC
+                     AVSFDFSCHEIFSTLCLGGILVLVPEAVRQNPFALAEFISQQKIEKLFLPVIALLQLSE
+                     AVNGNKSTSLALCEVITTGEQMQITPAVANLFQKTGAMLHNHYGATEFQDATTHTLKGN
+                     PEGWPTLVPVGRPLHNVQVYILDEAQQPVPLGGEGEFCIGGIGLARGYHNLPDLTNEKF
+                     IPNPFGANENAKKLYRTGDLARYLPDGTIEHLGRIDHQVKIR"
+     PFAM_domain     2823..4145
+                     /aSDomain="AMP-binding"
+                     /aSTool="fullhmmer"
+                     /database="34.0"
+                     /db_xref="PF00501.30"
+                     /description="AMP-binding enzyme"
+                     /detection="hmmscan"
+                     /domain_id="fullhmmer_cyrB_0004"
+                     /evalue="2.20E-90"
+                     /label="cyrB"
+                     /locus_tag="cyrB"
+                     /protein_end="469"
+                     /protein_start="28"
+                     /score="303.4"
+                     /tool="antismash"
+                     /translation="FEDQAAKRPDAIALIDGEQSLTYGELNVRANHLAQHLLSLGCQPD
+                     DLLAICIERSAELFIGLLGILKAGCAYVPLDVGYPADRIEYMLRDSDARILLTSTDVAK
+                     KLALTIPALQECQTVYLDQEIFEYDFHFLAIAKLLHNQYLRLLHFYFYTLIQQCQATSV
+                     SQGIQTQVLPNNLAYCIYTSGSTGNPKGILMEHRSLVNMLWWHQQTRPSVQGVRTLQFC
+                     AVSFDFSCHEIFSTLCLGGILVLVPEAVRQNPFALAEFISQQKIEKLFLPVIALLQLSE
+                     AVNGNKSTSLALCEVITTGEQMQITPAVANLFQKTGAMLHNHYGATEFQDATTHTLKGN
+                     PEGWPTLVPVGRPLHNVQVYILDEAQQPVPLGGEGEFCIGGIGLARGYHNLPDLTNEKF
+                     IPNPFGANENAKKLYRTGDLARYLPDGTIEHLGRIDHQVKIR"
+     aSModule        2823..4685
+                     /complete
+                     /domains="nrpspksdomains_cyrB_AMP-binding.1"
+                     /domains="nrpspksdomains_cyrB_PCP.1"
+                     /locus_tags="cyrB"
+                     /monomer_pairings="X -> X"
+                     /starter_module
+                     /tool="antismash"
+                     /type="nrps"
+     CDS_motif       3009..3050
+                     /aSTool="nrps_pks_domains"
+                     /database="abmotifs"
+                     /detection="hmmscan"
+                     /domain_id="nrpspksmotif_cyrB_0001"
+                     /evalue="4.60E-06"
+                     /label="NRPS-A_a2"
+                     /locus_tag="cyrB"
+                     /protein_end="104"
+                     /protein_start="90"
+                     /score="19.6"
+                     /tool="antismash"
+                     /translation="LGILKAGCAYVPLD"
+     CDS_motif       3351..3410
+                     /aSTool="nrps_pks_domains"
+                     /database="abmotifs"
+                     /detection="hmmscan"
+                     /domain_id="nrpspksmotif_cyrB_0002"
+                     /evalue="2.50E-09"
+                     /label="NRPS-A_a3"
+                     /locus_tag="cyrB"
+                     /protein_end="224"
+                     /protein_start="204"
+                     /score="29.1"
+                     /tool="antismash"
+                     /translation="AYCIYTSGSTGNPKGILMEH"
+     CDS_motif       3666..3686
+                     /aSTool="nrps_pks_domains"
+                     /database="abmotifs"
+                     /detection="hmmscan"
+                     /domain_id="nrpspksmotif_cyrB_0003"
+                     /evalue="7.00E+01"
+                     /label="PKSI-AT-M_m5"
+                     /locus_tag="cyrB"
+                     /protein_end="316"
+                     /protein_start="309"
+                     /score="-2.4"
+                     /tool="antismash"
+                     /translation="AVNGNKS"
+     CDS_motif       3930..4019
+                     /aSTool="nrps_pks_domains"
+                     /database="abmotifs"
+                     /detection="hmmscan"
+                     /domain_id="nrpspksmotif_cyrB_0004"
+                     /evalue="5.40E-13"
+                     /label="NRPS-A_a6"
+                     /locus_tag="cyrB"
+                     /protein_end="427"
+                     /protein_start="397"
+                     /score="41.1"
+                     /tool="antismash"
+                     /translation="PLGGEGEFCIGGIGLARGYHNLPDLTNEKF"
+     CDS_motif       4110..4175
+                     /aSTool="nrps_pks_domains"
+                     /database="abmotifs"
+                     /detection="hmmscan"
+                     /domain_id="nrpspksmotif_cyrB_0005"
+                     /evalue="4.20E-12"
+                     /label="NRPS-A_a8"
+                     /locus_tag="cyrB"
+                     /protein_end="479"
+                     /protein_start="457"
+                     /score="37.9"
+                     /tool="antismash"
+                     /translation="HLGRIDHQVKIRGFRVELGEIE"
+     PFAM_domain     4167..4403
+                     /aSDomain="AMP-binding_C"
+                     /aSTool="fullhmmer"
+                     /database="34.0"
+                     /db_xref="PF13193.8"
+                     /description="AMP-binding enzyme C-terminal domain"
+                     /detection="hmmscan"
+                     /domain_id="fullhmmer_cyrB_0005"
+                     /evalue="1.10E-11"
+                     /label="cyrB"
+                     /locus_tag="cyrB"
+                     /protein_end="555"
+                     /protein_start="476"
+                     /score="45.6"
+                     /tool="antismash"
+                     /translation="EIESVLASHQAVRECAVVAREIAGHTQLVGYIIAKDTLNLSFDKL
+                     EPILRQYSEAVLPEYMIPTRFINISNMPLTPSGK"
+     aSDomain        4485..4685
+                     /aSDomain="PCP"
+                     /aSTool="nrps_pks_domains"
+                     /database="nrpspksdomains.hmm"
+                     /detection="hmmscan"
+                     /domain_id="nrpspksdomains_cyrB_PCP.1"
+                     /evalue="3.00E-19"
+                     /label="cyrB_PCP.1"
+                     /locus_tag="cyrB"
+                     /protein_end="649"
+                     /protein_start="582"
+                     /score="60.9"
+                     /tool="antismash"
+                     /translation="EKRLAEIWGSYLAVDIVGTHDNFFDLGGTSLLLTQAHKFLCETFN
+                     INLSAVSLFQYPTIQTLAQYID"
+     PFAM_domain     4491..4682
+                     /aSDomain="PP-binding"
+                     /aSTool="fullhmmer"
+                     /database="34.0"
+                     /db_xref="PF00550.27"
+                     /description="Phosphopantetheine attachment site"
+                     /detection="hmmscan"
+                     /domain_id="fullhmmer_cyrB_0006"
+                     /evalue="8.50E-11"
+                     /label="cyrB"
+                     /locus_tag="cyrB"
+                     /protein_end="648"
+                     /protein_start="584"
+                     /score="42.1"
+                     /tool="antismash"
+                     /translation="RLAEIWGSYLAVDIVGTHDNFFDLGGTSLLLTQAHKFLCETFNIN
+                     LSAVSLFQYPTIQTLAQYI"
+     PFAM_domain     4761..5528
+                     /aSDomain="ketoacyl-synt"
+                     /aSTool="fullhmmer"
+                     /database="34.0"
+                     /db_xref="PF00109.28"
+                     /description="Beta-ketoacyl synthase, N-terminal domain"
+                     /detection="hmmscan"
+                     /domain_id="fullhmmer_cyrB_0007"
+                     /evalue="3.10E-72"
+                     /label="cyrB"
+                     /locus_tag="cyrB"
+                     /protein_end="930"
+                     /protein_start="674"
+                     /score="243.3"
+                     /tool="antismash"
+                     /translation="NDIAIISVAGRFPGAETIEQFWHNLCNGVESITLFSDDELEQTLP
+                     ELFNNPAYVKAGAVLEGVELFDATFFGYSPKEAAVTDPQQRILLECAWEAFERAGYNPE
+                     TYPEPVGVYAGSSLSTYLLNNIGSALGIITEQPFIETDMEQFQAKIGNDRSYLATRISY
+                     KLNLKGPSVNVQTACSTSLVAVHMACQSLISGECQMALAGGISVVVPQKGGYLYEEGMV
+                     RSQDGHCRAFDAEAQGTIFGNGGGLVLLKRLQDA"
+     aSDomain        4767..6068
+                     /ASF="found active site cysteine: True, scaffold matched
+                     GSSS: False"
+                     /ASF="found active site histidines: True"
+                     /aSDomain="PKS_KS"
+                     /aSTool="nrps_pks_domains"
+                     /database="nrpspksdomains.hmm"
+                     /detection="hmmscan"
+                     /domain_id="nrpspksdomains_cyrB_PKS_KS.1"
+                     /domain_subtype="Hybrid-KS"
+                     /evalue="9.90E-159"
+                     /label="cyrB_PKS_KS.1"
+                     /locus_tag="cyrB"
+                     /protein_end="1110"
+                     /protein_start="676"
+                     /score="520.6"
+                     /tool="antismash"
+                     /translation="IAIISVAGRFPGAETIEQFWHNLCNGVESITLFSDDELEQTLPEL
+                     FNNPAYVKAGAVLEGVELFDATFFGYSPKEAAVTDPQQRILLECAWEAFERAGYNPETY
+                     PEPVGVYAGSSLSTYLLNNIGSALGIITEQPFIETDMEQFQAKIGNDRSYLATRISYKL
+                     NLKGPSVNVQTACSTSLVAVHMACQSLISGECQMALAGGISVVVPQKGGYLYEEGMVRS
+                     QDGHCRAFDAEAQGTIFGNGGGLVLLKRLQDALDDNDNIMAVIKATAINNDGALKMGYT
+                     APSVDGQADVISEAIAIADIDASTIGYVEAHGTATQLGDPIEVAGLARAFQRSTDSVLG
+                     KQQCAIGSVKTNIGHLDEAAGIAGLIKAALALQYGQIPPSLHYANPNPRIDFDATPFFV
+                     NTELREWSRNGYPLRAGVSSFGVGGTNSHIVLEES"
+     aSModule        4767..6917
+                     /domains="nrpspksdomains_cyrB_PKS_KS.1"
+                     /domains="nrpspksdomains_cyrB_PKS_AT.1"
+                     /incomplete
+                     /locus_tags="cyrB"
+                     /tool="antismash"
+                     /type="pks"
+     CDS_motif       5265..5312
+                     /aSTool="nrps_pks_domains"
+                     /database="abmotifs"
+                     /detection="hmmscan"
+                     /domain_id="nrpspksmotif_cyrB_0006"
+                     /evalue="7.40E-06"
+                     /label="PKSI-KS_m3"
+                     /locus_tag="cyrB"
+                     /protein_end="858"
+                     /protein_start="842"
+                     /score="18.0"
+                     /tool="antismash"
+                     /translation="GPSVNVQTACSTSLVA"
+     PFAM_domain     5550..5915
+                     /aSDomain="Ketoacyl-synt_C"
+                     /aSTool="fullhmmer"
+                     /database="34.0"
+                     /db_xref="PF02801.24"
+                     /description="Beta-ketoacyl synthase, C-terminal domain"
+                     /detection="hmmscan"
+                     /domain_id="fullhmmer_cyrB_0008"
+                     /evalue="7.70E-41"
+                     /label="cyrB"
+                     /locus_tag="cyrB"
+                     /protein_end="1059"
+                     /protein_start="937"
+                     /score="138.9"
+                     /tool="antismash"
+                     /translation="MAVIKATAINNDGALKMGYTAPSVDGQADVISEAIAIADIDASTI
+                     GYVEAHGTATQLGDPIEVAGLARAFQRSTDSVLGKQQCAIGSVKTNIGHLDEAAGIAGL
+                     IKAALALQYGQIPPSLHY"
+     CDS_motif       5688..5735
+                     /aSTool="nrps_pks_domains"
+                     /database="abmotifs"
+                     /detection="hmmscan"
+                     /domain_id="nrpspksmotif_cyrB_0007"
+                     /evalue="2.60E-04"
+                     /label="PKSI-KS_m5"
+                     /locus_tag="cyrB"
+                     /protein_end="999"
+                     /protein_start="983"
+                     /score="13.1"
+                     /tool="antismash"
+                     /translation="YVEAHGTATQLGDPIE"
+     CDS_motif       5805..5849
+                     /aSTool="nrps_pks_domains"
+                     /database="abmotifs"
+                     /detection="hmmscan"
+                     /domain_id="nrpspksmotif_cyrB_0008"
+                     /evalue="1.50E-03"
+                     /label="PKSI-KS_m6"
+                     /locus_tag="cyrB"
+                     /protein_end="1037"
+                     /protein_start="1022"
+                     /score="11.1"
+                     /tool="antismash"
+                     /translation="GSVKTNIGHLDEAAG"
+     PFAM_domain     5922..6266
+                     /aSDomain="KAsynt_C_assoc"
+                     /aSTool="fullhmmer"
+                     /database="34.0"
+                     /db_xref="PF16197.7"
+                     /description="Ketoacyl-synthetase C-terminal extension"
+                     /detection="hmmscan"
+                     /domain_id="fullhmmer_cyrB_0009"
+                     /evalue="4.20E-20"
+                     /label="cyrB"
+                     /locus_tag="cyrB"
+                     /protein_end="1176"
+                     /protein_start="1061"
+                     /score="72.4"
+                     /tool="antismash"
+                     /translation="PNPRIDFDATPFFVNTELREWSRNGYPLRAGVSSFGVGGTNSHIV
+                     LEESPVKQPTLFSSLPERSHHLLTLSAHTQEALHELVQRYIQHNETHLDIDLGDLCFTA
+                     NTGRKHFEHRL"
+     PFAM_domain     6366..6911
+                     /aSDomain="Acyl_transf_1"
+                     /aSTool="fullhmmer"
+                     /database="34.0"
+                     /db_xref="PF00698.23"
+                     /description="Acyl transferase domain"
+                     /detection="hmmscan"
+                     /domain_id="fullhmmer_cyrB_0010"
+                     /evalue="6.30E-40"
+                     /label="cyrB"
+                     /locus_tag="cyrB"
+                     /protein_end="1391"
+                     /protein_start="1209"
+                     /score="137.7"
+                     /tool="antismash"
+                     /translation="FLFTGQGSQYINMGRTLYDTESTFRAALDRCETILQNLGIESILS
+                     VIFGSSEHGLSLDDTAYTQPALFAIEYALYQLWKSWGIQPSVVIGHSVGEYVSACVAGV
+                     FSLEDGLKLIAERGRLIQALPRDGSMVSVMASEKRIADIILPYGGQVGIAAINGPQSVV
+                     ISGQQQAIDAICAILETEG"
+     aSDomain        6369..6917
+                     /ASF="(Methyl)Malonyl-CoA specificity inconclusive"
+                     /ASF="found active site serine: True, scaffold matched
+                     GHGE: True"
+                     /aSDomain="PKS_AT"
+                     /aSTool="nrps_pks_domains"
+                     /database="nrpspksdomains.hmm"
+                     /detection="hmmscan"
+                     /domain_id="nrpspksdomains_cyrB_PKS_AT.1"
+                     /evalue="1.10E-71"
+                     /label="cyrB_PKS_AT.1"
+                     /locus_tag="cyrB"
+                     /protein_end="1393"
+                     /protein_start="1210"
+                     /score="233.5"
+                     /specificity="consensus: mal"
+                     /specificity="PKS signature: Malonyl-CoA"
+                     /specificity="Minowa: mal"
+                     /tool="antismash"
+                     /translation="LFTGQGSQYINMGRTLYDTESTFRAALDRCETILQNLGIESILSV
+                     IFGSSEHGLSLDDTAYTQPALFAIEYALYQLWKSWGIQPSVVIGHSVGEYVSACVAGVF
+                     SLEDGLKLIAERGRLIQALPRDGSMVSVMASEKRIADIILPYGGQVGIAAINGPQSVVI
+                     SGQQQAIDAICAILETEGIK"
+     CDS_motif       6372..6419
+                     /aSTool="nrps_pks_domains"
+                     /database="abmotifs"
+                     /detection="hmmscan"
+                     /domain_id="nrpspksmotif_cyrB_0009"
+                     /evalue="1.20E-06"
+                     /label="PKSI-AT-M_m1"
+                     /locus_tag="cyrB"
+                     /protein_end="1227"
+                     /protein_start="1211"
+                     /score="20.8"
+                     /tool="antismash"
+                     /translation="FTGQGSQYINMGRTLY"
+     CDS_motif       6543..6605
+                     /aSTool="nrps_pks_domains"
+                     /database="abmotifs"
+                     /detection="hmmscan"
+                     /domain_id="nrpspksmotif_cyrB_0010"
+                     /evalue="2.00E-04"
+                     /label="PKSI-AT-mM_m2"
+                     /locus_tag="cyrB"
+                     /protein_end="1289"
+                     /protein_start="1268"
+                     /score="14.5"
+                     /tool="antismash"
+                     /translation="TAYTQPALFAIEYALYQLWKS"
+     CDS_motif       6609..6731
+                     /aSTool="nrps_pks_domains"
+                     /database="abmotifs"
+                     /detection="hmmscan"
+                     /domain_id="nrpspksmotif_cyrB_0011"
+                     /evalue="5.00E-27"
+                     /label="PKSI-AT-M_m3"
+                     /locus_tag="cyrB"
+                     /protein_end="1331"
+                     /protein_start="1290"
+                     /score="86.3"
+                     /tool="antismash"
+                     /translation="GIQPSVVIGHSVGEYVSACVAGVFSLEDGLKLIAERGRLIQ"
+     CDS_motif       6825..6863
+                     /aSTool="nrps_pks_domains"
+                     /database="abmotifs"
+                     /detection="hmmscan"
+                     /domain_id="nrpspksmotif_cyrB_0012"
+                     /evalue="4.30E-05"
+                     /label="PKSI-AT-M_m5"
+                     /locus_tag="cyrB"
+                     /protein_end="1375"
+                     /protein_start="1362"
+                     /score="16.6"
+                     /tool="antismash"
+                     /translation="AAINGPQSVVISG"
+ORIGIN
+        1 gtgcaatacc tgctctatct aaggcttgct taatgacaga gacttgtgcg gggcctcttg
+       61 gagcagttaa accactgcta tgaccatcat gattaaccat agacccacga atgatggcaa
+      121 gaatattatc cccatcggct gttgcatccg agagacgttt tagaacaatc atcccacaac
+      181 cttcgcctcg cacatagccg tttgcattgg catcaaatgt tttacaacta ccatcaggtg
+      241 ccagcatccc cccttgagaa agaccaatca tctcatctgg atcaatgagt aaaccgactc
+      301 caccagctag tgctagatca cattctctct gacgcagact ctgacaggct tgatgaactg
+      361 agaccaaaga agatgaacaa gctgtatcaa tcacaaaact gggacccatc aaacccagga
+      421 cataggatat cctgccggca gcaacactca catcagtgcc acttaactca tacaaatcgg
+      481 ttttcccaat ccgactcctg ttttcgatca ttaaagattt gtagttgcta ccaccaatac
+      541 cgataaatac accagtggaa ctatcaaaaa gagttgcagg aacaatatta ccggattcca
+      601 gagcttccca actgacttca agtagcaagc gttgctgtgg atccatgcta acggcttcac
+      661 gggcagcaat attaaagaat gatggctcaa atgtatcaac ttcattcaga aaaccgccgt
+      721 aacgagtatg cattttaccg gacgatgtgg ggtcagcatc ataatattta tcaacatccc
+      781 agcgatcagc agggatttct gtaatggctg atataccctc gcgcagtaat acccaaaaac
+      841 gctctggagt agttgcaccg cctggaaaac ggcaactcat accaacaatg gcaatagact
+      901 catttttttg ggcttctacc gcagctagtt gcgatcgtag gctatttatt tcgttcaacg
+      961 catttttcat caaaatgcca taattgggct gactcatctt tgattatcct gaataattca
+     1021 ccaaaagagc agaaaagagc ctaaaaccaa gtaaaattag gctatacaaa aatttaacta
+     1081 ttacgcggta agtcccttat caaaaataag atatcagact taggattaga acactttact
+     1141 gttgtcactg atggcgaaaa tatttcggtt ctaccgctcc ccttgtgatc aaataccccc
+     1201 ttttatgtgt gcataaccat tgctgtatat gggtttgatc taaattaata ggcgatcgcc
+     1261 tatttttgaa aaaattaaac cctcaaatcc attcagtgta agagttttag gtatatttta
+     1321 ccgaaaatat cataaaggga gcggtagagc caatatttct aaagatgaga attgctgtga
+     1381 taatcctaaa caccttacca agcatgagaa aaaccttaaa cccaagcaga aaaaattagc
+     1441 ccgtaaaaaa aagggaagta aatcaaggaa atgtagggta atatattttt cacaagttta
+     1501 tcaattgtaa tctactgaat caagtagatt aattaaggtg ttgaagagat gcaaacaaga
+     1561 attgtaaata gctggaatga gtgggatgaa ctaaaggaga tggttgtcgg gattgcagat
+     1621 ggtgcttatt ttgaaccaac tgagccaggt aaccgccctg ctttacgcga taagaacatt
+     1681 gccaaaatgt tctcttttcc cagtggtccg aaaaagcaag aggtaacaga gaaagctaat
+     1741 gaggagttga atgggctggt agcgcttcta gaatcacagg gcgtaactgt acgccgccca
+     1801 gagaaacata actttggcct gtctgtgaag acaccattct ttgaggtaga gaatcaatat
+     1861 tgtgcggtct gcccacgtga tgttatgatc acctttggga acgaaattct cgaagcaact
+     1921 atgtcacggc ggtcacgctt ctttgagtat ttaccctatc gcaaactagt ctatgaatat
+     1981 tggcataaag atccagatat gatctggaat actgcgccta aaccgactat gcaaaatgcc
+     2041 atgtaccgcg aagatttctg ggagtggctg atggaagatc gatttgagcg tatgcatgat
+     2101 tttgagttct gcgtcaccca ggatgaggtg atttttgatg cagcagactg tagccgcttt
+     2161 ggccgtgata tttttgtgca ggagtcaatg acgactaatc gtgcagggat tcgctggctc
+     2221 aaacggcatt tagagccgcg tggcttccgc gtgcatgata ttcacttccc actagatatt
+     2281 ttcccatccc acattgattg tacttttgtc cccttagcac ctggggttgt gttagtgaat
+     2341 ccagatcgcc ccatcaaaga gggtgaagag aaactcttca tggataacgg ttggcaattc
+     2401 atcgaagcac ccctccccac ttccaccgac gatgagatgc ctatgttctg ccagtccagt
+     2461 aagtggttgg cgatgaatgt gttaagcatt tcccccaaga aggtcatctg tgaagagcaa
+     2521 gagcatccgc ttcatgagtt gctagataaa cacggctttg aggtctatct aattcccttt
+     2581 cgcaatgtct ttgagtttgg cggttcgctc cattgtgcca cctgggatat ccatcgcacg
+     2641 ggaacctgtg aggattactt ccctaaacta aactatacgc cggtaactgc atcaaccaat
+     2701 ggcgtttctc gcttcatcat ttagtaggtt ttatagttat gcaagagaga gaaagcccac
+     2761 agatactatt tgatgggaat ggaacacaat ctgagtttcc agatagttgc attcaccact
+     2821 tgttcgagga tcaagccgca aagcgaccgg atgcgatcgc tctcattgac ggtgagcaat
+     2881 cccttaccta cggggaacta aatgtacgcg ctaaccacct agcccagcat ctcttgtccc
+     2941 taggctgtca acccgatgac ctcctcgcca tctgcatcga gcgttcggca gaactcttta
+     3001 ttggtttgtt gggtatccta aaagccggat gtgcctatgt gcctttggat gtaggctatc
+     3061 ctgccgatcg catagagtat atgttgcggg actcggatgc gcgtatttta ctaacctcaa
+     3121 cggatgtcgc taagaaactt gccttaacca tacctgcatt gcaagagtgc caaaccgtct
+     3181 atttagatca agagatattt gagtatgatt ttcatttttt agcgatagct aaactattac
+     3241 ataaccaata cttgagatta ttacattttt atttttatac cttgattcag caatgccagg
+     3301 caacttcggt ttcccaaggg attcagacac aggttctccc caataatctc gcttactgca
+     3361 tttacacctc tggctctacc ggaaatccca aagggatctt gatggaacat cgctcactgg
+     3421 tgaatatgct ttggtggcat cagcaaacgc ggccttcggt tcagggtgtt aggacgctgc
+     3481 aattttgtgc agtcagcttt gacttttcct gccatgaaat tttttctacc ctctgtcttg
+     3541 gcgggatatt ggtcttggtg ccagaggcag tgcgccaaaa tccctttgca ttggctgagt
+     3601 tcatcagtca acagaaaatt gaaaaattgt ttcttcccgt tatagcatta ctacagttgt
+     3661 ccgaagctgt gaatgggaat aaaagcacct ccctcgcgct ttgcgaagtt atcactaccg
+     3721 gggagcagat gcagatcaca cctgctgtcg ccaacctctt tcagaaaacc ggggcgatgt
+     3781 tgcataatca ctacggggca acggaatttc aagatgccac cactcatacc ctcaagggca
+     3841 atccagaggg ctggccaaca ctggtgccag tgggtcgtcc actgcacaat gttcaagtgt
+     3901 atattctgga tgaggcacag caacctgtac ctcttggtgg agagggtgaa ttctgtattg
+     3961 gtggtattgg actggctcgt ggctatcaca atttgcctga cctaacgaat gaaaaattta
+     4021 ttcccaatcc atttggggct aatgagaacg ctaaaaaact ctaccgcaca ggggacttgg
+     4081 cacgctacct acccgacggc acgattgagc atttaggacg gatagaccac caggttaaga
+     4141 tccgaggttt ccgcgtggaa ttgggggaaa ttgagtccgt gctggcaagt caccaagctg
+     4201 tgcgtgaatg tgccgttgtg gcacgggaga ttgcaggtca tacacagttg gtagggtata
+     4261 tcatagcaaa ggatacactt aatctcagtt tcgacaaact tgaacctatc ctgcgtcaat
+     4321 attcggaagc ggtgctgcca gaatacatga tacccactcg gttcatcaat atcagtaata
+     4381 tgccgttgac tcccagtggt aaacttgacc gcagggcatt acctgatccc aaaggcgatc
+     4441 gccctgcatt gtctacccca cttgtcaagc ctcgtaccca gacagagaaa cgtttagcag
+     4501 agatttgggg cagttatctt gctgtagata ttgtgggaac ccacgacaat ttctttgatc
+     4561 taggcggtac gtcactgcta ttgactcaag cgcacaaatt cctgtgcgag acctttaata
+     4621 ttaatttgtc cgctgtctca ctctttcaat atcccacaat tcagacattg gcacaatata
+     4681 ttgattgcca aggagacaca acctcaagcg atacagcatc caggcacaag aaagtacgta
+     4741 aaaagcagtc cggtgacagc aacgatattg ccatcatcag tgtggcaggt cgctttccgg
+     4801 gtgctgaaac gattgagcag ttctggcata atctctgtaa tggtgttgaa tccatcaccc
+     4861 tttttagtga tgatgagcta gagcagactt tgcctgagtt atttaataat cccgcttatg
+     4921 tcaaagcagg tgcggtgcta gaaggcgttg aattatttga tgctaccttt tttggctaca
+     4981 gccccaaaga agctgcggtg acagaccctc agcaacggat tttgctagag tgtgcctggg
+     5041 aagcatttga acgggctggc tacaaccccg aaacctatcc agaaccagtt ggtgtttatg
+     5101 ctggttcaag cctgagtacc tatctgctta acaatattgg ctctgcttta ggcataatta
+     5161 ccgagcaacc ctttattgaa acggatatgg agcagtttca ggctaaaatt ggcaatgacc
+     5221 ggagctatct tgctacacgc atctcttaca agctgaatct caagggtcca agcgtcaatg
+     5281 tgcagaccgc ctgctcaacc tcgttagttg cggttcacat ggcctgtcag agtctcatta
+     5341 gtggagagtg tcaaatggct ttagccggtg gtatttctgt ggttgtacca cagaaggggg
+     5401 gctatctcta cgaagaaggc atggttcgtt cccaggatgg tcattgtcgc gcctttgatg
+     5461 ccgaagccca agggactata tttggcaatg gcgggggctt ggttttgctt aaacggttgc
+     5521 aggatgcact ggacgataac gacaacatta tggcagtcat caaagccaca gccatcaaca
+     5581 acgacggtgc gctcaagatg ggctacacag caccgagcgt ggatgggcaa gctgatgtaa
+     5641 ttagcgaggc gattgctatc gctgacatag atgcaagcac cattggctat gtagaagctc
+     5701 atggcacagc cacccaattg ggtgatccga ttgaagtagc agggttagca cgggcatttc
+     5761 agcgtagtac ggacagcgtc cttggtaaac aacaatgcgc tattggatca gttaaaacta
+     5821 atattggcca cttagatgag gcggcaggca ttgccggact gataaaggct gctctagctc
+     5881 tacaatatgg acagattcca ccgagcttgc actatgccaa tcctaatcca cggattgatt
+     5941 ttgacgcaac cccatttttt gtcaacacag aactacgcga atggtcaagg aatggttatc
+     6001 ctctgcgggc gggggtgagt tcttttggtg tgggtggaac taacagccat attgtgctgg
+     6061 aggagtcgcc tgtaaagcaa cccacattgt tctcttcttt gccagaacgc agtcatcatc
+     6121 tgctgacgct ttctgcccat acacaagagg ctttgcatga gttggtgcaa cgctacatcc
+     6181 aacataacga gacacacctt gatattgact taggcgacct ctgtttcaca gccaatacgg
+     6241 gacgcaagca ttttgagcat cgcctagcgg ttgtagccga atcaatccct ggcttacagg
+     6301 cacaactgga aactgcacag actgcgattt cagcacagaa aaaaaatgcc ccgccgacga
+     6361 tcgcattcct gtttacaggt caaggctcac aatacattaa catggggcgc accctctacg
+     6421 atactgaatc aacattccgt gcagcccttg accgatgtga aaccattctc caaaatttag
+     6481 ggatcgagtc cattctctcc gttatttttg gttcatctga gcatggactc tcattagatg
+     6541 acacagccta tacccagccc gcactctttg ccatcgaata cgcgctctat caattatgga
+     6601 agtcgtgggg catccagccc tcagtggtga taggtcatag tgtaggtgaa tatgtgtccg
+     6661 cttgtgtggc gggagtcttt agcttagagg atgggttgaa actgattgca gaacgaggac
+     6721 gactgataca ggcacttcct cgtgatggga gcatggtttc cgtgatggca agcgagaagc
+     6781 gtattgcaga tatcatttta ccttatgggg gacaggtagg gatcgccgcg attaatggac
+     6841 cacaaagtgt tgtaatttct gggcaacagc aagcgattga tgctatttgt gccatcttgg
+     6901 aaactgaggg catcaaaagc a
+//

@@ -1,0 +1,385 @@
+LOCUS       BGC0000525.1            3837 bp    DNA     linear   UNK 01-JAN-1980
+DEFINITION  Lichenicidin VK21 A1 / lichenicidin VK21 A2 biosynthetic gene
+            cluster.
+ACCESSION   BGC0000525
+VERSION     BGC0000525.1
+KEYWORDS    .
+SOURCE      
+  ORGANISM  .
+            .
+COMMENT     ##antiSMASH-Data-START##
+            Version      :: 6.1.0
+            Run date     :: 2022-09-20 00:00:09
+            ##antiSMASH-Data-END##
+FEATURES             Location/Qualifiers
+     source          1..3837
+                     /db_xref="taxon:1402"
+                     /mol_type="genomic DNA"
+                     /organism="Bacillus licheniformis"
+                     /strain="VK21"
+     misc_feature    1..3837
+                     /note="lantibiotic gene cluster"
+     protocluster    1..3837
+                     /aStool="rule-based-clusters"
+                     /category="RiPP"
+                     /contig_edge="True"
+                     /core_location="[678:3837](+)"
+                     /cutoff="20000"
+                     /detection_rule="cds(LANC_like and DUF4135)"
+                     /neighbourhood="10000"
+                     /product="lanthipeptide-class-ii"
+                     /protocluster_number="1"
+                     /tool="antismash"
+     proto_core      679..3837
+                     /aStool="rule-based-clusters"
+                     /tool="antismash"
+                     /cutoff="20000"
+                     /detection_rule="cds(LANC_like and DUF4135)"
+                     /neighbourhood="10000"
+                     /product="lanthipeptide-class-ii"
+                     /protocluster_number="1"
+     cand_cluster    1..3837
+                     /candidate_cluster_number="1"
+                     /contig_edge="True"
+                     /detection_rules="cds(LANC_like and DUF4135)"
+                     /kind="single"
+                     /product="lanthipeptide-class-ii"
+                     /protoclusters="1"
+                     /tool="antismash"
+     region          1..3837
+                     /candidate_cluster_numbers="1"
+                     /contig_edge="True"
+                     /product="lanthipeptide-class-ii"
+                     /region_number="1"
+                     /rules="cds(LANC_like and DUF4135)"
+                     /tool="antismash"
+     gene            complement(37..255)
+                     /gene="lchA2"
+     CDS             complement(37..255)
+                     /codon_start=1
+                     /db_xref="GI:304557384"
+                     /gene="lchA2"
+                     /gene_functions="biosynthetic-additional (lanthipeptides)
+                     predicted lanthipeptide"
+                     /gene_kind="biosynthetic-additional"
+                     /note="lantibiotic precursor; preLchA2"
+                     /product="LchA2"
+                     /protein_id="ADM36017.1"
+                     /transl_table=11
+                     /translation="MKTMKNSAAREAFKGANHPAGMVSEEELKALVGGNDVNPETTPAT
+                     TSSWTCITAGVTVSASLCPTTKCTSRC"
+     CDS_motif       complement(154..255)
+                     /prepeptide="leader"
+                     /note="peptide class: lanthipeptide"
+                     /note="predicted sequence:
+                     MKTMKNSAAREAFKGANHPAGMVSEEELKALVGG"
+                     /locus_tag="lchA2_lanthipeptide"
+                     /aSTool="lanthipeptides"
+                     /tool="antismash"
+     CDS_motif       complement(37..153)
+                     /prepeptide="core"
+                     /locus_tag="lchA2_lanthipeptide"
+                     /peptide="lanthipeptide"
+                     /predicted_class="Class II"
+                     /score="1.50"
+                     /molecular_weight="3635.0"
+                     /monoisotopic_mass="3632.8"
+                     /core_sequence="NDVNPETTPATTSSWTCITAGVTVSASLCPTTKCTSRC"
+                     /aSTool="lanthipeptides"
+                     /tool="antismash"
+                     /leader_sequence="MKTMKNSAAREAFKGANHPAGMVSEEELKALVGG"
+                     /leader_location="[153:255](-)"
+                     /alternative_weights="3653.0"
+                     /alternative_weights="3671.1"
+                     /alternative_weights="3689.1"
+                     /alternative_weights="3707.1"
+                     /alternative_weights="3725.1"
+                     /alternative_weights="3743.1"
+                     /alternative_weights="3761.2"
+                     /alternative_weights="3779.2"
+                     /alternative_weights="3797.2"
+                     /alternative_weights="3815.2"
+                     /alternative_weights="3833.2"
+     aSDomain        complement(52..189)
+                     /aSDomain="TIGR03893"
+                     /aSTool="tigrfam"
+                     /description="lant_SP_1948: type 2 lantibiotic, SP_1948
+                     family"
+                     /detection="hmmscan"
+                     /domain_id="TIGRFam_lchA2_0001"
+                     /evalue="2.20E-09"
+                     /identifier="TIGR03893"
+                     /label="lchA2"
+                     /locus_tag="lchA2"
+                     /protein_end="68"
+                     /protein_start="22"
+                     /score="35.5"
+                     /tool="antismash"
+                     /translation="VSEEELKALVGGNDVNPETTPATTSSWTCITAGVTVSASLCPTTK
+                     C"
+     PFAM_domain     complement(67..192)
+                     /aSDomain="Mersacidin"
+                     /aSTool="fullhmmer"
+                     /database="34.0"
+                     /db_xref="PF16934.7"
+                     /db_xref="GO:0050830"
+                     /description="Two-component Enterococcus faecalis cytolysin
+                     (EFC)"
+                     /detection="hmmscan"
+                     /domain_id="fullhmmer_lchA2_0001"
+                     /evalue="1.60E-06"
+                     /gene_ontologies="GO:0050830: defense response to
+                     Gram-positive bacterium"
+                     /label="lchA2"
+                     /locus_tag="lchA2"
+                     /protein_end="63"
+                     /protein_start="21"
+                     /score="27.9"
+                     /tool="antismash"
+                     /translation="MVSEEELKALVGGNDVNPETTPATTSSWTCITAGVTVSASLC"
+     gene            393..617
+                     /gene="lchA1"
+     CDS             393..617
+                     /codon_start=1
+                     /db_xref="GI:304557385"
+                     /gene="lchA1"
+                     /gene_functions="biosynthetic-additional
+                     (rule-based-clusters) mature_ha"
+                     /gene_functions="biosynthetic-additional (lanthipeptides)
+                     predicted lanthipeptide"
+                     /gene_kind="biosynthetic-additional"
+                     /note="lantibiotic precursor; preLchA1"
+                     /product="LchA1"
+                     /protein_id="ADM36018.1"
+                     /sec_met_domain="mature_ha (E-value: 8e-15, bitscore: 42.1,
+                     seeds: 5, tool: rule-based-clusters)"
+                     /transl_table=11
+                     /translation="MSKKEMILSWKNPMYRTESSYHPAGNILKELQEEEQHSIAGGTIT
+                     LSTCAILSKPLGNNGYLCTVTKECMPSCN"
+     CDS_motif       393..518
+                     /prepeptide="leader"
+                     /note="peptide class: lanthipeptide"
+                     /note="predicted sequence:
+                     MSKKEMILSWKNPMYRTESSYHPAGNILKELQEEEQHSIAGG"
+                     /locus_tag="lchA1_lanthipeptide"
+                     /aSTool="lanthipeptides"
+                     /tool="antismash"
+     CDS_motif       519..617
+                     /prepeptide="core"
+                     /locus_tag="lchA1_lanthipeptide"
+                     /peptide="lanthipeptide"
+                     /predicted_class="Class II"
+                     /score="3.30"
+                     /molecular_weight="3232.8"
+                     /monoisotopic_mass="3230.6"
+                     /core_sequence="TITLSTCAILSKPLGNNGYLCTVTKECMPSCN"
+                     /aSTool="lanthipeptides"
+                     /tool="antismash"
+                     /leader_sequence="MSKKEMILSWKNPMYRTESSYHPAGNILKELQEEEQHSIAG
+                     G"
+                     /leader_location="[392:518](+)"
+                     /alternative_weights="3250.8"
+                     /alternative_weights="3268.8"
+                     /alternative_weights="3286.9"
+                     /alternative_weights="3304.9"
+     PFAM_domain     528..614
+                     /aSDomain="Lantibiotic_a"
+                     /aSTool="fullhmmer"
+                     /database="34.0"
+                     /db_xref="PF14867.8"
+                     /db_xref="GO:0050830"
+                     /description="Lantibiotic alpha"
+                     /detection="hmmscan"
+                     /domain_id="fullhmmer_lchA1_0002"
+                     /evalue="2.90E-19"
+                     /gene_ontologies="GO:0050830: defense response to
+                     Gram-positive bacterium"
+                     /label="lchA1"
+                     /locus_tag="lchA1"
+                     /protein_end="74"
+                     /protein_start="45"
+                     /score="68.6"
+                     /tool="antismash"
+                     /translation="LSTCAILSKPLGNNGYLCTVTKECMPSCN"
+     gene            679..3837
+                     /gene="LchM1"
+     CDS             679..3837
+                     /codon_start=1
+                     /db_xref="GI:304557386"
+                     /gene="LchM1"
+                     /gene_functions="biosynthetic (rule-based-clusters)
+                     lanthipeptide-class-ii: LANC_like"
+                     /gene_functions="biosynthetic (rule-based-clusters)
+                     lanthipeptide-class-ii: DUF4135"
+                     /gene_functions="biosynthetic-additional (smcogs)
+                     SMCOG1070:lanthionine synthetase C family protein (Score:
+                     993.5; E-value: 1.8e-300)"
+                     /gene_kind="biosynthetic"
+                     /note="lantibiotic modifying enzyme"
+                     /product="LchM1"
+                     /protein_id="ADM36019.1"
+                     /sec_met_domain="LANC_like (E-value: 1.1e-91, bitscore:
+                     294.8, seeds: 47, tool: rule-based-clusters)"
+                     /sec_met_domain="DUF4135 (E-value: 1e-115, bitscore: 374.5,
+                     seeds: 79, tool: rule-based-clusters)"
+                     /transl_table=11
+                     /translation="MNEKSAGYHERLPVAQTQSPLVNDKIKYWRSLFGDDDKWLNKAVS
+                     LLSHDPLSSIAQSSVSQSVGLKDSRRGPWQKMQKRIFETPFSYKDSALQDSELLFDSLL
+                     TRFASAAQDALEEQNIILSPPLCRQVLTHLKQTLLQIAHQTLILELNILRLEDQLKGDT
+                     PEMRYLDFNDNFLVNPGYLRTLFNEYPVLLRLLCTKTDYWVQNFSELWKRLRQDREQLQ
+                     AAFHIAGDPVHIELGVGDSHNKGKMAAILTYSDGKKIVYKPRSHDVDDAFQLLLSWIND
+                     RNSGSPLKTLRLINKKRYGWSEFIPHETCHTKKELEGYYTRLGKLLAVLYSIDAVDFHH
+                     ENIIASGEHPVLIDLESIFHQYKKRDEPGSTAADKANYILSRSVRSTGILPFNLYFGRK
+                     NRDKVVDISGMGGQEAQESPFQALQIKGFFRDDIRLEHDRFEIGEAKNLPTLDHQHVPV
+                     ADYLHCIIEGFSAVYRLISDHGESYLATIEHFKNCTVRNILKPTAHYASLLNKSYHPDF
+                     LRDAVDREVFLCRVEKFEDADTDIAAAKTELKELIRGDIPYFLSKPSDTYLLNGEEEPI
+                     AAYFETPSFTRVIKKISSFSDQDLKEQANVIRMSILAAYNARHEKDAIDIDQNHPSPRS
+                     GALQPLAIAEKAADDLAEKRIEGNDGKDVTWISTVIEGVEEISWTISPVSLDLYNGNAG
+                     IGFFMSYLSRFAKRPETYSHITEQCVFAIQRALNELKEKEEFLKYADSGAFTGVSGYLY
+                     FLQHAGTVQKKNEWIELVHEALPVLEAVIEQDENCDIISGSAGALMVLMSLYEQLDDPV
+                     FLKLAERCAGHLLQHKTNIENGAAWKDPHTQNYYTGFAHGTSGIAAALSRFNKVFDSQS
+                     LKKIISQCLAFEKQLYIASEKNWGSKGREQLSVAWCHGAAGILLSRSILRENGVNDPGL
+                     HTDILNALETTVKHGFGNNRSFCHGDFGQLEILRGFREEFSELNTIIQNTEDRLLTYFQ
+                     ENPFSKGVSRGVDSAGLMLGLSGVGYGMLQCQYGEELPELLQLSPPQALIKKNSKAFKR
+                     ENVF"
+     aSDomain        985..3744
+                     /aSDomain="TIGR03897"
+                     /aSTool="tigrfam"
+                     /description="lanti_2_LanM: type 2 lantibiotic biosynthesis
+                     protein LanM"
+                     /detection="hmmscan"
+                     /domain_id="TIGRFam_LchM1_0002"
+                     /evalue="1.30E-299"
+                     /identifier="TIGR03897"
+                     /label="LchM1"
+                     /locus_tag="LchM1"
+                     /protein_end="1022"
+                     /protein_start="102"
+                     /score="994.1"
+                     /tool="antismash"
+                     /translation="LLTRFASAAQDALEEQNIILSPPLCRQVLTHLKQTLLQIAHQTLI
+                     LELNILRLEDQLKGDTPEMRYLDFNDNFLVNPGYLRTLFNEYPVLLRLLCTKTDYWVQN
+                     FSELWKRLRQDREQLQAAFHIAGDPVHIELGVGDSHNKGKMAAILTYSDGKKIVYKPRS
+                     HDVDDAFQLLLSWINDRNSGSPLKTLRLINKKRYGWSEFIPHETCHTKKELEGYYTRLG
+                     KLLAVLYSIDAVDFHHENIIASGEHPVLIDLESIFHQYKKRDEPGSTAADKANYILSRS
+                     VRSTGILPFNLYFGRKNRDKVVDISGMGGQEAQESPFQALQIKGFFRDDIRLEHDRFEI
+                     GEAKNLPTLDHQHVPVADYLHCIIEGFSAVYRLISDHGESYLATIEHFKNCTVRNILKP
+                     TAHYASLLNKSYHPDFLRDAVDREVFLCRVEKFEDADTDIAAAKTELKELIRGDIPYFL
+                     SKPSDTYLLNGEEEPIAAYFETPSFTRVIKKISSFSDQDLKEQANVIRMSILAAYNARH
+                     EKDAIDIDQNHPSPRSGALQPLAIAEKAADDLAEKRIEGNDGKDVTWISTVIEGVEEIS
+                     WTISPVSLDLYNGNAGIGFFMSYLSRFAKRPETYSHITEQCVFAIQRALNELKEKEEFL
+                     KYADSGAFTGVSGYLYFLQHAGTVQKKNEWIELVHEALPVLEAVIEQDENCDIISGSAG
+                     ALMVLMSLYEQLDDPVFLKLAERCAGHLLQHKTNIENGAAWKDPHTQNYYTGFAHGTSG
+                     IAAALSRFNKVFDSQSLKKIISQCLAFEKQLYIASEKNWGSKGREQLSVAWCHGAAGIL
+                     LSRSILRENGVNDPGLHTDILNALETTVKHGFGNNRSFCHGDFGQLEILRGFREEFSEL
+                     NTIIQNTEDRLLTYFQENPFSKGVSRGVDSAGLMLGLSGVGYGMLQCQY"
+     PFAM_domain     1243..2361
+                     /aSDomain="DUF4135"
+                     /aSTool="fullhmmer"
+                     /database="34.0"
+                     /db_xref="PF13575.8"
+                     /description="Domain of unknown function (DUF4135)"
+                     /detection="hmmscan"
+                     /domain_id="fullhmmer_LchM1_0003"
+                     /evalue="3.40E-121"
+                     /label="LchM1"
+                     /locus_tag="LchM1"
+                     /protein_end="561"
+                     /protein_start="188"
+                     /score="405.1"
+                     /tool="antismash"
+                     /translation="YPVLLRLLCTKTDYWVQNFSELWKRLRQDREQLQAAFHIAGDPVH
+                     IELGVGDSHNKGKMAAILTYSDGKKIVYKPRSHDVDDAFQLLLSWINDRNSGSPLKTLR
+                     LINKKRYGWSEFIPHETCHTKKELEGYYTRLGKLLAVLYSIDAVDFHHENIIASGEHPV
+                     LIDLESIFHQYKKRDEPGSTAADKANYILSRSVRSTGILPFNLYFGRKNRDKVVDISGM
+                     GGQEAQESPFQALQIKGFFRDDIRLEHDRFEIGEAKNLPTLDHQHVPVADYLHCIIEGF
+                     SAVYRLISDHGESYLATIEHFKNCTVRNILKPTAHYASLLNKSYHPDFLRDAVDREVFL
+                     CRVEKFEDADTDIAAAKTELKELIRGDIPYFLS"
+     PFAM_domain     2725..3765
+                     /aSDomain="LANC_like"
+                     /aSTool="fullhmmer"
+                     /database="34.0"
+                     /db_xref="PF05147.15"
+                     /description="Lanthionine synthetase C-like protein"
+                     /detection="hmmscan"
+                     /domain_id="fullhmmer_LchM1_0004"
+                     /evalue="9.90E-83"
+                     /label="LchM1"
+                     /locus_tag="LchM1"
+                     /protein_end="1029"
+                     /protein_start="682"
+                     /score="277.7"
+                     /tool="antismash"
+                     /translation="PVSLDLYNGNAGIGFFMSYLSRFAKRPETYSHITEQCVFAIQRAL
+                     NELKEKEEFLKYADSGAFTGVSGYLYFLQHAGTVQKKNEWIELVHEALPVLEAVIEQDE
+                     NCDIISGSAGALMVLMSLYEQLDDPVFLKLAERCAGHLLQHKTNIENGAAWKDPHTQNY
+                     YTGFAHGTSGIAAALSRFNKVFDSQSLKKIISQCLAFEKQLYIASEKNWGSKGREQLSV
+                     AWCHGAAGILLSRSILRENGVNDPGLHTDILNALETTVKHGFGNNRSFCHGDFGQLEIL
+                     RGFREEFSELNTIIQNTEDRLLTYFQENPFSKGVSRGVDSAGLMLGLSGVGYGMLQCQY
+                     GEELPEL"
+ORIGIN
+        1 tgcaaggatg gattcttttg aattttttat gattccctag catcggcttg tacacttagt
+       61 tgttgggcat aatgaagcag aaaccgttac accggctgtg atgcaagtcc aagaagaggt
+      121 tgtagcagga gttgtttcag gattgacgtc atttcctcct accaaagctt tcaattcctc
+      181 ttcggaaacc atccctgccg gatgattggc tcctttgaag gcttcacggg cagctgaatt
+      241 tttcattgtt ttcatgattc tcacctccta gaacgggcaa actatcgaaa ttttcctata
+      301 atttagaatt gactcgccgt tccagtcaaa ttatactata agtacatcaa gaaatcgaca
+      361 aaaaattata aattttctag gaggtggaat atatgtcaaa aaaggaaatg attctttcat
+      421 ggaaaaatcc tatgtatcgc actgaatctt cttatcatcc agcagggaac atccttaaag
+      481 aactccagga agaggaacag cacagcatcg ccggaggcac aatcacgctc agcacttgtg
+      541 ccatcttgag caagccgtta ggaaataacg gatacctgtg tacagtgaca aaagaatgca
+      601 tgccaagctg taactaagtt cccaacgcgg gggccctgct cccgcgttgg catattgata
+      661 gaaaaagagg tcgatagaat gaatgaaaaa tccgccggat atcacgaacg gcttcccgtc
+      721 gcccaaactc aatccccgct cgtaaacgat aagataaagt attggcgttc ccttttcggc
+      781 gatgatgata aatggctcaa taaagcagtt tcattattaa gccatgaccc tttgtcctcc
+      841 atcgcacaat cctcggtatc ccagtcagtc gggctgaaag acagccgtcg cggcccatgg
+      901 cagaagatgc aaaagcggat ctttgaaacg cccttttcct acaaggattc tgctctgcaa
+      961 gattcagaat tgctgttcga ctccctgctg acccgttttg cgtctgcagc acaagatgct
+     1021 ttggaggaac aaaatatcat actttctcct cctctttgcc ggcaggtgct gacacattta
+     1081 aaacagacgc ttcttcaaat tgcccatcaa acattaatac tggaactaaa cattttaagg
+     1141 cttgaagatc aattgaaggg cgacaccccc gaaatgcgct atcttgattt caatgataac
+     1201 tttttagtca atccaggata cctgcggacc ctgttcaacg agtatcccgt attgctgcgc
+     1261 cttctgtgca caaaaaccga ttactgggtt caaaactttt ctgaactgtg gaagaggctg
+     1321 aggcaggacc gcgaacagct gcaggctgca tttcatattg ccggcgatcc tgtccatatt
+     1381 gagcttgggg tgggagactc gcacaataaa ggaaagatgg cagccatcct tacatattcc
+     1441 gatggaaaaa agattgtcta taaaccgaga agccatgatg ttgacgacgc atttcaactt
+     1501 cttctatcat ggatcaatga ccgaaattca ggcagccctt taaaaacttt gagattaatc
+     1561 aataaaaaac ggtacggatg gtccgagttt attcctcacg aaacgtgcca tacgaaaaaa
+     1621 gaactggaag gctactatac acgcctcggc aaacttttgg ccgttttata cagcatcgat
+     1681 gccgttgact ttcaccacga aaacattatc gcctccggcg agcatcctgt tttaatcgat
+     1741 cttgaatcaa tttttcatca atataaaaaa cgagacgaac ccggctcgac cgccgctgac
+     1801 aaagcaaact acattctttc cagatccgta cggtctactg gaatcctgcc gttcaacctt
+     1861 tacttcggaa ggaaaaaccg ggataaagtt gtggacatca gcggaatggg ggggcaggaa
+     1921 gctcaggaat caccgtttca ggcgcttcaa atcaaaggat ttttccgcga tgacattcgc
+     1981 ctggagcatg accgctttga aatcggcgag gcgaaaaatc tgccgacttt agatcaccag
+     2041 catgtccctg tcgcagatta tcttcattgt atcatcgaag gattttcagc agtataccgt
+     2101 ctgatttctg atcatggcga aagctacctg gctacgattg aacattttaa aaactgcacc
+     2161 gttcgaaata ttttgaagcc gacagcgcac tacgcctctc ttttgaataa aagctaccac
+     2221 cctgattttc tcagggatgc ggtagaccgt gaagtgtttt tatgccgggt ggaaaagttt
+     2281 gaagatgcag acacagatat tgcagcggca aaaacagagc tgaaagagct cattcgggga
+     2341 gacatcccct attttctgtc gaagccttca gatacctatt tgctcaatgg cgaagaagaa
+     2401 ccgattgccg cttattttga aacgccgtcc ttcacaagag taattaagaa gatctcatca
+     2461 ttttcagacc aggacttaaa ggaacaagcg aatgtcatac gcatgtcgat tctggctgca
+     2521 tataacgcga gacatgaaaa agacgcaatt gatatagacc aaaatcaccc gagtcctaga
+     2581 tcaggcgcct tgcagccgct cgccatcgct gagaaagcgg ctgacgattt ggctgaaaag
+     2641 cgaattgagg gcaatgatgg aaaggacgtc acttggatca gtacagttat tgaaggcgtc
+     2701 gaagaaatct cttggacgat ctcccctgtc agtcttgatt tatataatgg caatgcaggc
+     2761 atcggatttt ttatgagcta tctgagccgc ttcgcaaaac ggccggagac ttactcgcat
+     2821 ataaccgagc agtgtgtatt tgcgattcag cgagcgttga atgaactgaa ggaaaaagaa
+     2881 gaattcctga agtacgccga ctctggggca ttcacggggg tttccggcta tctgtatttt
+     2941 ctgcagcatg cgggaacggt tcagaaaaaa aacgaatgga tcgaactcgt acatgaagct
+     3001 ctgccagtcc ttgaagctgt catcgaacaa gacgaaaact gcgatatcat cagcggttct
+     3061 gccggtgctc taatggttct gatgtcattg tatgaacaac tggatgaccc ggtttttcta
+     3121 aagctcgccg aaaggtgcgc cggccatttg cttcagcata aaacaaatat tgaaaacgga
+     3181 gcggcctgga aagatcctca tacacaaaac tattacacag gatttgccca cggcacttcc
+     3241 ggcatcgccg cagctttatc ccgattcaat aaagtgtttg attcgcaatc actgaaaaaa
+     3301 atcatttcgc aatgcctggc atttgaaaag cagctgtaca tcgcttccga aaaaaattgg
+     3361 ggatcaaaag gaagagaaca actgtcagtt gcatggtgcc atggcgctgc cggcatattg
+     3421 ttgtcgagaa gcatcctccg agaaaacgga gtcaatgatc ccgggctgca taccgacatc
+     3481 ttgaacgctc ttgaaacaac tgttaagcat gggttcggca ataaccgctc attctgtcac
+     3541 ggcgatttcg gccaactcga aatcctaaga gggttcaggg aagaattcag cgaactgaac
+     3601 accattatac agaatacgga agatcggctg ttgacatatt ttcaagaaaa tccattcagt
+     3661 aaaggggtat cacgaggtgt ggattcagcc gggctcatgc ttggtttaag cggagtcggc
+     3721 tacggcatgc tgcaatgcca atatggagaa gaactgccgg aactgcttca gctcagtccg
+     3781 cctcaagcgc ttatcaaaaa gaacagcaaa gcttttaaaa gagaaaacgt gttttaa
+//

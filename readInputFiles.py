@@ -201,10 +201,67 @@ def readAntismash5(as_features):
             pfam_id = pfam_id[pfam_id.find(" ")+1:len(pfam_id)]
             if domain_description not in pfam_counts:
                 pfam_counts[domain_description] = 0
-            pfam_counts[domain_description] += 1                
-            
+            pfam_counts[domain_description] += 1                           
     return (pfam_counts, CDS_motifs, smCOGs, pk_monomers_consensus)
 
+def readAntismash6(as_features):
+    score_cutoff = 20 #PFAM HMM score to be counted
+    CDS_motifs = {}
+    smCOGs = {}
+    pfam_counts = {}
+    tigrfam_counts = {}
+    NRPS_PKS= {}
+
+    for feature in as_features:
+        consensus = ""
+        if feature.type == "aSDomain":
+            if feature.qualifiers["aSTool"][0] == "tigrfam":
+                score = float(feature.qualifiers["score"][0])
+                if score < score_cutoff:
+                    continue
+                domain_description = feature.qualifiers["description"][0]
+                tigrfam_id = feature.qualifiers["identifier"][0]
+                tigrfam_id = tigrfam_id[tigrfam_id.find(" ")+1:len(tigrfam_id)]
+                if domain_description not in tigrfam_counts:
+                    tigrfam_counts[domain_description] = 0
+                tigrfam_counts[domain_description] += 1
+            else:
+                if 'label' not in feature.qualifiers: 
+                    continue
+                motif_name = feature.qualifiers['label'][0]
+                if motif_name not in NRPS_PKS:
+                    NRPS_PKS[motif_name] = 0
+                NRPS_PKS[motif_name] += 1
+
+            
+        if feature.type == "CDS_motif":
+            if 'label' not in feature.qualifiers: #this happens for ripp sequences
+                continue
+            motif_name = feature.qualifiers['label'][0]
+            if motif_name not in CDS_motifs:
+                CDS_motifs[motif_name] =0
+            CDS_motifs[motif_name] += 1
+        elif feature.type == "CDS":
+            if "gene_functions" in feature.qualifiers:
+                for note in feature.qualifiers["gene_functions"]:
+                    if "SMCOG" in note:
+                        if ":" not in note or "(" not in note:
+                            continue
+                        smCOG_type = note[note.index(":")+2:note.rfind("(")-1]
+                        if smCOG_type not in smCOGs:
+                            smCOGs[smCOG_type] = 0
+                        smCOGs[smCOG_type] += 1
+        elif feature.type == "PFAM_domain":
+            score = float(feature.qualifiers["score"][0])
+            if score <score_cutoff:
+                continue
+            domain_description = feature.qualifiers["description"][0]
+            pfam_id = feature.qualifiers["db_xref"][0]
+            pfam_id = pfam_id[pfam_id.find(" ")+1:len(pfam_id)]
+            if domain_description not in pfam_counts:
+                pfam_counts[domain_description] = 0
+            pfam_counts[domain_description] += 1                           
+    return (pfam_counts, CDS_motifs, smCOGs, NRPS_PKS,tigrfam_counts)
 
 
 def readRGIFile3(rgi_infile):

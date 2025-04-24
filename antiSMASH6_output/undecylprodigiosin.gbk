@@ -1,0 +1,3263 @@
+LOCUS       BGC0001063.1           31641 bp    DNA     linear   UNK 01-JAN-1980
+DEFINITION  Undecylprodigiosin biosynthetic gene cluster.
+ACCESSION   BGC0001063
+VERSION     BGC0001063.1
+KEYWORDS    .
+SOURCE      
+  ORGANISM  .
+            .
+COMMENT     ##antiSMASH-Data-START##
+            Version      :: 6.1.0
+            Run date     :: 2022-09-08 17:37:00
+            ##antiSMASH-Data-END##
+FEATURES             Location/Qualifiers
+     gene            1..1053
+                     /gene="SCO5877"
+                     /gene_synonym="redD"
+     CDS             1..1053
+                     /codon_start=1
+                     /db_xref="GI:2815363"
+                     /db_xref="GOA:P16922"
+                     /db_xref="InterPro:IPR001867"
+                     /db_xref="InterPro:IPR005158"
+                     /db_xref="InterPro:IPR011991"
+                     /db_xref="InterPro:IPR016032"
+                     /db_xref="UniProtKB/Swiss-Prot:P16922"
+                     /gene="SCO5877"
+                     /gene_functions="regulatory (smcogs)
+                     SMCOG1041:transcriptional regulator, SARP family (Score:
+                     276.5; E-value: 9.4e-84)"
+                     /gene_kind="regulatory"
+                     /gene_synonym="redD"
+                     /note="SC2E9.18, redD, transcriptional regulator, len: 350
+                     aa; identical to REDD_STRCO P16922 redd protein from
+                     Streptomyces coelicolor (350 aa). Possible alternative
+                     start site at 15238 (aa 84)"
+                     /note="smCOG tree PNG image: smcogs/SCO5877.png"
+                     /product="transcriptional regulator RedD"
+                     /protein_id="CAA16486.1"
+                     /transl_table=11
+                     /translation="MTGGGVLATMDPVRKLVRSQPKIGRHPVAAGQDGRDRHPIRSWEC
+                     GERARTARTGRTVGRAADPSDHGPSLYNFGGCVEINILGPVSIDTSHSGGGIRAGKVRT
+                     LVATLAIDAGRAVSLADLVDELWGATPPDNVLNALQAHAARARKVLNERACPERAGGIL
+                     RSVLGGYLLEIDPQCVDGNRFLRLVSQGAALLPADPTRAVELLETGLRLWRGPALIDAG
+                     EGRRCRGAAALFEERRLTALEDLISAMFLRGGEAQAIAMLQQLVAQYPLRERFCELLMV
+                     GLYRVGRQGDALESYRLARKRLDDELGVQPGALLRRRHAEILAQDPVLKVPSALWREPY
+                     APADTSLLSA"
+     source          1..31641
+                     /db_xref="taxon:100226"
+                     /mol_type="genomic DNA"
+                     /organism="Streptomyces coelicolor A3(2)"
+                     /strain="A3(2)"
+     protocluster    1..31641
+                     /aStool="rule-based-clusters"
+                     /category="NRPS"
+                     /contig_edge="True"
+                     /core_location="[16983:23877](+)"
+                     /cutoff="0"
+                     /detection_rule="cds((PP-binding or NAD_binding_4) and
+                     (AMP-binding or A-OX))"
+                     /neighbourhood="20000"
+                     /product="NRPS-like"
+                     /protocluster_number="1"
+                     /tool="antismash"
+     proto_core      16984..23877
+                     /aStool="rule-based-clusters"
+                     /tool="antismash"
+                     /cutoff="0"
+                     /detection_rule="cds((PP-binding or NAD_binding_4) and
+                     (AMP-binding or A-OX))"
+                     /neighbourhood="20000"
+                     /product="NRPS-like"
+                     /protocluster_number="1"
+     protocluster    1..31641
+                     /aStool="rule-based-clusters"
+                     /category="PKS"
+                     /contig_edge="True"
+                     /core_location="[16983:23877](+)"
+                     /cutoff="20000"
+                     /detection_rule="cds(PKS_AT and (PKS_KS or ene_KS or mod_KS
+                     or hyb_KS or itr_KS or tra_KS))"
+                     /neighbourhood="20000"
+                     /product="T1PKS"
+                     /protocluster_number="2"
+                     /tool="antismash"
+     proto_core      16984..23877
+                     /aStool="rule-based-clusters"
+                     /tool="antismash"
+                     /cutoff="20000"
+                     /detection_rule="cds(PKS_AT and (PKS_KS or ene_KS or mod_KS
+                     or hyb_KS or itr_KS or tra_KS))"
+                     /neighbourhood="20000"
+                     /product="T1PKS"
+                     /protocluster_number="2"
+     cand_cluster    1..31641
+                     /SMILES="CC(=O)C(=O)O"
+                     /candidate_cluster_number="1"
+                     /contig_edge="True"
+                     /detection_rules="cds((PP-binding or NAD_binding_4) and
+                     (AMP-binding or A-OX))"
+                     /detection_rules="cds(PKS_AT and (PKS_KS or ene_KS or
+                     mod_KS or hyb_KS or itr_KS or tra_KS))"
+                     /detection_rules="(PPDK_N and AMP-binding and PP-binding
+                     and PKS_KS)"
+                     /kind="chemical_hybrid"
+                     /product="NRPS-like"
+                     /product="T1PKS"
+                     /product="prodigiosin"
+                     /protoclusters="1"
+                     /protoclusters="2"
+                     /protoclusters="3"
+                     /tool="antismash"
+     region          1..31641
+                     /candidate_cluster_numbers="1"
+                     /contig_edge="True"
+                     /product="NRPS-like"
+                     /product="T1PKS"
+                     /product="prodigiosin"
+                     /region_number="1"
+                     /rules="cds((PP-binding or NAD_binding_4) and (AMP-binding
+                     or A-OX))"
+                     /rules="cds(PKS_AT and (PKS_KS or ene_KS or mod_KS or
+                     hyb_KS or itr_KS or tra_KS))"
+                     /rules="(PPDK_N and AMP-binding and PP-binding and PKS_KS)"
+                     /tool="antismash"
+     PFAM_domain     301..513
+                     /aSDomain="Trans_reg_C"
+                     /aSTool="fullhmmer"
+                     /database="34.0"
+                     /db_xref="PF00486.30"
+                     /db_xref="GO:0000160"
+                     /db_xref="GO:0003677"
+                     /db_xref="GO:0006355"
+                     /description="Transcriptional regulatory protein, C
+                     terminal"
+                     /detection="hmmscan"
+                     /domain_id="fullhmmer_SCO5877_0001"
+                     /evalue="1.50E-07"
+                     /gene_ontologies="GO:0000160: phosphorelay signal
+                     transduction system"
+                     /gene_ontologies="GO:0003677: DNA binding"
+                     /gene_ontologies="GO:0006355: regulation of transcription,
+                     DNA-templated"
+                     /label="SCO5877"
+                     /locus_tag="SCO5877"
+                     /protein_end="171"
+                     /protein_start="100"
+                     /score="31.5"
+                     /tool="antismash"
+                     /translation="KVRTLVATLAIDAGRAVSLADLVDELWGATPPDNVLNALQAHAAR
+                     ARKVLNERACPERAGGILRSVLGGYL"
+     PFAM_domain     535..969
+                     /aSDomain="BTAD"
+                     /aSTool="fullhmmer"
+                     /database="34.0"
+                     /db_xref="PF03704.19"
+                     /description="Bacterial transcriptional activator domain"
+                     /detection="hmmscan"
+                     /domain_id="fullhmmer_SCO5877_0002"
+                     /evalue="2.70E-42"
+                     /label="SCO5877"
+                     /locus_tag="SCO5877"
+                     /protein_end="323"
+                     /protein_start="178"
+                     /score="144.7"
+                     /tool="antismash"
+                     /translation="VDGNRFLRLVSQGAALLPADPTRAVELLETGLRLWRGPALIDAGE
+                     GRRCRGAAALFEERRLTALEDLISAMFLRGGEAQAIAMLQQLVAQYPLRERFCELLMVG
+                     LYRVGRQGDALESYRLARKRLDDELGVQPGALLRRRHAEIL"
+     RBS             1091..1094
+                     /note="possible RBS upstream of redX"
+     gene            1103..4051
+                     /gene="SCO5878"
+                     /gene_synonym="redX"
+     CDS             1103..4051
+                     /NRPS_PKS="Domain: PKS_KS(Trans-AT-KS) (85-472). E-value:
+                     5.1e-44. Score: 142.6. Matches aSDomain:
+                     nrpspksdomains_SCO5878_PKS_KS.1"
+                     /NRPS_PKS="Domain: PKS_KS(Trans-AT-KS) (520-976). E-value:
+                     5.5e-86. Score: 280.9. Matches aSDomain:
+                     nrpspksdomains_SCO5878_PKS_KS.2"
+                     /NRPS_PKS="type: PKS/NRPS-like protein"
+                     /codon_start=1
+                     /db_xref="GI:2815364"
+                     /db_xref="GOA:O54142"
+                     /db_xref="InterPro:IPR000794"
+                     /db_xref="InterPro:IPR014030"
+                     /db_xref="InterPro:IPR014031"
+                     /db_xref="InterPro:IPR016038"
+                     /db_xref="InterPro:IPR016039"
+                     /db_xref="UniProtKB/TrEMBL:O54142"
+                     /gene="SCO5878"
+                     /gene_functions="biosynthetic-additional
+                     (rule-based-clusters) PKS_KS"
+                     /gene_functions="biosynthetic-additional (smcogs)
+                     SMCOG1022:Beta-ketoacyl synthase (Score: 229.7; E-value:
+                     1.1e-69)"
+                     /gene_kind="biosynthetic-additional"
+                     /gene_synonym="redX"
+                     /note="SC2E9.19, redX, polyketide synthase with two
+                     beta-ketoacyl synthase domains, len: 982 aa; similar to
+                     many eg. ERY3_SACER Q03133 erythronolide synthase, modules
+                     5 and 6 (3170 aa), fasta scores; opt: 649 z-score: 586.3
+                     E(): 1.9e-25, 29.2% identity in 1029 aa overlap. Contains 2
+                     x Pfam match to entry ketoacyl-synt PF00109, Beta-ketoacyl
+                     synthases, scores 52.40 and 310.80"
+                     /product="polyketide synthase RedX"
+                     /protein_id="CAA16487.1"
+                     /sec_met_domain="PKS_KS (E-value: 2.2e-86, bitscore: 280.9,
+                     seeds: 2284, tool: rule-based-clusters)"
+                     /transl_table=11
+                     /translation="MSDNDTATATDTATDTPTATDTPTVTETDTASAARDPAEPIAIVG
+                     MSALYPGAQGVEDLWRLLLADGPAPASGTGPAPGGLGDIEVDVARFGIPPAQAASMARL
+                     QLLMVEAARQCLDDATGSGADRGRTDVVVGTCLGLDRQYANALRVDGARYARDLTEVLA
+                     DGAWRDTGIDARAAGQELNDALSRRLGASPHDRVGEMASTIPARIASAFKLRGRTLAVE
+                     SADATSYLALAHAVDNLRAGLAEAVLVVVGQRDEGRFARRALAAKGFAARPSEAGAGDA
+                     PVLTEGLGALLLKRRSTAERDGDRVYASVLDCALRHEARPGIFRYSLSAAHRRAAAEAA
+                     HRTADVAPGSVRLVECAGYGTAAVGRAEQEAIAGIHAGAPRDSVAVGTVRDRLGHTFAN
+                     AGLAGVTKAALALHHRTVPPVLPGTDPAPTTGPFRVPRAAEPWEPSTDGTPRRAAVLGA
+                     SLTGTVCHVLLEEAAPAGSVPQGAGADAHLGGARAAGAARRRFPGGQASAAGRETGAWQ
+                     AEPIAIVGFGGRFADSPDADGFWRTMLSGRDRIGPLPAELFDRDLYHAPGALALGRSYT
+                     DLGAPVPVPTQPPPGLRIPPHRYAATDAAQRLGLDVAAEMFARYGRDPHALDGVGTVVV
+                     GSNLGLSRERRLHTGLCLDDLEADVRSLAALAALGPDDVEAVTKLVRDRFGEAGPDDLP
+                     TTWDGCVASGIAALLGNEHGLDAVPVAVEAACASSLAAVDVAVGRLRSGGADYAVAGGV
+                     ELPCNARDMVLCSSLGLLSHSRITPFDAGADGFTPGDGCALFLLKRLTDARRDGDLVFG
+                     VLRAVGASNDAKSLIAPDADGQARAVRQAFAQVDFGPDEVDYLEAHGTGTRLGDRVEVA
+                     AAAQVYGTGRRTAPLDIGSAKSFLGHTFAAAGAAGLLRTLQALRQATLPPSVNLRELSP
+                     DLALDAVPARVATEAGPWPARAGRPRRAAVSAFGTGGINYHLLIEEGTDATR"
+     misc_feature    1118..2284
+                     /gene="SCO5878"
+                     /gene_synonym="redX"
+                     /note="Pfam match to entry ketoacyl-synt PF00109,
+                     Beta-ketoacyl synthases, score 52.40"
+     PFAM_domain     1217..1999
+                     /aSDomain="ketoacyl-synt"
+                     /aSTool="fullhmmer"
+                     /database="34.0"
+                     /db_xref="PF00109.28"
+                     /description="Beta-ketoacyl synthase, N-terminal domain"
+                     /detection="hmmscan"
+                     /domain_id="fullhmmer_SCO5878_0003"
+                     /evalue="1.20E-35"
+                     /label="SCO5878"
+                     /locus_tag="SCO5878"
+                     /protein_end="299"
+                     /protein_start="38"
+                     /score="123.4"
+                     /tool="antismash"
+                     /translation="EPIAIVGMSALYPGAQGVEDLWRLLLADGPAPASGTGPAPGGLGD
+                     IEVDVARFGIPPAQAASMARLQLLMVEAARQCLDDATGSGADRGRTDVVVGTCLGLDRQ
+                     YANALRVDGARYARDLTEVLADGAWRDTGIDARAAGQELNDALSRRLGASPHDRVGEMA
+                     STIPARIASAFKLRGRTLAVESADATSYLALAHAVDNLRAGLAEAVLVVVGQRDEGRFA
+                     RRALAAKGFAARPSEAGAGDAPVLTEGLGALLLKRRSTA"
+     aSDomain        1358..2518
+                     /aSDomain="PKS_KS"
+                     /aSTool="nrps_pks_domains"
+                     /database="nrpspksdomains.hmm"
+                     /detection="hmmscan"
+                     /domain_id="nrpspksdomains_SCO5878_PKS_KS.1"
+                     /domain_subtype="Trans-AT-KS"
+                     /evalue="5.10E-44"
+                     /label="SCO5878_PKS_KS.1"
+                     /locus_tag="SCO5878"
+                     /protein_end="472"
+                     /protein_start="85"
+                     /score="142.6"
+                     /tool="antismash"
+                     /translation="VDVARFGIPPAQAASMARLQLLMVEAARQCLDDATGSGADRGRTD
+                     VVVGTCLGLDRQYANALRVDGARYARDLTEVLADGAWRDTGIDARAAGQELNDALSRRL
+                     GASPHDRVGEMASTIPARIASAFKLRGRTLAVESADATSYLALAHAVDNLRAGLAEAVL
+                     VVVGQRDEGRFARRALAAKGFAARPSEAGAGDAPVLTEGLGALLLKRRSTAERDGDRVY
+                     ASVLDCALRHEARPGIFRYSLSAAHRRAAAEAAHRTADVAPGSVRLVECAGYGTAAVGR
+                     AEQEAIAGIHAGAPRDSVAVGTVRDRLGHTFANAGLAGVTKAALALHHRTVPPVLPGTD
+                     PAPTTGPFRVPRAAEPWEPSTDGTPRRAAVLGASLTGTVCHVLLEEA"
+     protocluster    1408..31641
+                     /aStool="rule-based-clusters"
+                     /category="PKS"
+                     /contig_edge="True"
+                     /core_location="[11407:23877]"
+                     /cutoff="20000"
+                     /detection_rule="(PPDK_N and AMP-binding and PP-binding and
+                     PKS_KS)"
+                     /neighbourhood="10000"
+                     /product="prodigiosin"
+                     /protocluster_number="3"
+                     /tool="antismash"
+     proto_core      11408..23877
+                     /aStool="rule-based-clusters"
+                     /tool="antismash"
+                     /cutoff="20000"
+                     /detection_rule="(PPDK_N and AMP-binding and PP-binding and
+                     PKS_KS)"
+                     /neighbourhood="10000"
+                     /product="prodigiosin"
+                     /protocluster_number="3"
+     PFAM_domain     2021..2365
+                     /aSDomain="Ketoacyl-synt_C"
+                     /aSTool="fullhmmer"
+                     /database="34.0"
+                     /db_xref="PF02801.24"
+                     /description="Beta-ketoacyl synthase, C-terminal domain"
+                     /detection="hmmscan"
+                     /domain_id="fullhmmer_SCO5878_0004"
+                     /evalue="1.20E-22"
+                     /label="SCO5878"
+                     /locus_tag="SCO5878"
+                     /protein_end="421"
+                     /protein_start="306"
+                     /score="80.2"
+                     /tool="antismash"
+                     /translation="YASVLDCALRHEARPGIFRYSLSAAHRRAAAEAAHRTADVAPGSV
+                     RLVECAGYGTAAVGRAEQEAIAGIHAGAPRDSVAVGTVRDRLGHTFANAGLAGVTKAAL
+                     ALHHRTVPPVL"
+     CDS_motif       2162..2194
+                     /aSTool="nrps_pks_domains"
+                     /database="abmotifs"
+                     /detection="hmmscan"
+                     /domain_id="nrpspksmotif_SCO5878_0001"
+                     /evalue="8.10E+01"
+                     /label="PKSI-KS_m5"
+                     /locus_tag="SCO5878"
+                     /protein_end="364"
+                     /protein_start="353"
+                     /score="-1.5"
+                     /tool="antismash"
+                     /translation="VECAGYGTAAV"
+     misc_feature    2423..3799
+                     /gene="SCO5878"
+                     /gene_synonym="redX"
+                     /note="Pfam match to entry ketoacyl-synt PF00109,
+                     Beta-ketoacyl synthases, score 310.80"
+     PFAM_domain     2657..3511
+                     /aSDomain="ketoacyl-synt"
+                     /aSTool="fullhmmer"
+                     /database="34.0"
+                     /db_xref="PF00109.28"
+                     /description="Beta-ketoacyl synthase, N-terminal domain"
+                     /detection="hmmscan"
+                     /domain_id="fullhmmer_SCO5878_0005"
+                     /evalue="1.10E-63"
+                     /label="SCO5878"
+                     /locus_tag="SCO5878"
+                     /protein_end="803"
+                     /protein_start="518"
+                     /score="215.3"
+                     /tool="antismash"
+                     /translation="EPIAIVGFGGRFADSPDADGFWRTMLSGRDRIGPLPAELFDRDLY
+                     HAPGALALGRSYTDLGAPVPVPTQPPPGLRIPPHRYAATDAAQRLGLDVAAEMFARYGR
+                     DPHALDGVGTVVVGSNLGLSRERRLHTGLCLDDLEADVRSLAALAALGPDDVEAVTKLV
+                     RDRFGEAGPDDLPTTWDGCVASGIAALLGNEHGLDAVPVAVEAACASSLAAVDVAVGRL
+                     RSGGADYAVAGGVELPCNARDMVLCSSLGLLSHSRITPFDAGADGFTPGDGCALFLLKR
+                     LTDA"
+     aSDomain        2663..4030
+                     /ASF="found active site cysteine: True, scaffold matched
+                     GSSS: False"
+                     /ASF="found active site histidines: True"
+                     /aSDomain="PKS_KS"
+                     /aSTool="nrps_pks_domains"
+                     /database="nrpspksdomains.hmm"
+                     /detection="hmmscan"
+                     /domain_id="nrpspksdomains_SCO5878_PKS_KS.2"
+                     /domain_subtype="Trans-AT-KS"
+                     /evalue="5.50E-86"
+                     /label="SCO5878_PKS_KS.2"
+                     /locus_tag="SCO5878"
+                     /protein_end="976"
+                     /protein_start="520"
+                     /score="280.9"
+                     /tool="antismash"
+                     /translation="IAIVGFGGRFADSPDADGFWRTMLSGRDRIGPLPAELFDRDLYHA
+                     PGALALGRSYTDLGAPVPVPTQPPPGLRIPPHRYAATDAAQRLGLDVAAEMFARYGRDP
+                     HALDGVGTVVVGSNLGLSRERRLHTGLCLDDLEADVRSLAALAALGPDDVEAVTKLVRD
+                     RFGEAGPDDLPTTWDGCVASGIAALLGNEHGLDAVPVAVEAACASSLAAVDVAVGRLRS
+                     GGADYAVAGGVELPCNARDMVLCSSLGLLSHSRITPFDAGADGFTPGDGCALFLLKRLT
+                     DARRDGDLVFGVLRAVGASNDAKSLIAPDADGQARAVRQAFAQVDFGPDEVDYLEAHGT
+                     GTRLGDRVEVAAAAQVYGTGRRTAPLDIGSAKSFLGHTFAAAGAAGLLRTLQALRQATL
+                     PPSVNLRELSPDLALDAVPARVATEAGPWPARAGRPRRAAVSAFGTGGINYHLLIEE"
+     CDS_motif       2705..2725
+                     /aSTool="nrps_pks_domains"
+                     /database="abmotifs"
+                     /detection="hmmscan"
+                     /domain_id="nrpspksmotif_SCO5878_0002"
+                     /evalue="3.30E+01"
+                     /label="PKSI-KS_m4"
+                     /locus_tag="SCO5878"
+                     /protein_end="541"
+                     /protein_start="534"
+                     /score="-1.0"
+                     /tool="antismash"
+                     /translation="DADGFWR"
+     CDS_motif       3437..3475
+                     /aSTool="nrps_pks_domains"
+                     /database="abmotifs"
+                     /detection="hmmscan"
+                     /domain_id="nrpspksmotif_SCO5878_0003"
+                     /evalue="3.30E-02"
+                     /label="PKSI-KS_m4"
+                     /locus_tag="SCO5878"
+                     /protein_end="791"
+                     /protein_start="778"
+                     /score="7.8"
+                     /tool="antismash"
+                     /translation="FDAGADGFTPGDG"
+     PFAM_domain     3536..3877
+                     /aSDomain="Ketoacyl-synt_C"
+                     /aSTool="fullhmmer"
+                     /database="34.0"
+                     /db_xref="PF02801.24"
+                     /description="Beta-ketoacyl synthase, C-terminal domain"
+                     /detection="hmmscan"
+                     /domain_id="fullhmmer_SCO5878_0006"
+                     /evalue="2.40E-34"
+                     /label="SCO5878"
+                     /locus_tag="SCO5878"
+                     /protein_end="925"
+                     /protein_start="811"
+                     /score="118.0"
+                     /tool="antismash"
+                     /translation="GVLRAVGASNDAKSLIAPDADGQARAVRQAFAQVDFGPDEVDYLE
+                     AHGTGTRLGDRVEVAAAAQVYGTGRRTAPLDIGSAKSFLGHTFAAAGAAGLLRTLQALR
+                     QATLPPSVNL"
+     CDS_motif       3590..3613
+                     /aSTool="nrps_pks_domains"
+                     /database="abmotifs"
+                     /detection="hmmscan"
+                     /domain_id="nrpspksmotif_SCO5878_0004"
+                     /evalue="9.90E+01"
+                     /label="PKSI-KS_m4"
+                     /locus_tag="SCO5878"
+                     /protein_end="837"
+                     /protein_start="829"
+                     /score="-2.5"
+                     /tool="antismash"
+                     /translation="DADGQARA"
+     CDS_motif       3662..3709
+                     /aSTool="nrps_pks_domains"
+                     /database="abmotifs"
+                     /detection="hmmscan"
+                     /domain_id="nrpspksmotif_SCO5878_0005"
+                     /evalue="4.70E-04"
+                     /label="PKSI-KS_m5"
+                     /locus_tag="SCO5878"
+                     /protein_end="869"
+                     /protein_start="853"
+                     /score="12.4"
+                     /tool="antismash"
+                     /translation="YLEAHGTGTRLGDRVE"
+     misc_feature    4048..4941
+                     /gene="SCO5879"
+                     /gene_synonym="redW"
+                     /note="Pfam match to entry Acyl-CoA_dh PF00441, Acyl-CoA
+                     dehydrogenases, score 308.86"
+     gene            4048..5223
+                     /gene="SCO5879"
+                     /gene_synonym="redW"
+     CDS             4048..5223
+                     /codon_start=1
+                     /db_xref="GI:2815365"
+                     /db_xref="GOA:O54143"
+                     /db_xref="HSSP:1JQI"
+                     /db_xref="InterPro:IPR006090"
+                     /db_xref="InterPro:IPR006091"
+                     /db_xref="InterPro:IPR006092"
+                     /db_xref="InterPro:IPR009075"
+                     /db_xref="InterPro:IPR009100"
+                     /db_xref="InterPro:IPR013786"
+                     /db_xref="UniProtKB/TrEMBL:O54143"
+                     /gene="SCO5879"
+                     /gene_functions="biosynthetic-additional
+                     (rule-based-clusters) Acyl-CoA_dh_N"
+                     /gene_functions="biosynthetic-additional
+                     (rule-based-clusters) Acyl-CoA_dh_M"
+                     /gene_functions="biosynthetic-additional
+                     (rule-based-clusters) Acyl-CoA_dh_1"
+                     /gene_functions="biosynthetic-additional (smcogs)
+                     SMCOG1006:acyl-CoA dehydrogenase (Score: 377.3; E-value:
+                     1.4e-114)"
+                     /gene_kind="biosynthetic-additional"
+                     /gene_synonym="redW"
+                     /note="SC2E9.20, redW, acyl-coa dehydrogenase, len: 391;
+                     similar to many eg. ACDB_BACSU P45857 acyl-coa
+                     dehydrogenase (ec 1.3.99.-) (379 aa), fasta scores; opt:
+                     831 z-score: 1005.0 E(): 0, 40.7% identity in 371 aa
+                     overlap. Contains Pfam match to entry Acyl-CoA_dh PF00441,
+                     Acyl-CoA dehydrogenases, score 308.86"
+                     /note="smCOG tree PNG image: smcogs/SCO5879.png"
+                     /product="acyl-coa dehydrogenase RedW"
+                     /protein_id="CAA16488.1"
+                     /sec_met_domain="Acyl-CoA_dh_N (E-value: 2.2e-26, bitscore:
+                     83.3, seeds: 790, tool: rule-based-clusters)"
+                     /sec_met_domain="Acyl-CoA_dh_M (E-value: 1.6e-26, bitscore:
+                     83.0, seeds: 43, tool: rule-based-clusters)"
+                     /sec_met_domain="Acyl-CoA_dh_1 (E-value: 4.1e-41, bitscore:
+                     131.2, seeds: 49, tool: rule-based-clusters)"
+                     /transl_table=11
+                     /translation="MNFDFDAGFDTETRELRDMVVRFARRELDSSGRFDDAEDFRRRWL
+                     LAGKQGLTGTTVPGEYGGSGLDAVSAAATMEALGYGCADTGFAFSVAAHLFAAVMPIVE
+                     FGTGEQRAAWLPALCSGERIAAHAITEPEAGSDALHLRTRARPVDDGHVLSGSKCFITN
+                     APVADVFVVQAATDPRGGFFGLTTFLVEASTPGLTVGRPYDKVGLRGSPTADVHFDDCY
+                     VPAGAVLGAEGSGASIFSSSMKWERTCLFAAYLGAMRRVLESTVDHVRDREQFGSPIGG
+                     FQAVSHRIVDMLGRYEGARLLLYRAARSLSDGTADEVGPALAKIAVSEAAVQLGLDAVQ
+                     LRGGLGIMDGEAETLLRDALPARIFSGTNEIQKNNVARALGLGRRRPAARR"
+     PFAM_domain     4078..4413
+                     /aSDomain="Acyl-CoA_dh_N"
+                     /aSTool="fullhmmer"
+                     /database="34.0"
+                     /db_xref="PF02771.18"
+                     /db_xref="GO:0016627"
+                     /db_xref="GO:0050660"
+                     /db_xref="GO:0055114"
+                     /description="Acyl-CoA dehydrogenase, N-terminal domain"
+                     /detection="hmmscan"
+                     /domain_id="fullhmmer_SCO5879_0007"
+                     /evalue="1.30E-23"
+                     /gene_ontologies="GO:0016627: oxidoreductase activity,
+                     acting on the CH-CH group of donors"
+                     /gene_ontologies="GO:0050660: flavin adenine dinucleotide
+                     binding"
+                     /gene_ontologies="GO:0055114: oxidation-reduction process"
+                     /label="SCO5879"
+                     /locus_tag="SCO5879"
+                     /protein_end="122"
+                     /protein_start="10"
+                     /score="83.9"
+                     /tool="antismash"
+                     /translation="TETRELRDMVVRFARRELDSSGRFDDAEDFRRRWLLAGKQGLTGT
+                     TVPGEYGGSGLDAVSAAATMEALGYGCADTGFAFSVAAHLFAAVMPIVEFGTGEQRAAW
+                     LPALCSGE"
+     PFAM_domain     4426..4710
+                     /aSDomain="Acyl-CoA_dh_M"
+                     /aSTool="fullhmmer"
+                     /database="34.0"
+                     /db_xref="PF02770.21"
+                     /db_xref="GO:0016627"
+                     /db_xref="GO:0055114"
+                     /description="Acyl-CoA dehydrogenase, middle domain"
+                     /detection="hmmscan"
+                     /domain_id="fullhmmer_SCO5879_0008"
+                     /evalue="4.30E-23"
+                     /gene_ontologies="GO:0016627: oxidoreductase activity,
+                     acting on the CH-CH group of donors"
+                     /gene_ontologies="GO:0055114: oxidation-reduction process"
+                     /label="SCO5879"
+                     /locus_tag="SCO5879"
+                     /protein_end="221"
+                     /protein_start="126"
+                     /score="81.4"
+                     /tool="antismash"
+                     /translation="HAITEPEAGSDALHLRTRARPVDDGHVLSGSKCFITNAPVADVFV
+                     VQAATDPRGGFFGLTTFLVEASTPGLTVGRPYDKVGLRGSPTADVHFDDC"
+     PFAM_domain     4744..5187
+                     /aSDomain="Acyl-CoA_dh_1"
+                     /aSTool="fullhmmer"
+                     /database="34.0"
+                     /db_xref="PF00441.26"
+                     /db_xref="GO:0016627"
+                     /db_xref="GO:0055114"
+                     /description="Acyl-CoA dehydrogenase, C-terminal domain"
+                     /detection="hmmscan"
+                     /domain_id="fullhmmer_SCO5879_0009"
+                     /evalue="3.60E-38"
+                     /gene_ontologies="GO:0016627: oxidoreductase activity,
+                     acting on the CH-CH group of donors"
+                     /gene_ontologies="GO:0055114: oxidation-reduction process"
+                     /label="SCO5879"
+                     /locus_tag="SCO5879"
+                     /protein_end="380"
+                     /protein_start="232"
+                     /score="131.2"
+                     /tool="antismash"
+                     /translation="GSGASIFSSSMKWERTCLFAAYLGAMRRVLESTVDHVRDREQFGS
+                     PIGGFQAVSHRIVDMLGRYEGARLLLYRAARSLSDGTADEVGPALAKIAVSEAAVQLGL
+                     DAVQLRGGLGIMDGEAETLLRDALPARIFSGTNEIQKNNVARAL"
+     RBS             5236..5239
+                     /note="possible RBS upstream of redY"
+     PFAM_domain     5249..5560
+                     /aSDomain="HapK"
+                     /aSTool="fullhmmer"
+                     /database="34.0"
+                     /db_xref="PF11639.10"
+                     /description="REDY-like protein HapK"
+                     /detection="hmmscan"
+                     /domain_id="fullhmmer_SCO5880_0010"
+                     /evalue="6.10E-63"
+                     /label="SCO5880"
+                     /locus_tag="SCO5880"
+                     /protein_end="104"
+                     /protein_start="0"
+                     /score="209.9"
+                     /tool="antismash"
+                     /translation="MDVIIHRIRLHDGVDPARFEAWVRDVDYATCPRLPSVRAFAVHRV
+                     STEQDAPFHYFESISVTGPDEFSRDMKTEAFRDLVTVFDTMATVVEEMSGELLEPGYQA
+                     "
+     gene            5249..5569
+                     /gene="SCO5880"
+                     /gene_synonym="redY"
+     CDS             5249..5569
+                     /codon_start=1
+                     /db_xref="GI:2815366"
+                     /db_xref="InterPro:IPR021667"
+                     /db_xref="UniProtKB/TrEMBL:O54144"
+                     /gene="SCO5880"
+                     /gene_synonym="redY"
+                     /note="SC2E9.21, redY, unknown function, len: 106"
+                     /product="RedY protein"
+                     /protein_id="CAA16489.1"
+                     /transl_table=11
+                     /translation="MDVIIHRIRLHDGVDPARFEAWVRDVDYATCPRLPSVRAFAVHRV
+                     STEQDAPFHYFESISVTGPDEFSRDMKTEAFRDLVTVFDTMATVVEEMSGELLEPGYQA
+                     RP"
+     misc_feature    complement(5444..5844)
+                     /note="identical to EMBL:SCREDZ Y07902 S.coelicolor redZ
+                     gene from: 660 to: 1060"
+     gene            complement(5641..6294)
+                     /gene="SCO5881"
+                     /gene_synonym="redZ"
+     CDS             complement(5641..6294)
+                     /codon_start=1
+                     /db_xref="GI:24429546"
+                     /db_xref="GOA:P72402"
+                     /db_xref="HSSP:1FSE"
+                     /db_xref="InterPro:IPR000792"
+                     /db_xref="InterPro:IPR001789"
+                     /db_xref="InterPro:IPR011006"
+                     /db_xref="InterPro:IPR011991"
+                     /db_xref="InterPro:IPR016032"
+                     /db_xref="UniProtKB/TrEMBL:P72402"
+                     /gene="SCO5881"
+                     /gene_functions="regulatory (smcogs) SMCOG1016:LuxR family
+                     DNA-binding response regulator (Score: 103.9; E-value:
+                     1.2e-31)"
+                     /gene_kind="regulatory"
+                     /gene_synonym="redZ"
+                     /note="SC2E9.22c, redZ, response regulator, partial CDS,
+                     len: >67 aa; identical to TR:P72402 (EMBL:Y07902) RedZ gene
+                     (217 aa). Contains probable helix-turn-helix motif at aa 12
+                     to 33 (Score 1209, +3.30 SD); SC3F7.01c, redZ, response
+                     regulator, partial CDS, len >184 aa; identical to TR:P72402
+                     (EMBL:Y07902) redZ gene (217 aa), and similar to many
+                     two-component regulators e.g. UVRY_ECOLI P07027 UvrY
+                     protein from Escherichia coli (218 aa), fasta scores; opt:
+                     159 z-score: 291.2 E(): 5e-09, 26.3% identity in 186 aa
+                     overlap. Contains TTA leucine codon; a potential target for
+                     action of bldA, probable Helix-turn-helix motif at aa
+                     162-183 (Score 1209, +3.30 SD) and Pfam match to entry
+                     response_reg PF00072, Response regulator receiver domain,
+                     score 31.36"
+                     /note="smCOG tree PNG image: smcogs/SCO5881.png"
+                     /product="response regulator"
+                     /protein_id="CAD55237.1"
+                     /transl_table=11
+                     /translation="MTTRVLVCCDRVILGEGIRALLERHDMKVQVETTQRGSLATAAET
+                     GPDILVGVAPLFTMDSIDKLTELARLGKTLLLTKPENTHRAFEALRVGVRAVLSAETSV
+                     EELVHVIRTITEVNAIIAPEEAQEALTRYWRSKAPKNLRPELTPRETEVLLLLTQGKTN
+                     TEMAATLSVSPTTVRSHVHRILRKLGAATRAQAVAIAYESGLLGICPGYGTPAR"
+     PFAM_domain     complement(5695..5859)
+                     /aSDomain="GerE"
+                     /aSTool="fullhmmer"
+                     /database="34.0"
+                     /db_xref="PF00196.21"
+                     /db_xref="GO:0006355"
+                     /description="Bacterial regulatory proteins, luxR family"
+                     /detection="hmmscan"
+                     /domain_id="fullhmmer_SCO5881_0011"
+                     /evalue="1.60E-17"
+                     /gene_ontologies="GO:0006355: regulation of transcription,
+                     DNA-templated"
+                     /label="SCO5881"
+                     /locus_tag="SCO5881"
+                     /protein_end="200"
+                     /protein_start="145"
+                     /score="62.9"
+                     /tool="antismash"
+                     /translation="LTPRETEVLLLLTQGKTNTEMAATLSVSPTTVRSHVHRILRKLGA
+                     ATRAQAVAIA"
+     misc_feature    5743..5844
+                     /note="overlap with cosmid St3F7 from: 1 to: 102"
+     misc_feature    complement(5743..6503)
+                     /note="100% match to EM_BA:SCREDZ Y07902 S.coelicolor redZ
+                     gene from: 1 to: 761"
+     misc_feature    complement(5827..5829)
+                     /gene="SCO5881"
+                     /gene_synonym="redZ"
+                     /note="TTA leucine codon; potential target for action of
+                     bldA"
+     misc_feature    complement(5827..5829)
+                     /note="tta leucine codon, possible target for bldA
+                     regulation"
+                     /tool="antismash"
+     misc_feature    complement(5962..6285)
+                     /gene="SCO5881"
+                     /gene_synonym="redZ"
+                     /note="Pfam match to entry response_reg PF00072, Response
+                     regulator receiver domain, from 1 to 115, score 31.36"
+     gene            complement(6558..7745)
+                     /gene="SCO5882"
+                     /gene_synonym="redV"
+                     /gene_synonym="SC3F7.02c"
+     CDS             complement(6558..7745)
+                     /codon_start=1
+                     /db_xref="GI:2808743"
+                     /db_xref="GOA:O54145"
+                     /db_xref="InterPro:IPR000415"
+                     /db_xref="UniProtKB/TrEMBL:O54145"
+                     /gene="SCO5882"
+                     /gene_synonym="redV"
+                     /gene_synonym="SC3F7.02c"
+                     /note="SC3F7.02c, redV, function unknown, len: 395 aa"
+                     /product="RedV protein"
+                     /protein_id="CAA16173.1"
+                     /transl_table=11
+                     /translation="MTTRRTDHMAAAVSTFAQALETAAGTAALSPSSHNCQPWGLGRAT
+                     STTARRSAADLTGADADEYLVLALDRERELTALAAHAVEMEVSCGVYWRILLRTLAAQG
+                     WTTAAVRVLDGDADPGAAGLPGGGRPFGAGWPTAWTPLCVVALRPGPLSGERPADLHES
+                     ALARRTHRGPYGREPVAPGLLRDLEEPATPGATAHPVHLRHLTERRDLRAFAAFVARHA
+                     GRDFGHRAAWRETHSFVRRDTADATARGDGFTLEQLFGPMSRPRRAAMRLALAPTTMHL
+                     LGKVGYHRVLAAGLADVVRRTPAVVTMGFAGQAPTRAEQLEGGARLADYWWRATRHGLS
+                     LHPISIVLQHDDLRGRLERELSLPGRTFFVSRVGVAGSPAPRSHRRADAAVHVSF"
+     RBS             complement(7752..7756)
+                     /note="possible RBS upstream of SC3F7.02c"
+     gene            complement(7858..8643)
+                     /gene="SCO5883"
+                     /gene_synonym="redU"
+                     /gene_synonym="SC3F7.03c"
+     CDS             complement(7858..8643)
+                     /codon_start=1
+                     /db_xref="GI:2808744"
+                     /db_xref="GOA:O54146"
+                     /db_xref="InterPro:IPR008278"
+                     /db_xref="UniProtKB/TrEMBL:O54146"
+                     /gene="SCO5883"
+                     /gene_functions="biosynthetic-additional (smcogs)
+                     SMCOG1012:4'-phosphopantetheinyl transferase (Score: 106.6;
+                     E-value: 1.9e-32)"
+                     /gene_kind="biosynthetic-additional"
+                     /gene_synonym="redU"
+                     /gene_synonym="SC3F7.03c"
+                     /note="SC3F7.03c, redU, unknown, len: 261 aa"
+                     /product="hypothetical protein SC3F7.03c"
+                     /protein_id="CAA16174.1"
+                     /transl_table=11
+                     /translation="MREAVSLTDQVVLDASRPLWITHLRPDPRRLTLAVVSIARLRERG
+                     PHGLAALRARYLTAAETEQAATLRAPRRRLEWLAGRLALKHAVSAHGRRHWGLAREPRT
+                     VEVRAVSGGLQGGRPVVDAPVEVGLTHSGDFAVAVCGPHAVGVDLEHDRPMPPTLARLL
+                     DEECDPRAPSADARRLAAMPATLRWTCKEAVLKYYGFGLRIDAGEVALTGWLPDGRFTW
+                     RPGGGLLRHAPVAETRRPAGWAGVVAGHHLALVERPPGG"
+     PFAM_domain     complement(8032..8211)
+                     /aSDomain="ACPS"
+                     /aSTool="fullhmmer"
+                     /database="34.0"
+                     /db_xref="PF01648.22"
+                     /db_xref="GO:0000287"
+                     /db_xref="GO:0008897"
+                     /description="4'-phosphopantetheinyl transferase
+                     superfamily"
+                     /detection="hmmscan"
+                     /domain_id="fullhmmer_SCO5883_0013"
+                     /evalue="3.60E-05"
+                     /gene_ontologies="GO:0000287: magnesium ion binding"
+                     /gene_ontologies="GO:0008897: holo-[acyl-carrier-protein]
+                     synthase activity"
+                     /label="SCO5883"
+                     /locus_tag="SCO5883"
+                     /protein_end="204"
+                     /protein_start="144"
+                     /score="24.0"
+                     /tool="antismash"
+                     /translation="VGVDLEHDRPMPPTLARLLDEECDPRAPSADARRLAAMPATLRWT
+                     CKEAVLKYYGFGLRI"
+     PFAM_domain     complement(8227..8457)
+                     /aSDomain="4PPT_N"
+                     /aSTool="fullhmmer"
+                     /database="34.0"
+                     /db_xref="PF17837.3"
+                     /description="4'-phosphopantetheinyl transferase N-terminal
+                     domain"
+                     /detection="hmmscan"
+                     /domain_id="fullhmmer_SCO5883_0012"
+                     /evalue="2.90E-06"
+                     /label="SCO5883"
+                     /locus_tag="SCO5883"
+                     /protein_end="139"
+                     /protein_start="62"
+                     /score="27.4"
+                     /tool="antismash"
+                     /translation="EQAATLRAPRRRLEWLAGRLALKHAVSAHGRRHWGLAREPRTVEV
+                     RAVSGGLQGGRPVVDAPVEVGLTHSGDFAVAV"
+     RBS             complement(8646..8651)
+                     /note="possible RBS upstream of SC3F7.03c"
+     gene            complement(8711..9601)
+                     /gene="SCO5884"
+                     /gene_synonym="SC3F7.04c"
+     CDS             complement(8711..9601)
+                     /codon_start=1
+                     /db_xref="GI:2808745"
+                     /db_xref="UniProtKB/TrEMBL:O54147"
+                     /gene="SCO5884"
+                     /gene_synonym="SC3F7.04c"
+                     /note="SC3F7.04c, unknown, len: 296 aa; some similarity to
+                     Archaeoglobus fulgidus hypothetical protein TR:G2648734
+                     (EMBL:AE000977) AF1816 (300 aa), fasta scores; opt: 314
+                     z-score: 322.6 E(): 8.9e-11, 30.2% identity in 301 aa
+                     overlap"
+                     /product="hypothetical protein SC3F7.04c"
+                     /protein_id="CAA16175.1"
+                     /transl_table=11
+                     /translation="MTFSIPADALDALEDEVVRALRTTDDRALTILGYGEVTLVLRLET
+                     DAGTFACKRLPVFPSRERLDRHSALVDDYVTRLDKGGVAVAETRMWHRRLPGGRAVAYC
+                     VQEALPEGRLCSRLLHTAGEAWCEGFFARFLDRVEATVTPRLGLDGQASNWIDVDGELV
+                     YLDVTTPLIRDERERELLDVPLFFTSLPWLVRDVVRMAMTKSIFDKFYTPRGVVLDFLG
+                     NLHKERLDHLVPRFLEQANARLDRPLDAEEVGAYYRDDARMWELIQRLRKADRFVHNKI
+                     LRRPYPFLLPRHVAR"
+     PFAM_domain     complement(8777..9565)
+                     /aSDomain="DUF6206"
+                     /aSTool="fullhmmer"
+                     /database="34.0"
+                     /db_xref="PF19709.1"
+                     /description="Family of unknown function (DUF6206)"
+                     /detection="hmmscan"
+                     /domain_id="fullhmmer_SCO5884_0014"
+                     /evalue="8.90E-90"
+                     /label="SCO5884"
+                     /locus_tag="SCO5884"
+                     /protein_end="275"
+                     /protein_start="12"
+                     /score="300.6"
+                     /tool="antismash"
+                     /translation="LEDEVVRALRTTDDRALTILGYGEVTLVLRLETDAGTFACKRLPV
+                     FPSRERLDRHSALVDDYVTRLDKGGVAVAETRMWHRRLPGGRAVAYCVQEALPEGRLCS
+                     RLLHTAGEAWCEGFFARFLDRVEATVTPRLGLDGQASNWIDVDGELVYLDVTTPLIRDE
+                     RERELLDVPLFFTSLPWLVRDVVRMAMTKSIFDKFYTPRGVVLDFLGNLHKERLDHLVP
+                     RFLEQANARLDRPLDAEEVGAYYRDDARMWELIQRLRKADR"
+     gene            complement(9609..10049)
+                     /gene="SCO5885"
+                     /gene_synonym="SC3F7.05c"
+     CDS             complement(9609..10049)
+                     /codon_start=1
+                     /db_xref="GI:2808746"
+                     /db_xref="UniProtKB/TrEMBL:O54148"
+                     /gene="SCO5885"
+                     /gene_synonym="SC3F7.05c"
+                     /note="SC3F7.05c, putative membrane protein, len: 146 aa.
+                     Contains possible hydrophobic membrane spanning regions"
+                     /product="putative membrane protein"
+                     /protein_id="CAA16176.1"
+                     /transl_table=11
+                     /translation="MTGRNLILQRVVGALYILAGIGKFFPQLESVEGRLDDASEANDGT
+                     VISGPVDWLDRHPTGVMWFVAVAMVAAGLALLWNRRGLVIAALYGQLLMLVLFVVILVS
+                     SVPEILVMDAAFFAAAIYLLYRYHASPGARTAAPSGPTPEGR"
+     RBS             complement(9616..9619)
+                     /gene="SCO5885"
+                     /gene_synonym="SC3F7.05c"
+                     /note="possible RBS upstream of SC3F7.04c"
+     PFAM_domain     complement(9621..10034)
+                     /aSDomain="DUF6041"
+                     /aSTool="fullhmmer"
+                     /database="34.0"
+                     /db_xref="PF19507.1"
+                     /description="Family of unknown function (DUF6041)"
+                     /detection="hmmscan"
+                     /domain_id="fullhmmer_SCO5885_0015"
+                     /evalue="6.20E-61"
+                     /label="SCO5885"
+                     /locus_tag="SCO5885"
+                     /protein_end="143"
+                     /protein_start="5"
+                     /score="204.6"
+                     /tool="antismash"
+                     /translation="LILQRVVGALYILAGIGKFFPQLESVEGRLDDASEANDGTVISGP
+                     VDWLDRHPTGVMWFVAVAMVAAGLALLWNRRGLVIAALYGQLLMLVLFVVILVSSVPEI
+                     LVMDAAFFAAAIYLLYRYHASPGARTAAPSGPTP"
+     RBS             complement(10060..10064)
+                     /note="possible RBS upstream of SC3F7.05c"
+     gene            complement(10188..11411)
+                     /gene="SCO5886"
+                     /gene_synonym="redR"
+                     /gene_synonym="SC3F7.06c"
+     CDS             complement(10188..11411)
+                     /NRPS_PKS="Domain: PKS_KS(Iterative-KS) (73-405). E-value:
+                     2.2e-59. Score: 193.3. Matches aSDomain:
+                     nrpspksdomains_SCO5886_PKS_KS.1"
+                     /NRPS_PKS="type: PKS/NRPS-like protein"
+                     /codon_start=1
+                     /db_xref="GI:2808747"
+                     /db_xref="GOA:O54149"
+                     /db_xref="HSSP:1E5M"
+                     /db_xref="InterPro:IPR000794"
+                     /db_xref="InterPro:IPR014030"
+                     /db_xref="InterPro:IPR014031"
+                     /db_xref="InterPro:IPR016038"
+                     /db_xref="InterPro:IPR016039"
+                     /db_xref="InterPro:IPR017568"
+                     /db_xref="InterPro:IPR018201"
+                     /db_xref="UniProtKB/TrEMBL:O54149"
+                     /gene="SCO5886"
+                     /gene_functions="biosynthetic-additional
+                     (rule-based-clusters) t2fas"
+                     /gene_functions="biosynthetic-additional (smcogs)
+                     SMCOG1022:Beta-ketoacyl synthase (Score: 392; E-value:
+                     5.8e-119)"
+                     /gene_kind="biosynthetic-additional"
+                     /gene_synonym="redR"
+                     /gene_synonym="SC3F7.06c"
+                     /note="SC3F7.06c, redR, probable
+                     3-oxoacyl-[acyl-carrier-protein] synthase II, len: 407 aa;
+                     similar to many eg. FABF_ECOLI P39435
+                     3-oxoacyl-[acyl-carrier-protein] synthase II (EC 2.3.1.41)
+                     (beta-ketoacyl-acp synthase II) (412 aa), fasta scores;
+                     opt: 1054 z-score: 1061.9 E(): 0, 42.0% identity in 412 aa
+                     overlap. Also some similarity to SC3F7.12 from aa 800 to
+                     1210 (E(): 3.3e-10, 32.2% identity in 432 aa overlap).
+                     Contains Pfam match to entry ketoacyl-synt PF00109,
+                     Beta-ketoacyl synthases, score 243.99"
+                     /product="3-oxoacyl-[acyl-carrier-protein] synthase II"
+                     /protein_id="CAA16177.1"
+                     /sec_met_domain="t2fas (E-value: 4.2e-141, bitscore: 460.8,
+                     seeds: 8, tool: rule-based-clusters)"
+                     /transl_table=11
+                     /translation="MTDPSLAVTGLGLVTAAGMGVDATWEGVLRGRSAGARDERLAGLP
+                     VDIACAVPGLQPARHVDRRSVLIHDRFVQLAIVAAREAVADAGLDPLTWDGARVGVVVG
+                     CGLGGVTTWETQHRRLLERGPEAVSALLVPMLVPNMAAGHLAMDLRALGPNLVTATACA
+                     SGGTALGTAARLLRDGTCDIVVAGGTEAGVSPLMVTGFAQMGALSRRVDDPAAASRPFD
+                     ADRDGFVIGEGSGMLVLERAADAEARGATVRARLLGHGASADAHHVTAPDPEGAGALRA
+                     MEAALAQAGVTGRDIDHVNAHGTSTPLNDAVEAAVLGRLLGDRATVTSAKGVLGHTLGA
+                     AGAIEAALTVLSIERSTVPPTANLRRRDPAVDLDVVADAPREQKVELAMSNSFGFGGQN
+                     AVLVFASP"
+     misc_feature    complement(10194..11396)
+                     /gene="SCO5886"
+                     /gene_synonym="redR"
+                     /gene_synonym="SC3F7.06c"
+                     /note="Pfam match to entry ketoacyl-synt PF00109,
+                     Beta-ketoacyl synthases, from 1 to 442, score 243.99"
+     aSDomain        complement(10197..11192)
+                     /ASF="found active site cysteine: True, scaffold matched
+                     GSSS: False"
+                     /ASF="found active site histidines: True"
+                     /aSDomain="PKS_KS"
+                     /aSTool="nrps_pks_domains"
+                     /database="nrpspksdomains.hmm"
+                     /detection="hmmscan"
+                     /domain_id="nrpspksdomains_SCO5886_PKS_KS.1"
+                     /domain_subtype="Iterative-KS"
+                     /evalue="2.20E-59"
+                     /label="SCO5886_PKS_KS.1"
+                     /locus_tag="SCO5886"
+                     /protein_end="405"
+                     /protein_start="73"
+                     /score="193.3"
+                     /tool="antismash"
+                     /translation="QLAIVAAREAVADAGLDPLTWDGARVGVVVGCGLGGVTTWETQHR
+                     RLLERGPEAVSALLVPMLVPNMAAGHLAMDLRALGPNLVTATACASGGTALGTAARLLR
+                     DGTCDIVVAGGTEAGVSPLMVTGFAQMGALSRRVDDPAAASRPFDADRDGFVIGEGSGM
+                     LVLERAADAEARGATVRARLLGHGASADAHHVTAPDPEGAGALRAMEAALAQAGVTGRD
+                     IDHVNAHGTSTPLNDAVEAAVLGRLLGDRATVTSAKGVLGHTLGAAGAIEAALTVLSIE
+                     RSTVPPTANLRRRDPAVDLDVVADAPREQKVELAMSNSFGFGGQNAVLVFA"
+     PFAM_domain     complement(10320..10652)
+                     /aSDomain="Ketoacyl-synt_C"
+                     /aSTool="fullhmmer"
+                     /database="34.0"
+                     /db_xref="PF02801.24"
+                     /description="Beta-ketoacyl synthase, C-terminal domain"
+                     /detection="hmmscan"
+                     /domain_id="fullhmmer_SCO5886_0017"
+                     /evalue="3.40E-31"
+                     /label="SCO5886"
+                     /locus_tag="SCO5886"
+                     /protein_end="364"
+                     /protein_start="253"
+                     /score="107.8"
+                     /tool="antismash"
+                     /translation="ARLLGHGASADAHHVTAPDPEGAGALRAMEAALAQAGVTGRDIDH
+                     VNAHGTSTPLNDAVEAAVLGRLLGDRATVTSAKGVLGHTLGAAGAIEAALTVLSIERST
+                     VPPTANL"
+     PFAM_domain     complement(10677..11396)
+                     /aSDomain="ketoacyl-synt"
+                     /aSTool="fullhmmer"
+                     /database="34.0"
+                     /db_xref="PF00109.28"
+                     /description="Beta-ketoacyl synthase, N-terminal domain"
+                     /detection="hmmscan"
+                     /domain_id="fullhmmer_SCO5886_0016"
+                     /evalue="1.10E-45"
+                     /label="SCO5886"
+                     /locus_tag="SCO5886"
+                     /protein_end="245"
+                     /protein_start="5"
+                     /score="156.3"
+                     /tool="antismash"
+                     /translation="LAVTGLGLVTAAGMGVDATWEGVLRGRSAGARDERLAGLPVDIAC
+                     AVPGLQPARHVDRRSVLIHDRFVQLAIVAAREAVADAGLDPLTWDGARVGVVVGCGLGG
+                     VTTWETQHRRLLERGPEAVSALLVPMLVPNMAAGHLAMDLRALGPNLVTATACASGGTA
+                     LGTAARLLRDGTCDIVVAGGTEAGVSPLMVTGFAQMGALSRRVDDPAAASRPFDADRDG
+                     FVIGEGSGMLVLERAADA"
+     CDS_motif       complement(10713..10751)
+                     /aSTool="nrps_pks_domains"
+                     /database="abmotifs"
+                     /detection="hmmscan"
+                     /domain_id="nrpspksmotif_SCO5886_0001"
+                     /evalue="1.30E-02"
+                     /label="PKSI-KS_m4"
+                     /locus_tag="SCO5886"
+                     /protein_end="233"
+                     /protein_start="220"
+                     /score="9.0"
+                     /tool="antismash"
+                     /translation="FDADRDGFVIGEG"
+     gene            complement(11408..11653)
+                     /gene="SCO5887"
+                     /gene_synonym="redQ"
+                     /gene_synonym="SC3F7.07c"
+     CDS             complement(11408..11653)
+                     /NRPS_PKS="Domain: PP-binding (11-67). E-value: 2.2e-09.
+                     Score: 29.6. Matches aSDomain:
+                     nrpspksdomains_SCO5887_PP-binding.1"
+                     /NRPS_PKS="type: other"
+                     /codon_start=1
+                     /db_xref="GI:2808748"
+                     /db_xref="GOA:O54150"
+                     /db_xref="HSSP:2AF8"
+                     /db_xref="InterPro:IPR006163"
+                     /db_xref="InterPro:IPR009081"
+                     /db_xref="UniProtKB/TrEMBL:O54150"
+                     /gene="SCO5887"
+                     /gene_functions="biosynthetic (rule-based-clusters)
+                     prodigiosin: PP-binding"
+                     /gene_kind="biosynthetic"
+                     /gene_synonym="redQ"
+                     /gene_synonym="SC3F7.07c"
+                     /note="SC3F7.07c, redQ, probable acyl carrier protein, len;
+                     81 aa; similar to several eg. ACP_SYNY3 P20804 acyl carrier
+                     protein (acp) from Synechocystis (77 aa),fasta scores; opt:
+                     153 z-score: 256.6 E(): 4.2e-07, 34.7% identity in 72 aa
+                     overlap"
+                     /product="acyl carrier protein"
+                     /protein_id="CAA16178.1"
+                     /sec_met_domain="PP-binding (E-value: 8.8e-10, bitscore:
+                     29.6, seeds: 164, tool: rule-based-clusters)"
+                     /transl_table=11
+                     /translation="MSTTYDKLVDLLVDGFAVDRAAIRPDVTFEELEMDSLFLVELLLV
+                     IQSEFGVKISDDAAVPTDTIAHAVALVDNEIAATAS"
+     aSDomain        complement(11453..11620)
+                     /aSDomain="PP-binding"
+                     /aSTool="nrps_pks_domains"
+                     /database="nrpspksdomains.hmm"
+                     /detection="hmmscan"
+                     /domain_id="nrpspksdomains_SCO5887_PP-binding.1"
+                     /evalue="2.20E-09"
+                     /label="SCO5887_PP-binding.1"
+                     /locus_tag="SCO5887"
+                     /protein_end="67"
+                     /protein_start="11"
+                     /score="29.6"
+                     /tool="antismash"
+                     /translation="LVDGFAVDRAAIRPDVTFEELEMDSLFLVELLLVIQSEFGVKISD
+                     DAAVPTDTIAH"
+     PFAM_domain     complement(11453..11635)
+                     /aSDomain="PP-binding"
+                     /aSTool="fullhmmer"
+                     /database="34.0"
+                     /db_xref="PF00550.27"
+                     /description="Phosphopantetheine attachment site"
+                     /detection="hmmscan"
+                     /domain_id="fullhmmer_SCO5887_0018"
+                     /evalue="2.80E-08"
+                     /label="SCO5887"
+                     /locus_tag="SCO5887"
+                     /protein_end="67"
+                     /protein_start="6"
+                     /score="34.0"
+                     /tool="antismash"
+                     /translation="KLVDLLVDGFAVDRAAIRPDVTFEELEMDSLFLVELLLVIQSEFG
+                     VKISDDAAVPTDTIAH"
+     RBS             complement(11663..11669)
+                     /note="possible RBS upstream of SC3F7.07c"
+     RBS             12011..12016
+                     /note="possible RBS upstream of SC3F7.08"
+     gene            12022..13029
+                     /gene="SCO5888"
+                     /gene_synonym="redP"
+                     /gene_synonym="SC3F7.08"
+     CDS             12022..13029
+                     /codon_start=1
+                     /db_xref="GI:2808749"
+                     /db_xref="GOA:O54151"
+                     /db_xref="InterPro:IPR004655"
+                     /db_xref="InterPro:IPR013747"
+                     /db_xref="InterPro:IPR013751"
+                     /db_xref="InterPro:IPR016038"
+                     /db_xref="InterPro:IPR016039"
+                     /db_xref="UniProtKB/Swiss-Prot:O54151"
+                     /gene="SCO5888"
+                     /gene_functions="biosynthetic-additional
+                     (rule-based-clusters) fabH"
+                     /gene_functions="biosynthetic-additional (smcogs)
+                     SMCOG1084:3-oxoacyl-(acyl carrier protein) synthase III
+                     (Score: 422.1; E-value: 2.2e-128)"
+                     /gene_kind="biosynthetic-additional"
+                     /gene_synonym="redP"
+                     /gene_synonym="SC3F7.08"
+                     /note="SC3F7.08, redP, probable
+                     3-oxoacyl-[acyl-carrier-protein] synthase III, len: 335 aa;
+                     similar to many eg. FABH_ECOLI P24249
+                     3-oxoacyl-[acyl-carrier-protein] synthase III (EC 2.3.1.41)
+                     (beta-ketoacyl-ACP synthase III) (317 aa), fasta scores;
+                     opt: 502 z-score: 881.2 E(): 0, 40.4% identity in 319 aa
+                     overlap"
+                     /note="smCOG tree PNG image: smcogs/SCO5888.png"
+                     /product="3-oxoacyl-[acyl-carrier-protein] synthase"
+                     /protein_id="CAA16179.1"
+                     /sec_met_domain="fabH (E-value: 3.8e-144, bitscore: 470.1,
+                     seeds: 7, tool: rule-based-clusters)"
+                     /transl_table=11
+                     /translation="MTRASVLTGLGSCLPSRCVTNAELERTMDTSDEWIRARTGIAQRY
+                     VAEEGTLTSDLAVGAAERALKSARLTPDEIDAVIVATTTPDRPCPATAPTVAARLGTGP
+                     VPAFDVSAVCSGFLYGLATGSGLIASGAAERVLVIGAETFSRILNPQDRSTSVIFGDGA
+                     GAVVLRAGEPGETGALGPLRLGSDGTGVDLITVPAGGPPRPGAAAPDDLADRYFTMEGK
+                     RVFWLAVQRMGECAESVLDRAGWRVADVDWLVSHQANHRITARLADEIGIPRERSVSNI
+                     AEVGNTAAASIPLALDHAHARGTLRPGDRVLLTAFGGGLTWGAAALTWPAVDPV"
+     aSDomain        12037..13008
+                     /aSDomain="TIGR00747"
+                     /aSTool="tigrfam"
+                     /description="fabH: 3-oxoacyl-[acyl-carrier-protein]
+                     synthase III"
+                     /detection="hmmscan"
+                     /domain_id="TIGRFam_SCO5888_0001"
+                     /evalue="7.00E-107"
+                     /identifier="TIGR00747"
+                     /label="SCO5888"
+                     /locus_tag="SCO5888"
+                     /protein_end="329"
+                     /protein_start="5"
+                     /score="355.2"
+                     /tool="antismash"
+                     /translation="VLTGLGSCLPSRCVTNAELERTMDTSDEWIRARTGIAQRYVAEEG
+                     TLTSDLAVGAAERALKSARLTPDEIDAVIVATTTPDRPCPATAPTVAARLGTGPVPAFD
+                     VSAVCSGFLYGLATGSGLIASGAAERVLVIGAETFSRILNPQDRSTSVIFGDGAGAVVL
+                     RAGEPGETGALGPLRLGSDGTGVDLITVPAGGPPRPGAAAPDDLADRYFTMEGKRVFWL
+                     AVQRMGECAESVLDRAGWRVADVDWLVSHQANHRITARLADEIGIPRERSVSNIAEVGN
+                     TAAASIPLALDHAHARGTLRPGDRVLLTAFGGGLTWGAAALTW"
+     PFAM_domain     12343..12585
+                     /aSDomain="ACP_syn_III"
+                     /aSTool="fullhmmer"
+                     /database="34.0"
+                     /db_xref="PF08545.12"
+                     /db_xref="GO:0004315"
+                     /db_xref="GO:0006633"
+                     /description="3-Oxoacyl-[acyl-carrier-protein (ACP)]
+                     synthase III"
+                     /detection="hmmscan"
+                     /domain_id="fullhmmer_SCO5888_0019"
+                     /evalue="4.20E-29"
+                     /gene_ontologies="GO:0004315:
+                     3-oxoacyl-[acyl-carrier-protein] synthase activity"
+                     /gene_ontologies="GO:0006633: fatty acid biosynthetic
+                     process"
+                     /label="SCO5888"
+                     /locus_tag="SCO5888"
+                     /protein_end="188"
+                     /protein_start="107"
+                     /score="100.3"
+                     /tool="antismash"
+                     /translation="FDVSAVCSGFLYGLATGSGLIASGAAERVLVIGAETFSRILNPQD
+                     RSTSVIFGDGAGAVVLRAGEPGETGALGPLRLGSDG"
+     PFAM_domain     12739..13008
+                     /aSDomain="ACP_syn_III_C"
+                     /aSTool="fullhmmer"
+                     /database="34.0"
+                     /db_xref="PF08541.12"
+                     /description="3-Oxoacyl-[acyl-carrier-protein (ACP)]
+                     synthase III C terminal"
+                     /detection="hmmscan"
+                     /domain_id="fullhmmer_SCO5888_0020"
+                     /evalue="9.00E-35"
+                     /label="SCO5888"
+                     /locus_tag="SCO5888"
+                     /protein_end="329"
+                     /protein_start="239"
+                     /score="118.8"
+                     /tool="antismash"
+                     /translation="LDRAGWRVADVDWLVSHQANHRITARLADEIGIPRERSVSNIAEV
+                     GNTAAASIPLALDHAHARGTLRPGDRVLLTAFGGGLTWGAAALTW"
+     RBS             13079..13083
+                     /note="possible RBS upstream of SC3F7.09"
+     gene            13089..13352
+                     /gene="SCO5889"
+                     /gene_synonym="redO"
+                     /gene_synonym="SC3F7.09"
+     CDS             13089..13352
+                     /NRPS_PKS="Domain: PP-binding (11-75). E-value: 3.9e-09.
+                     Score: 28.8. Matches aSDomain:
+                     nrpspksdomains_SCO5889_PP-binding.1"
+                     /NRPS_PKS="type: other"
+                     /codon_start=1
+                     /db_xref="GI:2808750"
+                     /db_xref="GOA:O54152"
+                     /db_xref="InterPro:IPR006163"
+                     /db_xref="InterPro:IPR009081"
+                     /db_xref="UniProtKB/TrEMBL:O54152"
+                     /gene="SCO5889"
+                     /gene_functions="biosynthetic (rule-based-clusters)
+                     prodigiosin: PP-binding"
+                     /gene_functions="biosynthetic-additional (smcogs)
+                     SMCOG1147:putative acyl carrier protein (Score: 67.7;
+                     E-value: 1.1e-20)"
+                     /gene_kind="biosynthetic"
+                     /gene_synonym="redO"
+                     /gene_synonym="SC3F7.09"
+                     /note="SC3F7.09, redO, unknown, len: 87 aa"
+                     /product="hypothetical protein SC3F7.09"
+                     /protein_id="CAA16180.1"
+                     /sec_met_domain="PP-binding (E-value: 1.6e-09, bitscore:
+                     28.8, seeds: 164, tool: rule-based-clusters)"
+                     /transl_table=11
+                     /translation="MTPRKLITDYIADAWMGGDAEGLEPDTPIAELNIIDSAAIFDLVH
+                     YLQGEFRVTVPLPEVTLQNFRSVNAICALVDRLRQNEGGTAA"
+     aSDomain        13122..13313
+                     /aSDomain="PP-binding"
+                     /aSTool="nrps_pks_domains"
+                     /database="nrpspksdomains.hmm"
+                     /detection="hmmscan"
+                     /domain_id="nrpspksdomains_SCO5889_PP-binding.1"
+                     /evalue="3.90E-09"
+                     /label="SCO5889_PP-binding.1"
+                     /locus_tag="SCO5889"
+                     /protein_end="75"
+                     /protein_start="11"
+                     /score="28.8"
+                     /tool="antismash"
+                     /translation="ADAWMGGDAEGLEPDTPIAELNIIDSAAIFDLVHYLQGEFRVTVP
+                     LPEVTLQNFRSVNAICALV"
+     PFAM_domain     13143..13313
+                     /aSDomain="PP-binding"
+                     /aSTool="fullhmmer"
+                     /database="34.0"
+                     /db_xref="PF00550.27"
+                     /description="Phosphopantetheine attachment site"
+                     /detection="hmmscan"
+                     /domain_id="fullhmmer_SCO5889_0021"
+                     /evalue="2.80E-05"
+                     /label="SCO5889"
+                     /locus_tag="SCO5889"
+                     /protein_end="75"
+                     /protein_start="18"
+                     /score="24.4"
+                     /tool="antismash"
+                     /translation="DAEGLEPDTPIAELNIIDSAAIFDLVHYLQGEFRVTVPLPEVTLQ
+                     NFRSVNAICALV"
+     RBS             13333..13338
+                     /gene="SCO5889"
+                     /gene_synonym="redO"
+                     /gene_synonym="SC3F7.09"
+                     /note="possible RBS upstream of SC3F7.10"
+     gene            13349..15271
+                     /gene="SCO5890"
+                     /gene_synonym="redN"
+                     /gene_synonym="SC3F7.10"
+     CDS             13349..15271
+                     /NRPS_PKS="Domain: PP-binding (20-81). E-value: 5.5e-08.
+                     Score: 25.1. Matches aSDomain:
+                     nrpspksdomains_SCO5890_PP-binding.1"
+                     /NRPS_PKS="Domain: PP-binding (115-181). E-value: 1.2e-08.
+                     Score: 27.3. Matches aSDomain:
+                     nrpspksdomains_SCO5890_PP-binding.2"
+                     /NRPS_PKS="Domain: Aminotran_1_2 (283-624). E-value:
+                     4.2e-58. Score: 189.0. Matches aSDomain:
+                     nrpspksdomains_SCO5890_Aminotran_1_2.1"
+                     /NRPS_PKS="type: other"
+                     /codon_start=1
+                     /db_xref="GI:2808751"
+                     /db_xref="GOA:O54153"
+                     /db_xref="HSSP:1FC4"
+                     /db_xref="InterPro:IPR004839"
+                     /db_xref="InterPro:IPR006163"
+                     /db_xref="InterPro:IPR009081"
+                     /db_xref="InterPro:IPR015421"
+                     /db_xref="InterPro:IPR015422"
+                     /db_xref="InterPro:IPR015424"
+                     /db_xref="UniProtKB/TrEMBL:O54153"
+                     /gene="SCO5890"
+                     /gene_functions="biosynthetic (rule-based-clusters)
+                     prodigiosin: PP-binding"
+                     /gene_functions="biosynthetic-additional (smcogs)
+                     SMCOG1109:8-amino-7-oxononanoate synthase (Score: 548.3;
+                     E-value: 1.8e-166)"
+                     /gene_kind="biosynthetic"
+                     /gene_synonym="redN"
+                     /gene_synonym="SC3F7.10"
+                     /note="SC3F7.10, redN, putative 8-amino-7-oxononanoate
+                     synthase, len: 640 aa; similar to many diverse transferases
+                     eg. BIOF_BACSH P22806 8-amino-7-oxononanoate synthase (389
+                     aa), fasta scores; opt: 926 z-score: 888.4 E(): 0, 42.1%
+                     identity in 361 aa overlap. Also simlar to SC3F7.12 from aa
+                     1700 to end (E(): 3.6e-15, 31.9% identity in 630 aa
+                     overlap). Contains Pfam match to entry aminotran_2 PF00222,
+                     Aminotransferases class-II, score 292.92 in C-terminus"
+                     /product="putative 8-amino-7-oxononanoate synthase"
+                     /protein_id="CAA16181.1"
+                     /sec_met_domain="PP-binding (E-value: 4.6e-09, bitscore:
+                     27.3, seeds: 164, tool: rule-based-clusters)"
+                     /transl_table=11
+                     /translation="MTDSVDALPDTARIRERVVHVIAARTLYDESHLRPESHFEADLGI
+                     DSVIMESVLVSVREHFGLSAALPAGPTTIGELVDAVGAALAGTGDDRPAPAAGPLPAVP
+                     AEGTGDPVTEAVVAAAMRQTQYQRHQLGLDADLEGELGVDSVVLTSVVAEATERLGLTG
+                     AAPDAAGATTLRALADALRGLVAAAPGTAVPEAAPATGAAAPAPGRSGNAPAPGADGWD
+                     HRSMKDFTEQRDPDLFAKTRSFAGYLRSREKDRLYWYGMPLHSRCGSRAVIFDELEGRK
+                     REFLMFASNNYLGLANHPSVIEAVVDATRTYGATHTGSRFIGGTNMLHKELERRLAAFK
+                     QRPACIVYPGGYSANLGAISALVKSYDTLVVDRLNHMSIVDGARLSGAVRKIYRHNDMA
+                     DLERILSRSAAEGTGGRLIVADGVFSMHGDVCDLPEIVRLAKEYDARVMIDDAHATGVL
+                     GVRGSGTAEHFGLKGEVDLELGTMSKTLAGMGGFVVGEEEVVEYLRYYSNSYVFAANIP
+                     AGVAAGLIASIDVIESEPERLKRLWTNIGTLRDRLLDAGFDLEHSESAILPIVIGDERR
+                     AMELGRAVRARGLFCQTVVYPGVPLGDARLRVSVTCEHTPQDLELAAEIFVDAARETGV
+                     LPGTP"
+     aSDomain        13409..13591
+                     /aSDomain="PP-binding"
+                     /aSTool="nrps_pks_domains"
+                     /database="nrpspksdomains.hmm"
+                     /detection="hmmscan"
+                     /domain_id="nrpspksdomains_SCO5890_PP-binding.1"
+                     /evalue="5.50E-08"
+                     /label="SCO5890_PP-binding.1"
+                     /locus_tag="SCO5890"
+                     /protein_end="81"
+                     /protein_start="20"
+                     /score="25.1"
+                     /tool="antismash"
+                     /translation="VIAARTLYDESHLRPESHFEADLGIDSVIMESVLVSVREHFGLSA
+                     ALPAGPTTIGELVDAV"
+     PFAM_domain     13691..13891
+                     /aSDomain="PP-binding"
+                     /aSTool="fullhmmer"
+                     /database="34.0"
+                     /db_xref="PF00550.27"
+                     /description="Phosphopantetheine attachment site"
+                     /detection="hmmscan"
+                     /domain_id="fullhmmer_SCO5890_0022"
+                     /evalue="1.50E-06"
+                     /label="SCO5890"
+                     /locus_tag="SCO5890"
+                     /protein_end="181"
+                     /protein_start="114"
+                     /score="28.5"
+                     /tool="antismash"
+                     /translation="AVVAAAMRQTQYQRHQLGLDADLEGELGVDSVVLTSVVAEATERL
+                     GLTGAAPDAAGATTLRALADAL"
+     aSDomain        13694..13891
+                     /aSDomain="PP-binding"
+                     /aSTool="nrps_pks_domains"
+                     /database="nrpspksdomains.hmm"
+                     /detection="hmmscan"
+                     /domain_id="nrpspksdomains_SCO5890_PP-binding.2"
+                     /evalue="1.20E-08"
+                     /label="SCO5890_PP-binding.2"
+                     /locus_tag="SCO5890"
+                     /protein_end="181"
+                     /protein_start="115"
+                     /score="27.3"
+                     /tool="antismash"
+                     /translation="VVAAAMRQTQYQRHQLGLDADLEGELGVDSVVLTSVVAEATERLG
+                     LTGAAPDAAGATTLRALADAL"
+     aSModule        13694..15220
+                     /domains="nrpspksdomains_SCO5890_PP-binding.2"
+                     /domains="nrpspksdomains_SCO5890_Aminotran_1_2.1"
+                     /incomplete
+                     /locus_tags="SCO5890"
+                     /tool="antismash"
+                     /type="unknown"
+     aSDomain        14198..15220
+                     /aSDomain="Aminotran_1_2"
+                     /aSTool="nrps_pks_domains"
+                     /database="nrpspksdomains.hmm"
+                     /detection="hmmscan"
+                     /domain_id="nrpspksdomains_SCO5890_Aminotran_1_2.1"
+                     /evalue="4.20E-58"
+                     /label="SCO5890_Aminotran_1_2.1"
+                     /locus_tag="SCO5890"
+                     /protein_end="624"
+                     /protein_start="283"
+                     /score="189.0"
+                     /tool="antismash"
+                     /translation="FLMFASNNYLGLANHPSVIEAVVDATRTYGATHTGSRFIGGTNML
+                     HKELERRLAAFKQRPACIVYPGGYSANLGAISALVKSYDTLVVDRLNHMSIVDGARLSG
+                     AVRKIYRHNDMADLERILSRSAAEGTGGRLIVADGVFSMHGDVCDLPEIVRLAKEYDAR
+                     VMIDDAHATGVLGVRGSGTAEHFGLKGEVDLELGTMSKTLAGMGGFVVGEEEVVEYLRY
+                     YSNSYVFAANIPAGVAAGLIASIDVIESEPERLKRLWTNIGTLRDRLLDAGFDLEHSES
+                     AILPIVIGDERRAMELGRAVRARGLFCQTVVYPGVPLGDARLRVSVTCEHTPQDLELAA
+                     E"
+     PFAM_domain     14198..15220
+                     /aSDomain="Aminotran_1_2"
+                     /aSTool="fullhmmer"
+                     /database="34.0"
+                     /db_xref="PF00155.23"
+                     /db_xref="GO:0009058"
+                     /db_xref="GO:0030170"
+                     /description="Aminotransferase class I and II"
+                     /detection="hmmscan"
+                     /domain_id="fullhmmer_SCO5890_0023"
+                     /evalue="1.50E-55"
+                     /gene_ontologies="GO:0009058: biosynthetic process"
+                     /gene_ontologies="GO:0030170: pyridoxal phosphate binding"
+                     /label="SCO5890"
+                     /locus_tag="SCO5890"
+                     /protein_end="624"
+                     /protein_start="283"
+                     /score="189.0"
+                     /tool="antismash"
+                     /translation="FLMFASNNYLGLANHPSVIEAVVDATRTYGATHTGSRFIGGTNML
+                     HKELERRLAAFKQRPACIVYPGGYSANLGAISALVKSYDTLVVDRLNHMSIVDGARLSG
+                     AVRKIYRHNDMADLERILSRSAAEGTGGRLIVADGVFSMHGDVCDLPEIVRLAKEYDAR
+                     VMIDDAHATGVLGVRGSGTAEHFGLKGEVDLELGTMSKTLAGMGGFVVGEEEVVEYLRY
+                     YSNSYVFAANIPAGVAAGLIASIDVIESEPERLKRLWTNIGTLRDRLLDAGFDLEHSES
+                     AILPIVIGDERRAMELGRAVRARGLFCQTVVYPGVPLGDARLRVSVTCEHTPQDLELAA
+                     E"
+     misc_feature    14318..15169
+                     /gene="SCO5890"
+                     /gene_synonym="redN"
+                     /gene_synonym="SC3F7.10"
+                     /note="Pfam match to entry aminotran_2 PF00222,
+                     Aminotransferases class-II, from 1 to 292, score 292.92"
+     RBS             15364..15369
+                     /note="possible RBS upstream of St3F7.11"
+     gene            15385..16983
+                     /gene="SCO5891"
+                     /gene_synonym="redM"
+                     /gene_synonym="St3F7.11"
+     CDS             15385..16983
+                     /NRPS_PKS="Domain: AMP-binding (16-427). E-value: 5.3e-93.
+                     Score: 303.6. Matches aSDomain:
+                     nrpspksdomains_SCO5891_AMP-binding.1"
+                     /NRPS_PKS="type: NRPS-like protein"
+                     /codon_start=1
+                     /db_xref="GI:2808752"
+                     /db_xref="GOA:O54154"
+                     /db_xref="HSSP:1AMU"
+                     /db_xref="InterPro:IPR000873"
+                     /db_xref="InterPro:IPR010071"
+                     /db_xref="InterPro:IPR020845"
+                     /db_xref="UniProtKB/TrEMBL:O54154"
+                     /gene="SCO5891"
+                     /gene_functions="biosynthetic (rule-based-clusters)
+                     prodigiosin: AMP-binding"
+                     /gene_functions="biosynthetic-additional (smcogs)
+                     SMCOG1002:AMP-dependent synthetase and ligase (Score:
+                     341.5; E-value: 1.1e-103)"
+                     /gene_kind="biosynthetic"
+                     /gene_synonym="redM"
+                     /gene_synonym="St3F7.11"
+                     /note="St3F7.11, redM, probable peptide synthase, len: 532
+                     aa; similar to part of many peptide synthases eg.
+                     Myxococcus xanthus TR:Q50858 (EMBL:U24657) saframycin MX1
+                     synthetase A (2605 aa), fasta scores; opt: 572 z-score:
+                     782.6 E(): 0, 36.1% identity in 548 aa overlap. Contains
+                     PS00455 Putative AMP-binding domain signature and Pfam
+                     match to entry AMP-binding PF00501, AMP-binding enzymes,
+                     score 392.99. Also similar to part of SC3F7.12 aa 60 to 590
+                     (E(): 2.8e-05, 25.3% identity in 561 aa overlap)"
+                     /product="putative peptide synthase"
+                     /protein_id="CAA16182.1"
+                     /sec_met_domain="AMP-binding (E-value: 4.8e-107, bitscore:
+                     348.5, seeds: 400, tool: rule-based-clusters)"
+                     /transl_table=11
+                     /translation="MSAATPSVIRLPRDTSAQHAARPAFVGSDPLTYGEFTARVEAVAA
+                     RLLSLGTRTGDRIAVWMDKQPRYAEAIVAALEAGCAYVPLDGGQPVSRVRTILADAEPV
+                     VLFTDAHHAALLGDDDLPASVTTVVAVGDALPDTVGGIPVAPWESWEQGRAGRVTLLPS
+                     LTPGDLAALLYTSGSTGTPKGVQISHGALANFVAWARDELDVGPDDVFAGHASFNFDLS
+                     TFDLFTALSCGAAVWIVPDAATKDVTALAEGIRRHRITVWYSVPSVLHLLTTSAALTPE
+                     HAASLRYVLFAGEVFPVPQLRALRELLPPGTPLYNLYGPTETNVCTYHRVRPEDLHRAT
+                     PVPIGLPITGAGTTVVDDAGRTVREPGAIGELHVSGVCVTPGYWRRAEEPVSTAHCRGV
+                     HPTGDLVSYEEDGRLVYRGRKDRMVKLSGYRVELGEIEAAALRHPGIAEAAVLVDGSGP
+                     KARLRLYYTLCEGAERIGLVELKQHCARHLPTYMVPHGAVRLDRMPLNPNGKTDYRRLG
+                     LDAPPRPAAPLGTAR"
+     PFAM_domain     15427..16665
+                     /aSDomain="AMP-binding"
+                     /aSTool="fullhmmer"
+                     /database="34.0"
+                     /db_xref="PF00501.30"
+                     /description="AMP-binding enzyme"
+                     /detection="hmmscan"
+                     /domain_id="fullhmmer_SCO5891_0024"
+                     /evalue="1.50E-89"
+                     /label="SCO5891"
+                     /locus_tag="SCO5891"
+                     /protein_end="427"
+                     /protein_start="14"
+                     /score="300.6"
+                     /tool="antismash"
+                     /translation="TSAQHAARPAFVGSDPLTYGEFTARVEAVAARLLSLGTRTGDRIA
+                     VWMDKQPRYAEAIVAALEAGCAYVPLDGGQPVSRVRTILADAEPVVLFTDAHHAALLGD
+                     DDLPASVTTVVAVGDALPDTVGGIPVAPWESWEQGRAGRVTLLPSLTPGDLAALLYTSG
+                     STGTPKGVQISHGALANFVAWARDELDVGPDDVFAGHASFNFDLSTFDLFTALSCGAAV
+                     WIVPDAATKDVTALAEGIRRHRITVWYSVPSVLHLLTTSAALTPEHAASLRYVLFAGEV
+                     FPVPQLRALRELLPPGTPLYNLYGPTETNVCTYHRVRPEDLHRATPVPIGLPITGAGTT
+                     VVDDAGRTVREPGAIGELHVSGVCVTPGYWRRAEEPVSTAHCRGVHPTGDLVSYEEDGR
+                     LVYRGRKDRMVKLS"
+     aSDomain        15433..16665
+                     /aSDomain="AMP-binding"
+                     /aSTool="nrps_pks_domains"
+                     /database="nrpspksdomains.hmm"
+                     /detection="hmmscan"
+                     /domain_id="nrpspksdomains_SCO5891_AMP-binding.1"
+                     /evalue="5.30E-93"
+                     /label="SCO5891_AMP-binding.1"
+                     /locus_tag="SCO5891"
+                     /protein_end="427"
+                     /protein_start="16"
+                     /score="303.6"
+                     /specificity="consensus: ala"
+                     /tool="antismash"
+                     /translation="AQHAARPAFVGSDPLTYGEFTARVEAVAARLLSLGTRTGDRIAVW
+                     MDKQPRYAEAIVAALEAGCAYVPLDGGQPVSRVRTILADAEPVVLFTDAHHAALLGDDD
+                     LPASVTTVVAVGDALPDTVGGIPVAPWESWEQGRAGRVTLLPSLTPGDLAALLYTSGST
+                     GTPKGVQISHGALANFVAWARDELDVGPDDVFAGHASFNFDLSTFDLFTALSCGAAVWI
+                     VPDAATKDVTALAEGIRRHRITVWYSVPSVLHLLTTSAALTPEHAASLRYVLFAGEVFP
+                     VPQLRALRELLPPGTPLYNLYGPTETNVCTYHRVRPEDLHRATPVPIGLPITGAGTTVV
+                     DDAGRTVREPGAIGELHVSGVCVTPGYWRRAEEPVSTAHCRGVHPTGDLVSYEEDGRLV
+                     YRGRKDRMVKLS"
+     misc_feature    15478..16737
+                     /gene="SCO5891"
+                     /gene_synonym="redM"
+                     /gene_synonym="St3F7.11"
+                     /note="Pfam match to entry AMP-binding PF00501, AMP-binding
+                     enzymes, from 1 to 415, score 392.99"
+     aSDomain        15478..16737
+                     /aSDomain="TIGR01733"
+                     /aSTool="tigrfam"
+                     /description="AA-adenyl-dom: amino acid adenylation domain"
+                     /detection="hmmscan"
+                     /domain_id="TIGRFam_SCO5891_0002"
+                     /evalue="1.70E-105"
+                     /identifier="TIGR01733"
+                     /label="SCO5891"
+                     /locus_tag="SCO5891"
+                     /protein_end="451"
+                     /protein_start="31"
+                     /score="351.1"
+                     /tool="antismash"
+                     /translation="TYGEFTARVEAVAARLLSLGTRTGDRIAVWMDKQPRYAEAIVAAL
+                     EAGCAYVPLDGGQPVSRVRTILADAEPVVLFTDAHHAALLGDDDLPASVTTVVAVGDAL
+                     PDTVGGIPVAPWESWEQGRAGRVTLLPSLTPGDLAALLYTSGSTGTPKGVQISHGALAN
+                     FVAWARDELDVGPDDVFAGHASFNFDLSTFDLFTALSCGAAVWIVPDAATKDVTALAEG
+                     IRRHRITVWYSVPSVLHLLTTSAALTPEHAASLRYVLFAGEVFPVPQLRALRELLPPGT
+                     PLYNLYGPTETNVCTYHRVRPEDLHRATPVPIGLPITGAGTTVVDDAGRTVREPGAIGE
+                     LHVSGVCVTPGYWRRAEEPVSTAHCRGVHPTGDLVSYEEDGRLVYRGRKDRMVKLSGYR
+                     VELGEIEAAALRHPGIAEAAV"
+     CDS_motif       15604..15642
+                     /aSTool="nrps_pks_domains"
+                     /database="abmotifs"
+                     /detection="hmmscan"
+                     /domain_id="nrpspksmotif_SCO5891_0001"
+                     /evalue="2.50E-04"
+                     /label="NRPS-A_a2"
+                     /locus_tag="SCO5891"
+                     /protein_end="86"
+                     /protein_start="73"
+                     /score="14.5"
+                     /tool="antismash"
+                     /translation="AALEAGCAYVPLD"
+     CDS_motif       15892..15951
+                     /aSTool="nrps_pks_domains"
+                     /database="abmotifs"
+                     /detection="hmmscan"
+                     /domain_id="nrpspksmotif_SCO5891_0002"
+                     /evalue="5.00E-09"
+                     /label="NRPS-A_a3"
+                     /locus_tag="SCO5891"
+                     /protein_end="189"
+                     /protein_start="169"
+                     /score="28.2"
+                     /tool="antismash"
+                     /translation="AALLYTSGSTGTPKGVQISH"
+     misc_feature    15898..15933
+                     /gene="SCO5891"
+                     /gene_synonym="redM"
+                     /gene_synonym="St3F7.11"
+                     /note="PS00455 Putative AMP-binding domain signature"
+     CDS_motif       16480..16548
+                     /aSTool="nrps_pks_domains"
+                     /database="abmotifs"
+                     /detection="hmmscan"
+                     /domain_id="nrpspksmotif_SCO5891_0003"
+                     /evalue="2.30E-08"
+                     /label="NRPS-A_a6"
+                     /locus_tag="SCO5891"
+                     /protein_end="388"
+                     /protein_start="365"
+                     /score="26.4"
+                     /tool="antismash"
+                     /translation="PGAIGELHVSGVCVTPGYWRRAE"
+     CDS_motif       16630..16695
+                     /aSTool="nrps_pks_domains"
+                     /database="abmotifs"
+                     /detection="hmmscan"
+                     /domain_id="nrpspksmotif_SCO5891_0004"
+                     /evalue="9.40E-10"
+                     /label="NRPS-A_a8"
+                     /locus_tag="SCO5891"
+                     /protein_end="437"
+                     /protein_start="415"
+                     /score="30.6"
+                     /tool="antismash"
+                     /translation="YRGRKDRMVKLSGYRVELGEIE"
+     PFAM_domain     16687..16914
+                     /aSDomain="AMP-binding_C"
+                     /aSTool="fullhmmer"
+                     /database="34.0"
+                     /db_xref="PF13193.8"
+                     /description="AMP-binding enzyme C-terminal domain"
+                     /detection="hmmscan"
+                     /domain_id="fullhmmer_SCO5891_0025"
+                     /evalue="1.70E-11"
+                     /label="SCO5891"
+                     /locus_tag="SCO5891"
+                     /protein_end="510"
+                     /protein_start="434"
+                     /score="45.0"
+                     /tool="antismash"
+                     /translation="EIEAAALRHPGIAEAAVLVDGSGPKARLRLYYTLCEGAERIGLVE
+                     LKQHCARHLPTYMVPHGAVRLDRMPLNPNGK"
+     gene            16984..23877
+                     /gene="SCO5892"
+                     /gene_synonym="redL"
+                     /gene_synonym="SC3F7.12"
+     CDS             16984..23877
+                     /NRPS_PKS="Domain: CAL_domain (60-508). E-value: 1.2e-124.
+                     Score: 408.3. Matches aSDomain:
+                     nrpspksdomains_SCO5892_CAL_domain.1"
+                     /NRPS_PKS="Domain: ACP (704-772). E-value: 4.6e-17. Score:
+                     54.0. Matches aSDomain: nrpspksdomains_SCO5892_ACP.1"
+                     /NRPS_PKS="Domain: PKS_KS(Hybrid-KS) (799-1209). E-value:
+                     1.1e-166. Score: 546.7. Matches aSDomain:
+                     nrpspksdomains_SCO5892_PKS_KS.1"
+                     /NRPS_PKS="Domain: PKS_AT (1316-1620). E-value: 4.4e-97.
+                     Score: 316.9. Matches aSDomain:
+                     nrpspksdomains_SCO5892_PKS_AT.1"
+                     /NRPS_PKS="Domain: PP-binding (1701-1768). E-value:
+                     4.8e-08. Score: 25.3. Matches aSDomain:
+                     nrpspksdomains_SCO5892_PP-binding.1"
+                     /NRPS_PKS="Domain: Aminotran_1_2 (1950-2293). E-value:
+                     1.5e-55. Score: 180.6. Matches aSDomain:
+                     nrpspksdomains_SCO5892_Aminotran_1_2.1"
+                     /NRPS_PKS="type: PKS-like protein"
+                     /codon_start=1
+                     /db_xref="GI:2808753"
+                     /db_xref="GOA:O54155"
+                     /db_xref="HSSP:1FC4"
+                     /db_xref="InterPro:IPR000794"
+                     /db_xref="InterPro:IPR000873"
+                     /db_xref="InterPro:IPR001227"
+                     /db_xref="InterPro:IPR001917"
+                     /db_xref="InterPro:IPR004839"
+                     /db_xref="InterPro:IPR006163"
+                     /db_xref="InterPro:IPR009081"
+                     /db_xref="InterPro:IPR014030"
+                     /db_xref="InterPro:IPR014031"
+                     /db_xref="InterPro:IPR014043"
+                     /db_xref="InterPro:IPR015421"
+                     /db_xref="InterPro:IPR015422"
+                     /db_xref="InterPro:IPR015424"
+                     /db_xref="InterPro:IPR016035"
+                     /db_xref="InterPro:IPR016036"
+                     /db_xref="InterPro:IPR016038"
+                     /db_xref="InterPro:IPR016039"
+                     /db_xref="InterPro:IPR018201"
+                     /db_xref="InterPro:IPR020801"
+                     /db_xref="InterPro:IPR020806"
+                     /db_xref="InterPro:IPR020841"
+                     /db_xref="UniProtKB/TrEMBL:O54155"
+                     /gene="SCO5892"
+                     /gene_functions="biosynthetic (rule-based-clusters) T1PKS:
+                     hyb_KS"
+                     /gene_functions="biosynthetic (rule-based-clusters) T1PKS:
+                     PKS_AT"
+                     /gene_functions="biosynthetic (rule-based-clusters)
+                     prodigiosin: PP-binding"
+                     /gene_functions="biosynthetic (rule-based-clusters)
+                     prodigiosin: AMP-binding"
+                     /gene_functions="biosynthetic (rule-based-clusters)
+                     NRPS-like: PP-binding"
+                     /gene_functions="biosynthetic (rule-based-clusters)
+                     NRPS-like: AMP-binding"
+                     /gene_functions="biosynthetic-additional (smcogs)
+                     SMCOG1022:Beta-ketoacyl synthase (Score: 265.6; E-value:
+                     1.3e-80)"
+                     /gene_kind="biosynthetic"
+                     /gene_synonym="redL"
+                     /gene_synonym="SC3F7.12"
+                     /note="SC3F7.12, redL, probable polyketide synthase, len:
+                     2297 aa; contains 3 modules: N-terminus (start to approx.
+                     aa 700) similar to eg. N-terminus of TR:Q50857
+                     (EMBL:U24657) saframycin mx1 synthetase B from Myxococcus
+                     xanthus (1770 aa) (fasta scores; E(): 0, 45.0% identity in
+                     691 aa overlap), contains Pfam match to AMP-binding
+                     PF00501, AMP-binding enzymes, score 166.66; central module
+                     (approx aa 795 to 1800) similar to eg. TR:G2317861
+                     (EMBL:U78289) Streptomyces fradiae tylactone synthase
+                     module 3 (1864 aa) (E(): 0, 39.9% identity in 1125 aa
+                     overlap), contains PS00606 Beta-ketoacyl synthases active
+                     site and Pfam match to ketoacyl-synt PF00109, Beta-ketoacyl
+                     synthases, score 585.24; and C-terminus (approx aa 1800 to
+                     end), similar to eg. TR:Q52936 (EMBL:X64131
+                     acyl-transferase rkpG from Rhizobium meliloti (446 aa)
+                     (E(): 0. 44.9% identity in 394 aa overlap), contains
+                     PS00599 Aminotransferases class-II pyridoxal-phosphate
+                     attachment site and Pfam match to aminotran_2 PF00222,
+                     Aminotransferases class-II, score 276.93"
+                     /product="polyketide synthase"
+                     /protein_id="CAA16183.1"
+                     /sec_met_domain="AMP-binding (E-value: 4.1e-99, bitscore:
+                     322.4, seeds: 400, tool: rule-based-clusters)"
+                     /sec_met_domain="PP-binding (E-value: 3.8e-13, bitscore:
+                     40.4, seeds: 164, tool: rule-based-clusters)"
+                     /sec_met_domain="PKS_AT (E-value: 1.7e-97, bitscore: 316.9,
+                     seeds: 1682, tool: rule-based-clusters)"
+                     /sec_met_domain="hyb_KS (E-value: 5e-169, bitscore: 553.1,
+                     seeds: 33, tool: rule-based-clusters)"
+                     /transl_table=11
+                     /translation="MARNRREKNVSHGPTDPLHEHWQGPEPETVTALLRHRAEHTPDAL
+                     AHRFLTDTDGTSVAWTYRELDLHAREVATHLRHAGVGQGPVLLLHPPGLDYLAAFFGCL
+                     YAGAVAVPAYPPDNARFGQTVPRLAAIARDCAATHALTTRRVRETVAADGTGRVGTELD
+                     GVRWLVTEDLYTGESTTAWEDPGATARSLAFLQYTSGSTAAPKGVMVEHGNLVRNLRSI
+                     HLRLGHDADSGMVSWLPPYHDMGLIGGILTPVYGGFPAHLMAPMTFVQRPLLWLETLSR
+                     TGASTSVAPNFGFEQCLRRITPAQRAGLDLSRWRLALNGAEPIRPDTLDRFAEYFAPAG
+                     FDRTALLPCYGLAEATLMVTGVRPADPPVVESFDAAALEAGTARPADPGGVRTTRVVGC
+                     GAPVADVEVAVVDAATGRRVPDGTVAEIRVSGPGVARGYWGRPEAAAEVFGTRIDGEPG
+                     NAWLRTGDVGFRHDGQLYVVGRTKDVIIVQGRNIHPQDVEQTAERVGAGLRAGYGAAFA
+                     VPTADGEQLALAYEIGGPGAGDPHALLARLRTAIADEHQVTPHTVVLLKRSSVPRTTSG
+                     KIQRGACRQRLLDLELPVVAASVVQDGALPDTPAPHAPASPDRTAALVADALDRAATDA
+                     PDGTSRYPRLLTAVRTLSERLGVALDVGELLSGPEPDGAPSLTGLCRAALADAAPAPTA
+                     APERTRTQAVDWLRRAVAARLGLRPSVIDTAVPFTSLGLDSKQAVALTAPFGDWLGTPV
+                     TPATLYDHPTVESLAAHVTGPEADGTPHPHPRRPAPEPARGRADEPVAVIGIGCRFPGA
+                     PDPDSYWRLLRDGRDAVGEAPADRHGDTGGRPGGFLEHVYDFDARFFGVSARETERMDP
+                     QQRLLLEVAWQTFEDAGIAPSSLAGTDTGVFVGISGHDYADLQMPHPDVVDMYSATGNA
+                     QSVAAGRLSYFFDLTGPSLALDTACSSSLAAVHTALRSLRDGECGVALAGGVNLMLTPG
+                     LSEALARGGMLGPGGRCRTFDDGADGYVRGEGAGLVCLKPLSAALADGDRVHAVLTGSA
+                     LGHGGRANGLTAPRSTAQRAVMTGALERAGVQPGQIDYVEAHGTGTALGDPIEWEALAG
+                     VYGRGRPADAPCPVGSVKTAIGHLEAAAGIAGLIKAVLVVREREVPPLLHLATPNRHLD
+                     WTGSGLTVPTTRRALPAGGTLRAGVSSFGFGGTNAHVIVESAPAPPAPAGESGAPDGTV
+                     HALSLSAHTESALATLAGRYRTHLAAHPGVPLAALCHSARTGRSRLPHRAVLTAATRDE
+                     LDTALEALIRREPAVDVARGGPADGTAPTVAFLFGGQGTQYPGMGRDLYDAHPVLARTL
+                     RRADAVLRGLGEIPLLDLLFDPDRAEDLARTRYCQPALVALEVALADLWTSCGVRPAAV
+                     LGHSVGALAAACVAGVLSLEDALTLAVVRGRAMDEQPGEGAMIACVGDPETVREIAAGH
+                     DRVALAAVNAPRNLVFSGAADRIAALRGDLERKGVTVRPLAVSHAFHSPLMAGAAEPLL
+                     EAARAVEFQPPAIPWISDATGEPVTRVDAEYWVRHLLGTVRFADGFARLRAGNAEGGLG
+                     CDAFVEIGPHPTLLNLGRSAVADGPEPDGRRTLWLPSLRRGAPGRRTLLRSLGGYQCAG
+                     GDIDWSALDDEHPPARVPLPHTPFERRTYRFQAPTPDQEGDPMPSQPTVPGTAPTGPAG
+                     EVSRTVLDTVARVCGFPVADLPVHARLGLELGFDSLMRTDLQRRLTDRFPQRMHTLQDL
+                     PEDPTVQDIIGRLAAGDDRDGDPAGGAHTARPALAGTGPAAPPAHPAAVPAAPPVPAPQ
+                     YAPYGAFPAPPHGYAVAAPVPQPGVPYPYPYGYPPHGAPGYAYYVPQPYPPQAFPPPAP
+                     PSPLQAAPAPVPAAAPAPVPDPVPAPAAPVRQERAFEDWAEYAELQGRLRQTRTSGSNP
+                     YGRTHEGFNSALATVDGTKVVNFAAFNYLALSHHPRVRQAAKDAVDRYGTSASATPLLF
+                     GETPLHHELEAEIARFIGTEAAIVFAGGHATNVATVGHLFGPEDLVVHDAWIHDSTVRG
+                     CILSGARRRSFPHNDWAALDRILTGARASHRRALVVIEGAYSQDGDIPDLPRFIEVKKR
+                     HGAMLMIDEAHSIGVLGRTGRGVGEHYGTDPADVDLWMGTLSKALGSLGGYIAARRPII
+                     EYLKFTAPLHIFSTGISPANAAAALEALRVVQDEPERVARVQELAEFFRAGARARGLDV
+                     GVSRLSAVIPVITGDWEKTMALSNSLLERGVNVMPIGYPAVPRDQCRLRFFINADHSEA
+                     DLEHSLDLLV"
+     PFAM_domain     17086..18444
+                     /aSDomain="AMP-binding"
+                     /aSTool="fullhmmer"
+                     /database="34.0"
+                     /db_xref="PF00501.30"
+                     /description="AMP-binding enzyme"
+                     /detection="hmmscan"
+                     /domain_id="fullhmmer_SCO5892_0026"
+                     /evalue="4.10E-96"
+                     /label="SCO5892"
+                     /locus_tag="SCO5892"
+                     /protein_end="487"
+                     /protein_start="34"
+                     /score="322.3"
+                     /tool="antismash"
+                     /translation="RHRAEHTPDALAHRFLTDTDGTSVAWTYRELDLHAREVATHLRHA
+                     GVGQGPVLLLHPPGLDYLAAFFGCLYAGAVAVPAYPPDNARFGQTVPRLAAIARDCAAT
+                     HALTTRRVRETVAADGTGRVGTELDGVRWLVTEDLYTGESTTAWEDPGATARSLAFLQY
+                     TSGSTAAPKGVMVEHGNLVRNLRSIHLRLGHDADSGMVSWLPPYHDMGLIGGILTPVYG
+                     GFPAHLMAPMTFVQRPLLWLETLSRTGASTSVAPNFGFEQCLRRITPAQRAGLDLSRWR
+                     LALNGAEPIRPDTLDRFAEYFAPAGFDRTALLPCYGLAEATLMVTGVRPADPPVVESFD
+                     AAALEAGTARPADPGGVRTTRVVGCGAPVADVEVAVVDAATGRRVPDGTVAEIRVSGPG
+                     VARGYWGRPEAAAEVFGTRIDGEPGNAWLRTGDVGFRHDGQLYVVGRTKDVIIV"
+     aSDomain        17164..18507
+                     /aSDomain="CAL_domain"
+                     /aSTool="nrps_pks_domains"
+                     /database="nrpspksdomains.hmm"
+                     /detection="hmmscan"
+                     /domain_id="nrpspksdomains_SCO5892_CAL_domain.1"
+                     /evalue="1.20E-124"
+                     /label="SCO5892_CAL_domain.1"
+                     /locus_tag="SCO5892"
+                     /protein_end="508"
+                     /protein_start="60"
+                     /score="408.3"
+                     /specificity="Minowa: NH2"
+                     /tool="antismash"
+                     /translation="TYRELDLHAREVATHLRHAGVGQGPVLLLHPPGLDYLAAFFGCLY
+                     AGAVAVPAYPPDNARFGQTVPRLAAIARDCAATHALTTRRVRETVAADGTGRVGTELDG
+                     VRWLVTEDLYTGESTTAWEDPGATARSLAFLQYTSGSTAAPKGVMVEHGNLVRNLRSIH
+                     LRLGHDADSGMVSWLPPYHDMGLIGGILTPVYGGFPAHLMAPMTFVQRPLLWLETLSRT
+                     GASTSVAPNFGFEQCLRRITPAQRAGLDLSRWRLALNGAEPIRPDTLDRFAEYFAPAGF
+                     DRTALLPCYGLAEATLMVTGVRPADPPVVESFDAAALEAGTARPADPGGVRTTRVVGCG
+                     APVADVEVAVVDAATGRRVPDGTVAEIRVSGPGVARGYWGRPEAAAEVFGTRIDGEPGN
+                     AWLRTGDVGFRHDGQLYVVGRTKDVIIVQGRNIHPQDVEQTAERVGAGL"
+     misc_feature    17164..18519
+                     /gene="SCO5892"
+                     /gene_synonym="redL"
+                     /gene_synonym="SC3F7.12"
+                     /note="Pfam match to entry AMP-binding PF00501, AMP-binding
+                     enzymes, from 1 to 415, score 166.66"
+     aSModule        17164..19299
+                     /domains="nrpspksdomains_SCO5892_CAL_domain.1"
+                     /domains="nrpspksdomains_SCO5892_ACP.1"
+                     /incomplete
+                     /locus_tags="SCO5892"
+                     /starter_module
+                     /tool="antismash"
+                     /type="unknown"
+     CDS_motif       17560..17619
+                     /aSTool="nrps_pks_domains"
+                     /database="abmotifs"
+                     /detection="hmmscan"
+                     /domain_id="nrpspksmotif_SCO5892_0001"
+                     /evalue="7.10E-08"
+                     /label="NRPS-A_a3"
+                     /locus_tag="SCO5892"
+                     /protein_end="212"
+                     /protein_start="192"
+                     /score="24.8"
+                     /tool="antismash"
+                     /translation="AFLQYTSGSTAAPKGVMVEH"
+     CDS_motif       18241..18330
+                     /aSTool="nrps_pks_domains"
+                     /database="abmotifs"
+                     /detection="hmmscan"
+                     /domain_id="nrpspksmotif_SCO5892_0002"
+                     /evalue="1.90E-11"
+                     /label="NRPS-A_a6"
+                     /locus_tag="SCO5892"
+                     /protein_end="449"
+                     /protein_start="419"
+                     /score="36.2"
+                     /tool="antismash"
+                     /translation="PDGTVAEIRVSGPGVARGYWGRPEAAAEVF"
+     CDS_motif       18415..18477
+                     /aSTool="nrps_pks_domains"
+                     /database="abmotifs"
+                     /detection="hmmscan"
+                     /domain_id="nrpspksmotif_SCO5892_0003"
+                     /evalue="2.60E-03"
+                     /label="NRPS-A_a8"
+                     /locus_tag="SCO5892"
+                     /protein_end="498"
+                     /protein_start="477"
+                     /score="10.7"
+                     /tool="antismash"
+                     /translation="VGRTKDVIIVQGRNIHPQDVE"
+     PFAM_domain     19096..19296
+                     /aSDomain="PP-binding"
+                     /aSTool="fullhmmer"
+                     /database="34.0"
+                     /db_xref="PF00550.27"
+                     /description="Phosphopantetheine attachment site"
+                     /detection="hmmscan"
+                     /domain_id="fullhmmer_SCO5892_0027"
+                     /evalue="3.50E-11"
+                     /label="SCO5892"
+                     /locus_tag="SCO5892"
+                     /protein_end="771"
+                     /protein_start="704"
+                     /score="43.3"
+                     /tool="antismash"
+                     /translation="DWLRRAVAARLGLRPSVIDTAVPFTSLGLDSKQAVALTAPFGDWL
+                     GTPVTPATLYDHPTVESLAAHV"
+     aSDomain        19096..19299
+                     /ASF="found active site serine: True"
+                     /ASF="non-beta-branching ACP"
+                     /aSDomain="ACP"
+                     /aSTool="nrps_pks_domains"
+                     /database="nrpspksdomains.hmm"
+                     /detection="hmmscan"
+                     /domain_id="nrpspksdomains_SCO5892_ACP.1"
+                     /evalue="4.60E-17"
+                     /label="SCO5892_ACP.1"
+                     /locus_tag="SCO5892"
+                     /protein_end="772"
+                     /protein_start="704"
+                     /score="54.0"
+                     /tool="antismash"
+                     /translation="DWLRRAVAARLGLRPSVIDTAVPFTSLGLDSKQAVALTAPFGDWL
+                     GTPVTPATLYDHPTVESLAAHVT"
+     CDS_motif       19240..19302
+                     /aSTool="nrps_pks_domains"
+                     /database="abmotifs"
+                     /detection="hmmscan"
+                     /domain_id="nrpspksmotif_SCO5892_0004"
+                     /evalue="4.50E+01"
+                     /label="PKSI-AT-mM_m3"
+                     /locus_tag="SCO5892"
+                     /protein_end="773"
+                     /protein_start="752"
+                     /score="-2.6"
+                     /tool="antismash"
+                     /translation="VTPATLYDHPTVESLAAHVTG"
+     PFAM_domain     19375..20082
+                     /aSDomain="ketoacyl-synt"
+                     /aSTool="fullhmmer"
+                     /database="34.0"
+                     /db_xref="PF00109.28"
+                     /description="Beta-ketoacyl synthase, N-terminal domain"
+                     /detection="hmmscan"
+                     /domain_id="fullhmmer_SCO5892_0028"
+                     /evalue="1.20E-84"
+                     /label="SCO5892"
+                     /locus_tag="SCO5892"
+                     /protein_end="1033"
+                     /protein_start="797"
+                     /score="283.9"
+                     /tool="antismash"
+                     /translation="EPVAVIGIGCRFPGAPDPDSYWRLLRDGRDAVGEAPADRHGDTGG
+                     RPGGFLEHVYDFDARFFGVSARETERMDPQQRLLLEVAWQTFEDAGIAPSSLAGTDTGV
+                     FVGISGHDYADLQMPHPDVVDMYSATGNAQSVAAGRLSYFFDLTGPSLALDTACSSSLA
+                     AVHTALRSLRDGECGVALAGGVNLMLTPGLSEALARGGMLGPGGRCRTFDDGADGYVRG
+                     EGAGLVCLKPLSAA"
+     misc_feature    19381..20610
+                     /gene="SCO5892"
+                     /gene_synonym="redL"
+                     /gene_synonym="SC3F7.12"
+                     /note="Pfam match to entry ketoacyl-synt PF00109,
+                     Beta-ketoacyl synthases, from 1 to 442, score 585.24"
+     aSDomain        19381..20610
+                     /ASF="found active site cysteine: True, scaffold matched
+                     GSSS: True"
+                     /ASF="found active site histidines: True"
+                     /aSDomain="PKS_KS"
+                     /aSTool="nrps_pks_domains"
+                     /database="nrpspksdomains.hmm"
+                     /detection="hmmscan"
+                     /domain_id="nrpspksdomains_SCO5892_PKS_KS.1"
+                     /domain_subtype="Hybrid-KS"
+                     /evalue="1.10E-166"
+                     /label="SCO5892_PKS_KS.1"
+                     /locus_tag="SCO5892"
+                     /protein_end="1209"
+                     /protein_start="799"
+                     /score="546.7"
+                     /tool="antismash"
+                     /translation="VAVIGIGCRFPGAPDPDSYWRLLRDGRDAVGEAPADRHGDTGGRP
+                     GGFLEHVYDFDARFFGVSARETERMDPQQRLLLEVAWQTFEDAGIAPSSLAGTDTGVFV
+                     GISGHDYADLQMPHPDVVDMYSATGNAQSVAAGRLSYFFDLTGPSLALDTACSSSLAAV
+                     HTALRSLRDGECGVALAGGVNLMLTPGLSEALARGGMLGPGGRCRTFDDGADGYVRGEG
+                     AGLVCLKPLSAALADGDRVHAVLTGSALGHGGRANGLTAPRSTAQRAVMTGALERAGVQ
+                     PGQIDYVEAHGTGTALGDPIEWEALAGVYGRGRPADAPCPVGSVKTAIGHLEAAAGIAG
+                     LIKAVLVVREREVPPLLHLATPNRHLDWTGSGLTVPTTRRALPAGGTLRAGVSSFGFGG
+                     TNAHVIVESAP"
+     aSModule        19381..23862
+                     /complete
+                     /domains="nrpspksdomains_SCO5892_PKS_KS.1"
+                     /domains="nrpspksdomains_SCO5892_PKS_AT.1"
+                     /domains="nrpspksdomains_SCO5892_PP-binding.1"
+                     /domains="nrpspksdomains_SCO5892_Aminotran_1_2.1"
+                     /locus_tags="SCO5892"
+                     /monomer_pairings="mal -> mal"
+                     /tool="antismash"
+                     /type="pks"
+     CDS_motif       19819..19866
+                     /aSTool="nrps_pks_domains"
+                     /database="abmotifs"
+                     /detection="hmmscan"
+                     /domain_id="nrpspksmotif_SCO5892_0005"
+                     /evalue="1.50E-05"
+                     /label="PKSI-KS_m3"
+                     /locus_tag="SCO5892"
+                     /protein_end="961"
+                     /protein_start="945"
+                     /score="17.2"
+                     /tool="antismash"
+                     /translation="GPSLALDTACSSSLAA"
+     misc_feature    19819..19869
+                     /gene="SCO5892"
+                     /gene_synonym="redL"
+                     /gene_synonym="SC3F7.12"
+                     /note="PS00606 Beta-ketoacyl synthases active site"
+     CDS_motif       20008..20046
+                     /aSTool="nrps_pks_domains"
+                     /database="abmotifs"
+                     /detection="hmmscan"
+                     /domain_id="nrpspksmotif_SCO5892_0006"
+                     /evalue="4.50E-04"
+                     /label="PKSI-KS_m4"
+                     /locus_tag="SCO5892"
+                     /protein_end="1021"
+                     /protein_start="1008"
+                     /score="13.3"
+                     /tool="antismash"
+                     /translation="FDDGADGYVRGEG"
+     PFAM_domain     20104..20457
+                     /aSDomain="Ketoacyl-synt_C"
+                     /aSTool="fullhmmer"
+                     /database="34.0"
+                     /db_xref="PF02801.24"
+                     /description="Beta-ketoacyl synthase, C-terminal domain"
+                     /detection="hmmscan"
+                     /domain_id="fullhmmer_SCO5892_0029"
+                     /evalue="3.10E-41"
+                     /label="SCO5892"
+                     /locus_tag="SCO5892"
+                     /protein_end="1158"
+                     /protein_start="1040"
+                     /score="140.2"
+                     /tool="antismash"
+                     /translation="HAVLTGSALGHGGRANGLTAPRSTAQRAVMTGALERAGVQPGQID
+                     YVEAHGTGTALGDPIEWEALAGVYGRGRPADAPCPVGSVKTAIGHLEAAAGIAGLIKAV
+                     LVVREREVPPLLHL"
+     CDS_motif       20239..20286
+                     /aSTool="nrps_pks_domains"
+                     /database="abmotifs"
+                     /detection="hmmscan"
+                     /domain_id="nrpspksmotif_SCO5892_0007"
+                     /evalue="1.90E-04"
+                     /label="PKSI-KS_m5"
+                     /locus_tag="SCO5892"
+                     /protein_end="1101"
+                     /protein_start="1085"
+                     /score="13.5"
+                     /tool="antismash"
+                     /translation="YVEAHGTGTALGDPIE"
+     CDS_motif       20347..20391
+                     /aSTool="nrps_pks_domains"
+                     /database="abmotifs"
+                     /detection="hmmscan"
+                     /domain_id="nrpspksmotif_SCO5892_0008"
+                     /evalue="2.60E-03"
+                     /label="PKSI-KS_m6"
+                     /locus_tag="SCO5892"
+                     /protein_end="1136"
+                     /protein_start="1121"
+                     /score="10.5"
+                     /tool="antismash"
+                     /translation="GSVKTAIGHLEAAAG"
+     PFAM_domain     20464..20808
+                     /aSDomain="KAsynt_C_assoc"
+                     /aSTool="fullhmmer"
+                     /database="34.0"
+                     /db_xref="PF16197.7"
+                     /description="Ketoacyl-synthetase C-terminal extension"
+                     /detection="hmmscan"
+                     /domain_id="fullhmmer_SCO5892_0030"
+                     /evalue="1.20E-17"
+                     /label="SCO5892"
+                     /locus_tag="SCO5892"
+                     /protein_end="1275"
+                     /protein_start="1160"
+                     /score="64.5"
+                     /tool="antismash"
+                     /translation="PNRHLDWTGSGLTVPTTRRALPAGGTLRAGVSSFGFGGTNAHVIV
+                     ESAPAPPAPAGESGAPDGTVHALSLSAHTESALATLAGRYRTHLAAHPGVPLAALCHSA
+                     RTGRSRLPHRA"
+     PFAM_domain     20929..21891
+                     /aSDomain="Acyl_transf_1"
+                     /aSTool="fullhmmer"
+                     /database="34.0"
+                     /db_xref="PF00698.23"
+                     /description="Acyl transferase domain"
+                     /detection="hmmscan"
+                     /domain_id="fullhmmer_SCO5892_0031"
+                     /evalue="2.30E-58"
+                     /label="SCO5892"
+                     /locus_tag="SCO5892"
+                     /protein_end="1636"
+                     /protein_start="1315"
+                     /score="198.3"
+                     /tool="antismash"
+                     /translation="FLFGGQGTQYPGMGRDLYDAHPVLARTLRRADAVLRGLGEIPLLD
+                     LLFDPDRAEDLARTRYCQPALVALEVALADLWTSCGVRPAAVLGHSVGALAAACVAGVL
+                     SLEDALTLAVVRGRAMDEQPGEGAMIACVGDPETVREIAAGHDRVALAAVNAPRNLVFS
+                     GAADRIAALRGDLERKGVTVRPLAVSHAFHSPLMAGAAEPLLEAARAVEFQPPAIPWIS
+                     DATGEPVTRVDAEYWVRHLLGTVRFADGFARLRAGNAEGGLGCDAFVEIGPHPTLLNLG
+                     RSAVADGPEPDGRRTLWLPSLRRGAPGRRTLLRSLGGYQC"
+     aSDomain        20932..21843
+                     /ASF="Malonyl-CoA specific"
+                     /ASF="found active site serine: True, scaffold matched
+                     GHGE: False"
+                     /aSDomain="PKS_AT"
+                     /aSTool="nrps_pks_domains"
+                     /database="nrpspksdomains.hmm"
+                     /detection="hmmscan"
+                     /domain_id="nrpspksdomains_SCO5892_PKS_AT.1"
+                     /evalue="4.40E-97"
+                     /label="SCO5892_PKS_AT.1"
+                     /locus_tag="SCO5892"
+                     /protein_end="1620"
+                     /protein_start="1316"
+                     /score="316.9"
+                     /specificity="consensus: mal"
+                     /specificity="PKS signature: Malonyl-CoA"
+                     /specificity="Minowa: mal"
+                     /tool="antismash"
+                     /translation="LFGGQGTQYPGMGRDLYDAHPVLARTLRRADAVLRGLGEIPLLDL
+                     LFDPDRAEDLARTRYCQPALVALEVALADLWTSCGVRPAAVLGHSVGALAAACVAGVLS
+                     LEDALTLAVVRGRAMDEQPGEGAMIACVGDPETVREIAAGHDRVALAAVNAPRNLVFSG
+                     AADRIAALRGDLERKGVTVRPLAVSHAFHSPLMAGAAEPLLEAARAVEFQPPAIPWISD
+                     ATGEPVTRVDAEYWVRHLLGTVRFADGFARLRAGNAEGGLGCDAFVEIGPHPTLLNLGR
+                     SAVADGPEPDGRRTLWLPSLRRG"
+     CDS_motif       20935..20982
+                     /aSTool="nrps_pks_domains"
+                     /database="abmotifs"
+                     /detection="hmmscan"
+                     /domain_id="nrpspksmotif_SCO5892_0009"
+                     /evalue="1.90E-05"
+                     /label="PKSI-AT-M_m1"
+                     /locus_tag="SCO5892"
+                     /protein_end="1333"
+                     /protein_start="1317"
+                     /score="17.2"
+                     /tool="antismash"
+                     /translation="FGGQGTQYPGMGRDLY"
+     CDS_motif       21106..21165
+                     /aSTool="nrps_pks_domains"
+                     /database="abmotifs"
+                     /detection="hmmscan"
+                     /domain_id="nrpspksmotif_SCO5892_0010"
+                     /evalue="4.60E-04"
+                     /label="PKSI-AT-mM_m2"
+                     /locus_tag="SCO5892"
+                     /protein_end="1394"
+                     /protein_start="1374"
+                     /score="13.4"
+                     /tool="antismash"
+                     /translation="RYCQPALVALEVALADLWTS"
+     CDS_motif       21169..21288
+                     /aSTool="nrps_pks_domains"
+                     /database="abmotifs"
+                     /detection="hmmscan"
+                     /domain_id="nrpspksmotif_SCO5892_0011"
+                     /evalue="5.90E-21"
+                     /label="PKSI-AT-M_m3"
+                     /locus_tag="SCO5892"
+                     /protein_end="1435"
+                     /protein_start="1395"
+                     /score="66.7"
+                     /tool="antismash"
+                     /translation="GVRPAAVLGHSVGALAAACVAGVLSLEDALTLAVVRGRAM"
+     CDS_motif       21382..21420
+                     /aSTool="nrps_pks_domains"
+                     /database="abmotifs"
+                     /detection="hmmscan"
+                     /domain_id="nrpspksmotif_SCO5892_0012"
+                     /evalue="4.20E-03"
+                     /label="PKSI-AT-M_m5"
+                     /locus_tag="SCO5892"
+                     /protein_end="1479"
+                     /protein_start="1466"
+                     /score="10.5"
+                     /tool="antismash"
+                     /translation="AAVNAPRNLVFSG"
+     CDS_motif       21634..21669
+                     /aSTool="nrps_pks_domains"
+                     /database="abmotifs"
+                     /detection="hmmscan"
+                     /domain_id="nrpspksmotif_SCO5892_0013"
+                     /evalue="1.80E-03"
+                     /label="PKSI-AT-M_m8"
+                     /locus_tag="SCO5892"
+                     /protein_end="1562"
+                     /protein_start="1550"
+                     /score="11.8"
+                     /tool="antismash"
+                     /translation="YWVRHLLGTVRF"
+     aSDomain        22087..22287
+                     /aSDomain="PP-binding"
+                     /aSTool="nrps_pks_domains"
+                     /database="nrpspksdomains.hmm"
+                     /detection="hmmscan"
+                     /domain_id="nrpspksdomains_SCO5892_PP-binding.1"
+                     /evalue="4.80E-08"
+                     /label="SCO5892_PP-binding.1"
+                     /locus_tag="SCO5892"
+                     /protein_end="1768"
+                     /protein_start="1701"
+                     /score="25.3"
+                     /tool="antismash"
+                     /translation="TVLDTVARVCGFPVADLPVHARLGLELGFDSLMRTDLQRRLTDRF
+                     PQRMHTLQDLPEDPTVQDIIGR"
+     PFAM_domain     22087..22287
+                     /aSDomain="PP-binding"
+                     /aSTool="fullhmmer"
+                     /database="34.0"
+                     /db_xref="PF00550.27"
+                     /description="Phosphopantetheine attachment site"
+                     /detection="hmmscan"
+                     /domain_id="fullhmmer_SCO5892_0032"
+                     /evalue="6.40E-07"
+                     /label="SCO5892"
+                     /locus_tag="SCO5892"
+                     /protein_end="1768"
+                     /protein_start="1701"
+                     /score="29.7"
+                     /tool="antismash"
+                     /translation="TVLDTVARVCGFPVADLPVHARLGLELGFDSLMRTDLQRRLTDRF
+                     PQRMHTLQDLPEDPTVQDIIGR"
+     aSDomain        22834..23862
+                     /aSDomain="Aminotran_1_2"
+                     /aSTool="nrps_pks_domains"
+                     /database="nrpspksdomains.hmm"
+                     /detection="hmmscan"
+                     /domain_id="nrpspksdomains_SCO5892_Aminotran_1_2.1"
+                     /evalue="1.50E-55"
+                     /label="SCO5892_Aminotran_1_2.1"
+                     /locus_tag="SCO5892"
+                     /protein_end="2293"
+                     /protein_start="1950"
+                     /score="180.6"
+                     /tool="antismash"
+                     /translation="TKVVNFAAFNYLALSHHPRVRQAAKDAVDRYGTSASATPLLFGET
+                     PLHHELEAEIARFIGTEAAIVFAGGHATNVATVGHLFGPEDLVVHDAWIHDSTVRGCIL
+                     SGARRRSFPHNDWAALDRILTGARASHRRALVVIEGAYSQDGDIPDLPRFIEVKKRHGA
+                     MLMIDEAHSIGVLGRTGRGVGEHYGTDPADVDLWMGTLSKALGSLGGYIAARRPIIEYL
+                     KFTAPLHIFSTGISPANAAAALEALRVVQDEPERVARVQELAEFFRAGARARGLDVGVS
+                     RLSAVIPVITGDWEKTMALSNSLLERGVNVMPIGYPAVPRDQCRLRFFINADHSEADLE
+                     HSL"
+     PFAM_domain     22834..23862
+                     /aSDomain="Aminotran_1_2"
+                     /aSTool="fullhmmer"
+                     /database="34.0"
+                     /db_xref="PF00155.23"
+                     /db_xref="GO:0009058"
+                     /db_xref="GO:0030170"
+                     /description="Aminotransferase class I and II"
+                     /detection="hmmscan"
+                     /domain_id="fullhmmer_SCO5892_0033"
+                     /evalue="5.30E-53"
+                     /gene_ontologies="GO:0009058: biosynthetic process"
+                     /gene_ontologies="GO:0030170: pyridoxal phosphate binding"
+                     /label="SCO5892"
+                     /locus_tag="SCO5892"
+                     /protein_end="2293"
+                     /protein_start="1950"
+                     /score="180.6"
+                     /tool="antismash"
+                     /translation="TKVVNFAAFNYLALSHHPRVRQAAKDAVDRYGTSASATPLLFGET
+                     PLHHELEAEIARFIGTEAAIVFAGGHATNVATVGHLFGPEDLVVHDAWIHDSTVRGCIL
+                     SGARRRSFPHNDWAALDRILTGARASHRRALVVIEGAYSQDGDIPDLPRFIEVKKRHGA
+                     MLMIDEAHSIGVLGRTGRGVGEHYGTDPADVDLWMGTLSKALGSLGGYIAARRPIIEYL
+                     KFTAPLHIFSTGISPANAAAALEALRVVQDEPERVARVQELAEFFRAGARARGLDVGVS
+                     RLSAVIPVITGDWEKTMALSNSLLERGVNVMPIGYPAVPRDQCRLRFFINADHSEADLE
+                     HSL"
+     misc_feature    22960..23814
+                     /gene="SCO5892"
+                     /gene_synonym="redL"
+                     /gene_synonym="SC3F7.12"
+                     /note="Pfam match to entry aminotran_2 PF00222,
+                     Aminotransferases class-II, from 1 to 292, score 276.93"
+     misc_feature    23431..23460
+                     /gene="SCO5892"
+                     /gene_synonym="redL"
+                     /gene_synonym="SC3F7.12"
+                     /note="PS00599 Aminotransferases class-II
+                     pyridoxal-phosphate attachment site"
+     gene            23881..24924
+                     /gene="SCO5893"
+                     /gene_synonym="redK"
+                     /gene_synonym="SC3F7.13"
+     CDS             23881..24924
+                     /NRPS_PKS="Domain: NAD_binding_4 (17-194). E-value: 2e-22.
+                     Score: 71.3. Matches aSDomain:
+                     nrpspksdomains_SCO5893_NAD_binding_4.1"
+                     /NRPS_PKS="type: other"
+                     /codon_start=1
+                     /db_xref="GI:2808754"
+                     /db_xref="GOA:O54156"
+                     /db_xref="InterPro:IPR001509"
+                     /db_xref="InterPro:IPR016040"
+                     /db_xref="UniProtKB/TrEMBL:O54156"
+                     /gene="SCO5893"
+                     /gene_functions="biosynthetic-additional
+                     (rule-based-clusters) NAD_binding_4"
+                     /gene_functions="biosynthetic-additional
+                     (rule-based-clusters) Polysacc_synt_2"
+                     /gene_functions="biosynthetic-additional
+                     (rule-based-clusters) RmlD_sub_bind"
+                     /gene_functions="biosynthetic-additional (smcogs)
+                     SMCOG1010:NAD-dependent epimerase/dehydratase (Score:
+                     204.9; E-value: 3.2e-62)"
+                     /gene_kind="biosynthetic-additional"
+                     /gene_synonym="redK"
+                     /gene_synonym="SC3F7.13"
+                     /note="SC3F7.13, redK, probable oxidoreductase, len: 347
+                     aa; similar to many eukaryotic steroid dehydrogenases eg.
+                     TR:Q62878 (EMBL:L17138) 3 hydroxysteroid dehydrogenase from
+                     Rattus norvegicus (373 aa), fasta scores; opt: 103 z-score:
+                     378.9 E(): 6.6e-14, 30.4% identity in 355 aa overlap; and
+                     to Mycobacterium tuberculosis putative dehydrogenase
+                     TR:O06373 (EMBL:Z95436) MTCY15C10.18 (314 aa), fasta
+                     scores; opt: 204 z-score: 417.9 E(): 4.4e-16, 27.7%
+                     identity in 339 aa overlap"
+                     /product="oxidoreductase"
+                     /protein_id="CAA16184.1"
+                     /sec_met_domain="NAD_binding_4 (E-value: 8.1e-23, bitscore:
+                     71.3, seeds: 102, tool: rule-based-clusters)"
+                     /sec_met_domain="Polysacc_synt_2 (E-value: 1.1e-07,
+                     bitscore: 21.7, seeds: 77, tool: rule-based-clusters)"
+                     /sec_met_domain="RmlD_sub_bind (E-value: 2.3e-21, bitscore:
+                     66.6, seeds: 37, tool: rule-based-clusters)"
+                     /transl_table=11
+                     /translation="MSSLSQDSPSAAAPDILVTGASGFIGGHLVHRLAERGHRVRVLAR
+                     STSDRAAFAGAAAQVTVGDLGDTDSLRRATTGIRHVYNCAGLSADWGPWDRFRAVNVDG
+                     ARNLVEAAHEAGTVERLVHLSTTDVYGYPERPCDERTAPRDIGLPYNRSKMLGEAAVWA
+                     AAERTGQPVTVVRPVSVYGPGSKDFVIEIANLLLGKQMVYIRGGRVPAGLLYVSNAVDG
+                     IIAAATGEHTAGRAYNLRDPHDTTWREYVEALAEGLGVKAPWLSLPTPVATAVATVSEK
+                     LWGALRIDSRPVLTRHAVHLFDRDQSYPIGRAQEELGFKGEVDFQEGMRRTVAWLDSPE
+                     GRAHVAR"
+     PFAM_domain     23926..24594
+                     /aSDomain="Epimerase"
+                     /aSTool="fullhmmer"
+                     /database="34.0"
+                     /db_xref="PF01370.23"
+                     /db_xref="GO:0003824"
+                     /description="NAD dependent epimerase/dehydratase family"
+                     /detection="hmmscan"
+                     /domain_id="fullhmmer_SCO5893_0034"
+                     /evalue="6.40E-37"
+                     /gene_ontologies="GO:0003824: catalytic activity"
+                     /label="SCO5893"
+                     /locus_tag="SCO5893"
+                     /protein_end="238"
+                     /protein_start="15"
+                     /score="127.4"
+                     /tool="antismash"
+                     /translation="ILVTGASGFIGGHLVHRLAERGHRVRVLARSTSDRAAFAGAAAQV
+                     TVGDLGDTDSLRRATTGIRHVYNCAGLSADWGPWDRFRAVNVDGARNLVEAAHEAGTVE
+                     RLVHLSTTDVYGYPERPCDERTAPRDIGLPYNRSKMLGEAAVWAAAERTGQPVTVVRPV
+                     SVYGPGSKDFVIEIANLLLGKQMVYIRGGRVPAGLLYVSNAVDGIIAAATGEHTAGRAY
+                     N"
+     CDS_motif       23929..23997
+                     /aSTool="nrps_pks_domains"
+                     /database="abmotifs"
+                     /detection="hmmscan"
+                     /domain_id="nrpspksmotif_SCO5893_0001"
+                     /evalue="1.40E-03"
+                     /label="PKSI-KR_m1"
+                     /locus_tag="SCO5893"
+                     /protein_end="39"
+                     /protein_start="16"
+                     /score="11.4"
+                     /tool="antismash"
+                     /translation="LVTGASGFIGGHLVHRLAERGHR"
+     aSDomain        23932..24462
+                     /aSDomain="NAD_binding_4"
+                     /aSTool="nrps_pks_domains"
+                     /database="nrpspksdomains.hmm"
+                     /detection="hmmscan"
+                     /domain_id="nrpspksdomains_SCO5893_NAD_binding_4.1"
+                     /evalue="2.00E-22"
+                     /label="SCO5893_NAD_binding_4.1"
+                     /locus_tag="SCO5893"
+                     /protein_end="194"
+                     /protein_start="17"
+                     /score="71.3"
+                     /tool="antismash"
+                     /translation="VTGASGFIGGHLVHRLAERGHRVRVLARSTSDRAAFAGAAAQVTV
+                     GDLGDTDSLRRATTGIRHVYNCAGLSADWGPWDRFRAVNVDGARNLVEAAHEAGTVERL
+                     VHLSTTDVYGYPERPCDERTAPRDIGLPYNRSKMLGEAAVWAAAERTGQPVTVVRPVSV
+                     YGPGSKDFVIEIAN"
+     RBS             24899..24903
+                     /gene="SCO5893"
+                     /gene_synonym="redK"
+                     /gene_synonym="SC3F7.13"
+                     /note="possible RBS upstream of SC3F7.14"
+     gene            24911..25753
+                     /gene="SCO5894"
+                     /gene_synonym="redJ"
+                     /gene_synonym="SC3F7.14"
+     CDS             24911..25753
+                     /NRPS_PKS="Domain: Thioesterase (33-256). E-value: 8.2e-54.
+                     Score: 175.2. Matches aSDomain:
+                     nrpspksdomains_SCO5894_Thioesterase.1"
+                     /NRPS_PKS="type: other"
+                     /codon_start=1
+                     /db_xref="GI:2808755"
+                     /db_xref="GOA:O54157"
+                     /db_xref="InterPro:IPR001031"
+                     /db_xref="InterPro:IPR012223"
+                     /db_xref="UniProtKB/TrEMBL:O54157"
+                     /gene="SCO5894"
+                     /gene_functions="biosynthetic-additional
+                     (rule-based-clusters) Abhydrolase_6"
+                     /gene_functions="biosynthetic-additional (smcogs)
+                     SMCOG1004:thioesterase (Score: 261.4; E-value: 9.1e-80)"
+                     /gene_kind="biosynthetic-additional"
+                     /gene_synonym="redJ"
+                     /gene_synonym="SC3F7.14"
+                     /note="SC3F7.14, redJ, probable thioesterase, len: 280 aa;
+                     similar to many e.g. TR:Q00442 (EMBL:X60379) erythomycin A
+                     biosynthesis thioesterase (EC 3.1.-.-.) from
+                     Saccharopolyspora erythraea (Streptomyces erythraeus) (247
+                     aa), fasta scores; opt: 451 z-score: 472.9 E(): 3.8e-19,
+                     38.0% identity in 237 aa overlap"
+                     /product="thioesterase"
+                     /protein_id="CAA16185.1"
+                     /sec_met_domain="Abhydrolase_6 (E-value: 3.9e-10, bitscore:
+                     31.2, seeds: 455, tool: rule-based-clusters)"
+                     /transl_table=11
+                     /translation="MSPADLLSQRSAWFPRPVAAPAAEPPDPAAAPLRLVCFPYAGGTV
+                     SAFRGWQERLGDEVAVVPVQLPGRGLRLRERPYDTMEPLAEAVADALEEHRLTHDYALF
+                     GHSMGALLAYEVACVLRRRGAPRPRHLFVSGSRAPHLYGDRADHTLSDTALREVIRDLG
+                     GLDDADTLGAAYFDRRLPVLRADLRACERYDWHPRPPLDCPTTAFSAAADPIATPEMVE
+                     AWRPYTTGSFLRRHLPGNHFFLNGGPSRDRLLAHLGTELDALGTTPHRKATREATWTF"
+     aSDomain        25010..25678
+                     /ASF="active site serine inconclusive"
+                     /aSDomain="Thioesterase"
+                     /aSTool="nrps_pks_domains"
+                     /database="nrpspksdomains.hmm"
+                     /detection="hmmscan"
+                     /domain_id="nrpspksdomains_SCO5894_Thioesterase.1"
+                     /evalue="8.20E-54"
+                     /label="SCO5894_Thioesterase.1"
+                     /locus_tag="SCO5894"
+                     /protein_end="256"
+                     /protein_start="33"
+                     /score="175.2"
+                     /tool="antismash"
+                     /translation="RLVCFPYAGGTVSAFRGWQERLGDEVAVVPVQLPGRGLRLRERPY
+                     DTMEPLAEAVADALEEHRLTHDYALFGHSMGALLAYEVACVLRRRGAPRPRHLFVSGSR
+                     APHLYGDRADHTLSDTALREVIRDLGGLDDADTLGAAYFDRRLPVLRADLRACERYDWH
+                     PRPPLDCPTTAFSAAADPIATPEMVEAWRPYTTGSFLRRHLPGNHFFLNGGPSRDRLLA
+                     H"
+     PFAM_domain     25010..25681
+                     /aSDomain="Thioesterase"
+                     /aSTool="fullhmmer"
+                     /database="34.0"
+                     /db_xref="PF00975.22"
+                     /db_xref="GO:0009058"
+                     /description="Thioesterase domain"
+                     /detection="hmmscan"
+                     /domain_id="fullhmmer_SCO5894_0035"
+                     /evalue="1.40E-41"
+                     /gene_ontologies="GO:0009058: biosynthetic process"
+                     /label="SCO5894"
+                     /locus_tag="SCO5894"
+                     /protein_end="257"
+                     /protein_start="33"
+                     /score="143.2"
+                     /tool="antismash"
+                     /translation="RLVCFPYAGGTVSAFRGWQERLGDEVAVVPVQLPGRGLRLRERPY
+                     DTMEPLAEAVADALEEHRLTHDYALFGHSMGALLAYEVACVLRRRGAPRPRHLFVSGSR
+                     APHLYGDRADHTLSDTALREVIRDLGGLDDADTLGAAYFDRRLPVLRADLRACERYDWH
+                     PRPPLDCPTTAFSAAADPIATPEMVEAWRPYTTGSFLRRHLPGNHFFLNGGPSRDRLLA
+                     HL"
+     CDS_motif       25211..25270
+                     /aSTool="nrps_pks_domains"
+                     /database="abmotifs"
+                     /detection="hmmscan"
+                     /domain_id="nrpspksmotif_SCO5894_0001"
+                     /evalue="2.20E-08"
+                     /label="NRPS-te1"
+                     /locus_tag="SCO5894"
+                     /protein_end="120"
+                     /protein_start="100"
+                     /score="26.5"
+                     /tool="antismash"
+                     /translation="YALFGHSMGALLAYEVACVL"
+     RBS             25730..25734
+                     /gene="SCO5894"
+                     /gene_synonym="redJ"
+                     /gene_synonym="SC3F7.14"
+                     /note="possible RBS upstream of SC3F7.15"
+     gene            25741..26829
+                     /gene="SCO5895"
+                     /gene_synonym="redI"
+                     /gene_synonym="SC3F7.15"
+     CDS             25741..26829
+                     /codon_start=1
+                     /db_xref="GI:2808756"
+                     /db_xref="GOA:O54158"
+                     /db_xref="InterPro:IPR000780"
+                     /db_xref="InterPro:IPR011991"
+                     /db_xref="InterPro:IPR013217"
+                     /db_xref="UniProtKB/TrEMBL:O54158"
+                     /gene="SCO5895"
+                     /gene_functions="biosynthetic-additional (smcogs)
+                     SMCOG1089:methyltransferase (Score: 73.9; E-value:
+                     2.3e-22)"
+                     /gene_kind="biosynthetic-additional"
+                     /gene_synonym="redI"
+                     /gene_synonym="SC3F7.15"
+                     /note="SC3F7.15, redI, possible methyltransferase, len: 362
+                     aa; weakly similar to several e.g. Streptomyces griseus
+                     TR:P72450 (EMBL:X95596) methyltransferase (242 aa), fasta
+                     scores; opt: 130 z-score: 204.9 E(): 0.00032, 27.6%
+                     identity in 192 aa overlap"
+                     /note="smCOG tree PNG image: smcogs/SCO5895.png"
+                     /product="putative methyltransferase"
+                     /protein_id="CAA16186.1"
+                     /transl_table=11
+                     /translation="MDILSLAKSVGSRVEAPLTDLRTVTKVLGNPHMPLLLALSKGFVE
+                     PVYRAAFLASAASSGVLAALAVRPCDLESLAERLDIDDEDLPRLKEWLDMGIRLGDLGK
+                     REGCYKLRSLPAKALAQPGNDAIAAALEEVLRFHVPALLNGPRMLREGRRFSLDDQDGL
+                     VIARSTRVIQPLVEEAIARTLDRNAPVRLLEVGCGSGTYVRYAAELNPRLSALAVDLQQ
+                     DVADSAAANMAEWGLTDRVETRQADLRTLDAQPQFDLVTLHNNIYYFPEAERVEALRRA
+                     HDLLAPGGRLLLTTSCKGGNVGLEALNLWFTYADFGGPLPQADALADQLRQAGFDDVEA
+                     TRIVPGEQFHAFTGTSKRVAHA"
+     PFAM_domain     26317..26607
+                     /aSDomain="Methyltransf_25"
+                     /aSTool="fullhmmer"
+                     /database="34.0"
+                     /db_xref="PF13649.8"
+                     /description="Methyltransferase domain"
+                     /detection="hmmscan"
+                     /domain_id="fullhmmer_SCO5895_0036"
+                     /evalue="1.50E-16"
+                     /label="SCO5895"
+                     /locus_tag="SCO5895"
+                     /protein_end="289"
+                     /protein_start="192"
+                     /score="61.0"
+                     /tool="antismash"
+                     /translation="LEVGCGSGTYVRYAAELNPRLSALAVDLQQDVADSAAANMAEWGL
+                     TDRVETRQADLRTLDAQPQFDLVTLHNNIYYFPEAERVEALRRAHDLLAPGG"
+     RBS             26836..26840
+                     /note="possible RBS upstream of SC3F7.16"
+     gene            26852..29653
+                     /gene="SCO5896"
+                     /gene_synonym="redH"
+                     /gene_synonym="SC10A5.01"
+                     /gene_synonym="SC3F7.16"
+     CDS             26852..29653
+                     /codon_start=1
+                     /db_xref="GI:24429547"
+                     /db_xref="GOA:Q8CJQ2"
+                     /db_xref="HSSP:1H6Z"
+                     /db_xref="InterPro:IPR002192"
+                     /db_xref="InterPro:IPR008279"
+                     /db_xref="InterPro:IPR013815"
+                     /db_xref="InterPro:IPR013816"
+                     /db_xref="UniProtKB/TrEMBL:Q8CJQ2"
+                     /gene="SCO5896"
+                     /gene_functions="biosynthetic-additional
+                     (rule-based-clusters) PPDK_N"
+                     /gene_kind="biosynthetic-additional"
+                     /gene_synonym="redH"
+                     /gene_synonym="SC10A5.01"
+                     /gene_synonym="SC3F7.16"
+                     /note="SC10A5.01, redH, probable
+                     phosphoenolpyruvate-utilizing enzyme, partial CDS, len: >95
+                     aa; overlaps and extends ORF from neighbouring cosmid
+                     SC3F7.16; similar to many eg. PPSA_STAMA P46893 probable
+                     phosphoenolpyruvate synthase (834 aa), fasta scores; opt:
+                     215 z-score: 351.4 E(): 2.3e-12, 47.8% identity in 69 aa
+                     overlap; SC3F7.16, probable phosphoenolpyruvate-utilizing
+                     enzyme, partial CDS, len: >872 aa; similar to many eg.
+                     PPSA_STAMA P46893 probable phosphoenolpyruvate synthase
+                     from Staphylothermus marinus (834 aa), fasta scores; opt:
+                     392 z-score: 614.9 E(): 4.7e-27, 33.0% identity in 309 aa
+                     overlap. Contains Pfam match to entry PEP-utilizers
+                     PF00391, PEP-utilizing enzymes, score 23.96"
+                     /product="phosphoenolpyruvate-utilizing enzyme"
+                     /protein_id="CAD55238.1"
+                     /sec_met_domain="PPDK_N (E-value: 3.6e-69, bitscore: 224.0,
+                     seeds: 105, tool: rule-based-clusters)"
+                     /transl_table=11
+                     /translation="MDTHVSDTTTPAGAGEGPAGPVTDPAGHAACVVTLGAGGPTGGHR
+                     GELGGKGTRLAELSAAGLPVPPAFCLTTALFDAYLRETGIAAEAAGADPRTLRERILGT
+                     RMPASIADAVLDAYGSMGRPRVAVRSSGLREDSAAQSFAGQHDTVLDVCGDEDVLDAVL
+                     RCWASLWSDRATVYRDTDAPDALAVVVQEMIHTDVSGVMFTVDPVNPRPHRLVVEACQG
+                     LGEGLVSGQVSSDFFVVDDEKLEVVEERVRYKVTKCAPLEPGRIGMTKVDAAARSVPCL
+                     THDQLRELGALAVRIRDLYGSEQDIEWGVRDGVFHLFQTRPITTRPAAPAAPSGALSPY
+                     VAPQPEPVLNGTLWSRMDIGEIFVGLMTPLGLSFARYYQRNVHTDCAGALGVRDTGEAD
+                     LHMGFYQGHVYLNISYSSYLLAQCLPTRDQRHFTSRFVSEEVDLADYENPFGTFPGGME
+                     DLLSTVHWLQHTAREMTQMKSRSQQMVDARLYEFDRARGLDLTRMSRRELHGELHRDLA
+                     WFHDMHIGYMPYYINAFAFYGLLTELCARWLGSDGVGLQNRVKTDMSSLRTVESAKEVW
+                     SVAQAAKNDPAVLRIIKDEPLEDIARLLREDPAGQRFWDRHMEPFLRANGTRGHQEMEI
+                     THPRWIDDPSYIFQMIRRYVADGFSIDDILRRSSGWSDDSREVLGRLPMPKRQVLDTVI
+                     SLYALCSELRETTRMSMITSIWLVRNVVYEVGRRLVADGVLHSPDEIAHLDFEDVRRYL
+                     AGDEDAVRVFDRARIDAARRLHEHNKRLPEPPLTFVGVHDITASVRPAADGARLEGLAA
+                     SPGRIVGRARIVEDLVWQADEFEAGEILVTGYTDASWTPLFAIAGGVVTDIGSMLSHSS
+                     IVAREFHVPSVVNTKDATQRINTGDLIVVDGDAGTVEVVESADTDPQGPAGAAGTPAGA
+                     TTD"
+     PFAM_domain     26990..27838
+                     /aSDomain="PPDK_N"
+                     /aSTool="fullhmmer"
+                     /database="34.0"
+                     /db_xref="PF01326.21"
+                     /db_xref="GO:0005524"
+                     /db_xref="GO:0016301"
+                     /db_xref="GO:0016310"
+                     /description="Pyruvate phosphate dikinase, AMP/ATP-binding
+                     domain"
+                     /detection="hmmscan"
+                     /domain_id="fullhmmer_SCO5896_0037"
+                     /evalue="2.80E-66"
+                     /gene_ontologies="GO:0005524: ATP binding"
+                     /gene_ontologies="GO:0016301: kinase activity"
+                     /gene_ontologies="GO:0016310: phosphorylation"
+                     /label="SCO5896"
+                     /locus_tag="SCO5896"
+                     /protein_end="329"
+                     /protein_start="46"
+                     /score="224.1"
+                     /tool="antismash"
+                     /translation="ELGGKGTRLAELSAAGLPVPPAFCLTTALFDAYLRETGIAAEAAG
+                     ADPRTLRERILGTRMPASIADAVLDAYGSMGRPRVAVRSSGLREDSAAQSFAGQHDTVL
+                     DVCGDEDVLDAVLRCWASLWSDRATVYRDTDAPDALAVVVQEMIHTDVSGVMFTVDPVN
+                     PRPHRLVVEACQGLGEGLVSGQVSSDFFVVDDEKLEVVEERVRYKVTKCAPLEPGRIGM
+                     TKVDAAARSVPCLTHDQLRELGALAVRIRDLYGSEQDIEWGVRDGVFHLFQTRPITTRP
+                     AA"
+     PFAM_domain     29351..29566
+                     /aSDomain="PEP-utilizers"
+                     /aSTool="fullhmmer"
+                     /database="34.0"
+                     /db_xref="PF00391.25"
+                     /db_xref="GO:0016310"
+                     /db_xref="GO:0016772"
+                     /description="PEP-utilising enzyme, mobile domain"
+                     /detection="hmmscan"
+                     /domain_id="fullhmmer_SCO5896_0038"
+                     /evalue="2.50E-20"
+                     /gene_ontologies="GO:0016310: phosphorylation"
+                     /gene_ontologies="GO:0016772: transferase activity,
+                     transferring phosphorus-containing groups"
+                     /label="SCO5896"
+                     /locus_tag="SCO5896"
+                     /protein_end="905"
+                     /protein_start="833"
+                     /score="72.1"
+                     /tool="antismash"
+                     /translation="FEAGEILVTGYTDASWTPLFAIAGGVVTDIGSMLSHSSIVAREFH
+                     VPSVVNTKDATQRINTGDLIVVDGDAG"
+     misc_feature    29365..29472
+                     /gene="SCO5896"
+                     /gene_synonym="redH"
+                     /gene_synonym="SC10A5.01"
+                     /gene_synonym="SC3F7.16"
+                     /note="overlap with St3F7 from: 23623 to: 23730"
+     misc_feature    complement(29365..29472)
+                     /note="overlap with Cosmid St10A5"
+     misc_feature    29366..29467
+                     /gene="SCO5896"
+                     /gene_synonym="redH"
+                     /gene_synonym="SC10A5.01"
+                     /gene_synonym="SC3F7.16"
+                     /note="Pfam match to entry PEP-utilizers PF00391,
+                     PEP-utilizing enzymes, from 1 to 36, score 23.96"
+     RBS             29719..29722
+                     /note="possible RBS upstream of SC10A5.02"
+     gene            29731..30918
+                     /gene="SCO5897"
+                     /gene_synonym="redG"
+                     /gene_synonym="SC10A5.02"
+     CDS             29731..30918
+                     /codon_start=1
+                     /db_xref="GI:2815311"
+                     /db_xref="GOA:O54095"
+                     /db_xref="InterPro:IPR017941"
+                     /db_xref="UniProtKB/TrEMBL:O54095"
+                     /gene="SCO5897"
+                     /gene_synonym="redG"
+                     /gene_synonym="SC10A5.02"
+                     /note="SC10A5.02, redG, probable oxidase, len: 395 aa;
+                     similar in N- terminus to many diverse oxidases e.g.
+                     TR:P95483 (EMBL:U7449 3) aminopyrrolnitrin oxidase PrnD
+                     from Pseudomonas fluorescens (363 aa), fasta scores; opt:
+                     349 z-score: 372.1 E(): 1. 6e-13, 33.3% identity in 165 aa
+                     overlap"
+                     /product="putative oxidase"
+                     /protein_id="CAA16434.1"
+                     /transl_table=11
+                     /translation="MIPNQWYPIVEAQEVGNDKPLGVRRMGQDLVLWRDIDGNLVCQGA
+                     RCPHKGANLGDGRMKGNTIECPYHGFRYGADGACRVIPAMGSEARIPGSLRVPTYPVRE
+                     QFGLVWMWWGDERPTADLPPVAAPAEVTDNRKLYATKRWTRPVHYTRYIESLLEFYHVT
+                     YVHRDHWFNYIDYLLLYGTPSKFGLDGRERYLAATRITNHRVETEAEGQTIRYSFDHCQ
+                     EDDPTNTTHYVITFTFPCMVHVQTEQFETTSWLVPIDDQNTEHILRWYEYEQVKPVLRF
+                     EPLRRLLPWASLYMEKWVQDPQDVRIMEHQEPKISAGGVNKFIPVDEMNAKYISMRAKL
+                     IADASAAPSSPARAAEPEPEAAGRGGSAARATGNGRGAAGGRRGTKPKEDAAARP"
+     PFAM_domain     29743..29991
+                     /aSDomain="Rieske"
+                     /aSTool="fullhmmer"
+                     /database="34.0"
+                     /db_xref="PF00355.28"
+                     /db_xref="GO:0051537"
+                     /db_xref="GO:0055114"
+                     /description="Rieske [2Fe-2S] domain"
+                     /detection="hmmscan"
+                     /domain_id="fullhmmer_SCO5897_0039"
+                     /evalue="2.50E-21"
+                     /gene_ontologies="GO:0051537: 2 iron, 2 sulfur cluster
+                     binding"
+                     /gene_ontologies="GO:0055114: oxidation-reduction process"
+                     /label="SCO5897"
+                     /locus_tag="SCO5897"
+                     /protein_end="87"
+                     /protein_start="4"
+                     /score="75.5"
+                     /tool="antismash"
+                     /translation="QWYPIVEAQEVGNDKPLGVRRMGQDLVLWRDIDGNLVCQGARCPH
+                     KGANLGDGRMKGNTIECPYHGFRYGADGACRVIPAMGS"
+     gene            30961..31641
+                     /gene="SCO5898"
+                     /gene_synonym="redF"
+                     /gene_synonym="SC10A5.03"
+     CDS             30961..31641
+                     /codon_start=1
+                     /db_xref="GI:2815312"
+                     /db_xref="GOA:O54096"
+                     /db_xref="InterPro:IPR001104"
+                     /db_xref="InterPro:IPR010721"
+                     /db_xref="UniProtKB/TrEMBL:O54096"
+                     /gene="SCO5898"
+                     /gene_synonym="redF"
+                     /gene_synonym="SC10A5.03"
+                     /note="SC10A5.03, redF, probable membrane protein, len: 226
+                     aa. Contains possibe hydrophobic membrane spanning regions"
+                     /product="probable membrane protein"
+                     /protein_id="CAA16435.1"
+                     /transl_table=11
+                     /translation="MYGGYDASTGPKALVTAFNTVAVAGAVWFLFGGADTVADWFGTDF
+                     DEAVTLRRVLLATLSVLYLLRFIATNFVMLQRKMEWSESATIGIWVLVIHGTMAYFGGT
+                     NDAGVSAFTWLGVVLYLLGSYLNTGSEYQRKLWKKRPENKGKLYTEGLFKHSMHINYFG
+                     DAVLFSGFALVTGTPWAFAIPLIMVCMFVFLNIPMLDKYLAERYGEAFDEYASRTAKFV
+                     PYVY"
+     PFAM_domain     31231..31614
+                     /aSDomain="DUF1295"
+                     /aSTool="fullhmmer"
+                     /database="34.0"
+                     /db_xref="PF06966.14"
+                     /description="Protein of unknown function (DUF1295)"
+                     /detection="hmmscan"
+                     /domain_id="fullhmmer_SCO5898_0040"
+                     /evalue="6.70E-18"
+                     /label="SCO5898"
+                     /locus_tag="SCO5898"
+                     /protein_end="218"
+                     /protein_start="90"
+                     /score="65.1"
+                     /tool="antismash"
+                     /translation="VLVIHGTMAYFGGTNDAGVSAFTWLGVVLYLLGSYLNTGSEYQRK
+                     LWKKRPENKGKLYTEGLFKHSMHINYFGDAVLFSGFALVTGTPWAFAIPLIMVCMFVFL
+                     NIPMLDKYLAERYGEAFDEYASRT"
+ORIGIN
+        1 atgacgggtg ggggagtgct tgccacgatg gacccggttc gaaaactggt ccggagccag
+       61 ccaaagatcg ggcggcaccc cgtcgcggcc ggtcaggacg gccgcgaccg gcaccccatc
+      121 cgctcatggg agtgcggaga acgcgcgagg acggcccgga ccggcaggac ggtcggccgc
+      181 gcggccgacc cctcggacca cggacccagc ctgtacaact tcgggggatg cgtggaaatc
+      241 aacatattgg gacccgtatc gatcgacacg tcgcacagcg gcggcggcat ccgggccggc
+      301 aaggtccgta cgctggtggc gacgctcgcc atcgacgcgg gccgcgccgt gtcgctcgcg
+      361 gacctggtgg acgaactgtg gggcgcgacc ccgcccgaca acgtcctcaa cgccctccag
+      421 gcgcatgccg ctcgggcccg gaaagtgctc aacgagcgtg cctgccccga gcgggcgggc
+      481 ggcatcctgc gttccgtgct cggcggctac ctgctggaga tcgacccgca gtgcgtggac
+      541 ggcaaccgct tcctgagact cgtctcgcag ggcgccgccc tgctccccgc cgaccccacg
+      601 cgcgccgtcg aactgctgga gaccggtctg cggctgtggc gcgggcccgc cctcatcgac
+      661 gcgggtgagg gcaggcgctg ccggggcgcc gcggccctgt tcgaggaacg caggctcacg
+      721 gccctggagg atctcatcag cgcgatgttc ctgcgcggcg gcgaggccca ggcgatcgcc
+      781 atgctccagc agctggtggc gcagtaccca ctgcgcgagc ggttctgcga gctgctgatg
+      841 gtcggcctct accgggtggg acgtcaggga gacgccctgg agtcgtaccg cctggccagg
+      901 aagcggctcg acgacgaact gggggtccag ccgggcgcgc tgctgcgccg acggcacgcc
+      961 gagatcctcg cgcaggaccc ggtcctcaag gtgccctccg cgctgtggcg cgaaccgtac
+     1021 gcgcccgccg acaccagcct gctcagcgcc tgacgacccg gggccggccg cgggcggtgc
+     1081 ccacgtgaac aggaacgaga agttgtcaga caacgacaca gccacagcca cggacacagc
+     1141 cacggacaca cccacagcca cggacacacc caccgtcacg gaaacggaca cggcgtcggc
+     1201 tgcgcgggac cccgccgaac ccatcgccat cgtcgggatg tccgccctct atccgggagc
+     1261 ccaaggcgtc gaggacctgt ggcggctgct gctcgccgac ggtccggcgc ccgcctccgg
+     1321 caccgggccc gcgcccggcg gcctcggtga catcgaggtc gacgtggcac ggttcgggat
+     1381 cccgccggcc caggccgcct ccatggcccg cctgcaactg ctcatggtgg aggcggcccg
+     1441 ccagtgcctc gacgacgcca ccggctccgg tgccgaccga gggcgcacgg acgtcgtcgt
+     1501 gggcacctgc ctcggcctgg accggcagta cgccaacgcc ctgcgcgtcg acggcgcccg
+     1561 ctacgcccgg gacctgacgg aggtcctcgc ggacggcgcc tggcgcgaca ccggcatcga
+     1621 cgcgcgggcc gccgggcaag aactcaacga cgcgctgtcg cgccggctgg gcgcctcacc
+     1681 gcacgaccgg gtgggcgaga tggccagtac gatcccggcc cgcatcgcgt cggccttcaa
+     1741 gctgcgcggg cgcaccctcg ccgtcgagtc ggcggacgcc acctcgtacc tggctctcgc
+     1801 gcacgccgtg gacaacctgc gcgcggggct cgccgaggcc gtcctggtcg tggtggggca
+     1861 gcgtgacgag ggccgtttcg cgcggcgggc gctggcggcc aaggggttcg ccgcccgacc
+     1921 ctccgaggcg ggcgccgggg acgctcccgt cctcacggag gggctcgggg cgctgctgct
+     1981 caagcgccgg tcgaccgcgg agcgggacgg cgaccgggtg tacgcgtcgg tcctggactg
+     2041 cgccctgcgg cacgaggcgc ggccggggat cttccgctac tcgctgtcgg ccgcgcaccg
+     2101 ccgggccgcc gccgaggccg cgcaccgtac ggcggacgtc gcgccgggat ccgtacggct
+     2161 cgtcgagtgc gccggatacg gcacggccgc cgtggggcgc gccgaacagg aggcgatcgc
+     2221 cgggatccac gccggtgcgc cccgggactc ggtggccgtg ggcaccgtgc gcgaccggct
+     2281 cggccacacc ttcgccaacg ccgggctcgc cggtgtcacc aaggcggcgc tggccctgca
+     2341 ccaccgcacc gtccccccgg tgctgcccgg cacggatccc gccccgacga ccggtccgtt
+     2401 ccgcgtcccg cgcgcggccg agccctggga gccgtccacc gacggcacgc cccggcgcgc
+     2461 cgcggtcctg ggcgcctcac tgaccggcac cgtatgccac gtgctcctgg aggaagccgc
+     2521 accggccggc tccgtgcccc agggggcggg cgccgacgca cacctcggcg gtgcgcgcgc
+     2581 cgccggtgcg gcccggcggc ggttcccggg cgggcaggcg tccgccgcgg gccgcgagac
+     2641 cggggcgtgg caggcggagc ccatcgcgat cgtcgggttc ggtggtcgtt tcgccgactc
+     2701 gcccgacgcg gacgggttct ggcggaccat gctctccggg cgggaccgga tcgggccgtt
+     2761 gccggccgag ttgttcgacc gggacctcta ccacgccccc ggcgcactcg ccctcgggcg
+     2821 cagttacacc gacctgggcg cgcccgtccc ggtgccgacg cagccgcccc ccgggctgcg
+     2881 catccccccg caccggtacg cggcgacgga cgcggcccag cgcctcggac tcgacgtggc
+     2941 cgccgagatg ttcgcccgct acgggcgtga cccgcacgca ctcgacggtg tcggaaccgt
+     3001 cgtcgtcggc agcaacctgg gcctgtccag ggaacgccgg ctgcacaccg gcctgtgcct
+     3061 cgacgacctg gaggcggacg tccgctccct cgccgcgctc gccgcactgg ggccggacga
+     3121 cgtcgaagcg gtgaccaagc tggtgcggga ccggttcggc gaggccgggc ccgacgacct
+     3181 gccgaccacc tgggacggct gcgtcgccag cggcatcgcg gcgctcctcg gcaacgaaca
+     3241 cggcctggac gccgtaccgg tggcggtgga ggcggcctgc gcctcctcgc tggccgccgt
+     3301 cgacgtggcc gtgggacggc tgcgctccgg cggcgccgac tacgcggtgg ccggtggcgt
+     3361 ggaacttccc tgcaacgcgc gggacatggt gctctgctcc tcgctgggcc tgctgtcgca
+     3421 cagcaggatc acccccttcg acgccggggc cgacggcttc actccgggcg acggctgcgc
+     3481 gctcttcctg ctcaagcgcc tgacggacgc ccgccgtgac ggcgacctgg tgttcggcgt
+     3541 gctccgcgcg gtcggcgcgt ccaacgacgc gaagtcgctg atcgcccccg acgccgacgg
+     3601 ccaggcacgg gccgtacggc aggccttcgc ccaggtcgac ttcggcccgg acgaggtgga
+     3661 ctacctggag gcccacggca ccggcacccg cctgggcgac cgcgtggagg tcgccgccgc
+     3721 cgcacaggtc tacggcacgg gacggcgtac ggcaccgctg gacatcggat ccgccaagtc
+     3781 cttcctcggc cacaccttcg cggcggccgg ggcggccgga ctgctgcgca cactccaggc
+     3841 gttgcggcag gccaccctgc cgcccagcgt caacctgcgc gaactcagcc ccgacctcgc
+     3901 cctggacgcc gtccccgcgc gggtggccac cgaagccggg ccctggcccg cccgggcggg
+     3961 ccggccgcgg cgcgccgcgg tgagcgcgtt cgggaccggc ggcatcaatt accacctgtt
+     4021 gatcgaggaa ggcacggacg caacgcgatg aacttcgact tcgacgccgg gttcgacacc
+     4081 gagaccaggg aactgcgcga catggtcgtg cggttcgccc ggcgcgagct ggactcctcc
+     4141 ggccgtttcg atgatgccga ggacttccgg cggcgctggc tgctggccgg caagcagggc
+     4201 ctgaccggca ccaccgtgcc cggtgagtac ggcggcagcg gactggacgc ggtgtccgcg
+     4261 gccgccacga tggaggcgct cggctacggc tgcgcggaca ccggcttcgc cttctcggtc
+     4321 gccgcgcatc tgttcgccgc cgtcatgccg atcgtcgagt tcggcaccgg ggagcagcgt
+     4381 gccgcgtggt tgccggccct gtgctccggc gagcggatcg ccgcgcacgc catcaccgag
+     4441 ccggaggccg gttcggacgc gctgcacctg cgcacccgcg cccgccccgt cgacgacggc
+     4501 catgtgctca gcggctccaa gtgcttcatc accaacgccc ccgtggccga cgtgttcgtg
+     4561 gtgcaggccg ccaccgatcc gcggggcggc ttcttcggac tgaccacctt cctggtcgag
+     4621 gcatccacac cgggactcac ggtgggccgt ccgtacgaca aggtgggcct gcgcggctcc
+     4681 cccaccgccg acgtccactt cgacgactgc tacgtcccgg ccggcgcggt gctgggcgcc
+     4741 gagggctccg gggcgagcat cttctcctcc tcgatgaagt gggagcgcac ctgcctcttc
+     4801 gcggcctacc tcggagcgat gcgccgggtg ctggagtcca cggtggacca cgtccgggac
+     4861 cgcgagcagt tcggctcgcc catcggcggc ttccaggcgg tcagccaccg catcgtcgac
+     4921 atgctgggcc gctacgaggg ggcccggctg ctcctgtacc gcgccgcccg ttccctgtcc
+     4981 gacggcacgg cggacgaggt cggcccggct ctcgcgaaga tcgcggtcag tgaggcggcc
+     5041 gtacaactcg gactggacgc cgtccagttg agaggtgggc tggggatcat ggacggggag
+     5101 gcggagaccc tgctgcggga cgcgctgccc gcccggatct tctccggcac caacgagatc
+     5161 cagaagaaca acgtcgcgcg agcgctgggc ctcgggcgcc ggcgtcccgc ggcccgccgc
+     5221 tgaacgcaca gtcagggaga cccgagagat ggacgtcatc atccaccgca ttcgtctgca
+     5281 cgacggagtg gacccggccc gcttcgaggc ctgggtccgg gacgtcgact acgcgacctg
+     5341 tccccggctg ccgagtgtgc gcgccttcgc cgtgcaccgg gtgagcacgg aacaggatgc
+     5401 cccattccac tacttcgaga gcatctcggt gaccgggccg gacgaattct cccgggacat
+     5461 gaaaaccgag gcctttcggg acctggtcac cgtgttcgac acgatggcga cggtcgtcga
+     5521 ggagatgagc ggcgaactcc tggaacccgg ctaccaggca cggccctgac aaagggccgt
+     5581 ggcgcgggat gcccggccgg gccgcacgga acgcgaagcg gcacggccgg accggggcat
+     5641 tcagcgggcg ggagtgccgt aacccgggca gatgcccagg aggcccgact cgtaggcgat
+     5701 ggccacggcc tgcgcacggg tcgccgcgcc cagtttgcgc aggatccggt gtacgtggga
+     5761 cctgacggtg gtgggcgaga cggagagggt cgcggccatc tcggtgttgg tcttgccctg
+     5821 ggtcagtaag aggaggactt ccgtttcccg aggggtcagt tcggggcgga ggttcttcgg
+     5881 ggccttgctg cgccaatagc gcgtcagggc ttcctgtgcc tcttccggag cgattatggc
+     5941 attgacttcg gtgatggttc tgatgacgtg caccagttct tcgaccgacg tttcggccga
+     6001 caatacggcg cgtactccga cgcggagcgc ctcgaatgcg cggtgggtat tctcgggctt
+     6061 ggtcagcaaa agcgtcttgc cgagtcgtgc gagttccgtg agcttgtcga tgctgtccat
+     6121 ggtgaagagg ggggcgacgc cgaccagaat gtcgggcccg gtctccgccg ccgtggccag
+     6181 cgagccgcgc tgggtggtct ccacctgcac tttcatgtcg tgccgctcca gcaatgcgcg
+     6241 aattccctcg cccaggatga cgcggtcgca gcacaccagg acacgggtcg tcatacgttg
+     6301 actttcgtcc aggaaggatg gggaccgtac gtggcgtgcg ggccggcgcc gacggtggca
+     6361 agtcgatgcc gggcaccttt ctttgcgatt cccccgatat gcctcatgcg gccaaactta
+     6421 gcacgcgtgt gcacacttgg agaggggctt gcgaggccct ggtgagagac tgatacgaag
+     6481 tggtttccac ctcaagaaga tcttgtcgtg aaacgtgtga atgccgctcc cgtacccgtc
+     6541 cctcgtaccc gctccgctca gaaggacacg tgcacggcgg cgtccgcgcg ccggtgggag
+     6601 cgcggcgcgg gcgagccggc cacaccgacc cggctcacga agaaggtgcg gccgggcagg
+     6661 gagagttccc gctccagccg gccgcgcagg tcgtcgtgct ggaggacgat gctgatgggg
+     6721 tgcagggaca ggccgtggcg ggtcgcccgc caccagtagt cggccagtcg cgccccgccc
+     6781 tcgagctgct ccgcccgtgt gggcgcctgc ccggcgaagc ccatggtcac cacggccgga
+     6841 gtgcggcgca cgacgtcggc gagaccggcg gccagcaccc ggtggtagcc gaccttgccc
+     6901 agcaggtgca tcgtcgtcgg ggccagcgcg aggcgcatcg ccgcccggcg cggccgggac
+     6961 atgggcccga agagctgctc cagcgtgaac ccgtcgcccc gcgcggtcgc gtccgcggtg
+     7021 tcccggcgga cgaaggagtg ggtctcccgc caggcggccc ggtgcccgaa gtcgcgtccc
+     7081 gcgtgccggg cgacgaacgc cgcgaacgcc cgcaggtcgc gccgctcggt caggtgccgg
+     7141 aggtggaccg ggtgtgccgt ggctccgggt gtggcgggct cctccaggtc gcgcagcagc
+     7201 ccgggggcca ccggctcccg cccgtagggg ccgcggtggg tgcggcgggc gagggcgctc
+     7261 tcgtgcaggt cggccggccg ttctccggag agcggcccgg ggcgcagcgc caccacgcac
+     7321 agcggcgtcc acgccgtcgg ccatccggca ccgaacgggc ggccgccgcc gggcagcccc
+     7381 gccgcgccgg ggtccgcgtc gccgtccagg acgcgcaccg ccgccgtcgt ccagccctgg
+     7441 gccgccagcg tgcggagcag gatccgccag tagacgccgc agctgacctc catctccacc
+     7501 gcgtgcgcgg ccagcgccgt cagctcccgc tcgcggtcga gggccaggac caggtactcg
+     7561 tccgcgtccg cgccggtcag gtccgccgcc gaccggcggg ccgtggtgct cgtggcacgg
+     7621 cccaggcccc acggctggca gttgtgggag gagggactca gcgccgccgt cccggccgcc
+     7681 gtctccagcg cctgggcgaa cgtggacacg gccgcggcca tgtggtctgt cctgcgggtc
+     7741 gtcatgacgg tctcctcttc ctcctcttcg catgctgtgc acgcggtatc ccactgggga
+     7801 cggtgcgcac gcccggaacg cccggaagat ctgcaacacc cggatggcgg gcgcggttca
+     7861 gccgcccggc ggcctttcca ccagcgccag gtgatggccg gcgaccacgc cggcccagcc
+     7921 ggccggccgc cgcgtctcgg cgacgggggc gtggcgcagc agcccgcccc cgggccgcca
+     7981 ggtgaagcgg ccgtccggca gccagccggt cagcgcgacc tcaccggcgt cgatccgcag
+     8041 tccgaagccg tagtacttga gcacggcctc cttgcaggtc cagcgcagcg tggcgggcat
+     8101 ggccgccagg cgccgggcgt cggcggacgg cgcccgcggg tcgcactcct cgtcgagcag
+     8161 cctggcgagg gtcggcggca tgggacggtc gtgttccagg tcgacgccga ccgcgtgcgg
+     8221 tccgcacacg gcgacggcga agtcccccga gtgcgtcaga cccacctcga ccggcgcgtc
+     8281 cacgaccggc cggccgccct gtagcccccc gctcacggcg cgcacttcga cggtgcgggg
+     8341 ttcccgggcc aggccccagt gccgtctgcc gtgggcgctg acggcgtgtt tgagggcgag
+     8401 ccgtccggcc agccactcga ggcgccggcg gggggcgcgc agggtcgcgg cctgctccgt
+     8461 ctcggcggcc gtcagatacc gggcccgcag ggcggcaagg ccgtgcgggc cgcgctcgcg
+     8521 cagccgggcg atggacacca ccgcgagggt gagccgccgt gggtccggcc tcaggtgcgt
+     8581 gatccacagc ggacgcgacg cgtcgagaac cacctggtcc gtcagggaca ccgcctcccg
+     8641 caccgacccc cgttccgccc cgtgcaccgg tcccggccgg ggcccgggag cgggccgtac
+     8701 ggcggtggtg tcaacgcgcg acatggcggg gcagcaggaa cggatacggg cggcgcagga
+     8761 tcttgttgtg cacgaaacgg tccgccttgc gcagccgctg gatgagttcc cacatccgtg
+     8821 cgtcgtcccg gtagtaggcc ccgacctcct ccgcgtccag cggccggtcc aggcgggcgt
+     8881 tggcctgctc caggaagcgg gggaccaggt ggtccagccg ctccttgtgc aggttgccga
+     8941 ggaagtcgag gaccacaccg cgcggcgtgt agaacttgtc gaagatcgac ttcgtcatcg
+     9001 ccatccgcac cacgtcccgc accagccacg gcagcgaggt gaagaacagc ggcacgtcga
+     9061 ggagttcgcg ctcgcgctcg tcgcggatga gcggcgtcgt cacgtccagg tagaccaact
+     9121 cgccgtccac gtcgatccag ttggaggcct gcccgtcgag ccccagtcgc ggcgtgacgg
+     9181 tcgcctcgac gcggtccagg aaccgggcga agaacccctc gcaccacgcc tcgcccgccg
+     9241 tgtgcagcag ccgtgagcac agccggccct ccggcagcgc ctcctggacg cagtaggcga
+     9301 cggcccggcc gcccggcagc cgccggtgcc acatccgggt ctcggcgacg gccacgccgc
+     9361 ccttgtccag ccgcgtgacg tagtcgtcga ccagcgcgga gtgccggtcc agccgttccc
+     9421 gggaggggaa gaccggcagc cgcttgcacg cgaacgtgcc cgcgtcggtc tccagccgca
+     9481 ggaccagcgt cacctcgccg tagccgagga tggtcagggc ccggtcgtcg gtggtgcgca
+     9541 gcgcccgtac gacctcgtcc tccagggcgt cgagcgcgtc ggcgggtatc gagaaggtca
+     9601 tgtccgggtc accggccttc cggggtcggg cccgagggcg cggcggtccg cgcgcccggt
+     9661 gacgcgtggt accggtacag gaggtagatc gcggcggcga agaaggccgc gtccatcacc
+     9721 aggatctcgg ggacactgct cacgaggatc accacgaaca gcaccagcat cagcaactgg
+     9781 ccgtagaggg cggcgatcac cagcccccgg cggttccaga gcagggcgag gcccgccgcg
+     9841 accatggcca cggcgacgaa ccacatcacg ccggtggggt ggcggtccag ccagtcgacg
+     9901 ggaccggaga tcacggtccc gtcgttggct tccgaggcgt cgtcgaggcg cccttccacc
+     9961 gactccagct gcgggaagaa cttgcctatc cccgcgagga tgtacagcgc gccgacgacg
+    10021 cgctggagga tcaggtttcg tccggtcacg agccagcttc ttccggaggt cgacgggagg
+    10081 tgccgcgagc ggggacgccc ggggccgggg gtggggcggg ggcttgagga gagcccgggg
+    10141 gggggtgcca ggggccgccg acgggggccg tcagcgggcc cgggccgtca cggggaggcg
+    10201 aagaccagga ccgcgttctg cccgccgaag ccgaaggagt tgctcatcgc cagctccacc
+    10261 ttctgctccc gcggagcgtc ggcgaccacg tccaggtcga cggccgggtc ccgccgtcgc
+    10321 aggttcgcgg tcgggggaac ggtggagcgc tcgatgctga gcacggtcag cgccgcctcg
+    10381 atcgcaccgg cggcgcccag cgtgtgcccg aggacgccct tggccgaggt cacggtcgcc
+    10441 cggtcgccca gcagccggcc cagcaccgcg gcctccaccg cgtcgttgag cggggtcgag
+    10501 gtgccgtgcg cgttcacgtg gtcgatgtcg cggccggtga cgcccgcctg ggcgagggcc
+    10561 gcctccatcg cccgcagggc gccggcgccc tccgggtcgg gcgcggtgac gtggtgggcg
+    10621 tccgccgacg cgccgtggcc cagcagccgc gcgcgcaccg tcgcgccgcg cgcctcggcg
+    10681 tccgccgcgc gctccaggac gagcatgccg ctgccctcac cgatcacgaa gccgtcccgg
+    10741 tcggcgtcga agggcctgga cgccgccgcc ggatcgtcga cccggcgcga cagcgcgccc
+    10801 atctgcgcga aaccggtgac catgaggggg ctgacgcccg cctcggtgcc accggccacg
+    10861 acgatgtcgc acgtcccgtc ccgcagcagc cgggccgcgg tgcccagcgc ggtgccgccc
+    10921 gaggcgcagg cggtcgccgt caccaggttc gggcccagcg cacgcaggtc catcgcgagg
+    10981 tgcccggccg ccatgttggg caccagcatc ggcaccagga gcgcggacac cgcttcgggg
+    11041 ccgcgctcca gcaggcgccg gtgctgggtc tcccacgtcg tcaccccgcc gagcccgcag
+    11101 ccgacgacca cgcccacccg ggcgccgtcc caggtcagcg ggtcgagtcc ggcgtcggcc
+    11161 acggcctccc gggcggccac gatcgccagc tggacgaagc ggtcgtggat caggacgctg
+    11221 cgccggtcca cgtgacgcgc cggttgcagg cccggcaccg cacaggcgat gtccacgggc
+    11281 agtccggcga gccgctcgtc cctggcgccc gccgaccggc cgcgcaacac cccctcccag
+    11341 gtggcgtcga cgcccatgcc ggccgcggtc accagaccca gcccggtcac ggcgagggag
+    11401 gggtcggtca tgacgcggtg gccgcgatct cgttgtcgac cagggccacc gcgtgggcga
+    11461 tggtgtccgt ggggaccgcg gcgtcgtcgc tgatcttcac gccgaactcg gactggatga
+    11521 cgagcagcag ttccacgagg aacagcgagt ccatctccag ctcttcgaag gtcacgtccg
+    11581 gacggatcgc agcgcggtcc accgcgaaac cgtcgaccag cagatcaacg agcttgtcgt
+    11641 aggtggtgct catcagtgtg gtccgccttt cctgggtgga tcgttcgccc aacgccgccc
+    11701 cggcccgagg gtgtcggtgt cggtcaggga cgcggcggcg ttgcgacgct ccggcaagtc
+    11761 tggggcgctg cgctgacggc ccgctgacgg ttggctgacc cccggggcgg gacgcccgcc
+    11821 gggcggggcc gcggtcagtg agccgtcagc gcccggtcag gggccccggc cagactcggt
+    11881 gcggccgggg ggcccggatt cactccccac acctgccggc cggcaaaccg tccatcacgc
+    11941 gaggagcaca cacgtggttt cccgtctccg ccgccgcacc aggcccaccg cacaccgcgg
+    12001 ccgctccgcg ggcggtgccc ggtgacccgg gcgtccgtgc tgaccggcct cggttcctgt
+    12061 ctgccgtccc ggtgcgtcac caacgcggag ctggagcgga cgatggacac ctcggacgag
+    12121 tggatccggg cccgtacggg gatcgcccag cgctacgtgg ccgaagaggg caccctcacc
+    12181 tccgacctgg cggtgggcgc ggccgagcgg gcactgaagt ccgcccgcct gacaccggac
+    12241 gagatcgacg cggtcatcgt ggccaccacc actccggacc ggccctgccc ggcgaccgcg
+    12301 ccgacggtgg cggcccggct gggcaccggc ccggtcccgg cgttcgacgt gtccgcggtg
+    12361 tgctccggct tcctctacgg actcgccacg gggtccggtc tgatcgcgtc cggagcggcg
+    12421 gaacgggtcc tggtcatcgg tgcggagacc ttctcccgca tcctcaaccc gcaggaccgc
+    12481 tccacctcgg tgatcttcgg tgacggcgcc ggcgccgtcg tgctgcgcgc cggcgagccg
+    12541 ggggagaccg gtgccctcgg cccgctgcgg ctgggcagcg acggcaccgg cgtggacctg
+    12601 atcaccgtgc cggccggcgg accgccgcgg ccgggcgcgg cggcaccgga cgatctcgcc
+    12661 gaccgctact tcaccatgga gggcaagcgg gtcttctggc tcgccgtcca gcgcatgggc
+    12721 gagtgcgcgg agagcgtgct cgaccgggcg ggctggcggg tggcggacgt ggactggctg
+    12781 gtcagccacc aggccaacca ccgcatcacc gcccggctcg ccgacgagat cggcatcccc
+    12841 cgcgagcgca gcgtcagcaa catcgccgag gtgggcaaca ccgccgccgc ctccatcccc
+    12901 ctcgcgctcg accacgcgca cgcccggggc accctccggc ccggcgaccg ggtgctcctc
+    12961 accgccttcg gcggcggcct cacctggggt gccgccgccc tgacctggcc cgccgtcgat
+    13021 ccggtctgag ggcggccggc cgggcccggc cgaagcgcgc gcagacgacc gatgaaccaa
+    13081 ggacgaccat gactcctcgg aaactgatca ccgactacat cgccgacgcc tggatgggcg
+    13141 gcgacgccga aggcctggag ccggacaccc ccatcgcgga gctgaacatc atcgactccg
+    13201 ccgccatctt cgacctcgtc cactacctgc agggcgagtt ccgcgtcacg gtgccgctgc
+    13261 cggaggtcac cctgcagaac ttcaggtccg tcaacgcgat ctgcgccctg gtcgaccggc
+    13321 tccggcagaa cgagggggga accgcggcat gaccgactcc gtcgacgcac tccccgacac
+    13381 cgcgcggatc cgcgaacgcg tcgtgcacgt catcgccgcc cgcaccctgt acgacgagag
+    13441 ccacctgcgg ccggagagcc acttcgaggc cgacctcggc atcgactccg tcatcatgga
+    13501 gtccgtcctg gtctccgtcc gtgagcactt cggcctgtcc gccgcgctgc ccgccggccc
+    13561 caccaccatc ggcgaactcg tcgacgccgt gggcgccgcg ctcgccggca ccggcgacga
+    13621 ccggcccgca ccggccgccg gccccctgcc ggcggtcccg gcggaaggga ccggcgaccc
+    13681 cgtcaccgag gccgtggtcg cggccgccat gcggcagacc cagtaccagc ggcaccagct
+    13741 cggcctcgac gccgacctgg agggcgaact gggcgtcgac tcggtcgtcc tgacctccgt
+    13801 cgtcgccgag gccaccgagc ggctcgggct caccggcgcc gccccggacg cggccggcgc
+    13861 cacgaccctg cgcgccctgg ccgacgccct gcgcggcctc gtcgcggcgg ccccggggac
+    13921 ggcggtcccg gaggcggcac cggcgacggg cgcggcggcc ccggcccccg gccggagcgg
+    13981 gaatgcgccc gcgcccggcg cggacggctg ggaccaccgc tccatgaagg acttcaccga
+    14041 acagcgcgac cccgacctgt tcgccaagac ccgcagcttc gccggctatc tgcgctcccg
+    14101 cgagaaggac cgcctgtact ggtacggcat gccgctgcac tcccggtgcg ggagccgcgc
+    14161 cgtcatcttc gacgaactgg agggccgcaa gcgcgagttc ctcatgttcg cgtcgaacaa
+    14221 ctacctcggc ctcgccaacc accccagcgt gatcgaggcc gtcgtcgacg ccacccgcac
+    14281 ctacggtgcc acccacaccg gctcccgctt catcggcggc accaacatgc tgcacaagga
+    14341 actggagcgc cgcctggcgg ccttcaagca gcggcccgcc tgcatcgtct atcccggcgg
+    14401 ctactccgcg aacctcggtg ccatctcggc actggtcaag agctacgaca ccctcgtcgt
+    14461 cgaccgcctc aaccacatga gcatcgtcga cggggcacgg ctctccggcg ccgtgcgcaa
+    14521 gatctaccgg cacaacgaca tggccgacct ggagcggatc ctcagccgca gcgcggcgga
+    14581 gggcaccggc ggcaggctca tcgtcgcgga cggcgtcttc agcatgcacg gcgacgtgtg
+    14641 cgacctgccc gagatcgtcc ggctggccaa ggagtacgac gcccgcgtga tgatcgacga
+    14701 cgcccacgcc accggtgtcc tcggcgtacg cggctccggc accgccgagc acttcgggct
+    14761 caagggcgag gtcgacctgg agctgggcac catgagcaag accctggccg gcatgggcgg
+    14821 gttcgtggtc ggcgaggagg aagtcgtcga gtacctgcgc tactactcca actcctacgt
+    14881 cttcgccgcg aacatccccg ccggcgtcgc cgccggactg atcgcctcca tcgacgtcat
+    14941 cgagtccgag ccggaacgcc tcaagcggct gtggaccaac atcggcacgc tgcgggaccg
+    15001 gctcctggac gccgggttcg acctggagca ctccgagagc gccatcctgc ccatcgtcat
+    15061 cggcgacgaa cgccgggcga tggagctggg ccgggcggtg cgcgcccgcg gcctgttctg
+    15121 ccagaccgtg gtctaccccg gcgtgcccct cggcgacgcc cggctgcggg tcagcgtcac
+    15181 ctgcgaacac acgccgcagg acctggagct ggccgcggag atcttcgtcg acgccgcccg
+    15241 cgagaccggc gtactgccgg gcacgccctg acgccctctc cgccccgcac cgtttccgcc
+    15301 cgcacacccc ggccgggcag gccccctccc tgcccggccg gacccgagca acccacgcac
+    15361 gtcaaggaga agggcctgta caccatgagc gccgccactc cctccgtgat acgcctgcca
+    15421 cgggacacgt ccgcgcagca cgcggcccgg cccgccttcg tcggctccga ccccctgacg
+    15481 tacggggagt tcaccgcccg ggtcgaggcc gtggccgccc gcctgctcag cctcgggaca
+    15541 cgcaccggcg accggatcgc ggtctggatg gacaagcagc cgcgctacgc cgaggcgatc
+    15601 gtcgccgccc tggaggccgg gtgcgcctac gtccccctgg acggcggcca gccggtgagc
+    15661 agggtgcgga ccatcctggc ggacgccgaa cccgtggtcc tgttcaccga cgcgcaccac
+    15721 gccgccctgc tcggggacga cgacctgccg gcctcggtca ccacggtcgt ggccgtcggc
+    15781 gacgcactgc ccgacaccgt gggcggcatc ccggtcgccc cctgggagag ctgggagcag
+    15841 ggccgcgccg ggcgggtcac cctgctgccc tccctcaccc ccggcgacct cgccgccctc
+    15901 ctctacacct cggggtccac cggcacgccc aagggggtgc agatctcgca cggcgcactg
+    15961 gccaacttcg tggcctgggc ccgcgacgag ctggacgtcg gccccgacga cgtgttcgcg
+    16021 ggccacgcct ccttcaactt cgacctgagc accttcgacc tcttcaccgc gctgtcctgc
+    16081 ggggccgcgg tgtggatcgt ccccgacgcc gcgaccaagg acgtgaccgc gctggccgag
+    16141 ggcatccgcc ggcaccggat caccgtctgg tactccgtcc cctcggtcct gcacctgctg
+    16201 accacctccg cggcgctcac ccccgagcac gccgcgagcc tgcgctacgt cctgttcgcc
+    16261 ggcgaggtct tccccgtccc gcaactgcgc gcgctgcgtg aactgctccc gcccggcacc
+    16321 ccgctctaca acctctacgg ccccaccgag accaacgtct gcacctacca ccgggtgcgc
+    16381 cccgaggacc tgcaccgggc cacccccgtg ccgatcggac tgcccatcac cggcgccggg
+    16441 accaccgtcg tggacgacgc cggacgcacc gtccgggagc ccggcgcgat cggcgaactc
+    16501 cacgtctccg gcgtgtgcgt gacccccggc tactggcggc gtgccgagga gccggtctcc
+    16561 accgcccact gccggggcgt gcaccccacc ggcgacctgg tcagttacga ggaggacggc
+    16621 cggctggtct accgggggcg caaggaccgc atggtgaagc tctccggcta ccgggtcgag
+    16681 ctgggcgaga tcgaggccgc cgcgctgcgc caccccggca tcgccgaagc cgccgtcctg
+    16741 gtcgacggct cgggacccaa ggcacggctg cggctctact acaccctgtg cgagggcgcc
+    16801 gagcggatcg gcctggtgga gctcaagcag cactgcgcac ggcacctgcc gacctacatg
+    16861 gtgccgcacg gcgccgtccg cctggaccgg atgccgctca accccaacgg caagaccgac
+    16921 taccgccgcc tcggtctcga cgccccgccc cgcccggcgg cgccgctcgg aacggcccgg
+    16981 tagatggccc ggaaccgcag ggagaagaac gtgagccacg ggccgacgga cccgctgcac
+    17041 gagcactggc agggacccga accggagacg gtcacggccc tgctgcggca ccgggcggaa
+    17101 cacacccccg acgccctcgc ccaccgcttc ctcaccgaca ccgacggtac gtccgtcgcc
+    17161 tggacctacc gcgaactcga cctgcacgcc cgcgaggtgg ccacccacct gcggcacgcc
+    17221 ggggtggggc agggcccggt gctgctgctg cacccgccgg gcctcgacta cctcgccgcg
+    17281 ttcttcggct gcctgtacgc cggcgccgtg gccgtccccg cctacccgcc ggacaacgcc
+    17341 cggttcggcc agaccgtgcc ccggctcgcg gccatcgccc gggactgcgc cgccacccac
+    17401 gccctcacca cccgccgggt ccgcgagacc gtcgccgccg acggcaccgg ccgggtcggc
+    17461 accgaactcg acggcgtgcg ctggctggtg accgaggacc tctacaccgg cgagtccacc
+    17521 accgcctggg aggaccccgg agccacggcg cggtcgctgg ccttcctcca gtacacctcg
+    17581 ggttccaccg ccgcgcccaa gggcgtgatg gtcgaacacg gcaacctggt gcgcaacctg
+    17641 cgctccatcc acctcaggct cgggcacgac gcggactccg gcatggtctc ctggctgccg
+    17701 ccgtaccacg acatgggtct catcggcggc atcctcaccc cggtgtacgg cggcttcccc
+    17761 gcgcacctca tggcgccgat gaccttcgtg cagcgcccgc tgctgtggct ggagaccctc
+    17821 tcccgcaccg gcgcctccac cagcgtggca cccaacttcg gcttcgagca gtgcctgcgc
+    17881 cggatcaccc ccgcacagcg ggccggcctg gacctgagcc gctggcgcct ggcgctgaac
+    17941 ggtgccgagc cgatccgccc cgacaccctc gaccggttcg ccgagtactt cgccccggcc
+    18001 ggcttcgacc gcaccgcgct gctgccctgc tacggcctcg ccgaggcgac cctcatggtc
+    18061 accggcgtgc ggccggccga cccgccggtg gtggagtcct tcgacgcggc ggccctggag
+    18121 gcgggcaccg cgcgtcccgc ggaccccggc ggcgtgcgca ccacccgcgt cgtcggctgc
+    18181 ggagcacccg tcgccgacgt cgaggtcgcg gtggtcgacg ccgccaccgg ccgccgggtc
+    18241 cccgacggca ccgtcgccga gatccgggtc agtggtcccg gcgtcgcccg cggctactgg
+    18301 ggacgccccg aggccgccgc cgaggtcttc ggcacccgga tcgacggcga accgggcaac
+    18361 gcctggctgc gcaccggcga cgtcgggttc cgccacgacg gccagctcta cgtggtcggc
+    18421 aggaccaagg acgtgatcat cgtccagggc cgcaacatcc acccccagga cgtggaacag
+    18481 acggccgaac gggtcggcgc cggactgcgc gccgggtacg gcgccgcgtt cgccgtcccc
+    18541 accgccgacg gcgaacagct cgccctcgcc tacgagatcg gcggccccgg cgccggggat
+    18601 ccgcacgccc tgctcgcccg gctgcgcacc gccatcgccg acgagcacca ggtgacaccg
+    18661 cacaccgtcg tgctgctcaa acgctcctcg gtgccgcgca ccaccagcgg caagatccag
+    18721 cgcggcgcct gccggcagcg cctgctcgac ctggaactgc ccgtggtggc cgcgagcgtc
+    18781 gtccaggacg gtgccctgcc ggacaccccc gccccgcacg cccccgcctc cccggaccgt
+    18841 acggccgccc tcgtcgccga cgccctcgac cgcgccgcga cggacgcgcc cgacggcacc
+    18901 tcgcgctacc cgcggctgct gaccgccgta cggacgctgt ccgagcgcct cggcgtcgcc
+    18961 ctcgacgtcg gtgaactcct gtccggcccc gagccggacg gcgcgccgtc cctcaccggg
+    19021 ctgtgccgcg ccgcgctcgc cgacgcggcg cccgcgccca cggccgcgcc ggagcggacc
+    19081 cggacccagg ccgtggactg gctgcggcgg gccgtcgccg cccggctggg cctgcgcccc
+    19141 tcggtgatcg acacggcggt ccccttcacc tcactgggcc tggactccaa gcaggccgtg
+    19201 gccctcaccg ccccgttcgg cgactggctc ggcacccccg tgaccccggc caccctctac
+    19261 gaccacccga cggtcgagtc cctggcggcc cacgtcaccg gaccagaggc ggacggcacc
+    19321 ccgcacccgc acccgcggcg tcccgctccc gagcccgccc gcgggcgcgc cgacgagccc
+    19381 gtcgccgtga tcggcatcgg ctgccggttc cccggcgcac ccgaccccga cagctactgg
+    19441 cggctgctgc gcgacggccg cgacgccgtg ggcgaggcac ccgccgaccg ccacggcgac
+    19501 accggcggcc ggccgggcgg cttcctggag cacgtgtacg acttcgacgc ccgcttcttc
+    19561 ggcgtctccg cccgcgagac cgaacgcatg gacccccagc agcggctgct cctggaggtc
+    19621 gcctggcaga ccttcgagga cgcgggcatc gcgccctcct ccctggccgg cacggacacc
+    19681 ggtgtcttcg tcggcatcag cgggcacgac tacgccgatc tccagatgcc gcaccccgac
+    19741 gtcgtcgaca tgtactccgc caccggcaac gcccagtccg tggcggccgg ccggctctcg
+    19801 tacttcttcg acctgaccgg gcccagcctc gccctcgaca ccgcctgctc ctcctcgctc
+    19861 gccgccgtcc acacggcgct gcgcagcctg cgggacggcg agtgcggcgt cgccctcgcg
+    19921 ggcggcgtca acctgatgct gacgcccggg ctgtcggagg ccctcgcccg gggcggcatg
+    19981 ctcggccccg gcggacgctg ccgcaccttc gacgacggcg ccgacggcta cgtccgcggc
+    20041 gagggcgcgg gcctggtgtg cctcaagccg ctgtccgccg cgctggccga cggggaccgc
+    20101 gtgcacgccg tgctcaccgg ctccgcgctc ggtcacggcg gccgggccaa cggcctgacc
+    20161 gccccccgca gcaccgccca gcgtgccgtg atgaccgggg cgctggagcg ggccggtgtg
+    20221 cagcccggac agatcgacta cgtcgaggca cacggcaccg gcaccgctct cggcgacccc
+    20281 atcgagtggg aggccctggc cggcgtctac ggccgcggcc gccccgccga cgcgccctgc
+    20341 ccggtcggct cggtgaagac cgccatcggc cacctggagg cggccgccgg catcgccggg
+    20401 ctgatcaagg ccgtgctcgt ggtgcgggag cgggaggtac cgccgctgct gcacctggcc
+    20461 acccccaacc ggcacctgga ctggacgggt tcgggactga ccgtgcccac cacccgccgg
+    20521 gccctgcccg ccgggggcac cctgcgcgcg ggcgtcagct cgttcggctt cggcggcacc
+    20581 aacgcccatg tgatcgtcga gtccgcgccc gcacccccgg cgcccgccgg cgagtccggc
+    20641 gcccccgacg gcacggtgca cgccctgtcc ctgtccgcgc acaccgagtc cgccctggcc
+    20701 accctggccg gccgctaccg cacccacctc gcggcccacc ccggcgtgcc gctcgccgcc
+    20761 ctgtgccact ccgcccgcac cggccgttcc cggctgccgc accgggcggt cctcaccgca
+    20821 gcgacccggg acgaactgga caccgcactg gaggcgctga tccgccggga gcccgccgtg
+    20881 gacgtggccc gcggcggacc cgcggacggc accgcgccca ccgtcgcctt cctcttcggc
+    20941 ggccagggca cccagtaccc gggcatgggc cgcgacctct acgacgccca ccccgtcctc
+    21001 gcccgcaccc tgcggcgcgc cgacgcggtg ctgcgcggcc tgggcgagat cccgctgctc
+    21061 gacctgctct tcgacccgga ccgcgccgag gacctggccc gcacccggta ctgccagccc
+    21121 gccctggtcg ccctcgaagt cgccctcgcc gacctgtgga cgagctgcgg agtacgcccg
+    21181 gcggccgtgc tcgggcacag cgtcggcgcc ctcgccgccg cctgcgtcgc cggtgtcctc
+    21241 tccctggagg acgccctcac gctggcggtc gtccgcgggc gtgccatgga cgaacagccc
+    21301 ggcgagggcg cgatgatcgc ctgcgtcggc gatccggaga cggtgcgcga gatcgccgcc
+    21361 ggccacgacc gggtggccct cgccgccgtc aacgcgcccc gcaacctggt gttctccggc
+    21421 gcggccgacc ggatcgcggc actccgcggc gacctggaac gcaagggggt caccgtccgg
+    21481 ccgctcgccg tctcgcacgc cttccactca ccgctgatgg cgggcgccgc cgagccgctg
+    21541 ctggaggccg cgcgcgccgt cgagttccag cccccggcca tcccgtggat ctccgacgcc
+    21601 accggcgaac ccgtgacccg ggtcgacgcc gagtactggg tccgccacct gctcggcacc
+    21661 gtgcgcttcg ccgacggctt cgcccgcctg cgcgcgggga acgccgaagg cggtctgggc
+    21721 tgcgacgcgt tcgtcgagat cggcccgcac cccaccctgc tgaacctcgg ccggtccgcc
+    21781 gtcgccgacg gccccgagcc cgacggacgc cgcacgctgt ggctgccctc gctgcgccgc
+    21841 ggcgcccccg gccgccgcac cctgctgcgg tcgctgggcg gctaccagtg cgcgggcgga
+    21901 gacatcgact ggtccgccct ggacgacgaa cacccgcccg cccgggtccc gttgccgcac
+    21961 acgcccttcg aacgccggac ctaccggttc caggccccca ctcccgatca ggaaggcgat
+    22021 cccatgccgt cccagcccac ggtgccgggc accgccccga cgggccccgc gggcgaggtc
+    22081 tcccgcaccg tgctcgacac cgtcgcccgc gtctgcggat tccccgtggc cgacctgccg
+    22141 gtgcacgcca ggctcggcct cgagctggga ttcgactccc tgatgcggac cgacctccag
+    22201 cgccgtctca ccgaccgctt cccccaacgg atgcacacgc tccaggacct gccggaggac
+    22261 cccacggtgc aggacatcat cggccggctc gccgccggcg acgaccgcga cggcgacccc
+    22321 gccggcggcg cccacaccgc ccgccccgcc ctcgccggca ccggcccggc cgcgccgccg
+    22381 gcccaccccg cggccgtacc ggcggcgccg cccgtcccgg ccccgcagta cgccccgtac
+    22441 ggagccttcc cggccccgcc ccacggctac gccgtcgccg ccccggtccc gcagcccgga
+    22501 gtgccgtacc cgtacccgta cggctacccg ccgcacggtg ctcccgggta cgcctactac
+    22561 gtcccccagc cctacccccc gcaggcgttc ccgcccccgg cacccccctc cccgctgcag
+    22621 gcggcccccg cccccgtacc cgccgcagcc cccgcccccg ttcccgaccc ggttccggcg
+    22681 cccgccgccc ccgtacgtca ggagcgcgcc ttcgaggact gggcggagta cgcggaactc
+    22741 cagggcagac tccgccagac ccggaccagc gggtccaacc cctacggccg tacgcacgag
+    22801 ggcttcaact ccgcgctcgc cacggtcgac ggcaccaagg tcgtcaactt cgcggccttc
+    22861 aactacctgg cgctctccca ccacccccgc gtgcgccagg cggccaagga cgccgtggac
+    22921 cgctacggca cctccgcctc cgccaccccg ctgctgttcg gcgagacccc gctgcaccac
+    22981 gaactcgaag ccgagatagc acggttcatc ggtaccgagg cggccatcgt gttcgccggc
+    23041 ggccacgcca ccaacgtcgc caccgtcggc cacctgttcg gcccggagga cctggtggtg
+    23101 cacgacgcct ggatccacga cagcaccgtg cgcggctgca tcctctcggg cgcccggcgc
+    23161 cggtccttcc cgcacaacga ctgggccgcc ctcgaccgca tcctgaccgg agcacgggcc
+    23221 tcgcaccgca gggcgctcgt cgtcatcgag ggcgcctaca gccaggacgg cgacatcccc
+    23281 gacctgccgc gcttcatcga ggtcaagaag cgccacggcg ccatgctgat gatcgacgag
+    23341 gcgcactcca tcggcgtcct gggccgcacc ggccgcggcg tgggcgagca ctacggcacc
+    23401 gacccggccg acgtcgacct gtggatgggc accctcagca aggcgctggg cagcctcggc
+    23461 gggtacatcg ccgcccgccg cccgatcatc gagtacctca agttcaccgc gccgctgcac
+    23521 atcttctcca ccggcatctc cccggcgaac gccgccgccg ccctggaggc gctgcgggtc
+    23581 gtccaggacg agcccgagcg ggtcgcccgg gtgcaggagc tggccgagtt cttccgcgca
+    23641 ggcgcccgcg cccgcggcct cgacgtcggc gtctcccgcc tctccgcggt gatcccggtg
+    23701 atcaccggtg actgggagaa gacgatggcg ctctccaact cgctgctgga gcgcggcgtc
+    23761 aacgtcatgc cgatcggcta ccccgccgtc ccgcgcgacc agtgccggct ccgcttcttc
+    23821 atcaacgcgg accacagcga agcagacctc gaacactccc tcgacctcct ggtgtgatcc
+    23881 atgtcctcac tcagccaaga cagcccgtcc gccgccgccc ccgacatcct ggtcaccggc
+    23941 gccagcggct tcatcggcgg tcacctggtg caccgcctgg ccgagcgcgg gcaccgcgtc
+    24001 cgcgtcctgg cgcgctccac gagcgaccgc gcggccttcg ccggggccgc cgcccaggtc
+    24061 accgtcggcg acctcggtga caccgacagc ctgcgccggg ccaccaccgg aatccgccac
+    24121 gtctacaact gcgccggact ctcggccgac tggggtccct gggaccggtt ccgcgcggtc
+    24181 aacgtggacg gcgccaggaa cctcgtcgag gcggcccacg aggccgggac ggtcgagcgc
+    24241 ctggtccacc tcagcaccac cgacgtctac ggctaccccg agcggccctg cgacgagaga
+    24301 accgccccgc gcgacatcgg cctgccctac aaccgcagca agatgctcgg cgaggccgcc
+    24361 gtgtgggccg ccgccgaacg caccggccag ccggtcacgg tggtccgccc cgtctccgtc
+    24421 tacggccccg gcagcaagga cttcgtgatc gagatcgcga acctgctgct gggcaagcag
+    24481 atggtgtaca tccgcggcgg ccgggtgccc gccgggctgc tctacgtctc caacgccgtg
+    24541 gacggcatca tcgccgccgc gaccggcgag cacaccgcgg gccgggccta caacctgcgc
+    24601 gacccgcacg acaccacctg gcgcgagtac gtcgaggcac tcgccgaggg tctgggcgtc
+    24661 aaggccccct ggctgagcct gcccacgccc gtcgccaccg ccgtcgccac cgtctccgag
+    24721 aagctgtggg gcgccctgcg catcgactcc cggcccgtgc tgacccggca cgccgtccac
+    24781 ctcttcgacc gcgaccagtc ctacccgatc gggcgcgccc aggaggagct gggcttcaag
+    24841 ggcgaggtcg acttccagga gggcatgcgg cgcaccgtcg cctggctcga ctcgcccgag
+    24901 ggacgcgccc atgtcgcccg ctgacctgct ctcccagcgt tccgcctggt tcccccgccc
+    24961 cgtcgcggca ccggccgccg agccgcccga cccggcggcc gccccgctgc gcctggtctg
+    25021 cttcccctac gccgggggga cggtctccgc gttccgcggc tggcaggagc ggctgggcga
+    25081 cgaggtcgcc gtcgtacccg tacaactgcc cggccgcgga ctgcgcctgc gcgagcggcc
+    25141 gtacgacacc atggaacccc tcgccgaagc ggtcgcggac gcgctggagg agcaccggct
+    25201 cacccacgac tacgccctgt tcgggcacag catgggcgcc ctgctcgcct acgaggtggc
+    25261 ctgcgtgctg cgccggcgcg gggcaccgcg gccccggcac ctgttcgtct ccggcagccg
+    25321 ggccccgcac ctgtacggcg accgcgccga ccacaccctg tccgacaccg ccctgcgcga
+    25381 ggtcatccgg gacctgggcg gcctcgacga cgcggacacc ctgggcgccg cctacttcga
+    25441 ccgcagactc ccggtgctcc gcgccgacct gcgcgcctgc gagcgctacg actggcaccc
+    25501 ccggccaccg ctggactgcc cgacgaccgc gttctccgcc gccgccgacc ccatcgccac
+    25561 cccggagatg gtcgaggcct ggcggcccta caccaccggc tcgttcctgc ggcgccacct
+    25621 gccgggcaac cacttcttcc tgaacggcgg cccgtcccgc gaccggctgc tcgcccacct
+    25681 gggcaccgaa ctcgacgccc tcggcaccac cccgcacagg aaggcaacta gggaagcaac
+    25741 atggacattc tgagcctggc caagagcgtc ggcagccgcg tcgaggcgcc gctgaccgac
+    25801 ctgcgcaccg tgaccaaggt gctcggcaat ccgcacatgc cgctgctcct ggccctgtcc
+    25861 aagggcttcg tcgagccggt gtaccgggcc gccttcctgg cctcggcggc gagttccggc
+    25921 gtgctcgccg ccctcgccgt acgcccctgc gacctggagt cgctggcgga acggctcgac
+    25981 atcgacgacg aggacctgcc gcgcctcaag gagtggctgg acatgggcat ccgcctcggc
+    26041 gacctgggca agcgcgaggg ctgctacaag ctgcgcagcc tgcccgccaa ggcgctcgcc
+    26101 cagcccggca acgacgcgat cgccgccgcg ctggaggagg tcctgcgctt ccacgtgccc
+    26161 gcactgctga acggcccccg catgctgcgc gagggccgcc gcttctccct cgacgaccag
+    26221 gacggcctgg tcatcgcccg ctccacccgg gtgatccagc cgctggtcga ggaggccatc
+    26281 gcccgcaccc tggaccggaa cgcgcccgta cggctcctgg aggtcggctg cggcagcggc
+    26341 acctacgtcc gctacgccgc cgagctcaac ccccgcctgt cggcgctcgc cgtcgacctc
+    26401 cagcaggacg tggccgacag cgccgcggcg aacatggccg agtgggggct gaccgaccgg
+    26461 gtcgagaccc ggcaggccga cctgcgcacc ctcgacgcgc agccccagtt cgacctggtc
+    26521 accctgcaca acaacatcta ctacttcccc gaggccgagc gggtcgaggc cctgcgccgg
+    26581 gcccacgacc tgctggcacc cgggggcagg ctgctgctca ccacctcctg caagggcggg
+    26641 aacgtcggtc tggaagcgct caacctctgg ttcacctacg ccgacttcgg cggcccgctg
+    26701 ccgcaggccg acgcactggc cgaccagctc cgccaggccg ggttcgacga cgtcgaggcc
+    26761 acccggatcg tcccgggcga gcagttccac gccttcacgg gcaccagcaa gcgcgtcgcg
+    26821 cacgcctgac cgccgaggag acacacccgc catggacacg cacgtcagcg acacgacgac
+    26881 ccccgccgga gcaggcgaag gccccgccgg cccggtcacc gacccggccg ggcacgccgc
+    26941 ctgcgtcgtc accctgggcg cgggcggccc gaccggaggc caccgggggg aactgggcgg
+    27001 caagggcacc cgcctcgcgg agctgtccgc cgcgggtctg cccgtcccgc ccgccttctg
+    27061 cctgaccacc gccctcttcg acgcctacct gcgggagacc gggatcgccg ccgaggcggc
+    27121 gggcgccgac ccccgcaccc tgcgcgagcg catcctgggc acccggatgc ccgcctcgat
+    27181 cgcggacgcc gtcctcgacg cctacggcag catgggccgc ccccgcgtgg cggtgcgctc
+    27241 ctccggactg cgggaggact ccgctgcaca gtccttcgcc ggccagcacg acacggtcct
+    27301 cgacgtctgc ggcgacgagg acgtactgga cgcggtcctg cggtgctggg cctcgctgtg
+    27361 gtccgaccgc gccacggtgt accgggacac ggacgccccc gacgccctcg ccgtggtcgt
+    27421 ccaggagatg atccacaccg acgtcagcgg cgtgatgttc accgtcgacc cggtcaaccc
+    27481 ccgcccgcac cgcctcgtgg tggaggcctg ccagggcctg ggcgaagggc tggtctccgg
+    27541 gcaggtctcc agcgacttct tcgtcgtcga cgacgagaag ctggaggtcg tcgaggaacg
+    27601 ggtccgctac aaggtcacca agtgcgcgcc cctggagccc ggccgcatcg gcatgacgaa
+    27661 ggtcgacgcg gcggcccgca gcgtcccctg cctcacccac gaccaactgc gcgaactcgg
+    27721 cgccctggcc gtccgcatcc gcgacctgta cggcagcgag caggacatcg agtggggcgt
+    27781 gcgcgacggc gtcttccacc tgttccagac ccgcccgatc accacccggc ccgccgcccc
+    27841 cgcggccccg tccggcgcgc tcagcccgta cgtcgccccg cagccggagc cggtcctcaa
+    27901 cggcaccctg tggtcgcgca tggacatcgg ggagatcttc gtcggcctga tgaccccgct
+    27961 cggcctgagc ttcgcccgct actaccagcg caacgtgcac accgactgcg cgggcgccct
+    28021 cggcgtgcgc gacaccggcg aggccgacct gcacatgggc ttctaccagg gccacgtcta
+    28081 cctcaacatc tcctacagct cctacctgtt ggcccagtgc ctgcccaccc gcgaccagcg
+    28141 ccacttcacc agccgcttcg tcagcgagga ggtcgacctc gccgactacg agaacccgtt
+    28201 cggcaccttc cccggcggca tggaggacct gctctccacc gtccactggc tgcagcacac
+    28261 ggcccgtgag atgacgcaga tgaagtcccg ctcccagcag atggtcgacg cccggctcta
+    28321 cgagttcgac cgggcccgcg gcctcgacct gacccggatg agcaggcgcg aactgcacgg
+    28381 cgaactccac cgcgacctcg cctggttcca cgacatgcac atcggctaca tgccgtacta
+    28441 catcaacgcg ttcgccttct acggcctgct caccgagctg tgcgcccgct ggctcggcag
+    28501 cgacggcgtg ggcctgcaga accgcgtcaa gaccgacatg tccagcctgc gcaccgtcga
+    28561 gtcggccaag gaggtctggt cggtcgccca ggccgccaag aacgacccgg ccgtcctgcg
+    28621 gatcatcaag gacgaaccgc tggaggacat cgcccggctg ctgcgcgagg accccgccgg
+    28681 acagcgcttc tgggaccggc acatggagcc gttcctgcgc gccaacggca cccgcggcca
+    28741 ccaggagatg gagatcaccc acccgaggtg gatcgacgac ccctcctaca tcttccagat
+    28801 gatccggcgc tacgtcgccg acggcttctc catcgacgac atcctccgcc gcagcagcgg
+    28861 ctggtccgac gactcccgcg aggtgctggg ccggctgccg atgcccaagc gccaggtcct
+    28921 ggacaccgtc atctccctct acgccctgtg cagcgagctg cgggagacca cccggatgtc
+    28981 catgatcacg tccatctggc tggtgcggaa cgtggtctac gaggtcggcc ggcgcctggt
+    29041 cgccgacggc gtcctgcact ccccggacga gatcgcccac ctggacttcg aggacgtgcg
+    29101 ccgctacctc gccggcgacg aggacgccgt acgcgtcttc gaccgggccc gcatcgacgc
+    29161 ggcccgccgg ctgcacgaac acaacaagcg gctcccggaa ccgccgttga ccttcgtcgg
+    29221 cgtccacgac atcaccgcct cggtccggcc cgccgccgac ggcgcccggc tcgaaggcct
+    29281 cgccgccagc cccggacgga tcgtgggccg cgcccgcatc gtcgaggacc tggtgtggca
+    29341 ggccgacgag ttcgaggccg gggagatcct cgtgaccggg tacaccgacg cctcctggac
+    29401 gccgctgttc gccatcgcgg gcggggtcgt caccgacatc gggtcgatgc tctcgcacag
+    29461 ttccatcgtg gcccgcgagt tccacgtccc gtcggtggtg aacaccaagg acgccaccca
+    29521 gcgcatcaac accggcgacc tgatcgtggt ggacggcgac gcgggcacgg tcgaggtcgt
+    29581 cgagagcgcg gacaccgacc cgcagggccc ggccggggcc gccgggaccc cggccggagc
+    29641 caccaccgac tgaagccggc caccgccgca acaccggacc acgaccgccc ccgcgagggg
+    29701 cggaccacac cccagacggg agacgacccg atgatcccca accagtggta tcccatcgtc
+    29761 gaggcgcagg aggtgggcaa cgacaaaccg ctcggtgtgc gccgcatggg ccaggacctc
+    29821 gtgctctggc gcgacatcga cggcaacctc gtctgccagg gcgcccgctg cccgcacaag
+    29881 ggcgccaacc tcggcgacgg ccgcatgaag ggcaacacca tcgaatgccc gtaccacggc
+    29941 ttccgctacg gagccgacgg tgcctgccgg gtgatcccgg cgatgggctc cgaggcccgc
+    30001 atccccggct cgctgcgggt acccacctac ccggtccggg agcagttcgg cctggtgtgg
+    30061 atgtggtggg gcgacgagcg cccgacggcc gacctgccgc cggtggcggc cccggccgag
+    30121 gtgacggaca accggaagct gtacgccacc aagcgctgga cccgcccggt gcactacacc
+    30181 cgttacatcg agagcctgct cgagttctac cacgtgacct acgtgcaccg ggaccactgg
+    30241 ttcaactaca tcgactacct gctcctgtac ggcaccccga gcaagttcgg cctcgacggc
+    30301 cgcgagcggt acctggccgc cacccggatc accaaccacc gggtggagac ggaggcggag
+    30361 gggcagacca tccgctactc cttcgaccac tgccaggagg acgaccccac caacaccacc
+    30421 cactacgtca tcacgttcac cttcccgtgc atggtgcacg tgcagaccga gcagttcgag
+    30481 accacctcct ggctggtgcc catcgacgac cagaacaccg agcacatcct gcgctggtac
+    30541 gagtacgaac aggtcaagcc cgtcctgagg ttcgaaccgc tgcgccgtct gctgccctgg
+    30601 gcgtccctct acatggagaa gtgggtgcag gacccccagg acgtccgcat catggaacac
+    30661 caggaaccca agatcagcgc cggcggcgtg aacaagttca tccccgtcga cgagatgaac
+    30721 gccaagtaca tctcgatgcg cgccaagctg atcgcggacg cctcggccgc gccctcgtca
+    30781 ccggcgcggg cggcggagcc cgagccggaa gcggcggggc ggggcggatc agcggcccgt
+    30841 gccacgggca acggcagggg agcggccggc ggacgacgcg gcaccaagcc caaggaggac
+    30901 gccgccgcgc gcccgtagac ccgaagacgg gggacggaca agagagagcg agagtgagag
+    30961 atgtacggcg gatacgacgc gtcgaccggc cccaaggccc tggtgacggc cttcaacacc
+    31021 gtcgccgtgg ccggcgccgt gtggttcctg ttcggcggcg cggacaccgt ggccgactgg
+    31081 ttcggcaccg acttcgacga ggcggtgacc ctgcgccggg tcctgctggc gaccctgtcg
+    31141 gtgctctacc tgctgcgctt catcgccacg aacttcgtga tgctccagcg caagatggag
+    31201 tggtcggagt cggccaccat cgggatctgg gtcctggtga tccacggcac gatggcgtac
+    31261 ttcggcggca ccaacgacgc cggcgtgagc gcgttcacct ggctgggcgt cgtgctgtac
+    31321 ctcctcgggt cctacctgaa cacggggtcg gagtaccagc gcaaactctg gaagaagcgc
+    31381 ccggagaaca agggcaagct ctacaccgaa ggcctgttca agcactcgat gcacatcaac
+    31441 tacttcggtg acgccgtgct cttctccggg ttcgcgctgg tcacgggcac cccgtgggcc
+    31501 ttcgccatcc ccctgatcat ggtctgcatg ttcgtcttcc tgaacatccc catgctcgac
+    31561 aagtacctcg ccgagcgata cggcgaggcc ttcgacgagt acgcgtcccg gacggcgaag
+    31621 ttcgtcccct acgtgtactg a
+//
