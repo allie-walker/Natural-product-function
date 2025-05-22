@@ -211,6 +211,7 @@ def readAntismash6(as_features):
     pfam_counts = {}
     tigrfam_counts = {}
     NRPS_PKS= {}
+    NRPS_PKS_substrate = {}
 
     for feature in as_features:
         consensus = ""
@@ -232,7 +233,14 @@ def readAntismash6(as_features):
                 if motif_name not in NRPS_PKS:
                     NRPS_PKS[motif_name] = 0
                 NRPS_PKS[motif_name] += 1
-
+                if "specificity" not in feature.qualifiers:
+                    continue
+                for substrate_pred in feature.qualifiers["specificity"]:
+                    if "consensus" not in substrate_pred:
+                        continue
+                    if substrate_pred not in NRPS_PKS_substrate:
+                        NRPS_PKS_substrate[substrate_pred] = 0
+                    NRPS_PKS_substrate[substrate_pred] += 1
             
         if feature.type == "CDS_motif":
             if 'label' not in feature.qualifiers: #this happens for ripp sequences
@@ -261,7 +269,7 @@ def readAntismash6(as_features):
             if domain_description not in pfam_counts:
                 pfam_counts[domain_description] = 0
             pfam_counts[domain_description] += 1                           
-    return (pfam_counts, CDS_motifs, smCOGs, NRPS_PKS,tigrfam_counts)
+    return (pfam_counts, CDS_motifs, smCOGs, NRPS_PKS,tigrfam_counts, NRPS_PKS_substrate)
 
 
 def readRGIFile3(rgi_infile):

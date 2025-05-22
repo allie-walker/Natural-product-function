@@ -3,19 +3,38 @@
 Created on Thu Apr 24 12:27:14 2025
 
 @author: Allison Walker
-Scripts for getting feature matrices for antiSMASH6 output
+Scripts for getting feature matrices for antiSMASH6-8 output
 """
 
 import os
 from Bio import SeqIO
 import readInputFiles
+import argparse
+import subprocess
 
 #parameters
-feature_count_threshold = 5 #features must occur more then this number of times in dataset to be included
-RGI_type = "None" #None, 5, 3
-input_dir = "antiSMASH6_output/"
-output_dir = "feature_matrices/antismash6/"
-RGI_input_dir = "RGI_output/"
+parser = argparse.ArgumentParser(description='Extracts features from antiSMASH outputs version 6-8 and RGI versions 3 and 5')
+parser.add_argument('antismash_input_dir', type=str, default='directory with antiSMASH genbanks')
+parser.add_argument('ouptut_dir', type=str, default='name of output directory to be created within feature_matrices')
+#TODO: also add 6?
+parser.add_argument('-r', '--rgi_version', type=str, default='None', choices=['None',"3", "5"], help='version of RGI, use None to not include RGI features in predictions') 
+parser.add_argument('-rd','--rgi_directory',type=str,deafault='RGI_output',help='Directory containing RGI output files')
+parser.add_argument('-t','--count_threshold',type=int,default=5,help='feature count threshold to be included as a feature')
+
+args = parser.parse_args()
+input_dir = args.antismash_input_dir
+output_dir = "feature_matrices/" + args.ouptut_dir
+feature_count_threshold = args.count_threshold
+RGI_type = args.rgi_version
+RGI_input_dir = args.rgi_directory
+
+#make output directories
+if not os.path.isdir(output_dir):
+    subprocess.run(["mkdir",output_dir])
+if not os.path.isdir(output_dir + '/classifications'):
+    subprocess.run(["mkdir",output_dir + '/classifications'])
+if not os.path.isdir(output_dir + '/features'):
+    subprocess.run(["mkdir",output_dir + '/features'])
 
 def makeCountsandList(feature_dir):
     feature_list = []
@@ -67,7 +86,8 @@ NRPS_PKS_total_counts = {}
 tigrfam_counts = {}
 tigrfam_list =[]
 tigrfam_total_counts = {}
-
+NRPS_PKS_substrate = {}
+NRPS_PKS_substrate_list = []
 #process files
 for f in sorted(os.listdir(input_dir),key=str.lower):
     if ".gbk" not in f or ".gb" not in f: #skip files that do not have genbank extension
@@ -75,12 +95,13 @@ for f in sorted(os.listdir(input_dir),key=str.lower):
     record = SeqIO.read(open(input_dir + f, 'r'),"genbank")
     features = record.features
     cluster_name = f[0:f.index(".")]
-    (cluster_pfam_counts, cluster_CDS_motifs, cluster_smCOGs, cluster_NRPS_PKS,cluster_tigrfam_counts)  = readInputFiles.readAntismash6(features)
+    (cluster_pfam_counts, cluster_CDS_motifs, cluster_smCOGs, cluster_NRPS_PKS,cluster_tigrfam_counts,cluster_NRPS_PKS_substrate)  = readInputFiles.readAntismash6(features)
     pfam_counts[cluster_name] = cluster_pfam_counts
     smCOGs[cluster_name] = cluster_smCOGs
     CDS_motifs[cluster_name] = cluster_CDS_motifs
     NRPS_PKS[cluster_name] = cluster_NRPS_PKS
     tigrfam_counts[cluster_name]  =cluster_tigrfam_counts
+    NRPS_PKS_substrate[cluster_name] = cluster_NRPS_PKS_substrate
     
 #make feature and total count list
 (pfam_list, pfam_total_counts) = makeCountsandList(pfam_counts)
@@ -88,6 +109,7 @@ for f in sorted(os.listdir(input_dir),key=str.lower):
 (CDS_motif_list, CDS_total_counts) = makeCountsandList(CDS_motifs)
 (NRPS_PKS_list, NRPS_PKS_total_counts) = makeCountsandList(NRPS_PKS)
 (tigrfam_list, tigrfam_total_counts) = makeCountsandList(tigrfam_counts)
+(NRPS_PKS_substrate_list, NRPS_PKS_substrate_total_counts) = makeCountsandList(NRPS_PKS_substrate)
 
 #filter low frequency features
 smCOG_list = filterLowCounts(smCOG_list, smCOG_total_counts, feature_count_threshold)
@@ -95,7 +117,7 @@ pfam_list = filterLowCounts(pfam_list, pfam_total_counts, feature_count_threshol
 CDS_motif_list = filterLowCounts(CDS_motif_list, CDS_total_counts, feature_count_threshold)
 NRPS_PKS_list = filterLowCounts(NRPS_PKS_list, NRPS_PKS_total_counts, feature_count_threshold)
 tigrfam_list = filterLowCounts(tigrfam_list, tigrfam_total_counts, feature_count_threshold)
-
+NRPS_PKS_substrate_list = filterLowCounts(NRPS_PKS_substrate_list, NRPS_PKS_substrate_total_counts, feature_count_threshold)
 #write data to files
 cluster_list_out = open(output_dir + "cluster_list.txt", 'w')
 for cluster in CDS_motifs:
@@ -107,6 +129,7 @@ writeFeatureMatrixFile(CDS_motifs, CDS_motif_list, output_dir + "features/","CDS
 writeFeatureMatrixFile(smCOGs, smCOG_list, output_dir + "features/", "SMCOG")
 writeFeatureMatrixFile(NRPS_PKS, NRPS_PKS_list, output_dir + "features/", "NRPS_PKS")
 writeFeatureMatrixFile(tigrfam_counts, tigrfam_list, output_dir + "features/", "TIGR_FAM")
+writeFeatureMatrixFile(NRPS_PKS_substrate, NRPS_PKS_substrate_list, output_dir + "features/", "NRPS_PKS_substrate")
 
 #RGI parameters
 e_value_threshold = 0.1 #e value must be less than this threshold for resistance marker to be considered a feature
@@ -117,10 +140,10 @@ if RGI_type == "3":
     resistance_genes = {}
     resistance_genes_list = []
     total_counts = {}
-    for f in sorted(os.listdir(input_dir),key=str.lower):
+    for f in sorted(os.listdir(RGI_input_dir),key=str.lower):
         if ".txt" not in f:
             continue
-        in_file = open(input_dir + f, 'r')
+        in_file = open(RGI_input_dir + f, 'r')
         cluster_name = f[0:f.index(".")]
         resistance_genes[cluster_name] = {}
         for line in in_file:
@@ -154,10 +177,10 @@ if RGI_type == "3":
     cluster_list.close()
     
 elif RGI_type == "5":
-    for f in sorted(os.listdir(input_dir),key=str.lower):
+    for f in sorted(os.listdir(RGI_input_dir),key=str.lower):
         if ".txt" not in f:
             continue
-        in_file = open(input_dir + f, 'r')
+        in_file = open(RGI_input_dir + f, 'r')
         cluster_name = f[0:f.index(".")]
         resistance_genes[cluster_name] = {}
         for line in in_file:
