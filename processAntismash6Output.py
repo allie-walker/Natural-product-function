@@ -234,7 +234,14 @@ is_cytotoxic = {}
 is_unknown = {}
 targets_gram_pos = {}
 targets_gram_neg = {}
+i = 0
 for line in cluster_info:
+    #skip header
+    if i==0:
+        i +=1
+        continue
+    if line[0] == "#":
+        continue
     entries = line.split(",")
     cluster_name = entries[0]
     if entries[1] == "yes":
