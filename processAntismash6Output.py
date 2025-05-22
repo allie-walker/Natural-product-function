@@ -18,23 +18,24 @@ parser.add_argument('antismash_input_dir', type=str, default='directory with ant
 parser.add_argument('ouptut_dir', type=str, default='name of output directory to be created within feature_matrices')
 #TODO: also add 6?
 parser.add_argument('-r', '--rgi_version', type=str, default='None', choices=['None',"3", "5"], help='version of RGI, use None to not include RGI features in predictions') 
-parser.add_argument('-rd','--rgi_directory',type=str,deafault='RGI_output',help='Directory containing RGI output files')
+parser.add_argument('-rd','--rgi_directory',type=str,default='RGI_output',help='Directory containing RGI output files')
 parser.add_argument('-t','--count_threshold',type=int,default=5,help='feature count threshold to be included as a feature')
-
+parser.add_argument('-c', '--cluster_list_file',type=str,default='cluster_list.csv')
 args = parser.parse_args()
-input_dir = args.antismash_input_dir
-output_dir = "feature_matrices/" + args.ouptut_dir
+input_dir = args.antismash_input_dir + "/"
+output_dir = "feature_matrices/" + args.ouptut_dir +"/"
 feature_count_threshold = args.count_threshold
 RGI_type = args.rgi_version
 RGI_input_dir = args.rgi_directory
+cluster_list_file = args.cluster_list_file
 
 #make output directories
 if not os.path.isdir(output_dir):
     subprocess.run(["mkdir",output_dir])
-if not os.path.isdir(output_dir + '/classifications'):
-    subprocess.run(["mkdir",output_dir + '/classifications'])
-if not os.path.isdir(output_dir + '/features'):
-    subprocess.run(["mkdir",output_dir + '/features'])
+if not os.path.isdir(output_dir + 'classifications'):
+    subprocess.run(["mkdir",output_dir + 'classifications'])
+if not os.path.isdir(output_dir + 'features'):
+    subprocess.run(["mkdir",output_dir + 'features'])
 
 def makeCountsandList(feature_dir):
     feature_list = []
@@ -226,7 +227,7 @@ elif RGI_type == "5":
     resistance_list_out.close()
 
 #read BGC classifications
-cluster_info = open("cluster_list.csv",'r',encoding='cp1252') #a spreadsheet with all clusters to be used and their classifications
+cluster_info = open(cluster_list_file,'r',encoding='cp1252') #a spreadsheet with all clusters to be used and their classifications
 is_antibacterial = {}
 is_antifungal = {}
 is_cytotoxic = {}
@@ -298,6 +299,11 @@ for c in cluster_list:
         unknown_out.write("1\n")
         targets_gram_neg_out.write("0\n")
         targets_gram_pos_out.write("0\n")
+        
+#check if there are clusters in spreadsheet missing in dataset
+for c in is_antibacterial:
+    if c not in cluster_list:
+        print("cluster: " + c + " is in class speadsheet but not in antiSMASH files")
         
 antibacterial_out.close()
 antifungal_out.close()
