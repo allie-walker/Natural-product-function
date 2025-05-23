@@ -170,10 +170,11 @@ if RGI_type == "3":
         if total_counts[gene] >= threshold:
             new_resistance_genes_list.append(gene)
     resistance_genes_list = new_resistance_genes_list
-
+    
+    resistance_list_out = open(output_dir + "features/" + "CARD_genes_list.txt",'w')
     resistance_output = open(output_dir + "features/" + "CARD_genes.csv",'w')
     cluster_list = open(output_dir + "cluster_list_CARD.txt",'w')
-    resistance_list_out = open(output_dir + "features/" + "CARD_gene_list.txt",'w')
+    
     for cluster in pfam_counts:
         if cluster not in resistance_genes:
             print("ERROR: cluster " + cluster + " present in antiSMASH output that is not present in RGI output")
@@ -188,10 +189,9 @@ if RGI_type == "3":
         cluster_list.write(cluster + "\n")
     cluster_list.close()
     resistance_output.close()
-    cluster_list = open(output_dir + "cluster_list_CARD.txt",'w')
-    for cluster in resistance_genes:
-        cluster_list.write(cluster + "\n")
-    cluster_list.close()
+    for gene in resistance_genes_list:
+        resistance_list_out.write(gene + "\n")
+    resistance_list_out.close()
     
 elif RGI_type == "5":
     resistance_genes = {}
@@ -229,7 +229,7 @@ elif RGI_type == "5":
 
     resistance_output = open(output_dir + "features/" + "CARD_genes.csv",'w')
     cluster_list = open(output_dir + "cluster_list_CARD.txt",'w')
-    resistance_list_out = open(output_dir + "features/" + "CARD_gene_list.txt",'w')
+    resistance_list_out = open(output_dir + "features/" + "CARD_genes_list.txt",'w')
     for cluster in pfam_counts:
         if cluster not in resistance_genes:
             print("ERROR: cluster  " + cluster + " present in antiSMASH output that is not present in RGI output")
