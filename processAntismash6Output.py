@@ -214,7 +214,7 @@ elif RGI_type == "5":
             if best_hit not in resistance_genes_list:
                 resistance_genes_list.append(best_hit)
                 total_counts[best_hit] = 0
-                total_counts[best_hit] += 1
+            total_counts[best_hit] += 1
             if best_hit not in resistance_genes[cluster_name]:
                 resistance_genes[cluster_name][best_hit] = 0
             resistance_genes[cluster_name][best_hit] += 1
@@ -244,6 +244,7 @@ elif RGI_type == "5":
         cluster_list.write(cluster + "\n")
     cluster_list.close()
     resistance_output.close()
+    
     for gene in resistance_genes_list:
         resistance_list_out.write(gene + "\n")
     resistance_list_out.close()
