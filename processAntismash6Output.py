@@ -17,7 +17,7 @@ parser = argparse.ArgumentParser(description='Extracts features from antiSMASH o
 parser.add_argument('antismash_input_dir', type=str, default='directory with antiSMASH genbanks')
 parser.add_argument('ouptut_dir', type=str, default='name of output directory to be created within feature_matrices')
 #TODO: also add 6?
-parser.add_argument('-r', '--rgi_version', type=str, default='None', choices=['None',"3", "5"], help='version of RGI, use None to not include RGI features in predictions') 
+parser.add_argument('-r', '--rgi_version', type=str, default='None', choices=['None',"3", "5","6"], help='version of RGI, use None to not include RGI features in predictions') 
 parser.add_argument('-rd','--rgi_directory',type=str,default='RGI_output',help='Directory containing RGI output files')
 parser.add_argument('-t','--count_threshold',type=int,default=5,help='feature count threshold to be included as a feature')
 parser.add_argument('-c', '--cluster_list_file',type=str,default='cluster_list.csv')
@@ -193,7 +193,7 @@ if RGI_type == "3":
         resistance_list_out.write(gene + "\n")
     resistance_list_out.close()
     
-elif RGI_type == "5":
+elif RGI_type == "5" or RGI_type == "6":
     resistance_genes = {}
     resistance_genes_list = []
     total_counts = {}

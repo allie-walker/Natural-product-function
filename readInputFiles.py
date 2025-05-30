@@ -337,16 +337,21 @@ def readInputFiles(as_features, as_version, rgi_infile, rgi_version, training_fe
 
     if as_version == 4:
         as_results = readAntismash4(as_features)
+    #TODO: add antismash 6, 7, 8
     else:
         (pfam_counts, CDS_motifs, smCOGs, pk_monomers_consensus) = readAntismash5(as_features)
+        as_results = {}
+        as_results["PFAM5"] = pfam_counts
+        as_results["CDS_motifs"] = CDS_motifs
+        as_results["SMCOG"] = smCOGs
+        as_results["pk_nrp_consensus"] = pk_monomers_consensus
     if rgi_version == 3:
         resistance_genes = readRGIFile3(rgi_infile)
     elif rgi_version == 5:
          resistance_genes = readRGIFile5(rgi_infile)
-         
+    
+    
     #TODO: make sure features get added in correct order!
-    
-    
     test_features = np.zeros((1, training_features.shape[1]))
     i = 0
     card_start_index = 0
@@ -355,17 +360,19 @@ def readInputFiles(as_features, as_version, rgi_infile, rgi_version, training_fe
     pfam_end_index =0
     for t in training_features_types:
         if t in as_results:
-            if t == "PFAM":
+            if t == "PFAM" or t == "PFAM5":
                 pfam_start_index = i
             (test_features, i) = tools.addToFeatureMatrix(test_features, i, as_results[t], feature_list_by_type[t])
-            if t == "PFAM":
+            if t == "PFAM" or t == "PFAM5":
                 pfam_end_index = i
-        elif "CARD" in t:
+        elif "CARD" in t or "CARD5" in t:
             card_start_index = i
             (test_features, i) = tools.addToFeatureMatrix(test_features, i, resistance_genes, feature_list_by_type[t])
             card_end_index = i
         else:
-            raise Exception("Unknown feature type")
+            raise Exception("Unknown feature type " + t)
+    
+        
 
     checkForHits(test_features, (pfam_start_index, pfam_end_index), (card_start_index, card_end_index))
     return test_features

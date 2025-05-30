@@ -94,11 +94,11 @@ else:
 database_version = 1
 #TODO: add parsing for different database versions
 
-    
+  
 #check validity of files and directories given by user
 if not tools.checkIfFileExists(antismash_infilename, "antismash"):
     exit()
-if rgi_infilename is not None and rgi_version != 0 and tools.checkIfFileExists(rgi_infilename, "rgi"):
+if rgi_infilename is not None and rgi_version != 0 and not tools.checkIfFileExists(rgi_infilename, "rgi"):
     exit()
 if not os.path.isdir(out_directory):
     print("ERROR: The given out directory does not exist, please enter a valid directory")
