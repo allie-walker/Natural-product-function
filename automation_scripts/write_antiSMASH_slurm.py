@@ -16,9 +16,9 @@ parser.add_argument('genome_input_dir', type=str, default='directory with genome
 parser.add_argument('antiSMASH_version', type=int,  choices=[4,5,6,7,8], default='directory with genomes')
 parser.add_argument('output_dir',type =str,default="output directory name")
 parser.add_argument('files_per_job', type=int, default='the number of files to include per script')
-parser.add_argument('-t','--threads',type=int,default=1,help='Number of CPUs to request in jobs')
+parser.add_argument('-t','--threads',type=int,default=16,help='Number of CPUs to request in jobs')
 parser.add_argument('-m','--mem',type=int,default=8,help='Amount of RAM to request in jobs, in GB')
-parser.add_argument('-hr','--hours',type=int,default=1,help='Hours to run job')
+parser.add_argument('-hr','--hours',type=int,default=24,help='Hours to run job')
 
 args = parser.parse_args()
 genome_input_dir = args.genome_input_dir + "/"
