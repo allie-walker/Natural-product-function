@@ -19,13 +19,11 @@ directory_name = args.antismash_dir
 def getAllFilesInDirectory(path, files):
     for f in listdir(path):
         if isfile(join(path, f)):
-            #print join(path, f)
             if (".gbff" in f or ".gb" in f or ".gbk" in f) and ("region" in f or "cluster" in f):
                 #check if output exists
                 fullpath = join(path,f)
                 if not exists(fullpath[0:fullpath.rfind(".")] + ".fasta"): 
                     files.append(join(path, f))
-            #print files
         else:
             if "genometools" in f or "glimmer" in f:
                 continue
@@ -33,7 +31,7 @@ def getAllFilesInDirectory(path, files):
     return files
 
 files = []
-files_to_convert = getAllFilesInDirectory(directory_name, files)
+files = getAllFilesInDirectory(directory_name, files)
 
 for f in files:
     record = SeqIO.read(open(f, 'rU'),"genbank")
