@@ -12,7 +12,7 @@ from os.path import isfile, join, exists
 import argparse
 
 parser = argparse.ArgumentParser(description='Converts antiSMASH cluster outputs to fasta file, will recursively search for cluster genbank files in the given input directory')
-parser.add_argument('antismash_dir', type=str, default='directory with antismash results')
+parser.add_argument('antismash_dir', type=str, help='directory with antismash results')
 args = parser.parse_args()
 directory_name = args.antismash_dir
 

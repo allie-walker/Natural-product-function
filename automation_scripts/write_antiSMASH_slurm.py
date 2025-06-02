@@ -12,12 +12,12 @@ import os
 import math
 
 parser = argparse.ArgumentParser(description='Writes SLURM scripts for running antiSMASH on genomes in directory')
-parser.add_argument('genome_input_dir', type=str, default='directory with genomes')
-parser.add_argument('antiSMASH_version', type=int,  choices=[4,5,6,7,8], default='directory with genomes')
-parser.add_argument('output_dir',type =str,default="output directory name")
-parser.add_argument('files_per_job', type=int, default='the number of files to include per script')
+parser.add_argument('genome_input_dir', type=str, help='directory with genomes')
+parser.add_argument('antiSMASH_version', type=int,  choices=[4,5,6,7,8], help='antiSMASH version to use')
+parser.add_argument('output_dir',type =str,help="output directory name")
+parser.add_argument('files_per_job', type=int, help='the number of files to include per script')
 parser.add_argument('-t','--threads',type=int,default=16,help='Number of CPUs to request in jobs')
-parser.add_argument('-m','--mem',type=int,default=8,help='Amount of RAM to request in jobs, in GB')
+parser.add_argument('-m','--mem',type=int,default=32,help='Amount of RAM to request in jobs, in GB')
 parser.add_argument('-hr','--hours',type=int,default=24,help='Hours to run job')
 
 args = parser.parse_args()
@@ -60,7 +60,7 @@ for i in range(0, split):
     outfile.write("#SBATCH --ntasks=" + str(threads) +" \n")
     outfile.write("#SBATCH -t" + str(int(days)) + "-" + str(extra_hours) + ":00:00" + "\n")
     outfile.write("#SBATCH --output=run_antismash_" + str(i) + ".out\n")
-    outfile.write("#SBATCH --mem=8G                          # Memory total in MB (for all cores) \n")
+    outfile.write("#SBATCH --mem=" + str(mem) + "G                          # Memory total in MB (for all cores) \n")
     for k in range(0, files_per_job):
         if j > total_files -1:
             break
