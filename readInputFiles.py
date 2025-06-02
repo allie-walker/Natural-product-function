@@ -205,6 +205,7 @@ def readAntismash5(as_features):
     return (pfam_counts, CDS_motifs, smCOGs, pk_monomers_consensus)
 
 def readAntismash6(as_features):
+    #works for versions 6-8
     score_cutoff = 20 #PFAM HMM score to be counted
     CDS_motifs = {}
     smCOGs = {}
@@ -338,16 +339,25 @@ def readInputFiles(as_features, as_version, rgi_infile, rgi_version, training_fe
     if as_version == 4:
         as_results = readAntismash4(as_features)
     #TODO: add antismash 6, 7, 8
-    else:
+    elif as_version==5:
         (pfam_counts, CDS_motifs, smCOGs, pk_monomers_consensus) = readAntismash5(as_features)
         as_results = {}
         as_results["PFAM5"] = pfam_counts
         as_results["CDS_motifs"] = CDS_motifs
         as_results["SMCOG"] = smCOGs
         as_results["pk_nrp_consensus"] = pk_monomers_consensus
+    else:
+        (pfam_counts, CDS_motifs, smCOGs, NRPS_PKS,tigrfam_counts, NRPS_PKS_substrate) = readAntismash6(as_features)
+        as_results = {}
+        as_results["PFAM"] = pfam_counts
+        as_results["CDS_motifs"] = CDS_motifs
+        as_results["SMCOG"] = smCOGs
+        as_results["NRPS_PKS"] = NRPS_PKS
+        as_results["TIGR_FAM"] = tigrfam_counts
+        as_results["NRPS_PKS_substrate"] = NRPS_PKS_substrate
     if rgi_version == 3:
         resistance_genes = readRGIFile3(rgi_infile)
-    elif rgi_version == 5:
+    elif rgi_version == 5 or rgi_version==6:
          resistance_genes = readRGIFile5(rgi_infile)
     
     

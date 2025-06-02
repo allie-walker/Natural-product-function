@@ -29,7 +29,7 @@ parser.add_argument('--seed', help='random seed to use for training classifiers'
 parser.add_argument('--no_SSN', help="deprecated: use v1 for SSN features", nargs='?', default=True, const=True)
 parser.add_argument('--blastp_path', help="path to blastp executable, only neeeded if using SSN, default is blastp")
 parser.add_argument('--write_features', help='set directory to write features to, default do not write features') 
-parser.add_argument('--antismash_version', help='version of antismash used to generate antismash input file, supported versions are 4 and 5, enter 0 for not using an rgi file, defualt 0') 
+parser.add_argument('--antismash_version', help='version of antismash used to generate antismash input file, supported versions are 4-8, defualt 8') 
 parser.add_argument('--rgi_version', help='version of rgi used to generate antismash input file, supported versions are 3 and 5, default 5') 
 parser.add_argument('--webserver_output', help="output more basic machine readable format", nargs='?', default=False, const=True)
 parser.add_argument('--on_webserver', help="change data dir path for webserver", nargs='?', default=False, const=True)
@@ -76,19 +76,22 @@ elif args.rgi_version == "5":
     rgi_version = 5
 elif args.rgi_version == "3":
     rgi_version = 3    
+elif args.rgi_version == "6":
+    rgi_version = 6
 else:
     print("ERROR: please enter a valid rgi version, program currently accepts output from versions 3 and 5")
     exit()
 
-antismash_version = 5    
-if args.antismash_version == "5":
-    antismash_version = 5
-elif args.antismash_version == "4":
-    antismash_version = 4
-elif args.antismash_version == None:
-    antismash_version = 5
+   
+if args.antismash_version == None:
+    antismash_version = 8
 else:
-    print("ERROR: please enter a valid antismash version, program currently accepts output from versions 4 and 5")
+    try:
+        antismash_version = int(args.antismash_version)
+    except:
+        print("ERROR: enter a number for the antiSMASH version")
+if antismash_version < 4 or antismash_version > 8:
+    print("ERROR: please enter a valid antismash version, program currently accepts output from versions 4-8")
     exit()
     
 database_version = 1
@@ -108,25 +111,11 @@ if not os.access(out_directory, os.W_OK):
     exit()    
 
 #figure out appropriate model name
-if antismash_version == 4 and rgi_version == 3 and database_version == 1:
-    model_name = "antismash4rgi3"
-elif antismash_version == 4 and rgi_version == 5 and database_version == 1:
-    model_name = "antismash4rgi5"
-elif antismash_version == 4 and rgi_version == 0 and database_version == 1:
-    model_name = "antismash4"
-elif antismash_version == 5 and rgi_version == 3 and database_version == 1:
-    model_name = "antismash5rgi3"
-elif antismash_version == 5 and rgi_version == 5 and database_version == 1:
-    model_name = "antismash5rgi5"
-elif antismash_version == 5 and rgi_version == 0 and database_version == 1:
-    model_name = "antismash5"
-elif antismash_version == 6 and rgi_version == 3 and database_version == 1:
-    model_name = "antismash6rgi3"
-elif antismash_version == 6 and rgi_version == 5 and database_version == 1:
-    model_name = "antismash6rgi5"
-elif antismash_version == 6 and rgi_version == 0 and database_version == 1:
-    model_name = "antismash6"
+if rgi_version == 0:
+    model_name = "antismash" + str(antismash_version)
 else:
+    model_name = "antismash" + str(antismash_version) + "rgi" + str(rgi_version)
+if not os.path.exists( data_path + "trained_models/" + model_name + "_antibacterial.sav"):
     #TODO: throw error
     print("ERROR: options not compatible with this version")
     exit()
