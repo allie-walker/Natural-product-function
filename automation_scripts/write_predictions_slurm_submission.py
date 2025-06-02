@@ -27,7 +27,7 @@ args = parser.parse_args()
 antismash_indir = args.antismash_indir + "/"
 rgi_indir = args.rgi_indir
 if rgi_indir != None:
-    rgi_indir + "/"
+    rgi_indir += "/"
 outdir = args.outdir + "/"
 rgi_version = args.rgi_version
 antismash_version = args.antismash_version
@@ -111,7 +111,7 @@ for i in range(0, split):
             outfile.write("cluster_function_prediction.py '" + antismash_input + "' '" + rgi_input + "' --seed 0 --output " + outdir + genome_name + "/"+ " --antismash_version " + str(antismash_version) +" --rgi_version" + str(rgi_version) + " --no_SSN\n")
         elif prediction_version == 2:
             if rgi_indir != None:
-                outfile.write("cluster_function_prediction.py '" + antismash_input + "' --rgi_results '" + rgi_input + "' --seed 0 --output " + outdir + genome_name + "/"+ " --antismash_version " + str(antismash_version) +" --rgi_version" + str(rgi_version) + "\n")
+                outfile.write("cluster_function_prediction.py '" + antismash_input + "' --rgi_results '" + rgi_input + "' --seed 0 --output " + outdir + genome_name + "/"+ " --antismash_version " + str(antismash_version) +" --rgi_version " + str(rgi_version) + "\n")
             else:
                 outfile.write("cluster_function_prediction.py '" + antismash_input + "' --seed 0 --output " + outdir + genome_name + "/"+ " --antismash_version " + str(antismash_version) + "\n")
                 
