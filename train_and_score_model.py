@@ -385,7 +385,7 @@ for classification in classifications:
     axs[2].set_xlabel("recall")
     axs[2].legend()
     fig.tight_layout(pad=2.0)
-    fig.savefig('classifier_optimization/' + classification + '.pdf')  
+    fig.savefig('classifier_optimization/' + training_set_name +"_" + classification + '.pdf')  
 
     #train model on entire dataset and write model
     best_svm.fit(features, y_vars)
