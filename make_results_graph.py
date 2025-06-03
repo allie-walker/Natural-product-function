@@ -176,12 +176,23 @@ for a in activities:
                 for v in predictions_idv[a][g][l]:
                     x_values.append(l)
                     y_values.append(v)
-            sns.stripplot(ax=axs[i], x=x_values, y=y_values,  color="0", alpha=.35)
-            sns.barplot(ax=axs[i],x=x_values, y=y_values, capsize=.1, errorbar="sd")
-            axs[i].set_ylim(0, 1.0)
-            axs[i].set_xticklabels(axs[i].get_xticklabels(),rotation = 90)
-            axs[i].set_title(g[1:len(g)])
-            i += 1        
+            if len(predictions_avg[a]) > 1:
+                sns.stripplot(ax=axs[i], x=x_values, y=y_values,  color="0", alpha=.35)
+                sns.barplot(ax=axs[i],x=x_values, y=y_values, capsize=.1, errorbar="sd")
+                axs[i].set_ylim(0, 1.0)
+                axs[i].set_xticklabels(axs[i].get_xticklabels(),rotation = 90)
+                axs[i].set_title(g[1:len(g)])
+                axs[i].set_xlabel("BGC",fontsize=15)
+                axs[i].set_ylabel("probability of activity",fontsize=15)
+                i += 1        
+            else:
+                sns.stripplot(ax=axs, x=x_values, y=y_values,  color="0", alpha=.35)
+                sns.barplot(ax=axs, x=x_values, y=y_values, capsize=.1, errorbar="sd")
+                axs.set_ylim(0, 1.0)
+                axs.set_xticklabels(axs.get_xticklabels(),rotation = 90)
+                axs.set_title(g[1:len(g)])
+                axs.set_xlabel("BGC",fontsize=15)
+                axs.set_ylabel("probability of activity",fontsize=15)
         else:
             qualitative_colors = sns.color_palette("Set3", 7)
             bar_colors = []
@@ -193,12 +204,34 @@ for a in activities:
                 for v in predictions_idv[a][g][l]:
                     x_values.append(l)
                     y_values.append(v)
-            sns.stripplot(ax=axs[i], x=x_values, y=y_values,  color="0", alpha=.35)
-            sns.barplot(ax=axs[i],x=x_values, y=y_values, capsize=.1, errorbar="sd", palette=bar_colors)
-            axs[i].set_ylim(0, 1.0)
-            axs[i].set_xticklabels(axs[i].get_xticklabels(),rotation = 90)
-            axs[i].set_title(g[1:len(g)])
-            i += 1        
+            if len(predictions_avg[a]) > 1:
+                sns.stripplot(ax=axs[i], x=x_values, y=y_values,  color="0", alpha=.35)
+                sns.barplot(ax=axs[i],x=x_values, y=y_values, capsize=.1, errorbar="sd", palette=bar_colors)
+                axs[i].set_ylim(0, 1.0)
+                axs[i].set_xticklabels(axs[i].get_xticklabels(),rotation = 90)
+                axs[i].set_title(g[1:len(g)])
+                axs[i].set_xlabel("BGC",fontsize=15)
+                axs[i].set_ylabel("probability of activity",fontsize=15)
+                i += 1    
+            else:
+                sns.stripplot(ax=axs, x=x_values, y=y_values,  color="0", alpha=.35)
+                sns.barplot(ax=axs,x=x_values, y=y_values, capsize=.1, errorbar="sd", palette=bar_colors)
+                axs.set_ylim(0, 1.0)
+                axs.set_xticklabels(axs.get_xticklabels(),rotation = 90)
+                axs.set_title(g[1:len(g)])
+                axs.set_xlabel("BGC",fontsize=15)
+                axs.set_ylabel("probability of activity",fontsize=15)
+    if color == "type":
+        patches = []
+        for i in range(0, len(possible_bgc_types)):
+            patches.append(mpatches.Patch(color=qualitative_colors[i], label=possible_bgc_types[i]))
+        if len(predictions_avg[a]) > 1:
+            axs[-1].legend(handles=patches,fontsize=15)
+            leg = axs[-1].get_legend()
+        else:
+            axs.legend(handles=patches,fontsize=15,loc='center right')
+            leg = axs.get_legend()
+
     plt.tight_layout()
     plt.savefig(outdir + a + '_predictions.png')
     
