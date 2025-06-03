@@ -108,7 +108,7 @@ for i in range(0, split):
         if not exists(outdir + genome_name):
             outfile.write("mkdir " + outdir + genome_name + "\n")
         if prediction_version == 1:
-            outfile.write("cluster_function_prediction.py '" + antismash_input + "' '" + rgi_input + "' --seed 0 --output " + outdir + genome_name + "/"+ " --antismash_version " + str(antismash_version) +" --rgi_version" + str(rgi_version) + " --no_SSN\n")
+            outfile.write("cluster_function_prediction.py '" + antismash_input + "' '" + rgi_input + "' --seed 0 --output " + outdir + genome_name + "/"+ " --antismash_version " + str(antismash_version) +" --rgi_version " + str(rgi_version) + " --no_SSN\n")
         elif prediction_version == 2:
             if rgi_indir != None:
                 outfile.write("cluster_function_prediction.py '" + antismash_input + "' --rgi_results '" + rgi_input + "' --seed 0 --output " + outdir + genome_name + "/"+ " --antismash_version " + str(antismash_version) +" --rgi_version " + str(rgi_version) + "\n")
