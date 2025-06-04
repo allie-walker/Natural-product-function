@@ -386,3 +386,158 @@ def readInputFiles(as_features, as_version, rgi_infile, rgi_version, training_fe
 
     checkForHits(test_features, (pfam_start_index, pfam_end_index), (card_start_index, card_end_index))
     return test_features
+
+def readInputFilesLocs(as_features, as_version, rgi_infile, rgi_version, training_features, training_features_types, feature_list_by_type, data_path):
+    features = {}
+    if as_version == 5:
+        (gene_data, pfam_data, cds_motif_data, smcog_data, pks_nrps_data) = readAntismash5Loc(as_features)
+        features["PFAM5"] = pfam_data
+        features["CDS_motifs"] = cds_motif_data
+        features["SMCOG"] = smcog_data
+        features["pk_nrp_consensus"] = pks_nrps_data
+    return (gene_data, features)
+def readAntismash5Loc(as_features):
+    score_cutoff = 20
+    CDS_motifs = {}
+    smCOGs = {}
+    pfam_counts = {}
+    pk_monomers_consensus = {}
+    pfam_data = []
+    cds_motif_data = []
+    smcog_data = []
+    pks_nrps_data = []
+    gene_data = []
+    pfam_num = 1
+    cds_num = 1
+    smcog_num = 1
+    nrps_num = 1
+    gene_num = 1
+    for feature in as_features:
+        consensus = ""
+        if feature.type == "aSDomain":
+            if "specificity" not in feature.qualifiers:
+                continue
+            for f in feature.qualifiers["specificity"]:
+                if "consensus" in f:
+                    consensus = f.split(":")[1].replace('"','')
+        if consensus != "" and "no_call" not in consensus and "N/A" not in consensus and "n/a" not in consensus:
+            if consensus not in pk_monomers_consensus:
+                pk_monomers_consensus[consensus] = 0
+            pk_monomers_consensus[consensus] += 1
+            nrps_pks_dict = {}
+            nrps_pks_dict['nrps+_pks_num'] = nrps_num 
+            nrps_pks_dict['start'] = feature.location.start
+            nrps_pks_dict['end'] = feature.location.end
+            nrps_pks_dict['strand'] = feature.location.strand
+            nrps_pks_dict["description"] = consensus
+            pks_nrps_data.append(nrps_pks_dict)
+            nrps_num +=1
+        if feature.type == "CDS_motif":
+            if 'label' not in feature.qualifiers: #this happens for ripp sequences
+                continue
+            motif_name = feature.qualifiers['label'][0]
+            if motif_name not in CDS_motifs:
+                CDS_motifs[motif_name] =0
+            CDS_motifs[motif_name] += 1
+            cds_motif_dict = {}
+            cds_motif_dict['cds_num'] = cds_num 
+            cds_motif_dict['start'] = feature.location.start
+            cds_motif_dict['end'] = feature.location.end
+            cds_motif_dict['strand'] = feature.location.strand
+            cds_motif_dict["description"] = motif_name
+            cds_motif_data.append(cds_motif_dict)
+            cds_num += 1
+        elif feature.type == "CDS":
+            gene_dict = {}
+            gene_dict["gene_num"] = gene_num
+            gene_dict["start"] = feature.location.start
+            gene_dict['end'] = feature.location.end
+            gene_dict['strand'] = feature.location.strand
+            gene_dict['product'] = feature.qualifiers["product"]
+            if 'locus_tag' in feature.qualifiers:
+                gene_dict['locus_tag'] = feature.qualifiers["locus_tag"]
+            else:
+                gene_dict['locus_tag'] = ""
+            gene_data.append(gene_dict)
+            gene_num += 1
+            if "gene_functions" in feature.qualifiers:
+                for note in feature.qualifiers["gene_functions"]:
+                    if "SMCOG" in note:
+                        if ":" not in note or "(" not in note:
+                            continue
+                        smCOG_type = note[note.index(":")+2:note.rfind("(")-1]
+                        smCOG_description = note[note.index(":")+1:note.rfind("(")-1]
+                        if smCOG_type not in smCOGs:
+                            smCOGs[smCOG_type] = 0
+                        smCOGs[smCOG_type] += 1
+                        smcog_dict = {}
+                        smcog_dict['smcog_num'] = smcog_num 
+                        smcog_dict['start'] = feature.location.start
+                        smcog_dict['end'] = feature.location.end
+                        smcog_dict['strand'] = feature.location.strand
+                        smcog_dict["description"] = smCOG_description
+                        smcog_data.append(smcog_dict)
+                        smcog_num = +1
+        elif feature.type == "PFAM_domain":
+            score = float(feature.qualifiers["score"][0])
+            if score <score_cutoff:
+                continue
+            domain_description = feature.qualifiers["description"][0]
+            pfam_id = feature.qualifiers["db_xref"][0]
+            pfam_id = pfam_id[pfam_id.find(" ")+1:len(pfam_id)]
+            if domain_description not in pfam_counts:
+                pfam_counts[domain_description] = 0
+            pfam_counts[domain_description] += 1 
+            pfam_dict = {}
+            pfam_dict['pfam_num'] = pfam_num 
+            pfam_dict['start'] = feature.location.start
+            pfam_dict['end'] = feature.location.end
+            pfam_dict['strand'] = feature.location.strand
+            pfam_dict["description"] = domain_description
+            pfam_dict['pfam_id'] = pfam_id
+            pfam_data.append(pfam_dict)
+            pfam_num += 1                          
+    return (gene_data, pfam_data, cds_motif_data, smcog_data, pks_nrps_data)
+
+def readRGIFile5Loc(rgi_infile, antibac_coeff):
+    rgi_data = []
+    rgi_num = 1
+    bit_score_threshold = 40
+    e_value_threshold = 0.1
+    resistance_genes = {}
+    use_bit_score = True
+    for line in rgi_infile:
+        if "ORF_ID" in line:
+            if line.split("\t")[7] == "Best_Hit_evalue":
+                #warnings.warn('training set was generated using bit scores but RGI output has e-values, will use e-value threshold but this could increase error in predictions')
+                use_bit_score = False
+            continue
+        entries = line.split("\t")
+        bit_score = float(entries[7])
+        if use_bit_score:
+            if bit_score < bit_score_threshold:
+                continue
+        elif bit_score > e_value_threshold:
+            continue
+        best_hit = entries[8]
+        if best_hit not in antibac_coeff:
+          continue
+        gene_start = float(entries[2])
+        gene_end = float(entries[3])
+        gene_orientation = entries[4]
+        if gene_orientation == "-":
+          gene_orientation = -1
+        else:
+          gene_orientation = 1
+        rgi_dict = {}
+        rgi_dict['rgi_num'] = rgi_num 
+        rgi_dict['start'] = gene_start
+        rgi_dict['end'] = gene_end
+        rgi_dict['strand'] = gene_orientation
+        rgi_dict["description"] = best_hit
+        rgi_dict['antibac_coeff'] = antibac_coeff[best_hit]
+        rgi_data.append(rgi_dict)
+        rgi_num = +1
+        #print(best_hit)
+    rgi_infile.close()
+    return rgi_data

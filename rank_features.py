@@ -40,15 +40,10 @@ except:
     
 try:
     svm_bacterial, tree_bacterial, log_bacterial = joblib.load("trained_models/" + model_name + "_antibacterial.sav")
-    
     svm_antieuk, tree_antieuk, log_antieuk = joblib.load("trained_models/" + model_name + "_antieuk.sav")
-    
     svm_antifungal, tree_antifungal, log_antifungal = joblib.load("trained_models/" + model_name + "_antifungal.sav")
-    
     svm_antitumor, tree_antitumor, log_antitumor = joblib.load("trained_models/" + model_name + "_cytotoxic_antitumor.sav")
-    
     svm_antigramneg, tree_antigramneg, log_antigramneg = joblib.load("trained_models/" + model_name + "_antigramneg.sav")
-
     svm_antigrampos, tree_antigrampos, log_antigrampos = joblib.load("trained_models/" + model_name + "_antigrampos.sav")
 except:
    print("ERROR: could not find pretrained model, make sure all data files are in correct location and your model exists")
