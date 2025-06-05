@@ -1,0 +1,750 @@
+LOCUS       BGC0000719.1           11715 bp    DNA     linear   UNK 01-JAN-1980
+DEFINITION  Tobramycin biosynthetic gene cluster.
+ACCESSION   BGC0000719
+VERSION     BGC0000719.1
+KEYWORDS    .
+SOURCE      
+  ORGANISM  .
+            .
+COMMENT     ##antiSMASH-Data-START##
+            Version      :: 7.1.0
+            Run date     :: 2025-04-21 23:18:24
+            ##antiSMASH-Data-END##
+FEATURES             Location/Qualifiers
+     protocluster    1..11715
+                     /aStool="rule-based-clusters"
+                     /category="other"
+                     /contig_edge="True"
+                     /core_location="[1452:11161]"
+                     /cutoff="20000"
+                     /detection_rule="((DOIS or DHQ_synthase or ValA or salQ)
+                     and DegT_DnrJ_EryC1 and (LipV or ADSI-DH or cds(ADH_N and
+                     ADH_zinc_N)))"
+                     /neighbourhood="10000"
+                     /product="2dos"
+                     /protocluster_number="1"
+                     /tool="antismash"
+     proto_core      1453..11161
+                     /aStool="rule-based-clusters"
+                     /tool="antismash"
+                     /cutoff="20000"
+                     /detection_rule="((DOIS or DHQ_synthase or ValA or salQ)
+                     and DegT_DnrJ_EryC1 and (LipV or ADSI-DH or cds(ADH_N and
+                     ADH_zinc_N)))"
+                     /neighbourhood="10000"
+                     /product="2dos"
+                     /protocluster_number="1"
+     cand_cluster    1..11715
+                     /candidate_cluster_number="1"
+                     /contig_edge="True"
+                     /detection_rules="((DOIS or DHQ_synthase or ValA or salQ)
+                     and DegT_DnrJ_EryC1 and (LipV or ADSI-DH or cds(ADH_N and
+                     ADH_zinc_N)))"
+                     /kind="single"
+                     /product="2dos"
+                     /protoclusters="1"
+                     /tool="antismash"
+     region          1..11715
+                     /candidate_cluster_numbers="1"
+                     /contig_edge="True"
+                     /product="2dos"
+                     /region_number="1"
+                     /rules="((DOIS or DHQ_synthase or ValA or salQ) and
+                     DegT_DnrJ_EryC1 and (LipV or ADSI-DH or cds(ADH_N and
+                     ADH_zinc_N)))"
+                     /tool="antismash"
+     gene            1453..2472
+                     /gene="alloB"
+     CDS             1453..2472
+                     /NRPS_PKS="Domain: PKS_ER (111-254). E-value: 5.6e-11.
+                     Score: 33.9. Matches aSDomain:
+                     nrpspksdomains_alloB_PKS_ER.1"
+                     /codon_start=1
+                     /db_xref="GI:110556568"
+                     /function="tobramycin biosynthesis"
+                     /gene="alloB"
+                     /gene_functions="biosynthetic (rule-based-clusters) 2dos:
+                     ADH_N"
+                     /gene_functions="biosynthetic (rule-based-clusters) 2dos:
+                     ADH_zinc_N"
+                     /gene_functions="biosynthetic (rule-based-clusters) 2dos:
+                     ADSI-DH"
+                     /gene_functions="biosynthetic-additional (smcogs)
+                     SMCOG1040:alcohol dehydrogenase (Score: 313.3; E-value:
+                     2.8e-95)"
+                     /gene_kind="biosynthetic"
+                     /product="putative dehydrogenase"
+                     /protein_id="BAE98076.1"
+                     /sec_met_domain="ADSI-DH (E-value: 9.2e-162, bitscore:
+                     526.6, seeds: 6, tool: rule-based-clusters)"
+                     /sec_met_domain="ADH_N (E-value: 3e-28, bitscore: 87.1,
+                     seeds: 66, tool: rule-based-clusters)"
+                     /sec_met_domain="ADH_zinc_N (E-value: 4.4e-23, bitscore:
+                     70.9, seeds: 86, tool: rule-based-clusters)"
+                     /transl_table=11
+                     /translation="MKALTFVAPGEAVFGTRAVPVPAPGEALVRLGYNSICGSDLSLYR
+                     GVWHGFGYPVVPGHEWSGTVVEVNGPGDELVGRDVVGDLTCPCGACAACQRGTPVLCEN
+                     LQELGFTRDGACAEYMTIPTRNLHRLPAELSLRVACQVEPVAVALHALSTVDVSPGEKV
+                     AVLGAGGIGLLLSQVARHRGAVITTVGEPVPERRAVAAQLGAATVTTGRPGELADLVAK
+                     RPELTPDVVLEASGYPVALQEAIEVVRPGGRIGVVGYRVEEISPMATHHVAVKALTIRG
+                     SLGPGNRFPDAIDLLARREINVDPLLSHEFALADHARALELALRRTEGNIRSFFNLRA"
+     PFAM_domain     1522..1839
+                     /aSDomain="ADH_N"
+                     /aSTool="fullhmmer"
+                     /database="35.0"
+                     /db_xref="PF08240.15"
+                     /description="Alcohol dehydrogenase GroES-like domain"
+                     /detection="hmmscan"
+                     /domain_id="fullhmmer_alloB_0001"
+                     /evalue="7.20E-25"
+                     /label="alloB"
+                     /locus_tag="alloB"
+                     /protein_end="129"
+                     /protein_start="23"
+                     /score="87.1"
+                     /tool="antismash"
+                     /translation="PGEALVRLGYNSICGSDLSLYRGVWHGFGYPVVPGHEWSGTVVEV
+                     NGPGDELVGRDVVGDLTCPCGACAACQRGTPVLCENLQELGFTRDGACAEYMTIPTRNL
+                     HR"
+     aSDomain        1786..2214
+                     /aSDomain="PKS_ER"
+                     /aSTool="nrps_pks_domains"
+                     /database="nrpspksdomains.hmm"
+                     /detection="hmmscan"
+                     /domain_id="nrpspksdomains_alloB_PKS_ER.1"
+                     /evalue="5.60E-11"
+                     /label="alloB_PKS_ER.1"
+                     /locus_tag="alloB"
+                     /protein_end="254"
+                     /protein_start="111"
+                     /score="33.9"
+                     /tool="antismash"
+                     /translation="RDGACAEYMTIPTRNLHRLPAELSLRVACQVEPVAVALHALSTVD
+                     VSPGEKVAVLGAGGIGLLLSQVARHRGAVITTVGEPVPERRAVAAQLGAATVTTGRPGE
+                     LADLVAKRPELTPDVVLEASGYPVALQEAIEVVRPGGRI"
+     PFAM_domain     1960..2343
+                     /aSDomain="ADH_zinc_N"
+                     /aSTool="fullhmmer"
+                     /database="35.0"
+                     /db_xref="PF00107.29"
+                     /description="Zinc-binding dehydrogenase"
+                     /detection="hmmscan"
+                     /domain_id="fullhmmer_alloB_0002"
+                     /evalue="1.10E-19"
+                     /label="alloB"
+                     /locus_tag="alloB"
+                     /protein_end="297"
+                     /protein_start="169"
+                     /score="70.9"
+                     /tool="antismash"
+                     /translation="GIGLLLSQVARHRGAVITTVGEPVPERRAVAAQLGAATVTTGRPG
+                     ELADLVAKRPELTPDVVLEASGYPVALQEAIEVVRPGGRIGVVGYRVEEISPMATHHVA
+                     VKALTIRGSLGPGNRFPDAIDLLA"
+     gene            2582..3880
+                     /gene="alloC"
+     CDS             2582..3880
+                     /codon_start=1
+                     /db_xref="GI:110556569"
+                     /function="tobramycin biosynthesis"
+                     /gene="alloC"
+                     /product="putative transporter"
+                     /protein_id="BAE98077.1"
+                     /transl_table=11
+                     /translation="MSQHAASADETSAGAPAADPSPESRARARATGRRLRLFFGLHELV
+                     PLFPLYPLLFADHGLSTAGISGLLALWSVTAFVLEVPSGVLGDMFSRRWLLAVGTAVRA
+                     CGFGLWVAFPSPWAFAAGFLCWGLCDALTSGTLESLIYDELRAAGASHRYAAVMGSGRA
+                     VSLLSTLTAMTLAGPVFALGGYPLVGMISLGSGLACAVAALRFSEPPRDQVGREDGGLR
+                     WYVATFRAGVSEVRRDRVVLRAVLIAASLHSMTAIDEYFPMLARANGASTTMVPVLVAV
+                     TVVCAAAGSGLVGRTAHAPPAVLGLALLASAGLMVAGALSGLQAGMLAVGVSFGLVQWA
+                     LVLADTRLQDAITGPARATVTSVVGFGAEVASVGFYLGAGALSTVTSTSELLAWFAVPL
+                     VLIAVAAPRWLRREPQPPGEVPRAPGAEPPRPA"
+     PFAM_domain     2720..3598
+                     /aSDomain="MFS_1"
+                     /aSTool="fullhmmer"
+                     /database="35.0"
+                     /db_xref="PF07690.19"
+                     /db_xref="GO:0022857"
+                     /db_xref="GO:0055085"
+                     /description="Major Facilitator Superfamily"
+                     /detection="hmmscan"
+                     /domain_id="fullhmmer_alloC_0003"
+                     /evalue="1.40E-13"
+                     /gene_ontologies="GO:0022857: transmembrane transporter
+                     activity"
+                     /gene_ontologies="GO:0055085: transmembrane transport"
+                     /label="alloC"
+                     /locus_tag="alloC"
+                     /protein_end="339"
+                     /protein_start="46"
+                     /score="50.6"
+                     /tool="antismash"
+                     /translation="LFPLYPLLFADHGLSTAGISGLLALWSVTAFVLEVPSGVLGDMFS
+                     RRWLLAVGTAVRACGFGLWVAFPSPWAFAAGFLCWGLCDALTSGTLESLIYDELRAAGA
+                     SHRYAAVMGSGRAVSLLSTLTAMTLAGPVFALGGYPLVGMISLGSGLACAVAALRFSEP
+                     PRDQVGREDGGLRWYVATFRAGVSEVRRDRVVLRAVLIAASLHSMTAIDEYFPMLARAN
+                     GASTTMVPVLVAVTVVCAAAGSGLVGRTAHAPPAVLGLALLASAGLMVAGALSGLQAGM
+                     LAVGVSFGLVQW"
+     gene            4057..5244
+                     /gene="alloD"
+     CDS             4057..5244
+                     /NRPS_PKS="Domain: Aminotran_3 (42-343). E-value: 3.7e-41.
+                     Score: 133.1. Matches aSDomain:
+                     nrpspksdomains_alloD_Aminotran_3.1"
+                     /codon_start=1
+                     /db_xref="GI:110556570"
+                     /function="tobramycin biosynthesis"
+                     /gene="alloD"
+                     /gene_functions="biosynthetic-additional
+                     (rule-based-clusters) Aminotran_3"
+                     /gene_functions="biosynthetic-additional (smcogs)
+                     SMCOG1013:aminotransferase class-III (Score: 269.6;
+                     E-value: 7.4e-82)"
+                     /gene_kind="biosynthetic-additional"
+                     /product="putative aminotransferase"
+                     /protein_id="BAE98078.1"
+                     /sec_met_domain="Aminotran_3 (E-value: 2.4e-43, bitscore:
+                     137.4, seeds: 13, tool: rule-based-clusters)"
+                     /transl_table=11
+                     /translation="MTQTNEISATTGDWSRSAEHLRRSHEVTTNPRPDQDGQFPCVLSR
+                     GAGARVYDLDDNAYFDLTCSFGTVLIGHAEPAVTDAIRASLDDGNLFYTGPSPRRLALA
+                     ERLLDWFPWADQALFYRTGSCAVSAVARLTQHVTGRTTVLTSGYHGWHDWHLEAVPEAK
+                     LFPSYATEFHEDLDVYRAYLERHADEIAAVVVTPEPTRKPVGHYRVLRELAAEHGCLFV
+                     VDEVKTGMRAGKGGLSALAGLEPDAVTVSKGLANGHSISAVVGSRRITDGLDEAHVWST
+                     YQNEQVGFAAALATVDFLESQDVAAVVGRTGRVVEQAFRSAFAERGLPVEVRGWGPMFD
+                     LDFSAAEEGLADRLQLAFLRHGVFCDIGDDFNVMYRTADHLDELTGRVTAAIRSV"
+     PFAM_domain     4162..5163
+                     /aSDomain="Aminotran_3"
+                     /aSTool="fullhmmer"
+                     /database="35.0"
+                     /db_xref="PF00202.24"
+                     /db_xref="GO:0008483"
+                     /db_xref="GO:0030170"
+                     /description="Aminotransferase class-III"
+                     /detection="hmmscan"
+                     /domain_id="fullhmmer_alloD_0004"
+                     /evalue="5.80E-40"
+                     /gene_ontologies="GO:0008483: transaminase activity"
+                     /gene_ontologies="GO:0030170: pyridoxal phosphate binding"
+                     /label="alloD"
+                     /locus_tag="alloD"
+                     /protein_end="369"
+                     /protein_start="35"
+                     /score="137.4"
+                     /tool="antismash"
+                     /translation="DGQFPCVLSRGAGARVYDLDDNAYFDLTCSFGTVLIGHAEPAVTD
+                     AIRASLDDGNLFYTGPSPRRLALAERLLDWFPWADQALFYRTGSCAVSAVARLTQHVTG
+                     RTTVLTSGYHGWHDWHLEAVPEAKLFPSYATEFHEDLDVYRAYLERHADEIAAVVVTPE
+                     PTRKPVGHYRVLRELAAEHGCLFVVDEVKTGMRAGKGGLSALAGLEPDAVTVSKGLANG
+                     HSISAVVGSRRITDGLDEAHVWSTYQNEQVGFAAALATVDFLESQDVAAVVGRTGRVVE
+                     QAFRSAFAERGLPVEVRGWGPMFDLDFSAAEEGLADRLQLAFLRHGVFCDIGD"
+     aSDomain        4183..5085
+                     /aSDomain="Aminotran_3"
+                     /aSTool="nrps_pks_domains"
+                     /database="nrpspksdomains.hmm"
+                     /detection="hmmscan"
+                     /domain_id="nrpspksdomains_alloD_Aminotran_3.1"
+                     /evalue="3.70E-41"
+                     /label="alloD_Aminotran_3.1"
+                     /locus_tag="alloD"
+                     /protein_end="343"
+                     /protein_start="42"
+                     /score="133.1"
+                     /tool="antismash"
+                     /translation="LSRGAGARVYDLDDNAYFDLTCSFGTVLIGHAEPAVTDAIRASLD
+                     DGNLFYTGPSPRRLALAERLLDWFPWADQALFYRTGSCAVSAVARLTQHVTGRTTVLTS
+                     GYHGWHDWHLEAVPEAKLFPSYATEFHEDLDVYRAYLERHADEIAAVVVTPEPTRKPVG
+                     HYRVLRELAAEHGCLFVVDEVKTGMRAGKGGLSALAGLEPDAVTVSKGLANGHSISAVV
+                     GSRRITDGLDEAHVWSTYQNEQVGFAAALATVDFLESQDVAAVVGRTGRVVEQAFRSAF
+                     AERGLPVEVRGWGPMFDLDF"
+     gene            5297..6823
+                     /gene="alloE"
+     CDS             5297..6823
+                     /codon_start=1
+                     /db_xref="GI:110556571"
+                     /function="tobramycin biosynthesis"
+                     /gene="alloE"
+                     /product="putative dehydrogenase"
+                     /protein_id="BAE98079.1"
+                     /transl_table=11
+                     /translation="MLLISPDEAARRTYDACVIGSGASGSVAAAVLAERGLSVLVVEQG
+                     GPIPPGADGEDHEDPDGWAFARRDGRWTRDGYPWTAMALGGGTLFYAGMSYRYQQTDLA
+                     PPSSFLGAADYDHWQVGLADLEPHYEWIEYQLAIAGPSRKQVGDYVFPVYHRPSLPLTP
+                     PGAALAEGARSLHLTPLPTPVAISGVRDRFGPGCAQTTPCTSFSCPTKAKADVVSRVLA
+                     PAEGDVSVVVHTRVVRLVASSPHRVDAVEVLDRENGTRLTLRARRFLLAANAIQSAALL
+                     LRSTTRTEPDGIGNRHGLVGRHLAMKNSVYVRGTIPRRLPGYTPLRHRYSSVCVLDFLT
+                     GEAFPDGIGGLIHEANPWEPAAEREAARGTLLQVECLVGDRPQAENRVRLSRTRDRDGL
+                     PRIVMDYRPHPADLRRLAVLSERAHDILTKAGAVDVREVDTAYELGSAHLHGTLRAGRD
+                     PRTSVTDPFGRLHDHDNVWSVDGATFPFAGNPNPTLTIQANAHRIALAID"
+     PFAM_domain     5336..6154
+                     /aSDomain="GMC_oxred_N"
+                     /aSTool="fullhmmer"
+                     /database="35.0"
+                     /db_xref="PF00732.22"
+                     /db_xref="GO:0016614"
+                     /db_xref="GO:0050660"
+                     /description="GMC oxidoreductase"
+                     /detection="hmmscan"
+                     /domain_id="fullhmmer_alloE_0005"
+                     /evalue="6.10E-08"
+                     /gene_ontologies="GO:0016614: oxidoreductase activity,
+                     acting on CH-OH group of donors"
+                     /gene_ontologies="GO:0050660: flavin adenine dinucleotide
+                     binding"
+                     /label="alloE"
+                     /locus_tag="alloE"
+                     /protein_end="286"
+                     /protein_start="13"
+                     /score="32.5"
+                     /tool="antismash"
+                     /translation="YDACVIGSGASGSVAAAVLAERGLSVLVVEQGGPIPPGADGEDHE
+                     DPDGWAFARRDGRWTRDGYPWTAMALGGGTLFYAGMSYRYQQTDLAPPSSFLGAADYDH
+                     WQVGLADLEPHYEWIEYQLAIAGPSRKQVGDYVFPVYHRPSLPLTPPGAALAEGARSLH
+                     LTPLPTPVAISGVRDRFGPGCAQTTPCTSFSCPTKAKADVVSRVLAPAEGDVSVVVHTR
+                     VVRLVASSPHRVDAVEVLDRENGTRLTLRARRFLLAANAIQSAALLLRSTT"
+     PFAM_domain     6440..6805
+                     /aSDomain="GMC_oxred_C"
+                     /aSTool="fullhmmer"
+                     /database="35.0"
+                     /db_xref="PF05199.16"
+                     /db_xref="GO:0016614"
+                     /description="GMC oxidoreductase"
+                     /detection="hmmscan"
+                     /domain_id="fullhmmer_alloE_0006"
+                     /evalue="1.30E-22"
+                     /gene_ontologies="GO:0016614: oxidoreductase activity,
+                     acting on CH-OH group of donors"
+                     /label="alloE"
+                     /locus_tag="alloE"
+                     /protein_end="503"
+                     /protein_start="381"
+                     /score="81.0"
+                     /tool="antismash"
+                     /translation="PQAENRVRLSRTRDRDGLPRIVMDYRPHPADLRRLAVLSERAHDI
+                     LTKAGAVDVREVDTAYELGSAHLHGTLRAGRDPRTSVTDPFGRLHDHDNVWSVDGATFP
+                     FAGNPNPTLTIQANAHRI"
+     gene            6874..8586
+                     /gene="alloF"
+     CDS             6874..8586
+                     /codon_start=1
+                     /db_xref="GI:110556572"
+                     /function="tobramycin biosynthesis"
+                     /gene="alloF"
+                     /gene_functions="biosynthetic-additional
+                     (rule-based-clusters) Carbam_trans_N"
+                     /gene_kind="biosynthetic-additional"
+                     /product="putative carbamoyl transferase"
+                     /protein_id="BAE98080.1"
+                     /sec_met_domain="Carbam_trans_N (E-value: 1.6e-29,
+                     bitscore: 92.4, seeds: 4, tool: rule-based-clusters)"
+                     /transl_table=11
+                     /translation="MRVLGLNGWPRDFHDASAALLVDGRITAFAEEERFTRKKHGYDTA
+                     PAQAAAFCLAQAGLTVDDLDAVAFGWDLPRMYRERLGGWPHSDSEALDILLPRHLFPRR
+                     TDPPLHFVQHHVAHAASAYHFSGVDHGAVLIVDGEGEEECVTLARAEGGKITVLDTVPG
+                     AWSLGFFYESVSEYTGLGGENPGKLMGLAAHGTAADETMSTFAFEPDGYRLGLLDPDAR
+                     DPEDWDEYYLTQRAWFAHLERTYRLPPNEFVHRYDPAKGRVVRDTRRDPYEYRDLAATA
+                     QAALERAVFGLADSVLSRTGERSLFVAGGVGLNATLNGKLLTRSTVDHVFVPPVASDIG
+                     VSLGAAAVVAVELGDRIAPMGDTAAWGPEFSPDHVRAALDRTGLSYREPANLEREVATL
+                     VADGKVVGWAQGRAEVGPRALGQRSLLGSAHSPTMRDHINLRVKDREWWRPFAPSMLRS
+                     VSDQVLEVDADFPYMIMTTKVRAAYAERLPSVVHEDWSTRPQTVTEAGNPRYHRMLTEL
+                     GDLVGDPVCLNTSFNDRGEPIVSSPADALLTFARLPIDALAVGPYLVTRDLRH"
+     PFAM_domain     6910..7080
+                     /aSDomain="Carbam_trans_N"
+                     /aSTool="fullhmmer"
+                     /database="35.0"
+                     /db_xref="PF02543.18"
+                     /db_xref="GO:0003824"
+                     /db_xref="GO:0009058"
+                     /description="Carbamoyltransferase N-terminus"
+                     /detection="hmmscan"
+                     /domain_id="fullhmmer_alloF_0007"
+                     /evalue="3.50E-06"
+                     /gene_ontologies="GO:0003824: catalytic activity"
+                     /gene_ontologies="GO:0009058: biosynthetic process"
+                     /label="alloF"
+                     /locus_tag="alloF"
+                     /protein_end="69"
+                     /protein_start="12"
+                     /score="26.8"
+                     /tool="antismash"
+                     /translation="FHDASAALLVDGRITAFAEEERFTRKKHGYDTAPAQAAAFCLAQA
+                     GLTVDDLDAVAF"
+     PFAM_domain     7186..7911
+                     /aSDomain="Carbam_trans_N"
+                     /aSTool="fullhmmer"
+                     /database="35.0"
+                     /db_xref="PF02543.18"
+                     /db_xref="GO:0003824"
+                     /db_xref="GO:0009058"
+                     /description="Carbamoyltransferase N-terminus"
+                     /detection="hmmscan"
+                     /domain_id="fullhmmer_alloF_0008"
+                     /evalue="3.90E-26"
+                     /gene_ontologies="GO:0003824: catalytic activity"
+                     /gene_ontologies="GO:0009058: biosynthetic process"
+                     /label="alloF"
+                     /locus_tag="alloF"
+                     /protein_end="346"
+                     /protein_start="104"
+                     /score="92.4"
+                     /tool="antismash"
+                     /translation="TDPPLHFVQHHVAHAASAYHFSGVDHGAVLIVDGEGEEECVTLAR
+                     AEGGKITVLDTVPGAWSLGFFYESVSEYTGLGGENPGKLMGLAAHGTAADETMSTFAFE
+                     PDGYRLGLLDPDARDPEDWDEYYLTQRAWFAHLERTYRLPPNEFVHRYDPAKGRVVRDT
+                     RRDPYEYRDLAATAQAALERAVFGLADSVLSRTGERSLFVAGGVGLNATLNGKLLTRST
+                     VDHVFVPPVASDIGVSLGAA"
+     PFAM_domain     8062..8571
+                     /aSDomain="Carbam_trans_C"
+                     /aSTool="fullhmmer"
+                     /database="35.0"
+                     /db_xref="PF16861.8"
+                     /description="Carbamoyltransferase C-terminus"
+                     /detection="hmmscan"
+                     /domain_id="fullhmmer_alloF_0009"
+                     /evalue="2.50E-59"
+                     /label="alloF"
+                     /locus_tag="alloF"
+                     /protein_end="566"
+                     /protein_start="396"
+                     /score="199.8"
+                     /tool="antismash"
+                     /translation="ATLVADGKVVGWAQGRAEVGPRALGQRSLLGSAHSPTMRDHINLR
+                     VKDREWWRPFAPSMLRSVSDQVLEVDADFPYMIMTTKVRAAYAERLPSVVHEDWSTRPQ
+                     TVTEAGNPRYHRMLTELGDLVGDPVCLNTSFNDRGEPIVSSPADALLTFARLPIDALAV
+                     GPYLVTR"
+     gene            8697..9971
+                     /gene="alloG"
+     CDS             8697..9971
+                     /codon_start=1
+                     /db_xref="GI:110556573"
+                     /function="tobramycin biosynthesis"
+                     /gene="alloG"
+                     /gene_functions="biosynthetic (rule-based-clusters) 2dos:
+                     DegT_DnrJ_EryC1"
+                     /gene_functions="biosynthetic-additional (smcogs)
+                     SMCOG1056:DegT/DnrJ/EryC1/StrS aminotransferase (Score:
+                     385.1; E-value: 6.1e-117)"
+                     /gene_kind="biosynthetic"
+                     /note="smCOG tree PNG image: smcogs/alloG.png"
+                     /product="L-glutamine:2-deoxy-scyllo-inosose
+                     aminotransferase"
+                     /protein_id="BAE98081.1"
+                     /sec_met_domain="DegT_DnrJ_EryC1 (E-value: 1.6e-106,
+                     bitscore: 345.6, seeds: 38, tool: rule-based-clusters)"
+                     /transl_table=11
+                     /translation="MPVHLAINNGTPVRTRPWPVWPQPARGALGALERVLHSGRWAISG
+                     PYRGAESAERRFARTFAAYNGVAHCVPAASGTASLMLALEACGVGVGDEVIAPGLSWVA
+                     SASTIVGVNAVPVLVDIDPATLCLDPAAVEAAITPATRAIVVVHLYSAVADLDALRGVA
+                     DRHGLPLIEDCAQAHGAEHRGRKVGSVGDIGTFSMQHSKVLTSGEGGAAITDSAALARR
+                     MEHLRADGRCYPAAAPAPGHMELVETGELMGSNRCLSEFQAAVLVEQLRELDEQNALRR
+                     RNALLLNELLAEQGLRPQDSSPGTTSRTYYVYAAALPDDALTDVPIAAVTGALTAELGF
+                     PISPAYAPLHTNRLYAPASRRRFALGDEHEKRIDPGRFHLPVCERLTRRLITFHHAALL
+                     GDESDVRDIATAVAKVLRHRGELRA"
+     PFAM_domain     8787..9857
+                     /aSDomain="DegT_DnrJ_EryC1"
+                     /aSTool="fullhmmer"
+                     /database="35.0"
+                     /db_xref="PF01041.20"
+                     /description="DegT/DnrJ/EryC1/StrS aminotransferase family"
+                     /detection="hmmscan"
+                     /domain_id="fullhmmer_alloG_0010"
+                     /evalue="3.20E-83"
+                     /label="alloG"
+                     /locus_tag="alloG"
+                     /protein_end="387"
+                     /protein_start="30"
+                     /score="280.0"
+                     /tool="antismash"
+                     /translation="ALERVLHSGRWAISGPYRGAESAERRFARTFAAYNGVAHCVPAAS
+                     GTASLMLALEACGVGVGDEVIAPGLSWVASASTIVGVNAVPVLVDIDPATLCLDPAAVE
+                     AAITPATRAIVVVHLYSAVADLDALRGVADRHGLPLIEDCAQAHGAEHRGRKVGSVGDI
+                     GTFSMQHSKVLTSGEGGAAITDSAALARRMEHLRADGRCYPAAAPAPGHMELVETGELM
+                     GSNRCLSEFQAAVLVEQLRELDEQNALRRRNALLLNELLAEQGLRPQDSSPGTTSRTYY
+                     VYAAALPDDALTDVPIAAVTGALTAELGFPISPAYAPLHTNRLYAPASRRRFALGDEHE
+                     KRIDPGRFHLPVCERLT"
+     gene            10001..11161
+                     /gene="alloH"
+     CDS             10001..11161
+                     /codon_start=1
+                     /db_xref="GI:110556574"
+                     /function="tobramycin biosynthesis"
+                     /gene="alloH"
+                     /gene_functions="biosynthetic (rule-based-clusters) 2dos:
+                     DHQ_synthase"
+                     /gene_functions="biosynthetic (rule-based-clusters) 2dos:
+                     DOIS"
+                     /gene_functions="biosynthetic-additional (smcogs)
+                     SMCOG1183:3-dehydroquinate synthase (Score: 364.3; E-value:
+                     9.5e-111)"
+                     /gene_kind="biosynthetic"
+                     /note="smCOG tree PNG image: smcogs/alloH.png"
+                     /product="2-deoxy-scyllo-inosose synthase"
+                     /protein_id="BAE98082.1"
+                     /sec_met_domain="DOIS (E-value: 7.2e-177, bitscore: 576.7,
+                     seeds: 17, tool: rule-based-clusters)"
+                     /sec_met_domain="DHQ_synthase (E-value: 9.2e-72, bitscore:
+                     230.4, seeds: 76, tool: rule-based-clusters)"
+                     /transl_table=11
+                     /translation="MQTTTITMGDVHYPYRLGTGCVDAVVDRLGELGASHYLVLCDATV
+                     AELYGNDLVARLNRAAGPATVLVHPAGEEHKGLGTLNTLADAALHAGVDRRGLVVALGG
+                     GVTGNIAGLLAALLFRGIRLVHVPTTVVAMLDSVLSLKQAVNAQVGKNLVGTFYPPVEV
+                     LADTAVLNTLPVREIRSGLCEVVKNALAIRPSMISFLAAELRPDGRYADDVLRWMIDES
+                     IAAKAQVTEHDKYERREGLVLEYGHTVGHALEHASHGAVSHGAGVGLGMVAAARVSHRL
+                     GHVDAGFAELHRELVSKVGVATTVPTSVPHQEITYRLGFDNKRGYQSLAADQYAMVLLE
+                     GAGQPLRRDGLPLTPVPRALVDEVVRELAGVPSRVGASVATAGGAS"
+     PFAM_domain     10202..10969
+                     /aSDomain="DHQ_synthase"
+                     /aSTool="fullhmmer"
+                     /database="35.0"
+                     /db_xref="PF01761.23"
+                     /description="3-dehydroquinate synthase"
+                     /detection="hmmscan"
+                     /domain_id="fullhmmer_alloH_0011"
+                     /evalue="2.30E-68"
+                     /label="alloH"
+                     /locus_tag="alloH"
+                     /protein_end="323"
+                     /protein_start="67"
+                     /score="230.4"
+                     /tool="antismash"
+                     /translation="VHPAGEEHKGLGTLNTLADAALHAGVDRRGLVVALGGGVTGNIAG
+                     LLAALLFRGIRLVHVPTTVVAMLDSVLSLKQAVNAQVGKNLVGTFYPPVEVLADTAVLN
+                     TLPVREIRSGLCEVVKNALAIRPSMISFLAAELRPDGRYADDVLRWMIDESIAAKAQVT
+                     EHDKYERREGLVLEYGHTVGHALEHASHGAVSHGAGVGLGMVAAARVSHRLGHVDAGFA
+                     ELHRELVSKVGVATTVPTSVPHQEITYRLGFDNK"
+     gene            11158..>11715
+                     /gene="alloI"
+     CDS             11158..>11715
+                     /codon_start=1
+                     /db_xref="GI:110556575"
+                     /function="tobramycin biosynthesis"
+                     /gene="alloI"
+                     /gene_functions="biosynthetic-additional (smcogs)
+                     SMCOG1079:oxidoreductase (Score: 183; E-value: 1.6e-55)"
+                     /gene_kind="biosynthetic-additional"
+                     /note="smCOG tree PNG image: smcogs/alloI.png"
+                     /product="putative oxidoreductase"
+                     /protein_id="BAE98083.1"
+                     /transl_table=11
+                     /translation="MSAPLGVAVVGAGFMGGVHAEVLAAHPRAQLVAVCDLDQRAAQEL
+                     AGRFAVPTVTDDLDRVLADDRVGLVVVTTPNALHADQAARALRAGRHVLVEKPLALTPD
+                     EIHGLLRLATERGLVLAHGSNFVQSPKFRRVRELVADAEAFGTPHLARVVVRNAGPDSG
+                     WCLDPALAGGGVLLDLGCHAVEI"
+     PFAM_domain     11173..11523
+                     /aSDomain="GFO_IDH_MocA"
+                     /aSTool="fullhmmer"
+                     /database="35.0"
+                     /db_xref="PF01408.25"
+                     /db_xref="GO:0000166"
+                     /description="Oxidoreductase family, NAD-binding Rossmann
+                     fold"
+                     /detection="hmmscan"
+                     /domain_id="fullhmmer_alloI_0012"
+                     /evalue="6.50E-27"
+                     /gene_ontologies="GO:0000166: nucleotide binding"
+                     /label="alloI"
+                     /locus_tag="alloI"
+                     /protein_end="122"
+                     /protein_start="5"
+                     /score="94.8"
+                     /tool="antismash"
+                     /translation="GVAVVGAGFMGGVHAEVLAAHPRAQLVAVCDLDQRAAQELAGRFA
+                     VPTVTDDLDRVLADDRVGLVVVTTPNALHADQAARALRAGRHVLVEKPLALTPDEIHGL
+                     LRLATERGLVLAH"
+ORIGIN
+        1 tcgacgccca caccggcgag gtcgtctggc agcgccagct cggcaagccg tggcccaacg
+       61 gcggtgtcgg cggaatccag tggggcgcca gctacgacgg gaagcggctc tacgtggcga
+      121 cctggttcgc cgacccgggt tcgctgttcg cactggaccc ggccaccggc aggacgttgt
+      181 gggagaccaa gcacccggcc aacgggtgca gcaccggcgg cgcggccaag caccccgagg
+      241 tctgcgcgtt ggccaacacc ccggccgtgt cgaccagccc gggcctggtc tacgagggca
+      301 gcgccgacgg caagatgcgc gcctactcgg cggagaacgg caaggtgctg tgggagttcg
+      361 acaccatccg ggagttccag ggcgtgaacg gcctcaccgg ccacggccag ggcatctccg
+      421 gcggcgccgt gatcgctgac ggcgtgctct acgtcaactc cggctacttc ggacagtacg
+      481 gcaggttcta cccgaccgac aagggaagcg tgctcctggc gttcagcctg cgctgatctc
+      541 cactcgtgag aggctccccg tccccaggga cggggagcct tttcgcgttc ccgggcgagg
+      601 cgcggcgcat cggaccgacc acatcgcact atccgaaaag gacactcatg agggtgggcg
+      661 ggacggtgtc cggaccgcgg ccggagccgt tcggagctgg ttcgctcgtt gatcaccatg
+      721 ttcacggagg tgcgggagga ggcggatgcg ctgtcggcgc ggtcgtcccg gccgtctgcc
+      781 ggcggttccg gcccgtgcga gctccaccgc cgacggccgg cggggcgggt ggaaaatctg
+      841 tcagctcttc ccggccagcc cgaattgcct cgcgggcgaa tgtgtttcct gcggtgttcg
+      901 cccggtcgcg ggtcggagga aagaagtggg tcggctttct ttcatccccc gaaattcgtc
+      961 ggggcttggg aattccgctc ggccgtgccc ggcgacgccg tccggagcaa gctgtcccgc
+     1021 gtgtcgccgg ggaccgggag ggccgcttcg cgttggcggg ctggcccggg tggccgtggc
+     1081 gtggctactc ccgccgcaca cagggaaaac agggtctgcg agtgctctgc gctgccgttt
+     1141 tcacggaagc gaacggttgt cgcggcccaa cgggggtggg tgcgttcggg tcagcgggtt
+     1201 cgtgcggaga gctggtgaag gccgcgcccc cgttcggtga acccgctggt aaacacccgt
+     1261 cacccagttc tgtcgccgtg gtcccgatgg cgatcactcg gacggctctg gtgactcgaa
+     1321 ctcccgcgcc ggtagcgtct gcgctggtcg gaaatacggt ggaaaaagcg gatgtttggc
+     1381 gacgcgaccc tgcccctcgc tcccgtcgcc acgcgtcctt tggtgtgcac gccaggactt
+     1441 gggggtcgtc gcgtgaaggc actgacgttc gtagcgcccg gcgaggcggt cttcggcacc
+     1501 cgcgcggtgc ccgtccccgc ccccggtgag gcgctggtcc gcctcgggta caactcgatc
+     1561 tgcggcagcg acctgtcgct gtaccggggc gtctggcacg gattcggcta cccggtcgtg
+     1621 ccgggtcacg agtggagcgg gacggtcgtc gaggtcaacg ggcccggcga cgagttggtc
+     1681 ggccgggacg tggtcggcga cctcacgtgc ccgtgcggcg cgtgtgccgc ctgtcagcgc
+     1741 gggactccgg tgctctgcga gaacctccag gaactcgggt tcacccggga cggcgcgtgc
+     1801 gcggagtaca tgaccatccc gacgcgcaac ctgcaccggc tgccggcgga actgtcgttg
+     1861 cgggtcgcct gccaggtgga gccggtcgcc gttgccctgc acgctctgtc cactgtggac
+     1921 gtctcgcccg gggagaaggt ggccgtcctc ggcgccggcg ggatcggcct gctgttgtca
+     1981 caggtggcgc gacaccgggg cgcggtgatc accaccgtcg gcgagcccgt ccccgagcgc
+     2041 agggcggtcg ccgcccagct cggggcggcg acggtgacga ccggccgccc cggcgagctg
+     2101 gcggacctgg tggccaaacg cccggagctg acccccgacg tcgtgctgga ggcctccggc
+     2161 tacccggtcg ccctgcagga ggcgatcgag gtcgtgcgcc ccggcggccg gatcggcgtg
+     2221 gtgggctacc gggtcgagga gatcagcccg atggcgaccc accacgtcgc cgtgaaggcg
+     2281 ttgacgatcc ggggctcgct ggggcccggc aaccggttcc ccgacgccat cgacctgctc
+     2341 gctcggcgcg agatcaacgt cgatccgctg ctcagccacg agttcgcgct ggccgaccac
+     2401 gcccgcgcgc tggagctcgc gttgcgccgc accgagggca acatccgctc gttcttcaac
+     2461 ctccgcgcct gagggcgttc gccggtcggc aaccccccgc gtccgcggtg gagcgtcccc
+     2521 gcgccgtcga cggcgctcca cccgcacccg ccgcactggg cgtcatctca gggagcgacc
+     2581 cgtgtctcag catgccgcgt ccgcagacga aacatcggcc ggggcgcccg ccgccgaccc
+     2641 gagccccgaa tcccgggcgc gggccagggc gacgggccgg cgactgcgcc tgttcttcgg
+     2701 gctgcacgag ctggtcccgc tcttcccgct ctacccgctg ctgttcgccg accacgggct
+     2761 gtccaccgcg gggatctccg ggttgctggc cctctggtcg gtcacggcct tcgtcctgga
+     2821 ggtgccctcc ggggtcctgg gcgacatgtt ctcccgccgt tggctgctcg ccgtcggcac
+     2881 cgccgtgcgg gcctgcggtt tcggcctgtg ggtggctttc ccgtcgccgt gggccttcgc
+     2941 cgccgggttc ctgtgctggg gcctgtgcga cgcgctgacc tcgggaacgc tggagtcgct
+     3001 gatctacgac gagctgcgcg cggccggcgc gtcccaccgg tacgcggcgg tgatgggcag
+     3061 cggccgggcg gtgtccctgc tctccacgct caccgcgatg acgttggccg ggccggtctt
+     3121 cgcgctcggc ggctacccgc tcgtcgggat gatcagcctg ggcagcgggc tggcctgcgc
+     3181 cgtcgccgcg ctgcggttct ccgagccgcc ccgggaccag gtcgggcggg aggacggcgg
+     3241 gttgcgttgg tacgtcgcga ccttccgggc cggggtgtcg gaggtgcggc gggaccgggt
+     3301 ggtgctgcgc gcggtgctca tcgccgcgtc gctgcacagc atgacggcca tcgacgagta
+     3361 cttccccatg ctggcaaggg cgaacggcgc gtcgacgacg atggttccgg tgctggtggc
+     3421 cgtgacggtc gtctgcgcgg cggccggcag cggtctggtc ggcaggaccg cgcacgcccc
+     3481 gcccgccgtg ctgggcctcg ccctgctggc ctcggccggg ctgatggtgg cgggcgcgct
+     3541 gagcgggctc caggcgggca tgctcgccgt cggggtgagc ttcggcctgg tgcagtgggc
+     3601 gctggtgctg gccgacacgc ggttgcagga cgcgatcacc ggtccggcgc gcgcgaccgt
+     3661 cacctcggtc gtcgggttcg gcgccgaggt ggcctcggtc ggcttctacc tgggcgccgg
+     3721 cgctctctcc accgtcacct ccacgtccga gctgttggcc tggttcgcgg tgccgctcgt
+     3781 cctcatcgcg gtggccgccc cgcgctggtt gagacgggaa ccgcagccgc ccggcgaggt
+     3841 tccccgggcg ccgggagcgg aaccaccgcg gcctgcctga gcaccgagcg gcgcgagcgg
+     3901 gtccacgcct ggctcggcgc cgccggccga gtccgcgacc aaccccttct gtcctctgtg
+     3961 gagagtccgc tgatcgcgag gcgcgccgcc accggcgcga cctcctgccg gaagtccagt
+     4021 gcacgtgacc gttcctgacg cgtgaggagc acgtcgatga cccagaccaa cgagatcagc
+     4081 gcgacgacgg gggactggag ccggtccgcc gagcacctgc gccggtccca cgaggtcacc
+     4141 accaaccccc gtcccgacca ggacggccag ttcccctgcg tgctctccag gggcgcgggg
+     4201 gcgcgcgtgt acgacctgga cgacaacgcc tacttcgacc tcacctgctc gttcggcacc
+     4261 gtcctcatcg gacacgccga gccggccgtc accgacgcga tccgggcgag cctggacgac
+     4321 gggaacctgt tctacaccgg gccgagcccg cgccggctcg cgctggccga acgcctgctc
+     4381 gactggttcc cctgggccga ccaggcgttg ttctaccgga ccgggtcctg cgcggtctcc
+     4441 gcggtcgccc ggctcaccca gcacgtcacc ggccggacga ccgtgctcac ctcgggctac
+     4501 cacggctggc atgactggca cctggaggcg gtgccggagg ccaagctgtt cccgtcctac
+     4561 gccaccgagt tccacgagga cctcgacgtc taccgcgcct acctggagcg gcacgcggac
+     4621 gagatcgccg ccgtggtcgt cacgccggag cccacgcgga aaccggtggg ccactaccgc
+     4681 gttctgcgcg agctggccgc cgagcacggc tgtctgttcg tggtggacga ggtgaagacg
+     4741 ggcatgcgcg cggggaaggg cgggctcagc gccctcgccg ggctggaacc ggacgcggtg
+     4801 accgtctcca agggactggc caacgggcac agcatctccg ccgtggtggg cagccgccgg
+     4861 atcaccgacg gcctcgacga ggcccacgtg tggtccacgt accagaacga gcaggtgggc
+     4921 ttcgccgccg cactggccac tgtggacttc ctggagagcc aggacgtggc cgcggtcgtc
+     4981 ggacgcacgg gacgcgtggt ggagcaggcg ttccggagcg cgttcgccga acggggcctc
+     5041 ccggtggagg tgcgcggctg gggcccgatg ttcgacctcg acttctccgc tgccgaggag
+     5101 ggactggccg accgcctgca actcgccttc ctccgccacg gcgtcttctg cgacatcggc
+     5161 gacgacttca acgtcatgta ccgcaccgcc gaccacctcg acgagctgac cgggcgggtg
+     5221 accgcggcga tcaggtcggt ctgagccgcc accgggacgg cgcccggacc agaacccggg
+     5281 ccagaaggga gcgcgcatgc tgctgatctc accggacgag gccgcgcgtc ggacctacga
+     5341 cgcctgtgtc atcggcagcg gcgcctccgg ctccgtggcc gcggccgtgc tcgccgagcg
+     5401 cggtctgtcg gtgctcgtgg tggaacaggg cggcccgatc ccgccgggcg ccgacgggga
+     5461 ggaccacgag gaccccgacg ggtgggcgtt cgcgcgccgc gacgggcgct ggacccggga
+     5521 cggctacccg tggacggcca tggcgctcgg cgggggaacc ctgttctacg ccgggatgtc
+     5581 ctaccgctac cagcagaccg acctggcccc gccctcgtcg ttcctcggcg ccgccgacta
+     5641 cgaccactgg caggtcggcc tcgccgacct cgaaccgcac tacgagtgga tcgagtacca
+     5701 gctcgcgatc gccggcccct ccaggaaaca ggtgggcgac tacgtcttcc ccgtctacca
+     5761 ccggccgagc ctgccgctca cgccgcccgg cgcggcgctg gccgagggcg ctcgctcgct
+     5821 ccacctcacg cccctgccca ccccggtggc gatcagcggg gtgcgggacc ggttcggccc
+     5881 cggctgcgcc cagaccaccc cgtgcacctc gttctcctgt cccacgaagg ccaaggccga
+     5941 cgtcgtcagc cgggttctcg ctcccgccga gggagacgtc tcggtggtcg tccacaccag
+     6001 agtcgtccgg ctcgtggcgt cgagtccgca ccgggttgac gcggtcgagg tgctcgaccg
+     6061 cgagaacggc acgcgcctga ccctgcgcgc ccgtcgattc ctgttggccg ccaacgcgat
+     6121 ccagtccgcc gcgctgctgc tccggtcgac aacccgcacc gagccggacg ggatcggcaa
+     6181 ccggcacggg ctcgtcgggc ggcacctcgc gatgaagaac agcgtgtacg tgcgcgggac
+     6241 catcccgcgc agactgcccg ggtacacccc gttgcgacac cggtactcca gcgtctgcgt
+     6301 gttggacttc ctcaccggag aagcgtttcc cgacggaatc ggcggactga tccacgaggc
+     6361 caacccgtgg gagcccgccg ccgagcggga ggcggcccgc ggcaccctgt tgcaggtcga
+     6421 gtgcctggtg ggcgaccggc cccaggccga gaaccgggtt cggctgtccc ggacccggga
+     6481 ccgggacggc cttccccgca tcgtcatgga ctaccggccg caccccgccg acctccggcg
+     6541 cttggccgtg ttgtccgagc gcgcccacga catcctcacc aaggccggcg ccgtcgacgt
+     6601 gcgcgaggtg gacaccgcct acgagttggg cagcgcgcac ctgcacggaa ccctgcgcgc
+     6661 cggccgagac ccccgcacgt cggtgaccga cccgttcggc cgcctgcacg accacgacaa
+     6721 cgtctggtcg gtcgacggcg ccacgttccc gttcgccggc aaccccaatc ccaccctcac
+     6781 catccaggcc aacgcccacc ggatcgcgct cgcgatcgac tgaccgggcg agggccgcac
+     6841 ccaagatccc cctgtgccac cggaggtgga gacatgcgtg tcctcggact gaacggctgg
+     6901 ccccgcgact tccacgacgc gtcggcggcc ctgctcgtcg acggccggat cacggcgttc
+     6961 gccgaggagg agcggttcac caggaagaag cacgggtacg acacggctcc cgcgcaggcg
+     7021 gcggcgttct gcctggccca ggcgggcctg accgtggacg acctggacgc cgtggccttc
+     7081 ggctgggacc tgcccaggat gtaccgcgag cggctgggcg gctggccgca ctcggacagc
+     7141 gaggcgctgg acatcctgtt gccccggcac ctcttccccc ggcgcaccga cccgccgctg
+     7201 cacttcgtcc agcaccacgt ggcgcacgcg gccagcgcct accacttctc cggcgtcgac
+     7261 cacggcgcgg tgctgatcgt ggacggcgag ggcgaggagg agtgcgtcac cctggcccgg
+     7321 gccgagggcg ggaagatcac cgtgctggac accgtccccg gtgcgtggtc cctgggcttc
+     7381 ttctacgagt cggtcagcga gtacaccggc ctgggcggcg agaaccccgg caagctcatg
+     7441 ggactggccg cgcacgggac cgcggcggac gagacgatgt ccaccttcgc cttcgagccg
+     7501 gacggttacc ggctcggcct gctcgacccg gacgcgcggg acccggagga ctgggacgag
+     7561 tactacctga cgcagcgggc gtggttcgcg cacctggagc ggacgtatcg cttgcccccc
+     7621 aacgagttcg tccaccgcta cgaccccgcc aaggggcggg tcgtgcggga cacgcgacgg
+     7681 gacccctacg agtaccggga tctggcggcc accgcccagg cggcgttgga gcgcgcggtg
+     7741 ttcgggctgg ccgactcggt gctctcccgc acgggagagc gcagtctgtt cgtcgcaggc
+     7801 ggtgtcggtc tcaacgcgac cctgaacggc aagctgctga cgcggtccac tgtggaccac
+     7861 gtgttcgttc ccccggtggc cagcgacatc ggcgtgagcc tcggcgcggc ggcggtggtc
+     7921 gccgtcgagc tcggcgaccg catcgcgccc atgggcgaca ccgccgcctg gggaccggag
+     7981 ttctccccgg accacgtgcg ggccgcgctc gaccgcaccg gcctgtccta ccgggagccg
+     8041 gccaacctgg agcgggaggt cgccacgctc gtcgccgacg gcaaggtggt gggctgggcg
+     8101 cagggcaggg ccgaggtcgg cccgagggcg ttgggccagc gcagcctgct gggctccgcg
+     8161 cactccccga ccatgcgcga ccacatcaac ctgcgggtca aggaccggga gtggtggcgt
+     8221 ccgttcgccc ccagcatgct gcgctcggtc agcgaccagg tgctggaggt cgacgccgac
+     8281 ttcccctaca tgatcatgac gacgaaggtg cgcgcggcct acgccgagcg cctgccgtcg
+     8341 gtggtgcacg aggactggtc gacccgcccg cagaccgtga ccgaggccgg gaacccgcgc
+     8401 taccaccgga tgctcaccga gctcggcgac ctggtcggcg acccggtctg cctcaacacc
+     8461 tccttcaacg accggggcga acccatcgtc tcgtcgccgg ccgacgccct gctcaccttc
+     8521 gcccgcctgc cgatcgacgc cctggccgtc ggcccgtacc tggtgaccag ggacctccgc
+     8581 cactagccag ggcccgtccg tccacagtgg acatcccgac gccggtcacc gaagtgcccc
+     8641 tccggtcgac caccgcggcc gcccccgcac gcccgcagag gaagggatcg tcgaccatgc
+     8701 ccgtccacct cgcgatcaac aacggaaccc cggtgcgcac ccggccctgg ccggtctggc
+     8761 cccagccggc ccggggcgcg ctcggcgcgc tggaacgcgt gctccactcc ggacgctggg
+     8821 cgatcagcgg cccctaccgg ggcgccgagt cggccgagcg ccgcttcgcc aggaccttcg
+     8881 ccgcctacaa cggggtcgcg cactgcgtcc ccgcggccag cggcaccgcc agcctcatgc
+     8941 tcgcgctgga agcctgcggc gttggcgtcg gcgacgaggt catcgccccc ggactgtcct
+     9001 gggtggcctc ggcctccacc atcgtcggcg tcaacgccgt cccggtcctc gtcgacatcg
+     9061 accccgcgac cctgtgcctg gacccggccg cggtcgaggc ggcgatcacg cctgccacca
+     9121 gggcgatcgt cgtcgtgcac ctgtactccg cggtggccga cctggacgcg ctgcgcggcg
+     9181 tcgccgaccg gcacggcctg ccgctgatcg aggactgcgc ccaggcccac ggcgccgaac
+     9241 accgcggccg taaggtcggc tcggtcggcg acatcgggac gttcagcatg cagcacagca
+     9301 aggtgctcac cagcggggag ggcggagccg cgatcaccga ctccgccgcg ctggcccgca
+     9361 ggatggaaca cctgcgcgcc gacggccgct gctatcccgc cgccgcgccc gcgcccggac
+     9421 acatggaact ggtcgagacc ggggagctga tgggcagcaa ccggtgcctg tcggagttcc
+     9481 aggccgccgt gctcgtcgag cagctcaggg aactcgacga gcagaacgcc ctgcgccgtc
+     9541 gcaacgccct gctgctcaac gagcttctcg cagagcaggg gctgcggccg caggacagct
+     9601 cgccaggcac caccagccgc acgtactacg tctacgccgc cgccctgccc gacgacgcgc
+     9661 tgaccgacgt cccgatcgcc gccgtgaccg gggcgctcac cgccgagctg ggcttcccga
+     9721 tctcaccggc ctacgcgcca ctgcacacca accggctcta cgcgccggcc tcccgccgcc
+     9781 ggttcgcgct cggcgacgag cacgagaagc ggatcgaccc cggccggttc cacctgccgg
+     9841 tgtgcgagcg gctcacccgc cgcctgatca ccttccacca cgccgcgttg ctcggcgacg
+     9901 agtccgacgt gcgcgacatc gccaccgccg tcgccaaggt gctgcggcac cgcggggagc
+     9961 tgcgggcttg agcgcccgca ccggaccttg gggagtgcag atgcagacca ccaccatcac
+    10021 catgggagac gtccactacc cgtaccggct cggcaccggc tgcgtcgacg cggtcgtcga
+    10081 ccggctgggc gagctgggcg ccagccacta cctcgtgctg tgcgacgcga ccgtcgccga
+    10141 gctgtacggg aatgacctcg tcgcacgcct gaaccgcgcg gccgggccgg ccaccgtcct
+    10201 ggtgcacccg gcgggggagg agcacaaggg gctcggcacg ctgaacaccc tcgccgacgc
+    10261 cgctctccac gccggagtcg accggcgggg actggtcgtc gcgctgggcg gcggtgtcac
+    10321 cgggaacatc gccggtctgc tcgccgccct gctgttccgc gggattcgcc tggtgcacgt
+    10381 gccgaccacg gtcgtggcga tgctcgactc ggtgctgtcg ttgaaacagg ccgtcaacgc
+    10441 ccaggtgggc aagaacctcg tcggcacctt ctacccgccg gtcgaggtgc tcgccgacac
+    10501 cgcggtgctg aacaccctgc cggtcaggga gatccggtcg gggctgtgcg aggtcgtgaa
+    10561 gaacgcgttg gcgatccggc ccagcatgat ctccttcctg gccgccgagc tgcgacccga
+    10621 cggccgctac gccgacgacg tcctgcgctg gatgatcgac gagagcatcg cggcgaaggc
+    10681 ccaggtcacc gagcacgaca agtacgagcg gcgggagggc ctggtcctgg agtacggcca
+    10741 caccgtcggc cacgccctgg aacacgcctc gcacggcgcg gtgtcgcacg gcgccggcgt
+    10801 cgggctggga atggtcgccg ccgcccgggt ttcgcaccgc ctcgggcacg tcgacgccgg
+    10861 tttcgcggag ctgcaccggg agttggtgag caaggtcggc gtcgcgacga ccgtgccgac
+    10921 cagcgttccg caccaggaga tcacctaccg gctcggcttc gacaacaagc gggggtacca
+    10981 gtccctcgcc gccgaccagt acgcgatggt cctgctggag ggcgctggcc aaccgctgcg
+    11041 ccgcgacggc ctgccactga caccggtgcc cagagccctg gtcgacgagg tcgtgcggga
+    11101 actggccggt gtcccgtcgc gcgtcggcgc gtccgtcgcc accgcggggg gtgcgtcgtg
+    11161 agcgcgccgc tgggagtcgc cgtggtgggc gccgggttca tgggcggtgt ccacgccgaa
+    11221 gtgctcgccg cgcacccgcg tgcccagctc gtcgcggtct gcgacctcga ccaacgggcc
+    11281 gcccaggagt tggccgggcg gttcgccgtt ccgacggtca ccgacgacct cgaccgcgtc
+    11341 ctggccgacg accgggtcgg cctggtggtg gtgacgaccc cgaacgcgct gcacgccgac
+    11401 caggcggccc gggcgttgcg ggccggccga cacgtgttgg tcgagaaacc cctcgccctc
+    11461 accccggacg agatccacgg gctgctgcgg ctggccaccg agcgcggcct ggtgctggcg
+    11521 cacggcagca acttcgtgca gagccccaag ttccgccggg ttcgggaact ggtcgccgac
+    11581 gcggaggcgt tcggcacgcc ccacctggcc cgggtcgtcg tgcgcaacgc gggaccggac
+    11641 tccgggtggt gcctggaccc ggcgctcgcc ggtgggggag tgctgctcga tctcggttgc
+    11701 cacgccgtgg agatc
+//

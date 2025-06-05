@@ -1,0 +1,823 @@
+LOCUS       BGC0000539.1           11740 bp    DNA     linear   UNK 01-JAN-1980
+DEFINITION  Nukacin ISK-1 biosynthetic gene cluster.
+ACCESSION   BGC0000539
+VERSION     BGC0000539.1
+KEYWORDS    .
+SOURCE      
+  ORGANISM  .
+            .
+COMMENT     ##antiSMASH-Data-START##
+            Version  :: 8.0.0
+            Run date :: 2025-05-21 17:37:10
+            ##antiSMASH-Data-END##
+FEATURES             Location/Qualifiers
+     source          1..11740
+                     /db_xref="taxon:1292"
+                     /mol_type="genomic DNA"
+                     /organism="Staphylococcus warneri"
+     region          1..11740
+                     /candidate_cluster_numbers="1"
+                     /contig_edge="True"
+                     /product="lanthipeptide-class-ii"
+                     /region_number="1"
+                     /rules="cds(LANC_like and DUF4135)"
+                     /tool="antismash"
+     cand_cluster    1..11740
+                     /candidate_cluster_number="1"
+                     /contig_edge="True"
+                     /detection_rules="cds(LANC_like and DUF4135)"
+                     /kind="single"
+                     /product="lanthipeptide-class-ii"
+                     /protoclusters="1"
+                     /tool="antismash"
+     protocluster    1..11740
+                     /aStool="rule-based-clusters"
+                     /category="RiPP"
+                     /contig_edge="True"
+                     /core_location="[1900:4654](+)"
+                     /cutoff="20000"
+                     /detection_rule="cds(LANC_like and DUF4135)"
+                     /neighbourhood="10000"
+                     /product="lanthipeptide-class-ii"
+                     /protocluster_number="1"
+                     /tool="antismash"
+     proto_core      1901..4654
+                     /aStool="rule-based-clusters"
+                     /tool="antismash"
+                     /cutoff="20000"
+                     /detection_rule="cds(LANC_like and DUF4135)"
+                     /neighbourhood="10000"
+                     /product="lanthipeptide-class-ii"
+                     /protocluster_number="1"
+     terminator      complement(43..70)
+     CDS             complement(156..899)
+                     /codon_start=1
+                     /db_xref="GI:37572668"
+                     /function="unknown"
+                     /note="ORF1"
+                     /product="putative response regulator"
+                     /protein_id="BAC98758.1"
+                     /transl_table=11
+                     /translation="MKKINAIIIDDNASTREDLKVNLSYFSFVSCKGTFSEYIEAKNTL
+                     DKKDIDLIFLKINTNNNKFIDIANNINSIHKHIQIVFLSSDSKHAHKSFEAHPFDYLIQ
+                     PVEPIKLEKCLLHFKNRCRKKFDLNNLKNRKIAIKKGKSLYFLEIDKITTAECCGRKII
+                     ITLDDKETVSYNGSLKYLEKKLYSYGFILVSRSLLIPLKSIKNIIFDKHSKCYILKSIK
+                     NNTVKITPEKYKKVKQTLSEFNWII"
+     PFAM_domain     complement(180..473)
+                     /aSDomain="LytTR"
+                     /aSTool="fullhmmer"
+                     /database="35.0"
+                     /db_xref="PF04397.18"
+                     /db_xref="GO:0003677"
+                     /description="LytTr DNA-binding domain"
+                     /detection="hmmscan"
+                     /domain_id="fullhmmer_BAC98758.1_0002"
+                     /evalue="3.60E-09"
+                     /gene_ontologies="GO:0003677: DNA binding"
+                     /label="BAC98758.1"
+                     /locus_tag="BAC98758.1"
+                     /protein_end="240"
+                     /protein_start="142"
+                     /score="36.9"
+                     /tool="antismash"
+                     /translation="SLYFLEIDKITTAECCGRKIIITLDDKETVSYNGSLKYLEKKLYS
+                     YGFILVSRSLLIPLKSIKNIIFDKHSKCYILKSIKNNTVKITPEKYKKVKQTL"
+     PFAM_domain     complement(561..881)
+                     /aSDomain="Response_reg"
+                     /aSTool="fullhmmer"
+                     /database="35.0"
+                     /db_xref="PF00072.27"
+                     /db_xref="GO:0000160"
+                     /description="Response regulator receiver domain"
+                     /detection="hmmscan"
+                     /domain_id="fullhmmer_BAC98758.1_0001"
+                     /evalue="8.50E-08"
+                     /gene_ontologies="GO:0000160: phosphorelay signal
+                     transduction system"
+                     /label="BAC98758.1"
+                     /locus_tag="BAC98758.1"
+                     /protein_end="113"
+                     /protein_start="6"
+                     /score="32.5"
+                     /tool="antismash"
+                     /translation="IIIDDNASTREDLKVNLSYFSFVSCKGTFSEYIEAKNTLDKKDID
+                     LIFLKINTNNNKFIDIANNINSIHKHIQIVFLSSDSKHAHKSFEAHPFDYLIQPVEPIK
+                     LEK"
+     RBS             complement(910..913)
+     terminator      complement(1196..1229)
+     gene            complement(1326..1499)
+                     /gene="nukA"
+     CDS             complement(1326..1499)
+                     /codon_start=1
+                     /db_xref="GI:37572669"
+                     /gene="nukA"
+                     /gene_functions="biosynthetic-additional
+                     (rule-based-clusters) L_biotic_A"
+                     /gene_functions="biosynthetic-additional (lanthipeptides)
+                     predicted lanthipeptide"
+                     /gene_kind="biosynthetic-additional"
+                     /note="prepronukacin ISK-1"
+                     /product="NukA"
+                     /protein_id="BAC98759.1"
+                     /sec_met_domain="L_biotic_A (E-value: 4.1e-29, bitscore:
+                     89.9, seeds: 15, tool: rule-based-clusters)"
+                     /transl_table=11
+                     /translation="MENSKVMKDIEVANLLEEVQEDELNEVLGAKKKSGVIPTVSHDCH
+                     MNSFQFVFTCCS"
+     CDS_motif       complement(1410..1499)
+                     /prepeptide="leader"
+                     /note="peptide class: lanthipeptide"
+                     /note="predicted sequence: MENSKVMKDIEVANLLEEVQEDELNEVLGA"
+                     /locus_tag="nukA_lanthipeptide"
+                     /aSTool="lanthipeptides"
+                     /tool="antismash"
+     CDS_motif       complement(1326..1409)
+                     /prepeptide="core"
+                     /locus_tag="nukA_lanthipeptide"
+                     /peptide="lanthipeptide"
+                     /predicted_class="Class II"
+                     /score="3.80"
+                     /molecular_weight="2923.4"
+                     /monoisotopic_mass="2921.4"
+                     /core_sequence="KKKSGVIPTVSHDCHMNSFQFVFTCCS"
+                     /aSTool="lanthipeptides"
+                     /tool="antismash"
+                     /leader_sequence="MENSKVMKDIEVANLLEEVQEDELNEVLGA"
+                     /leader_location="[1409:1499](-)"
+                     /alternative_weights="2941.4"
+                     /alternative_weights="2959.4"
+                     /alternative_weights="2977.5"
+     PFAM_domain     complement(1332..1499)
+                     /aSDomain="L_biotic_typeA"
+                     /aSTool="fullhmmer"
+                     /database="35.0"
+                     /db_xref="PF04604.16"
+                     /db_xref="GO:0005576"
+                     /db_xref="GO:0042742"
+                     /description="Type-A lantibiotic"
+                     /detection="hmmscan"
+                     /domain_id="fullhmmer_nukA_0003"
+                     /evalue="7.40E-26"
+                     /gene_ontologies="GO:0005576: extracellular region"
+                     /gene_ontologies="GO:0042742: defense response to
+                     bacterium"
+                     /label="nukA"
+                     /locus_tag="nukA"
+                     /protein_end="56"
+                     /protein_start="0"
+                     /score="89.9"
+                     /tool="antismash"
+                     /translation="MENSKVMKDIEVANLLEEVQEDELNEVLGAKKKSGVIPTVSHDCH
+                     MNSFQFVFTCC"
+     RBS             complement(1509..1512)
+     -10_signal      complement(1538..1543)
+     -35_signal      complement(1561..1566)
+     -35_signal      1845..1850
+     -10_signal      1868..1873
+     RBS             1885..1888
+     gene            1901..4654
+                     /gene="nukM"
+     CDS             1901..4654
+                     /codon_start=1
+                     /db_xref="GI:290784919"
+                     /function="posttranslational modifications of prepronukacin
+                     ISK-1"
+                     /gene="nukM"
+                     /gene_functions="biosynthetic (rule-based-clusters)
+                     lanthipeptide-class-ii: LANC_like"
+                     /gene_functions="biosynthetic (rule-based-clusters)
+                     lanthipeptide-class-ii: DUF4135"
+                     /gene_functions="biosynthetic-additional (smcogs)
+                     SMCOG1070: lanthionine synthetase C family protein"
+                     /gene_kind="biosynthetic"
+                     /product="NukM"
+                     /protein_id="BAC98760.2"
+                     /sec_met_domain="DUF4135 (E-value: 1.3e-92, bitscore:
+                     300.4, seeds: 79, tool: rule-based-clusters)"
+                     /sec_met_domain="LANC_like (E-value: 1.7e-78, bitscore:
+                     253.3, seeds: 47, tool: rule-based-clusters)"
+                     /transl_table=11
+                     /translation="MNNIKVEQFRGFSNFILKKYSKQELNTLIDWNYLRSIILDICGKS
+                     LIVLINEKRLNKKLNGNTPEERYKYFDEELCEKGIIYEELNKSYPSIINDLEQTLNSYF
+                     SFLKEIENKFNQEKKKLLEANLIKTEKETICHISILGDLHGGKAVTKVTTDKSQLLYKP
+                     RSLENDSFFLEFLEFMYSFQKNEISTYYKYKFIDYKDHGWMEYIEKQPTSKNKINMYYK
+                     RLGYLLSIGYLLNISDLHFENILCSSNFPILIDLETIFHTSIYESKFRNLATKNIEDKA
+                     ANSVFATGMLPISKKDKKYGGDISGILGGVFNKHERTISNPNRDDIKFEKRLVRVKRND
+                     HIPFYMENDKKRRFSPEVFIEDIQEGFKYGYELFLNNRKEILHYIKKTSSEVEVRILPR
+                     STIEYSVLIQAAKSPLYANKRKSLFNKLEEYGENLLSDKLINSEIKQIETLSVPYFYTK
+                     VQSVSVKDIKNNTVHHLLKNPLNVFLEKTQRYSLKDLLFQCKLIKFSLESQNKLFIDGN
+                     GFINYEYEIVNSDNIDDAIDNLVSIIINNAVIDEKDGSVNWMNLGISKEEEIIFESLSD
+                     DLYKGLSGIGIALLKYYEINKNLKDMSRLKKILSSIYSSILSNINTNSSKEKDLSFFNG
+                     EIGKIAFLYKYQIEFKENCDSSKNYMKHILGIILSSEFEMNDIIAGLPGIISYLYNQEI
+                     FSKELVIMGDRLLKDLDNNPTMASYAHGKSGVMVSLLYLYDLTKDKKYLVKFHQEWKKE
+                     NTLKLEIGWKDVRQNEETYSVSWCNGVTGQLISRLVALEIHDKVKIFDAVNKKLMQKEI
+                     EELLYLLKEEGLEQNNFCLCHGVMGNLLVLNYYQKKFENTNIHLANKIDSHFYSVANFG
+                     LNKGWICGLGNNFYSFSIMTGISGILYAFLKYKTKDTELGILLPNI"
+     aSDomain        2000..4612
+                     /aSDomain="TIGR03897"
+                     /aSTool="tigrfam"
+                     /description="lanti_2_LanM: type 2 lantibiotic biosynthesis
+                     protein LanM"
+                     /detection="hmmscan"
+                     /domain_id="TIGRFam_nukM_0001"
+                     /evalue="1.50E-153"
+                     /identifier="TIGR03897"
+                     /label="nukM"
+                     /locus_tag="nukM"
+                     /protein_end="904"
+                     /protein_start="33"
+                     /score="510.7"
+                     /tool="antismash"
+                     /translation="LRSIILDICGKSLIVLINEKRLNKKLNGNTPEERYKYFDEELCEK
+                     GIIYEELNKSYPSIINDLEQTLNSYFSFLKEIENKFNQEKKKLLEANLIKTEKETICHI
+                     SILGDLHGGKAVTKVTTDKSQLLYKPRSLENDSFFLEFLEFMYSFQKNEISTYYKYKFI
+                     DYKDHGWMEYIEKQPTSKNKINMYYKRLGYLLSIGYLLNISDLHFENILCSSNFPILID
+                     LETIFHTSIYESKFRNLATKNIEDKAANSVFATGMLPISKKDKKYGGDISGILGGVFNK
+                     HERTISNPNRDDIKFEKRLVRVKRNDHIPFYMENDKKRRFSPEVFIEDIQEGFKYGYEL
+                     FLNNRKEILHYIKKTSSEVEVRILPRSTIEYSVLIQAAKSPLYANKRKSLFNKLEEYGE
+                     NLLSDKLINSEIKQIETLSVPYFYTKVQSVSVKDIKNNTVHHLLKNPLNVFLEKTQRYS
+                     LKDLLFQCKLIKFSLESQNKLFIDGNGFINYEYEIVNSDNIDDAIDNLVSIIINNAVID
+                     EKDGSVNWMNLGISKEEEIIFESLSDDLYKGLSGIGIALLKYYEINKNLKDMSRLKKIL
+                     SSIYSSILSNINTNSSKEKDLSFFNGEIGKIAFLYKYQIEFKENCDSSKNYMKHILGII
+                     LSSEFEMNDIIAGLPGIISYLYNQEIFSKELVIMGDRLLKDLDNNPTMASYAHGKSGVM
+                     VSLLYLYDLTKDKKYLVKFHQEWKKENTLKLEIGWKDVRQNEETYSVSWCNGVTGQLIS
+                     RLVALEIHDKVKIFDAVNKKLMQKEIEELLYLLKEEGLEQNNFCLCHGVMGNLLVLNYY
+                     QKKFENTNIHLANKIDSHFYSVANFGLNKGWICGLGNNFYSFSIMTGISGILYAFLKYK
+                     "
+     PFAM_domain     2165..3271
+                     /aSDomain="DUF4135"
+                     /aSTool="fullhmmer"
+                     /database="35.0"
+                     /db_xref="PF13575.9"
+                     /description="Domain of unknown function (DUF4135)"
+                     /detection="hmmscan"
+                     /domain_id="fullhmmer_nukM_0004"
+                     /evalue="1.70E-70"
+                     /label="nukM"
+                     /locus_tag="nukM"
+                     /protein_end="457"
+                     /protein_start="88"
+                     /score="238.3"
+                     /tool="antismash"
+                     /translation="YPSIINDLEQTLNSYFSFLKEIENKFNQEKKKLLEANLIKTEKET
+                     ICHISILGDLHGGKAVTKVTTDKSQLLYKPRSLENDSFFLEFLEFMYSFQKNEISTYYK
+                     YKFIDYKDHGWMEYIEKQPTSKNKINMYYKRLGYLLSIGYLLNISDLHFENILCSSNFP
+                     ILIDLETIFHTSIYESKFRNLATKNIEDKAANSVFATGMLPISKKDKKYGGDISGILGG
+                     VFNKHERTISNPNRDDIKFEKRLVRVKRNDHIPFYMENDKKRRFSPEVFIEDIQEGFKY
+                     GYELFLNNRKEILHYIKKTSSEVEVRILPRSTIEYSVLIQAAKSPLYANKRKSLFNKLE
+                     EYGENLLSDKLINSEIKQIETLSVPYFYT"
+     PFAM_domain     3617..4624
+                     /aSDomain="LANC_like"
+                     /aSTool="fullhmmer"
+                     /database="35.0"
+                     /db_xref="PF05147.16"
+                     /db_xref="GO:0031179"
+                     /description="Lanthionine synthetase C-like protein"
+                     /detection="hmmscan"
+                     /domain_id="fullhmmer_nukM_0005"
+                     /evalue="3.30E-74"
+                     /gene_ontologies="GO:0031179: peptide modification"
+                     /label="nukM"
+                     /locus_tag="nukM"
+                     /protein_end="908"
+                     /protein_start="572"
+                     /score="249.7"
+                     /tool="antismash"
+                     /translation="SLSDDLYKGLSGIGIALLKYYEINKNLKDMSRLKKILSSIYSSIL
+                     SNINTNSSKEKDLSFFNGEIGKIAFLYKYQIEFKENCDSSKNYMKHILGIILSSEFEMN
+                     DIIAGLPGIISYLYNQEIFSKELVIMGDRLLKDLDNNPTMASYAHGKSGVMVSLLYLYD
+                     LTKDKKYLVKFHQEWKKENTLKLEIGWKDVRQNEETYSVSWCNGVTGQLISRLVALEIH
+                     DKVKIFDAVNKKLMQKEIEELLYLLKEEGLEQNNFCLCHGVMGNLLVLNYYQKKFENTN
+                     IHLANKIDSHFYSVANFGLNKGWICGLGNNFYSFSIMTGISGILYAFLKYKTKDT"
+     RBS             4658..4661
+     gene            <4676..6760
+                     /gene="nukT"
+     CDS             <4676..6760
+                     /codon_start=1
+                     /db_xref="GI:290784920"
+                     /function="protease; ABC transporter; cleavage of the
+                     leader peptide and export of mature nukacin ISK-1"
+                     /gene="nukT"
+                     /gene_functions="biosynthetic-additional
+                     (rule-based-clusters) Peptidase_C39"
+                     /gene_functions="transport (smcogs) SMCOG1288: ABC
+                     transporter related protein"
+                     /gene_kind="transport"
+                     /note="The nukT gene is presumably translated from TTG as a
+                     start codon."
+                     /product="NukT"
+                     /protein_id="BAC98761.2"
+                     /sec_met_domain="Peptidase_C39 (E-value: 3.7e-38, bitscore:
+                     119.9, seeds: 36, tool: rule-based-clusters)"
+                     /transl_table=11
+                     /translation="MKIALQNSDQDCLLACYSMILSYFGKNVSINSLYKREMIPPDGLS
+                     ISYLKELNIKYELNMKVYRIKDKEKTFRVISKIKKPIIVHWDLNHFVIVKNVKKKHIEI
+                     VNPEIGKVKISKEMFLEHFSNVLLMFDPKSDFTKDKEKIEFFDDLKSVLMNKNIILFSF
+                     SVMLAQIVALIFSIVVRDIINQKYTYLISLSMLLMMIIIQIFSLVFKQKAQIKENKIYE
+                     KIISYNMFEGLFNKPLLYFRNSTIGTLMEKINIKTTIRDNILLKILPSFLNFFSVTVLF
+                     IYLLTVSLLLSLLLLGMSIIYLLISVFIYIKKNQLNIEYMQRTIQFSSLAQESLSQIDQ
+                     IKAQAQESSTINNWKEKSWNIVNSYNSILKIEGLSYTFNQIFNYSSIILLMIFGIHLTK
+                     YGNITIADLILFQSGMSIFSSSVSQLQDITFEISKIKVSGEKINDLFLKNNTKRKVIEQ
+                     KSNNALSLKNVTFGFDEKAPILKNITFQVKKGEKVAIVGDSGSGKSTMLNVLLGLYTCD
+                     GEVVYGYRDFRKITGVVLQNMTLSKQSIYNNLVDEGNDSNMQKLNQILYDVNIINLINS
+                     LPNKIYSSVFQNGKNLSGGQIQRLLIAKSLFNKKLIFWDEAFSSLDNYNRINIYRNVLK
+                     NSQYSDKTIVLISHHLDVLSYVDKVMFIENGNAFFGTHNELIKNNKNYRRFLDTANTNN
+                     "
+     PFAM_domain     4679..5077
+                     /aSDomain="Peptidase_C39"
+                     /aSTool="fullhmmer"
+                     /database="35.0"
+                     /db_xref="PF03412.18"
+                     /db_xref="GO:0005524"
+                     /db_xref="GO:0006508"
+                     /db_xref="GO:0008233"
+                     /db_xref="GO:0016020"
+                     /description="Peptidase C39 family"
+                     /detection="hmmscan"
+                     /domain_id="fullhmmer_nukT_0006"
+                     /evalue="6.60E-35"
+                     /gene_ontologies="GO:0005524: ATP binding"
+                     /gene_ontologies="GO:0006508: proteolysis"
+                     /gene_ontologies="GO:0008233: peptidase activity"
+                     /gene_ontologies="GO:0016020: membrane"
+                     /label="nukT"
+                     /locus_tag="nukT"
+                     /protein_end="134"
+                     /protein_start="1"
+                     /score="119.9"
+                     /tool="antismash"
+                     /translation="KIALQNSDQDCLLACYSMILSYFGKNVSINSLYKREMIPPDGLSI
+                     SYLKELNIKYELNMKVYRIKDKEKTFRVISKIKKPIIVHWDLNHFVIVKNVKKKHIEIV
+                     NPEIGKVKISKEMFLEHFSNVLLMFDPKS"
+     PFAM_domain     5147..5938
+                     /aSDomain="ABC_membrane"
+                     /aSTool="fullhmmer"
+                     /database="35.0"
+                     /db_xref="PF00664.26"
+                     /db_xref="GO:0005524"
+                     /db_xref="GO:0016020"
+                     /db_xref="GO:0055085"
+                     /db_xref="GO:0140359"
+                     /description="ABC transporter transmembrane region"
+                     /detection="hmmscan"
+                     /domain_id="fullhmmer_nukT_0007"
+                     /evalue="9.70E-27"
+                     /gene_ontologies="GO:0005524: ATP binding"
+                     /gene_ontologies="GO:0016020: membrane"
+                     /gene_ontologies="GO:0055085: transmembrane transport"
+                     /gene_ontologies="GO:0140359: ABC-type transporter
+                     activity"
+                     /label="nukT"
+                     /locus_tag="nukT"
+                     /protein_end="421"
+                     /protein_start="157"
+                     /score="94.4"
+                     /tool="antismash"
+                     /translation="IILFSFSVMLAQIVALIFSIVVRDIINQKYTYLISLSMLLMMIII
+                     QIFSLVFKQKAQIKENKIYEKIISYNMFEGLFNKPLLYFRNSTIGTLMEKINIKTTIRD
+                     NILLKILPSFLNFFSVTVLFIYLLTVSLLLSLLLLGMSIIYLLISVFIYIKKNQLNIEY
+                     MQRTIQFSSLAQESLSQIDQIKAQAQESSTINNWKEKSWNIVNSYNSILKIEGLSYTFN
+                     QIFNYSSIILLMIFGIHLTKYGNITIADLILFQSGMSIFSSS"
+     PFAM_domain     6113..6529
+                     /aSDomain="ABC_tran"
+                     /aSTool="fullhmmer"
+                     /database="35.0"
+                     /db_xref="PF00005.30"
+                     /db_xref="GO:0005524"
+                     /description="ABC transporter"
+                     /detection="hmmscan"
+                     /domain_id="fullhmmer_nukT_0008"
+                     /evalue="7.10E-22"
+                     /gene_ontologies="GO:0005524: ATP binding"
+                     /label="nukT"
+                     /locus_tag="nukT"
+                     /protein_end="618"
+                     /protein_start="479"
+                     /score="78.5"
+                     /tool="antismash"
+                     /translation="LKNITFQVKKGEKVAIVGDSGSGKSTMLNVLLGLYTCDGEVVYGY
+                     RDFRKITGVVLQNMTLSKQSIYNNLVDEGNDSNMQKLNQILYDVNIINLINSLPNKIYS
+                     SVFQNGKNLSGGQIQRLLIAKSLFNKKLIFWDEAF"
+     RBS             6761..6764
+     gene            6773..7648
+                     /gene="nukF"
+     CDS             6773..7648
+                     /codon_start=1
+                     /db_xref="GI:37572672"
+                     /function="immunity to the lantibiotic nukacin ISK-1"
+                     /gene="nukF"
+                     /gene_functions="transport (smcogs) SMCOG1000: ABC
+                     transporter ATP-binding protein"
+                     /gene_kind="transport"
+                     /note="ABC transporter (ATP-binding domain)"
+                     /product="NukF"
+                     /protein_id="BAC98762.1"
+                     /transl_table=11
+                     /translation="MINNIVQTQNLTKKFSDSYSVDNLSLNIGSKEIYGFLGPNGAGKS
+                     TTMKMLLGLMQPTKGNIKIFNQDISKNRDEILMHVGALIEEPSYYKNLTGLENLQVIQR
+                     LLNLPSKNVKEALKIVRLTEHKDKLVKNYSLGMKQRLGIALAIVKFPKLLILDEPTNGL
+                     DPSGIQEIRELIKSFPKTYGMTVLISSHLLSEIEHMANTVGIINRGKLLFEGKLTELEE
+                     QNKILINTNNNSESINLLQSKGYNLENNEKPLLLDTTQKDISTAVKLLVNNKFEIYQVQ
+                     SVQKSLEENL"
+     PFAM_domain     6833..7255
+                     /aSDomain="ABC_tran"
+                     /aSTool="fullhmmer"
+                     /database="35.0"
+                     /db_xref="PF00005.30"
+                     /db_xref="GO:0005524"
+                     /description="ABC transporter"
+                     /detection="hmmscan"
+                     /domain_id="fullhmmer_nukF_0009"
+                     /evalue="1.20E-29"
+                     /gene_ontologies="GO:0005524: ATP binding"
+                     /label="nukF"
+                     /locus_tag="nukF"
+                     /protein_end="161"
+                     /protein_start="20"
+                     /score="103.7"
+                     /tool="antismash"
+                     /translation="VDNLSLNIGSKEIYGFLGPNGAGKSTTMKMLLGLMQPTKGNIKIF
+                     NQDISKNRDEILMHVGALIEEPSYYKNLTGLENLQVIQRLLNLPSKNVKEALKIVRLTE
+                     HKDKLVKNYSLGMKQRLGIALAIVKFPKLLILDEPTN"
+     RBS             7668..7671
+     gene            7681..8433
+                     /gene="nukE"
+     CDS             7681..8433
+                     /codon_start=1
+                     /db_xref="GI:37572673"
+                     /function="immunity to the lantibiotic nukacin ISK-1"
+                     /gene="nukE"
+                     /note="ABC transporter (transmembrane domain)"
+                     /product="NukE"
+                     /protein_id="BAC98763.1"
+                     /transl_table=11
+                     /translation="MLKAINLEFFKMRRRKFILPILLITFVGILWFCAIAIKELNITDT
+                     KYGIYMLISNILTIDSMIYPILIGILCSRLADIEHQGKTFQLLNTSKQSVFNLFTSKVG
+                     VSLIILFVIDIIQLTTILLIANSHNISLKLEIISKFMLSFIIASFFLILIHMALSFFFE
+                     KQSVSIVSALVGSFLGLVTGGMLPSYIKIFLPWQYYSLLNPVHKKMVHKGYEYSNNDYY
+                     FIYIFISILVIVILFFIIKALIKRRDLN"
+     PFAM_domain     7693..8217
+                     /aSDomain="ABC2_membrane_4"
+                     /aSTool="fullhmmer"
+                     /database="35.0"
+                     /db_xref="PF12730.10"
+                     /description="ABC-2 family transporter protein"
+                     /detection="hmmscan"
+                     /domain_id="fullhmmer_nukE_0010"
+                     /evalue="2.10E-14"
+                     /label="nukE"
+                     /locus_tag="nukE"
+                     /protein_end="179"
+                     /protein_start="4"
+                     /score="54.0"
+                     /tool="antismash"
+                     /translation="INLEFFKMRRRKFILPILLITFVGILWFCAIAIKELNITDTKYGI
+                     YMLISNILTIDSMIYPILIGILCSRLADIEHQGKTFQLLNTSKQSVFNLFTSKVGVSLI
+                     ILFVIDIIQLTTILLIANSHNISLKLEIISKFMLSFIIASFFLILIHMALSFFFEKQSV
+                     SIVSALVGSFLG"
+     RBS             8417..8420
+                     /gene="nukE"
+     gene            <8430..9167
+                     /gene="nukG"
+     CDS             <8430..9167
+                     /codon_start=1
+                     /db_xref="GI:37572674"
+                     /function="immunity to the lantibiotic nukacin ISK-1"
+                     /gene="nukG"
+                     /note="ABC transporter (transmembrane domain); The nukG
+                     gene is presumably translated from TTG as a start codon."
+                     /product="NukG"
+                     /protein_id="BAC98764.1"
+                     /transl_table=11
+                     /translation="MISLLSIELRKLQNNYILIFLLVFNILSVSIGSMIFYFNQSAFPN
+                     SNNRDLILWGQETLYTSQLFFPILIGVLCSISWQFEESNNNWMRMKTIPLKESKIVLSK
+                     FLSLFLLTLLNQIIFFVLFCISASIVNVSLEGLLKFLYWDFIGWIGTASIVAIQLYLSV
+                     ATRNFTFSILISTIGGVLGLLTLFISNFIFKIFPYSQITVGVRARSLMNFTFSEMLLFL
+                     IINVAYITVFLTLTTLKLKKREG"
+     PFAM_domain     8439..8972
+                     /aSDomain="ABC2_membrane_4"
+                     /aSTool="fullhmmer"
+                     /database="35.0"
+                     /db_xref="PF12730.10"
+                     /description="ABC-2 family transporter protein"
+                     /detection="hmmscan"
+                     /domain_id="fullhmmer_nukG_0011"
+                     /evalue="2.70E-19"
+                     /label="nukG"
+                     /locus_tag="nukG"
+                     /protein_end="181"
+                     /protein_start="3"
+                     /score="69.9"
+                     /tool="antismash"
+                     /translation="LLSIELRKLQNNYILIFLLVFNILSVSIGSMIFYFNQSAFPNSNN
+                     RDLILWGQETLYTSQLFFPILIGVLCSISWQFEESNNNWMRMKTIPLKESKIVLSKFLS
+                     LFLLTLLNQIIFFVLFCISASIVNVSLEGLLKFLYWDFIGWIGTASIVAIQLYLSVATR
+                     NFTFSILISTIGGVL"
+     RBS             9159..9162
+                     /gene="nukG"
+     gene            9174..9452
+                     /gene="nukH"
+     CDS             9174..9452
+                     /codon_start=1
+                     /db_xref="GI:52075605"
+                     /function="immunity to the lantibiotic nukacin ISK-1"
+                     /gene="nukH"
+                     /note="accessory protein associated with NukFEG complex"
+                     /product="NukH"
+                     /protein_id="BAC98765.2"
+                     /transl_table=11
+                     /translation="MKRKDYLFFVIALLPLISLLLQLMKISLIHNYQSFFSIVNIICIL
+                     FTIAYSIILVINSKKKNNLQKTILILSIIYILTLIFISFGVIINMFN"
+     terminator      9494..9527
+     CDS             complement(9561..9761)
+                     /codon_start=1
+                     /db_xref="GI:37572676"
+                     /function="unknown"
+                     /note="ORF8"
+                     /product="putative plasmid replication-associated protein"
+                     /protein_id="BAC98766.1"
+                     /transl_table=11
+                     /translation="MAGFLDDIDTSSVKYTENYKPISKSTTMRVDTNLKKRLSQMALDQ
+                     DTSIKAIVDNVLNEFLEKKGY"
+     CDS             complement(9767..10417)
+                     /codon_start=1
+                     /db_xref="GI:37572677"
+                     /function="unknown"
+                     /gene_functions="other (smcogs) SMCOG1157: hypothetical
+                     protein"
+                     /gene_kind="other"
+                     /note="ORF9"
+                     /product="putative plasmid replication-associated protein"
+                     /protein_id="BAC98767.1"
+                     /transl_table=11
+                     /translation="MKRTYVEAPEENESFIDMLRTGNLENSMIRLSSKLSLLPADSSLA
+                     NLSDIISKTDILKKRYILKNVVEKIREMYDFDHIFIDVPPTINSDFTNNAVYASDYILM
+                     VFQTQQSAYESSLSFVNFLRDRKNESNLPFELIGAVPVLIKRSGKVDEKILNMSKTAFS
+                     QALFENQIYQRERIKKFGAEGIRNKDMHDKKVIHMFNKVYIELVDRIQVIESE"
+     PFAM_domain     complement(10025..10387)
+                     /aSDomain="AAA_31"
+                     /aSTool="fullhmmer"
+                     /database="35.0"
+                     /db_xref="PF13614.9"
+                     /description="AAA domain"
+                     /detection="hmmscan"
+                     /domain_id="fullhmmer_BAC98767.1_0012"
+                     /evalue="8.90E-15"
+                     /label="BAC98767.1"
+                     /locus_tag="BAC98767.1"
+                     /protein_end="131"
+                     /protein_start="10"
+                     /score="55.1"
+                     /tool="antismash"
+                     /translation="ENESFIDMLRTGNLENSMIRLSSKLSLLPADSSLANLSDIISKTD
+                     ILKKRYILKNVVEKIREMYDFDHIFIDVPPTINSDFTNNAVYASDYILMVFQTQQSAYE
+                     SSLSFVNFLRDRKNESN"
+     gene            11192..>11740
+                     /gene="rep"
+     CDS             11192..>11740
+                     /codon_start=1
+                     /db_xref="GI:37572678"
+                     /function="plasmid replication"
+                     /gene="rep"
+                     /note="truncated"
+                     /product="replication protein"
+                     /protein_id="BAC98768.1"
+                     /transl_table=11
+                     /translation="MTKQRFTKLYKFLFEDSTFNKLSIKAKLLYALLTERQNLSKLSAK
+                     QHGIQSQFIDDNGRLFSIYTNKELMNIINISEPTVINLKKQLIAFGLLEEIRLGKNKPN
+                     RLYPKKPYDEYFYVHDVDEFYRLPHSLFSNPKYKNLKAETIVAYAVYLSRYEYSVYKNH
+                     FSDKSGEIYCHFSNEKMAEF"
+     PFAM_domain     11204..11452
+                     /aSDomain="RepA_N"
+                     /aSTool="fullhmmer"
+                     /database="35.0"
+                     /db_xref="PF06970.14"
+                     /description="Replication initiator protein A (RepA)
+                     N-terminus"
+                     /detection="hmmscan"
+                     /domain_id="fullhmmer_rep_0013"
+                     /evalue="1.70E-17"
+                     /label="rep"
+                     /locus_tag="rep"
+                     /protein_end="87"
+                     /protein_start="4"
+                     /score="63.1"
+                     /tool="antismash"
+                     /translation="RFTKLYKFLFEDSTFNKLSIKAKLLYALLTERQNLSKLSAKQHGI
+                     QSQFIDDNGRLFSIYTNKELMNIINISEPTVINLKKQL"
+     PFAM_domain     11558..11737
+                     /aSDomain="RepA_N"
+                     /aSTool="fullhmmer"
+                     /database="35.0"
+                     /db_xref="PF06970.14"
+                     /description="Replication initiator protein A (RepA)
+                     N-terminus"
+                     /detection="hmmscan"
+                     /domain_id="fullhmmer_rep_0014"
+                     /evalue="4.90E-14"
+                     /label="rep"
+                     /locus_tag="rep"
+                     /protein_end="182"
+                     /protein_start="122"
+                     /score="52.0"
+                     /tool="antismash"
+                     /translation="EFYRLPHSLFSNPKYKNLKAETIVAYAVYLSRYEYSVYKNHFSDK
+                     SGEIYCHFSNEKMAE"
+ORIGIN
+        1 aagctttatc tttaaacttt gaacaaaaaa tcaaatgttc cccccccatc tcttgtaaag
+       61 gagatggggg aactagatta taagttgttt tcaaaataca atataacgtt atatctgaat
+      121 tttctaaaac tttaattttt tgtaatagaa ccagattaaa taatccagtt gaattcactt
+      181 aatgtttgct ttactttttt atacttttct ggagtgattt taaccgtatt attcttaatc
+      241 gatttcaaaa tatagcattt actatgctta tcgaatatta tatttttaat actttttaaa
+      301 ggaataagta atgacctact tactaaaata aatccataag aatagagttt tttttctaaa
+      361 tattttaagg agccattata agaaactgtt tctttgtcat ccaaagtgat aattattttt
+      421 ctaccgcaac attctgctgt tgtaatttta tcaatttcta aaaaatataa agatttcccc
+      481 tttttaatgg cgatttttct gtttttaaga ttgttaagat cgaatttttt tctgcatcta
+      541 tttttgaaat gaagtaagca cttctccaat ttaataggct ctactggttg tattaaatag
+      601 tcaaaaggat gagcttcaaa acttttatgt gcgtgtttgg aatcagaaga tagaaaaact
+      661 atttgaatat gtttatgtat agaattgata ttattggcta tatctataaa cttgttgtta
+      721 tttgtattta tttttaaaaa tattaagtct atatctttct tatctagggt atttttggct
+      781 tcaatatatt cactaaatgt acctttacat gaaacaaatg agaagtaaga tagatttact
+      841 tttaaatcct ctctagtact tgcattatcg tctataataa tagcatttat ttttttcata
+      901 aaatcaattt tcccattcct ttatcaataa aaaattaaaa ccaaccttac ttcattaata
+      961 tatcacaatt atttttttaa atcattatta ttaaatgaac tttaaaattt ttttaaattg
+     1021 atagattgta agattatttt gtaaagtata tctgctagac ttcaagtaat tgttgccaat
+     1081 aaattgcctt cgatgaagtt atcttaataa aagctggaaa gaacaaaata ttaaggtttc
+     1141 aatactctcc aaaatacaat aactaaagac actatatatg ttttacggtt cataaaaaat
+     1201 ccgtagttct tttcaaaact acggattttc gccatgccat aatattagta tcatgttaat
+     1261 caataaaaaa actaaagtaa gtatcactta aagttatttt tactgatttt acaacattcc
+     1321 cctttttatg aacaacaagt aaatacaaat tggaaagaat tcatatggca atcgtgtgac
+     1381 acagttggga ttactcctga ctttttctta gctcctaaga cttcattcaa ttcatcttct
+     1441 tgaacctctt ctaataaatt tgctacttca atgtccttca taactttaga attttccatg
+     1501 tttgttacct cctaaattta atatttgtta caagtttaat atcacatgat atttacaaag
+     1561 tgtaaaattg tataaaccac ttatttatat aattaaaatt tatatttaga gtgataaagt
+     1621 ggttttctat atgaataaaa taaaaatttg aaacttacaa ttttgttagt tttaggtttt
+     1681 tccgtttctg ctgcaaaatt tatcttgtag tatgaggtta gattaccaat attagaagta
+     1741 aagcgaaatt gtagcaagct agttattttt ataacactgt aaaagaggaa tgttcataca
+     1801 catcaaaact aatttcaaac gtcgaaaaga tatgttaaag caaatttata taatgcgtta
+     1861 tatgaattat gatagttaat aataggagat gatattaact atgaacaaca ttaaagttga
+     1921 acaatttaga ggattttcaa attttatttt aaaaaaatac tctaaacaag aacttaacac
+     1981 attaattgat tggaactact taagatctat tattctagat atttgtggaa aatcattgat
+     2041 tgttttaatt aatgaaaaaa gattaaacaa aaaactcaat ggaaatactc ctgaagaacg
+     2101 ctataaatat tttgatgaag aattatgtga aaaagggatt atatatgaag agttaaataa
+     2161 aagttatcca tcaataataa atgatttaga gcaaacttta aactcatatt tttcgttttt
+     2221 gaaagaaatc gaaaataaat tcaatcaaga aaaaaagaaa cttttagaag ccaatttaat
+     2281 aaaaactgaa aaagaaacga tttgtcatat cagtatttta ggagatttac atggaggtaa
+     2341 agcggtgact aaagtaacca ctgataaatc tcaattatta tataaaccta ggtcattaga
+     2401 aaatgatagt ttctttttag aattcttaga atttatgtac agttttcaaa aaaatgaaat
+     2461 atcaacatac tataagtata aattcataga ttataaagac cacggttgga tggaatatat
+     2521 agaaaagcaa cctacctcta aaaataaaat aaatatgtat tacaaaagat tgggatattt
+     2581 attgtctata ggatatttat taaatataag tgatttacat ttcgaaaata tactgtgttc
+     2641 cagtaatttt ccaatattaa ttgatttaga aactatattt catacgtcca tatatgaatc
+     2701 aaaatttcgt aatttagcta caaagaatat agaagataaa gctgctaatt ctgtattcgc
+     2761 taccggaatg ttaccgatat ccaaaaaaga caaaaaatac ggtggagata taagtggaat
+     2821 attaggtgga gtatttaata aacacgaaag aactataagt aatcctaata gagatgatat
+     2881 aaaattcgaa aagagattag taagagttaa aagaaatgat catatcccat tttatatgga
+     2941 aaatgataaa aaaaggagat tttctcccga agtatttata gaagatattc aagaaggctt
+     3001 taaatatggt tacgaattat ttcttaacaa tagaaaagaa atactacatt atataaagaa
+     3061 aacgtcatca gaagtagaag tgagaatttt accaagaagt acaattgagt actcagtatt
+     3121 aatacaagct gctaaatcac ctctttatgc aaataagcga aagagcttgt ttaacaaact
+     3181 agaagagtac ggtgaaaatt tattaagtga taagttaata aattcagaaa taaaacaaat
+     3241 agaaactctt tcagtaccct atttttatac taaggtccaa agtgtttcgg taaaagatat
+     3301 taaaaataat acggtacatc acttattgaa aaacccactc aatgtatttt tagaaaaaac
+     3361 gcaaagatat tctttgaaag atttgttgtt tcaatgtaaa ctaataaaat tttcattaga
+     3421 aagtcaaaat aaattattta ttgatggtaa tggatttata aattatgaat atgaaatagt
+     3481 aaattcagac aatattgacg atgcaatcga caatttagta agcattataa ttaataatgc
+     3541 agtcatagat gaaaaagatg gttctgtaaa ttggatgaat ttaggcatat caaaagaaga
+     3601 agaaataata tttgaaagct tgtcagatga cttatataaa ggattgtcag gaataggaat
+     3661 agctttatta aaatattatg aaattaacaa aaacttaaaa gatatgagta gactaaaaaa
+     3721 aatactaagc agtatttatt cttctatatt aagtaatata aatactaatt ctagtaaaga
+     3781 aaaggattta tcttttttta atggtgaaat aggtaaaatc gcatttttat ataaatacca
+     3841 gattgaattt aaagaaaatt gcgacagcag taaaaattat atgaaacata ttttagggat
+     3901 cattttatct agtgaatttg aaatgaatga cattatagcc ggattaccag gaattatttc
+     3961 atatttatat aatcaagaaa tattttctaa agaacttgta ataatgggag atagactatt
+     4021 aaaagactta gacaataatc caactatggc tagctacgct cacggtaaaa gtggggtaat
+     4081 ggtttcatta ttatatttat atgatttaac taaagacaaa aagtatctag ttaaattcca
+     4141 tcaggaatgg aaaaaagaaa acacattaaa attggaaata ggatggaaag atgtaagaca
+     4201 aaatgaagaa acctactctg tatcatggtg taacggagtt acaggacagt taataagtag
+     4261 actagttgct ttagaaattc atgataaagt aaaaatattt gatgctgtaa ataaaaagtt
+     4321 aatgcaaaaa gaaattgaag aattacttta tttattgaaa gaagaaggat tagaacaaaa
+     4381 taatttttgc ctatgtcatg gcgtcatggg aaatttactg gttttaaatt actatcaaaa
+     4441 aaaatttgaa aatacaaaca ttcatttagc caataaaata gacagtcatt tttattcagt
+     4501 agctaatttt ggtttaaata aaggatggat atgtggctta ggaaataact tttactcttt
+     4561 tagcattatg acaggaatat caggtatttt atatgctttt ttaaagtata aaactaagga
+     4621 tactgaatta ggtatattgt taccaaacat ttagtttgga agaaggtgat gacaattgaa
+     4681 aatcgcatta caaaatagtg accaagactg tctattagcg tgttattcaa tgattttgag
+     4741 ttattttggt aaaaatgtat ctataaatag tctttacaaa agagagatga taccacctga
+     4801 tggtctatca atatcttatt tgaaagaatt aaatattaag tacgaactta atatgaaagt
+     4861 atatagaatt aaagataaag aaaaaacatt ccgagtaata agtaaaataa agaaaccaat
+     4921 aattgttcat tgggatttaa atcattttgt catagtaaaa aacgttaaaa aaaaacatat
+     4981 agaaatagtc aacccagaga taggaaaagt aaaaatttca aaagagatgt ttttggaaca
+     5041 tttttcaaat gttctattaa tgtttgatcc taagagcgat tttacaaaag ataaagaaaa
+     5101 aattgagttc tttgacgatt taaaaagtgt tttaatgaat aaaaacataa ttcttttttc
+     5161 attttcagtg atgttagctc aaattgtagc tctaattttt tcaatagttg ttagagatat
+     5221 aataaatcaa aaatatacat acctaatatc attatcaatg ctattaatga tgattattat
+     5281 tcaaatattt tctttagttt ttaagcaaaa agctcaaatt aaagagaata aaatatatga
+     5341 aaaaatcatt tcctataaca tgtttgaagg attatttaac aagcccttat tatactttag
+     5401 aaatagcaca ataggtactt tgatggaaaa gataaatata aagactacta taagggacaa
+     5461 catactgctt aaaatattgc catcattctt aaacttcttt tccgttacgg tattgtttat
+     5521 atatttgtta actgtatcac tgctattatc attattactt ttaggtatgt ccattatata
+     5581 tttgttaatc agtgtgttta tatatataaa gaaaaatcaa ttgaatattg agtatatgca
+     5641 gagaactata caatttagtt ctttagctca agaatcatta agtcaaattg atcaaattaa
+     5701 ggcccaagct caagaatcat caacaataaa taactggaaa gaaaaaagtt ggaatatagt
+     5761 taactcttat aattcaattt tgaaaattga aggattatca tatactttta atcaaatttt
+     5821 caattacagt agcataatac ttttaatgat ttttggtatt catcttacaa aatacggaaa
+     5881 tataaccata gcagatttaa tcttatttca atccggtatg tctatattta gttcatctgt
+     5941 ttcacaacta caagacatta cgtttgaaat atcaaaaatt aaagtgtccg gcgagaaaat
+     6001 caatgactta tttttaaaaa ataatactaa aagaaaagta atcgagcaga aatctaataa
+     6061 tgctttatca cttaagaatg ttacttttgg ttttgatgaa aaagccccta tattgaaaaa
+     6121 cattactttc caagtaaaaa aaggtgaaaa agtagctata gtaggagact ccggatcagg
+     6181 taaaagtact atgttaaatg ttctgttagg tctctataca tgtgatggtg aagtagttta
+     6241 cggttataga gattttagga aaataacagg ggtcgtctta cagaatatga cgttaagtaa
+     6301 acaatctatt tataataatt tggtggatga aggaaatgat agcaatatgc aaaaattaaa
+     6361 ccaaatacta tacgatgtta atattataaa cttgataaat tctttaccta ataaaatata
+     6421 ttctagtgta tttcaaaatg gaaaaaatct atctggtggt caaattcaaa ggctattaat
+     6481 tgctaaatct ctatttaata aaaaattaat tttttgggat gaagctttta gcagtttgga
+     6541 caattacaat cgtataaata tatatagaaa tgttttgaaa aatagtcaat atagcgataa
+     6601 aactatagta ctcataagtc accatctaga tgttttatca tatgtcgaca aagtaatgtt
+     6661 tattgaaaac ggaaacgctt tttttggaac acataatgaa ttaattaaaa ataataaaaa
+     6721 ttatagaaga ttcttagata ctgccaatac taataattaa ggagattcaa ttatgattaa
+     6781 caatattgta caaacccaaa atttaacaaa aaagttttca gatagttatt cagtagacaa
+     6841 tctatcacta aatattggtt cgaaagaaat atatggattt ttaggtccaa atggtgctgg
+     6901 taaaagtact acaatgaaaa tgttactagg tctcatgcaa ccaactaaag gtaatattaa
+     6961 aatattcaat caagatattt caaaaaatag agatgagata ttaatgcatg taggggcatt
+     7021 aattgaagaa ccttcttatt ataaaaattt aactggttta gaaaatttgc aagttattca
+     7081 aagattacta aacttacctt ctaaaaatgt taaagaagct ctgaaaattg tacgtttaac
+     7141 tgaacacaag gataaattag tcaaaaatta ttcattaggt atgaaacaaa ggttaggtat
+     7201 tgctttagct atagtaaaat ttccaaaact attgatatta gatgaaccta ctaacggctt
+     7261 agatccttct ggtatacaag aaattagaga attaataaaa tcttttccaa aaacttatgg
+     7321 aatgactgta cttatatcta gtcatttatt atctgaaatt gaacatatgg ctaatacagt
+     7381 aggtatcatc aatagaggga aactattgtt tgaaggaaag ttaacagaat tagaagaaca
+     7441 gaacaaaata ttgataaata ctaacaataa cagtgagagt ataaacttgc ttcaatcaaa
+     7501 aggatataat ctagaaaata atgaaaaacc tctcctatta gatacaactc aaaaagatat
+     7561 atctacagcc gttaaattgt tagttaataa taagttcgaa atttaccaag tacaatcagt
+     7621 tcagaaaagt ttagaagaaa atttatagaa ataactaatg atggaaagga atatttataa
+     7681 atgttaaaag ctataaattt agaatttttc aaaatgcgga gaagaaaatt tatccttcca
+     7741 atactactga ttacctttgt tggtatattg tggttttgtg ctatagcaat taaagagtta
+     7801 aatattactg atacaaagta tggtatttat atgctcattt ctaatattct aactatcgac
+     7861 agcatgattt atccaatatt aataggtatt ttatgctcaa gacttgcaga tatagaacat
+     7921 caaggaaaaa cctttcagtt attaaatact agtaaacaaa gtgttttcaa tttgtttact
+     7981 agtaaagttg gtgtttcgct tattatttta tttgtaattg acattataca attaacgacc
+     8041 atcttactaa ttgctaattc acataatatc agtttgaaac tagaaatcat ttcaaaattc
+     8101 atgctaagtt ttataattgc tagtttcttc ttaatattaa ttcatatggc actttctttc
+     8161 ttttttgaaa aacaatcagt tagcattgta tcagcattag taggaagttt tttaggatta
+     8221 gtaacaggag ggatgttgcc ttcatatatt aaaatatttt tgccttggca atattattca
+     8281 ttactaaatc cagttcataa aaagatggtt cacaaaggat atgaatattc aaataatgac
+     8341 tattatttta tttacatttt tatttctatt ctagtaatag taattctttt ctttattatt
+     8401 aaagccttaa taaaaaggag ggatttaaat tgatttcttt attaagcata gaattacgca
+     8461 aactacaaaa taattatatt ttaatcttct tattagtttt taatatatta agcgtatcta
+     8521 taggaagtat gatattttat tttaatcaaa gcgcttttcc taattcaaat aatagagatt
+     8581 taatattgtg ggggcaagaa actttatata cttcacaact tttctttccc atactgatag
+     8641 gtgttttatg ttcaataagt tggcaatttg aggagtctaa taataattgg atgagaatga
+     8701 aaactatacc tttaaaagaa agtaagatag ttttatcaaa atttttatct cttttcttac
+     8761 ttactttact aaatcaaatt atattttttg tattattttg tatctcagcc tcaatagtaa
+     8821 atgtatcctt ggaaggatta cttaaatttc tatactggga ctttataggt tggataggta
+     8881 cagcatctat tgttgctata caattatatt tgtcagttgc gactagaaat ttcactttct
+     8941 caattttaat atcaactatt ggtggtgtac taggtcttct aacattgttt attagcaatt
+     9001 ttatttttaa aatatttcca tattcacaaa ttacagttgg tgtgagagcc agatctttga
+     9061 tgaacttcac tttttcagaa atgttacttt ttcttataat aaatgtagct tatataacag
+     9121 tttttttgac acttactact ttaaagctta aaaaaagaga gggttaattt aaaatgaaaa
+     9181 gaaaagacta cttatttttt gtaattgcac ttttaccttt aattagtttg ttattacagt
+     9241 taatgaaaat ttcacttatc cataattatc aaagtttttt ctctatagtt aatatcatct
+     9301 gcatactttt tactattgct tattcaatta ttttagttat taatagcaag aaaaagaata
+     9361 atttgcagaa aacaattctt attttgtcta ttatctatat attaacttta atttttatct
+     9421 cttttggagt aataattaat atgtttaatt aaaataattt taatagcaaa atactatcaa
+     9481 aaattttccc acataaaaag tcacgataaa tttatcgtga ctttttaatt gctattcatt
+     9541 tttacggata ctatgccagt tcaataacct tttttttcta aaaactcatt taaaacatta
+     9601 tcaacaatcg ctttaataga tgtatcttga tctaatgcca tttgacttaa acgttttttt
+     9661 aaatttgtat ccacacgcat cgtagtactt ttagaaatag gtttataatt ttcagtatat
+     9721 ttaactgacg aagtatctat atcatctaaa aatcctgcca ttattttcac tcactttcaa
+     9781 tcacttgtat tctatctacc aattctatat aaactttatt aaacatgtgt attacttttt
+     9841 tatcatgcat atctttattt cttataccct cagcaccaaa ttttttaatt ctttctcttt
+     9901 gataaatttg attttcaaat agagcttgtg aaaatgcagt tttagacata tttaatattt
+     9961 tctcatccac ttttccactt cgtttaatca aaactgggac agctccaatc aattcaaaag
+    10021 gcaaattcga ttcatttttt ctatctctta aaaagtttac aaaagacaag ctactttcat
+    10081 aagctgattg ttgtgtttga aataccataa gaatataatc gcttgcatat acagcattat
+    10141 tagtaaaatc agagttaata gtcggtggta catcaataaa aatatggtca aaatcataca
+    10201 tttccctaat cttttctact acatttttta aaatatatct tttcttcaaa atatctgttt
+    10261 tagaaattat atcagacaaa ttagctaatg aagagtcagc tggtaacaat gataatttag
+    10321 acgataaccg aatcatacta ttttctaaat ttccggttct aagcatatct ataaacgatt
+    10381 cattttcctc tggcgcttcg acatatgtcc gtttcataat ttgcgtagcg ttcccctgcg
+    10441 gatcaaaatc tataagtaat actttcttac catactgctc tgatgctata taagaaagta
+    10501 ttgttgctac tgttgtttta cctactccgc ctttaaaatt tccaactgtt attacactca
+    10561 aataaaaacc ccctatgtta catgtaacat gttactaatg tttattcttt ctgtctaatt
+    10621 taaatcaatt tgctataaat caaaaaagaa ttacttatat atcctatgtt acatgtaaca
+    10681 tgttactaat gtttattctt tctgtctagt ttaaatcaat ttgctataaa ttaaaaaaga
+    10741 attacttata tatcctatgt tacatgtaac atgttactaa tgtttattct ttctgtctag
+    10801 tttaaatcaa tttgctataa attaaaaaag aattacttat atatcccatg ttacatgtaa
+    10861 catgttactt aagggaaagt tacaatattc tttgttaatt tttcttaaat ttgttactat
+    10921 gaacttaacg ttcattaata tatttaaaaa gcacttaatc gttggggcga ttaagcgctt
+    10981 taggtaataa acactatact aacattcact actaaacatt aagaaaagtg ctatctatat
+    11041 acatttatat attctggatg ctcaaatttc aatccatttt gtagaatcaa ttgtataata
+    11101 taagtaatat caattcaaga aagatatctt aatttaatta gtattgtgat ttattacctc
+    11161 aaccctaaat ttatgtgaag aggtatttac tatgactaaa caacgattta caaaactata
+    11221 taaattctta ttcgaagatt ccacatttaa caaactatca ataaaagcta aattgcttta
+    11281 tgcattatta accgaacgtc aaaacttatc taagttaagt gccaaacaac atggtattca
+    11341 atcacaattt attgatgata acggacgttt attctcaatt tatactaata aagaacttat
+    11401 gaatataatt aatatatctg aacctactgt tattaaccta aaaaagcaac tcattgcatt
+    11461 tggcttatta gaagaaatac gccttggaaa aaataaaccg aatcgcttat atcctaaaaa
+    11521 accttatgat gaatatttct atgttcatga tgttgatgaa ttttatcggt taccacattc
+    11581 attattttct aatcctaaat ataagaatct taaagctgag acaattgtcg cttacgctgt
+    11641 ttacctaagc cgttatgaat atagtgtata caaaaatcat ttttcggata aaagtggtga
+    11701 aatatattgc catttttcta atgagaaaat ggctgaattc
+//

@@ -1,0 +1,564 @@
+LOCUS       BGC0000538.1            7610 bp    DNA     linear   UNK 01-JAN-1980
+DEFINITION  Nisin Z biosynthetic gene cluster.
+ACCESSION   BGC0000538
+VERSION     BGC0000538.1
+KEYWORDS    .
+SOURCE      
+  ORGANISM  .
+            .
+COMMENT     ##antiSMASH-Data-START##
+            Version  :: 8.0.0
+            Run date :: 2025-05-21 17:15:07
+            ##antiSMASH-Data-END##
+FEATURES             Location/Qualifiers
+     source          1..7610
+                     /db_xref="taxon:1358"
+                     /mol_type="genomic DNA"
+                     /organism="Lactococcus lactis"
+     region          1..7610
+                     /candidate_cluster_numbers="1"
+                     /contig_edge="True"
+                     /product="lanthipeptide-class-i"
+                     /region_number="1"
+                     /rules="(((Lant_dehydr_N or Lant_dehydr_C) and
+                     cds(LANC_like and not Pkinase)) and not (YcaO or
+                     TIGR03604))"
+                     /tool="antismash"
+     cand_cluster    1..7610
+                     /candidate_cluster_number="1"
+                     /contig_edge="True"
+                     /detection_rules="(((Lant_dehydr_N or Lant_dehydr_C) and
+                     cds(LANC_like and not Pkinase)) and not (YcaO or
+                     TIGR03604))"
+                     /kind="single"
+                     /product="lanthipeptide-class-i"
+                     /protoclusters="1"
+                     /tool="antismash"
+     protocluster    1..7610
+                     /aStool="rule-based-clusters"
+                     /category="RiPP"
+                     /contig_edge="True"
+                     /core_location="[519:6551](+)"
+                     /cutoff="10000"
+                     /detection_rule="(((Lant_dehydr_N or Lant_dehydr_C) and
+                     cds(LANC_like and not Pkinase)) and not (YcaO or
+                     TIGR03604))"
+                     /neighbourhood="10000"
+                     /product="lanthipeptide-class-i"
+                     /protocluster_number="1"
+                     /tool="antismash"
+     proto_core      520..6551
+                     /aStool="rule-based-clusters"
+                     /tool="antismash"
+                     /cutoff="10000"
+                     /detection_rule="(((Lant_dehydr_N or Lant_dehydr_C) and
+                     cds(LANC_like and not Pkinase)) and not (YcaO or
+                     TIGR03604))"
+                     /neighbourhood="10000"
+                     /product="lanthipeptide-class-i"
+                     /protocluster_number="1"
+     CDS_motif       239..334
+                     /note="leader peptide"
+                     /note="lantipeptide"
+                     /note="predicted leader seq:
+                     MSTKDFNLDLVSVSKKDSGASPRITSISLCTP"
+                     /locus_tag="nisin"
+     aSDomain        239..388
+                     /aSDomain="TIGR03731"
+                     /aSTool="tigrfam"
+                     /description="lantibio_gallid: lantibiotic,
+                     gallidermin/nisin family"
+                     /detection="hmmscan"
+                     /domain_id="TIGRFam_nisin_0001"
+                     /evalue="5.70E-22"
+                     /identifier="TIGR03731"
+                     /label="nisin"
+                     /locus_tag="nisin"
+                     /protein_end="50"
+                     /protein_start="0"
+                     /score="75.5"
+                     /tool="antismash"
+                     /translation="MSTKDFNLDLVSVSKKDSGASPRITSISLCTPGCKTGALMGCNMK
+                     TATCN"
+     gene            239..412
+                     /gene="nisin"
+     CDS             239..412
+                     /citation=[1]
+                     /codon_start=1
+                     /db_xref="GI:473017"
+                     /db_xref="GOA:P29559"
+                     /db_xref="InterPro:IPR000446"
+                     /db_xref="InterPro:IPR006079"
+                     /db_xref="PDB:1WCO"
+                     /db_xref="UniProtKB/Swiss-Prot:P29559"
+                     /function="antibiotic"
+                     /gene="nisin"
+                     /gene_functions="biosynthetic-additional
+                     (rule-based-clusters) TIGR03731"
+                     /gene_functions="biosynthetic-additional
+                     (rule-based-clusters) mature_a"
+                     /gene_functions="biosynthetic-additional (lanthipeptides)
+                     predicted lanthipeptide"
+                     /gene_kind="biosynthetic-additional"
+                     /product="NisZ protein"
+                     /protein_id="CAA79467.1"
+                     /sec_met_domain="TIGR03731 (E-value: 7.7e-25, bitscore:
+                     75.5, seeds: 23, tool: rule-based-clusters)"
+                     /sec_met_domain="mature_a (E-value: 3.5e-08, bitscore:
+                     21.5, seeds: 5, tool: rule-based-clusters)"
+                     /transl_table=11
+                     /translation="MSTKDFNLDLVSVSKKDSGASPRITSISLCTPGCKTGALMGCNMK
+                     TATCNCSIHVSK"
+     CDS_motif       239..307
+                     /prepeptide="leader"
+                     /note="peptide class: lanthipeptide"
+                     /note="predicted sequence: MSTKDFNLDLVSVSKKDSGASPR"
+                     /locus_tag="nisin_lanthipeptide"
+                     /aSTool="lanthipeptides"
+                     /tool="antismash"
+     CDS_motif       308..412
+                     /prepeptide="core"
+                     /locus_tag="nisin_lanthipeptide"
+                     /peptide="lanthipeptide"
+                     /predicted_class="Class I"
+                     /score="26.70"
+                     /molecular_weight="3313.0"
+                     /monoisotopic_mass="3310.6"
+                     /core_sequence="ITSISLCTPGCKTGALMGCNMKTATCNCSIHVSK"
+                     /aSTool="lanthipeptides"
+                     /tool="antismash"
+                     /leader_sequence="MSTKDFNLDLVSVSKKDSGASPR"
+                     /leader_location="[238:307](+)"
+                     /alternative_weights="3331.0"
+                     /alternative_weights="3349.0"
+                     /alternative_weights="3367.0"
+                     /alternative_weights="3385.1"
+     PFAM_domain     254..352
+                     /aSDomain="Gallidermin"
+                     /aSTool="fullhmmer"
+                     /database="35.0"
+                     /db_xref="PF02052.18"
+                     /db_xref="GO:0005576"
+                     /db_xref="GO:0042742"
+                     /description="Gallidermin"
+                     /detection="hmmscan"
+                     /domain_id="fullhmmer_nisin_0001"
+                     /evalue="5.50E-08"
+                     /gene_ontologies="GO:0005576: extracellular region"
+                     /gene_ontologies="GO:0042742: defense response to
+                     bacterium"
+                     /label="nisin"
+                     /locus_tag="nisin"
+                     /protein_end="38"
+                     /protein_start="5"
+                     /score="33.1"
+                     /tool="antismash"
+                     /translation="FNLDLVSVSKKDSGASPRITSISLCTPGCKTGA"
+     CDS_motif       335..412
+                     /note="core peptide"
+                     /note="lantipeptide"
+                     /note="monoisotopic mass: 2467.1"
+                     /note="molecular weight: 2469.0"
+                     /note="alternative weights: 2487.0"
+                     /note="number of bridges: 4"
+                     /note="predicted core seq: GCKTGALMGCNMKTATCNCSIHVSK"
+                     /note="predicted class: lantipeptide"
+                     /note="score: 0.00"
+                     /note="RODEO score: 25"
+                     /locus_tag="nisin"
+     gene            520..3501
+                     /gene="nisB"
+     CDS             520..3501
+                     /citation=[1]
+                     /citation=[2]
+                     /codon_start=1
+                     /db_xref="GI:473018"
+                     /db_xref="InterPro:IPR006826"
+                     /db_xref="InterPro:IPR006827"
+                     /db_xref="UniProtKB/TrEMBL:Q48673"
+                     /gene="nisB"
+                     /gene_functions="biosynthetic (rule-based-clusters)
+                     lanthipeptide-class-i: Lant_dehydr_C"
+                     /gene_functions="biosynthetic (rule-based-clusters)
+                     lanthipeptide-class-i: Lant_dehydr_N"
+                     /gene_functions="biosynthetic-additional
+                     (rule-based-clusters) Lanthipeptide_LanB_RRE"
+                     /gene_functions="biosynthetic-additional (smcogs)
+                     SMCOG1155: Lantibiotic dehydratase domain protein"
+                     /gene_kind="biosynthetic"
+                     /product="NisB protein"
+                     /protein_id="CAA79468.1"
+                     /sec_met_domain="Lant_dehydr_N (E-value: 6.9e-88, bitscore:
+                     283.9, seeds: 73, tool: rule-based-clusters)"
+                     /sec_met_domain="Lanthipeptide_LanB_RRE (E-value: 5.5e-10,
+                     bitscore: 28.7, seeds: 20, tool: rule-based-clusters)"
+                     /sec_met_domain="Lant_dehydr_C (E-value: 2.5e-18, bitscore:
+                     55.3, seeds: 35, tool: rule-based-clusters)"
+                     /transl_table=11
+                     /translation="MIKSSFKAQPFLVRNTILSPNDKRSFTEYTQVIETVSKNKVFLEQ
+                     LLLANPKLYNVMQKYNAGLLKKKRVKKLFESIYKYYKRSYLRSTPFGLFSETSIGVFSK
+                     SSQYKLMGKTTKGIRLDTQWLIRLVHKMEVDFSKKLSFTRNNANYKFGDRVFQVYTINS
+                     SELEEVNIKYTNVYQIISEFCENDYQKYEDICETVTLCYGDEYRELSEQYLGSLIVNHY
+                     LISNLQKDLLSDFSWDTFLTKVEAIDEDKKYIIPLKKVQKFIQEYSEIEIGEGIEKLKE
+                     IYQEMSQILENDNYIQIDLISDSEINFDVKQKQQLEHLAEFLGNTTKSVRRTYLDDYKD
+                     KFIEKYGVDQEVQITELFDSTFGIGAPYNYNHPRNDFYESEPSTLYYSEEEREKYLSMY
+                     VEAVKNHNVINLDDLESHYQKMDLEKKSELQGLELFLNLAKEYEKDIFILGDIVGNNNL
+                     GGASGRFSALSPELTSYHRTIVDSVERENENKEITSCEIVFLPENIRHANVMHTSIMRR
+                     KVLPFFTSTSHNEVQLTNIYIGIDEKEKFYARDISTQEVLKFYITSMYNKTLFSNELRF
+                     LYEISLDDKFGNLPWELIYRDFDYIPRLVFDEIVISPAKWKIWGRDVNNKMTIRELIQS
+                     KEIPKEFYIVNGDNKVYLSQENPLDMEILESAIKKSSKRKDFIELQEYFEDENIINKGQ
+                     KGRVADVVVPFIRTRALGNEGRAFIREKRVSVERREKLPFNEWLYLKLYISINRQNEFL
+                     LSYLPDIQKIVANLGGKLFFLRYTDPKPHIRLRIKCSDLFLAYGSILEILKRSQKNRIM
+                     STFDISIYDQEVERYGGFDTLELSEAIFCADSKIIPNLLTLIKDTNNDWKVDDVSILVN
+                     YLYLKCFFQNDNKKILNFLNLVSPKKVKENVNEKIEHYLKLLKVDNLGDQIFYDKNFKE
+                     LKHAIKNLFLKMIAQDFELQKVYSIIDSIIHVHNNRLIGIERDKEKLIYYTLQRLFVSE
+                     EYMK"
+     PFAM_domain     634..2511
+                     /aSDomain="Lant_dehydr_N"
+                     /aSTool="fullhmmer"
+                     /database="35.0"
+                     /db_xref="PF04738.16"
+                     /description="Lantibiotic dehydratase, N terminus"
+                     /detection="hmmscan"
+                     /domain_id="fullhmmer_nisB_0002"
+                     /evalue="1.30E-85"
+                     /label="nisB"
+                     /locus_tag="nisB"
+                     /protein_end="664"
+                     /protein_start="38"
+                     /score="287.9"
+                     /tool="antismash"
+                     /translation="NKVFLEQLLLANPKLYNVMQKYNAGLLKKKRVKKLFESIYKYYKR
+                     SYLRSTPFGLFSETSIGVFSKSSQYKLMGKTTKGIRLDTQWLIRLVHKMEVDFSKKLSF
+                     TRNNANYKFGDRVFQVYTINSSELEEVNIKYTNVYQIISEFCENDYQKYEDICETVTLC
+                     YGDEYRELSEQYLGSLIVNHYLISNLQKDLLSDFSWDTFLTKVEAIDEDKKYIIPLKKV
+                     QKFIQEYSEIEIGEGIEKLKEIYQEMSQILENDNYIQIDLISDSEINFDVKQKQQLEHL
+                     AEFLGNTTKSVRRTYLDDYKDKFIEKYGVDQEVQITELFDSTFGIGAPYNYNHPRNDFY
+                     ESEPSTLYYSEEEREKYLSMYVEAVKNHNVINLDDLESHYQKMDLEKKSELQGLELFLN
+                     LAKEYEKDIFILGDIVGNNNLGGASGRFSALSPELTSYHRTIVDSVERENENKEITSCE
+                     IVFLPENIRHANVMHTSIMRRKVLPFFTSTSHNEVQLTNIYIGIDEKEKFYARDISTQE
+                     VLKFYITSMYNKTLFSNELRFLYEISLDDKFGNLPWELIYRDFDYIPRLVFDEIVISPA
+                     KWKIWGRDVNNKMTIRELIQSKEIPKEFYIVNGDNKVYLSQENPLDMEIL"
+     aSDomain        2728..3471
+                     /aSDomain="TIGR03891"
+                     /aSTool="tigrfam"
+                     /description="thiopep_ocin: thiopeptide-type bacteriocin
+                     biosynthesis domain"
+                     /detection="hmmscan"
+                     /domain_id="TIGRFam_nisB_0002"
+                     /evalue="2.80E-39"
+                     /identifier="TIGR03891"
+                     /label="nisB"
+                     /locus_tag="nisB"
+                     /protein_end="984"
+                     /protein_start="736"
+                     /score="133.6"
+                     /tool="antismash"
+                     /translation="WLYLKLYISINRQNEFLLSYLPDIQKIVANLGGKLFFLRYTDPKP
+                     HIRLRIKCSDLFLAYGSILEILKRSQKNRIMSTFDISIYDQEVERYGGFDTLELSEAIF
+                     CADSKIIPNLLTLIKDTNNDWKVDDVSILVNYLYLKCFFQNDNKKILNFLNLVSPKKVK
+                     ENVNEKIEHYLKLLKVDNLGDQIFYDKNFKELKHAIKNLFLKMIAQDFELQKVYSIIDS
+                     IIHVHNNRLIGIERDKEKLIYYTLQR"
+     PFAM_domain     2728..3474
+                     /aSDomain="Lant_dehydr_C"
+                     /aSTool="fullhmmer"
+                     /database="35.0"
+                     /db_xref="PF14028.9"
+                     /description="Lantibiotic biosynthesis dehydratase C-term"
+                     /detection="hmmscan"
+                     /domain_id="fullhmmer_nisB_0003"
+                     /evalue="2.60E-22"
+                     /label="nisB"
+                     /locus_tag="nisB"
+                     /protein_end="985"
+                     /protein_start="736"
+                     /score="80.0"
+                     /tool="antismash"
+                     /translation="WLYLKLYISINRQNEFLLSYLPDIQKIVANLGGKLFFLRYTDPKP
+                     HIRLRIKCSDLFLAYGSILEILKRSQKNRIMSTFDISIYDQEVERYGGFDTLELSEAIF
+                     CADSKIIPNLLTLIKDTNNDWKVDDVSILVNYLYLKCFFQNDNKKILNFLNLVSPKKVK
+                     ENVNEKIEHYLKLLKVDNLGDQIFYDKNFKELKHAIKNLFLKMIAQDFELQKVYSIIDS
+                     IIHVHNNRLIGIERDKEKLIYYTLQRL"
+     gene            3512..5314
+                     /gene="nisT"
+     CDS             3512..5314
+                     /citation=[1]
+                     /citation=[2]
+                     /codon_start=1
+                     /db_xref="GI:473013"
+                     /db_xref="GOA:Q48669"
+                     /db_xref="HSSP:1R0W"
+                     /db_xref="InterPro:IPR003439"
+                     /db_xref="InterPro:IPR003593"
+                     /db_xref="InterPro:IPR011527"
+                     /db_xref="InterPro:IPR017871"
+                     /db_xref="InterPro:IPR017940"
+                     /db_xref="UniProtKB/TrEMBL:Q48669"
+                     /gene="nisT"
+                     /gene_functions="transport (smcogs) SMCOG1000: ABC
+                     transporter ATP-binding protein"
+                     /gene_kind="transport"
+                     /product="NisT protein"
+                     /protein_id="CAA79469.1"
+                     /transl_table=11
+                     /translation="MDEVKEFTSKQFFNTLLTLPSTLKLIFQLEKRYAIYLIVLNAITA
+                     FVPLASLFIYQDLINSVLGSGRHLIYIIIIYFIVQVITTVLGQLESYVSGKFDMRLSYS
+                     INMRLMRTTSSLELSDYEQADMYNIIEKVTQDSTYKPFQLFNAIIVVLSSFISLLSSLF
+                     FIGTWNIGVAILLLIVPVLSLVLFLRVGQLEFLIQWQRASSERETWYIVYLLTHDFSFK
+                     EIKLNNISNYFIHKFGKLKKGFINQDLAIARKKTYFNIFLDFILNLINILTIFAMILSV
+                     RAGKLLIGNLVSLIQAISKINTYSQTMIQNIYIIYNTSLFMEQLFEFLKRESVVHKKIE
+                     DTEICNQDIGTVKVINLSYVYPNSNAFALKNINLSFEKGELAAIVGKNGSGKSTLVKII
+                     SGLYQPTMGIIQYDKMRNSLMPEEFYQKNISVLFQDFVKYELTIRENIGLSDLSSQWED
+                     EKIIKVLDNLGLDFLKTNNQYVLDTQLGNWFQEGRQLSGGQWQKIALARTFFKKASIYI
+                     LDEPSAALDPVAEKEIFDYFVALSENNISIFISHSLNAARKANKIVVMKDGQVEDVGSH
+                     DVLLRRCQYYQELYYSEQYEDNDE"
+     PFAM_domain     4616..5080
+                     /aSDomain="ABC_tran"
+                     /aSTool="fullhmmer"
+                     /database="35.0"
+                     /db_xref="PF00005.30"
+                     /db_xref="GO:0005524"
+                     /description="ABC transporter"
+                     /detection="hmmscan"
+                     /domain_id="fullhmmer_nisT_0004"
+                     /evalue="2.00E-38"
+                     /gene_ontologies="GO:0005524: ATP binding"
+                     /label="nisT"
+                     /locus_tag="nisT"
+                     /protein_end="523"
+                     /protein_start="368"
+                     /score="132.1"
+                     /tool="antismash"
+                     /translation="LKNINLSFEKGELAAIVGKNGSGKSTLVKIISGLYQPTMGIIQYD
+                     KMRNSLMPEEFYQKNISVLFQDFVKYELTIRENIGLSDLSSQWEDEKIIKVLDNLGLDF
+                     LKTNNQYVLDTQLGNWFQEGRQLSGGQWQKIALARTFFKKASIYILDEPSA"
+     gene            5295..6551
+                     /gene="nisC"
+     CDS             5295..6551
+                     /citation=[1]
+                     /citation=[2]
+                     /codon_start=1
+                     /db_xref="GI:473014"
+                     /db_xref="InterPro:IPR007822"
+                     /db_xref="InterPro:IPR020468"
+                     /db_xref="UniProtKB/TrEMBL:Q48670"
+                     /gene="nisC"
+                     /gene_functions="biosynthetic (rule-based-clusters)
+                     lanthipeptide-class-i: LANC_like"
+                     /gene_functions="biosynthetic-additional (smcogs)
+                     SMCOG1140: Lanthionine synthetase C family protein"
+                     /gene_kind="biosynthetic"
+                     /product="NisC protein"
+                     /protein_id="CAA79470.1"
+                     /sec_met_domain="LANC_like (E-value: 1.1e-74, bitscore:
+                     239.9, seeds: 47, tool: rule-based-clusters)"
+                     /transl_table=11
+                     /translation="MRIMMNKKNIKRNVEKIIAQWDERTRKNKENFDFGELTLSTGLPG
+                     IILMLAELKNKDNSKIYQKKIDNYIEYIVSKLSTYGLLTGSLYSGAAGIALSILHLRED
+                     DEKYKNLLDSLNRYIEYFVIEKIEGFNLENITPPDYDVIEGLSGILSYLLLINDEQYDD
+                     LKILIINFLSNLTKENKGLISLYIKSENQMSQSESEMYPLGCLNMGLAHGLAGAGCILA
+                     YAHIKGYSNEASLSALQKIIFIYEKFELEIKNQFLWKDGLVADELKKEKVIREASFIRD
+                     AWCYGGPGISLLYLYGGLALDNDYFVDKAEKILESAMQRKLGIDSYMICHGYSGLIEIC
+                     SLFKRLLNTKKFDSYIEEFNVNSEQILEEYGDESGTGFLEGISGCILVLSKFEYSINFT
+                     YWRQALLLFDDFLKGGKRK"
+     PFAM_domain     5397..6512
+                     /aSDomain="LANC_like"
+                     /aSTool="fullhmmer"
+                     /database="35.0"
+                     /db_xref="PF05147.16"
+                     /db_xref="GO:0031179"
+                     /description="Lanthionine synthetase C-like protein"
+                     /detection="hmmscan"
+                     /domain_id="fullhmmer_nisC_0005"
+                     /evalue="1.40E-78"
+                     /gene_ontologies="GO:0031179: peptide modification"
+                     /label="nisC"
+                     /locus_tag="nisC"
+                     /protein_end="406"
+                     /protein_start="34"
+                     /score="264.1"
+                     /tool="antismash"
+                     /translation="GELTLSTGLPGIILMLAELKNKDNSKIYQKKIDNYIEYIVSKLST
+                     YGLLTGSLYSGAAGIALSILHLREDDEKYKNLLDSLNRYIEYFVIEKIEGFNLENITPP
+                     DYDVIEGLSGILSYLLLINDEQYDDLKILIINFLSNLTKENKGLISLYIKSENQMSQSE
+                     SEMYPLGCLNMGLAHGLAGAGCILAYAHIKGYSNEASLSALQKIIFIYEKFELEIKNQF
+                     LWKDGLVADELKKEKVIREASFIRDAWCYGGPGISLLYLYGGLALDNDYFVDKAEKILE
+                     SAMQRKLGIDSYMICHGYSGLIEICSLFKRLLNTKKFDSYIEEFNVNSEQILEEYGDES
+                     GTGFLEGISGCILVLSKFEYSINFTYWRQALL"
+     gene            6548..7285
+                     /gene="nisI"
+     CDS             6548..7285
+                     /citation=[1]
+                     /codon_start=1
+                     /db_xref="GI:473015"
+                     /db_xref="UniProtKB/TrEMBL:Q48671"
+                     /gene="nisI"
+                     /product="NisI protein"
+                     /protein_id="CAA79465.1"
+                     /transl_table=11
+                     /translation="MRKYLILIVALIGITGLSGCYQTSQKKVRFDEGSYTNFIYDNKSY
+                     FVTDKEIPQENVNNCKVKFYNLLIVDMKSEKLLSSSNKNSVTLVLNNIYEASDKSLCMG
+                     INDRYYKILPESDKGVVKALRLQNFDVTSDISDDNFVIDKNDSRKIDYMGNIYSISDTT
+                     VSDEELGEYQDVLAEVRVFDSVSGKSIPRSEWGRIDKDGSNSKQSRTEWDYGEIHSIRG
+                     KSLTEAFAVEINDDFKLATKVGN"
+     PFAM_domain     6971..7267
+                     /aSDomain="Spa1_C"
+                     /aSTool="fullhmmer"
+                     /database="35.0"
+                     /db_xref="PF18218.4"
+                     /description="Lantibiotic immunity protein Spa1 C-terminal
+                     domain"
+                     /detection="hmmscan"
+                     /domain_id="fullhmmer_nisI_0006"
+                     /evalue="1.30E-18"
+                     /label="nisI"
+                     /locus_tag="nisI"
+                     /protein_end="240"
+                     /protein_start="141"
+                     /score="67.3"
+                     /tool="antismash"
+                     /translation="IDKNDSRKIDYMGNIYSISDTTVSDEELGEYQDVLAEVRVFDSVS
+                     GKSIPRSEWGRIDKDGSNSKQSRTEWDYGEIHSIRGKSLTEAFAVEINDDFKLA"
+     gene            7287..>7610
+                     /gene="nisP"
+     CDS             7287..>7610
+                     /citation=[1]
+                     /codon_start=1
+                     /db_xref="GI:581294"
+                     /db_xref="UniProtKB/TrEMBL:Q798W1"
+                     /gene="nisP"
+                     /product="NisP protein"
+                     /protein_id="CAA79466.1"
+                     /transl_table=11
+                     /translation="MKKILGFLFIVCSLGLSATVHGETTNSQQLLSNNINTELINHNSN
+                     AILSSTEGSTTDSINLGEQSTAVKSTTRTELDVTGAAKTLLQTSAVQKEMKVSLQETQV
+                     SSEF"
+ORIGIN
+        1 tagatatagg tttattgagt cttagacata cttgaatgac ctagtcttat aactatactg
+       61 acaatagaaa cattaacaaa tctaaaacag tcttaattct atcttgagaa agtattggca
+      121 ataatattat tgtcgataac gcgatcataa taaacggctc tgattaaatt ctgaagtttg
+      181 ttagatacaa tgatttcgtt cgaaggaact acaaataaat tataaggagg cactcaaaat
+      241 gagtacaaaa gattttaact tggatttggt atctgtttcg aagaaagatt caggtgcatc
+      301 accacgcatt acaagtattt cgctatgtac acccggttgt aaaacaggag ctctgatggg
+      361 ttgtaacatg aaaacagcaa cttgtaattg tagtattcac gtaagcaaat aaccaaatca
+      421 aaggatagta ttttgttagt tcagacatgg atactatcct atttttataa gttatttagg
+      481 gttgctaaat agcttataaa aataaagaga ggaaaaaaca tgataaaaag ttcatttaaa
+      541 gctcaaccgt ttttagtaag aaatacaata ttatctccaa acgataaacg gagttttact
+      601 gaatatactc aagtcattga gactgtaagt aaaaataaag tttttttgga acagttacta
+      661 ctagctaatc ctaaactcta taatgttatg cagaaatata atgctggtct gttaaagaag
+      721 aaaagggtta aaaaattatt tgaatctatt tacaagtatt ataagagaag ttatttacga
+      781 tcaactccat ttggattatt tagtgaaact tcaattggtg ttttttcgaa aagttcacag
+      841 tacaagttaa tgggaaagac tacaaagggt ataagattgg atactcagtg gttgattcgc
+      901 ctagttcata aaatggaagt agatttctca aaaaagttat catttactag aaataatgcg
+      961 aattataagt ttggagatcg agtttttcaa gtttatacca taaatagtag tgagcttgaa
+     1021 gaagtaaata ttaaatatac gaatgtttat caaattattt ctgaattttg tgagaatgac
+     1081 tatcaaaaat atgaagatat ttgtgaaact gtaacccttt gctatggaga cgaatataga
+     1141 gaactatcgg aacaatatct tggcagtctg atagttaatc attatttgat ctctaattta
+     1201 caaaaagatt tgttgtcaga tttttcttgg gacacttttt tgactaaagt tgaagcaata
+     1261 gatgaagata aaaaatatat aattcctctg aaaaaagttc aaaagtttat tcaagaatac
+     1321 tcagaaatag aaattggtga aggtattgag aaactgaaag aaatatatca ggaaatgtca
+     1381 caaattcttg agaatgataa ttatattcaa attgatttaa ttagtgatag tgaaataaat
+     1441 tttgatgtta aacaaaagca acaattagaa catttagctg agtttttagg aaatacgaca
+     1501 aaatctgtaa gaagaacata tttggatgac tataaggata aatttatcga aaaatatggt
+     1561 gtagatcaag aagtacaaat aacagaatta tttgattcca catttggcat aggagctcca
+     1621 tataattata atcatcctcg aaatgacttt tatgagtccg aaccgagtac tctatactat
+     1681 tcagaagagg agagagaaaa gtacctcagc atgtatgtag aagccgttaa aaatcataat
+     1741 gtaattaatc ttgacgactt agagtctcat tatcaaaaaa tggacttaga aaagaaaagt
+     1801 gaacttcaag ggttagaatt atttttgaat ttggcaaagg agtatgaaaa agatattttt
+     1861 attttagggg atatcgttgg aaataataat ttgggagggg catcaggtag attttctgca
+     1921 ctctctccgg agttaacaag ttatcataga acgatagtag attctgtcga aagagaaaat
+     1981 gagaataaag aaattacatc gtgtgaaata gtatttcttc cagaaaatat cagacatgct
+     2041 aacgttatgc atacatcaat tatgaggagg aaagtacttc cattttttac aagtacaagt
+     2101 cacaatgaag ttcagttaac taatatctat attggaatag acgaaaaaga aaaattttat
+     2161 gcacgagaca tttcaactca agaggtattg aaattctaca ttacaagcat gtacaataaa
+     2221 acgttattca gtaatgagct aagatttctt tacgaaattt cattagatga caagtttggt
+     2281 aatttacctt gggaacttat ttacagagac tttgattata ttccacgttt agtatttgac
+     2341 gaaatagtaa tatctcctgc taaatggaaa atttggggaa gggatgtaaa taataagatg
+     2401 acaataagag aacttattca aagcaaagaa attcccaaag agttttatat tgtcaatgga
+     2461 gataataaag tttatttatc acaggaaaac ccattggata tggaaatttt agagtcggcg
+     2521 ataaagaaga gctcaaaaag aaaagatttt atagagctac aagaatattt tgaagatgaa
+     2581 aatatcataa ataaaggaca aaaggggaga gttgccgatg ttgtagtgcc tttcattaga
+     2641 acgagagcat taggtaatga agggagagca tttataagag agaaaagagt ttcggttgaa
+     2701 cggcgtgaaa aactgccctt taacgagtgg ctttatctca agttgtacat ttctataaat
+     2761 cgtcaaaatg aatttttact gtcgtatctt ccagatattc agaaaatagt agcaaacctg
+     2821 ggtggaaaac tattcttcct aagatatact gatcctaaac cacatattag attgcgtata
+     2881 aaatgttcag atttattttt agcttacgga tctattcttg aaatcttaaa aaggagtcag
+     2941 aaaaatagga taatgtcaac ttttgatatt tctatttatg atcaagaagt agaaagatat
+     3001 ggtggatttg atactttaga gttatccgaa gcaatatttt gtgccgattc taaaattatt
+     3061 ccaaatttgc ttacattgat aaaagatact aataatgatt ggaaagtcga tgatgtatca
+     3121 atcttggtga attatttata tctgaaatgc ttctttcaga atgataacaa aaagattctt
+     3181 aattttttga atttagttag tcctaaaaag gttaaagaaa atgtcaatga aaagattgaa
+     3241 cattatctta aacttctgaa agttgataat ctaggtgacc aaatttttta tgacaagaat
+     3301 tttaaagaat taaagcatgc cataaaaaat ttatttttaa aaatgatagc tcaagatttt
+     3361 gaacttcaga aagtttattc aattattgac agtatcattc atgtccataa taaccgacta
+     3421 attggtattg aacgagataa agagaaatta atttattaca cacttcaaag gttgtttgtt
+     3481 tcggaagaat acatgaaatg aggactaata gatggatgaa gtgaaagaat tcacatcaaa
+     3541 acaatttttt aatactttac ttactcttcc aagcaccttg aagttaattt ttcagttgga
+     3601 aaaacgttat gcaatttatt taattgtgct aaatgctatc acagcttttg ttccgttggc
+     3661 tagtcttttt atttatcaag atttaataaa ctctgtgcta ggttcaggga gacatcttat
+     3721 ctatattatt atcatctatt ttattgttca agtgataaca acagttctgg gacagctgga
+     3781 aagttatgtt agtggaaaat ttgatatgcg actttcttac agtatcaata tgcgcctcat
+     3841 gaggactacc tcatctcttg aattaagtga ttatgagcag gctgatatgt ataatatcat
+     3901 agaaaaagtt actcaagaca gcacttacaa gccttttcag ctatttaatg ctatcattgt
+     3961 tgtgctttca tcgtttatct cattgctatc tagtctattt tttattggaa catggaacat
+     4021 tggggtagca attttactcc ttattgttcc agtattatct ttggtacttt ttctcagagt
+     4081 gggacaatta gagtttttaa tccagtggca gagagcaagt tctgaaagag aaacatggta
+     4141 tattgtatat ttattgactc atgatttttc atttaaagaa atcaaattaa ataatattag
+     4201 caattacttc attcataaat ttggaaaatt aaagaaagga tttatcaacc aagatttagc
+     4261 tattgctcgt aagaagacat atttcaatat ttttcttgat ttcattttga atttgataaa
+     4321 tattcttacg atatttgcta tgatcctttc ggtaagagca ggaaaacttc ttataggtaa
+     4381 tttggtaagt ctcatacaag ctatttctaa aatcaatact tattctcaaa caatgattca
+     4441 aaatatttac atcatttata atactagttt gtttatggaa caactttttg agtttttaaa
+     4501 gagagaaagt gtagttcaca aaaaaataga agatactgaa atatgcaatc aagatatagg
+     4561 aactgttaaa gtaattaatt tatcatatgt ttaccctaat tcgaatgcct ttgcactaaa
+     4621 gaatatcaat ttatcctttg aaaaaggaga attagctgct attgtaggaa aaaatggttc
+     4681 cgggaaaagt acactagtaa agataatttc aggattatat caaccaacta tgggaataat
+     4741 ccaatacgac aaaatgagaa atagtttgat gcctgaggag ttttatcaga aaaacatatc
+     4801 ggtgctgttc caagattttg tgaagtatga gttaacgata agagagaata taggattgag
+     4861 tgatttgtct tctcaatggg aagatgagaa aattattaaa gtactagata atttaggact
+     4921 cgattttttg aaaactaata atcaatatgt acttgatacg cagttaggaa attggtttca
+     4981 agaagggcgt caactttcag gaggtcagtg gcaaaaaatt gcattagcaa ggacattttt
+     5041 taagaaagct tcaatttata ttttagatga accaagtgct gcactcgatc ctgtagctga
+     5101 aaaagaaata tttgattatt ttgttgctct ttcggaaaat aatatttcaa ttttcatttc
+     5161 tcatagtttg aatgctgcca gaaaagcaaa taaaatcgtg gttatgaaag atggacaggt
+     5221 cgaagatgtt ggaagtcatg atgtccttct gagaagatgt caatactatc aagaacttta
+     5281 ttattcagag caatatgagg ataatgatga ataaaaaaaa tataaaaaga aatgttgaaa
+     5341 aaattattgc tcaatgggat gagagaacta gaaaaaataa agaaaacttc gatttcggag
+     5401 agttgactct ctctacagga ttgcctggta taattttaat gttagcggag ttaaaaaata
+     5461 aagataactc aaagatatat cagaaaaaga tagacaatta tattgaatat attgttagca
+     5521 aactttcaac atatgggctt ttaacaggat cgctttattc gggagcagct ggcattgcat
+     5581 taagtatcct acatttacga gaagatgacg aaaaatataa gaatcttctt gacagcctaa
+     5641 atagatatat cgaatatttc gtcatagaaa aaattgaagg gtttaatttg gaaaacatta
+     5701 ctcctcctga ttatgacgtg attgaaggtt tatctgggat actttcctat ctattattaa
+     5761 tcaacgacga gcaatatgat gatttgaaaa tactcattat caatttttta tcaaatctga
+     5821 ctaaagaaaa caaaggacta atatcgcttt acatcaaatc ggagaatcag atgtctcaat
+     5881 cagaaagtga gatgtatcca ctaggctgtt tgaatatggg attagcacat ggacttgctg
+     5941 gagcgggctg tatcttagct tatgcccaca taaaaggata tagtaatgaa gcctcgttgt
+     6001 cagctttgca aaaaattatt tttatttatg aaaagtttga acttgaaatt aaaaatcagt
+     6061 ttctatggaa agatggactt gtagcagatg aattaaaaaa agagaaagta attagggaag
+     6121 caagtttcat tagagatgca tggtgctatg gaggtccagg tattagtctg ctatacttat
+     6181 acggaggatt agcactggat aatgactatt ttgtagataa agcagaaaaa atattagagt
+     6241 cagctatgca aagaaaactt ggtattgatt catatatgat ttgccatggc tattctggtt
+     6301 taatagaaat ttgttcttta tttaagcggc tattaaatac aaaaaagttt gattcataca
+     6361 tagaagaatt taatgttaat agtgagcaaa ttcttgaaga atacggagat gaaagtggca
+     6421 cgggttttct tgaaggaata agtggctgta tactggtatt atcgaaattt gaatattcaa
+     6481 tcaattttac ttattggaga caagcactgt tactttttga tgattttttg aaaggaggga
+     6541 agaggaaatg agaaaatatt taatacttat tgtggcctta atagggataa caggtttatc
+     6601 agggtgttat caaacaagtc aaaaaaaggt gaggtttgac gaaggaagtt atactaattt
+     6661 tatttatgat aataaatcgt atttcgtaac tgataaggag attcctcagg agaacgttaa
+     6721 caattgcaaa gtaaaatttt ataacctgtt gattgttgac atgaaaagtg agaaactttt
+     6781 atcaagtagc aacaaaaata gtgtgacttt ggtcttaaat aatatttatg aggcttctga
+     6841 caagtcgcta tgtatgggta ttaacgacag atactataag atacttccag aaagtgataa
+     6901 gggggtggtc aaagctttga gattacaaaa ctttgatgtg acaagcgata tttctgatga
+     6961 taattttgtt attgataaaa atgattcacg aaaaattgac tatatgggaa atatttacag
+     7021 tatatcggac accaccgtat ctgatgaaga attgggagaa tatcaggatg ttttagctga
+     7081 agtacgtgtg tttgattcag ttagtggcaa aagtatcccg aggtctgaat gggggagaat
+     7141 tgataaggat ggttcaaatt ctaaacagag taggacggaa tgggattatg gcgaaatcca
+     7201 ttctattaga ggaaaatctc ttactgaagc atttgccgtt gagataaatg atgattttaa
+     7261 gcttgcaacg aaggtaggaa actagagtga aaaaaatact aggtttcctt tttatcgttt
+     7321 gttcgttggg tttatcagca actgtgcatg gggagacaac aaattcacaa cagttactct
+     7381 caaataatat taatacggaa ttaattaatc ataattctaa tgcaatttta tcttcaacag
+     7441 agggatcaac gactgattcg attaatctag gggagcagtc aactgcagta aaatcgacaa
+     7501 caaggactga attggatgta actggtgctg ctaaaacttt attacagaca tcagctgttc
+     7561 aaaaagaaat gaaagtttcg ttgcaagaaa ctcaagttag ttctgaattc
+//

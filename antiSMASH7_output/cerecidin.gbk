@@ -1,0 +1,1552 @@
+LOCUS       BGC0000502.1           15431 bp    DNA     linear   UNK 01-JAN-1980
+DEFINITION  Cerecidin / cerecidin A1 / cerecidin A2 / cerecidin A3 / cerecidin
+            A4 / cerecidin A5 / cerecidin A6 / cerecidin A7 biosynthetic gene
+            cluster.
+ACCESSION   BGC0000502
+VERSION     BGC0000502.1
+KEYWORDS    .
+SOURCE      
+  ORGANISM  .
+            .
+COMMENT     ##antiSMASH-Data-START##
+            Version      :: 7.1.0
+            Run date     :: 2025-04-17 22:16:26
+            ##antiSMASH-Data-END##
+FEATURES             Location/Qualifiers
+     protocluster    1..15431
+                     /aStool="rule-based-clusters"
+                     /category="RiPP"
+                     /contig_edge="True"
+                     /core_location="[10000:13159]"
+                     /cutoff="20000"
+                     /detection_rule="cds(LANC_like and DUF4135)"
+                     /neighbourhood="10000"
+                     /product="lanthipeptide-class-ii"
+                     /protocluster_number="1"
+                     /tool="antismash"
+     proto_core      10001..13159
+                     /aStool="rule-based-clusters"
+                     /tool="antismash"
+                     /cutoff="20000"
+                     /detection_rule="cds(LANC_like and DUF4135)"
+                     /neighbourhood="10000"
+                     /product="lanthipeptide-class-ii"
+                     /protocluster_number="1"
+     cand_cluster    1..15431
+                     /candidate_cluster_number="1"
+                     /contig_edge="True"
+                     /detection_rules="cds(LANC_like and DUF4135)"
+                     /kind="single"
+                     /product="lanthipeptide-class-ii"
+                     /protoclusters="1"
+                     /tool="antismash"
+     region          1..15431
+                     /candidate_cluster_numbers="1"
+                     /contig_edge="True"
+                     /product="lanthipeptide-class-ii"
+                     /region_number="1"
+                     /rules="cds(LANC_like and DUF4135)"
+                     /tool="antismash"
+     CDS             66..218
+                     /gene="allorf_00066_00218"
+                     /gene_functions="biosynthetic-additional (lanthipeptides)
+                     predicted lanthipeptide"
+                     /gene_kind="biosynthetic-additional"
+                     /locus_tag="allorf_00066_00218"
+                     /protein_id="allorf_00066_00218"
+                     /tool="antismash"
+                     /transl_table=1
+                     /translation="MIAKYIIATNKYTSKNELVSSLFKFCFFACTFIVSDFTASSDNCC
+                     LTTAL"
+     CDS_motif       66..137
+                     /prepeptide="leader"
+                     /note="peptide class: {self.peptide_class}"
+                     /note="predicted sequence: MIAKYIIATNKYTSKNELVSSLFK"
+                     /locus_tag="allorf_00066_00218_lanthipeptide"
+                     /aSTool="lanthipeptides"
+                     /tool="antismash"
+     CDS_motif       138..218
+                     /prepeptide="core"
+                     /locus_tag="allorf_00066_00218_lanthipeptide"
+                     /peptide="lanthipeptide"
+                     /predicted_class="Class II"
+                     /score="-6.60"
+                     /molecular_weight="2702.1"
+                     /monoisotopic_mass="2700.2"
+                     /core_sequence="FCFFACTFIVSDFTASSDNCCLTTAL"
+                     /aSTool="lanthipeptides"
+                     /tool="antismash"
+                     /leader_sequence="MIAKYIIATNKYTSKNELVSSLFK"
+                     /leader_location="[65:137](+)"
+                     /alternative_weights="2720.1"
+                     /alternative_weights="2738.1"
+                     /alternative_weights="2756.1"
+     gene            complement(638..1522)
+                     /gene="cerF"
+     CDS             complement(638..1522)
+                     /codon_start=1
+                     /db_xref="GI:585724731"
+                     /gene="cerF"
+                     /gene_functions="transport (smcogs) SMCOG1000:ABC
+                     transporter ATP-binding protein (Score: 176.5; E-value:
+                     1.1e-53)"
+                     /gene_kind="transport"
+                     /note="CerF"
+                     /note="smCOG tree PNG image: smcogs/cerF.png"
+                     /product="putative cerecidin immunity protein"
+                     /protein_id="AHJ59534.1"
+                     /transl_table=11
+                     /translation="MAFEIQGLNKTFGEYKAVDDLNIRVEEGGILGMLGRNGAGKTTTI
+                     RMILDLIKPDSGQILWNNRPFSKKDLSIGYLPEERGLYPKMNVVEQLVYFGKLEGMPAN
+                     LAKRHALQWLEKLEMTPHLKKKTEELSKGNQQKIQLISAILHNPEFIILDEPFSGLDPV
+                     NAEMLKNVVLELIAQRKTIIFCSHQMDSVETFCEEICIMKNGQIVLSGALSDIKKSYQY
+                     KYMTLQTEGDIEPILKKKNFNFEKVNRTFMIKVNDGEDAFSLLEDIKTKQYIRDVSIKE
+                     PSLHQIFVEKAGA"
+     PFAM_domain     complement(650..892)
+                     /aSDomain="DUF4162"
+                     /aSTool="fullhmmer"
+                     /database="35.0"
+                     /db_xref="PF13732.9"
+                     /description="Domain of unknown function (DUF4162)"
+                     /detection="hmmscan"
+                     /domain_id="fullhmmer_cerF_0002"
+                     /evalue="1.10E-09"
+                     /label="cerF"
+                     /locus_tag="cerF"
+                     /protein_end="291"
+                     /protein_start="210"
+                     /score="38.9"
+                     /tool="antismash"
+                     /translation="GALSDIKKSYQYKYMTLQTEGDIEPILKKKNFNFEKVNRTFMIKV
+                     NDGEDAFSLLEDIKTKQYIRDVSIKEPSLHQIFVEK"
+     PFAM_domain     complement(1052..1468)
+                     /aSDomain="ABC_tran"
+                     /aSTool="fullhmmer"
+                     /database="35.0"
+                     /db_xref="PF00005.30"
+                     /db_xref="GO:0005524"
+                     /description="ABC transporter"
+                     /detection="hmmscan"
+                     /domain_id="fullhmmer_cerF_0001"
+                     /evalue="2.70E-26"
+                     /gene_ontologies="GO:0005524: ATP binding"
+                     /label="cerF"
+                     /locus_tag="cerF"
+                     /protein_end="157"
+                     /protein_start="18"
+                     /score="92.8"
+                     /tool="antismash"
+                     /translation="DDLNIRVEEGGILGMLGRNGAGKTTTIRMILDLIKPDSGQILWNN
+                     RPFSKKDLSIGYLPEERGLYPKMNVVEQLVYFGKLEGMPANLAKRHALQWLEKLEMTPH
+                     LKKKTEELSKGNQQKIQLISAILHNPEFIILDEPF"
+     gene            complement(1618..3090)
+                     /gene="cerP"
+     CDS             complement(1618..3090)
+                     /codon_start=1
+                     /db_xref="GI:585724732"
+                     /gene="cerP"
+                     /gene_functions="biosynthetic-additional
+                     (rule-based-clusters) Peptidase_S8"
+                     /gene_functions="biosynthetic-additional (smcogs)
+                     SMCOG1075:alkaline serine protease, subtilase family
+                     (Score: 270.8; E-value: 4.6e-82)"
+                     /gene_kind="biosynthetic-additional"
+                     /note="CerP"
+                     /note="smCOG tree PNG image: smcogs/cerP.png"
+                     /product="serine protease protein"
+                     /protein_id="AHJ59535.1"
+                     /sec_met_domain="Peptidase_S8 (E-value: 2e-43, bitscore:
+                     138.8, seeds: 43, tool: rule-based-clusters)"
+                     /transl_table=11
+                     /translation="MKDWLKYRNTIAKIGAGITVGLLLNLPIVGVSTISAEEMKHNQIK
+                     ENSYVFTLRQGENTDEMIKEIRDKYPDLKLEVIKEIKMLNIEGDNLERVQEAKQHLLKN
+                     YKGIIEKAGREDVVELKPPTIVKNPSNKIKYAPSQLEQEEADYSKWKWDVDKVTENGES
+                     YKIEQGNHSVKIGVIDSGIDVNHPALKGNIVSQGKILVPNVESIEDNIGHGTMIAGLIA
+                     ADGKIKGVAPKIGIVPYKVFQGSSADSSWIIKAIVEAANDGMDVINLSLGTYKSIKDPE
+                     EGAVYLAYKRAIEYANSKGSLLVASSGTEGFDISNPFQLAKQRGYENDLQLHMPGGLPG
+                     VVTVAGTNKEDRLSYYSNYGTNVDIAAPSGDYGSLWESEKVGDETAMVLTTYPTNLPQS
+                     QLSEWLGFDRGYELMIGTSLAVPKVSATAALVIAEYKEKFRLKPSNGFVKTRLYQGAKP
+                     ALGDGKKYFGKGIVNAKGALDFRNTNFKKWER"
+     PFAM_domain     complement(1723..2577)
+                     /aSDomain="Peptidase_S8"
+                     /aSTool="fullhmmer"
+                     /database="35.0"
+                     /db_xref="PF00082.25"
+                     /db_xref="GO:0006508"
+                     /db_xref="GO:0008236"
+                     /description="Subtilase family"
+                     /detection="hmmscan"
+                     /domain_id="fullhmmer_cerP_0003"
+                     /evalue="1.40E-47"
+                     /gene_ontologies="GO:0006508: proteolysis"
+                     /gene_ontologies="GO:0008236: serine-type peptidase
+                     activity"
+                     /label="cerP"
+                     /locus_tag="cerP"
+                     /protein_end="456"
+                     /protein_start="171"
+                     /score="162.4"
+                     /tool="antismash"
+                     /translation="SVKIGVIDSGIDVNHPALKGNIVSQGKILVPNVESIEDNIGHGTM
+                     IAGLIAADGKIKGVAPKIGIVPYKVFQGSSADSSWIIKAIVEAANDGMDVINLSLGTYK
+                     SIKDPEEGAVYLAYKRAIEYANSKGSLLVASSGTEGFDISNPFQLAKQRGYENDLQLHM
+                     PGGLPGVVTVAGTNKEDRLSYYSNYGTNVDIAAPSGDYGSLWESEKVGDETAMVLTTYP
+                     TNLPQSQLSEWLGFDRGYELMIGTSLAVPKVSATAALVIAEYKEKFRLKPSNGFVKTRL
+                     YQGA"
+     gene            complement(3074..5230)
+                     /gene="cerT"
+     CDS             complement(3074..5230)
+                     /codon_start=1
+                     /db_xref="GI:585724733"
+                     /gene="cerT"
+                     /gene_functions="biosynthetic-additional
+                     (rule-based-clusters) Peptidase_C39"
+                     /gene_functions="transport (smcogs) SMCOG1288:ABC
+                     transporter related protein (Score: 285.4; E-value:
+                     1.5e-86)"
+                     /gene_kind="transport"
+                     /note="CerT"
+                     /note="smCOG tree PNG image: smcogs/cerT.png"
+                     /product="ABC transporter protein"
+                     /protein_id="AHJ59536.1"
+                     /sec_met_domain="Peptidase_C39 (E-value: 1.8e-42, bitscore:
+                     134.4, seeds: 36, tool: rule-based-clusters)"
+                     /transl_table=11
+                     /translation="MAKVPFIEQMEHSECGLASLAMIFSFYEKHVSLAELREEFGVPKG
+                     GTSLYQLMHIARKNSFHVKGYKAEYEALSEVKLPAVIHWEHKHYVVLEKLTKKGAIVID
+                     PAYGRNKISKKEMEEKYSGFVLTLEPDDSFQKQKGVSHLQFFLSFVLGKKKLIALIVLA
+                     SLIIQAFALVIPFVTSWMTDHVIVPRDPSYMNMIGYSILVLLISYQVFASLRGFLIAKL
+                     QTAIDMSLMQSFIEKLLSLSYNFFENRSMGELLFRANSNVYIRQILSTKVISFLIDGIL
+                     LFTYLFFMFRYSTLLGLVVLAVGIVIFALLVMSTTVSKKLADKEVSAQAQVQRILSESI
+                     NGISDVKVMGLEKQVYKEWKERFGSQLIHAEKRSIWTALMNTLAGSIQFILPLFLLWFS
+                     GQQVLAGNMTLGSVLGFNALAISFITPIISIGSGYGELIYISSYIQRIYDVMHARSERE
+                     VNQFSGIKKLNGDIEFDNVSYRHNYFSEDAIQNVSFKIKAGEKVAIVGASGSGKSTIVK
+                     MLLGLYTPTKGKIRFDGIESEKLNLKFLRKSIGVVFQEARLFNKTVGENIIAQRKGVPP
+                     NGVIEASKQANILEDIMMLPLNFQTMVSEFGVNFSGGQRQRLILARALVTNPSILILDE
+                     ATSALDTLSERVIDENLTDMLCTRIVIAHRLSTVKNADKIIVMDKGAIVEIGSHTELLE
+                     KQGYYYQLSKAQEVKGGIKSERLA"
+     PFAM_domain     complement(3317..3763)
+                     /aSDomain="ABC_tran"
+                     /aSTool="fullhmmer"
+                     /database="35.0"
+                     /db_xref="PF00005.30"
+                     /db_xref="GO:0005524"
+                     /description="ABC transporter"
+                     /detection="hmmscan"
+                     /domain_id="fullhmmer_cerT_0006"
+                     /evalue="3.20E-38"
+                     /gene_ontologies="GO:0005524: ATP binding"
+                     /label="cerT"
+                     /locus_tag="cerT"
+                     /protein_end="638"
+                     /protein_start="489"
+                     /score="131.5"
+                     /tool="antismash"
+                     /translation="QNVSFKIKAGEKVAIVGASGSGKSTIVKMLLGLYTPTKGKIRFDG
+                     IESEKLNLKFLRKSIGVVFQEARLFNKTVGENIIAQRKGVPPNGVIEASKQANILEDIM
+                     MLPLNFQTMVSEFGVNFSGGQRQRLILARALVTNPSILILDEATS"
+     PFAM_domain     complement(3953..4759)
+                     /aSDomain="ABC_membrane"
+                     /aSTool="fullhmmer"
+                     /database="35.0"
+                     /db_xref="PF00664.26"
+                     /db_xref="GO:0005524"
+                     /db_xref="GO:0016020"
+                     /db_xref="GO:0055085"
+                     /db_xref="GO:0140359"
+                     /description="ABC transporter transmembrane region"
+                     /detection="hmmscan"
+                     /domain_id="fullhmmer_cerT_0005"
+                     /evalue="3.80E-33"
+                     /gene_ontologies="GO:0005524: ATP binding"
+                     /gene_ontologies="GO:0016020: membrane"
+                     /gene_ontologies="GO:0055085: transmembrane transport"
+                     /gene_ontologies="GO:0140359: ABC-type transporter
+                     activity"
+                     /label="cerT"
+                     /locus_tag="cerT"
+                     /protein_end="426"
+                     /protein_start="157"
+                     /score="115.4"
+                     /tool="antismash"
+                     /translation="ALIVLASLIIQAFALVIPFVTSWMTDHVIVPRDPSYMNMIGYSIL
+                     VLLISYQVFASLRGFLIAKLQTAIDMSLMQSFIEKLLSLSYNFFENRSMGELLFRANSN
+                     VYIRQILSTKVISFLIDGILLFTYLFFMFRYSTLLGLVVLAVGIVIFALLVMSTTVSKK
+                     LADKEVSAQAQVQRILSESINGISDVKVMGLEKQVYKEWKERFGSQLIHAEKRSIWTAL
+                     MNTLAGSIQFILPLFLLWFSGQQVLAGNMTLGSVLGFNALAISFITP"
+     PFAM_domain     complement(4835..5221)
+                     /aSDomain="Peptidase_C39"
+                     /aSTool="fullhmmer"
+                     /database="35.0"
+                     /db_xref="PF03412.18"
+                     /db_xref="GO:0005524"
+                     /db_xref="GO:0006508"
+                     /db_xref="GO:0008233"
+                     /db_xref="GO:0016020"
+                     /description="Peptidase C39 family"
+                     /detection="hmmscan"
+                     /domain_id="fullhmmer_cerT_0004"
+                     /evalue="2.20E-39"
+                     /gene_ontologies="GO:0005524: ATP binding"
+                     /gene_ontologies="GO:0006508: proteolysis"
+                     /gene_ontologies="GO:0008233: peptidase activity"
+                     /gene_ontologies="GO:0016020: membrane"
+                     /label="cerT"
+                     /locus_tag="cerT"
+                     /protein_end="132"
+                     /protein_start="3"
+                     /score="134.4"
+                     /tool="antismash"
+                     /translation="VPFIEQMEHSECGLASLAMIFSFYEKHVSLAELREEFGVPKGGTS
+                     LYQLMHIARKNSFHVKGYKAEYEALSEVKLPAVIHWEHKHYVVLEKLTKKGAIVIDPAY
+                     GRNKISKKEMEEKYSGFVLTLEPDD"
+     gene            complement(5251..5505)
+                     /gene="cerR"
+     CDS             complement(5251..5505)
+                     /codon_start=1
+                     /db_xref="GI:585724734"
+                     /gene="cerR"
+                     /note="CerR"
+                     /product="transcription regulation protein"
+                     /protein_id="AHJ59537.1"
+                     /transl_table=11
+                     /translation="MKKVLSDREKEVAVLIARGLKDVEIARELFISRRRVGELVASIKR
+                     KLEIHSRVQIGIAAYFLGLITFEFNFNHGNHEGVAMINS"
+     PFAM_domain     complement(5341..5496)
+                     /aSDomain="GerE"
+                     /aSTool="fullhmmer"
+                     /database="35.0"
+                     /db_xref="PF00196.22"
+                     /db_xref="GO:0006355"
+                     /description="Bacterial regulatory proteins, luxR family"
+                     /detection="hmmscan"
+                     /domain_id="fullhmmer_cerR_0007"
+                     /evalue="2.20E-12"
+                     /gene_ontologies="GO:0006355: regulation of DNA-templated
+                     transcription"
+                     /label="cerR"
+                     /locus_tag="cerR"
+                     /protein_end="55"
+                     /protein_start="3"
+                     /score="46.5"
+                     /tool="antismash"
+                     /translation="VLSDREKEVAVLIARGLKDVEIARELFISRRRVGELVASIKRKLE
+                     IHSRVQI"
+     gene            5774..6703
+                     /gene="comQ"
+     CDS             5774..6703
+                     /codon_start=1
+                     /db_xref="GI:585724735"
+                     /gene="comQ"
+                     /note="ComQ"
+                     /product="pre-ComX modification protein"
+                     /protein_id="AHJ59538.1"
+                     /transl_table=11
+                     /translation="MIYSLQNELILRAKKLVYGHFFESTLRQCSSEYIEYKFNDSTRFA
+                     NITLVHYEIFQDNQNEEEKQLLLTIIELLMLSLDIMDDIQDEDFLEGPWTKHPIATNLN
+                     IIMGFLLICLQEVDKSSLSIQMKNWLKNEIHSCILNSINGQQLDLKNEIHSEKDYIDMV
+                     THKSGYLIKLACLLGTGNINPIQRSLIENYAICIGVINQIKNDMRDIMQWDKKNDFLNL
+                     KKTLPILYYLNSKNDNFILIKKFFNQEIQYNELNNQTLETLKHILLYGGSMEYCSVMQN
+                     LYVYKCQRYIEQLSISQANKDRLIDTLI"
+     PFAM_domain     5915..6517
+                     /aSDomain="polyprenyl_synt"
+                     /aSTool="fullhmmer"
+                     /database="35.0"
+                     /db_xref="PF00348.20"
+                     /db_xref="GO:0008299"
+                     /description="Polyprenyl synthetase"
+                     /detection="hmmscan"
+                     /domain_id="fullhmmer_comQ_0008"
+                     /evalue="7.30E-15"
+                     /gene_ontologies="GO:0008299: isoprenoid biosynthetic
+                     process"
+                     /label="comQ"
+                     /locus_tag="comQ"
+                     /protein_end="248"
+                     /protein_start="47"
+                     /score="54.9"
+                     /tool="antismash"
+                     /translation="TLVHYEIFQDNQNEEEKQLLLTIIELLMLSLDIMDDIQDEDFLEG
+                     PWTKHPIATNLNIIMGFLLICLQEVDKSSLSIQMKNWLKNEIHSCILNSINGQQLDLKN
+                     EIHSEKDYIDMVTHKSGYLIKLACLLGTGNINPIQRSLIENYAICIGVINQIKNDMRDI
+                     MQWDKKNDFLNLKKTLPILYYLNSKNDNFILIKKFFNQ"
+     gene            complement(6705..6872)
+                     /gene="comX"
+     CDS             complement(6705..6872)
+                     /codon_start=1
+                     /db_xref="GI:585724736"
+                     /gene="comX"
+                     /note="ComX"
+                     /product="precursor of competence stimulating peptide"
+                     /protein_id="AHJ59539.1"
+                     /transl_table=11
+                     /translation="MIRELVERILEDIQFKNVCSQGTIAIDGISKQELEIILGTLDKST
+                     LLSKAAETWK"
+     gene            6989..9304
+                     /gene="comP"
+     CDS             6989..9304
+                     /codon_start=1
+                     /db_xref="GI:585724737"
+                     /gene="comP"
+                     /gene_functions="regulatory (smcogs) SMCOG1048:sensor
+                     histidine kinase (Score: 142.1; E-value: 4.2e-43)"
+                     /gene_kind="regulatory"
+                     /note="ComP"
+                     /product="histidine kinase protein"
+                     /protein_id="AHJ59540.1"
+                     /transl_table=11
+                     /translation="MIKQRPIYFVISLIIFYLIIQSYILYKFYQPYSGIIASKENEKTY
+                     TISQIDTSGWAAKTALKVGDEIYKVDGENPYLGVFKRYQNQFLNATEIQSIKNDKISTY
+                     STAATSDNEELLITLYLPMIFSLTILSLCFILYRNKAIRREERYFMLFLLATSISLSAS
+                     SISSKSDFGGLLIISISFQSVSLFLTLFLYQLFKRKEIIIIHKNLVRFHICLYMTVVTT
+                     GLLSVTFFPNLQQVSAYTDLAYLCFSILLSVYFLLKGYIKYRNTLHRPFFKFMLVIQCI
+                     SFGPFIMLYALPRILLNAAMIRADIAALFLFCIPIGYFYLILTKQIFDIDFMFDRVRYY
+                     SMLSLIPTIIITLIISWGINPDERFLIRLMQNFIIIFPLNILFLVIKERLDFTFRNQLF
+                     RNKTNLHVSIDQFAQQLSSIMKVKDLEKKFMNEIISLLKPCFIQFIEFDIKQNTYNCYK
+                     SYGETEKFNLSKKKQWGMESGYINDLLEDDGCIGIYLYSTQNTKHYIWVGNKTNNIKFN
+                     INEKTWFIAIVKYVRLVYENLNSVNQIIQSLEKESLANKTHSATLSRLLFQISETERRR
+                     LAADLHDAALQDQIVWYRKLETVLKEHTVPGELQGQLEKIKFGMLDVIQQIRDTCNELK
+                     PALLSEIGLIGALKELLAQMQLRTNFRIQFEYDSIQENHYEFDKILSIYRIIQELLNNA
+                     DKHSNATLINIFLWEENNCIYLDYRDNGIGFNTQVPYSSNKHMGLSGIKGRVQGIGGEI
+                     QLISEIGNGLQVNITIPR"
+     PFAM_domain     8705..8905
+                     /aSDomain="HisKA_3"
+                     /aSTool="fullhmmer"
+                     /database="35.0"
+                     /db_xref="PF07730.16"
+                     /db_xref="GO:0000155"
+                     /db_xref="GO:0000160"
+                     /db_xref="GO:0016020"
+                     /db_xref="GO:0046983"
+                     /description="Histidine kinase"
+                     /detection="hmmscan"
+                     /domain_id="fullhmmer_comP_0009"
+                     /evalue="1.80E-06"
+                     /gene_ontologies="GO:0000155: phosphorelay sensor kinase
+                     activity"
+                     /gene_ontologies="GO:0000160: phosphorelay signal
+                     transduction system"
+                     /gene_ontologies="GO:0016020: membrane"
+                     /gene_ontologies="GO:0046983: protein dimerization
+                     activity"
+                     /label="comP"
+                     /locus_tag="comP"
+                     /protein_end="639"
+                     /protein_start="572"
+                     /score="28.5"
+                     /tool="antismash"
+                     /translation="ERRRLAADLHDAALQDQIVWYRKLETVLKEHTVPGELQGQLEKIK
+                     FGMLDVIQQIRDTCNELKPALL"
+     PFAM_domain     9032..9298
+                     /aSDomain="HATPase_c"
+                     /aSTool="fullhmmer"
+                     /database="35.0"
+                     /db_xref="PF02518.29"
+                     /description="Histidine kinase-, DNA gyrase B-, and
+                     HSP90-like ATPase"
+                     /detection="hmmscan"
+                     /domain_id="fullhmmer_comP_0010"
+                     /evalue="4.10E-06"
+                     /label="comP"
+                     /locus_tag="comP"
+                     /protein_end="770"
+                     /protein_start="681"
+                     /score="27.4"
+                     /tool="antismash"
+                     /translation="SIYRIIQELLNNADKHSNATLINIFLWEENNCIYLDYRDNGIGFN
+                     TQVPYSSNKHMGLSGIKGRVQGIGGEIQLISEIGNGLQVNITIP"
+     gene            9310..9963
+                     /gene="comA"
+     CDS             9310..9963
+                     /codon_start=1
+                     /db_xref="GI:585724738"
+                     /gene="comA"
+                     /gene_functions="regulatory (smcogs) SMCOG1016:LuxR family
+                     DNA-binding response regulator (Score: 117.9; E-value:
+                     6e-36)"
+                     /gene_kind="regulatory"
+                     /note="ComA"
+                     /note="smCOG tree PNG image: smcogs/comA.png"
+                     /product="response regulator protein"
+                     /protein_id="AHJ59541.1"
+                     /transl_table=11
+                     /translation="MIHVLIVDDHQIVGEGTKNMIELEADIQATYILNEQEAISQSSKT
+                     PFDIYLLDMNMPNYSGLDVAQKLLHIQPDAKIILYTGFEYLSQFNLLIDSGISGIVSKS
+                     ASQQELLMAIRAVLNGYTLIPISLLRQLRVEDMTVDNLDTKRASSHVTITQKELEILES
+                     IAKGKSNKQIADELYMSSRAVEYNLTKLFKKFKVSSRSEALAEAVRKGIINVNV"
+     PFAM_domain     9319..9651
+                     /aSDomain="Response_reg"
+                     /aSTool="fullhmmer"
+                     /database="35.0"
+                     /db_xref="PF00072.27"
+                     /db_xref="GO:0000160"
+                     /description="Response regulator receiver domain"
+                     /detection="hmmscan"
+                     /domain_id="fullhmmer_comA_0011"
+                     /evalue="1.60E-19"
+                     /gene_ontologies="GO:0000160: phosphorelay signal
+                     transduction system"
+                     /label="comA"
+                     /locus_tag="comA"
+                     /protein_end="114"
+                     /protein_start="3"
+                     /score="70.3"
+                     /tool="antismash"
+                     /translation="VLIVDDHQIVGEGTKNMIELEADIQATYILNEQEAISQSSKTPFD
+                     IYLLDMNMPNYSGLDVAQKLLHIQPDAKIILYTGFEYLSQFNLLIDSGISGIVSKSASQ
+                     QELLMAI"
+     PFAM_domain     9766..9924
+                     /aSDomain="GerE"
+                     /aSTool="fullhmmer"
+                     /database="35.0"
+                     /db_xref="PF00196.22"
+                     /db_xref="GO:0006355"
+                     /description="Bacterial regulatory proteins, luxR family"
+                     /detection="hmmscan"
+                     /domain_id="fullhmmer_comA_0012"
+                     /evalue="2.40E-15"
+                     /gene_ontologies="GO:0006355: regulation of DNA-templated
+                     transcription"
+                     /label="comA"
+                     /locus_tag="comA"
+                     /protein_end="205"
+                     /protein_start="152"
+                     /score="56.0"
+                     /tool="antismash"
+                     /translation="ITQKELEILESIAKGKSNKQIADELYMSSRAVEYNLTKLFKKFKV
+                     SSRSEALA"
+     gene            complement(10001..13159)
+                     /gene="cerM"
+     CDS             complement(10001..13159)
+                     /codon_start=1
+                     /db_xref="GI:585724739"
+                     /gene="cerM"
+                     /gene_functions="biosynthetic (rule-based-clusters)
+                     lanthipeptide-class-ii: LANC_like"
+                     /gene_functions="biosynthetic (rule-based-clusters)
+                     lanthipeptide-class-ii: DUF4135"
+                     /gene_functions="biosynthetic-additional (smcogs)
+                     SMCOG1070:lanthionine synthetase C family protein (Score:
+                     1015.1; E-value: 0.0)"
+                     /gene_kind="biosynthetic"
+                     /note="CerM"
+                     /product="cerecidin modification protein"
+                     /protein_id="AHJ59542.1"
+                     /sec_met_domain="DUF4135 (E-value: 1.3e-110, bitscore:
+                     360.1, seeds: 79, tool: rule-based-clusters)"
+                     /sec_met_domain="LANC_like (E-value: 1.1e-78, bitscore:
+                     254.5, seeds: 47, tool: rule-based-clusters)"
+                     /transl_table=11
+                     /translation="MLIHSYINEKAFAKSLNLKERYKTLMSRRDLLLSEDLNLAQLNKW
+                     IDKMFRSNKADFDFKLKMNEMTKEDFASLIEKIPESKEHLYIDELNEHVNLRVLEMGIE
+                     LCDSKPLSAEEDLGFIEFVRPFALYAAEMIDSSLKYRLNKICYEHEEIKEMLVRSLVEE
+                     LLNNAVRSLVLEFNIAKLREELIGETPEERFLSFVREKARNKENLIAFYEEYATLTRRL
+                     ILRTEYFIQNVQMLLFRLNENWLQLQKEFQLQDASLSEIKVGLGDTHQEGKTVVQLVFS
+                     SGKEILYKPKSMEITKSYHAFLEWMNEVSGSIQLPSYKVLDCGEYGWEEKILYKPCSSK
+                     EEVERYYSRFGKLIGLMHMLKGADLHFENIIAHGEYPYIIDSETIFHQYPKLNFPDSAE
+                     VKLKYEQSDSVIGSGLLPQAMFQNIDGKGIDLSALNGKEQDLPFKVLALNQNSKDEMEF
+                     TMKEAKSQSAKNLPKLGVEEIYVEDYLNFIIDGFQEMCKFFIEYKDEILSERGPLITFK
+                     ENKIRIVARATQQYCNFLQESTHPDYMRDSILLEQLFERVWYYPYENKELVIHEIQDLL
+                     RADVPIFTTFTDSRDLYSSTGEKMEDFFKESGYEQVYNKIYHFDEKELEKQRGWLKLAI
+                     QGNREIDIKVRRKESYRSELLENHQETILQEAINIGESLVENVVLSDDKTTASWLQANV
+                     IHDKWYVAPMKQNLYDGLGGVALFLLYLNKVTGNEKYLEVAHKALKSAMNPLSKAKGLL
+                     STFLGKYSLLYPLAHFQSISPRKEYQDFLEEIKVELKERLKEEEEFDLLSGSAGVIQVA
+                     LNVFEMTKDQDYLDLADMYSKHLAENVSILENGVAWKNKHTNSYLGGFSHGTSGIAWSL
+                     WRSGIMNRNQEYIDLAKKALAYDRSLFDKEESAWKDTRESEKKCLHQWCHGSTGIGLSR
+                     VLVRSYEEDVEMDEEIRVAVDNVRKYGFKNNDTLCHGNMGDTELLLAVSQLYGNKELYE
+                     QAIQIGIQVINNYRETGSYQCDAPDDIQSFGMFVGIAGVGMQLLRLLQPNEIPSVMTLE
+                     NVKG"
+     PFAM_domain     complement(10025..11053)
+                     /aSDomain="LANC_like"
+                     /aSTool="fullhmmer"
+                     /database="35.0"
+                     /db_xref="PF05147.16"
+                     /db_xref="GO:0031179"
+                     /description="Lanthionine synthetase C-like protein"
+                     /detection="hmmscan"
+                     /domain_id="fullhmmer_cerM_0014"
+                     /evalue="5.20E-73"
+                     /gene_ontologies="GO:0031179: peptide modification"
+                     /label="cerM"
+                     /locus_tag="cerM"
+                     /protein_end="1045"
+                     /protein_start="702"
+                     /score="245.8"
+                     /tool="antismash"
+                     /translation="PMKQNLYDGLGGVALFLLYLNKVTGNEKYLEVAHKALKSAMNPLS
+                     KAKGLLSTFLGKYSLLYPLAHFQSISPRKEYQDFLEEIKVELKERLKEEEEFDLLSGSA
+                     GVIQVALNVFEMTKDQDYLDLADMYSKHLAENVSILENGVAWKNKHTNSYLGGFSHGTS
+                     GIAWSLWRSGIMNRNQEYIDLAKKALAYDRSLFDKEESAWKDTRESEKKCLHQWCHGST
+                     GIGLSRVLVRSYEEDVEMDEEIRVAVDNVRKYGFKNNDTLCHGNMGDTELLLAVSQLYG
+                     NKELYEQAIQIGIQVINNYRETGSYQCDAPDDIQSFGMFVGIAGVGMQLLRLLQPNEIP
+                     SVM"
+     aSDomain        complement(10046..12799)
+                     /aSDomain="TIGR03897"
+                     /aSTool="tigrfam"
+                     /description="lanti_2_LanM: type 2 lantibiotic biosynthesis
+                     protein LanM"
+                     /detection="hmmscan"
+                     /domain_id="TIGRFam_cerM_0001"
+                     /evalue="0.00E+00"
+                     /identifier="TIGR03897"
+                     /label="cerM"
+                     /locus_tag="cerM"
+                     /protein_end="1038"
+                     /protein_start="120"
+                     /score="1016.2"
+                     /tool="antismash"
+                     /translation="EFVRPFALYAAEMIDSSLKYRLNKICYEHEEIKEMLVRSLVEELL
+                     NNAVRSLVLEFNIAKLREELIGETPEERFLSFVREKARNKENLIAFYEEYATLTRRLIL
+                     RTEYFIQNVQMLLFRLNENWLQLQKEFQLQDASLSEIKVGLGDTHQEGKTVVQLVFSSG
+                     KEILYKPKSMEITKSYHAFLEWMNEVSGSIQLPSYKVLDCGEYGWEEKILYKPCSSKEE
+                     VERYYSRFGKLIGLMHMLKGADLHFENIIAHGEYPYIIDSETIFHQYPKLNFPDSAEVK
+                     LKYEQSDSVIGSGLLPQAMFQNIDGKGIDLSALNGKEQDLPFKVLALNQNSKDEMEFTM
+                     KEAKSQSAKNLPKLGVEEIYVEDYLNFIIDGFQEMCKFFIEYKDEILSERGPLITFKEN
+                     KIRIVARATQQYCNFLQESTHPDYMRDSILLEQLFERVWYYPYENKELVIHEIQDLLRA
+                     DVPIFTTFTDSRDLYSSTGEKMEDFFKESGYEQVYNKIYHFDEKELEKQRGWLKLAIQG
+                     NREIDIKVRRKESYRSELLENHQETILQEAINIGESLVENVVLSDDKTTASWLQANVIH
+                     DKWYVAPMKQNLYDGLGGVALFLLYLNKVTGNEKYLEVAHKALKSAMNPLSKAKGLLST
+                     FLGKYSLLYPLAHFQSISPRKEYQDFLEEIKVELKERLKEEEEFDLLSGSAGVIQVALN
+                     VFEMTKDQDYLDLADMYSKHLAENVSILENGVAWKNKHTNSYLGGFSHGTSGIAWSLWR
+                     SGIMNRNQEYIDLAKKALAYDRSLFDKEESAWKDTRESEKKCLHQWCHGSTGIGLSRVL
+                     VRSYEEDVEMDEEIRVAVDNVRKYGFKNNDTLCHGNMGDTELLLAVSQLYGNKELYEQA
+                     IQIGIQVINNYRETGSYQCDAPDDIQSFGMFVGIAGVGMQLLRLLQP"
+     PFAM_domain     complement(11405..12517)
+                     /aSDomain="DUF4135"
+                     /aSTool="fullhmmer"
+                     /database="35.0"
+                     /db_xref="PF13575.9"
+                     /description="Domain of unknown function (DUF4135)"
+                     /detection="hmmscan"
+                     /domain_id="fullhmmer_cerM_0013"
+                     /evalue="7.30E-110"
+                     /label="cerM"
+                     /locus_tag="cerM"
+                     /protein_end="585"
+                     /protein_start="214"
+                     /score="367.9"
+                     /tool="antismash"
+                     /translation="YATLTRRLILRTEYFIQNVQMLLFRLNENWLQLQKEFQLQDASLS
+                     EIKVGLGDTHQEGKTVVQLVFSSGKEILYKPKSMEITKSYHAFLEWMNEVSGSIQLPSY
+                     KVLDCGEYGWEEKILYKPCSSKEEVERYYSRFGKLIGLMHMLKGADLHFENIIAHGEYP
+                     YIIDSETIFHQYPKLNFPDSAEVKLKYEQSDSVIGSGLLPQAMFQNIDGKGIDLSALNG
+                     KEQDLPFKVLALNQNSKDEMEFTMKEAKSQSAKNLPKLGVEEIYVEDYLNFIIDGFQEM
+                     CKFFIEYKDEILSERGPLITFKENKIRIVARATQQYCNFLQESTHPDYMRDSILLEQLF
+                     ERVWYYPYENKELVIHEIQDLLRADVPIFTT"
+     gene            complement(13315..13548)
+                     /gene="cerA7"
+     CDS             complement(13315..13548)
+                     /codon_start=1
+                     /db_xref="GI:585724740"
+                     /gene="cerA7"
+                     /gene_functions="biosynthetic-additional (lanthipeptides)
+                     predicted lanthipeptide"
+                     /gene_kind="biosynthetic-additional"
+                     /note="CerA7"
+                     /product="cerecidin precursor"
+                     /protein_id="AHJ59543.1"
+                     /transl_table=11
+                     /translation="MSKGYKFTKEELVEAWKDPQVREKLKDLPNHPSGKALNELSEEEL
+                     AEIQGASDVQPETTPLCVGVIIGITASIKICK"
+     CDS_motif       complement(13396..13548)
+                     /prepeptide="leader"
+                     /note="peptide class: {self.peptide_class}"
+                     /note="predicted sequence:
+                     MSKGYKFTKEELVEAWKDPQVREKLKDLPNHPSGKALNELSEEELAEIQGA"
+                     /locus_tag="cerA7_lanthipeptide"
+                     /aSTool="lanthipeptides"
+                     /tool="antismash"
+     CDS_motif       complement(13315..13395)
+                     /prepeptide="core"
+                     /locus_tag="cerA7_lanthipeptide"
+                     /peptide="lanthipeptide"
+                     /predicted_class="Class II"
+                     /score="4.20"
+                     /molecular_weight="2596.1"
+                     /monoisotopic_mass="2594.4"
+                     /core_sequence="SDVQPETTPLCVGVIIGITASIKICK"
+                     /aSTool="lanthipeptides"
+                     /tool="antismash"
+                     /leader_sequence="MSKGYKFTKEELVEAWKDPQVREKLKDLPNHPSGKALNELS
+                     EEELAEIQGA"
+                     /leader_location="[13395:13548](-)"
+                     /alternative_weights="2614.1"
+                     /alternative_weights="2632.1"
+                     /alternative_weights="2650.2"
+     PFAM_domain     complement(13321..13461)
+                     /aSDomain="Mersacidin"
+                     /aSTool="fullhmmer"
+                     /database="35.0"
+                     /db_xref="PF16934.8"
+                     /db_xref="GO:0050830"
+                     /description="Two-component Enterococcus faecalis cytolysin
+                     (EFC)"
+                     /detection="hmmscan"
+                     /domain_id="fullhmmer_cerA7_0015"
+                     /evalue="1.40E-15"
+                     /gene_ontologies="GO:0050830: defense response to
+                     Gram-positive bacterium"
+                     /label="cerA7"
+                     /locus_tag="cerA7"
+                     /protein_end="76"
+                     /protein_start="29"
+                     /score="56.9"
+                     /tool="antismash"
+                     /translation="NHPSGKALNELSEEELAEIQGASDVQPETTPLCVGVIIGITASIK
+                     IC"
+     aSDomain        complement(13351..13449)
+                     /aSDomain="TIGR03893"
+                     /aSTool="tigrfam"
+                     /description="lant_SP_1948: type 2 lantibiotic, SP_1948
+                     family"
+                     /detection="hmmscan"
+                     /domain_id="TIGRFam_cerA7_0003"
+                     /evalue="2.30E-11"
+                     /identifier="TIGR03893"
+                     /label="cerA7"
+                     /locus_tag="cerA7"
+                     /protein_end="66"
+                     /protein_start="33"
+                     /score="41.9"
+                     /tool="antismash"
+                     /translation="GKALNELSEEELAEIQGASDVQPETTPLCVGVI"
+     aSDomain        complement(13396..13518)
+                     /aSDomain="TIGR03898"
+                     /aSTool="tigrfam"
+                     /description="lanti_MRSA_kill: type 2 lantibiotic,
+                     mersacidin/lichenicidin family"
+                     /detection="hmmscan"
+                     /domain_id="TIGRFam_cerA7_0002"
+                     /evalue="2.50E-17"
+                     /identifier="TIGR03898"
+                     /label="cerA7"
+                     /locus_tag="cerA7"
+                     /protein_end="51"
+                     /protein_start="10"
+                     /score="60.6"
+                     /tool="antismash"
+                     /translation="ELVEAWKDPQVREKLKDLPNHPSGKALNELSEEELAEIQGA"
+     gene            complement(13580..13813)
+                     /gene="cerA6"
+     CDS             complement(13580..13813)
+                     /codon_start=1
+                     /db_xref="GI:585724741"
+                     /gene="cerA6"
+                     /gene_functions="biosynthetic-additional (lanthipeptides)
+                     predicted lanthipeptide"
+                     /gene_kind="biosynthetic-additional"
+                     /note="CerA6"
+                     /product="cerecidin precursor"
+                     /protein_id="AHJ59544.1"
+                     /transl_table=11
+                     /translation="MSKGYKFTKEELVEAWKDPQVREKLNDLPKHPSGKALNELSEEEL
+                     AEIQGASDVQPETTPLCVGVIIGLTTSIKICK"
+     CDS_motif       complement(13661..13813)
+                     /prepeptide="leader"
+                     /note="peptide class: {self.peptide_class}"
+                     /note="predicted sequence:
+                     MSKGYKFTKEELVEAWKDPQVREKLNDLPKHPSGKALNELSEEELAEIQGA"
+                     /locus_tag="cerA6_lanthipeptide"
+                     /aSTool="lanthipeptides"
+                     /tool="antismash"
+     CDS_motif       complement(13580..13660)
+                     /prepeptide="core"
+                     /locus_tag="cerA6_lanthipeptide"
+                     /peptide="lanthipeptide"
+                     /predicted_class="Class II"
+                     /score="4.20"
+                     /molecular_weight="2608.1"
+                     /monoisotopic_mass="2606.5"
+                     /core_sequence="SDVQPETTPLCVGVIIGLTTSIKICK"
+                     /aSTool="lanthipeptides"
+                     /tool="antismash"
+                     /leader_sequence="MSKGYKFTKEELVEAWKDPQVREKLNDLPKHPSGKALNELS
+                     EEELAEIQGA"
+                     /leader_location="[13660:13813](-)"
+                     /alternative_weights="2626.1"
+                     /alternative_weights="2644.1"
+                     /alternative_weights="2662.2"
+                     /alternative_weights="2680.2"
+     PFAM_domain     complement(13586..13726)
+                     /aSDomain="Mersacidin"
+                     /aSTool="fullhmmer"
+                     /database="35.0"
+                     /db_xref="PF16934.8"
+                     /db_xref="GO:0050830"
+                     /description="Two-component Enterococcus faecalis cytolysin
+                     (EFC)"
+                     /detection="hmmscan"
+                     /domain_id="fullhmmer_cerA6_0016"
+                     /evalue="8.50E-15"
+                     /gene_ontologies="GO:0050830: defense response to
+                     Gram-positive bacterium"
+                     /label="cerA6"
+                     /locus_tag="cerA6"
+                     /protein_end="76"
+                     /protein_start="29"
+                     /score="54.4"
+                     /tool="antismash"
+                     /translation="KHPSGKALNELSEEELAEIQGASDVQPETTPLCVGVIIGLTTSIK
+                     IC"
+     aSDomain        complement(13616..13714)
+                     /aSDomain="TIGR03893"
+                     /aSTool="tigrfam"
+                     /description="lant_SP_1948: type 2 lantibiotic, SP_1948
+                     family"
+                     /detection="hmmscan"
+                     /domain_id="TIGRFam_cerA6_0005"
+                     /evalue="3.30E-11"
+                     /identifier="TIGR03893"
+                     /label="cerA6"
+                     /locus_tag="cerA6"
+                     /protein_end="66"
+                     /protein_start="33"
+                     /score="41.4"
+                     /tool="antismash"
+                     /translation="GKALNELSEEELAEIQGASDVQPETTPLCVGVI"
+     aSDomain        complement(13661..13783)
+                     /aSDomain="TIGR03898"
+                     /aSTool="tigrfam"
+                     /description="lanti_MRSA_kill: type 2 lantibiotic,
+                     mersacidin/lichenicidin family"
+                     /detection="hmmscan"
+                     /domain_id="TIGRFam_cerA6_0004"
+                     /evalue="8.00E-17"
+                     /identifier="TIGR03898"
+                     /label="cerA6"
+                     /locus_tag="cerA6"
+                     /protein_end="51"
+                     /protein_start="10"
+                     /score="58.9"
+                     /tool="antismash"
+                     /translation="ELVEAWKDPQVREKLNDLPKHPSGKALNELSEEELAEIQGA"
+     gene            complement(13845..14078)
+                     /gene="cerA5"
+     CDS             complement(13845..14078)
+                     /codon_start=1
+                     /db_xref="GI:585724742"
+                     /gene="cerA5"
+                     /gene_functions="biosynthetic-additional (lanthipeptides)
+                     predicted lanthipeptide"
+                     /gene_kind="biosynthetic-additional"
+                     /note="CerA5"
+                     /product="cerecidin precursor"
+                     /protein_id="AHJ59545.1"
+                     /transl_table=11
+                     /translation="MSKGYKFTKEELVEAWKDPQVREKLNDLPKHPSGKALNELSEEEL
+                     AEIQGASDVQPETTPLCVGVIIGLTTSIKICK"
+     CDS_motif       complement(13926..14078)
+                     /prepeptide="leader"
+                     /note="peptide class: {self.peptide_class}"
+                     /note="predicted sequence:
+                     MSKGYKFTKEELVEAWKDPQVREKLNDLPKHPSGKALNELSEEELAEIQGA"
+                     /locus_tag="cerA5_lanthipeptide"
+                     /aSTool="lanthipeptides"
+                     /tool="antismash"
+     CDS_motif       complement(13845..13925)
+                     /prepeptide="core"
+                     /locus_tag="cerA5_lanthipeptide"
+                     /peptide="lanthipeptide"
+                     /predicted_class="Class II"
+                     /score="4.20"
+                     /molecular_weight="2608.1"
+                     /monoisotopic_mass="2606.5"
+                     /core_sequence="SDVQPETTPLCVGVIIGLTTSIKICK"
+                     /aSTool="lanthipeptides"
+                     /tool="antismash"
+                     /leader_sequence="MSKGYKFTKEELVEAWKDPQVREKLNDLPKHPSGKALNELS
+                     EEELAEIQGA"
+                     /leader_location="[13925:14078](-)"
+                     /alternative_weights="2626.1"
+                     /alternative_weights="2644.1"
+                     /alternative_weights="2662.2"
+                     /alternative_weights="2680.2"
+     PFAM_domain     complement(13851..13991)
+                     /aSDomain="Mersacidin"
+                     /aSTool="fullhmmer"
+                     /database="35.0"
+                     /db_xref="PF16934.8"
+                     /db_xref="GO:0050830"
+                     /description="Two-component Enterococcus faecalis cytolysin
+                     (EFC)"
+                     /detection="hmmscan"
+                     /domain_id="fullhmmer_cerA5_0017"
+                     /evalue="8.50E-15"
+                     /gene_ontologies="GO:0050830: defense response to
+                     Gram-positive bacterium"
+                     /label="cerA5"
+                     /locus_tag="cerA5"
+                     /protein_end="76"
+                     /protein_start="29"
+                     /score="54.4"
+                     /tool="antismash"
+                     /translation="KHPSGKALNELSEEELAEIQGASDVQPETTPLCVGVIIGLTTSIK
+                     IC"
+     aSDomain        complement(13881..13979)
+                     /aSDomain="TIGR03893"
+                     /aSTool="tigrfam"
+                     /description="lant_SP_1948: type 2 lantibiotic, SP_1948
+                     family"
+                     /detection="hmmscan"
+                     /domain_id="TIGRFam_cerA5_0007"
+                     /evalue="3.30E-11"
+                     /identifier="TIGR03893"
+                     /label="cerA5"
+                     /locus_tag="cerA5"
+                     /protein_end="66"
+                     /protein_start="33"
+                     /score="41.4"
+                     /tool="antismash"
+                     /translation="GKALNELSEEELAEIQGASDVQPETTPLCVGVI"
+     aSDomain        complement(13926..14048)
+                     /aSDomain="TIGR03898"
+                     /aSTool="tigrfam"
+                     /description="lanti_MRSA_kill: type 2 lantibiotic,
+                     mersacidin/lichenicidin family"
+                     /detection="hmmscan"
+                     /domain_id="TIGRFam_cerA5_0006"
+                     /evalue="8.00E-17"
+                     /identifier="TIGR03898"
+                     /label="cerA5"
+                     /locus_tag="cerA5"
+                     /protein_end="51"
+                     /protein_start="10"
+                     /score="58.9"
+                     /tool="antismash"
+                     /translation="ELVEAWKDPQVREKLNDLPKHPSGKALNELSEEELAEIQGA"
+     gene            complement(14110..14343)
+                     /gene="cerA4"
+     CDS             complement(14110..14343)
+                     /codon_start=1
+                     /db_xref="GI:585724743"
+                     /gene="cerA4"
+                     /gene_functions="biosynthetic-additional (lanthipeptides)
+                     predicted lanthipeptide"
+                     /gene_kind="biosynthetic-additional"
+                     /note="CerA4"
+                     /product="cerecidin precursor"
+                     /protein_id="AHJ59546.1"
+                     /transl_table=11
+                     /translation="MSKGYKFTKEELVEAWKDPQVREKLKDLPKHPSGKALNELSEEEL
+                     AEIQGASDVQPETTPLCVGVIIGLTTSIKICK"
+     CDS_motif       complement(14191..14343)
+                     /prepeptide="leader"
+                     /note="peptide class: {self.peptide_class}"
+                     /note="predicted sequence:
+                     MSKGYKFTKEELVEAWKDPQVREKLKDLPKHPSGKALNELSEEELAEIQGA"
+                     /locus_tag="cerA4_lanthipeptide"
+                     /aSTool="lanthipeptides"
+                     /tool="antismash"
+     CDS_motif       complement(14110..14190)
+                     /prepeptide="core"
+                     /locus_tag="cerA4_lanthipeptide"
+                     /peptide="lanthipeptide"
+                     /predicted_class="Class II"
+                     /score="4.20"
+                     /molecular_weight="2608.1"
+                     /monoisotopic_mass="2606.5"
+                     /core_sequence="SDVQPETTPLCVGVIIGLTTSIKICK"
+                     /aSTool="lanthipeptides"
+                     /tool="antismash"
+                     /leader_sequence="MSKGYKFTKEELVEAWKDPQVREKLKDLPKHPSGKALNELS
+                     EEELAEIQGA"
+                     /leader_location="[14190:14343](-)"
+                     /alternative_weights="2626.1"
+                     /alternative_weights="2644.1"
+                     /alternative_weights="2662.2"
+                     /alternative_weights="2680.2"
+     PFAM_domain     complement(14116..14256)
+                     /aSDomain="Mersacidin"
+                     /aSTool="fullhmmer"
+                     /database="35.0"
+                     /db_xref="PF16934.8"
+                     /db_xref="GO:0050830"
+                     /description="Two-component Enterococcus faecalis cytolysin
+                     (EFC)"
+                     /detection="hmmscan"
+                     /domain_id="fullhmmer_cerA4_0018"
+                     /evalue="9.20E-15"
+                     /gene_ontologies="GO:0050830: defense response to
+                     Gram-positive bacterium"
+                     /label="cerA4"
+                     /locus_tag="cerA4"
+                     /protein_end="76"
+                     /protein_start="29"
+                     /score="54.3"
+                     /tool="antismash"
+                     /translation="KHPSGKALNELSEEELAEIQGASDVQPETTPLCVGVIIGLTTSIK
+                     IC"
+     aSDomain        complement(14146..14244)
+                     /aSDomain="TIGR03893"
+                     /aSTool="tigrfam"
+                     /description="lant_SP_1948: type 2 lantibiotic, SP_1948
+                     family"
+                     /detection="hmmscan"
+                     /domain_id="TIGRFam_cerA4_0009"
+                     /evalue="3.30E-11"
+                     /identifier="TIGR03893"
+                     /label="cerA4"
+                     /locus_tag="cerA4"
+                     /protein_end="66"
+                     /protein_start="33"
+                     /score="41.4"
+                     /tool="antismash"
+                     /translation="GKALNELSEEELAEIQGASDVQPETTPLCVGVI"
+     aSDomain        complement(14191..14313)
+                     /aSDomain="TIGR03898"
+                     /aSTool="tigrfam"
+                     /description="lanti_MRSA_kill: type 2 lantibiotic,
+                     mersacidin/lichenicidin family"
+                     /detection="hmmscan"
+                     /domain_id="TIGRFam_cerA4_0008"
+                     /evalue="3.90E-17"
+                     /identifier="TIGR03898"
+                     /label="cerA4"
+                     /locus_tag="cerA4"
+                     /protein_end="51"
+                     /protein_start="10"
+                     /score="59.9"
+                     /tool="antismash"
+                     /translation="ELVEAWKDPQVREKLKDLPKHPSGKALNELSEEELAEIQGA"
+     gene            complement(14375..14608)
+                     /gene="cerA3"
+     CDS             complement(14375..14608)
+                     /codon_start=1
+                     /db_xref="GI:585724744"
+                     /gene="cerA3"
+                     /gene_functions="biosynthetic-additional (lanthipeptides)
+                     predicted lanthipeptide"
+                     /gene_kind="biosynthetic-additional"
+                     /note="CerA3"
+                     /product="cerecidin precursor"
+                     /protein_id="AHJ59547.1"
+                     /transl_table=11
+                     /translation="MSKGYKFTKEELVEAWKDPQVREKLNDLPKHPSGKALNELSEEEL
+                     AEIQGASDVQPETTPLCVGVIIGLTTSIKICK"
+     CDS_motif       complement(14456..14608)
+                     /prepeptide="leader"
+                     /note="peptide class: {self.peptide_class}"
+                     /note="predicted sequence:
+                     MSKGYKFTKEELVEAWKDPQVREKLNDLPKHPSGKALNELSEEELAEIQGA"
+                     /locus_tag="cerA3_lanthipeptide"
+                     /aSTool="lanthipeptides"
+                     /tool="antismash"
+     CDS_motif       complement(14375..14455)
+                     /prepeptide="core"
+                     /locus_tag="cerA3_lanthipeptide"
+                     /peptide="lanthipeptide"
+                     /predicted_class="Class II"
+                     /score="4.20"
+                     /molecular_weight="2608.1"
+                     /monoisotopic_mass="2606.5"
+                     /core_sequence="SDVQPETTPLCVGVIIGLTTSIKICK"
+                     /aSTool="lanthipeptides"
+                     /tool="antismash"
+                     /leader_sequence="MSKGYKFTKEELVEAWKDPQVREKLNDLPKHPSGKALNELS
+                     EEELAEIQGA"
+                     /leader_location="[14455:14608](-)"
+                     /alternative_weights="2626.1"
+                     /alternative_weights="2644.1"
+                     /alternative_weights="2662.2"
+                     /alternative_weights="2680.2"
+     PFAM_domain     complement(14381..14521)
+                     /aSDomain="Mersacidin"
+                     /aSTool="fullhmmer"
+                     /database="35.0"
+                     /db_xref="PF16934.8"
+                     /db_xref="GO:0050830"
+                     /description="Two-component Enterococcus faecalis cytolysin
+                     (EFC)"
+                     /detection="hmmscan"
+                     /domain_id="fullhmmer_cerA3_0019"
+                     /evalue="8.50E-15"
+                     /gene_ontologies="GO:0050830: defense response to
+                     Gram-positive bacterium"
+                     /label="cerA3"
+                     /locus_tag="cerA3"
+                     /protein_end="76"
+                     /protein_start="29"
+                     /score="54.4"
+                     /tool="antismash"
+                     /translation="KHPSGKALNELSEEELAEIQGASDVQPETTPLCVGVIIGLTTSIK
+                     IC"
+     aSDomain        complement(14411..14509)
+                     /aSDomain="TIGR03893"
+                     /aSTool="tigrfam"
+                     /description="lant_SP_1948: type 2 lantibiotic, SP_1948
+                     family"
+                     /detection="hmmscan"
+                     /domain_id="TIGRFam_cerA3_0011"
+                     /evalue="3.30E-11"
+                     /identifier="TIGR03893"
+                     /label="cerA3"
+                     /locus_tag="cerA3"
+                     /protein_end="66"
+                     /protein_start="33"
+                     /score="41.4"
+                     /tool="antismash"
+                     /translation="GKALNELSEEELAEIQGASDVQPETTPLCVGVI"
+     aSDomain        complement(14456..14578)
+                     /aSDomain="TIGR03898"
+                     /aSTool="tigrfam"
+                     /description="lanti_MRSA_kill: type 2 lantibiotic,
+                     mersacidin/lichenicidin family"
+                     /detection="hmmscan"
+                     /domain_id="TIGRFam_cerA3_0010"
+                     /evalue="8.00E-17"
+                     /identifier="TIGR03898"
+                     /label="cerA3"
+                     /locus_tag="cerA3"
+                     /protein_end="51"
+                     /protein_start="10"
+                     /score="58.9"
+                     /tool="antismash"
+                     /translation="ELVEAWKDPQVREKLNDLPKHPSGKALNELSEEELAEIQGA"
+     gene            complement(14640..14873)
+                     /gene="cerA2"
+     CDS             complement(14640..14873)
+                     /codon_start=1
+                     /db_xref="GI:585724745"
+                     /gene="cerA2"
+                     /gene_functions="biosynthetic-additional (lanthipeptides)
+                     predicted lanthipeptide"
+                     /gene_kind="biosynthetic-additional"
+                     /note="CerA2"
+                     /product="cerecidin precursor"
+                     /protein_id="AHJ59548.1"
+                     /transl_table=11
+                     /translation="MSKGYKFTKEELVEAWKDPQVREKLKDLPKHPSGKALNELSEEEL
+                     AEIQGASDVQPETTPLCVGVIIGLTTSIKICK"
+     CDS_motif       complement(14721..14873)
+                     /prepeptide="leader"
+                     /note="peptide class: {self.peptide_class}"
+                     /note="predicted sequence:
+                     MSKGYKFTKEELVEAWKDPQVREKLKDLPKHPSGKALNELSEEELAEIQGA"
+                     /locus_tag="cerA2_lanthipeptide"
+                     /aSTool="lanthipeptides"
+                     /tool="antismash"
+     CDS_motif       complement(14640..14720)
+                     /prepeptide="core"
+                     /locus_tag="cerA2_lanthipeptide"
+                     /peptide="lanthipeptide"
+                     /predicted_class="Class II"
+                     /score="4.20"
+                     /molecular_weight="2608.1"
+                     /monoisotopic_mass="2606.5"
+                     /core_sequence="SDVQPETTPLCVGVIIGLTTSIKICK"
+                     /aSTool="lanthipeptides"
+                     /tool="antismash"
+                     /leader_sequence="MSKGYKFTKEELVEAWKDPQVREKLKDLPKHPSGKALNELS
+                     EEELAEIQGA"
+                     /leader_location="[14720:14873](-)"
+                     /alternative_weights="2626.1"
+                     /alternative_weights="2644.1"
+                     /alternative_weights="2662.2"
+                     /alternative_weights="2680.2"
+     PFAM_domain     complement(14646..14786)
+                     /aSDomain="Mersacidin"
+                     /aSTool="fullhmmer"
+                     /database="35.0"
+                     /db_xref="PF16934.8"
+                     /db_xref="GO:0050830"
+                     /description="Two-component Enterococcus faecalis cytolysin
+                     (EFC)"
+                     /detection="hmmscan"
+                     /domain_id="fullhmmer_cerA2_0020"
+                     /evalue="9.20E-15"
+                     /gene_ontologies="GO:0050830: defense response to
+                     Gram-positive bacterium"
+                     /label="cerA2"
+                     /locus_tag="cerA2"
+                     /protein_end="76"
+                     /protein_start="29"
+                     /score="54.3"
+                     /tool="antismash"
+                     /translation="KHPSGKALNELSEEELAEIQGASDVQPETTPLCVGVIIGLTTSIK
+                     IC"
+     aSDomain        complement(14676..14774)
+                     /aSDomain="TIGR03893"
+                     /aSTool="tigrfam"
+                     /description="lant_SP_1948: type 2 lantibiotic, SP_1948
+                     family"
+                     /detection="hmmscan"
+                     /domain_id="TIGRFam_cerA2_0013"
+                     /evalue="3.30E-11"
+                     /identifier="TIGR03893"
+                     /label="cerA2"
+                     /locus_tag="cerA2"
+                     /protein_end="66"
+                     /protein_start="33"
+                     /score="41.4"
+                     /tool="antismash"
+                     /translation="GKALNELSEEELAEIQGASDVQPETTPLCVGVI"
+     aSDomain        complement(14721..14843)
+                     /aSDomain="TIGR03898"
+                     /aSTool="tigrfam"
+                     /description="lanti_MRSA_kill: type 2 lantibiotic,
+                     mersacidin/lichenicidin family"
+                     /detection="hmmscan"
+                     /domain_id="TIGRFam_cerA2_0012"
+                     /evalue="3.90E-17"
+                     /identifier="TIGR03898"
+                     /label="cerA2"
+                     /locus_tag="cerA2"
+                     /protein_end="51"
+                     /protein_start="10"
+                     /score="59.9"
+                     /tool="antismash"
+                     /translation="ELVEAWKDPQVREKLKDLPKHPSGKALNELSEEELAEIQGA"
+     gene            complement(14905..15138)
+                     /gene="cerA1"
+     CDS             complement(14905..15138)
+                     /codon_start=1
+                     /db_xref="GI:585724746"
+                     /gene="cerA1"
+                     /gene_functions="biosynthetic-additional (lanthipeptides)
+                     predicted lanthipeptide"
+                     /gene_kind="biosynthetic-additional"
+                     /note="CerA1"
+                     /product="cerecidin precursor"
+                     /protein_id="AHJ59549.1"
+                     /transl_table=11
+                     /translation="MSKGYKFTKEELVEAWKDPQVREKLKDLPKHPSGKALNELSEEEL
+                     AEIQGASDVQPETTPLCVGVIIGLTTSIKICK"
+     CDS_motif       complement(14986..15138)
+                     /prepeptide="leader"
+                     /note="peptide class: {self.peptide_class}"
+                     /note="predicted sequence:
+                     MSKGYKFTKEELVEAWKDPQVREKLKDLPKHPSGKALNELSEEELAEIQGA"
+                     /locus_tag="cerA1_lanthipeptide"
+                     /aSTool="lanthipeptides"
+                     /tool="antismash"
+     CDS_motif       complement(14905..14985)
+                     /prepeptide="core"
+                     /locus_tag="cerA1_lanthipeptide"
+                     /peptide="lanthipeptide"
+                     /predicted_class="Class II"
+                     /score="4.20"
+                     /molecular_weight="2608.1"
+                     /monoisotopic_mass="2606.5"
+                     /core_sequence="SDVQPETTPLCVGVIIGLTTSIKICK"
+                     /aSTool="lanthipeptides"
+                     /tool="antismash"
+                     /leader_sequence="MSKGYKFTKEELVEAWKDPQVREKLKDLPKHPSGKALNELS
+                     EEELAEIQGA"
+                     /leader_location="[14985:15138](-)"
+                     /alternative_weights="2626.1"
+                     /alternative_weights="2644.1"
+                     /alternative_weights="2662.2"
+                     /alternative_weights="2680.2"
+     PFAM_domain     complement(14911..15051)
+                     /aSDomain="Mersacidin"
+                     /aSTool="fullhmmer"
+                     /database="35.0"
+                     /db_xref="PF16934.8"
+                     /db_xref="GO:0050830"
+                     /description="Two-component Enterococcus faecalis cytolysin
+                     (EFC)"
+                     /detection="hmmscan"
+                     /domain_id="fullhmmer_cerA1_0021"
+                     /evalue="9.20E-15"
+                     /gene_ontologies="GO:0050830: defense response to
+                     Gram-positive bacterium"
+                     /label="cerA1"
+                     /locus_tag="cerA1"
+                     /protein_end="76"
+                     /protein_start="29"
+                     /score="54.3"
+                     /tool="antismash"
+                     /translation="KHPSGKALNELSEEELAEIQGASDVQPETTPLCVGVIIGLTTSIK
+                     IC"
+     aSDomain        complement(14941..15039)
+                     /aSDomain="TIGR03893"
+                     /aSTool="tigrfam"
+                     /description="lant_SP_1948: type 2 lantibiotic, SP_1948
+                     family"
+                     /detection="hmmscan"
+                     /domain_id="TIGRFam_cerA1_0015"
+                     /evalue="3.30E-11"
+                     /identifier="TIGR03893"
+                     /label="cerA1"
+                     /locus_tag="cerA1"
+                     /protein_end="66"
+                     /protein_start="33"
+                     /score="41.4"
+                     /tool="antismash"
+                     /translation="GKALNELSEEELAEIQGASDVQPETTPLCVGVI"
+     aSDomain        complement(14986..15108)
+                     /aSDomain="TIGR03898"
+                     /aSTool="tigrfam"
+                     /description="lanti_MRSA_kill: type 2 lantibiotic,
+                     mersacidin/lichenicidin family"
+                     /detection="hmmscan"
+                     /domain_id="TIGRFam_cerA1_0014"
+                     /evalue="3.90E-17"
+                     /identifier="TIGR03898"
+                     /label="cerA1"
+                     /locus_tag="cerA1"
+                     /protein_end="51"
+                     /protein_start="10"
+                     /score="59.9"
+                     /tool="antismash"
+                     /translation="ELVEAWKDPQVREKLKDLPKHPSGKALNELSEEELAEIQGA"
+ORIGIN
+        1 tcacttccat aacacgtgag gccttctctg acgcaactgc tgtcgcgata gcatttccat
+       61 atgaagtgat cgctaagtac ataatcgcta ctaataaata tactagtaag aacgaacttg
+      121 tttcttcgtt atttaagttt tgttttttcg cttgcacgtt catcgtcagt gatttcacag
+      181 cctcttctga taactgttgt ttaactaccg cactttgaaa atactgattt tgtacaaata
+      241 cctgtgcact ttgaatcaac ttcggattat ccagcttcat aaagtaatct aatactggtt
+      301 cagcgcccac gccctctttt aatataaaga gcgcttcgat tttcttatct aacaattctt
+      361 gcttatattg atttaatttt gtttcatctc ctaaagacca atcccattcc ggaagagctt
+      421 tactaagatt agattgatcc accgtaacat taggtgcttc agaaataaat acaacctttg
+      481 ctttttcttt ctctccagaa aacttttgta ctaaagttgg aaaagagaat aagaatatcc
+      541 ctcctcctat taataacaat gtcatcccaa taaatatttt cgtcctcaca cgatcccagt
+      601 acgtttgccc taaaacaatc cagaaattcc tcattactta tgcacccgcc ttttcaacaa
+      661 agatttgatg taaagaaggt tctttaatag aaacgtctcg gatatattgt ttcgttttaa
+      721 tatcttcaag cagcgaaaat gcatcctctc catcattaac tttaatcatg aacgtacgat
+      781 taactttttc aaaattgaaa tttttcttct taagaatcgg ttcaatatcc ccttccgttt
+      841 gcaacgtcat atatttatat tgataacttt tcttaatatc tgacaaggca cccgataata
+      901 caatttgacc gtttttcata atacaaattt cctcacagaa cgtttctaca ctgtccattt
+      961 gatgactaca aaagataatc gtttttcttt gcgcgattaa ctcaagtaca acatttttta
+     1021 acatctctgc atttacagga tccaatccac taaatggctc atctagtatg atgaattccg
+     1081 gattatgcaa tatcgctgaa atcaattgga ttttttgttg atttcccttt gacaattcct
+     1141 ctgttttctt ctttaaatgt ggtgtcattt ctaatttttc tagccactgt aacgcatgcc
+     1201 tttttgcaag atttgctggc attccttcta acttgccaaa atacactaat tgctccacta
+     1261 cattcatttt cgggtataat ccacgctctt ctggtaaata gccgatagac aagtctttct
+     1321 ttgaaaaagg gcgattattc catagaattt ggccgctatc cggtttgatt aaatctaaga
+     1381 tcatacgaat tgttgtcgtc ttaccagcac cattccggcc caacatccct aaaattccac
+     1441 cttcttctac acgtatattt aaatcatcaa cagctttata ttcaccaaat gttttattta
+     1501 aaccttgaat ttcaaatgcc atatataaca tcccctttta ctgtttaata aagtaaataa
+     1561 ctgccattcc taaagcaatt ccgccaatca taagtaaaaa ctttttaaaa ttcatcccta
+     1621 tctctcccat tttttaaaat ttgtatttcg aaaatcaagt gcacccttcg catttacaat
+     1681 gccttttcca aagtattttt tcccgtcacc caatgccggt ttagccccct gatataacct
+     1741 cgttttaaca aatccattac taggcttcag cctaaacttt tctttatatt ccgcaattac
+     1801 aagtgcagct gtagcagata ctttaggaac tgctagactc gttccaatca tcagctcata
+     1861 tcctctatca aatcctaacc attcacttag ttgagattgt ggaagatttg taggatacgt
+     1921 ggttaatacc atagctgttt catctcccac tttttcactt tcccacaaag atccataatc
+     1981 tcctgatgga gcagcaatat caacatttgt tccataatta gagtaataag ataatcgatc
+     2041 ctctttattt gttcccgcaa cagtgactac ccccggtaac cccccaggca tatgaagttg
+     2101 caagtcgttt tcatatcctc tttgcttagc taattgaaaa ggatttgaaa tatcgaatcc
+     2161 ttctgttcca gaggaagcca ctagcaaact ccctttacta ttcgcatatt ctattgctct
+     2221 tttgtaagct aaatacacag ctccttcttc tgggtcttta atggacttgt atgttcctaa
+     2281 acttaaattg ataacatcca taccatcatt tgcagcctct acaatagctt taataatcca
+     2341 acttgaatct gcagaactac cttgaaatac tttatatggt acaatcccaa ttttgggcgc
+     2401 tacccccttt attttcccat cagcagctat taaccccgca atcattgttc catgaccaat
+     2461 attatcttca attgattcta cattcggaac taaaattttc ccctgactaa ctatatttcc
+     2521 ctttaacgca ggatgattta catcaatccc actatcaata acaccaatct ttacactatg
+     2581 atttccttgt tcaattttat agctctcccc attttctgtt accttatcga catcccattt
+     2641 ccatttgcta taatcggcct cttcttgttc taattgtgaa ggtgcgtatt ttattttatt
+     2701 tgaaggattc tttactatag tgggcggctt taattccact acatcctctc tacctgcttt
+     2761 ttcaattatc cctttataat tttttaataa atgctgcttc gcttcttgta ctctttctaa
+     2821 attatcacct tcaatattca gcatcttaat ttcttttatt acttctagct ttaaatcggg
+     2881 atatttatct ctaatttcct ttatcatctc atccgtattt tcaccttgcc tcaatgtaaa
+     2941 cacatacgaa ttttctttaa tttgattatg tttcatttct tcagcgctta tcgtactaac
+     3001 tccaactata ggaaggttta ataataatcc cacagtaatt ccagcaccta ttttcgctat
+     3061 tgtgtttcga tatttaagcc aatctttcac ttttaatccc tccttttact tcctgagctt
+     3121 ttgacaattg ataataatat ccttgcttct caagtagctc tgtatgtgat cctatctcta
+     3181 caattgctcc cttatccata acaataatct tatctgcatt cttaaccgtg cttaatctat
+     3241 gtgcaatgac aatccttgta cataacatat cagttaaatt ctcatcaata actctttcag
+     3301 acaatgtatc gagtgcactt gtcgcttcat ccaatattaa aatagatggg tttgttacca
+     3361 atgctctagc taatattaac ctttgccttt gcccaccaga gaagttaact ccaaattcag
+     3421 ataccatcgt ttgaaaattt aatggtagca tcataatatc ttctaatata tttgcttgct
+     3481 ttgatgcctc aattactcca tttggaggta cacctttcct ttgtgcaata atattttctc
+     3541 ctaccgtttt gttaaacaat ctcgcttctt ggaaaacaac gcctattgat ttccttaaaa
+     3601 atttcaaatt taacttttca ctttcaatcc catcaaatcg gattttcccc ttcgttggtg
+     3661 tatatagtcc gagaagcatc tttacaattg tactttttcc agaaccggac gccccaacaa
+     3721 ttgcgacctt ctcaccagct ttgattttaa atgaaacatt ctgaattgca tcttcactga
+     3781 aataattgtg acgataagaa acgttgtcaa actcaatatc accattcagt ttcttaattc
+     3841 ctgaaaattg atttacctct ctctccgatc tcgcatgcat tacatcgtaa atccgctgaa
+     3901 tataagagct aatataaatc aattcaccat agccactccc aatggaaata atcggtgtta
+     3961 taaacgaaat cgctaacgcg ttaaagccga gtacacttcc taatgtcata tttccagcta
+     4021 gcacctgttg tccactgaac caaagtagaa acaacggtaa gataaattga atagaacccg
+     4081 ctaatgtatt catcaatgcc gtccatatag atctcttctc tgcatgaata agttgagaac
+     4141 caaagcgttc tttccattct ttatacactt gcttttccaa tcccataacc ttcacatcac
+     4201 taatcccatt aatactctca gacaaaatcc tttgaacttg agcttgagcc gaaacctctt
+     4261 tatcagctaa cttcttagaa acagtcgtgc tcatgacaag taaggcgaat ataacaatcc
+     4321 caactgctaa cacaacgagt cctaataaag tcgaataacg aaacatgaag aataagtaag
+     4381 tgaaaagcag aattccatct ataagaaagg aaattacctt agtagataat atttgtctaa
+     4441 tatatacatt ggaatttgct ctaaataaca gttctcccat ggatcgattc tcaaaaaagt
+     4501 tataagaaag acttagtagt ttttctataa aactttgcat taaagacata tcaattgccg
+     4561 tttgcaattt cgctattaga aagcctctta acgaagcaaa tacttgataa cttattagca
+     4621 atactaaaat gctgtaacct atcatattca tataactcgg atctctcgga acaattacgt
+     4681 ggtcagtcat ccaacttgtt acaaatggaa tcaccagcgc aaaagcctga attatcaaag
+     4741 aagctaatac aattaaagct attaatttct ttttccctaa cacaaacgat aaaaagaatt
+     4801 gcaaatgaga gacacctttt tgtttttgaa atgaatcatc tggttccagt gttaatacaa
+     4861 atccagaata cttttcctcc atttcttttt tagagatttt atttcttccg taagcagggt
+     4921 ctataactat agcccccttt tttgtcaatt tctccagaac tacataatgt ttatgctccc
+     4981 aatggataac tgctggtaat ttaacttcac ttaaagcctc atattcagct ttatatcctt
+     5041 ttacatgaaa actatttttt ctagcaatat gcataagctg atataaagat gtcccacctt
+     5101 ttggaacacc aaactcttct cgtaattcag ctaaagaaac atgcttttca taaaaactaa
+     5161 aaatcatcgc taatgaggct aatccacatt cgctatgttc catctgctct ataaagggca
+     5221 cttttgccat ttttattccc ccctatctct ttaactatta atcatagcaa caccctcatg
+     5281 gttaccatga ttaaaattaa attcaaatgt aattaatcct aaaaaatatg cagctattcc
+     5341 aatttggacc cttgaatgta tctctaattt tcttttaatt gaggctacta attcccccac
+     5401 cctccttcta ctaataaata actcccttgc tatttcaaca tccttcaaac ctcgtgcaat
+     5461 caacacagct acttcttttt ctcgatcact taaaactttc ttcatcattc tcctccttta
+     5521 ttctcaatcc atattagatt atttttttct cgtttattaa actgtgttgt cttaatctgt
+     5581 actcctatca tatccttctt ttaaacgtta ttgtccgcaa tgcacgttgt agttaccgca
+     5641 aaccaattag cgggattctc cgcaacatct tcataaaaaa aacatatcgc atttgcgata
+     5701 tgcttaattg tgaagatctc cctcttatgt tacaattgga atattccgaa tttttacaaa
+     5761 aggggagctg cgagtgattt attcattaca aaatgaatta attttgcgtg caaaaaaact
+     5821 ggtttatgga cattttttcg aatctacatt acgtcaatgt tcttcagaat atattgaata
+     5881 caaattcaat gattctactc gttttgccaa catcactctc gtacattatg aaatatttca
+     5941 agataaccaa aatgaagaag aaaaacaatt actgctaaca attatagaat tacttatgct
+     6001 ctctctagat attatggatg atattcaaga tgaagatttc ttagaaggac cttggacaaa
+     6061 acatccaatt gccacaaatc tcaatataat tatgggattt ttacttattt gtttgcaaga
+     6121 agttgacaaa tcttcccttt caattcaaat gaaaaactgg ctcaaaaacg aaatacactc
+     6181 ttgtatttta aactccatta atggacaaca gctagatctt aaaaatgaaa tccattctga
+     6241 gaaagactat attgatatgg taactcacaa atctgggtat ctaattaaac ttgcatgctt
+     6301 attaggaaca gggaatatta accctatcca gcgttcttta attgaaaact acgcaatatg
+     6361 tataggcgtt attaatcaaa taaaaaacga tatgcgtgat attatgcaat gggataagaa
+     6421 aaatgatttt cttaatttaa agaaaacttt accaatacta tattatttaa atagtaaaaa
+     6481 tgataacttt atacttataa aaaaattctt taatcaggag atacaatata acgaattaaa
+     6541 taatcaaaca ttagaaactt taaaacacat attactatac ggtggatcga tggagtattg
+     6601 ctctgttatg caaaacctat atgtatacaa atgtcaaaga tacatcgaac aactttcaat
+     6661 cagtcaagca aataaggata ggttaattga tactctaatt tagtttactt ccatgtctca
+     6721 gcagctttac taagtaaagt cgatttatct aaagtaccta atataatttc taattcttgt
+     6781 tttgatatac catcaatggc tatggttcct tgactacaca catttttaaa ttgaatatct
+     6841 tctaatatac gttcaactaa ttccctaatc atatatcgtt caccccacca atttttatag
+     6901 ttttatatta ttacatattc ttttgctatt atccgcaatc ctattgcggg attccgaaat
+     6961 tatatatgat agtgaggtat ttctagcaat gattaaacaa cgtccaattt atttcgtaat
+     7021 ttcattaata attttttact taatcataca aagttacatc ctctacaaat tttatcagcc
+     7081 ttacagtggc attatcgctt ctaaagaaaa cgagaagaca tatacaatca gtcaaattga
+     7141 tacgtcgggt tgggctgcaa aaacagcatt aaaagtaggc gatgaaatct acaaagtaga
+     7201 tggggagaat ccttatttag gggttttcaa gcggtaccaa aatcaatttt taaatgcaac
+     7261 cgaaattcaa tctataaaga atgataagat ttctacttat agtacagcag ctacttcaga
+     7321 caacgaagag ctacttatta cattatatct accaatgatt ttttctctaa ccattctaag
+     7381 cttatgtttt attctctata gaaataaagc tataaggcga gaagagcgtt attttatgct
+     7441 ttttttatta gcaacctcta ttagcctttc cgcctcttct atatctagta aatctgattt
+     7501 tggcggactc ttgattataa gtatctcttt tcaaagtgta tctttatttc ttactttatt
+     7561 tttatatcag ctgtttaagc ggaaggaaat tattattata cataaaaatt tggttagatt
+     7621 tcacatttgt ctatacatga ccgttgttac tactggctta ttatccgtta ccttttttcc
+     7681 aaatttgcaa caagtctctg cttacacaga tttagcttat ttatgcttta gtattctttt
+     7741 aagtgtatat tttcttttaa aaggatacat aaaatataga aatactttac acagaccttt
+     7801 ttttaaattt atgttagtta tccaatgtat ttctttcggg ccatttatca tgctatatgc
+     7861 gcttccaagg atattattaa atgcagccat gattagagct gatattgcag ccttattcct
+     7921 attttgcatt ccaattggct acttttattt aatattaaca aagcaaatct ttgatattga
+     7981 ttttatgttt gatcgtgttc gttactactc tatgctttca ttaattccaa ctatcattat
+     8041 tacattaatt ataagctggg gtattaatcc tgacgaacgc ttcttaatta gactcatgca
+     8101 aaattttatt atcattttcc ctttaaacat actgtttctt gtaataaagg aacgattaga
+     8161 tttcacattt cgcaatcaat tattcagaaa caaaaccaat ctacatgtaa gtattgatca
+     8221 gttcgcacaa caactttctt ccattatgaa agtaaaagat ttagagaaga aatttatgaa
+     8281 tgaaattatc tccctactaa aaccgtgttt tatacaattt attgaatttg atataaaaca
+     8341 aaatacatat aattgttata agagttacgg ggaaacagaa aaatttaatc tttcgaaaaa
+     8401 gaaacaatgg ggaatggaat cgggatatat aaatgattta ttagaagatg acggatgtat
+     8461 cggtatttat ttatattcta ctcaaaatac aaagcattac atttgggttg gaaataaaac
+     8521 caacaatatt aaatttaata tcaatgaaaa gacttggttt atcgctatcg tcaaatatgt
+     8581 acgtctcgtt tatgaaaacc taaattcagt taaccaaatc attcaatctt tagaaaaaga
+     8641 aagcctagca aataaaacac actcagcaac tctttcacgc ctactatttc aaatctcaga
+     8701 gactgaaagg cgtcgactcg ctgcagatct tcatgacgct gccctgcaag accaaattgt
+     8761 ctggtatcgt aaactagaaa ccgtattaaa agagcatact gtaccaggtg aattgcaggg
+     8821 acaattagaa aaaataaaat tcggtatgtt agatgttatt caacaaattc gtgacacttg
+     8881 taatgaatta aaacctgctc ttctatctga aattggtctt ataggtgcgc ttaaagagct
+     8941 attagcacaa atgcaactac gtactaattt ccgaattcaa tttgaatacg actcaataca
+     9001 ggagaatcat tacgaatttg ataaaattct atctatttat cgtattatcc aagaattatt
+     9061 aaacaatgct gataagcact ctaatgcaac tttaattaat atattcttat gggaggagaa
+     9121 taattgtatt tatctagatt atcgtgataa cggcatcggc tttaatacac aagtccccta
+     9181 ttcttcaaat aaacatatgg gtttatctgg gattaaaggg cgtgttcaag gaataggagg
+     9241 cgaaattcaa cttatttcag aaattggaaa tggactacaa gtaaatatta ctataccgag
+     9301 gtgaataaaa tgatacacgt tttgattgta gacgatcacc aaatagttgg tgaaggcaca
+     9361 aaaaatatga tcgaattaga agcagatatt caggcaacat acattttaaa cgaacaggaa
+     9421 gcaatttctc aaagttcaaa aacacctttt gacatatatc ttttagacat gaacatgcct
+     9481 aattatagtg gacttgatgt ggctcaaaaa cttttacaca tacaaccaga tgcaaaaatc
+     9541 attctctaca caggcttcga atatttatct caatttaatt tattaataga ttctggtatt
+     9601 agcggtattg ttagcaaatc agcatcacaa caagagttat taatggctat tcgtgctgtc
+     9661 ttaaatgggt atactttaat tccaatttct ctattgcgac aacttcgagt tgaagatatg
+     9721 actgttgata acttagatac gaaaagagca tcaagccatg ttacaattac acaaaaagaa
+     9781 ttagaaattc ttgaatccat tgcgaaagga aaaagtaata aacaaattgc agatgaatta
+     9841 tatatgagtt ctagggctgt tgaatataat ttaacgaaac tatttaaaaa gttcaaggtg
+     9901 agttctcgtt ctgaagcgct agctgaagct gttcgaaaag gtataataaa tgtaaatgta
+     9961 taataaagac attctaccaa aaggtagaat gtcttttcat ttatcctttt acattttcta
+    10021 atgtcataac agatggaatt tcattcggtt gtaatagtct taataactgc ataccaactc
+    10081 ctgctattcc tacaaacatg ccgaatgatt gaatatcatc tggtgcatca cattgataac
+    10141 tacctgtttc tctataatta ttaataactt gtatgccaat ttgtatcgcc tgttcataca
+    10201 attctttatt accatataac tgtgaaacag ccaatagtaa ttccgtgtcc cccatattcc
+    10261 catggcataa tgtatcatta tttttaaatc catactttcg tacattatct acagctactc
+    10321 gaatttcttc gtccatttct acatcttctt catagcttct tactaaaacc ctgctcaatc
+    10381 ctattccggt ggaaccgtgg caccattgat gtaagcactt cttctcactc tctctcgtgt
+    10441 ctttccacgc actttcttct ttatcaaaca atgatcgatc ataagcaagc gcttttttag
+    10501 ctaaatcaat atattcttga ttcctattca taatccccga acgccataag ctccaagcga
+    10561 taccactcgt tccatgagaa aaaccaccta aataactgtt agtatgttta ttcttccacg
+    10621 ctactccatt ttctaatatt gatacatttt ccgccaaatg cttactatac atatcagcaa
+    10681 gatctaaata atcttgatcc tttgtcattt caaatacatt aagggccact tgaataactc
+    10741 ccgctgagcc acttaacaaa tcaaactctt cttcttcttt gagcctttct tttaattcta
+    10801 cttttatttc ttctaaaaaa tcctgatatt cttttctagg acttatagat tgaaaatgtg
+    10861 ctaatggata taacaatgaa tatttaccca agaaggtcga tagcagcccc ttcgctttcg
+    10921 ataaagggtt catcgctgat ttcaacgcct tatgagcaac ctctaaatat ttttcgtttc
+    10981 ctgtaacttt atttagatac aataagaata gtgctacgcc acctaaaccg tcatataaat
+    11041 tttgtttcat aggggcaaca taccacttgt cgtgaataac atttgcttgt aaccatgaag
+    11101 ctgttgtttt atcatcagat aatactacat tctctactaa agactctccg atatttattg
+    11161 cttcctgcaa gattgtctcc tgatgatttt ctaataattc acttctgtaa ctctctttcc
+    11221 ttctcacttt aatatcaatt tctctatttc cctgtattgc caacttcagc catcctcgtt
+    11281 gcttttccaa ttccttctca tcaaaatgat aaattttatt atatacttgc tcataaccgc
+    11341 tctccttaaa aaaatcttcc atcttttcac ctgtactact atatagatct cgtgaatctg
+    11401 taaaagtcgt aaatatagga acatccgcac gtaataagtc ttgaatctca tgaatgacta
+    11461 gttccttatt ttcatatggg taataccata ctctttcaaa taattgttcc aataaaattg
+    11521 aatctctcat atagtctgga tgtgtagact cttgtaggaa attacaatat tgttgagtag
+    11581 ccctagcaac aatgcgaatt ttattttctt taaatgtaat taaaggtcct ctttctgata
+    11641 aaatctcatc cttatactca ataaaaaatt tacacatttc ctgaaaacca tcaataataa
+    11701 agttcaaata atcctctaca taaatctctt ctactccaag tttcggtaga tttttagcac
+    11761 tttgactttt ggcttctttc atagtaaatt ccatttcatc tttactattt tgatttaaag
+    11821 ccaacacctt aaacggcaaa tcttgctctt ttccatttaa agcacttaaa tcgatacctt
+    11881 ttccatcgat attttgaaac atagcttgcg gcagcaatcc agatcctatc actgagtcgc
+    11941 tttgttcata tttcaatttt acttccgcac tatctggaaa attcagtttt ggatattgat
+    12001 gaaaaatcgt ctccgaatca ataatgtatg gatactctcc atgagcaatt atattttcaa
+    12061 aatgcaaatc cgcacccttt aacatatgca ttaaaccaat caacttacca aaacgtgaat
+    12121 agtagcgctc tacctcttct ttagaagaac acggtttata caatattttc tcttcccatc
+    12181 catattcacc acagtctaaa actttatatg atggaagttg tatacttcca cttacctcat
+    12241 tcatccattc taaaaacgca tggtacgatt tcgtaatttc catagacttt ggcttatata
+    12301 aaatttcttt acctgaagag aatacaagct gaacaaccgt ttttccttct tgatgtgtat
+    12361 ctcctaatcc aaccttaatt tcgcttaatg acgcatcctg caattgaaat tctttttgta
+    12421 attgtagcca attttcattc aaacgaaata gtaacatttg aacattttgt ataaaatact
+    12481 ctgttctcaa aattaacctt cgcgttaatg ttgcgtattc ctcatagaac gcaattaaat
+    12541 tctccttatt cctagctttc tctctgacaa aggaaagaaa tcgctcttct ggagtctccc
+    12601 ctatcagttc ctcccttagt tttgcaatat taaattctaa gactagtgag cgcaccgcat
+    12661 tatttaataa ctcttctact aaagatcgta ctagcatttc tttaatttct tcatgctcat
+    12721 aacatatctt atttaatcta tatttcaacg aactatctat catttcggct gcataaagtg
+    12781 caaacggcct aacaaattct ataaacccta aatcttcctc tgcacttaat ggcttactat
+    12841 cacacaactc tattcccatt tctaacacgc gcaaattcac atgttcattt aattcatcta
+    12901 tatataaatg ctctttggat tcaggaattt tctcaattaa actcgcaaaa tcttcttttg
+    12961 tcatttcatt catctttaat ttaaaatcaa aatcagcttt attacttcta aacattttat
+    13021 ctatccattt atttaattgg gccaaattta aatcttccga taataataaa tctcttctac
+    13081 tcattagcgt tttataacgc tctttcaaat taagactctt cgcaaatgcc ttttcattta
+    13141 tatatgagtg aattaacata ataatttaat ccccttcctt attttaaaat ccatattcca
+    13201 ataaatcggt cccccttcag gagaaacaga ttccaacatt cgatttttca cattcgaata
+    13261 ttggaatctg tttcattcaa aaggagatga acaccccttt cgaatgaaac ctatctactt
+    13321 acaaatttta attgatgccg ttattcctat aatgactccc acacaaagcg gtgttgtttc
+    13381 tggttgtaca tctgatgccc cttgaatttc cgctagttct tcttcgctta attcatttaa
+    13441 cgcttttcca gatgggtggt ttggtaaatc ttttaacttc tctcttactt gtggatcttt
+    13501 ccacgcttct actaactctt cttttgtgaa cttgtatcct tttgacattt cattcatcct
+    13561 ctcgttttgg ttttttattt tatttacaaa tcttaattga cgttgttaac ccgataatga
+    13621 ctcccacaca aagtggtgtt gtttctggtt gtacatctga tgccccttgg atttccgcta
+    13681 actcttcctc acttaattca tttaacgctt ttcctgatgg atgtttcggt aagtcgttta
+    13741 acttctctct tacttgtgga tctttccacg cctctactaa ctcttctttt gtgaacttgt
+    13801 atccctttga catttcattc atcctctcgt tttggttttt tattttattt acaaatctta
+    13861 attgacgttg ttaacccgat aatgactccc acacaaagtg gtgttgtttc tggttgtaca
+    13921 tctgatgccc cttggatttc cgctaactct tcctcactta attcatttaa cgcttttcct
+    13981 gatggatgtt tcggtaagtc gtttaacttc tctcttactt gtggatcttt ccacgcctct
+    14041 actaactctt cttttgtgaa cttgtatccc tttgacattt cattcatcct ctcgttttgg
+    14101 ttttttattt tatttacaaa tcttaattga cgttgttaac ccgataatga ctcccacaca
+    14161 aagtggtgtt gtttctggtt gtacatctga tgccccttgg atttccgcta actcttcctc
+    14221 acttaattca tttaacgctt ttcctgatgg atgtttcggt aaatctttta acttctctct
+    14281 tacttgtgga tctttccacg cctctactaa ctcttctttt gtgaacttgt atccttttga
+    14341 catttcattc atcctctcgt tttggttttt tattttattt acaaatctta attgacgttg
+    14401 ttaacccgat aatgactccc acacaaagtg gtgttgtttc tggttgtaca tctgatgccc
+    14461 cttggatttc cgctaactct tcttcgctta attcatttaa cgcttttccc gatgggtgtt
+    14521 tcggtaagtc gtttaacttc tctcttactt gtggatcttt ccatgcctct actaactctt
+    14581 cttttgtgaa cttgtatcct tttgacattt tattcatcct ctcgttttgg ttttttattt
+    14641 tatttacaaa tcttaattga cgttgttaac ccgataatga ctcccacaca aagtggtgtt
+    14701 gtttctggtt gtacatctga tgccccttgg atttccgcta actcttcttc acttaattca
+    14761 tttaacgctt ttcccgatgg gtgtttcggt aagtctttta acttctctct tacttgtgga
+    14821 tctttccacg cctctactaa ctcttctttt gtgaacttgt atccttttga cattttattc
+    14881 atcctctcgt tttggttttt tattttattt acaaatctta attgacgttg ttaacccgat
+    14941 aatgactccc acacaaagtg gtgttgtttc tggttgtaca tctgatgccc cttggatttc
+    15001 cgctaactct tcttcactta attcatttaa cgcttttccc gatgggtgtt tcggtaagtc
+    15061 ttttaacttc tctcttactt gtggatcttt ccacgcctct actaactctt cttttgtgaa
+    15121 cttgtatcct tttgacattt cattcatcct ctcgtttttt ttatttattt gtttgttgtt
+    15181 ctctacagtt ataaatttac aagatttaaa ctttttagat aacttcgcaa aattgcatat
+    15241 ttttaacatt tttaaaataa aaaaattcct aacctacaaa atgtaagtta ggaatctcag
+    15301 ttctaaattc aagattaaag aaacaataat tgactaacga taatatcaaa aagacccttt
+    15361 gcacatggta tttttactta ccacatacaa agggcctctc ccaacacaaa ataatattaa
+    15421 agtttatata a
+//

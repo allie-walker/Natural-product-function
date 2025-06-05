@@ -1,0 +1,375 @@
+LOCUS       BGC0000567.1            7142 bp    DNA              UNK 01-JAN-1980
+DEFINITION  Trifolitoxin biosynthetic gene cluster.
+ACCESSION   BGC0000567
+VERSION     BGC0000567.1
+KEYWORDS    .
+SOURCE      
+  ORGANISM  .
+            .
+COMMENT     ##antiSMASH-Data-START##
+            Version      :: 7.1.0
+            Run date     :: 2025-04-21 23:16:09
+            ##antiSMASH-Data-END##
+FEATURES             Location/Qualifiers
+     source          1..7142
+                     /db_xref="taxon:384"
+                     /mol_type="genomic DNA"
+                     /organism="Rhizobium leguminosarum"
+                     /strain="T24"
+     protocluster    1..7142
+                     /aStool="rule-based-clusters"
+                     /category="RiPP"
+                     /contig_edge="True"
+                     /core_location="[793:4971]"
+                     /cutoff="20000"
+                     /detection_rule="((((goadsporin_like or PF00881 or
+                     TIGR03605) and (YcaO or TIGR03604)) or TIGR03882 or
+                     TIGR03603 or TIGR03602) and not cyanobactin_synth)"
+                     /neighbourhood="10000"
+                     /product="LAP"
+                     /protocluster_number="1"
+                     /tool="antismash"
+     proto_core      794..4971
+                     /aStool="rule-based-clusters"
+                     /tool="antismash"
+                     /cutoff="20000"
+                     /detection_rule="((((goadsporin_like or PF00881 or
+                     TIGR03605) and (YcaO or TIGR03604)) or TIGR03882 or
+                     TIGR03603 or TIGR03602) and not cyanobactin_synth)"
+                     /neighbourhood="10000"
+                     /product="LAP"
+                     /protocluster_number="1"
+     cand_cluster    1..7142
+                     /candidate_cluster_number="1"
+                     /contig_edge="True"
+                     /detection_rules="((((goadsporin_like or PF00881 or
+                     TIGR03605) and (YcaO or TIGR03604)) or TIGR03882 or
+                     TIGR03603 or TIGR03602) and not cyanobactin_synth)"
+                     /kind="single"
+                     /product="LAP"
+                     /protoclusters="1"
+                     /tool="antismash"
+     region          1..7142
+                     /candidate_cluster_numbers="1"
+                     /contig_edge="True"
+                     /product="LAP"
+                     /region_number="1"
+                     /rules="((((goadsporin_like or PF00881 or TIGR03605) and
+                     (YcaO or TIGR03604)) or TIGR03882 or TIGR03603 or
+                     TIGR03602) and not cyanobactin_synth)"
+                     /tool="antismash"
+     gene            597..725
+                     /gene="tfxA"
+     CDS             597..725
+                     /codon_start=1
+                     /db_xref="GI:347443"
+                     /gene="tfxA"
+                     /note="label: precursor"
+                     /product="trifolitoxin"
+                     /protein_id="AAA26363.1"
+                     /transl_table=11
+                     /translation="MDNKVAKNVEVKKGSIKATFKAAVLKSKTKVDIGGSRQGCVA"
+     gene            794..1915
+                     /gene="tfxB"
+     CDS             794..1915
+                     /codon_start=1
+                     /db_xref="GI:347444"
+                     /function="required for processing of trifolitoxin"
+                     /gene="tfxB"
+                     /gene_functions="biosynthetic (rule-based-clusters) LAP:
+                     PF00881"
+                     /gene_functions="biosynthetic-additional
+                     (rule-based-clusters) Trifolitoxin_RRE"
+                     /gene_kind="biosynthetic"
+                     /note="precursor; putative"
+                     /protein_id="AAA26364.1"
+                     /sec_met_domain="Trifolitoxin_RRE (E-value: 2.2e-62,
+                     bitscore: 196.0, seeds: 3, tool: rule-based-clusters)"
+                     /sec_met_domain="PF00881 (E-value: 3.8e-08, bitscore: 22.5,
+                     seeds: 78, tool: rule-based-clusters)"
+                     /transl_table=11
+                     /translation="MDFVQRFVIDRSFHLRYYSLDAYLYRAVDQVAWDADITHNRLFWD
+                     IWSAFMQPRSLVDAVETLSDYDPDEVAAAIEGMCESGIIEPVGLKDRQFDPLTVELSHV
+                     PQAWDYHLVSSRIDWINYLDGKDVKRQDLEQMDKHLSEEAVPSNFHKAANSRPKYDLPS
+                     LVPLTAFEFNNSASVAFGHEKAPLPNELSLDIITLLLNYAAAKTDTVNMYATGEHLRKA
+                     VPSGGARHPIEFYVVVGDEIAGIEAGVYHYNVRHHRLDAIEIASTSLKALQEASSVLPR
+                     SRSKPFGFAFIHTCRFERSMFRYREPRSYRVMQFDLGHIHANEVLAAKILGLDFSETFS
+                     VPESIVESVLTLDPFIESAMSAFVVHRHENHHD"
+     aSDomain        1370..1888
+                     /aSDomain="TIGR03605"
+                     /aSTool="tigrfam"
+                     /description="antibiot_sagB: SagB-type dehydrogenase
+                     domain"
+                     /detection="hmmscan"
+                     /domain_id="TIGRFam_tfxB_0001"
+                     /evalue="2.00E-28"
+                     /identifier="TIGR03605"
+                     /label="tfxB"
+                     /locus_tag="tfxB"
+                     /protein_end="365"
+                     /protein_start="192"
+                     /score="97.0"
+                     /tool="antismash"
+                     /translation="LDIITLLLNYAAAKTDTVNMYATGEHLRKAVPSGGARHPIEFYVV
+                     VGDEIAGIEAGVYHYNVRHHRLDAIEIASTSLKALQEASSVLPRSRSKPFGFAFIHTCR
+                     FERSMFRYREPRSYRVMQFDLGHIHANEVLAAKILGLDFSETFSVPESIVESVLTLDPF
+                     IESAMSAFVV"
+     PFAM_domain     1400..1852
+                     /aSDomain="Nitroreductase"
+                     /aSTool="fullhmmer"
+                     /database="35.0"
+                     /db_xref="PF00881.27"
+                     /description="Nitroreductase family"
+                     /detection="hmmscan"
+                     /domain_id="fullhmmer_tfxB_0001"
+                     /evalue="1.10E-05"
+                     /label="tfxB"
+                     /locus_tag="tfxB"
+                     /protein_end="353"
+                     /protein_start="202"
+                     /score="25.8"
+                     /tool="antismash"
+                     /translation="AAAKTDTVNMYATGEHLRKAVPSGGARHPIEFYVVVGDEIAGIEA
+                     GVYHYNVRHHRLDAIEIASTSLKALQEASSVLPRSRSKPFGFAFIHTCRFERSMFRYRE
+                     PRSYRVMQFDLGHIHANEVLAAKILGLDFSETFSVPESIVESVLTLD"
+     gene            1908..2978
+                     /gene="tfxC"
+     CDS             1908..2978
+                     /codon_start=1
+                     /db_xref="GI:347445"
+                     /function="processes trifolitoxin"
+                     /gene="tfxC"
+                     /note="precursor; putative"
+                     /protein_id="AAA26365.1"
+                     /transl_table=11
+                     /translation="MIELRPLLQLNLEDGIPVLKDLLTADSFSFTDVELLRYIPAIAKN
+                     TPAQTRDLAASVADALDVDQTTALAAIEALVELGLLVPSASISSQKAGIQLWVDKGWVD
+                     ALILHFASRNLNYNDDPIEFGGLEDIKSYPEPMESKRRKRGTATRLVKPSRELAAAVIL
+                     DGLMNRRSFKPFTRKQLSITEVSEILWFGNLYARERAVIAENRDFESPRDIAFDSAFSA
+                     LSTFVVTYGQIDWQDGSLPPGVYRYNVVNHELEAIRAGDFKLDMAKLAIGQSRASSGLF
+                     TFVICGDLKSYTSRYRHERSYRNLLINTSQLAQFYLTLATINDFNTFLTPAIHDEKMHL
+                     FLEAEDDLPLYLVTAG"
+     gene            2982..4232
+                     /gene="tfxD"
+     CDS             2982..4232
+                     /codon_start=1
+                     /db_xref="GI:347446"
+                     /function="processes trifolitoxin peptide"
+                     /gene="tfxD"
+                     /note="precursor; putative"
+                     /protein_id="AAA26366.1"
+                     /transl_table=11
+                     /translation="MSDENQHGFYRTSFEYASISWRRMIPNVADTIVVTLIGATALQVA
+                     SNVLITILTLNIAFLNFCSLICMHNLKRGAKADVFAAIVRAACMMIGVYLALIAVSVAT
+                     LEGAPRTQTIAFIALSALRPFVAGWNAYCAEVFFAQGKRQIVRSVITRSSLIYAGVNLL
+                     FVGLSHFAGTQNSIISLLIGVYLALFHNALAYARILPTEWRFSRQDLKDVFSLRKLDLV
+                     GIGAGLSASFINMLEMGFLALVGWVVAAKFPQIAVFYFPFFTLVELTSGLAIGLGRSVT
+                     ERLITPRPFPRLHVLIAVYSTYSLLCFLIYVGLIGVSNRDIFALPLSLAGLALLFLICD
+                     GLQLVVRGYTLAKADGGKLTHLSAIAYLASGVILALAAVLGSVQALAIALVLGPLFLAI
+                     SIPAVQSRTALNALPNR"
+     gene            4213..4971
+                     /gene="tfxE"
+     CDS             4213..4971
+                     /codon_start=1
+                     /db_xref="GI:347447"
+                     /function="unknown"
+                     /gene="tfxE"
+                     /gene_functions="biosynthetic (rule-based-clusters) LAP:
+                     YcaO"
+                     /gene_kind="biosynthetic"
+                     /note="precursor; putative"
+                     /protein_id="AAA26367.1"
+                     /sec_met_domain="YcaO (E-value: 2.3e-10, bitscore: 29.5,
+                     seeds: 127, tool: rule-based-clusters)"
+                     /transl_table=11
+                     /translation="MHYRTDKPKVFVTDSGRFVADCQIILLGRKIICTGTDLQYEIAVA
+                     KAKSELAERIAFASPDAFNARVTRVARRLMLEATNAFNRESVTLPLSLFVTRPHLCWMR
+                     GNNSTGFAAHPRRKAAIEHAVNEVLERGWNARFRRDQQSLLKLATIRRDGSTAWVHESR
+                     LRQVSYCLANARVAGHVGWGSAVRRTTEAAVEAATSEAHAMSASGQDYGRGGTGVSELP
+                     SQHDQIAFVERQPVRIDDVTHYVIQAVSYS"
+     PFAM_domain     4417..4695
+                     /aSDomain="YcaO"
+                     /aSTool="fullhmmer"
+                     /database="35.0"
+                     /db_xref="PF02624.19"
+                     /description="YcaO cyclodehydratase, ATP-ad Mg2+-binding"
+                     /detection="hmmscan"
+                     /domain_id="fullhmmer_tfxE_0002"
+                     /evalue="2.80E-06"
+                     /label="tfxE"
+                     /locus_tag="tfxE"
+                     /protein_end="161"
+                     /protein_start="68"
+                     /score="27.0"
+                     /tool="antismash"
+                     /translation="RVARRLMLEATNAFNRESVTLPLSLFVTRPHLCWMRGNNSTGFAA
+                     HPRRKAAIEHAVNEVLERGWNARFRRDQQSLLKLATIRRDGSTAWVHE"
+     gene            4968..5744
+                     /gene="tfxF"
+     CDS             4968..5744
+                     /codon_start=1
+                     /db_xref="GI:347448"
+                     /function="processes trifolitoxin peptide"
+                     /gene="tfxF"
+                     /note="precursor; putative"
+                     /protein_id="AAA26368.1"
+                     /transl_table=11
+                     /translation="MRASKTPILINGSPWLLDFRRRSSREFDWEIAEHLEVPEAYFQAY
+                     DPLTTWFEWFSRIGYRDYTDAEAEIERDAEENVRQHQVSVQPDLTLTQRLSSEGSIQLP
+                     VPFLKTADQFCILSSLLYAGFGVVETRKFHGDTIFLKNVPSVGARHGIEAYVSLDDGRY
+                     YYDCEQHRLFSAGYRGDLRSGQIDIVFRPEVYMWRYQTAACLADVYLDLGHILGTLSMV
+                     ASLYDTSITSRSAEAAPVDLINAVHLQRIAVDGFNP"
+     gene            5996..6781
+                     /gene="tfxG"
+     CDS             5996..6781
+                     /codon_start=1
+                     /db_xref="GI:347449"
+                     /function="unknown"
+                     /gene="tfxG"
+                     /note="precursor; putative"
+                     /protein_id="AAA26369.1"
+                     /transl_table=11
+                     /translation="MNDEICLTGGGRTTVTRRGGVVYREGGPWSSTVISLLRHLEASGF
+                     AEAPSVVGTGFDERGRETLSFIEGEFVHPGPWSEEAFPQFGMMLRRLHDATASFKPPEN
+                     SMWRDWFGRNLGEGQHVIGHCDTGPWNIVCRSGLPVGLIDWEVAGPVRADIELAQACWL
+                     NAQLYDDDIAERVGLGSVTMRAHQVRLLLDGYGLSRKQRGGFVDKLITFAVHDAAEQAK
+                     EAAVTPESNDAEPLWAIAWRTRSASWMLHHRQTLEAALA"
+     PFAM_domain     6317..6481
+                     /aSDomain="APH"
+                     /aSTool="fullhmmer"
+                     /database="35.0"
+                     /db_xref="PF01636.26"
+                     /description="Phosphotransferase enzyme family"
+                     /detection="hmmscan"
+                     /domain_id="fullhmmer_tfxG_0003"
+                     /evalue="5.60E-05"
+                     /label="tfxG"
+                     /locus_tag="tfxG"
+                     /protein_end="162"
+                     /protein_start="107"
+                     /score="23.2"
+                     /tool="antismash"
+                     /translation="RDWFGRNLGEGQHVIGHCDTGPWNIVCRSGLPVGLIDWEVAGPVR
+                     ADIELAQACW"
+ORIGIN
+        1 cgcgtaaaag acacgagcag tctccgtaga ccataagaag cttttagagc agccaacgca
+       61 tagcagccgc ttttctaaag ctgctagcag cttggtgctt attccttggt agcgtacgat
+      121 tggatcgata tacaaaagtg taatctcgcc actaacaaga gccgatccga ctcctcttac
+      181 tagtccggca accttagctg taagaaatat tgagtgcggg ttgtcaatcc acatcgatac
+      241 gtttgctgcg gtcttgttct ccaaccactc atctatttcg gcagaatttc cgtgatggtc
+      301 agccaagcaa agttctgcga ttgatcgccg caatacacgg gcgcagtcgg cggcatctat
+      361 cgccgaagcg tcaccaattt ccgcagcgag gttttctcgc tgcataattt ttttctttcc
+      421 tgaatcgatc attagttgtg ttttttgttg ctctcgacgt atttgcaacc gtttgattcg
+      481 attgcgtatt tgtcaaaata ctccatatga ttgcattttt taaaagacaa gataggctca
+      541 catttgtcag caaatgactg ctggcaaacc ccaatcgcta aatgaggtgt tgttgcatgg
+      601 ataacaaggt tgcgaagaat gtcgaagtga agaagggctc catcaaggcg accttcaagg
+      661 ctgctgttct gaagtcgaag acgaaggtcg acatcggagg tagccgtcag ggctgcgtcg
+      721 cttaagtgaa catccggcgg gtgcggcaaa cgtacccgcc acttatgccc tcgctttcaa
+      781 cgggatgttt cgcatggact tcgtccaacg attcgtaatc gaccgctctt tccacctccg
+      841 ctactacagc ctcgacgcct atctatatcg cgcagttgac caggtcgcct gggacgcaga
+      901 catcactcac aatcgcctat tttgggacat ttggtcagca ttcatgcagc cgagaagtct
+      961 ggtagacgct gttgagacgc tatccgatta cgatcccgac gaagtggccg cagcaatcga
+     1021 aggcatgtgc gagtcgggca tcatcgaacc ggtgggcttg aaagaccgcc aatttgatcc
+     1081 tttgacggta gagctgtcac atgtgccaca ggcatgggat tatcacctgg tctcaagtcg
+     1141 catcgactgg atcaattatc tggatgggaa ggacgttaaa cgccaggacc ttgaacaaat
+     1201 ggacaagcat ttgtcggagg aggctgttcc gtcgaatttt cacaaggccg ccaactctcg
+     1261 accgaaatat gatttgccaa gtttagtgcc gctgacagcg ttcgaattca ataactcggc
+     1321 gtccgtcgca ttcggtcatg agaaggcacc gcttccgaac gaactgtcgc tcgatataat
+     1381 cacattgctc ctcaactatg cggccgcaaa gacggatacc gtcaacatgt atgccactgg
+     1441 cgagcatctg cgaaaggccg tcccatccgg aggagcgcga caccccatcg aattctacgt
+     1501 ggttgtcggc gatgagattg caggtatcga agctggcgta tatcactaca atgttcgcca
+     1561 tcatcggctc gatgctatcg aaatagcgtc cacctcattg aaagcactgc aagaggcaag
+     1621 ctcagtgctg ccccgatcac ggtcaaaacc gttcggcttt gctttcattc atacatgtcg
+     1681 gttcgagcga agtatgtttc ggtaccgcga accgcgaagc taccgtgtga tgcagtttga
+     1741 tcttgggcat atccatgcca acgaggtttt ggctgccaaa atcctcggcc tcgatttcag
+     1801 tgaaaccttt tctgtgccgg aaagcatagt tgagagcgtc ttgacgctcg atccgttcat
+     1861 cgagtccgcg atgtcagcct ttgtcgtcca cagacacgag aaccaccatg attgaactgc
+     1921 gcccgcttct ccaactgaat cttgaagatg gaatcccggt cctcaaagac ctcctgaccg
+     1981 ccgacagctt ttccttcacc gatgttgaac tcttgcggta cattccagcc attgccaaga
+     2041 acacccccgc ccagactcgg gatttggctg cctctgttgc tgatgcgctg gatgttgacc
+     2101 aaaccaccgc gctcgcagcc atcgaagcat tggttgagct tggtcttttg gtgccatccg
+     2161 cgtcgatctc ctcgcagaag gcagggatcc agttgtgggt ggataaggga tgggtggacg
+     2221 cactgatcct gcatttcgcg agcagaaatc tcaattataa tgacgatcca attgaatttg
+     2281 gcgggttgga ggatatcaaa agctatcccg aaccgatgga atcgaagcgt aggaaacgcg
+     2341 gcaccgccac gcgattggtc aagccgtccc gggagctggc agctgcagtc atactggacg
+     2401 ggctcatgaa caggcgctcg ttcaaaccct tcacacgcaa acaactgtcg atcaccgagg
+     2461 tcagcgagat actttggttt gggaacctct atgcgcgaga acgcgcggtc atcgctgaaa
+     2521 atcgtgactt cgagtctcct cgcgatatag ctttcgacag cgccttctca gcgttgtcca
+     2581 cctttgttgt cacatatgga cagatcgatt ggcaggatgg ctcgttgcca cccggagtct
+     2641 atcgttacaa tgtcgtcaat cacgaacttg aagcaatcag agccggtgat ttcaagctgg
+     2701 acatggcaaa actcgctatc ggtcagagtc gggcttcgag cgggctattc acgtttgtga
+     2761 tctgcggcga tttgaagtca tacacatcgc ggtacaggca cgagcggagc taccgcaatc
+     2821 tgctgatcaa cacctcacag ctcgcccaat tctatttgac cctcgcaacg atcaacgact
+     2881 tcaacacctt tctcacgccc gccatccacg atgagaaaat gcatctgttt cttgaagcgg
+     2941 aggacgacct cccgctttat ctcgtcacgg caggctagag catgagcgac gaaaaccagc
+     3001 atgggttcta tcggacttcg ttcgaatacg catcgatcag ttggcggaga atgattccca
+     3061 atgtggctga cactatcgtc gtcacgctca tcggcgctac tgcacttcag gtggcgtcaa
+     3121 atgttctgat cacgatactg accctcaata tcgcttttct gaacttttgc tcgcttatct
+     3181 gcatgcacaa tctgaaaaga ggggcaaagg ccgacgtatt tgctgcaatc gtccgcgctg
+     3241 cttgcatgat gatcggggtc tacctggcgc ttatcgcggt ctccgtcgcc accctcgaag
+     3301 gtgcaccgcg tacccaaacc attgctttca tagcactgtc tgcgctccgg ccgtttgtgg
+     3361 ctggatggaa tgcttactgt gcggaggttt ttttcgccca gggaaaacga caaattgtgc
+     3421 gaagcgtcat cacgagatcg tcgctgatct atgcaggagt taatctgctc tttgtcgggc
+     3481 tgtcgcattt cgctggcact caaaattcga tcatatcgct tctcatcggc gtatatcttg
+     3541 ctctcttcca caacgccctg gcctacgcca gaatcctgcc gaccgaatgg aggttcagtc
+     3601 gccaggattt gaaggatgtc ttctcacttc ggaagcttga tctggtcgga atcggggcag
+     3661 ggctttctgc gtcttttatc aacatgctcg aaatggggtt tcttgcatta gttgggtggg
+     3721 tggtggcagc aaagtttccg caaatcgcgg ttttttattt cccgtttttc actttggtgg
+     3781 aattgacgag cggacttgcg attgggcttg gacgctcagt caccgaacgt ttgattacgc
+     3841 cgcgcccgtt tccccggctg cacgtcttga tcgccgttta cagcacgtat tcgttgctct
+     3901 gcttcttgat ctacgttgga ttaataggtg tgagcaatcg ggacatattt gctctcccgc
+     3961 tgtcgcttgc cggattggcg ctacttttcc tgatctgcga cgggctgcag cttgtggttc
+     4021 ggggatatac gctcgccaaa gctgacggag gcaagctcac gcatctcagc gccattgcat
+     4081 acctagcctc tggagtgatc ctcgcgctgg cggccgtctt gggctcggtt caagcgttgg
+     4141 ccatcgcttt ggtcttggga ccgctgttcc ttgcaatctc cattcccgcc gttcaaagtc
+     4201 gaactgccct aaatgcacta ccgaacagat aaaccgaaag tattcgtaac cgactccggc
+     4261 aggtttgttg ctgactgcca gataattctg cttggtcgca agatcatatg tacgggaacc
+     4321 gatcttcagt acgagattgc ggttgcaaaa gcaaagtctg agcttgcgga gaggatcgcg
+     4381 tttgcatcac cagacgcctt caatgcgcga gtgacgcggg ttgcaaggcg tctcatgctc
+     4441 gaagctacca atgccttcaa cagagaatcc gtcaccctgc cgttgagctt gttcgtaacg
+     4501 cggccacatc tgtgctggat gcgcggcaac aactccacag gatttgccgc acatccccgg
+     4561 cgcaaggcag caattgaaca cgcggtcaat gaggttttag agcgcggctg gaacgctcgg
+     4621 tttcgacgag atcagcagtc tcttcttaag ttggccacga tccgacgaga cggttcaaca
+     4681 gcttgggtac acgaatcgag gctccgccag gtttcctact gcttggccaa cgcccgtgtt
+     4741 gcgggacatg tcggttgggg ttccgcagtt cgcagaacga ccgaagcggc agtggaagct
+     4801 gcaactagtg aagcccatgc gatgagtgcg tcggggcagg attacggtcg cggcggaacc
+     4861 ggcgtgtcgg agcttccctc gcaacacgac caaatcgcgt ttgtcgagag gcagccggtg
+     4921 cgcatcgatg acgtcactca ttacgtgata caggcggtga gttattcatg agagcaagca
+     4981 aaacaccgat cttgataaac ggctctccgt ggttgttaga tttccgtcgg cggtcaagcc
+     5041 gagaattcga ttgggaaatt gccgaacatc tagaggtgcc cgaagcatat tttcaggcgt
+     5101 atgacccgct aacaacttgg ttcgagtggt tttctcggat cggctatcga gattacaccg
+     5161 atgctgaggc cgaaattgag cgagatgccg aggaaaatgt acggcagcac caagtttccg
+     5221 ttcaacccga tctcacgctg acccagcgcc tatcgagcga aggctcgatc cagcttccag
+     5281 ttccgttcct aaaaacggcc gatcaatttt gtatcttgtc gtcgctcctg tacgccggtt
+     5341 ttggagtggt tgagacgcgg aaattccacg gtgacacgat cttcctaaaa aacgtacctt
+     5401 cggttggagc gcgtcacggc attgaggctt atgtttccct ggatgacggg cgctattatt
+     5461 acgactgtga gcagcatcgg ttgttttccg caggctatcg gggtgatcta cggagcggtc
+     5521 agatcgatat cgtatttcgg cctgaggtat acatgtggcg ttatcaaacc gctgcctgtc
+     5581 ttgccgatgt ctacctcgac cttggccaca tattaggtac tctatcgatg gtggcgtccc
+     5641 tctatgacac gtctatcacg agccgctctg cagaagccgc tcctgtagac ttgatcaatg
+     5701 cggtgcatct ccagcgaata gccgttgatg gatttaatcc ataggcgcag gacgggaatg
+     5761 cctgcgaact gaagaaggcc gacgatccgt ttttctcttg atgaacgccg tcggccagtc
+     5821 gtccgttttg ggccgtaagc gctgacccag cggcggcaac agcgaccgtg tctttatggc
+     5881 ggcttgccaa cgacaggagc gaggcccttg aggtgcagaa atcgttgccg gggggcgaag
+     5941 gctgaaaggt aaacgcgccg cttgtggtgc tactaatgga atccaggtgg gtgccatgaa
+     6001 tgatgagatt tgcctgacag gtggcggacg aacgactgtc acgcggcgcg gcggagtcgt
+     6061 gtatcgcgaa ggcggcccgt ggtcatcaac cgtcatttcg ctcctgcggc atctggaagc
+     6121 ctctggcttc gctgaagctc cttccgttgt cggcaccggt ttcgatgagc gcggccggga
+     6181 gacattatcg tttatcgagg gtgagtttgt tcacccaggc ccttggtcgg aggaggcttt
+     6241 tccgcaattt ggaatgatgt tgcggcgact gcacgatgcc accgcctcgt tcaaacctcc
+     6301 cgaaaactcg atgtggcgcg attggttcgg gcgtaacctc ggtgagggtc aacacgtaat
+     6361 aggacactgc gacacaggcc catggaacat tgtttgccgg tcaggattgc ctgtcgggtt
+     6421 gatagattgg gaggtggctg ggcctgtcag ggcggatatc gaattggccc aggcttgttg
+     6481 gctgaatgcc cagctctacg atgacgacat tgcggagagg gtcggattag gctctgtgac
+     6541 catgagagcg catcaagttc gcctgctgct tgacggctat ggtctgtctc ggaagcaacg
+     6601 cggcggcttc gtcgacaagc taatcacgtt cgcagttcac gatgcggccg agcaggcgaa
+     6661 agaggcggct gtcacgccag agtcgaacga tgcggaaccg ctatgggcaa ttgcctggcg
+     6721 cactagaagt gcctcctgga tgctccatca tcggcaaaca ctggaagcag cgctggcata
+     6781 gtaggcagcg accgcgccat aagtcgtggg acgaagctgc ggactggggt tgcgaggtta
+     6841 agttcagcaa gcaaggggga gacactatgg aagcttcgtt caggccgttc gtccgcttta
+     6901 tccacgaaaa acagatgcaa cttctcgaag agactgcaaa aagtccgaaa ggctcctggc
+     6961 tgtgtgacgc gctcggtgat ccggaactat tcttcgcctt gagagacgag cgtatcgacg
+     7021 tctactatcg cggacgggcc atctattcca tcgagttcag cggtggcaag gtgacaccac
+     7081 ggacccatgt gaagtacctg gttctcgacg accgtgaccc ttacatcaag atgcagaacg
+     7141 cg
+//

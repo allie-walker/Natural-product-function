@@ -1,0 +1,762 @@
+LOCUS       BGC0000531.1            9746 bp    DNA     linear   UNK 01-JAN-1980
+DEFINITION  Mutacin I biosynthetic gene cluster.
+ACCESSION   BGC0000531
+VERSION     BGC0000531.1
+KEYWORDS    .
+SOURCE      
+  ORGANISM  .
+            .
+COMMENT     ##antiSMASH-Data-START##
+            Version      :: 7.1.0
+            Run date     :: 2025-04-21 21:43:16
+            ##antiSMASH-Data-END##
+FEATURES             Location/Qualifiers
+     source          1..9746
+                     /db_xref="taxon:1309"
+                     /mol_type="genomic DNA"
+                     /organism="Streptococcus mutans"
+                     /strain="UA140"
+     protocluster    1..9746
+                     /aStool="rule-based-clusters"
+                     /category="RiPP"
+                     /contig_edge="True"
+                     /core_location="[3071:7308]"
+                     /cutoff="20000"
+                     /detection_rule="((LANC_like and (Lant_dehydr_N or
+                     Lant_dehydr_C)) and not (YcaO or TIGR03604))"
+                     /neighbourhood="10000"
+                     /product="lanthipeptide-class-i"
+                     /protocluster_number="1"
+                     /tool="antismash"
+     proto_core      3072..7308
+                     /aStool="rule-based-clusters"
+                     /tool="antismash"
+                     /cutoff="20000"
+                     /detection_rule="((LANC_like and (Lant_dehydr_N or
+                     Lant_dehydr_C)) and not (YcaO or TIGR03604))"
+                     /neighbourhood="10000"
+                     /product="lanthipeptide-class-i"
+                     /protocluster_number="1"
+     cand_cluster    1..9746
+                     /candidate_cluster_number="1"
+                     /contig_edge="True"
+                     /detection_rules="((LANC_like and (Lant_dehydr_N or
+                     Lant_dehydr_C)) and not (YcaO or TIGR03604))"
+                     /kind="single"
+                     /product="lanthipeptide-class-i"
+                     /protoclusters="1"
+                     /tool="antismash"
+     region          1..9746
+                     /candidate_cluster_numbers="1"
+                     /contig_edge="True"
+                     /product="lanthipeptide-class-i"
+                     /region_number="1"
+                     /rules="((LANC_like and (Lant_dehydr_N or Lant_dehydr_C))
+                     and not (YcaO or TIGR03604))"
+                     /tool="antismash"
+     gene            1016..1885
+                     /gene="mutR"
+     CDS             1016..1885
+                     /codon_start=1
+                     /db_xref="GI:12082656"
+                     /gene="mutR"
+                     /gene_functions="biosynthetic-additional
+                     (rule-based-clusters) TIGR01716"
+                     /gene_kind="biosynthetic-additional"
+                     /note="positive regulator"
+                     /product="MutR"
+                     /protein_id="AAG48563.1"
+                     /sec_met_domain="TIGR01716 (E-value: 1.6e-67, bitscore:
+                     216.4, seeds: 14, tool: rule-based-clusters)"
+                     /transl_table=11
+                     /translation="MKVNQSMELGELYRELRIARGLKIKDIACKNLSKSQLSRFENGQT
+                     MLAADKLLLAISGIHMSFSEFGYALSHYEESDFFKRGNKLSELYVQKDIKGLKKLLEFN
+                     DNHEVFDVYNRLNKLVIQVTIHLLDTDYIISDDDKNFLTTYLYNIEEWTEYELYIFGNT
+                     MSILSSDDLIFLGKAFVERDKLYISLPSHKKNAELTFLNLILILLERKKLYQAIYFVEN
+                     LEKLLNYQDMFAITFLKFLKKIITYFHDKSVDMSELEHYINIVEEINPTIASILKSNLN
+                     QLLSSFSH"
+     aSDomain        1217..1870
+                     /aSDomain="TIGR01716"
+                     /aSTool="tigrfam"
+                     /description="RGG_Cterm: transcriptional activator,
+                     Rgg/GadR/MutR family, C-terminal domain"
+                     /detection="hmmscan"
+                     /domain_id="TIGRFam_mutR_0001"
+                     /evalue="8.80E-65"
+                     /identifier="TIGR01716"
+                     /label="mutR"
+                     /locus_tag="mutR"
+                     /protein_end="285"
+                     /protein_start="67"
+                     /score="216.4"
+                     /tool="antismash"
+                     /translation="YALSHYEESDFFKRGNKLSELYVQKDIKGLKKLLEFNDNHEVFDV
+                     YNRLNKLVIQVTIHLLDTDYIISDDDKNFLTTYLYNIEEWTEYELYIFGNTMSILSSDD
+                     LIFLGKAFVERDKLYISLPSHKKNAELTFLNLILILLERKKLYQAIYFVENLEKLLNYQ
+                     DMFAITFLKFLKKIITYFHDKSVDMSELEHYINIVEEINPTIASILKSNLNQLLS"
+     CDS_motif       2457..2552
+                     /note="leader peptide"
+                     /note="lantipeptide"
+                     /note="predicted leader seq:
+                     MSNTQLLEVLGTETFDVQEDLFAFDTTDTTIV"
+                     /locus_tag="mutA"
+     gene            2457..2654
+                     /gene="mutA"
+     CDS             2457..2654
+                     /codon_start=1
+                     /db_xref="GI:12082657"
+                     /gene="mutA"
+                     /gene_functions="biosynthetic-additional
+                     (rule-based-clusters) Gallidermin"
+                     /gene_functions="biosynthetic-additional (lanthipeptides)
+                     predicted lanthipeptide"
+                     /gene_kind="biosynthetic-additional"
+                     /note="prepromutacin I"
+                     /product="MutA precursor"
+                     /protein_id="AAG48564.1"
+                     /sec_met_domain="Gallidermin (E-value: 4.1e-26, bitscore:
+                     80.3, seeds: 3, tool: rule-based-clusters)"
+                     /transl_table=11
+                     /translation="MSNTQLLEVLGTETFDVQEDLFAFDTTDTTIVASNDDPDTRFSSL
+                     SLCSLGCTGVKNPSFNSYCC"
+     CDS_motif       2457..2579
+                     /prepeptide="leader"
+                     /note="peptide class: {self.peptide_class}"
+                     /note="predicted sequence:
+                     MSNTQLLEVLGTETFDVQEDLFAFDTTDTTIVASNDDPDTR"
+                     /locus_tag="mutA_lanthipeptide"
+                     /aSTool="lanthipeptides"
+                     /tool="antismash"
+     CDS_motif       2580..2654
+                     /prepeptide="core"
+                     /locus_tag="mutA_lanthipeptide"
+                     /peptide="lanthipeptide"
+                     /predicted_class="Class I"
+                     /score="18.60"
+                     /molecular_weight="2345.7"
+                     /monoisotopic_mass="2344.1"
+                     /core_sequence="FSSLSLCSLGCTGVKNPSFNSYCC"
+                     /aSTool="lanthipeptides"
+                     /tool="antismash"
+                     /leader_sequence="MSNTQLLEVLGTETFDVQEDLFAFDTTDTTIVASNDDPDTR
+                     "
+                     /leader_location="[2456:2579](+)"
+                     /alternative_weights="2363.8"
+                     /alternative_weights="2381.8"
+                     /alternative_weights="2399.8"
+     PFAM_domain     2490..2651
+                     /aSDomain="Gallidermin"
+                     /aSTool="fullhmmer"
+                     /database="35.0"
+                     /db_xref="PF02052.18"
+                     /db_xref="GO:0005576"
+                     /db_xref="GO:0042742"
+                     /description="Gallidermin"
+                     /detection="hmmscan"
+                     /domain_id="fullhmmer_mutA_0001"
+                     /evalue="1.00E-22"
+                     /gene_ontologies="GO:0005576: extracellular region"
+                     /gene_ontologies="GO:0042742: defense response to
+                     bacterium"
+                     /label="mutA"
+                     /locus_tag="mutA"
+                     /protein_end="65"
+                     /protein_start="11"
+                     /score="80.3"
+                     /tool="antismash"
+                     /translation="TETFDVQEDLFAFDTTDTTIVASNDDPDTRFSSLSLCSLGCTGVK
+                     NPSFNSYCC"
+     aSDomain        2511..2651
+                     /aSDomain="TIGR03731"
+                     /aSTool="tigrfam"
+                     /description="lantibio_gallid: lantibiotic,
+                     gallidermin/nisin family"
+                     /detection="hmmscan"
+                     /domain_id="TIGRFam_mutA_0002"
+                     /evalue="3.90E-17"
+                     /identifier="TIGR03731"
+                     /label="mutA"
+                     /locus_tag="mutA"
+                     /protein_end="65"
+                     /protein_start="18"
+                     /score="60.0"
+                     /tool="antismash"
+                     /translation="EDLFAFDTTDTTIVASNDDPDTRFSSLSLCSLGCTGVKNPSFNSY
+                     CC"
+     CDS_motif       2553..2654
+                     /note="core peptide"
+                     /note="lantipeptide"
+                     /note="monoisotopic mass: 3279.5"
+                     /note="molecular weight: 3281.6"
+                     /note="alternative weights: 3299.6; 3317.7; 3335.7; 3353.7;
+                     3371.7"
+                     /note="number of bridges: 3"
+                     /note="predicted core seq:
+                     ASNDDPDTRFSSLSLCSLGCTGVKNPSFNSYCC"
+                     /note="predicted class: lantipeptide"
+                     /note="score: 0.00"
+                     /note="RODEO score: 34"
+                     /note="predicted additional modification: AviCys"
+                     /locus_tag="mutA"
+     CDS_motif       2723..2887
+                     /note="leader peptide"
+                     /note="lantipeptide"
+                     /note="predicted leader seq:
+                     MLNTQLLEVLGTKTFDVQEDLFEFNITDTIVLQASDSPDTHSKVGSFSICPPRKT"
+                     /locus_tag="mutA_"
+     gene            2723..2917
+                     /gene="mutA'"
+     CDS             2723..2917
+                     /codon_start=1
+                     /db_xref="GI:12082658"
+                     /gene="mutA_"
+                     /gene_functions="biosynthetic-additional
+                     (rule-based-clusters) TIGR03731"
+                     /gene_functions="biosynthetic-additional (lanthipeptides)
+                     predicted lanthipeptide"
+                     /gene_kind="biosynthetic-additional"
+                     /product="MutA'"
+                     /protein_id="AAG48565.1"
+                     /sec_met_domain="TIGR03731 (E-value: 1e-19, bitscore: 59.5,
+                     seeds: 23, tool: rule-based-clusters)"
+                     /transl_table=11
+                     /translation="MLNTQLLEVLGTKTFDVQEDLFEFNITDTIVLQASDSPDTHSKVG
+                     SFSICPPRKTSVSFNSYCC"
+     CDS_motif       2723..2845
+                     /prepeptide="leader"
+                     /note="peptide class: {self.peptide_class}"
+                     /note="predicted sequence:
+                     MLNTQLLEVLGTKTFDVQEDLFEFNITDTIVLQASDSPDTH"
+                     /locus_tag="mutA__lanthipeptide"
+                     /aSTool="lanthipeptides"
+                     /tool="antismash"
+     CDS_motif       2846..2917
+                     /prepeptide="core"
+                     /locus_tag="mutA__lanthipeptide"
+                     /peptide="lanthipeptide"
+                     /predicted_class="Class I"
+                     /score="0.70"
+                     /molecular_weight="2325.7"
+                     /monoisotopic_mass="2324.2"
+                     /core_sequence="SKVGSFSICPPRKTSVSFNSYCC"
+                     /aSTool="lanthipeptides"
+                     /tool="antismash"
+                     /leader_sequence="MLNTQLLEVLGTKTFDVQEDLFEFNITDTIVLQASDSPDTH
+                     "
+                     /leader_location="[2722:2845](+)"
+                     /alternative_weights="2343.7"
+                     /alternative_weights="2361.8"
+                     /alternative_weights="2379.8"
+                     /alternative_weights="2397.8"
+     PFAM_domain     2756..2914
+                     /aSDomain="Gallidermin"
+                     /aSTool="fullhmmer"
+                     /database="35.0"
+                     /db_xref="PF02052.18"
+                     /db_xref="GO:0005576"
+                     /db_xref="GO:0042742"
+                     /description="Gallidermin"
+                     /detection="hmmscan"
+                     /domain_id="fullhmmer_mutA__0002"
+                     /evalue="2.90E-11"
+                     /gene_ontologies="GO:0005576: extracellular region"
+                     /gene_ontologies="GO:0042742: defense response to
+                     bacterium"
+                     /label="mutA_"
+                     /locus_tag="mutA_"
+                     /protein_end="64"
+                     /protein_start="11"
+                     /score="43.7"
+                     /tool="antismash"
+                     /translation="TKTFDVQEDLFEFNITDTIVLQASDSPDTHSKVGSFSICPPRKTS
+                     VSFNSYCC"
+     aSDomain        2777..2914
+                     /aSDomain="TIGR03731"
+                     /aSTool="tigrfam"
+                     /description="lantibio_gallid: lantibiotic,
+                     gallidermin/nisin family"
+                     /detection="hmmscan"
+                     /domain_id="TIGRFam_mutA__0003"
+                     /evalue="5.70E-17"
+                     /identifier="TIGR03731"
+                     /label="mutA_"
+                     /locus_tag="mutA_"
+                     /protein_end="64"
+                     /protein_start="18"
+                     /score="59.5"
+                     /tool="antismash"
+                     /translation="EDLFEFNITDTIVLQASDSPDTHSKVGSFSICPPRKTSVSFNSYC
+                     C"
+     CDS_motif       2888..2917
+                     /note="core peptide"
+                     /note="lantipeptide"
+                     /note="monoisotopic mass: 908.4"
+                     /note="molecular weight: 909.1"
+                     /note="alternative weights: 927.1"
+                     /note="number of bridges: 1"
+                     /note="predicted core seq: SVSFNSYCC"
+                     /note="predicted class: lantipeptide"
+                     /note="score: 0.00"
+                     /note="RODEO score: 19"
+                     /note="predicted additional modification: AviCys"
+                     /locus_tag="mutA_"
+     gene            3072..6044
+                     /gene="mutB"
+     CDS             3072..6044
+                     /codon_start=1
+                     /db_xref="GI:12082659"
+                     /gene="mutB"
+                     /gene_functions="biosynthetic (rule-based-clusters)
+                     lanthipeptide-class-i: Lant_dehydr_C"
+                     /gene_functions="biosynthetic (rule-based-clusters)
+                     lanthipeptide-class-i: Lant_dehydr_N"
+                     /gene_functions="biosynthetic-additional
+                     (rule-based-clusters) Lanthipeptide_LanB_RRE"
+                     /gene_functions="biosynthetic-additional (smcogs)
+                     SMCOG1155:Lantibiotic dehydratase domain protein (Score:
+                     671.4; E-value: 3.2e-203)"
+                     /gene_kind="biosynthetic"
+                     /note="modification enzyme for mutacin I"
+                     /note="smCOG tree PNG image: smcogs/mutB.png"
+                     /product="MutB"
+                     /protein_id="AAG48566.1"
+                     /sec_met_domain="Lant_dehydr_N (E-value: 8.6e-122,
+                     bitscore: 396.3, seeds: 73, tool: rule-based-clusters)"
+                     /sec_met_domain="Lanthipeptide_LanB_RRE (E-value: 6.3e-13,
+                     bitscore: 38.5, seeds: 20, tool: rule-based-clusters)"
+                     /sec_met_domain="Lant_dehydr_C (E-value: 5.2e-20, bitscore:
+                     61.2, seeds: 35, tool: rule-based-clusters)"
+                     /transl_table=11
+                     /translation="MNDFQFQDYFMYRKPLGNFSNFLSITDMMDPIELLHNDSIFAEGV
+                     YLASPSLRSSINKLENQIASTKEKKNAKETIFQYYARYNTRPTPFGLFSSIGIGGFSTH
+                     PRKEKSCYEKSVNVDLFWAYKVADKLESMPEILNTLKVVANNALQKSNDFWLLDTRSHF
+                     GLMNSRSDIREDITVKSNQLIDYVINCTEEPISYQTLIDDIAEKFSQSSDDVKEYLQKL
+                     IKEEFLITELKFSLIEDNPLDWFINILERDQNNSELLEKLTEIKAMIQDYTDRNIGEGN
+                     NSILALENKMSQIVKANAYLRVDLYDHAELKLAQHTKSSLQNILKVLSSFSSAVNSQKE
+                     IKNYHEKFIARYGYERLVPLQLLLNSTSGLGFPKGYSQTEVSKQNNEDSKNQKIIEFLQ
+                     RKFEKALRDGKEIILSDDDLKDLNFDTEQQISGELYCFYNFKSKKLEVSSLGVSQILGN
+                     TFGRFHSKLPNTIVTKNVNKTKEIFTEAYPNTIITQLNEVPYFGRGGNIMISNSLKSHQ
+                     LELRNYTTKKEMSINDIYVGATSEELYFYSKKYEKRVIFVMNNMFNYINGSKLLRFLLE
+                     VSNSDFQNITPITLGSLDSYNHVPAIIYKDIIIKPETWDIRKSEAKTLDSLKNWLTNNN
+                     VPPFVRMKYTDQIIYLDLSRTIDLTMLFQSIKKHSFIQLLDVHSVCTNDTEILELVVPF
+                     TRSDVNAHQIYHYAQNIYTLEDSGSKEKYFYAKIYVNKQRQTSFLQKEYPLLLNYLKLP
+                     ENLQWFYIRYKDDGKDSIRLRIRYVEDKQLVQLYSRFIEWATKARKNIQISGYEISEYI
+                     PESARYGGKKYSSIIHSFFYYDSILDLLLQKKAEQTIEVRTSLSIIRMFLMMKLSLQDQ
+                     QKLIKNLFDGKHKLKYEKEYHNSISLLLDNLCTKNQTDEADIFCVMNMKKITEKISSVL
+                     KQKDLTTDWQRILGSLIHMRCNRVYGINSELERKTMFIVDKVINSKRYTDMFLEVGNET
+                     K"
+     PFAM_domain     3183..5057
+                     /aSDomain="Lant_dehydr_N"
+                     /aSTool="fullhmmer"
+                     /database="35.0"
+                     /db_xref="PF04738.16"
+                     /description="Lantibiotic dehydratase, N terminus"
+                     /detection="hmmscan"
+                     /domain_id="fullhmmer_mutB_0003"
+                     /evalue="2.00E-120"
+                     /label="mutB"
+                     /locus_tag="mutB"
+                     /protein_end="662"
+                     /protein_start="37"
+                     /score="402.9"
+                     /tool="antismash"
+                     /translation="DSIFAEGVYLASPSLRSSINKLENQIASTKEKKNAKETIFQYYAR
+                     YNTRPTPFGLFSSIGIGGFSTHPRKEKSCYEKSVNVDLFWAYKVADKLESMPEILNTLK
+                     VVANNALQKSNDFWLLDTRSHFGLMNSRSDIREDITVKSNQLIDYVINCTEEPISYQTL
+                     IDDIAEKFSQSSDDVKEYLQKLIKEEFLITELKFSLIEDNPLDWFINILERDQNNSELL
+                     EKLTEIKAMIQDYTDRNIGEGNNSILALENKMSQIVKANAYLRVDLYDHAELKLAQHTK
+                     SSLQNILKVLSSFSSAVNSQKEIKNYHEKFIARYGYERLVPLQLLLNSTSGLGFPKGYS
+                     QTEVSKQNNEDSKNQKIIEFLQRKFEKALRDGKEIILSDDDLKDLNFDTEQQISGELYC
+                     FYNFKSKKLEVSSLGVSQILGNTFGRFHSKLPNTIVTKNVNKTKEIFTEAYPNTIITQL
+                     NEVPYFGRGGNIMISNSLKSHQLELRNYTTKKEMSINDIYVGATSEELYFYSKKYEKRV
+                     IFVMNNMFNYINGSKLLRFLLEVSNSDFQNITPITLGSLDSYNHVPAIIYKDIIIKPET
+                     WDIRKSEAKTLDSLKNWLTNNNVPPFVRMKYTDQIIYLDLSRTIDLTML"
+     PFAM_domain     5241..5960
+                     /aSDomain="Lant_dehydr_C"
+                     /aSTool="fullhmmer"
+                     /database="35.0"
+                     /db_xref="PF14028.9"
+                     /description="Lantibiotic biosynthesis dehydratase C-term"
+                     /detection="hmmscan"
+                     /domain_id="fullhmmer_mutB_0004"
+                     /evalue="3.90E-19"
+                     /label="mutB"
+                     /locus_tag="mutB"
+                     /protein_end="963"
+                     /protein_start="723"
+                     /score="69.6"
+                     /tool="antismash"
+                     /translation="FYAKIYVNKQRQTSFLQKEYPLLLNYLKLPENLQWFYIRYKDDGK
+                     DSIRLRIRYVEDKQLVQLYSRFIEWATKARKNIQISGYEISEYIPESARYGGKKYSSII
+                     HSFFYYDSILDLLLQKKAEQTIEVRTSLSIIRMFLMMKLSLQDQQKLIKNLFDGKHKLK
+                     YEKEYHNSISLLLDNLCTKNQTDEADIFCVMNMKKITEKISSVLKQKDLTTDWQRILGS
+                     LIHMRCNRVYGINSELER"
+     aSDomain        5241..5987
+                     /aSDomain="TIGR03891"
+                     /aSTool="tigrfam"
+                     /description="thiopep_ocin: thiopeptide-type bacteriocin
+                     biosynthesis domain"
+                     /detection="hmmscan"
+                     /domain_id="TIGRFam_mutB_0004"
+                     /evalue="1.10E-40"
+                     /identifier="TIGR03891"
+                     /label="mutB"
+                     /locus_tag="mutB"
+                     /protein_end="972"
+                     /protein_start="723"
+                     /score="138.2"
+                     /tool="antismash"
+                     /translation="FYAKIYVNKQRQTSFLQKEYPLLLNYLKLPENLQWFYIRYKDDGK
+                     DSIRLRIRYVEDKQLVQLYSRFIEWATKARKNIQISGYEISEYIPESARYGGKKYSSII
+                     HSFFYYDSILDLLLQKKAEQTIEVRTSLSIIRMFLMMKLSLQDQQKLIKNLFDGKHKLK
+                     YEKEYHNSISLLLDNLCTKNQTDEADIFCVMNMKKITEKISSVLKQKDLTTDWQRILGS
+                     LIHMRCNRVYGINSELERKTMFIVDKV"
+     gene            6031..7308
+                     /gene="mutC"
+     CDS             6031..7308
+                     /codon_start=1
+                     /db_xref="GI:12082660"
+                     /gene="mutC"
+                     /gene_functions="biosynthetic (rule-based-clusters)
+                     lanthipeptide-class-i: LANC_like"
+                     /gene_functions="biosynthetic-additional (smcogs)
+                     SMCOG1140:Lanthionine synthetase C family protein (Score:
+                     242.9; E-value: 9e-74)"
+                     /gene_kind="biosynthetic"
+                     /note="modification enzyme for mutacin I"
+                     /note="smCOG tree PNG image: smcogs/mutC.png"
+                     /product="MutC"
+                     /protein_id="AAG48567.1"
+                     /sec_met_domain="LANC_like (E-value: 4.7e-53, bitscore:
+                     169.2, seeds: 47, tool: rule-based-clusters)"
+                     /transl_table=11
+                     /translation="MRQSKRVEKIKDIPTEQTYLFDYQEILKKVSQAKQTDFWNLLSLS
+                     SGITSLLIFYQEYENLEGVNLKQQKQSLIGLISHYINQIAEKSSLFDGLAGVGFAINYI
+                     SNNGKYYQKLLEQIDNRLRQNIERDLVNYKNEEYANPNELMMYVSGNAGVARYLMERES
+                     SEDWRIVEMILEVFYKALEQGWRVQPKYQFLESEKQYYLKGNINFGLAHGLLGPTTIMS
+                     LYQQRYPQNTRNAEKLQETYHFIKRYAQLRDEGLRWAIRYDLFRKEGSFILRNGWCYGE
+                     NGIYNTLFLMGKVLSNQEICETAQKVIPSIIKDDYEKMGSPTFCHGFAGKANFFLLQYQ
+                     RTKESIFLVKAEEEIDKILIVYNSENMFGFKDIEDNIDNTGERLTYWDNFGLLSGTVGV
+                     LLVLMEYCNIVNAGKIAEWNKIFLLT"
+     PFAM_domain     6151..7254
+                     /aSDomain="LANC_like"
+                     /aSTool="fullhmmer"
+                     /database="35.0"
+                     /db_xref="PF05147.16"
+                     /db_xref="GO:0031179"
+                     /description="Lanthionine synthetase C-like protein"
+                     /detection="hmmscan"
+                     /domain_id="fullhmmer_mutC_0005"
+                     /evalue="1.30E-49"
+                     /gene_ontologies="GO:0031179: peptide modification"
+                     /label="mutC"
+                     /locus_tag="mutC"
+                     /protein_end="408"
+                     /protein_start="40"
+                     /score="168.8"
+                     /tool="antismash"
+                     /translation="LLSLSSGITSLLIFYQEYENLEGVNLKQQKQSLIGLISHYINQIA
+                     EKSSLFDGLAGVGFAINYISNNGKYYQKLLEQIDNRLRQNIERDLVNYKNEEYANPNEL
+                     MMYVSGNAGVARYLMERESSEDWRIVEMILEVFYKALEQGWRVQPKYQFLESEKQYYLK
+                     GNINFGLAHGLLGPTTIMSLYQQRYPQNTRNAEKLQETYHFIKRYAQLRDEGLRWAIRY
+                     DLFRKEGSFILRNGWCYGENGIYNTLFLMGKVLSNQEICETAQKVIPSIIKDDYEKMGS
+                     PTFCHGFAGKANFFLLQYQRTKESIFLVKAEEEIDKILIVYNSENMFGFKDIEDNIDNT
+                     GERLTYWDNFGLLSGTVGVLLVLMEYCN"
+     gene            7331..7897
+                     /gene="mutD"
+     CDS             7331..7897
+                     /codon_start=1
+                     /db_xref="GI:12082661"
+                     /gene="mutD"
+                     /gene_functions="biosynthetic-additional
+                     (rule-based-clusters) Flavoprotein"
+                     /gene_kind="biosynthetic-additional"
+                     /note="flavoprotein, modification enzyme for mutacin I"
+                     /product="MutD"
+                     /protein_id="AAG48568.1"
+                     /sec_met_domain="Flavoprotein (E-value: 3.7e-34, bitscore:
+                     106.5, seeds: 143, tool: rule-based-clusters)"
+                     /transl_table=11
+                     /translation="MEEQNIEKKILLCLTGSGPLLGIAEYITFLTVRFKHVRVIISDNA
+                     AKMLPVAAITQLCEKVYTDEVSFTDKQKSHIALTRWADITVVLPATANIIGKVANGIAD
+                     NFMTTTLLSSSKPVLIYPCMNNIMWGNPVVQKNVEVLSGTQYKVIVGQESESFELASGK
+                     MKKNIAIPSLDELRRVVLENLQEER"
+     PFAM_domain     7352..7828
+                     /aSDomain="Flavoprotein"
+                     /aSTool="fullhmmer"
+                     /database="35.0"
+                     /db_xref="PF02441.22"
+                     /db_xref="GO:0003824"
+                     /description="Flavoprotein"
+                     /detection="hmmscan"
+                     /domain_id="fullhmmer_mutD_0006"
+                     /evalue="8.00E-32"
+                     /gene_ontologies="GO:0003824: catalytic activity"
+                     /label="mutD"
+                     /locus_tag="mutD"
+                     /protein_end="166"
+                     /protein_start="7"
+                     /score="110.3"
+                     /tool="antismash"
+                     /translation="KKILLCLTGSGPLLGIAEYITFLTVRFKHVRVIISDNAAKMLPVA
+                     AITQLCEKVYTDEVSFTDKQKSHIALTRWADITVVLPATANIIGKVANGIADNFMTTTL
+                     LSSSKPVLIYPCMNNIMWGNPVVQKNVEVLSGTQYKVIVGQESESFELASGKMKK"
+     gene            7902..9245
+                     /gene="mutP"
+     CDS             7902..9245
+                     /codon_start=1
+                     /db_xref="GI:12082662"
+                     /gene="mutP"
+                     /gene_functions="biosynthetic-additional
+                     (rule-based-clusters) Peptidase_S8"
+                     /gene_functions="biosynthetic-additional (smcogs)
+                     SMCOG1075:alkaline serine protease, subtilase family
+                     (Score: 244.9; E-value: 3.2e-74)"
+                     /gene_kind="biosynthetic-additional"
+                     /note="protease for processing of premutacin I"
+                     /note="smCOG tree PNG image: smcogs/mutP.png"
+                     /product="MutP"
+                     /protein_id="AAG48569.1"
+                     /sec_met_domain="Peptidase_S8 (E-value: 1.6e-45, bitscore:
+                     144.7, seeds: 43, tool: rule-based-clusters)"
+                     /transl_table=11
+                     /translation="MKKKGLLVIIFLTFFFFYPKAKAAEYTIISNNSEQTVNDLNNLGV
+                     TVNSHIAEIGYIEAQGDVNIDQIEKLSNIQSIQNMADTSQNITTRVPSTYINQTIQLPQ
+                     LFSYQWGMQKITNNGVSYSLNKENRKNVTVALVDSGIDVDHNAFTGMIDSRSKNFVPAG
+                     GYDNSESSETGNINDIDDKKGHGTAVAGQIAANGQIFGVSPGTNLLIYRVFGKSKSKEC
+                     WILKAIIDATNNGANVINLSLGQYIKIPNGDIWESAEALGYKFAIDYATRHNVIVVAAT
+                     GNDGLSDDNGEVKTYYNSQHSGQDMSQNDTVEDYPSVLPNAIAVGSSDNNNQRSSFSNY
+                     YNQYQDNFILAPGGGTTLLDQYGQEEWYNQKLFMKEQVLSTSNNGNYDYADGTSISTGK
+                     VSGELAEIISNYHLQGDSSKARSILLNQVNYTSDGYKEISTYKALRGY"
+     PFAM_domain     8289..9188
+                     /aSDomain="Peptidase_S8"
+                     /aSTool="fullhmmer"
+                     /database="35.0"
+                     /db_xref="PF00082.25"
+                     /db_xref="GO:0006508"
+                     /db_xref="GO:0008236"
+                     /description="Subtilase family"
+                     /detection="hmmscan"
+                     /domain_id="fullhmmer_mutP_0007"
+                     /evalue="2.00E-48"
+                     /gene_ontologies="GO:0006508: proteolysis"
+                     /gene_ontologies="GO:0008236: serine-type peptidase
+                     activity"
+                     /label="mutP"
+                     /locus_tag="mutP"
+                     /protein_end="429"
+                     /protein_start="129"
+                     /score="165.2"
+                     /tool="antismash"
+                     /translation="KNVTVALVDSGIDVDHNAFTGMIDSRSKNFVPAGGYDNSESSETG
+                     NINDIDDKKGHGTAVAGQIAANGQIFGVSPGTNLLIYRVFGKSKSKECWILKAIIDATN
+                     NGANVINLSLGQYIKIPNGDIWESAEALGYKFAIDYATRHNVIVVAATGNDGLSDDNGE
+                     VKTYYNSQHSGQDMSQNDTVEDYPSVLPNAIAVGSSDNNNQRSSFSNYYNQYQDNFILA
+                     PGGGTTLLDQYGQEEWYNQKLFMKEQVLSTSNNGNYDYADGTSISTGKVSGELAEIISN
+                     YHLQGDSSKARSILLNQVN"
+     gene            9246..>9746
+                     /gene="mutT"
+     CDS             9246..>9746
+                     /codon_start=1
+                     /db_xref="GI:12082663"
+                     /gene="mutT"
+                     /note="ABC transporter for secretion of mutacin I"
+                     /product="MutT"
+                     /protein_id="AAG48570.1"
+                     /transl_table=11
+                     /translation="MKWLEVLQISKKEKILYLIGCIFSIMTGLITLRITYVLKNLVDSK
+                     SSFNNVFLFLVLGLVLFIIDAGSQYLISLIGNQVVFNSRNNIWKKISDWTDSKDDSSEM
+                     AGHLINDSELIENFIISTIPQSLNSVIVESESLVMLFVINSKMSLEVIGICLLLLFIMQ
+                     PFSR"
+     PFAM_domain     9297..9734
+                     /aSDomain="ABC_membrane"
+                     /aSTool="fullhmmer"
+                     /database="35.0"
+                     /db_xref="PF00664.26"
+                     /db_xref="GO:0005524"
+                     /db_xref="GO:0016020"
+                     /db_xref="GO:0055085"
+                     /db_xref="GO:0140359"
+                     /description="ABC transporter transmembrane region"
+                     /detection="hmmscan"
+                     /domain_id="fullhmmer_mutT_0008"
+                     /evalue="4.80E-07"
+                     /gene_ontologies="GO:0005524: ATP binding"
+                     /gene_ontologies="GO:0016020: membrane"
+                     /gene_ontologies="GO:0055085: transmembrane transport"
+                     /gene_ontologies="GO:0140359: ABC-type transporter
+                     activity"
+                     /label="mutT"
+                     /locus_tag="mutT"
+                     /protein_end="163"
+                     /protein_start="17"
+                     /score="29.8"
+                     /tool="antismash"
+                     /translation="LIGCIFSIMTGLITLRITYVLKNLVDSKSSFNNVFLFLVLGLVLF
+                     IIDAGSQYLISLIGNQVVFNSRNNIWKKISDWTDSKDDSSEMAGHLINDSELIENFIIS
+                     TIPQSLNSVIVESESLVMLFVINSKMSLEVIGICLLLLFIMQ"
+ORIGIN
+        1 aaccaacaaa tttggaaggc tattcctgtg acaaccattg aaacagacct tgataccgcc
+       61 aaggaaatgg gtgccatggc tctctttggt gaaaaatacg gtaaaaatgt gcgcgtggtt
+      121 tctatcggcg actattctgt tgaactttgt ggtgggaccc atcttaaaaa tacttctgaa
+      181 attggcatct tcaagattgt caaagaagaa ggtattggtt caagaactcg ccgtatccta
+      241 actgtgacca gtaaggaagt ctttgaagtc tacgccaaga agaagacata cttaagaaat
+      301 gccgcaacgc ttaaagcgcc tcaaatgaat caggtagcca acaaggtagc ttcgctgcaa
+      361 gaccaattgc ataaattgca aaaggagaat gccgagctga aagaaaaagc agccgcagta
+      421 gccgcaggcg atatcttcaa agatgttaaa gaagtgaatg gtcttcgcta tattgcgagc
+      481 caagtagaag ttgccgatgc gggtgccctt cgcacttttg ctgatcaatg gaaacaaaaa
+      541 gattactccg acgttcttgt tttagttgcc agcattggta aaaaggtaat gttcttgttg
+      601 ccagcaagtc taaggatatc catgctggta atctcatcaa gactttggca ccaatcgttt
+      661 caggtcgtgg tggtggtaaa ccagacatgg ccatggcagg tggttcagat gcctcagcca
+      721 tcaaggattt gattgccgca gtagcaggga atttgtaaaa tttatcttgt cagaaaatca
+      781 ttcaatgact tatcagtaca ctcctcagta taaaaactgg ggagtttttt aataatgccc
+      841 aaatgtcact taatatttgg atgttttttt gtgatgaaca aatccttatc atttccttaa
+      901 atttgttttt tatactaaaa gcgggaatga ttcaaaacta aaaaaagata aacgaagaat
+      961 tgaaaaagtg atataatagc acagaagagg gcctttataa tgaaaggaga ctattttgaa
+     1021 agtaaatcaa tcaatggaat taggtgaact ttatcgagaa ttaagaattg ctagaggttt
+     1081 gaagataaaa gatatagctt gtaaaaatct gtccaagtca caactctcta gatttgaaaa
+     1141 tggacaaacc atgttggcag ctgataaatt gctattagct atttcgggaa ttcatatgag
+     1201 tttttcggaa tttggatatg ctttgagcca ttatgaggag agtgattttt tcaaaagggg
+     1261 taataagtta tcagaattat atgtccagaa agatatcaaa ggattaaaaa agttattaga
+     1321 atttaatgac aatcatgagg tatttgatgt ctacaatcgt ttaaataaat tggttattca
+     1381 agttactatt catttgctag atactgatta cataatatca gatgatgata agaatttttt
+     1441 aacaacttat ctatataata ttgaagagtg gactgagtat gaactttata tctttgggaa
+     1501 tactatgtct atattgtcat ctgatgattt aatttttttg ggaaaagctt ttgtagaacg
+     1561 tgataagttg tatatatctc ttcctagtca taagaaaaat gcagagttaa cttttttaaa
+     1621 tttaatctta attttgcttg aaagaaaaaa attatatcaa gcaatctatt ttgtagagaa
+     1681 tttagagaaa ttattaaatt accaagatat gtttgcaata acatttttaa aatttttaaa
+     1741 aaaaattatt acttactttc atgataagtc agtagatatg tctgaattag aacattatat
+     1801 taatatagtt gaagaaataa atcctacgat tgcttcaatt cttaaatcta atttgaatca
+     1861 gcttttatca agttttagcc attaaagcca tcttgataaa ttttatatct ttcatattca
+     1921 ttaaatgtgg agataatgaa aaagcaacgg ttatgctatc gctgcttttt ttgtgattag
+     1981 aagctatgtt atcatggagt tatagtaatg aaacatagtg acagttcatc ctttcttatt
+     2041 ataaaagtgg taataagaga agtggtaaac aaagagtagt aaaataatac gtttaaccat
+     2101 aatatttcct cctttaaatt attataagat tcaaaaaggt aatattctta tatttgcaaa
+     2161 tatgggataa aataatttta aaaaagcaga tttgcaattt taaaaaaata gaggctaatg
+     2221 gtggtattat attattgtaa atatatgttt actcagtaat agtgatttac tattacaaca
+     2281 gattttgttg ttatcttaga tatttctgct agcattagtt atctgtagat gtactactta
+     2341 ataagtatat aattataatt atataataac tattatcaga ttaccgttaa aagttttctg
+     2401 atatgcttct actgaacaat ttacgttcag ttacacacat gaaaaaggag gatattatgt
+     2461 caaacacaca attattagaa gtccttggta ctgaaacttt tgatgttcaa gaagatctct
+     2521 ttgcttttga tacaacagat actactattg tggcaagcaa cgacgatcca gatactcgtt
+     2581 tctcaagttt gagtttatgt tcattaggat gtacaggggt gaaaaatcct agtttcaata
+     2641 gttactgttg ctaagttgta caaaagattt agattgtgtc gcatgtcagc ggcacaatct
+     2701 tttgatatta gagatattaa atatgttaaa cacacaatta ttagaagtcc ttggtactaa
+     2761 aacttttgat gttcaagaag atttatttga gtttaatata acagatacta ttgtactgca
+     2821 ggctagtgat agtccagata ctcatagtaa agtgggtagt ttcagtatct gtcctcctcg
+     2881 aaagacctcc gtcagtttca atagttactg ttgttaacta taaattatac ttaaattgat
+     2941 aggaaacttg gtcatgacat tatcatatgt tgatattgga agagaatcaa atttataaag
+     3001 acaattaaat ctaaatttga tgaatattta gatgaattat tactaggttg acagtcatgt
+     3061 taggagaaga gatgaacgat tttcaatttc aagattattt tatgtacaga aaaccattag
+     3121 gcaacttttc taattttctt agtataactg atatgatgga tcctattgaa ttattacata
+     3181 atgattcgat atttgctgaa ggggtatatt tggcttcccc atctcttaga tcatctataa
+     3241 ataaattaga gaatcagatt gcaagtacta aggaaaaaaa gaatgcaaaa gagactattt
+     3301 ttcaatacta tgcccgttat aacacgagac caactccgtt tggcttgttt tcgtccatcg
+     3361 gaataggtgg tttttcgacc caccctagga aagagaaatc ttgttatgaa aaatctgtta
+     3421 atgttgatct tttttgggct tataaagtag cagataaact agaaagtatg cctgaaattt
+     3481 taaatacttt aaaagtagtt gctaataatg ctttgcaaaa gtcaaatgat ttttggcttt
+     3541 tagatacacg aagtcatttt ggacttatga attcacgttc agatattcgt gaggacatta
+     3601 cagttaagtc taatcagctt atagattatg ttattaattg cacagaagaa ccaattagct
+     3661 atcaaacatt aattgatgat attgccgaga aattctctca atctagtgat gatgtaaaag
+     3721 aatatttgca aaaattaatt aaagaggagt ttttaataac tgaattgaaa tttagtttga
+     3781 ttgaagacaa ccctttggat tggtttatta atattttaga aagagatcaa aataactcag
+     3841 aattacttga aaagttgact gaaataaagg caatgattca agattatact gaccgtaaca
+     3901 taggtgaagg taacaattcg attttagctc tagaaaataa gatgagccaa atagtaaaag
+     3961 ccaacgcata cctgcgagtt gatctttatg atcatgcaga gctgaagtta gcgcaacata
+     4021 ccaagagttc tcttcagaat attttgaaag tactaagttc tttttcgtca gctgttaata
+     4081 gtcaaaaaga aattaaaaat tatcatgaga aatttattgc caggtatgga tacgagcggt
+     4141 tagtacctct tcaattactt ttgaattcta ctagtggact tggttttcca aaagggtata
+     4201 gtcaaacaga agtttctaaa caaaataatg aagatagtaa aaatcaaaaa ataatagaat
+     4261 ttttacagag aaaatttgaa aaagctttaa gagatggtaa agaaattatt ttgagtgatg
+     4321 atgatttaaa agatttaaat tttgacacgg aacagcaaat atcaggagaa ttatattgtt
+     4381 tctacaattt taaaagtaaa aagctagagg ttagtagttt aggtgtctca cagatacttg
+     4441 gaaatacttt tggacgtttc cattctaaat tgccgaatac gatagtcaca aaaaatgtaa
+     4501 ataagacgaa agaaattttt actgaggctt atccaaatac tattattact caattaaatg
+     4561 aagtgccata ttttgggaga ggtggcaata ttatgattag taatagcctt aaaagtcacc
+     4621 agttggaatt gaggaactat actactaaaa aagagatgag tatcaatgat atttatgtag
+     4681 gtgcaaccag tgaggagtta tatttttatt ctaagaaata tgagaaaaga gttatttttg
+     4741 tgatgaataa tatgtttaat tatataaatg gttctaaact cttacgtttt ttactagaag
+     4801 tttcaaattc tgattttcaa aatattaccc cgattacgct tggtagtctg gattcttata
+     4861 atcatgtgcc cgctatcatt tataaagata ttattattaa accggaaaca tgggacatta
+     4921 gaaaatctga agctaagact ttagattctc tcaaaaattg gctaactaat aataatgttc
+     4981 cgccttttgt acggatgaaa tatactgatc aaattattta tttagatttg agtcggacta
+     5041 ttgatttaac tatgctattt cagagtatca aaaaacatag cttcatacaa ttattagatg
+     5101 ttcattcagt atgtacaaac gatacggaga ttttagaatt agttgttcct tttacaagaa
+     5161 gtgatgttaa cgctcaccag atttatcatt atgctcagaa tatttatact ttggaggatt
+     5221 caggtagtaa agaaaaatat ttttacgcta aaatttatgt gaataaacaa cgacagacct
+     5281 ctttcctaca aaaagagtat cctttattat taaactattt gaaactccca gaaaacttac
+     5341 aatggttcta tattagatat aaagatgatg gaaaagacag catacgtctc agaatcagat
+     5401 atgtagaaga taaacaatta gttcaacttt attcacgctt tatagagtgg gcaacaaaag
+     5461 cacggaaaaa tatccaaatt tcaggttatg aaattagtga atatatccct gaatcagcaa
+     5521 gatatggagg gaaaaaatat tcttcaatta ttcattcttt tttctattat gatagtattt
+     5581 tggatttgct tttacagaag aaagcagaac aaactattga agtaagaaca tctctcagta
+     5641 ttattcgtat gtttttaatg atgaaattaa gcttacaaga ccagcagaaa ctcataaaga
+     5701 atttatttga tggaaaacat aaacttaaat atgaaaaaga atatcataat tcaataagtt
+     5761 tattacttga caatttatgt acaaaaaatc agacagatga agctgatatt ttctgtgtaa
+     5821 tgaatatgaa aaaaatcact gaaaaaatta gctcagttct taaacaaaag gacttaacaa
+     5881 cagattggca gagaattcta ggaagtttaa ttcatatgcg atgtaatcga gtatatggaa
+     5941 ttaacagtga gttagaaaga aaaacaatgt ttattgttga caaagttatt aattcaaaaa
+     6001 gatatacgga tatgtttttg gaggtgggta atgagacaaa gtaaacgtgt cgaaaaaatt
+     6061 aaagatattc caactgagca aacttattta ttcgattatc aagaaatatt aaaaaaagtc
+     6121 agtcaagcaa aacaaacaga tttttggaat ttactttcct tatcttcggg aataacttct
+     6181 ttattaatat tttatcaaga gtatgagaat ttagaaggag taaacttaaa gcagcaaaag
+     6241 cagtcattaa ttgggcttat aagtcattat attaatcaaa tagcagagaa atcctcttta
+     6301 tttgatggtt tagctggggt aggttttgct attaattata tctctaataa cggtaaatat
+     6361 tatcaaaaac ttcttgaaca gattgacaac agactccgtc agaatattga acgggacctt
+     6421 gtcaactata agaatgagga atatgcaaat cctaatgaat taatgatgta cgtttctgga
+     6481 aatgctggag tagctcgcta cttgatggaa agagaatcct ctgaagattg gcgaattgtt
+     6541 gaaatgattt tagaagtatt ttataaagct ttggaacaag gctggcgagt gcaaccaaaa
+     6601 tatcaatttt tagaatctga aaagcaatat tatttaaagg gaaatataaa ctttggttta
+     6661 gctcatggat tattaggtcc tacaacaatt atgtctcttt atcagcagag gtacccacag
+     6721 aacacaagaa atgctgagaa acttcaggag acttatcatt ttataaaaag atatgctcaa
+     6781 ctaagagatg aagggctacg atgggcaata cgatatgatt tgtttcgtaa agagggttct
+     6841 tttatattac gaaatggttg gtgttatggc gagaatggca tttataatac actttttctt
+     6901 atgggaaaag tactctcaaa tcaggagatt tgtgaaactg ctcagaaagt tataccatcc
+     6961 atcataaaag atgattatga gaaaatggga agtccaacat tttgtcatgg gtttgctgga
+     7021 aaagcaaatt tctttcttct gcaatatcaa agaactaaag aatcaatatt tttagttaaa
+     7081 gcagaagaag aaattgataa aatattaatt gtgtacaatt ctgaaaatat gtttggattt
+     7141 aaagatatag aagataatat tgataatact ggagagagat taacttattg ggataatttt
+     7201 ggtcttctta gtggaactgt tggtgttcta ttagttttga tggaatattg taatattgta
+     7261 aatgccggaa aaattgcaga gtggaataaa atttttcttt tgacttaatt aactgaacgg
+     7321 agaaataatt atggaagaac aaaatataga gaaaaaaatt ctcttgtgcc taacaggttc
+     7381 tggacccttg ttagggatag ctgaatatat tacgtttttg actgtgcgct ttaagcatgt
+     7441 tcgagttatt atctctgata atgctgcgaa gatgcttcct gttgctgcta ttacacaatt
+     7501 gtgtgagaaa gtgtatactg atgaagtttc ctttacagat aagcaaaaga gtcacatagc
+     7561 tttaactcgc tgggcagaca taacagttgt cttacctgct acagcaaata taattggaaa
+     7621 agttgctaat ggtattgcag ataactttat gacaacaact cttctttctt ctagcaagcc
+     7681 agttttaatt tatccttgca tgaataatat tatgtgggga aatccagtag ttcaaaaaaa
+     7741 tgttgaagtt ttatctggaa cccaatataa ggtaattgtt ggacaagaat cagaatcttt
+     7801 tgaattagcc agtggaaaga tgaaaaagaa tattgcaatt ccaagtttgg atgaattgcg
+     7861 acgggttgtt ttagaaaatt tgcaagaaga gaggtaagag tatgaagaag aaaggattac
+     7921 tagtaataat ctttctaact ttctttttct tttatcctaa agctaaagct gctgaatata
+     7981 caattatatc aaataatagt gaacaaactg ttaatgactt gaataattta ggagttacag
+     8041 tcaatagcca tattgcggaa attggatata ttgaagctca aggagatgtt aacattgatc
+     8101 agattgaaaa gctgtcaaat attcaaagta tccagaatat ggctgataca tcacagaata
+     8161 tcacgactag agttccttca acatatatta accagacaat acaattgcct cagctttttt
+     8221 cttatcagtg gggtatgcaa aaaattacta ataatggtgt ttcatattca ttaaataaag
+     8281 aaaatcgaaa aaatgtaaca gttgctttag ttgattctgg gattgatgta gaccataatg
+     8341 cttttacagg aatgattgat agtcgttcaa aaaattttgt gcctgctgga ggatatgata
+     8401 atagtgaaag cagtgaaact ggaaatatta atgatattga tgataaaaaa ggccatggaa
+     8461 cagcagttgc tgggcaaatt gctgcaaatg gtcaaatctt tggtgtgtcc ccaggaacga
+     8521 accttcttat ctatagagtt tttggaaaat caaaatcaaa ggagtgctgg attttaaaag
+     8581 caattattga tgcaacaaat aacggtgcta atgttattaa tctaagtttg gggcaatata
+     8641 ttaagattcc taatggtgat atttgggagt ctgccgaagc attaggatat aagtttgcca
+     8701 ttgattatgc cacaagacat aatgtcattg ttgtagcagc cacaggtaat gatggattaa
+     8761 gtgatgacaa cggagaggtt aaaacttatt ataatagtca gcattcagga caagatatgt
+     8821 ctcaaaatga cacggttgaa gattatcctt ctgttttacc taatgctatt gcagttggct
+     8881 cttctgataa taataatcaa agatcatctt ttagtaatta ctataatcaa tatcaggaca
+     8941 attttatttt ggctcctggt ggtggaacaa ctttactaga ccaatatggt caagaagagt
+     9001 ggtataatca gaaacttttt atgaaagaac aagtcttatc aacaagtaat aatggaaatt
+     9061 atgattatgc agatggtact tctatttcaa caggaaaagt ttctggagag cttgcagaaa
+     9121 ttattagtaa ctaccatctt caaggagatt cttcaaaagc tagaagtatt ctactaaatc
+     9181 aagttaatta tactagtgat ggttataaag aaataagcac ttacaaagct ttgcgaggtt
+     9241 actaaatgaa gtggttagaa gttttgcaaa ttagtaaaaa agaaaaaatt ctttatctta
+     9301 ttggttgtat attttcaatt atgacaggct taattactct acgaatcacc tacgtactta
+     9361 agaatttagt tgacagcaaa tcgtctttta ataatgtgtt cttgtttctt gttttgggat
+     9421 tagttctttt tatcatagat gctggttcac agtatctaat ttcattgatt ggtaatcaag
+     9481 tcgtgtttaa cagtcgaaat aatatttgga aaaaaatttc tgattggaca gatagtaaag
+     9541 atgattcttc tgaaatggca ggccacctta ttaatgatag tgaactgata gaaaatttta
+     9601 taatttctac tattcctcaa tcattaaatt cagttattgt tgaatcagaa tccttagtta
+     9661 tgctatttgt tattaatagt aaaatgtctt tggaagttat agggatttgc ttgcttttat
+     9721 tgttcattat gcaacccttt tctaga
+//

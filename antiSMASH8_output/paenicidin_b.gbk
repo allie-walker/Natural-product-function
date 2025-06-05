@@ -1,0 +1,587 @@
+LOCUS       BGC0000542.1            9130 bp    DNA     linear   UNK 01-JAN-1980
+DEFINITION  Paenicidin B biosynthetic gene cluster.
+ACCESSION   BGC0000542
+VERSION     BGC0000542.1
+KEYWORDS    .
+SOURCE      
+  ORGANISM  .
+            .
+COMMENT     ##antiSMASH-Data-START##
+            Version  :: 8.0.0
+            Run date :: 2025-05-21 17:26:16
+            ##antiSMASH-Data-END##
+FEATURES             Location/Qualifiers
+     cand_cluster    1..9130
+                     /candidate_cluster_number="1"
+                     /contig_edge="True"
+                     /detection_rules="(((Lant_dehydr_N or Lant_dehydr_C) and
+                     cds(LANC_like and not Pkinase)) and not (YcaO or
+                     TIGR03604))"
+                     /kind="single"
+                     /product="lanthipeptide-class-i"
+                     /protoclusters="1"
+                     /tool="antismash"
+     protocluster    1..9130
+                     /aStool="rule-based-clusters"
+                     /category="RiPP"
+                     /contig_edge="True"
+                     /core_location="[2679:9130](+)"
+                     /cutoff="10000"
+                     /detection_rule="(((Lant_dehydr_N or Lant_dehydr_C) and
+                     cds(LANC_like and not Pkinase)) and not (YcaO or
+                     TIGR03604))"
+                     /neighbourhood="10000"
+                     /product="lanthipeptide-class-i"
+                     /protocluster_number="1"
+                     /tool="antismash"
+     proto_core      2680..9130
+                     /aStool="rule-based-clusters"
+                     /tool="antismash"
+                     /cutoff="10000"
+                     /detection_rule="(((Lant_dehydr_N or Lant_dehydr_C) and
+                     cds(LANC_like and not Pkinase)) and not (YcaO or
+                     TIGR03604))"
+                     /neighbourhood="10000"
+                     /product="lanthipeptide-class-i"
+                     /protocluster_number="1"
+     CDS_motif       1..93
+                     /note="leader peptide"
+                     /note="lantipeptide"
+                     /note="predicted leader seq:
+                     MANNLFDLDVQVNKSQGSVEPQVLSIVACSS"
+                     /locus_tag="pabA"
+     gene            1..177
+                     /gene="pabA"
+     CDS             1..177
+                     /codon_start=1
+                     /db_xref="GI:571031628"
+                     /gene="pabA"
+                     /gene_functions="biosynthetic-additional
+                     (rule-based-clusters) TIGR03731"
+                     /gene_functions="biosynthetic-additional (lanthipeptides)
+                     predicted lanthipeptide"
+                     /gene_kind="biosynthetic-additional"
+                     /note="paenicidin B prepropeptide"
+                     /product="PabA"
+                     /protein_id="AHF21230.1"
+                     /sec_met_domain="TIGR03731 (E-value: 2.9e-11, bitscore:
+                     32.2, seeds: 23, tool: rule-based-clusters)"
+                     /transl_table=11
+                     /translation="MANNLFDLDVQVNKSQGSVEPQVLSIVACSSGCGSGKTAASCVAT
+                     CGNKCFTNVGSLC"
+     CDS_motif       1..66
+                     /prepeptide="leader"
+                     /note="peptide class: lanthipeptide"
+                     /note="predicted sequence: MANNLFDLDVQVNKSQGSVEPQ"
+                     /locus_tag="pabA_lanthipeptide"
+                     /aSTool="lanthipeptides"
+                     /tool="antismash"
+     CDS_motif       67..177
+                     /prepeptide="core"
+                     /locus_tag="pabA_lanthipeptide"
+                     /peptide="lanthipeptide"
+                     /predicted_class="Class I"
+                     /score="11.20"
+                     /molecular_weight="3237.8"
+                     /monoisotopic_mass="3235.5"
+                     /core_sequence="VLSIVACSSGCGSGKTAASCVATCGNKCFTNVGSLC"
+                     /aSTool="lanthipeptides"
+                     /tool="antismash"
+                     /leader_sequence="MANNLFDLDVQVNKSQGSVEPQ"
+                     /leader_location="[0:66](+)"
+                     /alternative_weights="3255.8"
+                     /alternative_weights="3273.8"
+                     /alternative_weights="3291.8"
+     source          1..9130
+                     /culture_collection="NRRL:B-30644"
+                     /db_xref="taxon:159743"
+                     /mol_type="genomic DNA"
+                     /organism="Paenibacillus terrae"
+                     /strain="NRRL B-30644"
+     misc_feature    1..9130
+                     /note="paenicidin B biosynthetic gene cluster"
+     region          1..9130
+                     /candidate_cluster_numbers="1"
+                     /contig_edge="True"
+                     /product="lanthipeptide-class-i"
+                     /region_number="1"
+                     /rules="(((Lant_dehydr_N or Lant_dehydr_C) and
+                     cds(LANC_like and not Pkinase)) and not (YcaO or
+                     TIGR03604))"
+                     /tool="antismash"
+     aSDomain        10..138
+                     /aSDomain="TIGR03731"
+                     /aSTool="tigrfam"
+                     /description="lantibio_gallid: lantibiotic,
+                     gallidermin/nisin family"
+                     /detection="hmmscan"
+                     /domain_id="TIGRFam_pabA_0001"
+                     /evalue="1.90E-08"
+                     /identifier="TIGR03731"
+                     /label="pabA"
+                     /locus_tag="pabA"
+                     /protein_end="46"
+                     /protein_start="3"
+                     /score="32.2"
+                     /tool="antismash"
+                     /translation="NLFDLDVQVNKSQGSVEPQVLSIVACSSGCGSGKTAASCVATC"
+     CDS_motif       94..177
+                     /note="core peptide"
+                     /note="lantipeptide"
+                     /note="monoisotopic mass: 2430.1"
+                     /note="molecular weight: 2431.8"
+                     /note="alternative weights: 2449.8"
+                     /note="number of bridges: 5"
+                     /note="predicted core seq: GCGSGKTAASCVATCGNKCFTNVGSLC"
+                     /note="predicted class: lantipeptide"
+                     /note="score: 0.00"
+                     /note="RODEO score: 28"
+                     /locus_tag="pabA"
+     gene            347..1075
+                     /gene="pabF"
+     CDS             347..1075
+                     /codon_start=1
+                     /db_xref="GI:571031629"
+                     /gene="pabF"
+                     /gene_functions="transport (smcogs) SMCOG1000: ABC
+                     transporter ATP-binding protein"
+                     /gene_kind="transport"
+                     /note="ABC transporter ATP binding protein"
+                     /product="PabF"
+                     /protein_id="AHF21231.1"
+                     /transl_table=11
+                     /translation="MSDALLEVQQVTKKMGKRDLLNNISFELERGKIYGFIGPNGAGKT
+                     TMMRIMTGLMQPTSGFVRIASYDVQTDREKALSKVGAIIESPVFFDYMTGRQVLRNLSR
+                     LHMEIKSSDRENHIEELLKRVGLESRGDDKVKAYSLGMKQRLGIAQSMLGSPELLLLDE
+                     PSNGLDPMGMRELRDIILRLRDSANYAFFISSHLLDELQQMCDELIVIKEGTLVWKGPA
+                     DQLVEEGQRLEDAFIGLMGL"
+     PFAM_domain     407..844
+                     /aSDomain="ABC_tran"
+                     /aSTool="fullhmmer"
+                     /database="35.0"
+                     /db_xref="PF00005.30"
+                     /db_xref="GO:0005524"
+                     /description="ABC transporter"
+                     /detection="hmmscan"
+                     /domain_id="fullhmmer_pabF_0001"
+                     /evalue="1.20E-30"
+                     /gene_ontologies="GO:0005524: ATP binding"
+                     /label="pabF"
+                     /locus_tag="pabF"
+                     /protein_end="166"
+                     /protein_start="20"
+                     /score="107.0"
+                     /tool="antismash"
+                     /translation="LNNISFELERGKIYGFIGPNGAGKTTMMRIMTGLMQPTSGFVRIA
+                     SYDVQTDREKALSKVGAIIESPVFFDYMTGRQVLRNLSRLHMEIKSSDRENHIEELLKR
+                     VGLESRGDDKVKAYSLGMKQRLGIAQSMLGSPELLLLDEPSN"
+     gene            1072..1872
+                     /gene="pabE"
+     CDS             1072..1872
+                     /codon_start=1
+                     /db_xref="GI:571031630"
+                     /gene="pabE"
+                     /note="ABC transporter membrane-bound subunit"
+                     /product="PabE"
+                     /protein_id="AHF21232.1"
+                     /transl_table=11
+                     /translation="MKLLIYSEFERLWKRKWFLLLILCTPVLAYSTGGYFLRIMKVPME
+                     VLSKSFMVTGLRENLYLVCNIAVAALVAAVYTEEFRSGQMRLLFMRRFTRGQIFWSKLF
+                     VVNISILLLLVVFAVSSQVIVEVWRSSYDLGDTSFLGNKWIYVFEYYGWAFASLLAISS
+                     LYSFIAMCSKSVTYAIGACMTYNLGALLFDGLYLKLASLAPHTSYLHDVIAFLLIPYMQ
+                     YTGLDGSLEGNGSVNGAITTVVAFYLIFFTWAAYRRFAAGDYLY"
+     PFAM_domain     1081..1629
+                     /aSDomain="ABC2_membrane_4"
+                     /aSTool="fullhmmer"
+                     /database="35.0"
+                     /db_xref="PF12730.10"
+                     /description="ABC-2 family transporter protein"
+                     /detection="hmmscan"
+                     /domain_id="fullhmmer_pabE_0002"
+                     /evalue="2.00E-07"
+                     /label="pabE"
+                     /locus_tag="pabE"
+                     /protein_end="186"
+                     /protein_start="3"
+                     /score="31.3"
+                     /tool="antismash"
+                     /translation="LIYSEFERLWKRKWFLLLILCTPVLAYSTGGYFLRIMKVPMEVLS
+                     KSFMVTGLRENLYLVCNIAVAALVAAVYTEEFRSGQMRLLFMRRFTRGQIFWSKLFVVN
+                     ISILLLLVVFAVSSQVIVEVWRSSYDLGDTSFLGNKWIYVFEYYGWAFASLLAISSLYS
+                     FIAMCSKSVTYAIGACMTYN"
+     gene            1885..2652
+                     /gene="pabG"
+     CDS             1885..2652
+                     /codon_start=1
+                     /db_xref="GI:571031631"
+                     /gene="pabG"
+                     /note="ABC transporter membrane-bound subunit"
+                     /product="PabG"
+                     /protein_id="AHF21233.1"
+                     /transl_table=11
+                     /translation="MLGIWRSEMERIWNRKSTILLYIAFVLIVIANIWSLKITDTMRFR
+                     FGEGIVAVNNLNLPWLMMSEVSLFLITAMLPILYVDQLSGDIHSGAYRLYVLRPYRRFQ
+                     FWLGKLLALSVTTIFFTGTTLLIGVFAGWMLFPNAATFFKYGSTLPSTSTEAVSYTLAF
+                     YLLLTLVCLAKLMLSSVVCLFISRPLFAFIAILALSMFLYPIFKPLVVLMDPFQQILLA
+                     LRVDGSFKFWMCLGMTVLLCSIVSFTRWQKKVI"
+     gene            2680..5871
+                     /gene="pabB"
+     CDS             2680..5871
+                     /codon_start=1
+                     /db_xref="GI:571031632"
+                     /gene="pabB"
+                     /gene_functions="biosynthetic (rule-based-clusters)
+                     lanthipeptide-class-i: Lant_dehydr_C"
+                     /gene_functions="biosynthetic (rule-based-clusters)
+                     lanthipeptide-class-i: Lant_dehydr_N"
+                     /gene_functions="biosynthetic-additional
+                     (rule-based-clusters) Lanthipeptide_LanB_RRE"
+                     /gene_functions="biosynthetic-additional (smcogs)
+                     SMCOG1155: Lantibiotic dehydratase domain protein"
+                     /gene_kind="biosynthetic"
+                     /note="lantibiotic dehydratase"
+                     /product="PabB"
+                     /protein_id="AHF21234.1"
+                     /sec_met_domain="Lant_dehydr_N (E-value: 6.4e-182,
+                     bitscore: 594.8, seeds: 73, tool: rule-based-clusters)"
+                     /sec_met_domain="Lanthipeptide_LanB_RRE (E-value: 8.7e-16,
+                     bitscore: 47.5, seeds: 20, tool: rule-based-clusters)"
+                     /sec_met_domain="Lant_dehydr_C (E-value: 1.7e-41, bitscore:
+                     131.6, seeds: 35, tool: rule-based-clusters)"
+                     /transl_table=11
+                     /translation="MKTKENLYKTLDFFMLRTPVLPIEEFAKCFPTCVGEDENVREVTL
+                     HHLSEWSSNPFIREALAASSPTLLESLLHISNPDNSRKQGQVIKAFMRYIIRMMTRPTP
+                     FGLLSGVTYGQFTEQSQLCLRGTDTYQKRARPDMEWLLKVMELIEGRQEVVRQLRIQRN
+                     TLIYRQGNRAKIPYTTRHGSMVDGEDQSVSVRTTQVFDCVMDVSSVPIPYLELVDHLQK
+                     EFVGASPETIDRYVWQLFEQEFLISELIPPTTTPDPLNHILSTLKHVTGMDEFKQKLIY
+                     IADAIHEYNGLPIGQGEEFLAELRRYMDDMFSVKSSLQIDLSMEDRGMSLPHAIRKDVE
+                     RVADLLTKLSTRENRPLDEFCVEFLEKYGPYREVPLLELLDEDTGLGAPAGYKHPLSRR
+                     VRLENMSPSKSRTHYEKLLFQWFVSCIHEGKNEVVLTDAMIDEIVKGQEQGEWLAAPSM
+                     ELIFQLSASDQLAVDRGEYTLLLGPNQGSDGAGKTFGRFLDLFGQPFADLFSQIQLEEQ
+                     RLQPEKLLAEISYLPSSGRTANVVLTQHTRPYEIAIGTNHIMPEERQIHVSDLAVGVRN
+                     DHFYLKSMSRNREIIARAGHMLNAELTPNIYRFLLEVSDDGYRHWSPMEWGFVAHAPFT
+                     PRLRYEHIILHPATWRMICDSTLNASKDAGLFEKWVRQFQKKWSLPRYVYMIELDNRIL
+                     LDMEHPLHLEQICKELQSKGKVTLIEHIGAVEDMPVSRSGSRVAAEFVFPLVRRNQVVD
+                     AYRFGEEVAASLYIDQEETNHHPTEVAFAYLPGSRWFYAKLYGMNSRQDEFIGGYWEEF
+                     VRQQQDSSVILQGYFIRYADPDKHIRVRFEQSENREGNAFLSLFHQWTETLLHEGLISR
+                     VVIDTYEPEIERYGGKEPMACAERMFSCDSEVAARLVHLIRFNQTSLQQDVIAILSVIN
+                     LLSQFGYSEEDTFNLLNQHFDVKEYLNDFRKERKFFLQWMASDQENLNSIQSSRDSIES
+                     IFNMRKEAVARYNRVIHEQEAKGEATNTRDDIVYSVIHMHLNRLLGIDRDRERKVMIMA
+                     RHAMHSLIQYRWNCQ"
+     PFAM_domain     2839..4791
+                     /aSDomain="Lant_dehydr_N"
+                     /aSTool="fullhmmer"
+                     /database="35.0"
+                     /db_xref="PF04738.16"
+                     /description="Lantibiotic dehydratase, N terminus"
+                     /detection="hmmscan"
+                     /domain_id="fullhmmer_pabB_0003"
+                     /evalue="4.50E-178"
+                     /label="pabB"
+                     /locus_tag="pabB"
+                     /protein_end="704"
+                     /protein_start="53"
+                     /score="593.4"
+                     /tool="antismash"
+                     /translation="NPFIREALAASSPTLLESLLHISNPDNSRKQGQVIKAFMRYIIRM
+                     MTRPTPFGLLSGVTYGQFTEQSQLCLRGTDTYQKRARPDMEWLLKVMELIEGRQEVVRQ
+                     LRIQRNTLIYRQGNRAKIPYTTRHGSMVDGEDQSVSVRTTQVFDCVMDVSSVPIPYLEL
+                     VDHLQKEFVGASPETIDRYVWQLFEQEFLISELIPPTTTPDPLNHILSTLKHVTGMDEF
+                     KQKLIYIADAIHEYNGLPIGQGEEFLAELRRYMDDMFSVKSSLQIDLSMEDRGMSLPHA
+                     IRKDVERVADLLTKLSTRENRPLDEFCVEFLEKYGPYREVPLLELLDEDTGLGAPAGYK
+                     HPLSRRVRLENMSPSKSRTHYEKLLFQWFVSCIHEGKNEVVLTDAMIDEIVKGQEQGEW
+                     LAAPSMELIFQLSASDQLAVDRGEYTLLLGPNQGSDGAGKTFGRFLDLFGQPFADLFSQ
+                     IQLEEQRLQPEKLLAEISYLPSSGRTANVVLTQHTRPYEIAIGTNHIMPEERQIHVSDL
+                     AVGVRNDHFYLKSMSRNREIIARAGHMLNAELTPNIYRFLLEVSDDGYRHWSPMEWGFV
+                     AHAPFTPRLRYEHIILHPATWRMICDSTLNASKDAGLFEKWVRQFQKKWSLPRYVYMIE
+                     LDNRILLDMEHPLHLE"
+     aSDomain        5044..5832
+                     /aSDomain="TIGR03891"
+                     /aSTool="tigrfam"
+                     /description="thiopep_ocin: thiopeptide-type bacteriocin
+                     biosynthesis domain"
+                     /detection="hmmscan"
+                     /domain_id="TIGRFam_pabB_0002"
+                     /evalue="2.30E-64"
+                     /identifier="TIGR03891"
+                     /label="pabB"
+                     /locus_tag="pabB"
+                     /protein_end="1051"
+                     /protein_start="788"
+                     /score="215.8"
+                     /tool="antismash"
+                     /translation="WFYAKLYGMNSRQDEFIGGYWEEFVRQQQDSSVILQGYFIRYADP
+                     DKHIRVRFEQSENREGNAFLSLFHQWTETLLHEGLISRVVIDTYEPEIERYGGKEPMAC
+                     AERMFSCDSEVAARLVHLIRFNQTSLQQDVIAILSVINLLSQFGYSEEDTFNLLNQHFD
+                     VKEYLNDFRKERKFFLQWMASDQENLNSIQSSRDSIESIFNMRKEAVARYNRVIHEQEA
+                     KGEATNTRDDIVYSVIHMHLNRLLGIDRDRERKVMIMARHA"
+     PFAM_domain     5044..5835
+                     /aSDomain="Lant_dehydr_C"
+                     /aSTool="fullhmmer"
+                     /database="35.0"
+                     /db_xref="PF14028.9"
+                     /description="Lantibiotic biosynthesis dehydratase C-term"
+                     /detection="hmmscan"
+                     /domain_id="fullhmmer_pabB_0004"
+                     /evalue="4.50E-41"
+                     /label="pabB"
+                     /locus_tag="pabB"
+                     /protein_end="1052"
+                     /protein_start="788"
+                     /score="141.6"
+                     /tool="antismash"
+                     /translation="WFYAKLYGMNSRQDEFIGGYWEEFVRQQQDSSVILQGYFIRYADP
+                     DKHIRVRFEQSENREGNAFLSLFHQWTETLLHEGLISRVVIDTYEPEIERYGGKEPMAC
+                     AERMFSCDSEVAARLVHLIRFNQTSLQQDVIAILSVINLLSQFGYSEEDTFNLLNQHFD
+                     VKEYLNDFRKERKFFLQWMASDQENLNSIQSSRDSIESIFNMRKEAVARYNRVIHEQEA
+                     KGEATNTRDDIVYSVIHMHLNRLLGIDRDRERKVMIMARHAM"
+     gene            5868..7751
+                     /gene="pabT"
+     CDS             5868..7751
+                     /codon_start=1
+                     /db_xref="GI:571031633"
+                     /gene="pabT"
+                     /gene_functions="transport (smcogs) SMCOG1288: ABC
+                     transporter related protein"
+                     /gene_kind="transport"
+                     /note="lantibiotic ABC transporter"
+                     /product="PabT"
+                     /protein_id="AHF21235.1"
+                     /transl_table=11
+                     /translation="MSSVQESTKLEVESIWRSIRQGLKLFGLVFGMNKPYMVSSIFLHI
+                     VQGLMPVLTLIIMQNLLNSIVSSSPQGISLIMLQFGLFIAIHVLKSVVTMSQSYVEGTL
+                     EAVLSKFLNIMIGEKSGSLGLADYENSEINDQLKRASQEASYRPYQLYTQMAGIISSLV
+                     TMLSSATLLFLWKWWVVVILFIISLVSVYSIFKLNKEQFEIYMNRTPLYRESWYMTYLL
+                     TNDRAVKEVKMFNLGPYLLKRYGALLQRFFVEDRRILGKRVRITFLYSLLELTVLLWVV
+                     WLAIRETFEQKLLIGSLYGYIQAIMLTQSQMQALIQGIVQFSQNNLYMEQLFLFLQLPT
+                     SDPVRRQQEQALPIRPECSTGFGIEQISIEGVSFTYPGQTEPSIRDIHLTMDKGQTIAI
+                     VGKNGSGKSTLMKVLMQLYSDYSGVLKLNGRPVQDYDLEQIQEKIGVVFQDFMHYEMSA
+                     RHNIGFGSLEHMGQDEELMHAAEYAAIDRIITQLPQGLDTQLGKWFEDGYQLSGGQWQR
+                     VAIARAFLRKADVYILDEPSSFLDPVAERDLLVLFLDLMKDSIGIFITHRISSARLAQK
+                     IVVMDNGLIVEQGTHRELILLDGLYAEMYRIQASSFSEEDSLIEAGGRVSG"
+     PFAM_domain     7020..7478
+                     /aSDomain="ABC_tran"
+                     /aSTool="fullhmmer"
+                     /database="35.0"
+                     /db_xref="PF00005.30"
+                     /db_xref="GO:0005524"
+                     /description="ABC transporter"
+                     /detection="hmmscan"
+                     /domain_id="fullhmmer_pabT_0005"
+                     /evalue="5.90E-33"
+                     /gene_ontologies="GO:0005524: ATP binding"
+                     /label="pabT"
+                     /locus_tag="pabT"
+                     /protein_end="537"
+                     /protein_start="384"
+                     /score="114.4"
+                     /tool="antismash"
+                     /translation="RDIHLTMDKGQTIAIVGKNGSGKSTLMKVLMQLYSDYSGVLKLNG
+                     RPVQDYDLEQIQEKIGVVFQDFMHYEMSARHNIGFGSLEHMGQDEELMHAAEYAAIDRI
+                     ITQLPQGLDTQLGKWFEDGYQLSGGQWQRVAIARAFLRKADVYILDEPS"
+     gene            7748..9130
+                     /gene="pabC"
+     CDS             7748..9130
+                     /codon_start=1
+                     /db_xref="GI:571031634"
+                     /gene="pabC"
+                     /gene_functions="biosynthetic (rule-based-clusters)
+                     lanthipeptide-class-i: LANC_like"
+                     /gene_functions="biosynthetic-additional (smcogs)
+                     SMCOG1140: Lanthionine synthetase C family protein"
+                     /gene_kind="biosynthetic"
+                     /note="lantibiotic cyclase"
+                     /product="PabC"
+                     /protein_id="AHF21236.1"
+                     /sec_met_domain="LANC_like (E-value: 1.8e-63, bitscore:
+                     203.3, seeds: 47, tool: rule-based-clusters)"
+                     /transl_table=11
+                     /translation="MTTISYTCDSWIPVEGEMKDRISAVLLEIAERYRDPEQVRLWMKK
+                     VPPIESDGMKIERWSDESLGSGFTGICLLMGQLDRLYPEDGWDRVGHQYLERIRLVMEQ
+                     QGIHDLSLYSGLAGILLAIRSLSRKGTRYQGMLDTLASWFEESALHSVALCQEQWEKGQ
+                     LQMSQYDAISGFTGIGRIAMLFSDRPTMCTVWNQTIELFQVMCSDRIRNGHSVPGWHIS
+                     SEHQFQENEKLQYPQGNFNLGLSHGIAGPLCFLSLSALHGADSLLLVNDIHKLAKFIHH
+                     WRVQDKEGIIWPGRVSFEEWLDDQPLPDSAQNHRDSWCYGVPGIARSIWLAGQAVQNEE
+                     WIETGLSAYLDIEKRLYRNGGLTSATLCHGVGGLLQLVQRMYSDTGHEQLGAMRNRLLE
+                     DVLNMFDSESLFGFYDHSLLAGRMEEVDEAGFLNGSAGVALVLASLIGGENPEWDAAFL
+                     IR"
+     PFAM_domain     7922..9121
+                     /aSDomain="LANC_like"
+                     /aSTool="fullhmmer"
+                     /database="35.0"
+                     /db_xref="PF05147.16"
+                     /db_xref="GO:0031179"
+                     /description="Lanthionine synthetase C-like protein"
+                     /detection="hmmscan"
+                     /domain_id="fullhmmer_pabC_0006"
+                     /evalue="2.70E-62"
+                     /gene_ontologies="GO:0031179: peptide modification"
+                     /label="pabC"
+                     /locus_tag="pabC"
+                     /protein_end="458"
+                     /protein_start="58"
+                     /score="210.5"
+                     /tool="antismash"
+                     /translation="WSDESLGSGFTGICLLMGQLDRLYPEDGWDRVGHQYLERIRLVME
+                     QQGIHDLSLYSGLAGILLAIRSLSRKGTRYQGMLDTLASWFEESALHSVALCQEQWEKG
+                     QLQMSQYDAISGFTGIGRIAMLFSDRPTMCTVWNQTIELFQVMCSDRIRNGHSVPGWHI
+                     SSEHQFQENEKLQYPQGNFNLGLSHGIAGPLCFLSLSALHGADSLLLVNDIHKLAKFIH
+                     HWRVQDKEGIIWPGRVSFEEWLDDQPLPDSAQNHRDSWCYGVPGIARSIWLAGQAVQNE
+                     EWIETGLSAYLDIEKRLYRNGGLTSATLCHGVGGLLQLVQRMYSDTGHEQLGAMRNRLL
+                     EDVLNMFDSESLFGFYDHSLLAGRMEEVDEAGFLNGSAGVALVLASLIGGENPEWDAAF
+                     L"
+ORIGIN
+        1 atggctaaca atttatttga tctggatgtt caagtaaaca aatctcaagg ttctgtggaa
+       61 cctcaagtat tgagcattgt ggcatgttct agcggatgcg gtagcggcaa aacagctgcc
+      121 agttgtgttg caacctgcgg aaacaaatgc tttaccaacg ttggttcact ttgttaatcc
+      181 aagtgttgcc tttataaaat aatgaatggc tattgtatat taataatcaa gcaaaagaag
+      241 aagggaccta gaaatccctt cttcttcctt gaaaaaaaca tggatttttc agctgtgaaa
+      301 cggttggaaa catcctttat atcggtttgg taatggagga aaacatatgt ctgatgcctt
+      361 attggaagtc cagcaggtaa ccaaaaaaat ggggaaacga gatttgttaa ataacatttc
+      421 cttcgagctt gaaagaggga agatatatgg tttcatcgga ccgaatggag ccgggaaaac
+      481 gacgatgatg cggattatga caggactcat gcagccaact agcggctttg taaggattgc
+      541 ctcttacgat gtgcagacgg accgggaaaa ggcgttgtct aaagtaggcg ctatcattga
+      601 atccccggtc ttttttgatt atatgacagg cagacaggta ttgcgtaatt tgtctcggct
+      661 gcacatggaa attaaatctt cggatcggga gaatcatatt gaggagctac taaaaagggt
+      721 ggggctggaa tcgcggggag atgacaaggt caaagcttat tctctgggga tgaagcagcg
+      781 gctcggtatt gcccaatcta tgctgggtag cccggagctc cttctgcttg atgagccatc
+      841 caatggtctt gatcctatgg gaatgcgaga gctgagagat attattcttc gtttgcgcga
+      901 ttcagcgaat tatgcttttt ttatctccag tcatctgctg gatgaattgc agcaaatgtg
+      961 tgacgagctg attgtcatca aagagggaac gctagtttgg aaggggcctg ctgatcaact
+     1021 ggttgaggaa ggtcaacggc tagaggatgc ctttataggg cttatgggac tatgaagcta
+     1081 ctcatttaca gcgagtttga aagattgtgg aaaaggaaat ggttcttgct cctgatttta
+     1141 tgtacacccg tgttggctta ttctacaggg ggatattttc tacgcattat gaaggttcct
+     1201 atggaggtat tatctaaaag ctttatggtt acaggcttgc gtgaaaattt gtatttagta
+     1261 tgcaatattg ccgtagctgc cttggttgct gctgtgtata cagaagaatt tcggagtggg
+     1321 cagatgcgtt tgctatttat gcgtcgattt acccgtggcc agatattttg gagcaagcta
+     1381 ttcgtggtta acatctctat tttgcttctt ctagtggttt ttgcggtatc ctcgcaggtg
+     1441 atcgttgaag tatggagatc ctcatacgat ctaggcgata ctagttttct agggaataaa
+     1501 tggatctacg tattcgaata ttacggttgg gcgtttgctt cgctactcgc tataagctcc
+     1561 ctctattcct ttattgctat gtgcagcaaa agtgtaacgt atgcgattgg tgcctgtatg
+     1621 acttacaatc tgggtgcctt gctgtttgat ggattatacc taaaattagc ttcccttgcc
+     1681 cctcatactt catatttaca cgatgtcatt gcttttttgc ttattcctta tatgcaatat
+     1741 acagggctgg atggatcgct ggagggaaat gggtctgtaa atggggcgat taccacagtt
+     1801 gtcgcttttt atttaatctt ttttacgtgg gccgcatacc gtcgttttgc tgccggtgat
+     1861 tatttgtatt aggaggatct ttgtatgctg ggaatttggc gaagtgaaat ggaacggata
+     1921 tggaatcgaa aatccacaat tttattatat atagcttttg tacttatcgt tattgcaaac
+     1981 atttggagcc tgaaaataac agatacaatg aggttccggt tcggggaagg gattgttgct
+     2041 gttaacaatt tgaacttgcc gtggctcatg atgagtgaag tttccttatt tctgatcacg
+     2101 gcgatgttac ccattttgta tgtggatcag ttaagcgggg atattcattc tggtgcgtat
+     2161 cgcttatacg tattgcggcc gtaccggcgt tttcaattct ggttgggtaa gctgctcgca
+     2221 ttatcagtta cgacgatatt ttttacagga acgaccctgc ttataggtgt gtttgccggg
+     2281 tggatgttgt tcccgaacgc cgctaccttt tttaaatacg gttcgacatt accctccacc
+     2341 tcaacggaag ctgtctcata cacccttgcg ttttatctgt tgctcacgct ggtttgtctg
+     2401 gcaaagctca tgctgagtag tgtcgtgtgc ttgttcatct ccagaccttt gtttgccttt
+     2461 attgccattt tggctttatc tatgtttctc taccccattt tcaagccgct tgtggtattg
+     2521 atggaccctt ttcagcaaat tctgcttgcg ttaagagtgg atggttcctt caaattctgg
+     2581 atgtgtttag gtatgactgt actactgtgc tccatcgtta gtttcactcg ttggcaaaaa
+     2641 aaggttatct agaagcttgg tttagaacgg aggtttcaca tgaagacgaa agaaaacctt
+     2701 tataaaacct tagatttctt tatgctccgt accccggtgc tgcctataga agagtttgca
+     2761 aaatgctttc caacctgtgt cggagaagat gagaatgtca gagaggtcac attgcatcat
+     2821 ctatccgaat ggtccagcaa cccattcata cgtgaagcac tggcagcttc cagccctacg
+     2881 ttgcttgaat ctttattaca tattagcaac ccggacaatt cgcgcaaaca gggacaggtc
+     2941 atcaaagcct tcatgcgcta tatcatcaga atgatgacac gacccacacc gttcggcttg
+     3001 ttatcggggg tcacatacgg gcaattcacg gaacaatcac agctttgttt acgagggacg
+     3061 gatacttatc aaaagcgtgc aagacccgac atggagtggc tgctgaaagt gatggagctg
+     3121 atcgaaggcc gtcaagaggt ggtacgtcag ttaaggattc agcgtaacac cttaatttac
+     3181 cgtcagggca accgtgctaa aattccctat acgacaaggc atggaagtat ggttgacggt
+     3241 gaagatcaga gtgtgtccgt tcgtacgacc caagtgtttg attgtgtgat ggacgtaagc
+     3301 tcggtcccca tcccttatct ggaactggtc gatcatctcc aaaaggaatt tgtgggtgct
+     3361 agtcctgaaa cgattgaccg ttatgtgtgg cagctatttg agcaagaatt tctgatttct
+     3421 gagcttattc ctcctacgac gactcctgac ccgctaaatc atatactatc caccttgaaa
+     3481 cacgtaacgg gtatggatga attcaaacaa aagcttattt acattgcaga tgctattcat
+     3541 gaatataatg gtttacctat cggtcaggga gaagaatttc tggctgaatt aagacgctac
+     3601 atggacgata tgttcagtgt gaaatccagt ttgcaaatcg acctgtctat ggaggatcga
+     3661 gggatgtccc ttccgcacgc cattcgtaaa gatgttgagc gtgttgctga cttgttgacc
+     3721 aagctttcga cgcgtgaaaa cagacccttg gacgaatttt gtgtggaatt tctggagaag
+     3781 tacgggccgt accgagaggt tcccttgctg gagctgctgg atgaggatac gggcttaggg
+     3841 gctcctgcag gctacaagca tcccctgagc cgccgagtgc gactagagaa tatgtctcca
+     3901 tccaagtcga gaacgcatta tgaaaaactt ttatttcaat ggttcgtgtc ctgcattcat
+     3961 gaaggaaaga atgaagtcgt gctgacagat gccatgatag acgaaattgt aaaggggcag
+     4021 gagcaggggg aatggctcgc agcaccttct atggaattga tctttcagct ttctgcctcg
+     4081 gaccaactgg ctgtggatcg cggcgaatat accttgctgt taggacctaa ccaggggtct
+     4141 gatggggcgg ggaagacatt cgggagattt ttggacctgt ttgggcagcc ttttgcggac
+     4201 ctattctctc aaattcagct agaagagcaa cgattacagc ctgaaaagtt gctggctgag
+     4261 atatcctact tgcctagctc gggaagaacg gcgaatgtgg tgttaacgca gcacacccgg
+     4321 ccttatgaaa ttgcaatagg aaccaatcac atcatgccag aggaacggca aattcatgtt
+     4381 tcggacctcg ccgtaggagt acggaacgac catttctatt tgaagtcgat gagccgcaat
+     4441 cgtgagatca ttgccagagc cggacatatg ctcaatgcgg aattgacccc taacatatac
+     4501 cgctttctct tggaggtcag cgacgacggt taccgacatt ggtcgcctat ggagtggggg
+     4561 ttcgtcgcgc acgctccttt tactccgcgt ctaagatatg agcatattat tcttcacccg
+     4621 gcgacatgga gaatgatatg tgattcaaca ctgaatgcat ccaaggacgc ggggcttttt
+     4681 gagaagtggg tgcgtcagtt ccaaaaaaaa tggagtctgc cgcgttatgt gtacatgatt
+     4741 gaattagata atcgcattct gctggatatg gaacacccgc tgcatttgga gcagatttgc
+     4801 aaggagcttc aatccaaagg caaagtcact ctgattgagc atataggtgc agtcgaagat
+     4861 atgcccgttt ctcgcagcgg tagccgtgta gcggccgaat ttgtgtttcc gctagtgcgt
+     4921 cgcaaccagg ttgttgatgc gtatcgtttt ggagaagaag tggctgcttc tctatatata
+     4981 gatcaggagg aaaccaatca tcaccccaca gaagtggcct ttgcttattt gccgggtagc
+     5041 cgctggttct atgcgaagct atatggtatg aacagtcggc aggatgagtt tattggtggg
+     5101 tactgggagg aatttgtgcg ccagcaacaa gatagtagtg tgatccttca gggctacttt
+     5161 atccgctatg ctgatccaga taagcatatt cgcgttcggt tcgaacagtc ggagaatcgg
+     5221 gagggcaatg cgttcctttc cctgttccat caatggacag agacgctttt gcatgaagga
+     5281 ttgatatcca gagtggtcat tgatacctat gaacctgaaa tagagcgtta cggcgggaag
+     5341 gagcctatgg cgtgcgcgga gcgaatgttt tcctgcgaca gtgaggtagc ggctaggctt
+     5401 gtacatctga tccggttcaa ccagacctcc ttgcagcagg atgtgatcgc aatcctaagc
+     5461 gtcattaacc tcctgtctca gtttgggtac agcgaggaag ataccttcaa cctcctgaat
+     5521 cagcattttg acgtcaaaga gtatttgaat gatttccgca aggaaagaaa gttcttttta
+     5581 caatggatgg catcggatca ggaaaatcta aattcgattc aatccagccg tgactccata
+     5641 gagagtattt ttaacatgag aaaagaagca gtagcgcggt ataaccgagt gatccatgaa
+     5701 caggaagcga agggggaagc caccaataca agagatgata tcgtatatag tgtgatccat
+     5761 atgcatctaa accgattact agggatagac agggatcggg agcgtaaggt gatgattatg
+     5821 gccagacatg cgatgcacag cttgattcag tatcggtgga attgtcaatg agcagcgtgc
+     5881 aggaaagtac aaagcttgag gttgagtcca tctggaggtc catacgacaa ggtttaaagc
+     5941 tttttggact ggtatttggc atgaataagc catatatggt ttccagtatt tttttgcaca
+     6001 tcgtccaagg cttgatgcct gttcttacat tgattattat gcaaaatctg ctcaatagca
+     6061 ttgtttcttc cagcccacag ggcatctccc tgattatgct tcaatttggt ctgtttatag
+     6121 ccattcatgt attaaaaagt gtggtgacga tgagtcaaag ctatgtagag ggcacgcttg
+     6181 aagctgtact gtccaagttc ctgaatatta tgatcggaga aaagtcaggt tccttgggac
+     6241 tggcggatta tgaaaattcg gagatcaacg atcagctaaa gcgggcttct caagaggctt
+     6301 cttatcgtcc gtatcagtta tacacacaaa tggcaggcat tatatcgagc ttggttacca
+     6361 tgctgtcttc tgcaacgcta cttttcctat ggaaatggtg ggttgtcgtc attcttttta
+     6421 taatctcttt ggtatctgtg tattccattt tcaaattaaa taaagaacag tttgaaattt
+     6481 acatgaatcg taccccgtta tatcgggagt cctggtatat gacctatttg ctgaccaatg
+     6541 atcgtgcggt caaggaagtg aaaatgttta atctgggacc ttatttgctg aaaagatacg
+     6601 gggctttatt acaacgattt tttgtagagg acagacgaat attgggcaaa agggttagga
+     6661 ttacgtttct gtatagccta ctggagctga cggttttgtt atgggtcgta tggctggcga
+     6721 ttcgggaaac ctttgagcaa aaattattaa taggcagttt atacggctac attcaagcta
+     6781 ttatgctgac ccaaagccag atgcaggcct tgattcaagg gattgtccaa ttttcgcaaa
+     6841 ataatctgta tatggagcag ttatttctat ttttacagtt acccacatcg gatccggttc
+     6901 gtcgtcaaca ggaacaggcg cttccgatcc gcccagaatg cagtaccggc tttggtattg
+     6961 agcaaatttc aatagaaggc gtttctttta cctatcccgg tcaaaccgag ccgtccattc
+     7021 gggatattca tttaacaatg gataaaggcc agaccatagc cattgtaggg aaaaatggtt
+     7081 cagggaaatc aacgctcatg aaggtgctga tgcagctcta ttcggattac agcggtgtgc
+     7141 tcaaattgaa tgggcgtcct gttcaagatt acgatctgga acagattcag gagaaaatag
+     7201 gcgtagtatt tcaggatttt atgcattatg aaatgtctgc tcgtcacaat atcggctttg
+     7261 gttcgctgga gcatatgggg caggatgagg agctaatgca tgctgccgaa tacgcagcta
+     7321 tagaccgcat tataacccaa ttgccacagg gcttggacac acagcttgga aaatggttcg
+     7381 aggatggcta ccagctctcg ggaggccagt ggcagcgggt ggctatcgca agggcctttt
+     7441 tacggaaagc ggatgtgtat attttggatg aacctagttc ttttttggac ccggtggcag
+     7501 agagggactt gctcgtcttg tttctggatt taatgaaaga cagcatcgga atttttatta
+     7561 ctcatcgcat ttcctcagca cgtctggctc agaaaattgt ggtgatggat aatggtttaa
+     7621 ttgtggagca ggggacccat agggaattga tcttactgga tgggttgtat gcagagatgt
+     7681 ataggattca ggccagttcg ttcagtgaag aagattcctt aatcgaagcc ggagggagag
+     7741 tttcaggatg acgacgattt catatacatg cgacagttgg atacccgtcg agggggaaat
+     7801 gaaagatagg atatctgcgg tcttgctgga gattgccgag cgttatagag acccggagca
+     7861 ggttcgttta tggatgaaaa aagtacctcc gatcgaatct gacggaatga agattgagcg
+     7921 ttggtcagat gaaagcttgg gaagcgggtt tacgggcata tgtttgctga tgggtcagtt
+     7981 ggatcgactc tatcccgagg atggctggga tagggtagga catcaatatc tggagcggat
+     8041 tcgtttggtc atggaacagc aaggtatcca tgatctgtcg ctgtatagtg ggttagcagg
+     8101 tattttgctg gccattcgct ccttatcgag aaagggtacg cgctatcaag ggatgctgga
+     8161 cactctcgcc tcctggttcg aagaatccgc gctgcatagt gtggctttat gccaagagca
+     8221 atgggaaaaa ggacagctac aaatgagtca gtatgacgcc atatcaggtt ttacggggat
+     8281 aggacgcatc gccatgttat tttctgaccg ccccactatg tgtacggtat ggaaccagac
+     8341 cattgagttg tttcaagtga tgtgcagcga ccgaattagg aatggccatt ctgtacctgg
+     8401 ctggcacatt tcttcagaac atcagtttca ggagaatgaa aagctacaat atcctcaggg
+     8461 gaatttcaat ttaggacttt cgcatggtat tgcaggtccc ttatgttttc tgagtctatc
+     8521 tgctctacat ggagcggact cccttctttt agtgaacgat atacataaac tggccaagtt
+     8581 tatacatcat tggcgtgttc aggataaaga gggcataatt tggcctggtc gggtttcttt
+     8641 tgaggagtgg ctggatgacc aacctttgcc ggacagcgct caaaatcatc gtgattcttg
+     8701 gtgctacggt gtaccaggca ttgcacgttc gatctggctg gcaggacaag cagttcaaaa
+     8761 tgaagaatgg attgaaacgg gactcagtgc atatttggat atagaaaaac ggctttatcg
+     8821 caacggggga ttaacctctg ccacattgtg tcatggtgtc ggaggattgc tgcaattggt
+     8881 tcagcgtatg tattcagata ccggacatga gcagctaggt gcgatgcgga ataggctact
+     8941 ggaagatgta ttaaatatgt tcgattctga atcgctgttt ggtttttatg atcacagtct
+     9001 actggctgga agaatggaag aagtggatga ggctggtttt ctgaatggca gtgcgggtgt
+     9061 tgctttggtg ttggcttcat tgattggggg agaaaatccg gagtgggacg ctgctttttt
+     9121 aattcgctaa
+//

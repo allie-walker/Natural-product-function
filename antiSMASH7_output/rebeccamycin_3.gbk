@@ -1,0 +1,900 @@
+LOCUS       BGC0000823.1           16824 bp    DNA     linear   UNK 01-JAN-1980
+DEFINITION  Rebeccamycin biosynthetic gene cluster.
+ACCESSION   BGC0000823
+VERSION     BGC0000823.1
+KEYWORDS    .
+SOURCE      
+  ORGANISM  .
+            .
+COMMENT     ##antiSMASH-Data-START##
+            Version      :: 7.1.0
+            Run date     :: 2025-04-21 22:28:24
+            ##antiSMASH-Data-END##
+FEATURES             Location/Qualifiers
+     protocluster    1..16824
+                     /aStool="rule-based-clusters"
+                     /category="other"
+                     /contig_edge="True"
+                     /core_location="[3782:6824]"
+                     /cutoff="20000"
+                     /detection_rule="(indsynth or dmat or indole_PTase)"
+                     /neighbourhood="10000"
+                     /product="indole"
+                     /protocluster_number="1"
+                     /tool="antismash"
+     proto_core      3783..6824
+                     /aStool="rule-based-clusters"
+                     /tool="antismash"
+                     /cutoff="20000"
+                     /detection_rule="(indsynth or dmat or indole_PTase)"
+                     /neighbourhood="10000"
+                     /product="indole"
+                     /protocluster_number="1"
+     cand_cluster    1..16824
+                     /candidate_cluster_number="1"
+                     /contig_edge="True"
+                     /detection_rules="(indsynth or dmat or indole_PTase)"
+                     /kind="single"
+                     /product="indole"
+                     /protoclusters="1"
+                     /tool="antismash"
+     region          1..16824
+                     /candidate_cluster_numbers="1"
+                     /contig_edge="True"
+                     /product="indole"
+                     /region_number="1"
+                     /rules="(indsynth or dmat or indole_PTase)"
+                     /tool="antismash"
+     gene            <1..817
+                     /gene="orf6"
+     CDS             <1..817
+                     /codon_start=2
+                     /db_xref="GI:22830823"
+                     /function="unknown"
+                     /gene="orf6"
+                     /note="similar to hypothetical protein SCF41.20c in
+                     Streptomyces coelicolor A3(2)"
+                     /product="Orf6"
+                     /protein_id="BAC15748.1"
+                     /transl_table=11
+                     /translation="MPTRAEEVREKVGAIVQGHISHLKPGSAEAAEVKRVLQAEGLWSQ
+                     YLEVGIGPDPEIFTKAPVLSAVGLGADIGVLARSAWNNPEPELVLVVDSRGNPVGATLG
+                     NDVNLRDFEGRSALLLTEAKDNNASCAIGPFLRLFDDGFTLADAKATEIALDITGPDGF
+                     ELHGVNPVSEISRELEDLVSHAFGAHHRYPDGFVLFTGTMFAPTEDRDQPGEGFTHKIG
+                     DVVRISSPRLGTLTNVVNTAEDTEDWTFGITALMENLAARSLLGPRTRS"
+     PFAM_domain     299..718
+                     /aSDomain="FAA_hydrolase"
+                     /aSTool="fullhmmer"
+                     /database="35.0"
+                     /db_xref="PF01557.21"
+                     /db_xref="GO:0003824"
+                     /description="Fumarylacetoacetate (FAA) hydrolase family"
+                     /detection="hmmscan"
+                     /domain_id="fullhmmer_orf6_0001"
+                     /evalue="1.90E-05"
+                     /gene_ontologies="GO:0003824: catalytic activity"
+                     /label="orf6"
+                     /locus_tag="orf6"
+                     /protein_end="239"
+                     /protein_start="99"
+                     /score="24.8"
+                     /tool="antismash"
+                     /translation="GATLGNDVNLRDFEGRSALLLTEAKDNNASCAIGPFLRLFDDGFT
+                     LADAKATEIALDITGPDGFELHGVNPVSEISRELEDLVSHAFGAHHRYPDGFVLFTGTM
+                     FAPTEDRDQPGEGFTHKIGDVVRISSPRLGTLTNVV"
+     gene            complement(890..2155)
+                     /gene="rebG"
+     CDS             complement(890..2155)
+                     /codon_start=1
+                     /db_xref="GI:22830824"
+                     /experiment="experimental evidence, no additional details
+                     recorded"
+                     /gene="rebG"
+                     /gene_functions="biosynthetic-additional
+                     (rule-based-clusters) MGT"
+                     /gene_functions="biosynthetic-additional (smcogs)
+                     SMCOG1062:glycosyltransferase, MGT family (Score: 289.9;
+                     E-value: 6.3e-88)"
+                     /gene_kind="biosynthetic-additional"
+                     /note="rebeccamycin biosynthesis"
+                     /product="N-glycosyl transferase RebG"
+                     /protein_id="BAC15749.1"
+                     /sec_met_domain="MGT (E-value: 6.5e-63, bitscore: 202.6,
+                     seeds: 193, tool: rule-based-clusters)"
+                     /transl_table=11
+                     /translation="MGARVLVATTPGDGHVNPMVPVAQEMVSRGHEVRWYTGKAFRSTV
+                     ERTGARHEPMRDAHDFGGMPREEAFPQHAGLTGITGMIAGFRDIFIEPAADQMTDLLAL
+                     LEDFPADVLVTDETFFGAGFVSERTGIPVAWIATSIYVFSSRDTAPLGLGLPPSSSRLG
+                     RLRNTVLKQLTDRVVMRDLRRHADVVRDRVGLPRIRKGAFENIMRTPDLYLLGTVPSFE
+                     YPRGDMPPEVRFVGPFVSPAPPDFTPPAWWGELDSGRPVVHVTQGTVANDAERLLLPAI
+                     RALAAEDVLVVATTGAPLELEPMPANVRVERFIPHHALLPHVDAMVTNGGYGGVNTALA
+                     HGVPLVVAAATEEKHEVAARVSWSGAGVHLKKRRLSERDIRRAVRAVLDEPRFRVHAAR
+                     LRDEYAARDAVVDAVDLIEGLV"
+     aSDomain        complement(896..2125)
+                     /aSDomain="TIGR01426"
+                     /aSTool="tigrfam"
+                     /description="MGT: glycosyltransferase, MGT family"
+                     /detection="hmmscan"
+                     /domain_id="TIGRFam_rebG_0001"
+                     /evalue="2.70E-45"
+                     /identifier="TIGR01426"
+                     /label="rebG"
+                     /locus_tag="rebG"
+                     /protein_end="420"
+                     /protein_start="10"
+                     /score="153.0"
+                     /tool="antismash"
+                     /translation="PGDGHVNPMVPVAQEMVSRGHEVRWYTGKAFRSTVERTGARHEPM
+                     RDAHDFGGMPREEAFPQHAGLTGITGMIAGFRDIFIEPAADQMTDLLALLEDFPADVLV
+                     TDETFFGAGFVSERTGIPVAWIATSIYVFSSRDTAPLGLGLPPSSSRLGRLRNTVLKQL
+                     TDRVVMRDLRRHADVVRDRVGLPRIRKGAFENIMRTPDLYLLGTVPSFEYPRGDMPPEV
+                     RFVGPFVSPAPPDFTPPAWWGELDSGRPVVHVTQGTVANDAERLLLPAIRALAAEDVLV
+                     VATTGAPLELEPMPANVRVERFIPHHALLPHVDAMVTNGGYGGVNTALAHGVPLVVAAA
+                     TEEKHEVAARVSWSGAGVHLKKRRLSERDIRRAVRAVLDEPRFRVHAARLRDEYAARDA
+                     VVDAVDLIEGL"
+     PFAM_domain     complement(956..1561)
+                     /aSDomain="UDPGT"
+                     /aSTool="fullhmmer"
+                     /database="35.0"
+                     /db_xref="PF00201.21"
+                     /db_xref="GO:0008194"
+                     /description="UDP-glucoronosyl and UDP-glucosyl
+                     transferase"
+                     /detection="hmmscan"
+                     /domain_id="fullhmmer_rebG_0002"
+                     /evalue="1.50E-15"
+                     /gene_ontologies="GO:0008194: UDP-glycosyltransferase
+                     activity"
+                     /label="rebG"
+                     /locus_tag="rebG"
+                     /protein_end="400"
+                     /protein_start="198"
+                     /score="57.1"
+                     /tool="antismash"
+                     /translation="RKGAFENIMRTPDLYLLGTVPSFEYPRGDMPPEVRFVGPFVSPAP
+                     PDFTPPAWWGELDSGRPVVHVTQGTVANDAERLLLPAIRALAAEDVLVVATTGAPLELE
+                     PMPANVRVERFIPHHALLPHVDAMVTNGGYGGVNTALAHGVPLVVAAATEEKHEVAARV
+                     SWSGAGVHLKKRRLSERDIRRAVRAVLDEPRFRVHAARL"
+     gene            2365..3786
+                     /gene="rebO"
+     CDS             2365..3786
+                     /codon_start=1
+                     /db_xref="GI:22830825"
+                     /gene="rebO"
+                     /note="rebeccamycin biosynthesis"
+                     /product="L-amino acid oxygenase RebO"
+                     /protein_id="BAC15750.1"
+                     /transl_table=11
+                     /translation="MSRGHKKITVLGAGVAGLVAAHELEELGHEVEVLEGSDRLGGRVH
+                     THRFGEGGSVPFVELGAMRIPTKHRHTIDYIGKLGLTPKLKEFKTLFSDDGAYHTTSAG
+                     FVRVRDAAKVLVDEFRLLMSGRDLREETILFGAWLTAVGDAIAPADFRAALRTDFTADL
+                     LEVVDRIDLDPFLVGAARDQFDLHAFFAAHPEVRTSCTGKLNRFVDDILDETSPRLLRL
+                     EGGMDQLVDALVERIRGDIRTGHEVSAIDVREDHVAVTVHNGHGVNTLRSDHVLCTIPF
+                     SVLRNLRLTGLSTDKLEIIHDVKYWSATKVAFRCREPFWERDGINGGASFGGGRIRQTY
+                     YPPVEGDPTRGAVLLASYTMGDDADVLGGMPEAQRHEVVLDEVGRMHPELHEPGMVVEA
+                     VSRAWGEDRWSNGAGVTRWGKDVAACEEERDRAARPEGRLYFAGEHCSSTTAWIDGAVE
+                     SALAAVRAIEAGDGR"
+     PFAM_domain     2407..3765
+                     /aSDomain="Amino_oxidase"
+                     /aSTool="fullhmmer"
+                     /database="35.0"
+                     /db_xref="PF01593.27"
+                     /db_xref="GO:0016491"
+                     /description="Flavin containing amine oxidoreductase"
+                     /detection="hmmscan"
+                     /domain_id="fullhmmer_rebO_0003"
+                     /evalue="7.30E-63"
+                     /gene_ontologies="GO:0016491: oxidoreductase activity"
+                     /label="rebO"
+                     /locus_tag="rebO"
+                     /protein_end="467"
+                     /protein_start="14"
+                     /score="213.5"
+                     /tool="antismash"
+                     /translation="VAGLVAAHELEELGHEVEVLEGSDRLGGRVHTHRFGEGGSVPFVE
+                     LGAMRIPTKHRHTIDYIGKLGLTPKLKEFKTLFSDDGAYHTTSAGFVRVRDAAKVLVDE
+                     FRLLMSGRDLREETILFGAWLTAVGDAIAPADFRAALRTDFTADLLEVVDRIDLDPFLV
+                     GAARDQFDLHAFFAAHPEVRTSCTGKLNRFVDDILDETSPRLLRLEGGMDQLVDALVER
+                     IRGDIRTGHEVSAIDVREDHVAVTVHNGHGVNTLRSDHVLCTIPFSVLRNLRLTGLSTD
+                     KLEIIHDVKYWSATKVAFRCREPFWERDGINGGASFGGGRIRQTYYPPVEGDPTRGAVL
+                     LASYTMGDDADVLGGMPEAQRHEVVLDEVGRMHPELHEPGMVVEAVSRAWGEDRWSNGA
+                     GVTRWGKDVAACEEERDRAARPEGRLYFAGEHCSSTTAWIDGAVESALAAVRAI"
+     gene            3783..6824
+                     /gene="rebD"
+     CDS             3783..6824
+                     /codon_start=1
+                     /db_xref="GI:22830826"
+                     /function="chromopyrrolic acid synthesis"
+                     /gene="rebD"
+                     /gene_functions="biosynthetic (rule-based-clusters) indole:
+                     indsynth"
+                     /gene_kind="biosynthetic"
+                     /inference="non-experimental evidence, no additional
+                     details recorded"
+                     /note="rebeccamycin biosynthesis; rebeccamycin
+                     biosynthesis. similar to staD, chromopyrrolic acid synthase
+                     which involved in a staurosporine biosynthesis"
+                     /product="RebD"
+                     /protein_id="BAC15751.1"
+                     /sec_met_domain="indsynth (E-value: 0.0, bitscore: 1458.6,
+                     seeds: 14, tool: rule-based-clusters)"
+                     /transl_table=11
+                     /translation="MSVFDLPRLHFAGTATTRLPTGPRNGLVDLSTHSVVMDGERFPAS
+                     RPAAEYHAYLDRVGGKGTAFAGNGYFAIDAGITAVERAAGEVDTGDLLVGRAVDVWGHY
+                     NEYLATTFNRARIFDVDPSSSWTSTVMIGQFGFGRLGRSHDVGYVFTGGVHGMQPPRWH
+                     EDGRVLHQFTVPAGEDMTWFGSAADSPAAARLRELVESGEADGLVVQLALSDAGPAPMP
+                     HAQQWRLRGTIAPWHAGEPRTCPAGRLLTPHNLTADLRGDHVSLNLISFRPPTGISGLE
+                     LRTADTDRFIARVPADDPHGVVTVPAAEGGDEALCVVGTTAAGERIVVSREREVTVHVD
+                     DASVFLEHPRGPGDSDQDAEIAVRTYVRGEPAAATIHIGQYFNPRAFPLDEHATAASAT
+                     PEDLDVVALCVDGTRWSRHCVISTDENGDGRFLLRGARPGATRLLLSAEGATPFDGLTA
+                     AAAYDNDDSLGLWSGLASVAVRVLPDHWWMDDIPRDKVTFDLLYREVFAFYELLYSFMG
+                     EEVFSLADRFRVETHPRLIWQMCDPRNRAKTYYMPPTRDLTGPQARLLLAYLRAQNSDV
+                     VVPVIEPSHTRSGTPISTRTDLVRALRHGVAIELAVMLQYLYAAFSIPTHGAGQELVSR
+                     GDWTPEQLRLMCGDGGETTDGGVRGSLLGVAREEMIHFLVVNNVLMAVGEPFHVPDLDF
+                     GTINDTLMVPLDFSLEALGLGSVQRFIQIEQPEGLTGAVRLGDLPVPVREAEDFHYASL
+                     SELYGDIREGLQRVPGLFLVERGRGGGEHHLFLRESVNAVHPDYQLEVDDLSSALFAID
+                     FVTEQGEGHVLTDEDTGEESHYDTFVRVADLLMKERLTAADTRRAQWSPAYPVARNPTV
+                     HGGGQSKELVTSPVARELMVLFNKSYFMMLQLMVQHFGGSPDASLRRSKLMNAAIDVMT
+                     GVMRPLAELLVTVPSGRHGRTAGPSFELDEKPAFIPRADVARRAISLRFRHLAESARTC
+                     ALVPDKVVRNLDFLADQFATEGPR"
+     PFAM_domain     5586..6302
+                     /aSDomain="Ferritin-like"
+                     /aSTool="fullhmmer"
+                     /database="35.0"
+                     /db_xref="PF12902.10"
+                     /description="Ferritin-like"
+                     /detection="hmmscan"
+                     /domain_id="fullhmmer_rebD_0004"
+                     /evalue="9.20E-34"
+                     /label="rebD"
+                     /locus_tag="rebD"
+                     /protein_end="840"
+                     /protein_start="601"
+                     /score="117.4"
+                     /tool="antismash"
+                     /translation="LRHGVAIELAVMLQYLYAAFSIPTHGAGQELVSRGDWTPEQLRLM
+                     CGDGGETTDGGVRGSLLGVAREEMIHFLVVNNVLMAVGEPFHVPDLDFGTINDTLMVPL
+                     DFSLEALGLGSVQRFIQIEQPEGLTGAVRLGDLPVPVREAEDFHYASLSELYGDIREGL
+                     QRVPGLFLVERGRGGGEHHLFLRESVNAVHPDYQLEVDDLSSALFAIDFVTEQGEGHVL
+                     TDEDTGEESHYDTFVRV"
+     gene            6821..8410
+                     /gene="rebC"
+     CDS             6821..8410
+                     /codon_start=1
+                     /db_xref="GI:22830827"
+                     /function="hydroxylase"
+                     /gene="rebC"
+                     /gene_functions="biosynthetic-additional (smcogs)
+                     SMCOG1050:monooxygenase FAD-binding (Score: 317.4; E-value:
+                     3.2e-96)"
+                     /gene_kind="biosynthetic-additional"
+                     /note="rebeccamycin biosynthesis"
+                     /note="smCOG tree PNG image: smcogs/rebC.png"
+                     /product="RebC"
+                     /protein_id="BAC15752.1"
+                     /transl_table=11
+                     /translation="MNAPIETDVLILGGGPVGMALALDLAHRQVGHLVVEQTDGTITHP
+                     RVGTIGPRSMELFRRWGVAKQIRTAGWPGDHPLDAAWVTRVGGHEVYRIPLGTADTRAT
+                     PEHTPEPDAICPQHWLAPLLAEAVGERLRTRSRLDSFEQRDDHVRATITDLRTGATRAV
+                     HARYLVACDGASSPTRKALGIDAPPRHRTQVFRNILFRAPELRSLLGERAALFFFLMLS
+                     SSLRFPLRALDGRGLYRLTVGVDDASKSTMDSFELVRRAVAFDTEIEVLSDSEWHLTHR
+                     VADSFSAGRVFLTGDAAHTLSPSGGFGMNTGIGSAADLGWKLAATLRGWAGPGLLATYE
+                     EERRPVAITSLEEANVNLRRTMDRELPPGLHDDGPRGERIRAAVAEKLERSGARREFDA
+                     PGIHFGHTYRSSIVCGEPETEVATGGWRPSARPGARAPHAWLTPTTSTLDLFGRGFVLL
+                     SFGTTDGVEAVTRAFADRHVPLETVTCHAPEIHALYERAHVLVRPDGHVAWRGDHLPAE
+                     LGGLVDKVRGAA"
+     PFAM_domain     6836..7867
+                     /aSDomain="FAD_binding_3"
+                     /aSTool="fullhmmer"
+                     /database="35.0"
+                     /db_xref="PF01494.22"
+                     /db_xref="GO:0071949"
+                     /description="FAD binding domain"
+                     /detection="hmmscan"
+                     /domain_id="fullhmmer_rebC_0005"
+                     /evalue="4.40E-70"
+                     /gene_ontologies="GO:0071949: FAD binding"
+                     /label="rebC"
+                     /locus_tag="rebC"
+                     /protein_end="349"
+                     /protein_start="5"
+                     /score="236.8"
+                     /tool="antismash"
+                     /translation="ETDVLILGGGPVGMALALDLAHRQVGHLVVEQTDGTITHPRVGTI
+                     GPRSMELFRRWGVAKQIRTAGWPGDHPLDAAWVTRVGGHEVYRIPLGTADTRATPEHTP
+                     EPDAICPQHWLAPLLAEAVGERLRTRSRLDSFEQRDDHVRATITDLRTGATRAVHARYL
+                     VACDGASSPTRKALGIDAPPRHRTQVFRNILFRAPELRSLLGERAALFFFLMLSSSLRF
+                     PLRALDGRGLYRLTVGVDDASKSTMDSFELVRRAVAFDTEIEVLSDSEWHLTHRVADSF
+                     SAGRVFLTGDAAHTLSPSGGFGMNTGIGSAADLGWKLAATLRGWAGPGLLATYEEERRP
+                     VAIT"
+     gene            8407..9600
+                     /gene="rebP"
+     CDS             8407..9600
+                     /codon_start=1
+                     /db_xref="GI:22830828"
+                     /gene="rebP"
+                     /gene_functions="biosynthetic-additional
+                     (rule-based-clusters) p450"
+                     /gene_functions="biosynthetic-additional (smcogs)
+                     SMCOG1007:cytochrome P450 (Score: 363.8; E-value:
+                     1.8e-110)"
+                     /gene_kind="biosynthetic-additional"
+                     /note="rebeccamycin biosynthesis"
+                     /product="cytochrome P-450 RebP"
+                     /protein_id="BAC15753.1"
+                     /sec_met_domain="p450 (E-value: 1.5e-17, bitscore: 52.8,
+                     seeds: 50, tool: rule-based-clusters)"
+                     /transl_table=11
+                     /translation="MKPFDLKAFTGADLADPYPVYREYLTGDPVHHNGEAWYVFGYDGV
+                     AHVLTSRDYGRRGPGGRATPIPPSHDTLSRIVENWLVFLDPPRHTALRSLLAKEFSPAV
+                     VTGLRERVRKIAGELLAGLGDAGEIDLVEDFAAPLPILVISELLGVPARLRSWFRRCAV
+                     DLQEASTARATRNPGALARADGAASELVEFFGGELGTRKPDDEDLVALLVNAQRRGEAL
+                     TDEEIVSTCVHLLTAGHETTTNLISKSVLALLANPAAAAEPLAGLDVTPQVVEELNRFD
+                     TPVQMVTRWAHQDTALGGKPIRRGDKVVLVLGSANRDPAAFAEPDRLDLRRDSRRHCGF
+                     GLGIHYCLGAALARTEAEIGLSVLFTNFPGLRLGGEPVRYADDLVFHGPARLPMLTR"
+     PFAM_domain     8950..9183
+                     /aSDomain="p450"
+                     /aSTool="fullhmmer"
+                     /database="35.0"
+                     /db_xref="PF00067.25"
+                     /db_xref="GO:0004497"
+                     /db_xref="GO:0005506"
+                     /db_xref="GO:0016705"
+                     /db_xref="GO:0020037"
+                     /description="Cytochrome P450"
+                     /detection="hmmscan"
+                     /domain_id="fullhmmer_rebP_0006"
+                     /evalue="3.10E-07"
+                     /gene_ontologies="GO:0004497: monooxygenase activity"
+                     /gene_ontologies="GO:0005506: iron ion binding"
+                     /gene_ontologies="GO:0016705: oxidoreductase activity,
+                     acting on paired donors, with incorporation or reduction of
+                     molecular oxygen"
+                     /gene_ontologies="GO:0020037: heme binding"
+                     /label="rebP"
+                     /locus_tag="rebP"
+                     /protein_end="259"
+                     /protein_start="181"
+                     /score="29.7"
+                     /tool="antismash"
+                     /translation="RADGAASELVEFFGGELGTRKPDDEDLVALLVNAQRRGEALTDEE
+                     IVSTCVHLLTAGHETTTNLISKSVLALLANPAA"
+     PFAM_domain     9199..9510
+                     /aSDomain="p450"
+                     /aSTool="fullhmmer"
+                     /database="35.0"
+                     /db_xref="PF00067.25"
+                     /db_xref="GO:0004497"
+                     /db_xref="GO:0005506"
+                     /db_xref="GO:0016705"
+                     /db_xref="GO:0020037"
+                     /description="Cytochrome P450"
+                     /detection="hmmscan"
+                     /domain_id="fullhmmer_rebP_0007"
+                     /evalue="3.00E-14"
+                     /gene_ontologies="GO:0004497: monooxygenase activity"
+                     /gene_ontologies="GO:0005506: iron ion binding"
+                     /gene_ontologies="GO:0016705: oxidoreductase activity,
+                     acting on paired donors, with incorporation or reduction of
+                     molecular oxygen"
+                     /gene_ontologies="GO:0020037: heme binding"
+                     /label="rebP"
+                     /locus_tag="rebP"
+                     /protein_end="368"
+                     /protein_start="264"
+                     /score="52.8"
+                     /tool="antismash"
+                     /translation="AGLDVTPQVVEELNRFDTPVQMVTRWAHQDTALGGKPIRRGDKVV
+                     LVLGSANRDPAAFAEPDRLDLRRDSRRHCGFGLGIHYCLGAALARTEAEIGLSVLFTNF
+                     "
+     gene            9627..10448
+                     /gene="rebM"
+     CDS             9627..10448
+                     /NRPS_PKS="Domain: oMT (22-170). E-value: 7e-45. Score:
+                     144.8. Matches aSDomain: nrpspksdomains_rebM_oMT.1"
+                     /codon_start=1
+                     /db_xref="GI:22830829"
+                     /function="methyltransferase"
+                     /gene="rebM"
+                     /gene_functions="biosynthetic-additional
+                     (rule-based-clusters) PCMT"
+                     /gene_functions="biosynthetic-additional (smcogs)
+                     SMCOG1089:methyltransferase (Score: 204.5; E-value:
+                     3.3e-62)"
+                     /gene_kind="biosynthetic-additional"
+                     /inference="non-experimental evidence, no additional
+                     details recorded"
+                     /note="rebeccamycin biosynthesis"
+                     /product="RebM"
+                     /protein_id="BAC15754.1"
+                     /sec_met_domain="PCMT (E-value: 1.3e-08, bitscore: 24.2,
+                     seeds: 9, tool: rule-based-clusters)"
+                     /transl_table=11
+                     /translation="MAAPTPEEVRQMYDDFTDPFARIWGENLHFGYWEDAGADVSVDDA
+                     TDRLTDEMIALLDVRSGDRVLDVGCGIGKPAVRLATARDVRVTGISISRPQVNQANARA
+                     TAAGLANRVTFSYADAMDLPFEDASFDAVWALESLHHMPDRGRALREMARVLRPGGTVA
+                     IADFVLLAPVEGAKKEAVDAFRAGGGVLSLGGIDEYESDVRQAELVVTSTVDISAQARP
+                     SLVKTAEAFENARSQVEPFMGAEGLDRMIATFRGLAEVPEAGYVLIGARKP"
+     aSDomain        9693..10136
+                     /aSDomain="MT"
+                     /aSTool="nrps_pks_domains"
+                     /database="nrpspksdomains.hmm"
+                     /detection="hmmscan"
+                     /domain_id="nrpspksdomains_rebM_oMT.1"
+                     /domain_subtypes="oMT"
+                     /evalue="7.00E-45"
+                     /label="rebM_oMT.1"
+                     /locus_tag="rebM"
+                     /protein_end="170"
+                     /protein_start="22"
+                     /score="144.8"
+                     /tool="antismash"
+                     /translation="IWGENLHFGYWEDAGADVSVDDATDRLTDEMIALLDVRSGDRVLD
+                     VGCGIGKPAVRLATARDVRVTGISISRPQVNQANARATAAGLANRVTFSYADAMDLPFE
+                     DASFDAVWALESLHHMPDRGRALREMARVLRPGGTVAIADFVLL"
+     PFAM_domain     9822..10118
+                     /aSDomain="Methyltransf_11"
+                     /aSTool="fullhmmer"
+                     /database="35.0"
+                     /db_xref="PF08241.15"
+                     /db_xref="GO:0008757"
+                     /description="Methyltransferase domain"
+                     /detection="hmmscan"
+                     /domain_id="fullhmmer_rebM_0008"
+                     /evalue="2.00E-26"
+                     /gene_ontologies="GO:0008757:
+                     S-adenosylmethionine-dependent methyltransferase activity"
+                     /label="rebM"
+                     /locus_tag="rebM"
+                     /protein_end="164"
+                     /protein_start="65"
+                     /score="92.6"
+                     /tool="antismash"
+                     /translation="LDVGCGIGKPAVRLATARDVRVTGISISRPQVNQANARATAAGLA
+                     NRVTFSYADAMDLPFEDASFDAVWALESLHHMPDRGRALREMARVLRPGGTVAI"
+     gene            10779..13550
+                     /gene="rebR"
+     CDS             10779..13550
+                     /codon_start=1
+                     /db_xref="GI:22830830"
+                     /gene="rebR"
+                     /gene_functions="regulatory (smcogs) SMCOG1149:LuxR family
+                     transcriptional regulator (Score: 191.7; E-value: 3.6e-58)"
+                     /gene_kind="regulatory"
+                     /note="rebeccamycin biosynthesis"
+                     /note="smCOG tree PNG image: smcogs/rebR.png"
+                     /product="transcriptional activator"
+                     /protein_id="BAC15755.1"
+                     /transl_table=11
+                     /translation="MTRSRKAEFLSDVHQDNANSFPQWNPRETNCVALPGRPVRGREAE
+                     LARIEQALDDAANARGGVLLVEGARGSGRSRLLAETARRAAERGFDVVSAEANELARLV
+                     PLAPILAALGEPQPVPGEADHSFAGLDDRWSRQLAHVRGRLARRIVKRPLAVLLDDLQW
+                     ADPVTLLALRILPAQLAGQPLLWMLCRRTDEREPYVAQLYDQLLAAGVATPLRLQPLTA
+                     PAADEMAADLLGGAKPAPEVNALVGAADGNPAVLTELIEGLVDENVVVCSDGTARLVHG
+                     NASALLPQRFRSLMRGRIDALSPSTARMLEVAAVLGRSWLPDDVVEMLGTSTAELLPCF
+                     QEALAARLLMSTSDTMVFRHDLVWRSITESIPPAVCAALHRQAARMLLDRGSPVVSVAV
+                     HLARGARPHDVEAVAVLKNAATEVMTSSPRTAVEFASRALELTDRDGSTRPALTAVLVE
+                     AHTRAGALGRAVAVAANAGPETPAPALHRSLSTALLLRGEAREALAVSEKALAAASVTP
+                     ETREALEINRLAALAALDDDALGSEVRRCTGDSPGVLTVLATARWQRGEFAEGLRLARA
+                     AARAAEEGAPFPWHLDPRIALAAFLVQSRREDEARQVITVLDGDIGRSGLDVLASVPHL
+                     LMAQLHLAAGRVEEAASRAHAALAEPVTTHTPIAHAVLAAVALRRGDLVAAAEHAHHLD
+                     GVRPVHWRAQTRWVRTQLTATADADAGFSLALLAEEPAAAAWHVRTALVAGEADRAAAV
+                     LRRIAAADHCPAADHARGVRDGDRSALERAVRDHVDEWARASAAEDLGVLLTPDDRNAA
+                     VERLDQALTAYTAAGAERDAARVRRRLRGLGVRRRHWRTADRPESGWDSLTNTELSVAS
+                     LVTQGLTNKQVATQMFLSPHTVGFHLRQIFRKLGVHSRTELIRFGPNAGRTR"
+     PFAM_domain     10893..11333
+                     /aSDomain="AAA_16"
+                     /aSTool="fullhmmer"
+                     /database="35.0"
+                     /db_xref="PF13191.9"
+                     /description="AAA ATPase domain"
+                     /detection="hmmscan"
+                     /domain_id="fullhmmer_rebR_0009"
+                     /evalue="3.90E-16"
+                     /label="rebR"
+                     /locus_tag="rebR"
+                     /protein_end="185"
+                     /protein_start="38"
+                     /score="60.0"
+                     /tool="antismash"
+                     /translation="VRGREAELARIEQALDDAANARGGVLLVEGARGSGRSRLLAETAR
+                     RAAERGFDVVSAEANELARLVPLAPILAALGEPQPVPGEADHSFAGLDDRWSRQLAHVR
+                     GRLARRIVKRPLAVLLDDLQWADPVTLLALRILPAQLAGQPLL"
+     PFAM_domain     13356..13520
+                     /aSDomain="GerE"
+                     /aSTool="fullhmmer"
+                     /database="35.0"
+                     /db_xref="PF00196.22"
+                     /db_xref="GO:0006355"
+                     /description="Bacterial regulatory proteins, luxR family"
+                     /detection="hmmscan"
+                     /domain_id="fullhmmer_rebR_0010"
+                     /evalue="1.40E-18"
+                     /gene_ontologies="GO:0006355: regulation of DNA-templated
+                     transcription"
+                     /label="rebR"
+                     /locus_tag="rebR"
+                     /protein_end="914"
+                     /protein_start="859"
+                     /score="66.3"
+                     /tool="antismash"
+                     /translation="DSLTNTELSVASLVTQGLTNKQVATQMFLSPHTVGFHLRQIFRKL
+                     GVHSRTELIR"
+     gene            13547..14059
+                     /gene="rebF"
+     CDS             13547..14059
+                     /codon_start=1
+                     /db_xref="GI:22830831"
+                     /gene="rebF"
+                     /gene_functions="biosynthetic-additional (smcogs)
+                     SMCOG1160:flavin reductase domain protein FMN-binding
+                     (Score: 106.2; E-value: 2.2e-32)"
+                     /gene_kind="biosynthetic-additional"
+                     /note="rebeccamycin biosynthesis"
+                     /note="smCOG tree PNG image: smcogs/rebF.png"
+                     /product="flavin reductase"
+                     /protein_id="BAC15756.1"
+                     /transl_table=11
+                     /translation="MTIEFDRPGAHVTAADHRALMSLFPTGVAVITAIDEAGTPHGMTC
+                     TSLTSVTLDPPTLLVCLNRASGTLHAVRGGRFGVNLLHARGRRAAEVFSTAVQDRFGEV
+                     RWEHSDVTGMPWLAEDAHAFAGCVVRKSTVVGDHEIVLGEVHEVVREHDLPLLYGMREF
+                     AVWTPEG"
+     PFAM_domain     13607..14041
+                     /aSDomain="Flavin_Reduct"
+                     /aSTool="fullhmmer"
+                     /database="35.0"
+                     /db_xref="PF01613.21"
+                     /db_xref="GO:0010181"
+                     /description="Flavin reductase like domain"
+                     /detection="hmmscan"
+                     /domain_id="fullhmmer_rebF_0011"
+                     /evalue="2.40E-30"
+                     /gene_ontologies="GO:0010181: FMN binding"
+                     /label="rebF"
+                     /locus_tag="rebF"
+                     /protein_end="165"
+                     /protein_start="20"
+                     /score="105.8"
+                     /tool="antismash"
+                     /translation="MSLFPTGVAVITAIDEAGTPHGMTCTSLTSVTLDPPTLLVCLNRA
+                     SGTLHAVRGGRFGVNLLHARGRRAAEVFSTAVQDRFGEVRWEHSDVTGMPWLAEDAHAF
+                     AGCVVRKSTVVGDHEIVLGEVHEVVREHDLPLLYGMREFAV"
+     gene            14056..15336
+                     /gene="rebU"
+     CDS             14056..15336
+                     /codon_start=1
+                     /db_xref="GI:22830832"
+                     /gene="rebU"
+                     /gene_functions="transport (smcogs)
+                     SMCOG1117:sodium/hydrogen exchanger (Score: 334.5; E-value:
+                     1.3e-101)"
+                     /gene_kind="transport"
+                     /note="rebeccamycin biosynthesis"
+                     /note="smCOG tree PNG image: smcogs/rebU.png"
+                     /product="Na+/H+ antiporter"
+                     /protein_id="BAC15757.1"
+                     /transl_table=11
+                     /translation="MSVHIEPIGRFLLAVGVIVAVCHLGGLLCHRIRQPPVIGEIAAGL
+                     LLGPTLLGAVAPSLQRALFPEEVLQAVGMAAQLGLVTFMFLLGSELRVDHVRGNGKVVW
+                     ALVAGSILLPFLAGTGFALLTRPAFGTPQVSTTAYALFVGLAMSITALPVLARILADFR
+                     ADQSFLGTLALMAAAVGDALAWAALTVILAVTGSGSTGELVLRSALALTLVLLTVFVVK
+                     PALRTLLHRLPVNSRVTVPALVVGTTAFAATTEVIGLHPVIGAFLFGCAMPRGSAVLQR
+                     ASAQLRGFTVSVLLPLFFAGVAMKTAFDAFGTAGNWLLFAAALAVATVTKFVGASSGAL
+                     LAGLDRARAFQLGALMNCRGVTELVVATVGLQNGFVNEFGYTVLVLIALVTTALTGPLA
+                     RLRAEEAPQENHRIPMKHGGTFHVRQD"
+     PFAM_domain     14104..15246
+                     /aSDomain="Na_H_Exchanger"
+                     /aSTool="fullhmmer"
+                     /database="35.0"
+                     /db_xref="PF00999.24"
+                     /db_xref="GO:0006812"
+                     /db_xref="GO:0015297"
+                     /db_xref="GO:0016020"
+                     /db_xref="GO:0055085"
+                     /db_xref="GO:1902600"
+                     /description="Sodium/hydrogen exchanger family"
+                     /detection="hmmscan"
+                     /domain_id="fullhmmer_rebU_0012"
+                     /evalue="2.20E-41"
+                     /gene_ontologies="GO:0006812: monoatomic cation transport"
+                     /gene_ontologies="GO:0015297: antiporter activity"
+                     /gene_ontologies="GO:0016020: membrane"
+                     /gene_ontologies="GO:0055085: transmembrane transport"
+                     /gene_ontologies="GO:1902600: proton transmembrane
+                     transport"
+                     /label="rebU"
+                     /locus_tag="rebU"
+                     /protein_end="397"
+                     /protein_start="16"
+                     /score="142.0"
+                     /tool="antismash"
+                     /translation="VIVAVCHLGGLLCHRIRQPPVIGEIAAGLLLGPTLLGAVAPSLQR
+                     ALFPEEVLQAVGMAAQLGLVTFMFLLGSELRVDHVRGNGKVVWALVAGSILLPFLAGTG
+                     FALLTRPAFGTPQVSTTAYALFVGLAMSITALPVLARILADFRADQSFLGTLALMAAAV
+                     GDALAWAALTVILAVTGSGSTGELVLRSALALTLVLLTVFVVKPALRTLLHRLPVNSRV
+                     TVPALVVGTTAFAATTEVIGLHPVIGAFLFGCAMPRGSAVLQRASAQLRGFTVSVLLPL
+                     FFAGVAMKTAFDAFGTAGNWLLFAAALAVATVTKFVGASSGALLAGLDRARAFQLGALM
+                     NCRGVTELVVATVGLQNGFVNEFGYTVLVLIALVTTALTGP"
+ORIGIN
+        1 ggatcccacg cgggccgagg aggttcgcga gaaggtgggc gcgatcgtcc agggccacat
+       61 ctcccacctg aagccggggt ccgcggaggc cgcggaggtg aagagggttc tgcaggccga
+      121 gggcctgtgg tcgcagtacc tcgaggtcgg catcggcccg gaccccgaga tcttcaccaa
+      181 ggccccggtg ctctcggcgg tgggcctggg cgccgacatc ggcgttctcg cccgctcggc
+      241 ctggaacaac cccgagcccg agctcgtcct ggtggtggac tcgcgcggaa acccggtcgg
+      301 cgcgacgctc ggcaacgacg tcaacctgcg cgacttcgag ggccgcagcg ctctcctgct
+      361 caccgaggcg aaggacaaca acgcctcctg cgccatcgga ccgtttctcc ggctgttcga
+      421 cgacggtttc accctcgcgg acgccaaagc caccgagatc gccctggaca tcaccggccc
+      481 cgacggtttc gagctgcacg gcgtgaaccc ggtctccgag atcagccggg agctcgagga
+      541 cctcgtgtcc cacgccttcg gcgcccacca ccgctatccc gacggcttcg tgctgttcac
+      601 cggcacgatg ttcgctccga ccgaggaccg ggaccagccc ggcgaagggt tcacccacaa
+      661 gatcggggac gtcgttcgca tctcctcgcc ccgactgggc acgttgacga acgtcgtgaa
+      721 caccgccgag gacaccgaag actggacgtt cggcatcacc gcgctgatgg agaacctcgc
+      781 cgcccgcagc ctgctgggcc cgcgcacgcg ctcgtgaccc aaggtcgtcg tcaccgatcc
+      841 agccgaggtg accgggggca ggagacgcaa ggtggtacga gcgaggagtt cagacgaggc
+      901 cctcgatcag gtcgacggcg tccacgaccg cgtcgcgcgc cgcgtactcg tcccgcagcc
+      961 gcgccgcgtg gacccggaag cgcggctcgt cgagaacggc gcgcacggcc cgtctgatgt
+     1021 cccgttcgga cagcctgcgc ttcttcaggt gaacacccgc acctgaccag ctcactctgg
+     1081 ccgcgacctc gtgcttctcc tcggtggcgg cggcgacgac cagcggcacg ccgtgtgcga
+     1141 gcgccgtgtt gacgccgccg tatcccccgt tggtcaccat ggcgtccacg tggggaagca
+     1201 atgcgtgatg cgggatgaac cgttccaccc gcacgttggc cggcatcggc tccagttcca
+     1261 gaggggcacc ggtggtcgcg accacgagca cgtcttcggc tgccagcgct cggatggcgg
+     1321 ggagcagcag gcgttccgcg tcgttggcga cggtgccctg ggtgacgtgg acgacgggcc
+     1381 ggccggagtc gagctcgccc caccacgccg gtggggtgaa gtccggcgga gcagggctca
+     1441 cgaacgggcc gacgaacctc acctcgggtg gcatgtcgcc tcgcgggtac tcgaaggacg
+     1501 gcacggtgcc cagcaggtag aggtcgggcg tgcgcatgat gttctcgaac gcccccttgc
+     1561 ggatgcgggg caggccgacg cggtcgcgca ccacgtccgc gtgccgccgg agatctcgca
+     1621 tgacgacacg gtctgtcagc tgtttgagca cggtgttgcg cagcctgccc agcctggagc
+     1681 tgctgggcgg caggcccagc ccgagcggtg ccgtgtcgcg gctgctgaag acgtagatcg
+     1741 acgtggcgat ccaggcgacg gggattcccg tgcgctcact gacgaaaccc gcgccgaaga
+     1801 aggtctcgtc ggtcacgagc acgtcggccg ggaagtcctc cagcagtgcc agcaggtctg
+     1861 tcatctggtc ggccgcgggt tcgatgaaga tgtccctgaa ccccgcgatc atccccgtga
+     1921 tcccggtcag ccccgcgtgc tggggaaacg cctcctccct cggcatgccg ccgaagtcgt
+     1981 gggcgtcgcg catcggctcg tggcgggctc ctgttcgttc cactgtggag cggaacgcct
+     2041 ttcccgtgta ccaccgcacc tcgtgtccac ggctgaccat ctcctgggcg accggcacca
+     2101 tcgggttgac gtgcccgtcc cccggtgtgg tcgccaccag cactcgtgcc cccatgccgt
+     2161 ccgacggtag ccaccattcc cgccgcggca cggcagtcgc gggcaaaacc ccctcgacca
+     2221 cgcggggtca ggcgggtcgg aaaggtcgct ggaccaccgg ggaagaggct gggaaccgct
+     2281 cggggcgagc ctgttcgcgt gatgtgcggg cagcggtcac gccaggagca tggacgggcg
+     2341 aagcgacgtc gaactggggg cgggatgtca cgcggacaca agaagatcac tgttctgggc
+     2401 gccggtgtgg caggtctggt ggccgcgcac gagctcgagg agctcgggca cgaggtcgag
+     2461 gtgctcgaag gcagcgacag gctcggcggc cgggtgcaca cgcacaggtt cggtgagggc
+     2521 ggctccgtgc cgttcgtcga gctgggcgcc atgcgcattc cgaccaagca ccgccacacc
+     2581 atcgactaca tcggcaagct cggcctgact ccgaagctga aggagttcaa gacgctgttc
+     2641 tccgatgacg gcgcctacca caccaccagt gcgggattcg tgcgcgtgcg cgacgcggcc
+     2701 aaggtgctcg tggacgagtt caggctgctg atgtccggcc gtgacctgcg cgaggagacc
+     2761 atcctgttcg gcgcctggct caccgccgtc ggcgacgcga tcgcgcccgc cgacttccgg
+     2821 gccgcgctgc gcaccgactt caccgccgac ctgctcgagg tcgtcgaccg catcgacctc
+     2881 gacccgttcc tggtcggtgc ggcccgtgac cagttcgacc tgcacgcgtt cttcgcggcg
+     2941 cacccggagg tgcgcacgag ctgcaccggc aagctcaaca ggttcgtcga cgacatcctc
+     3001 gacgagacca gcccgcggct gctgcgactc gaaggcggca tggaccagct ggtcgacgcg
+     3061 cttgtggaac ggatcagggg cgacatccgc acggggcacg aggtgagtgc gatcgacgtc
+     3121 cgggaggacc acgtcgcggt gaccgtccac aacggacatg gggtgaacac gctgcggtcc
+     3181 gatcacgtgc tctgcacgat cccgttctcc gtgctgcgca acctccggct caccggtctc
+     3241 agcacggaca agctggagat catccacgac gtcaagtact ggtcggcgac caaggtcgcg
+     3301 ttccgctgcc gtgagccgtt ctgggagcgg gacggcatca acggcggcgc gtcgttcggc
+     3361 gggggcagga tcaggcagac ctactaccca ccggtggaag gcgacccgac caggggcgct
+     3421 gtgctgctcg cgagctacac catgggcgac gacgccgacg tgctgggcgg gatgcccgag
+     3481 gcgcaacggc acgaagtcgt gctggacgag gtcggtcgca tgcaccccga actgcacgag
+     3541 ccgggcatgg tcgtcgaggc cgtgagcagg gcatggggcg aggaccgctg gagcaacggt
+     3601 gccggcgtca cgcggtgggg caaggacgtc gccgcgtgcg aggaggaacg cgatcgcgcc
+     3661 gcacggcccg agggcaggct gtacttcgcg ggtgaacact gctcgtcgac gacggcgtgg
+     3721 atcgacggtg ccgtcgagtc ggcgctggcc gccgtgcgcg cgatcgaggc gggcgacgga
+     3781 cgatgagcgt cttcgacctg ccgcgcctgc acttcgccgg gacggcgacg acgaggctgc
+     3841 cgacggggcc gcgcaacggg ctggtggacc tcagcaccca ctccgtcgtc atggacggcg
+     3901 agcggttccc cgcgtcacgg cccgccgccg agtaccacgc ctacctcgac cgcgtcggag
+     3961 gcaagggcac ggcgttcgcc ggcaacgggt acttcgcgat cgacgccggg atcaccgccg
+     4021 tcgagcgggc agcgggcgag gtggacaccg gcgacctcct ggtaggccgg gcggtggacg
+     4081 tgtggggcca ctacaacgag tacctcgcca cgacgttcaa ccgggcgcgg atcttcgacg
+     4141 tggacccgtc gtcgagctgg acctcgacgg tcatgatcgg ccagttcgga ttcggcaggc
+     4201 tcggccgctc ccacgacgtc gggtacgtgt tcaccggtgg ggtgcacggg atgcaacctc
+     4261 cgcgctggca cgaggacggc agggtcctgc accagttcac cgtgcccgcc ggcgaggaca
+     4321 tgacctggtt cggcagcgcg gccgattccc ctgccgccgc acgactccgc gagctcgtcg
+     4381 agtcgggtga ggccgacggg ctcgtggtcc agctggccct ctccgacgcg ggtcccgctc
+     4441 cgatgcccca cgcccagcag tggcggctgc gcggcacgat cgcaccgtgg cacgccggcg
+     4501 agccgcggac ctgtcccgcg ggaaggttgc tgacaccgca caacctcacc gccgatctgc
+     4561 gcggcgacca cgtctcgctg aacctgatct cgttccgccc gcccaccggg atcagcggtc
+     4621 tcgaactgcg caccgcggac acagacaggt tcatcgcgcg agtacccgcc gacgacccgc
+     4681 acggcgtggt caccgtgccg gcggcggaag gcggcgacga ggcgttgtgc gtcgtcggca
+     4741 ccaccgccgc cggcgagcgg atcgtggtgt cccgcgagcg ggaggtcacg gttcacgtcg
+     4801 acgacgcgag tgtgttcctc gaacaccccc gcggccctgg ggacagcgac caggacgccg
+     4861 agatcgcggt tcgcacgtac gtccgcggag agcccgccgc cgcgaccatc cacataggac
+     4921 agtacttcaa cccgcgggcg ttcccgctcg acgagcatgc caccgccgcc tcggcgacgc
+     4981 cggaggacct cgacgtcgtc gcgctctgcg tcgacggcac gcggtggtca cgacactgcg
+     5041 tgatcagcac cgacgagaac ggcgacggcc ggtttctgct gcgcggcgcc aggccggggg
+     5101 cgacacgtct gctgctctcc gcggaagggg cgacgccgtt cgacgggctc acggctgccg
+     5161 cggcctacga caacgacgac tcgctgggct tgtggtcagg gctcgcgtcg gttgccgtga
+     5221 gagtgctgcc cgaccactgg tggatggacg acataccgcg cgacaaagtc accttcgacc
+     5281 tgctctaccg cgaggtcttc gcgttctacg aactgctcta ctcgttcatg ggcgaggagg
+     5341 tgttcagcct cgccgacagg ttccgcgtcg agacacatcc ccggctcatc tggcagatgt
+     5401 gcgacccgcg caaccgcgcg aagacctact acatgccgcc gacacgcgac ctgacaggtc
+     5461 cgcaggcgag gttgctgctc gcctacctgc gcgcgcagaa cagcgacgtc gtcgtgcccg
+     5521 tgatcgaacc gtcgcacacg cggtccggca cgccgatcag cacccgcacc gacctcgtcc
+     5581 gcgccctgcg gcacggtgtg gcgatcgaac tggccgtgat gctgcagtac ctgtacgcgg
+     5641 cgttctcgat ccccacccac ggggcagggc aggagctcgt cagccgcggt gactggaccc
+     5701 ccgagcagtt gcggctgatg tgcggcgacg gcggcgagac gaccgacggc ggcgtgcggg
+     5761 gcagcctgct gggggtcgcc cgcgaggaga tgatccattt cctggtggtc aacaacgttc
+     5821 tcatggccgt cggtgagccc ttccacgtgc ccgacctcga cttcggcacg atcaacgaca
+     5881 ccctgatggt gccgctggac ttctcgctgg aggcgctcgg gctcggcagc gtgcagcggt
+     5941 tcatccagat cgaacaaccg gaggggctga ccggcgccgt gcggctgggt gacctgcccg
+     6001 tgcccgtccg ggaagcagag gacttccact acgcctcgct gagtgagctg tacggcgaca
+     6061 tccgcgaagg actgcaacgc gttcccgggc tgttcctcgt cgaacggggc cgtggcggtg
+     6121 gcgagcacca cctgttcctg cgcgagtcgg tcaacgccgt tcatcccgac taccagctgg
+     6181 aggtcgacga cctgtccagt gcgctgttcg cgatcgactt cgtcaccgaa cagggcgagg
+     6241 ggcacgtgct gacggacgag gacaccgggg aggagtcgca ctacgacacc ttcgtccgcg
+     6301 tcgccgacct gttgatgaag gaacgcctca ccgccgcgga cacgagaagg gcccagtgga
+     6361 gtcccgccta cccggtggcg cgcaacccga cggtgcacgg gggcgggcag tccaaggagc
+     6421 tggtgacgag tcctgtcgcc agggaactca tggtcctgtt caacaagtcc tacttcatga
+     6481 tgctgcaact gatggtgcag cacttcggtg gcagtcccga cgccagcctg cgccgctcga
+     6541 agctcatgaa cgcggccatc gacgtgatga cgggagtcat gcgcccgctg gcggaactgc
+     6601 tcgtcaccgt gccgtccggg cggcacgggc gcaccgcagg cccgtcgttc gagctcgacg
+     6661 agaagccggc gttcatcccc cgtgcggacg tggcgcgccg cgcgatctcg ctgcgcttcc
+     6721 ggcacctggc cgagtccgca cgcacatgcg cgctggtgcc ggacaaggtc gtccgcaacc
+     6781 tggatttcct cgccgaccag ttcgcaacgg aaggaccgcg atgaacgcgc ccatcgaaac
+     6841 agacgtgctg atcctgggcg gaggtccggt gggcatggcg ctggcgctcg acctcgccca
+     6901 tcgccaggtc ggccacctcg tcgtggagca gaccgacggt acgatcaccc acccgcgggt
+     6961 cggcaccatc ggcccgcggt ccatggaact cttccggcgc tggggtgtcg cgaagcagat
+     7021 ccgcaccgcc gggtggcccg gcgaccatcc gctcgacgcc gcgtgggtga cgagggtggg
+     7081 cggccacgag gtgtacagaa tcccgctcgg caccgcggac accagggcga cacccgagca
+     7141 cacaccagaa cccgacgcga tctgcccgca gcactggctc gcacccctgc tggcggaggc
+     7201 cgtcggcgag aggctgcgca cccgctcgcg gctggactcc ttcgagcagc gcgacgacca
+     7261 cgtccgcgcc acgatcaccg acctccgcac gggtgccacc cgtgccgtgc acgccaggta
+     7321 tctggtggcg tgtgacggcg cctcctcccc cacccgcaag gccctcggca tcgacgcgcc
+     7381 accgaggcac aggacgcagg tgttccgcaa catcctgttc cgcgcccccg aactgcgttc
+     7441 gctcctcggc gagcgcgccg cgttgttctt cttcctgatg ctgtcctcgt cgctgcgctt
+     7501 ccccttgcgc gcgctggacg gccgcggcct gtacaggctc acggtcgggg tcgacgacgc
+     7561 atcgaagtcc acaatggact cattcgagct ggtccgccgg gccgtcgcct tcgacacgga
+     7621 gatcgaggtg ctctccgaca gcgagtggca cctcacccac cgggtggccg acagcttctc
+     7681 cgccggccgg gtcttcctga ccggggacgc ggcccacacg ctctcgccgt ccggcggctt
+     7741 cggcatgaac acgggcatcg gcagcgcggc ggatctcggc tggaagctcg ccgcgacgct
+     7801 gcgtgggtgg gcagggcccg gcctgctcgc cacctatgag gaagaacgcc gccctgtcgc
+     7861 gatcacgagc ctggaagagg ccaacgtcaa cctccgccgc accatggacc gggaactgcc
+     7921 gccgggactg cacgacgacg ggccccgcgg cgaacggatc cgcgccgccg tggccgagaa
+     7981 gctggagcgc agcggcgccc gccgcgagtt cgacgcgccc ggcatccact tcggtcacac
+     8041 ctaccgctcg tcgatcgtct gcggcgagcc ggagaccgag gtggccaccg gcggatggcg
+     8101 gccgagcgcg cgaccgggtg cccgcgcgcc acacgcgtgg ctcaccccca ccacgtccac
+     8161 cctcgacctg ttcggccgcg ggttcgtcct gctctccttc ggcaccactg acggtgtcga
+     8221 ggcggtcacg cgtgccttcg ccgaccgtca cgtcccgctc gagacggtca cgtgtcacgc
+     8281 cccggagatc cacgcgctgt acgaacgcgc gcacgtgctc gtccggccgg acggccacgt
+     8341 cgcctggcgc ggcgaccacc ttccggcgga gctcggcggg ctggtggaca aggtgagggg
+     8401 tgccgcgtga agccgttcga cctcaaggcg ttcaccggcg cggacctcgc cgacccgtat
+     8461 cccgtctacc gcgagtacct cacgggcgac cctgtgcacc acaacggtga ggcgtggtac
+     8521 gtgttcggct acgacggggt ggctcacgtg ctcaccagcc gcgactacgg ccgccggggt
+     8581 cccggcggca gggcgacgcc gatcccgccc tcgcacgaca cgttgagccg catcgtcgag
+     8641 aactggctcg tcttcctcga cccgcctcgg cacacggcgc tgagatcgtt gctggccaag
+     8701 gagttctccc cggcggtggt caccggcctg cgcgagcgcg tgcggaagat cgccggcgag
+     8761 ctgctcgccg gcctcggcga cgcgggcgag atcgacctcg tcgaggactt cgccgccccg
+     8821 ctgccgatcc tggtgatctc ggagctgctc ggcgtgcccg cgcggctgcg ctcgtggttt
+     8881 cgccggtgtg ccgtcgatct gcaggaagcg agcaccgctc gcgccacccg caaccccggc
+     8941 gcactcgcac gggccgacgg cgcggcatca gaactggtcg agttcttcgg tggcgagctg
+     9001 ggcacgcgca agcccgacga cgaggacctc gtcgcgctgc tcgtcaacgc gcagcggcgc
+     9061 ggtgaggcgc tgaccgacga ggagatcgtg tccacgtgcg tgcacctgct gaccgccggg
+     9121 cacgagacga ccacgaacct gatctccaag tcggtcctcg cgctgctggc gaatcccgcc
+     9181 gcagccgcgg aaccgctggc cggactggac gtgacaccgc aggtggtcga ggagctgaac
+     9241 aggttcgaca cccccgtgca gatggtcact cgctgggcgc accaggacac cgcgctcggc
+     9301 ggcaagccga tccggcgagg cgacaaggtg gtgctggtgc tcggttcggc caaccgcgac
+     9361 ccggcggcgt tcgccgaacc cgacaggctc gacctgcggc gggactcgcg caggcactgc
+     9421 gggttcgggc tcggcatcca ctactgcctc ggcgccgcgc tggcgaggac ggaagccgag
+     9481 atcgggctgt ccgtgctgtt cacgaacttc cccggcctgc gcctcggcgg ggaaccggtc
+     9541 cgctacgccg acgacctggt cttccacggc ccggcccgtc tgccgatgct gacacgttga
+     9601 ccgaatcgaa gagtgagggg accgcggtgg cagcaccgac gcctgaggaa gtcaggcaga
+     9661 tgtacgacga cttcaccgac ccgttcgcca ggatctgggg ggagaacctg cacttcggct
+     9721 actgggagga cgcgggcgcc gacgtgtccg tcgacgacgc cacggaccgg ctgaccgacg
+     9781 agatgatcgc cctgctcgac gtccggtcag gggatcgggt gctggacgtc ggctgcggga
+     9841 tcggcaagcc cgccgtgcgg ctcgccacgg ccagggacgt cagggtgaca ggcatctcga
+     9901 tcagcaggcc gcaggtgaac caggccaacg cgcgagcgac cgcggccggt ctggccaacc
+     9961 gggtgacgtt ctcgtacgcc gacgcgatgg acctgccgtt cgaggacgcg tccttcgacg
+    10021 cggtgtgggc gctcgagtcg ctgcaccaca tgccggaccg cggccgcgca cttcgcgaga
+    10081 tggcacgggt gctgcggccg ggtggcaccg tcgccatcgc ggacttcgtg ctgctcgcgc
+    10141 ctgtcgaagg agcgaaaaag gaggctgtcg acgcatttcg cgcgggtggt ggtgtgctgt
+    10201 cgctcggcgg catcgacgag tacgagtccg atgttcgcca agccgaactc gtcgtgacgt
+    10261 cgacggtgga catcagcgct caggcccggc cctcactggt gaaaaccgcc gaggcgttcg
+    10321 agaatgcccg ctcccaggtg gaaccattca tgggagcgga aggtctcgac cgaatgatcg
+    10381 cgacgttccg cggactcgcg gaggtaccgg aggccggcta cgtgctcatc ggcgcgcgca
+    10441 agccctgaac ctgcacactc gacacggatg gtgatcccag gatcaccatc cgtgttcttt
+    10501 tttgcgcaaa tgacgggagt ccggtgtccg ttcgacgtcc gacccgcatc actcatccgc
+    10561 ttcccggaca cgcgggttcc cgcacgcccg atcacggaca cgtcatctct aacccacgca
+    10621 ttcgcgagtt ttcacgccgc gaacgagaag agcggtggca cctgcccgga ttcatggcta
+    10681 gtgtccgtct cgaggagcga ttggggatcg cgcctgtcga ttgggggatc gatgtcgttc
+    10741 aaccgtctac tttcgacaca catttcgagg gcgagttcat gacccgctcc cgaaaagccg
+    10801 agttcctgtc ggatgtccac caggacaatg cgaattcctt tccgcagtgg aatccgcgtg
+    10861 agacgaactg cgtcgcgctt cccggcagac ccgtccgggg cagggaagcc gagctcgccc
+    10921 gcatcgagca ggccctcgac gacgccgcga acgcgcgagg cggtgtcctg ctcgtcgagg
+    10981 gcgccagggg cagcggcagg agccgtctgc tcgccgagac cgcgcgcagg gcggcggaac
+    11041 gcggcttcga cgtggtcagc gccgaggcga acgaactcgc tcggctcgtg ccactggcgc
+    11101 cgatcctcgc ggcgctcggt gagccgcagc ccgtaccggg agaggctgac cactccttcg
+    11161 ccggactcga cgacaggtgg agcaggcagc tcgcgcacgt gcgcggcagg ctcgcgcgca
+    11221 ggatcgtcaa acggcccttg gccgtgctgc tcgacgacct gcagtgggcg gacccggtga
+    11281 cgctgctggc gttgcggatc ctgcccgcgc agctcgccgg tcagcccctc ctgtggatgt
+    11341 tgtgccggcg caccgacgag cgggagccgt acgtcgccca gctctacgac cagctgctcg
+    11401 ccgccggagt ggccacgcca ctgcggctgc agccgctcac ggcgcccgcc gccgacgaga
+    11461 tggccgccga cctgctcggt ggcgccaagc ccgcacccga ggtgaacgcg ctggtcggcg
+    11521 cggccgacgg caaccccgcc gtgctcaccg agctgatcga ggggctggtc gacgagaacg
+    11581 tggtcgtctg ttccgatggc acggcacgcc tcgtccacgg caatgcgtca gcactgctgc
+    11641 cgcaacggtt tcgcagcctc atgcgaggac ggatcgacgc cctgtcgccc tcgacggcgc
+    11701 gcatgctcga ggtcgccgcc gtgctcggca ggtcatggct gcccgacgac gtcgtggaga
+    11761 tgctcggcac gtccaccgcc gagctcctgc cctgtttcca ggaggcactg gcggcccgcc
+    11821 tgctcatgtc cacttcggac accatggtgt tccggcacga cctggtctgg cgctcgatca
+    11881 ccgagtcgat tcctcctgcc gtgtgtgcgg cgctgcacag acaggcggcg aggatgctcc
+    11941 tcgatcgcgg ctcacccgtc gtctccgtgg cggtgcatct ggcgcgaggc gcacgaccgc
+    12001 acgacgtcga ggccgtagcc gtcctcaaga acgccgccac cgaggtgatg acgtcatctc
+    12061 cgcgcaccgc cgtcgagttc gcctcgcgtg ccctcgaact caccgacagg gacggctcga
+    12121 cccggcccgc gctcaccgcc gttctcgtcg aggcgcacac ccgtgcaggg gctctcgggc
+    12181 gcgctgtcgc ggtggccgcg aacgcgggac cggagactcc tgcccccgcc ctgcaccggt
+    12241 cgctgtccac cgcgctgctg ttgaggggcg aggcgaggga agcgctggcc gtgtcggaga
+    12301 aggcactggc cgccgcctct gtcacgcccg agacgcggga agcactggag atcaacaggc
+    12361 tggccgcgct cgctgccctc gacgacgacg cgctcggttc cgaggtgcgg cgatgcacgg
+    12421 gcgacagccc cggcgtcctg accgtgctcg ccaccgcacg atggcaacga ggtgagttcg
+    12481 ccgagggtct ccggctcgcc cgtgccgcgg cccgggcagc cgaggaggga gcgccgttcc
+    12541 cgtggcacct cgacccgcgc atcgcgctcg ccgcgtttct cgtgcagtca cgccgtgagg
+    12601 acgaggccag gcaggtcatc accgtgctgg acggtgacat cggcaggtcg ggactcgacg
+    12661 tgctggcctc ggtcccccac ctgctgatgg cgcagctcca cctcgcggcg ggccgcgtgg
+    12721 aggaggcggc gtcacgggcg cacgccgcgc tcgcggagcc ggtgaccacg cacacgccga
+    12781 tcgcgcacgc cgtactcgcg gcagtcgcgt tgcgacgagg cgatctggtg gcggccgcgg
+    12841 agcacgcaca ccacctcgac ggcgtgcggc ccgtgcactg gcgcgcccag acgcgctggg
+    12901 tgcggaccca gctcacggcc accgcggatg ccgacgccgg cttcagcctc gcgctgctcg
+    12961 ccgaggaacc cgccgcggcg gcctggcacg tcagaacggc actggtggcg ggcgaggccg
+    13021 accgggcggc cgctgtgctg cgcaggatcg cggccgccga ccactgtccg gcggccgacc
+    13081 acgcgcgcgg ggtgcgcgac ggcgacagga gcgcgctcga acgggcggtc cgcgaccacg
+    13141 tcgacgagtg ggcgcgtgcc tcggctgccg aggatctggg cgtgctcctg acgccggacg
+    13201 acaggaatgc cgccgtcgaa cgcctcgacc aggcgctgac ggcctacacc gcggccggcg
+    13261 ccgaacgcga cgcggcgcgg gtgcggcggc ggttgcgcgg tctgggcgtg cggcgcaggc
+    13321 actggcgcac ggccgaccgc cccgaatcgg ggtgggacag cctcaccaac acggagctca
+    13381 gcgtcgcgtc gctcgtcacc cagggcctga ccaacaagca ggtcgcgacc cagatgttcc
+    13441 tgtcgccgca cacggtcggg ttccacctca ggcagatctt ccgcaagctc ggcgtccact
+    13501 cgcgcaccga gctgatcagg ttcggcccca acgccgggag gacgcgatga cgatcgagtt
+    13561 cgacagaccc ggcgcccacg tcaccgcggc cgatcaccgg gcgctgatga gcctgtttcc
+    13621 caccggcgtc gccgtgatca ccgcgatcga cgaggcaggc accccgcacg gcatgacgtg
+    13681 cacgtccctg accagtgtca cgctcgatcc accgacgctg ctcgtctgcc tgaaccgggc
+    13741 gagcggaacg ttgcacgcgg tgcggggagg caggttcggg gtcaacctgc tgcacgcccg
+    13801 cggccgccgt gccgccgagg tcttctccac cgccgtccag gacaggttcg gcgaggtccg
+    13861 gtgggagcac tcggacgtga cgggcatgcc gtggctcgcc gaggacgcac acgccttcgc
+    13921 gggctgcgtc gtgcggaagt ccactgtggt cggtgaccac gagatcgtgc tcggcgaggt
+    13981 gcacgaggtg gtgcgggaac acgatctccc cctgctgtac ggaatgcgcg agttcgccgt
+    14041 gtggacaccg gagggatgag cgtgcacatc gagcccatcg gcaggttcct gctcgcggtc
+    14101 ggggtgatcg tcgccgtgtg ccacctgggc gggctgctct gccacaggat ccggcagccg
+    14161 ccggtgatcg gcgagatcgc ggcgggactg ctgctcggcc cgacgctgct cggcgccgtc
+    14221 gcaccgtccc tgcaacgcgc gttgttcccg gaggaggtgc tgcaggcggt ggggatggca
+    14281 gcccagctcg ggctcgtcac cttcatgttc ctgctgggca gcgaactccg cgtggaccac
+    14341 gtgcggggca acggcaaagt cgtctgggcc ctggtggcgg ggtcgatcct gctgcccttc
+    14401 ctggcaggca cgggtttcgc gctgctcacc cggcccgcct tcggcacgcc acaggtgagc
+    14461 acgaccgcgt acgcgctgtt cgtcgggctg gccatgtcga tcaccgcgct gcccgtgctc
+    14521 gccaggatcc tcgccgactt ccgcgccgac cagtcgttcc tgggcaccct ggccctgatg
+    14581 gcggcggccg tcggcgacgc gctggcgtgg gcggcgctga cggtcatcct cgccgtgaca
+    14641 ggctcgggtt ccacgggtga actcgtgctg cgttcggcgc tggcgctcac cctcgtgctg
+    14701 ctcaccgttt tcgtcgtcaa gccggcactg aggacgctgc tgcaccggtt gccggtgaac
+    14761 agccgggtga cggtgcccgc gctcgtcgtc ggcacgacgg cgttcgccgc cacgaccgag
+    14821 gtgatcggtc tgcaccccgt gatcggcgca ttcctgttcg ggtgcgcgat gccgcggggt
+    14881 tcggccgtgc tccagcgggc gagcgcccag ctgcgcgggt tcacggtcag cgtgctgctg
+    14941 ccgctgttct tcgccggcgt ggcgatgaag acggccttcg acgccttcgg caccgcgggc
+    15001 aactggttgc tgttcgccgc cgcgctcgcc gtcgcgacgg tgacgaagtt cgtgggcgcg
+    15061 tcgagcgggg cgttgctcgc aggcctggac cgtgccaggg cgttccagct cggtgcgttg
+    15121 atgaactgcc gcggtgtcac ggagctcgtc gtcgcgacgg tcgggctgca gaacggcttc
+    15181 gtcaacgagt tcggctacac ggtgctcgtg ctcatcgcac tcgtcacgac ggcactcacc
+    15241 ggcccgctcg cacgcctccg cgcggaggaa gcaccacagg agaaccaccg aattccgatg
+    15301 aaacacgggg gtacgtttca tgtccggcaa gattgacaag atcctcatcg tcggcggcgg
+    15361 caccgccgga tggatggccg cgtcctatct cggcaaggcc ctgcagggca ccgcggacat
+    15421 cacactgctg caggcacccg acatcccgac gctcggggtc ggcgaggcca cgatccccaa
+    15481 tctgcagacg gcgttcttcg acttcctcgg aatccccgag gacgagtgga tgcgggagtg
+    15541 caacgcgagc tacaaggtcg ccatcaagtt catcaactgg cgcaccgcgg gcgaggggac
+    15601 gtccgaggcc cgcgagctcg acggagggcc cgaccacttc taccactcct tcggtctgct
+    15661 caagtaccac gagcagattc cgctgtcgca ctactggttc gaccgttcgt accgggggaa
+    15721 gaccgtcgag ccgttcgact acgcctgcta caaggaaccc gtcatcctcg acgccaacag
+    15781 gtcaccgcgc aggctcgacg gttccaaggt gacgaactac gcgtggcact tcgacgcgca
+    15841 cctcgtcgcc gacttcctgc gccggttcgc caccgagaag ctcggcgtgc gccacgtcga
+    15901 ggaccgcgtc gagcacgtcc agcgcgacgc caacggcaac atcgagtcgg ttcgcacggc
+    15961 aacggggcgt gtcttcgatg ccgacctctt cgtcgactgc tcgggcttcc gcgggctgct
+    16021 gatcaacaag gcgatggagg agcccttcct cgacatgagc gatcacctgc tcaacgacag
+    16081 cgccgtcgcc acccaggtgc cgcacgacga cgacgcgaac ggtgtggaac cgttcacctc
+    16141 ggcgatcgcc atgaagtcgg gctggacgtg gaagatcccg atgctcggca ggttcggcac
+    16201 cgggtacgtc tactcgagcc ggttcgccac cgaggacgag gcggtgcgcg agttctgcga
+    16261 gatgtggcac ctcgacccgg agacccagcc cctcaacagg atccggttcc gggtcggccg
+    16321 caaccggcgc gcgtgggtcg gcaactgcgt cagcatcggc acgtcgtcgt gcttcgtgga
+    16381 accactggag tcgacgggca tctacttcgt ctacgccgcg ctgtaccagc tggtgaagca
+    16441 cttccccgac aagagcctca accccgtgct gaccgccagg ttcaaccgcg agatcgagac
+    16501 gatgttcgac gacacgcgcg acttcatcca ggcgcacttc tacttctcgc cgcgcacgga
+    16561 caccccgttc tggagggcca acaaggagct gcgcctggcg gacggcatgc aggagaagat
+    16621 cgacatgtac cgcgcgggca tggcgatcaa cgcgcccgcg tccgacgacg cccagctcta
+    16681 ctacggcaac ttcgaggagg agttccgcaa cttctggaac aacagcaact actactgcgt
+    16741 gctggccggc ctcggtctgg tgcccgacgc accctcacca cgcctggcgc acatgccaca
+    16801 ggcgacggag tcggtggacg aggt
+//

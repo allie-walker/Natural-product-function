@@ -1,0 +1,477 @@
+LOCUS       BGC0000578.1            5005 bp    DNA     linear   UNK 01-JAN-1980
+DEFINITION  SRO15-2005 biosynthetic gene cluster.
+ACCESSION   BGC0000578
+VERSION     BGC0000578.1
+KEYWORDS    .
+SOURCE      
+  ORGANISM  .
+            .
+COMMENT     ##antiSMASH-Data-START##
+            Version      :: 7.1.0
+            Run date     :: 2025-04-17 21:33:56
+            ##antiSMASH-Data-END##
+FEATURES             Location/Qualifiers
+     CDS_motif       1..78
+                     /note="leader peptide"
+                     /note="lassopeptide"
+                     /note="predicted leader seq: MQKSVGHNGRQPRRREGVMKQQKQQ"
+                     /locus_tag="cluster_1_allorf002"
+     CDS             1..185
+                     /gene_functions="biosynthetic-additional (lassopeptides)
+                     predicted lassopeptide"
+                     /gene_kind="biosynthetic-additional"
+                     /locus_tag="cluster_1_allorf002"
+                     /note="auto-all-orf"
+                     /transl_table=11
+                     /translation="MQKSVGHNGRQPRRREGVMKQQKQQKKAYVKPSMFQQGDFSKKTA
+                     GYFVGSYKEYWSRRII"
+     CDS_motif       1..135
+                     /prepeptide="leader"
+                     /note="peptide class: {self.peptide_class}"
+                     /note="predicted sequence:
+                     MQKSVGHNGRQPRRREGVMKQQKQQKKAYVKPSMFQQGDFSKKTA"
+                     /locus_tag="cluster_1_allorf002_lassopeptide"
+                     /aSTool="lassopeptides"
+                     /tool="antismash"
+     CDS_motif       136..183
+                     /prepeptide="core"
+                     /locus_tag="cluster_1_allorf002_lassopeptide"
+                     /peptide="lassopeptide"
+                     /predicted_class="Class II"
+                     /score="-1.40"
+                     /molecular_weight="2006.3"
+                     /monoisotopic_mass="2005.0"
+                     /core_sequence="GYFVGSYKEYWSRRII"
+                     /aSTool="lassopeptides"
+                     /tool="antismash"
+                     /leader_sequence="MQKSVGHNGRQPRRREGVMKQQKQQKKAYVKPSMFQQGDFS
+                     KKTA"
+                     /leader_location="[0:135](+)"
+     source          1..5005
+                     /db_xref="taxon:457431"
+                     /mol_type="genomic DNA"
+                     /organism="Streptomyces roseosporus NRRL 15998"
+                     /strain="NRRL 15998"
+     protocluster    1..5005
+                     /aStool="rule-based-clusters"
+                     /category="RiPP"
+                     /contig_edge="True"
+                     /core_location="[236:3195]"
+                     /cutoff="10000"
+                     /detection_rule="(PF13471 and Asn_synthase or micJ25 or
+                     mcjC)"
+                     /neighbourhood="10000"
+                     /product="lassopeptide"
+                     /protocluster_number="1"
+                     /tool="antismash"
+     proto_core      237..3195
+                     /aStool="rule-based-clusters"
+                     /tool="antismash"
+                     /cutoff="10000"
+                     /detection_rule="(PF13471 and Asn_synthase or micJ25 or
+                     mcjC)"
+                     /neighbourhood="10000"
+                     /product="lassopeptide"
+                     /protocluster_number="1"
+     cand_cluster    1..5005
+                     /candidate_cluster_number="1"
+                     /contig_edge="True"
+                     /detection_rules="(PF13471 and Asn_synthase or micJ25 or
+                     mcjC)"
+                     /kind="single"
+                     /product="lassopeptide"
+                     /protoclusters="1"
+                     /tool="antismash"
+     region          1..5005
+                     /candidate_cluster_numbers="1"
+                     /contig_edge="True"
+                     /product="lassopeptide"
+                     /region_number="1"
+                     /rules="(PF13471 and Asn_synthase or micJ25 or mcjC)"
+                     /tool="antismash"
+     PFAM_domain     76..162
+                     /aSDomain="DUF5972"
+                     /aSTool="fullhmmer"
+                     /database="35.0"
+                     /db_xref="PF19397.2"
+                     /description="Family of unknown function (DUF5972)"
+                     /detection="hmmscan"
+                     /domain_id="fullhmmer_cluster_1_allorf002_0001"
+                     /evalue="2.10E-09"
+                     /label="cluster_1_allorf002"
+                     /locus_tag="cluster_1_allorf002"
+                     /protein_end="54"
+                     /protein_start="25"
+                     /score="36.9"
+                     /tool="antismash"
+                     /translation="KKAYVKPSMFQQGDFSKKTAGYFVGSYKE"
+     CDS_motif       79..185
+                     /note="core peptide"
+                     /note="lassopeptide"
+                     /note="monoisotopic mass: 4275.2"
+                     /note="molecular weight: 4277.9"
+                     /note="monoisotopic mass_cut: 4275.2"
+                     /note="molecular weight_cut: 4277.9"
+                     /note="number of bridges: 0"
+                     /note="predicted core seq:
+                     KKAYVKPSMFQQGDFSKKTAGYFVGSYKEYWSRRII"
+                     /note="predicted class: Class-II"
+                     /note="score: 0.00"
+                     /note="RODEO score: 20"
+                     /note="macrolactam: "
+                     /note="putative cleaved off residues: "
+                     /locus_tag="cluster_1_allorf002"
+     gene            237..>1163
+                     /locus_tag="SSGG_RS0132785"
+     CDS             237..>1163
+                     /codon_start=1
+                     /db_xref="GI:695897219"
+                     /exception="unextendable partial coding region"
+                     /gene_functions="biosynthetic (rule-based-clusters)
+                     lassopeptide: Asn_synthase"
+                     /gene_kind="biosynthetic"
+                     /inference="EXISTENCE: similar to AA
+                     sequence:RefSeq:WP_010071617.1"
+                     /locus_tag="SSGG_RS0132785"
+                     /note="Derived by automated computational analysis using
+                     gene prediction method: Protein Homology."
+                     /product="asparagine synthetase"
+                     /protein_id="WP_032798308.1"
+                     /sec_met_domain="Asn_synthase (E-value: 8.2e-11, bitscore:
+                     30.7, seeds: 78, tool: rule-based-clusters)"
+                     /transl_table=11
+                     /translation="MPGQLRDYFVVLPDSAAGAAAAGQLPVPGAAAGRSAARDATGSTR
+                     EMGGALTVAHPSGRPWIVARPLVRKVSHLARGEDALVLIGPDRVPDAVLAGILEGARDR
+                     AGLERRLARLPGLYHVVARLSGRSWIRGTATGLRRIYHARHPAAGTIASDRPAVLARLI
+                     DAPLDESALALRLLDFLPHPLSRRPVWRGVHETGAGYGLALPVAAPGTAAVPGPTEHRW
+                     WEPPPGELPLAEGARKVGDAVAASVRAHVGGLDRISCELSGGLDSTALAFAARDTGPAS
+                     LSLLTVAARDRYSEDETWARRAVEAAGG"
+     PFAM_domain     951..1160
+                     /aSDomain="Asn_synthase"
+                     /aSTool="fullhmmer"
+                     /database="35.0"
+                     /db_xref="PF00733.24"
+                     /db_xref="GO:0004066"
+                     /db_xref="GO:0006529"
+                     /description="Asparagine synthase"
+                     /detection="hmmscan"
+                     /domain_id="fullhmmer_SSGG_RS0132785_0002"
+                     /evalue="2.70E-07"
+                     /gene_ontologies="GO:0004066: asparagine synthase
+                     (glutamine-hydrolyzing) activity"
+                     /gene_ontologies="GO:0006529: asparagine biosynthetic
+                     process"
+                     /label="SSGG_RS0132785"
+                     /locus_tag="SSGG_RS0132785"
+                     /protein_end="308"
+                     /protein_start="238"
+                     /score="30.7"
+                     /tool="antismash"
+                     /translation="VGDAVAASVRAHVGGLDRISCELSGGLDSTALAFAARDTGPASLS
+                     LLTVAARDRYSEDETWARRAVEAAG"
+     gap             1306..1405
+                     /estimated_length=unknown
+     gene            <1434..2453
+                     /locus_tag="SSGG_RS13910"
+                     /old_locus_tag="SSGG_03859"
+     CDS             <1434..2453
+                     /codon_start=1
+                     /db_xref="GI:695897220"
+                     /exception="unextendable partial coding region"
+                     /gene_functions="biosynthetic (rule-based-clusters)
+                     lassopeptide: Asn_synthase"
+                     /gene_kind="biosynthetic"
+                     /inference="EXISTENCE: similar to AA
+                     sequence:RefSeq:WP_010071617.1"
+                     /locus_tag="SSGG_RS13910"
+                     /note="Derived by automated computational analysis using
+                     gene prediction method: Protein Homology."
+                     /old_locus_tag="SSGG_03859"
+                     /product="asparagine synthetase"
+                     /protein_id="WP_032798309.1"
+                     /sec_met_domain="Asn_synthase (E-value: 3.5e-25, bitscore:
+                     78.0, seeds: 78, tool: rule-based-clusters)"
+                     /transl_table=11
+                     /translation="MPALDHHLIPAGDAPYFYADLASTAAELNDEPLPVAPGRARAELL
+                     LGRAHATGSRYHLTGYGGDEIFLGLPHVYQDLFHGNPFTAWSHLGGLRHQLGWPLLPTV
+                     KALLDRSAFPRWLAGAVTAAPQPVARTPLLSWGVRQSPPPWLTERATALIAEEFRAAAE
+                     QAEPIDPWRGRHVDIDGVRMGARQFQAMEDIGMTLGLPVAAPFYDDRILEATLAVRLPE
+                     RISPWRYKPLLVEAMRGVVPDALLARTTKDHMASDEHQGLREHAPELAELWTGSRLAEQ
+                     GLVDARHLLRLAAEPFSPVLAEHSISSTVAGETWLRTAENAWPTTESAPDTTPSEASL"
+     PFAM_domain     1563..2327
+                     /aSDomain="Asn_synthase"
+                     /aSTool="fullhmmer"
+                     /database="35.0"
+                     /db_xref="PF00733.24"
+                     /db_xref="GO:0004066"
+                     /db_xref="GO:0006529"
+                     /description="Asparagine synthase"
+                     /detection="hmmscan"
+                     /domain_id="fullhmmer_SSGG_RS13910_0003"
+                     /evalue="1.20E-21"
+                     /gene_ontologies="GO:0004066: asparagine synthase
+                     (glutamine-hydrolyzing) activity"
+                     /gene_ontologies="GO:0006529: asparagine biosynthetic
+                     process"
+                     /label="SSGG_RS13910"
+                     /locus_tag="SSGG_RS13910"
+                     /protein_end="298"
+                     /protein_start="43"
+                     /score="78.0"
+                     /tool="antismash"
+                     /translation="LLLGRAHATGSRYHLTGYGGDEIFLGLPHVYQDLFHGNPFTAWSH
+                     LGGLRHQLGWPLLPTVKALLDRSAFPRWLAGAVTAAPQPVARTPLLSWGVRQSPPPWLT
+                     ERATALIAEEFRAAAEQAEPIDPWRGRHVDIDGVRMGARQFQAMEDIGMTLGLPVAAPF
+                     YDDRILEATLAVRLPERISPWRYKPLLVEAMRGVVPDALLARTTKDHMASDEHQGLREH
+                     APELAELWTGSRLAEQGLVDARHLLRLAAEPFS"
+     gene            2450..2701
+                     /locus_tag="SSGG_RS13905"
+                     /old_locus_tag="SSGG_03860"
+     CDS             2450..2701
+                     /codon_start=1
+                     /db_xref="GI:493082769"
+                     /gene_functions="biosynthetic-additional
+                     (rule-based-clusters) Stand_Alone_Lasso_RRE"
+                     /gene_functions="biosynthetic-additional
+                     (rule-based-clusters) PF05402"
+                     /gene_kind="biosynthetic-additional"
+                     /inference="EXISTENCE: similar to AA
+                     sequence:RefSeq:WP_006126488.1"
+                     /locus_tag="SSGG_RS13905"
+                     /note="Derived by automated computational analysis using
+                     gene prediction method: Protein Homology."
+                     /old_locus_tag="SSGG_03860"
+                     /product="hypothetical protein"
+                     /protein_id="WP_006126488.1"
+                     /sec_met_domain="Stand_Alone_Lasso_RRE (E-value: 1.5e-28,
+                     bitscore: 87.5, seeds: 25, tool: rule-based-clusters)"
+                     /sec_met_domain="PF05402 (E-value: 4.7e-16, bitscore: 47.7,
+                     seeds: 461, tool: rule-based-clusters)"
+                     /transl_table=11
+                     /translation="MKLRKGIAVTTTEYGGVLLDEKSGSYWQLNDTSVIVVETLAAGRA
+                     PEAAVERIVAEFDVERAEAESDVAELTRRLVEAKILRP"
+     PFAM_domain     2498..2692
+                     /aSDomain="PqqD"
+                     /aSTool="fullhmmer"
+                     /database="35.0"
+                     /db_xref="PF05402.15"
+                     /description="Coenzyme PQQ synthesis protein D (PqqD)"
+                     /detection="hmmscan"
+                     /domain_id="fullhmmer_SSGG_RS13905_0004"
+                     /evalue="2.80E-12"
+                     /label="SSGG_RS13905"
+                     /locus_tag="SSGG_RS13905"
+                     /protein_end="81"
+                     /protein_start="16"
+                     /score="46.9"
+                     /tool="antismash"
+                     /translation="VLLDEKSGSYWQLNDTSVIVVETLAAGRAPEAAVERIVAEFDVER
+                     AEAESDVAELTRRLVEAKIL"
+     gene            2698..3195
+                     /locus_tag="SSGG_RS13900"
+                     /old_locus_tag="SSGG_03861"
+     CDS             2698..3195
+                     /codon_start=1
+                     /db_xref="GI:497757434"
+                     /gene_functions="biosynthetic (rule-based-clusters)
+                     lassopeptide: PF13471"
+                     /gene_kind="biosynthetic"
+                     /inference="EXISTENCE: similar to AA
+                     sequence:RefSeq:WP_010071618.1"
+                     /locus_tag="SSGG_RS13900"
+                     /note="Derived by automated computational analysis using
+                     gene prediction method: Protein Homology."
+                     /old_locus_tag="SSGG_03861"
+                     /product="polyketide beta-ketoacyl synthase"
+                     /protein_id="WP_010071618.1"
+                     /sec_met_domain="PF13471 (E-value: 1.3e-25, bitscore: 78.5,
+                     seeds: 84, tool: rule-based-clusters)"
+                     /transl_table=11
+                     /translation="MTTEMTMPRRGAGAGGIRLRTAIAAAFVLARLKPGRLRRVLARCA
+                     RGARPASYAETLEVLEAVTATSRRCASRYGCLPRSVAVALACRMSGVWPDWCAGVWATP
+                     PFSPHAWVLAEGRTVGEQAEAADLRPLMVVTVREGVQGERGGGDDGGGGTGGSGPGSGQ
+                     TA"
+     PFAM_domain     2761..3093
+                     /aSDomain="Transglut_core3"
+                     /aSTool="fullhmmer"
+                     /database="35.0"
+                     /db_xref="PF13471.9"
+                     /description="Transglutaminase-like superfamily"
+                     /detection="hmmscan"
+                     /domain_id="fullhmmer_SSGG_RS13900_0005"
+                     /evalue="1.60E-22"
+                     /label="SSGG_RS13900"
+                     /locus_tag="SSGG_RS13900"
+                     /protein_end="132"
+                     /protein_start="21"
+                     /score="79.8"
+                     /tool="antismash"
+                     /translation="AIAAAFVLARLKPGRLRRVLARCARGARPASYAETLEVLEAVTAT
+                     SRRCASRYGCLPRSVAVALACRMSGVWPDWCAGVWATPPFSPHAWVLAEGRTVGEQAEA
+                     ADLRPLM"
+     gene            3122..5005
+                     /locus_tag="SSGG_RS13895"
+                     /old_locus_tag="SSGG_03862"
+     CDS             3122..5005
+                     /codon_start=1
+                     /db_xref="GI:497757435"
+                     /gene_functions="transport (smcogs) SMCOG1288:ABC
+                     transporter related protein (Score: 366.3; E-value:
+                     4.6e-111)"
+                     /gene_kind="transport"
+                     /inference="EXISTENCE: similar to AA
+                     sequence:RefSeq:WP_010071619.1"
+                     /locus_tag="SSGG_RS13895"
+                     /note="Derived by automated computational analysis using
+                     gene prediction method: Protein Homology."
+                     /note="smCOG tree PNG image: smcogs/SSGG_RS13895.png"
+                     /old_locus_tag="SSGG_03862"
+                     /product="ABC transporter ATP-binding protein"
+                     /protein_id="WP_010071619.1"
+                     /transl_table=11
+                     /translation="MSAVAGTTAGAEQAGPGPGPGRPPESTERTGPDTSPDRTPPASST
+                     SPPASGPSPLRLLLARVRPHRGVLARAGLLSLAGSGAGLAMPLMAKHAVDTFADGRSPA
+                     APLVVLTALVLVGACLSAYGSYLMSRTGEGVVLRARDQLVGRIMRLKVPAVDRLTPGDL
+                     QSRVTSDTTLLRTVLSSGLVESFNSVLMLLGTLALMAYMDLTLLGVTLVVVVGIGAVTS
+                     LLMPRIQRAQLKAQESVGAMGAALDRVLQAFRTVKASGAEERETAAVAAAARHAHDRGV
+                     SVAKWASVTEVTMTMSIQLAFLAVLGVGGARVASGSLEISSLIAFLLYLFYLMGPIGGL
+                     VEGWTGLQSGLAAVRRIDEVESLPGEPAEKSGGLTKEGGGGPLGVTFQDVTFGYGDERA
+                     PAHQGVTFDVPAGGMVALVGPSGAGKSTVFSLLERFYDHEAGTITVGGRDIRDWPLAEL
+                     RGSLAYVEQDAPVLAGTLRENLLFAAPDAEEKELTAAVARTRLDALVERLPEGLDTAVG
+                     HRGVTLSGGERQRIAIARALLRHPRLLLLDEVTSQLDAVNEQALRDVILELAERTTVLV
+                     IAHRLSTVRHADRIVVLEEGRVRTAGTHEELMAGDELYRELATTQLAADAR"
+     PFAM_domain     3338..4129
+                     /aSDomain="ABC_membrane"
+                     /aSTool="fullhmmer"
+                     /database="35.0"
+                     /db_xref="PF00664.26"
+                     /db_xref="GO:0005524"
+                     /db_xref="GO:0016020"
+                     /db_xref="GO:0055085"
+                     /db_xref="GO:0140359"
+                     /description="ABC transporter transmembrane region"
+                     /detection="hmmscan"
+                     /domain_id="fullhmmer_SSGG_RS13895_0006"
+                     /evalue="3.90E-39"
+                     /gene_ontologies="GO:0005524: ATP binding"
+                     /gene_ontologies="GO:0016020: membrane"
+                     /gene_ontologies="GO:0055085: transmembrane transport"
+                     /gene_ontologies="GO:0140359: ABC-type transporter
+                     activity"
+                     /label="SSGG_RS13895"
+                     /locus_tag="SSGG_RS13895"
+                     /protein_end="336"
+                     /protein_start="72"
+                     /score="135.1"
+                     /tool="antismash"
+                     /translation="GLLSLAGSGAGLAMPLMAKHAVDTFADGRSPAAPLVVLTALVLVG
+                     ACLSAYGSYLMSRTGEGVVLRARDQLVGRIMRLKVPAVDRLTPGDLQSRVTSDTTLLRT
+                     VLSSGLVESFNSVLMLLGTLALMAYMDLTLLGVTLVVVVGIGAVTSLLMPRIQRAQLKA
+                     QESVGAMGAALDRVLQAFRTVKASGAEERETAAVAAAARHAHDRGVSVAKWASVTEVTM
+                     TMSIQLAFLAVLGVGGARVASGSLEISSLIAFLLYLFYLMGP"
+     PFAM_domain     4328..4774
+                     /aSDomain="ABC_tran"
+                     /aSTool="fullhmmer"
+                     /database="35.0"
+                     /db_xref="PF00005.30"
+                     /db_xref="GO:0005524"
+                     /description="ABC transporter"
+                     /detection="hmmscan"
+                     /domain_id="fullhmmer_SSGG_RS13895_0007"
+                     /evalue="4.00E-31"
+                     /gene_ontologies="GO:0005524: ATP binding"
+                     /label="SSGG_RS13895"
+                     /locus_tag="SSGG_RS13895"
+                     /protein_end="551"
+                     /protein_start="402"
+                     /score="108.5"
+                     /tool="antismash"
+                     /translation="QGVTFDVPAGGMVALVGPSGAGKSTVFSLLERFYDHEAGTITVGG
+                     RDIRDWPLAELRGSLAYVEQDAPVLAGTLRENLLFAAPDAEEKELTAAVARTRLDALVE
+                     RLPEGLDTAVGHRGVTLSGGERQRIAIARALLRHPRLLLLDEVTS"
+ORIGIN
+        1 atgcagaagt cagttgggca taacggtcgt caaccacgca gaagggaagg tgtcatgaag
+       61 cagcagaagc agcagaagaa ggcttacgtg aagccgtcga tgttccagca gggcgacttc
+      121 tcgaagaaaa ccgccggcta cttcgtcggc tcgtacaagg agtactggag ccggcggatc
+      181 atctgatccg ccgatccgtt tcctgtgcac cgcgtgagaa cttccgaaag gtgaagatgc
+      241 ccggccagtt gcgtgactac ttcgtcgtcc tgccggacag cgcggcggga gcggcagcgg
+      301 ccgggcagct tcccgtaccg ggagcggctg ccgggcggtc cgccgcgcgg gacgccaccg
+      361 ggtccacccg ggagatgggc ggtgccctga ctgtcgccca cccctcgggc cggccctgga
+      421 tcgtcgcccg cccgctggtc cgcaaggtca gccatctcgc ccggggcgag gacgccctcg
+      481 tcctcatcgg cccggaccgc gtccccgacg ccgtgctcgc cgggatcctg gagggcgccc
+      541 gcgaccgggc cggcctggaa cgccgcctcg cccggctgcc cggcctctac cacgtggtcg
+      601 cccggctgtc cgggcggagc tggatccggg gcaccgccac cggactccgc cggatctacc
+      661 acgcccggca cccggcggcc ggaaccatcg cctccgaccg tcccgccgtc ctggcccgcc
+      721 tgatcgacgc gcccctcgac gagagcgcgc tggcgctgcg gctgctggac ttcctgccgc
+      781 accccctgag ccgccgtccc gtgtggcggg gcgtccacga gaccggtgcc gggtacggcc
+      841 tggccctgcc cgttgcagca ccgggcacgg ccgccgtccc cggtcccacg gagcaccgct
+      901 ggtgggagcc gccgcccggc gaactgcccc tggcggaggg ggcccgcaag gtcggggacg
+      961 ccgtcgcggc ctccgtacgg gcccatgtcg gcggcctgga ccggatcagc tgcgaactct
+     1021 ccggcggact ggactccacc gccctcgcct tcgccgcccg cgataccggc cccgcgtcgc
+     1081 tgtccctgct gaccgtggcc gcccgggacc gctacagcga ggacgagacc tgggcgcgcc
+     1141 gagcggtcga ggcggcaggc ggcacgcccg cgacgaccgc ccggaaccac ggggccgcac
+     1201 cggccgcccg gaacggccgg cctgcccccg cccgtggcca ccaccacgtc tccgccgtgg
+     1261 ggctcccgcc cacccctcag aaggtatcgg accctgaggc tctcgnnnnn nnnnnnnnnn
+     1321 nnnnnnnnnn nnnnnnnnnn nnnnnnnnnn nnnnnnnnnn nnnnnnnnnn nnnnnnnnnn
+     1381 nnnnnnnnnn nnnnnnnnnn nnnnnccccg cccccgccct ggaccaccac cccgcccccg
+     1441 ccctggacca ccacctcatc cccgccggcg acgcccccta cttctacgcc gatctcgcct
+     1501 ccaccgccgc cgagttgaac gacgaaccgc tccccgtcgc ccccggccgg gcccgcgcgg
+     1561 aactgctcct cggccgcgcc cacgccaccg gctcccgcta ccacctcacc ggctacggcg
+     1621 gcgacgagat cttcctcggt ctgccccacg tctaccagga cctcttccac ggcaacccgt
+     1681 tcaccgcctg gagccacctg ggcggcctgc gccaccagct cggctggccg ctcctgccca
+     1741 cggtgaaggc cctgctcgac cgttcggcgt tcccccgctg gctcgccggg gcggtcaccg
+     1801 ccgcacccca gcccgtcgcc cggaccccgc tgctctcctg gggcgtacgg cagtccccgc
+     1861 ccccctggct caccgagcgc gcgaccgccc tgatcgccga ggagttccgg gccgccgccg
+     1921 agcaggccga accgatcgac ccgtggcggg gacggcacgt cgacatcgac ggcgtacgga
+     1981 tgggagcccg gcaattccag gcgatggagg acatcggcat gacgctcggg ctgccggtcg
+     2041 ccgcgccctt ctacgacgac cggatcctgg aggcgaccct cgccgtacgc ctgccggagc
+     2101 gcatcagccc ctggcgctac aaaccgctgc tcgtcgaggc gatgcgcggg gtggtgccgg
+     2161 acgcgctgct ggcccggacg acgaaggacc acatggcctc cgacgaacac cagggcctgc
+     2221 gtgagcacgc tccggaactc gccgagttgt ggaccggctc ccgcctcgcc gaacagggcc
+     2281 tggtcgacgc ccgccacctc ctccgactgg cggccgaacc cttctcgccg gtcctggccg
+     2341 aacactccat cagctccacc gtggccgggg agacctggct ccgcacggcc gagaacgcct
+     2401 ggcccaccac cgagtcggcc cccgatacca cccccagcga ggcatccctg tgaagctcag
+     2461 aaaaggcatc gccgtcacga ccaccgagta cggcggcgtc ctcctcgacg agaagagcgg
+     2521 cagctactgg cagttgaacg acaccagcgt catcgtcgtc gagaccctcg cggcgggccg
+     2581 cgcccccgag gccgccgtcg agcggatcgt cgccgagttc gacgtcgagc gggccgaggc
+     2641 cgagtcggac gtcgcggagc tgacccgccg gctcgtcgag gcgaagatcc tgcgcccatg
+     2701 accaccgaga tgacgatgcc ccgccggggc gcgggagcgg gcgggatacg gctgcgtacc
+     2761 gccatcgccg ccgcgttcgt cctggcccgg ctcaagcccg gccggctgcg ccgggtgctg
+     2821 gcccggtgcg cccggggcgc gcgcccggcc tcgtacgccg agacgctgga agtgctggag
+     2881 gcggtcaccg ccaccagccg ccgctgcgcg agccgttacg gctgcctgcc ccgctcggtg
+     2941 gccgtcgccc tggcgtgccg gatgtccggc gtctggcccg actggtgcgc gggggtgtgg
+     3001 gcgaccccgc cgttctcccc gcacgcctgg gtgctggcgg aaggacgtac ggtcggggaa
+     3061 caggcagagg ccgccgatct gcgtcctttg atggtggtga cggtacgcga gggggtccag
+     3121 ggtgagcgcg gtggcgggga cgacggcggg ggcggaacag gcgggtccgg gcccgggtcc
+     3181 gggcagaccg cctgagagca cggaacgaac cggaccggac acatctccgg accggacccc
+     3241 gcccgcctcc tccacgtccc cgcctgcctc cggcccttcc cccctccgcc tgctcctggc
+     3301 ccgggtccgt ccgcaccggg gtgtcctggc ccgggcgggc ctgctctcgc tcgccgggtc
+     3361 cggggcgggg ctggcgatgc cgctgatggc gaagcacgcg gtggacacgt tcgccgacgg
+     3421 ccgctcgccc gcggccccac tcgtggtgct gaccgcgctg gtgctggtgg gtgcctgcct
+     3481 ctccgcgtac gggagttacc tcatgtcccg tacgggagaa ggggtcgtcc tgcgcgcacg
+     3541 ggaccaactg gtgggccgca tcatgcggtt gaaggtcccg gcggtggacc ggctgacgcc
+     3601 cggggacctc cagtcacggg tcacgagcga cacgaccctt ctccgcacgg tgctgtccag
+     3661 cgggctcgtc gagtcgttca acagcgtgct gatgctgctg ggcacgctcg ccctcatggc
+     3721 gtacatggac ctgacgctgc tcggcgtgac gctggtggtg gtcgtcggca tcggggccgt
+     3781 gacgtccctg ctgatgccgc gcatccagcg ggcgcagctc aaggcgcagg agtccgtggg
+     3841 cgctatgggc gcggccctgg accgggtgct ccaggcgttc cgtacggtca aggcgagcgg
+     3901 ggcggaggag cgggagacgg cggcggtcgc ggcggcggcg cggcatgcgc acgaccgggg
+     3961 cgtgtcggtg gcgaagtggg cctcggtcac cgaggtcacg atgacgatgt cgatccagct
+     4021 ggcgttcctg gcggtgctgg gcgtcggcgg cgcgcgggtc gcctccggtt cgctggagat
+     4081 ctcctccctg atcgcgttcc tgctgtacct cttctacctg atgggcccga tcggcggcct
+     4141 ggtcgagggc tggacgggcc tgcagagcgg gctggcggcg gtgcgccgga tcgacgaggt
+     4201 ggagtcgctg ccgggcgaac cggcggagaa atccggcggg ttgacgaagg aggggggcgg
+     4261 tggcccgctc ggggtcacct tccaggacgt gaccttcggg tacggcgacg agcgcgcccc
+     4321 cgcccaccag ggggtgacgt tcgacgtgcc ggccggcggg atggtggcgc tggtgggccc
+     4381 gtccggggcg ggcaagtcga cggtgttcag cctgctggaa cgcttctacg accacgaggc
+     4441 cggcacgatc accgtgggcg gccgggacat ccgcgactgg ccgctggccg agctgcgggg
+     4501 ctcgctggcg tatgtggagc aggacgcgcc ggtgctggcc gggacgctgc gggagaacct
+     4561 cctcttcgcc gccccggacg ccgaggagaa ggagctgacg gccgcggtcg cccgcacccg
+     4621 gctggacgcc ctggtcgagc ggctgcccga gggcctggac acggcggtcg gccaccgggg
+     4681 cgtcaccctc tccggcggcg aacgccagcg catcgccatc gcccgggccc tgctgcgcca
+     4741 cccccggctg ctcctcctgg acgaggtgac ctcgcaactg gacgcggtca acgagcaggc
+     4801 gctgcgcgat gtgatcctcg aactggcgga gcggacaacg gtgctggtga tcgcgcaccg
+     4861 cctgtccacc gtccggcacg cggaccgcat cgtggtcctg gaggagggcc gggtccgcac
+     4921 ggcgggcacg cacgaggagc tgatggccgg ggacgagctg taccgcgagc tggcgacgac
+     4981 gcaactggcg gcggacgcgc ggtga
+//

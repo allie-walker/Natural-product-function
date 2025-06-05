@@ -1,0 +1,609 @@
+LOCUS       BGC0000507.1            7358 bp    DNA     linear   UNK 01-JAN-1980
+DEFINITION  Epicidin biosynthetic gene cluster.
+ACCESSION   BGC0000507
+VERSION     BGC0000507.1
+KEYWORDS    .
+SOURCE      
+  ORGANISM  .
+            .
+COMMENT     ##antiSMASH-Data-START##
+            Version      :: 7.1.0
+            Run date     :: 2025-04-17 22:29:45
+            ##antiSMASH-Data-END##
+FEATURES             Location/Qualifiers
+     gene            complement(<1..30)
+                     /gene="tnp1"
+     CDS             complement(<1..30)
+                     /codon_start=1
+                     /db_xref="GI:2708724"
+                     /db_xref="UniProtKB/TrEMBL:O54217"
+                     /gene="tnp1"
+                     /product="transposase"
+                     /protein_id="CAA74345.1"
+                     /transl_table=11
+                     /translation="MNYFRYKQFR"
+     source          1..7358
+                     /db_xref="taxon:1282"
+                     /mol_type="genomic DNA"
+                     /organism="Staphylococcus epidermidis"
+                     /plasmid="pCH01"
+                     /strain="BN 280"
+     protocluster    1..7358
+                     /aStool="rule-based-clusters"
+                     /category="RiPP"
+                     /contig_edge="True"
+                     /core_location="[3082:7191]"
+                     /cutoff="20000"
+                     /detection_rule="((LANC_like and (Lant_dehydr_N or
+                     Lant_dehydr_C)) and not (YcaO or TIGR03604))"
+                     /neighbourhood="10000"
+                     /product="lanthipeptide-class-i"
+                     /protocluster_number="1"
+                     /tool="antismash"
+     proto_core      3083..7191
+                     /aStool="rule-based-clusters"
+                     /tool="antismash"
+                     /cutoff="20000"
+                     /detection_rule="((LANC_like and (Lant_dehydr_N or
+                     Lant_dehydr_C)) and not (YcaO or TIGR03604))"
+                     /neighbourhood="10000"
+                     /product="lanthipeptide-class-i"
+                     /protocluster_number="1"
+     cand_cluster    1..7358
+                     /candidate_cluster_number="1"
+                     /contig_edge="True"
+                     /detection_rules="((LANC_like and (Lant_dehydr_N or
+                     Lant_dehydr_C)) and not (YcaO or TIGR03604))"
+                     /kind="single"
+                     /product="lanthipeptide-class-i"
+                     /protoclusters="1"
+                     /tool="antismash"
+     region          1..7358
+                     /candidate_cluster_numbers="1"
+                     /contig_edge="True"
+                     /product="lanthipeptide-class-i"
+                     /region_number="1"
+                     /rules="((LANC_like and (Lant_dehydr_N or Lant_dehydr_C))
+                     and not (YcaO or TIGR03604))"
+                     /tool="antismash"
+     repeat_region   60..87
+                     /rpt_type=INVERTED
+     gene            874..1617
+                     /gene="eciO"
+     CDS             874..1617
+                     /NRPS_PKS="Domain: PKS_KR (3-114). E-value: 1.4e-09. Score:
+                     29.9. Matches aSDomain: nrpspksdomains_eciO_PKS_KR.1"
+                     /codon_start=1
+                     /db_xref="GI:2708725"
+                     /db_xref="GOA:O54218"
+                     /db_xref="HSSP:1Q7B"
+                     /db_xref="InterPro:IPR002198"
+                     /db_xref="InterPro:IPR002347"
+                     /db_xref="InterPro:IPR016040"
+                     /db_xref="InterPro:IPR020904"
+                     /db_xref="UniProtKB/TrEMBL:O54218"
+                     /gene="eciO"
+                     /gene_functions="biosynthetic-additional
+                     (rule-based-clusters) adh_short_C2"
+                     /gene_functions="biosynthetic-additional (smcogs)
+                     SMCOG1001:short-chain dehydrogenase/reductase SDR (Score:
+                     186.7; E-value: 8.6e-57)"
+                     /gene_kind="biosynthetic-additional"
+                     /product="oxidoreductase"
+                     /protein_id="CAA74346.1"
+                     /sec_met_domain="adh_short_C2 (E-value: 3.8e-35, bitscore:
+                     110.9, seeds: 47, tool: rule-based-clusters)"
+                     /transl_table=11
+                     /translation="MGRTVLITGGCKNIGKQIAQVFAENNYNVIVTSRNNNNKSIITYF
+                     KKKNLKVFFYTLNVENEDEVVNVFKEINNDIGKIDILINNAGISQGNTLLEDSKTEDFK
+                     SMINTNILGSYYCMKHVIPYMKRNRYGVIINIVSIAALRGIPYSILYGSTKNAVIALTK
+                     GAAIENANNGIRVNAIAPGIIKTESLNTEIQNSEDELNEQTIAAIHPMQILGEEKDVAN
+                     TAYFIANSSFMTGSIVNLDGGYTAQ"
+     CDS_motif       883..978
+                     /aSTool="nrps_pks_domains"
+                     /database="abmotifs"
+                     /detection="hmmscan"
+                     /domain_id="nrpspksmotif_eciO_0001"
+                     /evalue="1.10E-03"
+                     /label="PKSI-KR_m1"
+                     /locus_tag="eciO"
+                     /protein_end="35"
+                     /protein_start="3"
+                     /score="11.6"
+                     /tool="antismash"
+                     /translation="TVLITGGCKNIGKQIAQVFAENNYNVIVTSRN"
+     aSDomain        883..1215
+                     /aSDomain="PKS_KR"
+                     /aSTool="nrps_pks_domains"
+                     /database="nrpspksdomains.hmm"
+                     /detection="hmmscan"
+                     /domain_id="nrpspksdomains_eciO_PKS_KR.1"
+                     /evalue="1.40E-09"
+                     /label="eciO_PKS_KR.1"
+                     /locus_tag="eciO"
+                     /protein_end="114"
+                     /protein_start="3"
+                     /score="29.9"
+                     /specificity="KR activity: inactive"
+                     /specificity="KR stereochemistry: C1"
+                     /tool="antismash"
+                     /translation="TVLITGGCKNIGKQIAQVFAENNYNVIVTSRNNNNKSIITYFKKK
+                     NLKVFFYTLNVENEDEVVNVFKEINNDIGKIDILINNAGISQGNTLLEDSKTEDFKSMI
+                     NTNILGS"
+     PFAM_domain     907..1608
+                     /aSDomain="adh_short_C2"
+                     /aSTool="fullhmmer"
+                     /database="35.0"
+                     /db_xref="PF13561.9"
+                     /description="Enoyl-(Acyl carrier protein) reductase"
+                     /detection="hmmscan"
+                     /domain_id="fullhmmer_eciO_0001"
+                     /evalue="2.90E-55"
+                     /label="eciO"
+                     /locus_tag="eciO"
+                     /protein_end="245"
+                     /protein_start="11"
+                     /score="187.5"
+                     /tool="antismash"
+                     /translation="KNIGKQIAQVFAENNYNVIVTSRNNNNKSIITYFKKKNLKVFFYT
+                     LNVENEDEVVNVFKEINNDIGKIDILINNAGISQGNTLLEDSKTEDFKSMINTNILGSY
+                     YCMKHVIPYMKRNRYGVIINIVSIAALRGIPYSILYGSTKNAVIALTKGAAIENANNGI
+                     RVNAIAPGIIKTESLNTEIQNSEDELNEQTIAAIHPMQILGEEKDVANTAYFIANSSFM
+                     TGSIVNLDGGYT"
+     gene            1690..1878
+                     /gene="eciI"
+     CDS             1690..1878
+                     /codon_start=1
+                     /db_xref="GI:2708726"
+                     /db_xref="UniProtKB/TrEMBL:O54219"
+                     /function="producer-self-protection"
+                     /gene="eciI"
+                     /product="EciI protein"
+                     /protein_id="CAA74347.1"
+                     /transl_table=11
+                     /translation="MNIYLKIVITALFFSSIIFTVTYVSSKNLGMSLLFGLLSFIANLV
+                     YDYVMGASERKSKKDNK"
+     CDS_motif       1940..2023
+                     /note="leader peptide"
+                     /note="lantipeptide"
+                     /note="predicted leader seq: MENKKDLFDLEIKKDNMENNNELEAQSL"
+                     /locus_tag="eciA"
+     PFAM_domain     1940..2107
+                     /aSDomain="Antimicrobial18"
+                     /aSTool="fullhmmer"
+                     /database="35.0"
+                     /db_xref="PF08130.14"
+                     /description="Type A lantibiotic family"
+                     /detection="hmmscan"
+                     /domain_id="fullhmmer_eciA_0002"
+                     /evalue="1.90E-36"
+                     /label="eciA"
+                     /locus_tag="eciA"
+                     /protein_end="56"
+                     /protein_start="0"
+                     /score="124.1"
+                     /tool="antismash"
+                     /translation="MENKKDLFDLEIKKDNMENNNELEAQSLGPAIKATRQVCPKATRF
+                     VTVSCKKSDCQ"
+     CDS             1940..2110
+                     /codon_start=1
+                     /db_xref="GI:2708727"
+                     /db_xref="InterPro:IPR012519"
+                     /db_xref="UniProtKB/TrEMBL:O54220"
+                     /function="antimicrobial"
+                     /gene="eciA"
+                     /gene_functions="biosynthetic-additional
+                     (rule-based-clusters) Antimicr18"
+                     /gene_functions="biosynthetic-additional (lanthipeptides)
+                     predicted lanthipeptide"
+                     /gene_kind="biosynthetic-additional"
+                     /product="epicidin 280"
+                     /protein_id="CAA74348.1"
+                     /sec_met_domain="Antimicr18 (E-value: 6.6e-40, bitscore:
+                     124.1, seeds: 2, tool: rule-based-clusters)"
+                     /transl_table=11
+                     /translation="MENKKDLFDLEIKKDNMENNNELEAQSLGPAIKATRQVCPKATRF
+                     VTVSCKKSDCQ"
+     CDS_motif       1940..2017
+                     /prepeptide="leader"
+                     /note="peptide class: {self.peptide_class}"
+                     /note="predicted sequence: MENKKDLFDLEIKKDNMENNNELEAQ"
+                     /locus_tag="eciA_lanthipeptide"
+                     /aSTool="lanthipeptides"
+                     /tool="antismash"
+     CDS_motif       2018..2110
+                     /prepeptide="core"
+                     /locus_tag="eciA_lanthipeptide"
+                     /peptide="lanthipeptide"
+                     /predicted_class="Class I"
+                     /score="20.90"
+                     /molecular_weight="3117.7"
+                     /monoisotopic_mass="3115.7"
+                     /core_sequence="SLGPAIKATRQVCPKATRFVTVSCKKSDCQ"
+                     /aSTool="lanthipeptides"
+                     /tool="antismash"
+                     /leader_sequence="MENKKDLFDLEIKKDNMENNNELEAQ"
+                     /leader_location="[1939:2017](+)"
+                     /alternative_weights="3135.7"
+                     /alternative_weights="3153.7"
+                     /alternative_weights="3171.7"
+     gene            1940..2178
+                     /gene="eciA"
+     mat_peptide     2018..2107
+                     /function="antimicrobial"
+                     /gene="eciA"
+                     /product="epicidin 280"
+     CDS_motif       2024..2110
+                     /note="core peptide"
+                     /note="lantipeptide"
+                     /note="monoisotopic mass: 2931.6"
+                     /note="molecular weight: 2933.5"
+                     /note="alternative weights: 2951.5; 2969.5"
+                     /note="number of bridges: 3"
+                     /note="predicted core seq: GPAIKATRQVCPKATRFVTVSCKKSDCQ"
+                     /note="predicted class: lantipeptide"
+                     /note="score: 0.00"
+                     /note="RODEO score: 23"
+                     /locus_tag="eciA"
+     stem_loop       2134..2178
+                     /gene="eciA"
+     gene            2194..3096
+                     /gene="eciP"
+     CDS             2194..3096
+                     /codon_start=1
+                     /db_xref="GI:2708728"
+                     /db_xref="GOA:O54221"
+                     /db_xref="InterPro:IPR000209"
+                     /db_xref="InterPro:IPR015500"
+                     /db_xref="UniProtKB/TrEMBL:O54221"
+                     /gene="eciP"
+                     /gene_functions="biosynthetic-additional
+                     (rule-based-clusters) Peptidase_S8"
+                     /gene_functions="biosynthetic-additional (smcogs)
+                     SMCOG1075:alkaline serine protease, subtilase family
+                     (Score: 158.4; E-value: 5.7e-48)"
+                     /gene_kind="biosynthetic-additional"
+                     /note="smCOG tree PNG image: smcogs/eciP.png"
+                     /note="subtilisin-like leader peptidase"
+                     /product="protease"
+                     /protein_id="CAA74349.1"
+                     /sec_met_domain="Peptidase_S8 (E-value: 5.2e-20, bitscore:
+                     60.7, seeds: 43, tool: rule-based-clusters)"
+                     /transl_table=11
+                     /translation="MTNSDYINYTYDDRDFFEKILFIDSGCDYNHSELKNNIDLKNCKS
+                     FVDNNLNDYTGHGTQIISVLTGKIYLRGLIPNASIVVYKVTDYRGKTSIEKIYKALSQG
+                     VKKGFKVINVSFSGAIDSIFYTKKFQEIIDEARIKNIIICWSPMNNDNRLNNHKNNTNL
+                     IPNDFKNLFQIGSINRLNQISNLVCNENEIDFFAPGGDLVSETIPIEESFILLANTQLL
+                     CKLSDYYIGIPKGYTINMGNSIATSYASGCFMIIISKFKRKYKYYPSINEVLKLISKYS
+                     NSEINLIKITRSVVENALI"
+     PFAM_domain     2257..2979
+                     /aSDomain="Peptidase_S8"
+                     /aSTool="fullhmmer"
+                     /database="35.0"
+                     /db_xref="PF00082.25"
+                     /db_xref="GO:0006508"
+                     /db_xref="GO:0008236"
+                     /description="Subtilase family"
+                     /detection="hmmscan"
+                     /domain_id="fullhmmer_eciP_0003"
+                     /evalue="7.10E-20"
+                     /gene_ontologies="GO:0006508: proteolysis"
+                     /gene_ontologies="GO:0008236: serine-type peptidase
+                     activity"
+                     /label="eciP"
+                     /locus_tag="eciP"
+                     /protein_end="262"
+                     /protein_start="21"
+                     /score="71.5"
+                     /tool="antismash"
+                     /translation="FIDSGCDYNHSELKNNIDLKNCKSFVDNNLNDYTGHGTQIISVLT
+                     GKIYLRGLIPNASIVVYKVTDYRGKTSIEKIYKALSQGVKKGFKVINVSFSGAIDSIFY
+                     TKKFQEIIDEARIKNIIICWSPMNNDNRLNNHKNNTNLIPNDFKNLFQIGSINRLNQIS
+                     NLVCNENEIDFFAPGGDLVSETIPIEESFILLANTQLLCKLSDYYIGIPKGYTINMGNS
+                     IATSYASGCFMIIISKFKR"
+     gene            3083..6013
+                     /gene="eciB"
+     CDS             3083..6013
+                     /codon_start=1
+                     /db_xref="GI:2708729"
+                     /db_xref="InterPro:IPR006826"
+                     /db_xref="InterPro:IPR006827"
+                     /db_xref="UniProtKB/TrEMBL:O54222"
+                     /gene="eciB"
+                     /gene_functions="biosynthetic (rule-based-clusters)
+                     lanthipeptide-class-i: Lant_dehydr_C"
+                     /gene_functions="biosynthetic (rule-based-clusters)
+                     lanthipeptide-class-i: Lant_dehydr_N"
+                     /gene_functions="biosynthetic-additional
+                     (rule-based-clusters) Lanthipeptide_LanB_RRE"
+                     /gene_functions="biosynthetic-additional (smcogs)
+                     SMCOG1155:Lantibiotic dehydratase domain protein (Score:
+                     660.2; E-value: 7.7e-200)"
+                     /gene_kind="biosynthetic"
+                     /note="smCOG tree PNG image: smcogs/eciB.png"
+                     /product="EciB protein"
+                     /protein_id="CAA74350.1"
+                     /sec_met_domain="Lant_dehydr_N (E-value: 5.9e-45, bitscore:
+                     142.3, seeds: 73, tool: rule-based-clusters)"
+                     /sec_met_domain="Lanthipeptide_LanB_RRE (E-value: 1.9e-09,
+                     bitscore: 27.2, seeds: 20, tool: rule-based-clusters)"
+                     /sec_met_domain="Lant_dehydr_C (E-value: 9.3e-20, bitscore:
+                     60.2, seeds: 35, tool: rule-based-clusters)"
+                     /transl_table=11
+                     /translation="MHLFKWYMIREPILEINKLEDIQERRDNNEDKYLNKLIDFIFDNE
+                     LALPLYHANSNLFNMINNYKRKELSKKKKKNLILSLYNYITRMIFRATPFGFMSSINIG
+                     SIKPNEMTVWNNDTQKYNLDLDNRVLYPLLKNLNKDIKNKIYLRKNYYIYKDYTHYYIP
+                     YQLNFDKLIVNANNNINIERNELSDFIFSNLDSILYVDLVDLIKTKFNVDSKTVENYLD
+                     KLIQENFIISELEEVINHKNKDIYLINFLEKKGVSPTNKYYQMLKSVYQFRVSLKNNYN
+                     NKSLNQLMKINETFKKTLGFDSSNIFKVDFVNKYSEINFKEKDIQNIKKVINMLLHLPE
+                     NYADYLTNYKSEFSEIYGQDEYKNILELLNKNLGIEYTIDNKDNEKFKENIQKSKKNIY
+                     SLFSEWEYKAISENQDIVLTDEKIQSIKSLGEPPVDASVDMIFTVTQNENSEYIYHLND
+                     ELTSAKVTDMYGRFRYLMNEDFEKALNKFPHDIGIQKVNSNYKHPNPLIQNVKNSDYLS
+                     SYSSDFKNYFVFLGNDLNFYLKNKKDETIFIPKISDMHNTDYSPYIIDFLSKIEKQFIK
+                     EYWSIENYKSSFVFSPRIVYKNIVISPKKWKLTNFDKMDNYENFKKLFFEKKVELSIPD
+                     QFYIINADLKIYIDTQNTWCLELLFKEFKKNEHLNIIEVESNLLNNKKIKEVVFSAKSD
+                     ICQSINIYEENKNNINLPKEILYITDGWLSVNLYYNENNISKLIGDFFYRKLFENEIFK
+                     NSIKYFIRYIDDKKHIRLRIKINIDEINKVAKILKEMVDINYIKSYKIVPYYRETARYG
+                     GKEIIDIVEECFEKDSKIVSKYYADKNFSSDDALYFNITNIVDILSYLTNSIDAQIDIL
+                     SDISHKKENKKIYRKYKNNLMKIVEGDVNKYNIYLNLRKYAYSKLKFVLSDKKINDKKD
+                     IILSIVHMFNNRFIGTDRKYEEFVMELLSRTLIDYKNKKEHICNNS"
+     PFAM_domain     3218..4534
+                     /aSDomain="Lant_dehydr_N"
+                     /aSTool="fullhmmer"
+                     /database="35.0"
+                     /db_xref="PF04738.16"
+                     /description="Lantibiotic dehydratase, N terminus"
+                     /detection="hmmscan"
+                     /domain_id="fullhmmer_eciB_0004"
+                     /evalue="1.30E-44"
+                     /label="eciB"
+                     /locus_tag="eciB"
+                     /protein_end="484"
+                     /protein_start="45"
+                     /score="152.4"
+                     /tool="antismash"
+                     /translation="LALPLYHANSNLFNMINNYKRKELSKKKKKNLILSLYNYITRMIF
+                     RATPFGFMSSINIGSIKPNEMTVWNNDTQKYNLDLDNRVLYPLLKNLNKDIKNKIYLRK
+                     NYYIYKDYTHYYIPYQLNFDKLIVNANNNINIERNELSDFIFSNLDSILYVDLVDLIKT
+                     KFNVDSKTVENYLDKLIQENFIISELEEVINHKNKDIYLINFLEKKGVSPTNKYYQMLK
+                     SVYQFRVSLKNNYNNKSLNQLMKINETFKKTLGFDSSNIFKVDFVNKYSEINFKEKDIQ
+                     NIKKVINMLLHLPENYADYLTNYKSEFSEIYGQDEYKNILELLNKNLGIEYTIDNKDNE
+                     KFKENIQKSKKNIYSLFSEWEYKAISENQDIVLTDEKIQSIKSLGEPPVDASVDMIFTV
+                     TQNENSEYIYHLNDELTSAKVTDMYGRFRYLMNEDFEKAL"
+     PFAM_domain     4685..5059
+                     /aSDomain="Lant_dehydr_N"
+                     /aSTool="fullhmmer"
+                     /database="35.0"
+                     /db_xref="PF04738.16"
+                     /description="Lantibiotic dehydratase, N terminus"
+                     /detection="hmmscan"
+                     /domain_id="fullhmmer_eciB_0005"
+                     /evalue="2.70E-15"
+                     /label="eciB"
+                     /locus_tag="eciB"
+                     /protein_end="659"
+                     /protein_start="534"
+                     /score="55.6"
+                     /tool="antismash"
+                     /translation="NFYLKNKKDETIFIPKISDMHNTDYSPYIIDFLSKIEKQFIKEYW
+                     SIENYKSSFVFSPRIVYKNIVISPKKWKLTNFDKMDNYENFKKLFFEKKVELSIPDQFY
+                     IINADLKIYIDTQNTWCLELL"
+     aSDomain        5246..5965
+                     /aSDomain="TIGR03891"
+                     /aSTool="tigrfam"
+                     /description="thiopep_ocin: thiopeptide-type bacteriocin
+                     biosynthesis domain"
+                     /detection="hmmscan"
+                     /domain_id="TIGRFam_eciB_0001"
+                     /evalue="9.10E-35"
+                     /identifier="TIGR03891"
+                     /label="eciB"
+                     /locus_tag="eciB"
+                     /protein_end="961"
+                     /protein_start="721"
+                     /score="118.8"
+                     /tool="antismash"
+                     /translation="WLSVNLYYNENNISKLIGDFFYRKLFENEIFKNSIKYFIRYIDDK
+                     KHIRLRIKINIDEINKVAKILKEMVDINYIKSYKIVPYYRETARYGGKEIIDIVEECFE
+                     KDSKIVSKYYADKNFSSDDALYFNITNIVDILSYLTNSIDAQIDILSDISHKKENKKIY
+                     RKYKNNLMKIVEGDVNKYNIYLNLRKYAYSKLKFVLSDKKINDKKDIILSIVHMFNNRF
+                     IGTDRKYEEFVMELLSRT"
+     PFAM_domain     5246..5968
+                     /aSDomain="Lant_dehydr_C"
+                     /aSTool="fullhmmer"
+                     /database="35.0"
+                     /db_xref="PF14028.9"
+                     /description="Lantibiotic biosynthesis dehydratase C-term"
+                     /detection="hmmscan"
+                     /domain_id="fullhmmer_eciB_0006"
+                     /evalue="7.50E-18"
+                     /label="eciB"
+                     /locus_tag="eciB"
+                     /protein_end="962"
+                     /protein_start="721"
+                     /score="65.4"
+                     /tool="antismash"
+                     /translation="WLSVNLYYNENNISKLIGDFFYRKLFENEIFKNSIKYFIRYIDDK
+                     KHIRLRIKINIDEINKVAKILKEMVDINYIKSYKIVPYYRETARYGGKEIIDIVEECFE
+                     KDSKIVSKYYADKNFSSDDALYFNITNIVDILSYLTNSIDAQIDILSDISHKKENKKIY
+                     RKYKNNLMKIVEGDVNKYNIYLNLRKYAYSKLKFVLSDKKINDKKDIILSIVHMFNNRF
+                     IGTDRKYEEFVMELLSRTL"
+     CDS             5998..7191
+                     /codon_start=1
+                     /db_xref="GI:2708730"
+                     /db_xref="InterPro:IPR007822"
+                     /db_xref="InterPro:IPR020434"
+                     /db_xref="UniProtKB/TrEMBL:O54223"
+                     /gene="eciC"
+                     /gene_functions="biosynthetic (rule-based-clusters)
+                     lanthipeptide-class-i: LANC_like"
+                     /gene_functions="biosynthetic-additional (smcogs)
+                     SMCOG1140:Lanthionine synthetase C family protein (Score:
+                     260.7; E-value: 3.7e-79)"
+                     /gene_kind="biosynthetic"
+                     /note="smCOG tree PNG image: smcogs/eciC.png"
+                     /product="EciC protein"
+                     /protein_id="CAA74351.1"
+                     /sec_met_domain="LANC_like (E-value: 1e-82, bitscore:
+                     266.6, seeds: 47, tool: rule-based-clusters)"
+                     /transl_table=11
+                     /translation="MQQFLEAYIKKVENIDIVDDYIHRAYGKEPIYKVSLITGYPGIAM
+                     TLFSIYQHTKNFKYYKLANKYLEKTIDLISSVPIYSTSLFEGAFGVIFSLLICSDLGNN
+                     YSEIIKSLLSEYKKIASDEIRDLKKNIKEGKVESQDYDIVSGCSGTLSVLLLATDIYPS
+                     LYDYLNIEISQLSSILEKLVYEYNEIDNEQNTLFSDLGYAHGMPGVINILCNSYKRGYK
+                     TSKTKDILINSISKLNRSLKIDNGTIYIPTDTNNTNNFRDAWCYGMPSVAYTIYNIAKT
+                     FQISSLLELSQNLLYQTWLRKEYETKLISPTLCHGFSGIVIISLIMNNEDLANKYIDKI
+                     NNTDVDDKDMLFFDINSNSSIMKDIGLLNGNSGILLTMLSFNNKDIQLNHWSKFLIF"
+     gene            order(5998..7191,7217..7245)
+                     /gene="eciC"
+     PFAM_domain     6088..7182
+                     /aSDomain="LANC_like"
+                     /aSTool="fullhmmer"
+                     /database="35.0"
+                     /db_xref="PF05147.16"
+                     /db_xref="GO:0031179"
+                     /description="Lanthionine synthetase C-like protein"
+                     /detection="hmmscan"
+                     /domain_id="fullhmmer_eciC_0007"
+                     /evalue="2.00E-79"
+                     /gene_ontologies="GO:0031179: peptide modification"
+                     /label="eciC"
+                     /locus_tag="eciC"
+                     /protein_end="395"
+                     /protein_start="30"
+                     /score="266.9"
+                     /tool="antismash"
+                     /translation="IYKVSLITGYPGIAMTLFSIYQHTKNFKYYKLANKYLEKTIDLIS
+                     SVPIYSTSLFEGAFGVIFSLLICSDLGNNYSEIIKSLLSEYKKIASDEIRDLKKNIKEG
+                     KVESQDYDIVSGCSGTLSVLLLATDIYPSLYDYLNIEISQLSSILEKLVYEYNEIDNEQ
+                     NTLFSDLGYAHGMPGVINILCNSYKRGYKTSKTKDILINSISKLNRSLKIDNGTIYIPT
+                     DTNNTNNFRDAWCYGMPSVAYTIYNIAKTFQISSLLELSQNLLYQTWLRKEYETKLISP
+                     TLCHGFSGIVIISLIMNNEDLANKYIDKINNTDVDDKDMLFFDINSNSSIMKDIGLLNG
+                     NSGILLTMLSFNNKDIQLNHWSKFL"
+     stem_loop       7217..7245
+                     /gene="eciC"
+ORIGIN
+        1 acgaaattgt ttatatctga aatagttcat acagaagact cctttttgtt aaaattatac
+       61 tataaattca actttgcaac agaaccttta atgttaactt taccatcaaa tgatgcgtaa
+      121 atactctcat tcatttgttt atcatatttt gataattgtt gttgtgcttc attgagtcca
+      181 ctttgatctt gtgtcagttt agactgtaat tgattattgt tcggactttg attaatcttt
+      241 tgataatcgt cattcacttg ttgttgtgct tgatcaactt tattcgcaag ttgttgacgc
+      301 ttactattat tcgtatcgta acttagaaga cggtcacctt gtttaacctt ttgaccatcg
+      361 tctacagcag gactttggaa tgtgccaatt tggctattat tgttatatgt tttgactgat
+      421 ttgggagatg atttaccttc caaactaatc ggtgtttctt ttttaactgt atatgtatca
+      481 taacctttac tatccttatc atcagaatca gttgtttgtt ttacggtgaa tgctgcaacg
+      541 ataagtagta atataattgc cacgccaata atactccata gtagtttctt attcatatct
+      601 tatactcctt ataatatagt tgattttaat ttattactaa tataaaatac tataattttt
+      661 acacaatagc taaaagtaat cgtagcacat taatttcatt tatatttata cacttttttt
+      721 acccaatcat acacttttag taatagtttg tctctgttga ctagttaagt ataaaaaatt
+      781 atcattataa taacgaatat actagataat aattacattt ataactttaa ttagtatgta
+      841 ttctcattat aatcagaaaa aaggagatac aatatgggta gaacggtttt gataacaggt
+      901 ggatgtaaga atattggaaa acaaattgct caagtgtttg ctgaaaataa ttataatgta
+      961 atagttacta gtagaaataa taataataaa tctattataa cttattttaa aaaaaagaat
+     1021 ttaaaagtgt ttttttacac cttaaatgta gaaaatgaag atgaagttgt gaacgttttc
+     1081 aaggaaatta ataatgatat tggaaaaata gatatattaa ttaataatgc tggtatttcc
+     1141 caaggaaata ctttgttaga agacagtaaa acagaagatt tcaaatcaat gattaacacc
+     1201 aatatattag gtagttatta ttgtatgaaa cacgttatac cttatatgaa aagaaataga
+     1261 tatggtgtta ttataaatat agtatccatt gctgctttaa gaggtattcc ttattcaata
+     1321 ttatatggaa gtactaaaaa tgctgttatt gcattaacaa aaggtgcggc tatcgaaaat
+     1381 gctaacaatg gtattcgtgt taatgctatt gcgccaggaa taattaaaac agagtcatta
+     1441 aatacagaaa ttcaaaactc agaagatgag ttaaatgaac aaacgattgc agctatacat
+     1501 cctatgcaga ttttaggaga agaaaaagat gtcgctaata ctgcatactt tatagcgaac
+     1561 agttccttca tgacaggaag tatagtaaat ttagatggag gttatactgc tcaataatta
+     1621 cttttctttt attcatctga ataaaggcaa agaatattct caaaataaat aagaaaagag
+     1681 gtaaaatata tgaatatata ccttaagata gttataactg ctttattttt ttcaagtata
+     1741 atttttacag taacttatgt atcatctaaa aatttaggta tgtctttatt gtttggacta
+     1801 ttatcattta tagccaacct tgtttatgat tatgtaatgg gggcaagtga aaggaaatca
+     1861 aaaaaagata ataaataaag gaaaagcgct tacttttcac gtatattgtg ttattataaa
+     1921 tttacaggag ggatatatta tggaaaacaa aaaagattta tttgatttag aaatcaaaaa
+     1981 agataatatg gaaaataata atgaattaga agctcaatct cttggtcctg caattaaggc
+     2041 aactagacag gtatgtccta aagcaacacg ttttgttaca gtttcttgta aaaaaagtga
+     2101 ttgtcaatag tagtgattgt aaatagtata gagaaaaacc accctcattt aatcttagat
+     2161 gaaggtggtt ttctctatgt ttaggagaaa ataatgacca attcagatta tataaattat
+     2221 acatatgacg atcgagattt ttttgaaaaa atattgttta tagatagcgg atgtgattat
+     2281 aatcactctg aattaaaaaa taacatagat ttaaaaaact gcaaaagttt tgtagataat
+     2341 aatttaaatg attatacagg acatggcact cagattatta gtgttttaac aggtaaaata
+     2401 tatctaagag gattgattcc aaatgcctcc attgtggtat ataaagttac agactatcga
+     2461 gggaaaacta gtatagaaaa aatatataaa gcgttatctc aaggggttaa gaaaggtttt
+     2521 aaagttataa atgtaagttt ttctggagca attgattcta ttttttatac aaaaaaattc
+     2581 caagaaatta tagatgaagc tagaattaaa aatattataa tttgttggag ccccatgaat
+     2641 aatgataata gattgaacaa tcataaaaat aatacaaatt taatacctaa cgatttcaaa
+     2701 aatctttttc aaattggatc aataaacagg ttaaaccaaa tatccaattt agtatgtaat
+     2761 gaaaatgaaa tagacttttt cgcacctggt ggagatttag tcagcgaaac tattcctatt
+     2821 gaagaatcat ttattttgtt agcaaacaca caattattat gtaagttatc tgattattat
+     2881 ataggtattc ctaaaggata tactattaat atgggaaata gtatagctac ttcatatgca
+     2941 tcagggtgtt ttatgataat aataagtaaa ttcaaaagaa aatataaata ttatcctagt
+     3001 ataaatgaag tcttaaagtt gatatctaaa tatagtaata gtgaaatcaa tttaataaaa
+     3061 attacaagga gcgttgttga aaatgcactt atttaagtgg tatatgataa gagaacctat
+     3121 tttagaaata aataagctag aggatataca agaacgacga gacaacaatg aagataaata
+     3181 tctcaataaa cttatagatt ttatttttga taatgaattg gcattacctt tatatcatgc
+     3241 gaatagtaat ctgtttaata tgattaataa ttataaaaga aaagaattat ctaaaaagaa
+     3301 aaagaaaaac ttaattttaa gtttgtataa ttatataaca cgaatgattt ttagagcaac
+     3361 tccattcggt tttatgtcat ctataaatat aggttctata aaacccaatg aaatgacagt
+     3421 atggaataat gacactcaaa aatataatct agatttagat aacagagtac tgtatccact
+     3481 tttaaaaaat ttaaataaag acattaaaaa taaaatatac ctaagaaaaa attattatat
+     3541 atataaagat tacacacatt attatatacc atatcaatta aattttgata aattaatagt
+     3601 aaatgctaat aataatatta atatagaaag aaatgaacta tctgatttta tattcagtaa
+     3661 cttagatagt attttatatg tagatttagt tgatttgata aaaacgaagt ttaatgtaga
+     3721 ctctaaaacc gttgaaaatt atttagataa attaatccaa gaaaatttta ttatttctga
+     3781 attagaagaa gtaataaatc ataaaaataa agatatttac ttaataaatt ttttagaaaa
+     3841 aaagggggta tctccaacaa ataaatatta tcaaatgtta aaaagcgtgt accaatttcg
+     3901 ggtttctttg aaaaataact ataataataa atctttaaat caattaatga aaataaatga
+     3961 aacttttaaa aaaacattag gtttcgattc ttctaacatt tttaaagtag attttgtaaa
+     4021 taagtatagc gaaattaatt ttaaagaaaa agatattcaa aatattaaaa aagttattaa
+     4081 tatgctactt catttaccag aaaattatgc agattattta actaattata agagtgaatt
+     4141 ttcagaaata tatggacaag acgaatataa aaatatttta gagttgctaa ataaaaattt
+     4201 aggtattgaa tatacgattg ataataaaga taatgaaaaa ttcaaagaga atatacaaaa
+     4261 aagcaagaaa aatatctatt ctcttttttc agaatgggag tataaagcta taagtgaaaa
+     4321 tcaagatata gtacttaccg atgaaaaaat tcaatcaata aaatcattgg gtgaacctcc
+     4381 tgttgatgca tcggttgata tgattttcac tgttacacaa aatgaaaata gcgaatatat
+     4441 atatcattta aatgacgaac ttacttcagc taaagttaca gatatgtatg gtcgttttcg
+     4501 atatctaatg aatgaagatt tcgaaaaagc tttaaataaa tttccacatg atattggtat
+     4561 tcaaaaagtt aattcaaatt ataaacaccc taatccatta attcaaaatg tgaaaaatag
+     4621 tgactattta agtagctatt caagtgattt taaaaactat tttgtttttt taggtaacga
+     4681 tttaaatttt tatttaaaaa ataaaaagga tgaaacaata tttataccta aaatatctga
+     4741 tatgcataac acagactatt ctccctacat aattgacttt ctttctaaaa tagaaaagca
+     4801 gtttattaaa gaatattgga gcatagaaaa ttataaaagc agttttgttt tttctcctag
+     4861 aattgtttat aaaaacatag taataagtcc taaaaaatgg aagttaacta atttcgataa
+     4921 aatggataat tatgaaaatt tcaagaaact tttttttgaa aaaaaagttg aattatcaat
+     4981 acctgatcaa ttttatataa taaatgcaga tttaaaaatt tatattgata ctcaaaacac
+     5041 atggtgttta gagttattat tcaaagaatt taaaaaaaat gagcatctca atataattga
+     5101 agttgaaagt aacttattaa ataataagaa aattaaagaa gtggtttttt cagcaaaatc
+     5161 agatatatgc cagagtatta atatttatga agaaaataaa aacaatatta atttaccaaa
+     5221 agaaatttta tatataacag atggttggtt aagtgttaac ttatattata atgaaaataa
+     5281 tataagtaaa cttatcggtg atttctttta tagaaaatta ttcgaaaacg aaatctttaa
+     5341 aaatagcata aaatatttca ttaggtatat tgatgataaa aaacatataa gattaagaat
+     5401 aaaaataaat attgatgaaa taaataaagt ggcaaaaatt ttaaaagaaa tggtagatat
+     5461 aaactatata aaaagttaca aaattgtacc ctattataga gaaacagcaa gatatggtgg
+     5521 caaagaaatt attgatatag tggaagagtg ttttgaaaaa gattcaaaaa tagtatctaa
+     5581 gtattatgct gataaaaatt tttcttcaga tgatgcttta tattttaata taacaaacat
+     5641 tgtagatatc ttatcttacc ttacaaattc tatagatgct caaattgata ttttatctga
+     5701 catttctcac aaaaaagaaa acaaaaaaat atatagaaaa tataaaaata atttaatgaa
+     5761 aatagtggaa ggcgacgtta ataagtacaa catatattta aatttacgaa agtatgcata
+     5821 tagcaagttg aaattcgttt tgagtgacaa aaaaattaat gataaaaaag atattatatt
+     5881 gagtatagtc catatgttta ataatagatt tatagggaca gatagaaaat atgaagaatt
+     5941 tgttatggaa ctactctcac gaacattaat agactataaa aataaaaagg agcatatatg
+     6001 caacaattct tagaagctta tataaaaaaa gttgaaaata ttgatatagt agatgactat
+     6061 attcatagag cttatggtaa agaaccaata tataaagtta gtttaattac aggatatcca
+     6121 ggtattgcaa tgactctttt ctccatctat caacatacta aaaactttaa atattataaa
+     6181 ctagcaaata aatatttaga gaaaactata gatttaatta gttctgttcc tatatattct
+     6241 actagtttat ttgaaggagc ttttggtgtt attttttctt tattaatttg ttcagatcta
+     6301 ggaaataact atagtgagat tattaaaagc ctattatcag agtataaaaa aatagcttct
+     6361 gatgagataa gagatttgaa gaaaaatatc aaagaaggta aggtagaatc tcaagattac
+     6421 gatatagtat caggatgctc tggaactctt tcagtattac ttcttgctac ggacatctat
+     6481 cctagtttat atgattactt aaatattgaa atatcacaat tgagcagtat tttagagaaa
+     6541 ctggtatatg aatataatga aatagataat gaacaaaaca ccttattcag tgatctaggt
+     6601 tatgctcacg gaatgcccgg tgtaataaat attttatgca actcttataa aagaggatat
+     6661 aaaacttcaa aaactaaaga tattttaatt aatagtattt cgaaacttaa tagaagttta
+     6721 aaaatcgaca atggaacaat ttatattcca acagatacta ataatactaa taatttcaga
+     6781 gatgcttggt gctatggtat gccatctgtt gcatatacta tttataacat tgcaaagaca
+     6841 ttccaaatta gtagtttgct tgaactaagc caaaatttac tatatcaaac atggttaaga
+     6901 aaagaatatg aaaccaagtt gatttctcca acactgtgtc acggtttttc tggaatagta
+     6961 atcatatcat taataatgaa caatgaagat ttagctaata aatatattga taaaattaat
+     7021 aatacagatg ttgatgataa agatatgtta ttttttgata taaatagtaa ttcttctatt
+     7081 atgaaagaca taggtttatt aaacggaaac tcagggatat tattaactat gctttccttc
+     7141 aataataaag acattcaact aaatcattgg tcaaaattcc tcatatttta aagtatataa
+     7201 atggaacgtt aatgataaaa agagagcgta tttgcgctct ctttttttgt ctcattatta
+     7261 aaaattcata ataaattgtt atcataagtt ttaggacgct gtgagaatct ttcatttgca
+     7321 tccaaaaata gtttactaaa ccaaatcctt ttgaattc
+//

@@ -1,0 +1,307 @@
+LOCUS       BGC0000591.1            5640 bp    DNA     linear   UNK 01-JAN-1980
+DEFINITION  Marinostatin biosynthetic gene cluster.
+ACCESSION   BGC0000591
+VERSION     BGC0000591.1
+KEYWORDS    .
+SOURCE      
+  ORGANISM  .
+            .
+COMMENT     ##antiSMASH-Data-START##
+            Version  :: 8.0.0
+            Run date :: 2025-05-21 17:07:36
+            ##antiSMASH-Data-END##
+FEATURES             Location/Qualifiers
+     source          1..5640
+                     /db_xref="taxon:29456"
+                     /mol_type="genomic DNA"
+                     /organism="Alteromonas sp. B-10-31"
+                     /strain="B-10-31"
+     region          1..5640
+                     /candidate_cluster_numbers="1"
+                     /contig_edge="True"
+                     /product="microviridin"
+                     /region_number="1"
+                     /rules="(mvd or mvnA)"
+                     /tool="antismash"
+     cand_cluster    1..5640
+                     /candidate_cluster_number="1"
+                     /contig_edge="True"
+                     /detection_rules="(mvd or mvnA)"
+                     /kind="single"
+                     /product="microviridin"
+                     /protoclusters="1"
+                     /tool="antismash"
+     protocluster    1..5640
+                     /aStool="rule-based-clusters"
+                     /category="RiPP"
+                     /contig_edge="True"
+                     /core_location="[2398:2590](+)"
+                     /cutoff="20000"
+                     /detection_rule="(mvd or mvnA)"
+                     /neighbourhood="10000"
+                     /product="microviridin"
+                     /protocluster_number="1"
+                     /tool="antismash"
+     proto_core      2399..2590
+                     /aStool="rule-based-clusters"
+                     /tool="antismash"
+                     /cutoff="20000"
+                     /detection_rule="(mvd or mvnA)"
+                     /neighbourhood="10000"
+                     /product="microviridin"
+                     /protocluster_number="1"
+     CDS             <1..251
+                     /codon_start=3
+                     /db_xref="GI:5257106"
+                     /note="unnamed protein product; orf1; putative 'SmoE' like
+                     protein"
+                     /protein_id="BAA81780.1"
+                     /transl_table=11
+                     /translation="MSPFAPLVFDSIVDTNKQGGQKRDVPYSGIQFVEIPEFPAIGNYV
+                     GQQISEVIQGKVAADVALKKAQKHVELQMRLSGYYDE"
+     CDS             complement(411..878)
+                     /codon_start=1
+                     /db_xref="GI:5257107"
+                     /function="unknown"
+                     /note="unnamed protein product; orf2"
+                     /protein_id="BAA81781.1"
+                     /transl_table=11
+                     /translation="MKLEINNIPINTIRSKKTLIGGILAIASVTFSPNTLASCEESSTQ
+                     TSEVYCTDSNGDTWGWLRYPDQRKYTVQGRKGSTQNMTGTFIKYLRVSRDDYTHLKEMC
+                     EYAAWLGNIPEAVLPRPAWGWNLSSYMFADDYGLIQDGGQYTEFDGNTFCD"
+     terminator      1202..1220
+     repeat_region   1222..1230
+     repeat_region   1245..1253
+     CDS             1274..2089
+                     /codon_start=1
+                     /db_xref="GI:5257108"
+                     /gene_functions="biosynthetic-additional (smcogs)
+                     SMCOG1091: glutamine-binding lipoprotein glnH"
+                     /gene_kind="biosynthetic-additional"
+                     /note="unnamed protein product; orf3; putative 'FliY' like
+                     protein"
+                     /protein_id="BAA81782.1"
+                     /transl_table=11
+                     /translation="MLISHSIWAQECTTISMTGNPEFPPVTWNQKDGTLTGAYVEYAST
+                     VMKELGVKPEIEPSGNWARAQLRVKRGEVDLLLAPYYNKHRALWLHFIHPSVSLDPAVV
+                     FVKKGNQFRYRQFADLKAKKGVLQRGYSLGVQFDEYAKKNLSIVWVNSWDSAFQMLMMK
+                     RVDYLPHSYYAGLLQVKKLGLENDVETLEPPILEDKMYLAISIKSPCVSIIKRLSTVVE
+                     RLKTDQVHGRINGNVYKNLQQREPTYMRSFVWTRIEPVFGSVICGRVPI"
+     PFAM_domain     1331..1957
+                     /aSDomain="SBP_bac_3"
+                     /aSTool="fullhmmer"
+                     /database="35.0"
+                     /db_xref="PF00497.23"
+                     /description="Bacterial extracellular solute-binding
+                     proteins, family 3"
+                     /detection="hmmscan"
+                     /domain_id="fullhmmer_BAA81782.1_0001"
+                     /evalue="7.00E-20"
+                     /label="BAA81782.1"
+                     /locus_tag="BAA81782.1"
+                     /protein_end="228"
+                     /protein_start="19"
+                     /score="71.5"
+                     /tool="antismash"
+                     /translation="NPEFPPVTWNQKDGTLTGAYVEYASTVMKELGVKPEIEPSGNWAR
+                     AQLRVKRGEVDLLLAPYYNKHRALWLHFIHPSVSLDPAVVFVKKGNQFRYRQFADLKAK
+                     KGVLQRGYSLGVQFDEYAKKNLSIVWVNSWDSAFQMLMMKRVDYLPHSYYAGLLQVKKL
+                     GLENDVETLEPPILEDKMYLAISIKSPCVSIIKRLSTVVERLKTDQ"
+     repeat_region   2325..2343
+     sig_peptide     2399..2485
+                     /function="putative double glycin-type leader peptide"
+                     /gene="mstI"
+     gene            2399..2590
+                     /gene="mstI"
+     CDS             2399..2590
+                     /codon_start=1
+                     /db_xref="GI:5257109"
+                     /gene="mstI"
+                     /gene_functions="biosynthetic (rule-based-clusters)
+                     microviridin: mvd"
+                     /gene_kind="biosynthetic"
+                     /note="serine proteinase inhibitor precursor"
+                     /product="MstI"
+                     /protein_id="BAA81783.1"
+                     /sec_met_domain="mvd (E-value: 2.1e-16, bitscore: 49.0,
+                     seeds: 55, tool: rule-based-clusters)"
+                     /transl_table=11
+                     /translation="MKTTPFFANLLASQTRELTENELEMTAGGTASQQSPVQEVPEQPF
+                     ATMRYPSDSDEDGFNFPV"
+     PFAM_domain     2402..2566
+                     /aSDomain="Inhibitor_I10"
+                     /aSTool="fullhmmer"
+                     /database="35.0"
+                     /db_xref="PF12559.11"
+                     /description="Serine endopeptidase inhibitors"
+                     /detection="hmmscan"
+                     /domain_id="fullhmmer_mstI_0002"
+                     /evalue="1.80E-11"
+                     /label="mstI"
+                     /locus_tag="mstI"
+                     /protein_end="56"
+                     /protein_start="1"
+                     /score="44.2"
+                     /tool="antismash"
+                     /translation="KTTPFFANLLASQTRELTENELEMTAGGTASQQSPVQEVPEQPFA
+                     TMRYPSDSDE"
+     mat_peptide     2486..2587
+                     /experiment="experimental evidence, no additional details
+                     recorded"
+                     /gene="mstI"
+                     /product="serine proteinase inhibitor precursor"
+     terminator      2610..2634
+     CDS             2934..3653
+                     /codon_start=1
+                     /db_xref="GI:5257110"
+                     /function="unknown"
+                     /gene_functions="biosynthetic-additional
+                     (rule-based-clusters) RimK"
+                     /gene_kind="biosynthetic-additional"
+                     /note="unnamed protein product; orf5"
+                     /protein_id="BAA81784.1"
+                     /sec_met_domain="RimK (E-value: 5.2e-11, bitscore: 31.4,
+                     seeds: 4, tool: rule-based-clusters)"
+                     /transl_table=11
+                     /translation="MDLQYKRACMDESKRTLLGFMDSLDVFKMDDYWHVRRASNKELQL
+                     ILARNAGLHVPDTLITNQPEAVKVFFQKHNGEVVTKMQAAFSVWRGSQEQVVFTSKLEA
+                     SHLAELDGLALSPMIFQEKIDKELEMRVTIVGNKVFTAAIDPKIHDDMECDWRRQGLEM
+                     MDKWFIYDLPSQIAQQLLTLTRSLNLNYGAVDLILDKKGQYHFLEINPCGEFFWLDHFA
+                     GLDICQEIARLLYEGVA"
+     PFAM_domain     3051..3632
+                     /aSDomain="RimK"
+                     /aSTool="fullhmmer"
+                     /database="35.0"
+                     /db_xref="PF08443.14"
+                     /description="RimK-like ATP-grasp domain"
+                     /detection="hmmscan"
+                     /domain_id="fullhmmer_BAA81784.1_0003"
+                     /evalue="1.50E-07"
+                     /label="BAA81784.1"
+                     /locus_tag="BAA81784.1"
+                     /protein_end="233"
+                     /protein_start="39"
+                     /score="31.4"
+                     /tool="antismash"
+                     /translation="NKELQLILARNAGLHVPDTLITNQPEAVKVFFQKHNGEVVTKMQA
+                     AFSVWRGSQEQVVFTSKLEASHLAELDGLALSPMIFQEKIDKELEMRVTIVGNKVFTAA
+                     IDPKIHDDMECDWRRQGLEMMDKWFIYDLPSQIAQQLLTLTRSLNLNYGAVDLILDKKG
+                     QYHFLEINPCGEFFWLDHFAGLDICQEIARL"
+     CDS             complement(3734..4147)
+                     /codon_start=1
+                     /db_xref="GI:5257111"
+                     /function="unknown"
+                     /note="unnamed protein product; orf6"
+                     /protein_id="BAA81785.1"
+                     /transl_table=11
+                     /translation="MQNLSYIPRFVNFQPFKLTWLLILIPNYLISAIDTLSDGTELLTF
+                     FNILITMASVLEVSGCLCYILGVRLLNKSFWKLVLILAIVDFIRFFYEGLQAPMISTET
+                     GFWLILQVTLTYCCYAMIYLYAYESEGIWEEEK"
+     CDS             complement(4350..5093)
+                     /codon_start=1
+                     /db_xref="GI:5257112"
+                     /note="unnamed protein product; orf7; similar to 'slr0299'
+                     protein"
+                     /protein_id="BAA81786.1"
+                     /transl_table=11
+                     /translation="MILSAHYYPHKTGGIHLQLQEVLEKYQGEKLDLQKLSQYEQWALP
+                     FFHQENMVANPYLSITLDVNLTTARQVYEQDFQEVPGASFQAYIVWQLMKALHQEWTFS
+                     TRKIGNDWYVFKNLPVYFPIAIGGDARFKDALIENVVQMEWPEFVMQYRKTITEPADLT
+                     GTMDPLIWSISSFIGNLPDLDFSAFQIHRAKKLSGRPYFYFGKRKWVNEEYTAPLSVNM
+                     DHANADPFVLSELLQTFQSYLNGKT"
+ORIGIN
+        1 aagcttcacc ttttgcccct cttgtttttg actctattgt tgatacgaat aagcaaggtg
+       61 gacaaaagcg ggatgttcca tattcaggga tacagtttgt cgaaatacca gaatttccag
+      121 caattggcaa ttatgttgga cagcaaattt cagaagtgat ccaagggaag gttgcagcag
+      181 atgttgcgct gaagaaagca cagaagcacg ttgaattgca aatgaggcta tctgggtatt
+      241 atgatgaata aagcaagcaa agggaaacac gtttatgctt ggtattcaaa gtggccagga
+      301 tcaaggtgta tacaggatag cgcatgcttt tttaattgta ccgcagtctt ttcattctag
+      361 cgatacaaat cttaaatatc tcgggtaaaa tcagccacta atggcgtgac ctagtcacaa
+      421 aatgtatttc catcaaattc tgtgtactgt ccaccatctt gtattaatcc ataatcatca
+      481 gcaaacatat atgaacttag attccagccc caagccggtc ttgggaggac ggcttctggg
+      541 atattaccta accaggcagc atattcacac atttctttta aatgggtgta gtcgtctctg
+      601 gatacgcgaa gatatttgat aaatgttcca gtcatatttt gtgtggatcc ttttctgcct
+      661 tgaacggtgt acttacgctg atcaggatat cgaagccagc cccaggtgtc accattcgaa
+      721 tcggtgcaat agacttcgct tgtttgtgtc gaggactctt cacagctggc aagagtattg
+      781 gggctgaatg tcacgctggc gatggctaaa attccaccaa tcaaggtttt ttttgaacga
+      841 atggtgttga ttgggatgtt gtttatttca agtttcattg tgataaatca atttagttat
+      901 aaattttcat gttgtttttg tattttatca gtagaacttc atcccataac agcatgaaat
+      961 agaaaatatt attctgccta attcaatggt tggtcactgg gcgagtgtca ctactcgagc
+     1021 tttcggcttc gatgtgactg ttggcattgt taaatctcgc agcaatgtca tgtggtaagg
+     1081 cggaaagtag ctgttctcgc tgcctttgac ggctttacag ttgttcctgt ttttgaacaa
+     1141 taaaaatgat cttgtcgtac aaagggttgc attctatttt tatatttaga atttatggat
+     1201 acagacgtgc atcacgtttg gtaagaacga aatcgagcac atgataagaa cgagtcctgt
+     1261 ttttctatta ttaatgttaa taagtcactc tatctgggca caagaatgta caactatttc
+     1321 gatgactggc aatcctgaat ttcccccagt aacctggaat caaaaagatg ggacactcac
+     1381 aggtgcatac gttgagtatg catctacagt catgaaggaa ctcggggtga agccagaaat
+     1441 tgagccaagt gggaattggg ctcgcgcaca gctgcgggtt aaaaggggag aagtcgattt
+     1501 gctgcttgca ccatattaca acaagcatag agcgttatgg ctacatttta ttcacccctc
+     1561 agtctcactc gatcctgcgg tcgtttttgt caaaaagggg aatcagtttc gttatcgtca
+     1621 atttgctgat ttaaaggcaa agaaaggagt attgcagcgg ggatatagcc ttggtgttca
+     1681 atttgatgag tatgcaaaaa agaacttgag tattgtctgg gtgaatagtt gggattcagc
+     1741 tttccagatg ttgatgatga aaagggtgga ttatttacca catagttatt acgcagggct
+     1801 gcttcaagtg aaaaagttgg ggcttgaaaa cgatgtagaa acgctggagc cacctattct
+     1861 ggaagacaag atgtacttgg caatctcaat caagtcacct tgtgtttcaa tcatcaaacg
+     1921 attatctacg gttgttgaac gtttaaaaac agaccaagta catggaagaa ttaatggaaa
+     1981 cgtatataaa aatttacaac aaagggaacc aacgtacatg aggtcatttg tctggacccg
+     2041 aattgagccc gtttttggtt ccgtcatttg cggcagagtt ccaatataaa agacagtctg
+     2101 acctaaaatt agaataactt attctggaca attaaatcct ctaatcgaac ccatcagcaa
+     2161 caatactgag aataggaaaa aagatttaat tccgatactc ttcattgact tacatttctt
+     2221 gtgggcatat aaatgtcgct cgagaggaag gcttgccata tgggcatgta tccccttttt
+     2281 gtaaagaaaa ttaggccaat atcatttcac tcccaggatg attctttggt accaattttt
+     2341 ggtcgcaaaa agggttcttc gactctcgat aaactttaga gaaagatagg agtttctcat
+     2401 gaaaactaca ccattctttg caaatctact tgcttcacaa acacgtgaat tgactgaaaa
+     2461 cgaattagaa atgactgctg gtggtacagc atctcaacaa tctccagttc aagaagtacc
+     2521 agagcagcca tttgcaacaa tgcgttatcc gtcagattct gatgaggatg gttttaattt
+     2581 tccagtttaa tggatgatga aatcgattgc cggagaagcg taatgcttct ccggatttat
+     2641 ttgagtgata gaaagaggtt aaagtggcag caaatacagt actcatcgtc acgcagagcc
+     2701 gagataatga atgcattgac agtgtaagtg actcaatacg agaactaggt ggcgaagtat
+     2761 ttcgcttgaa ttctgatgaa tacccaacca agattcaact tgctgggcta cacggacaaa
+     2821 aatttcccca tacacatcaa ctcatcaatg agcatggcca gactgtaaat tctgagcaaa
+     2881 ttcgatcact ttggtatcga cgatttttac caggcgggca gctccccaaa gatatggatc
+     2941 ttcagtataa gcgcgcttgt atggatgaat cgaaacgaac cttgcttggt ttcatggata
+     3001 gtttggatgt gtttaaaatg gatgattatt ggcatgttcg ccgagcatcc aacaaagaat
+     3061 tacaactcat tcttgcaaga aacgcagggt tgcatgttcc cgatacactc atcacgaatc
+     3121 aacctgaagc tgtgaaagtg ttttttcaga agcacaacgg cgaagtggtc acgaaaatgc
+     3181 aagccgcttt ttctgtttgg cgtggctctc aagaacaggt tgtttttacc agcaaattag
+     3241 aagcctccca tttagcagaa ttggatggcc ttgcattgag cccgatgatt ttccaagaaa
+     3301 aaatagataa agaactggaa atgcgagtca caatcgttgg gaataaggta ttcaccgcgg
+     3361 caattgatcc aaaaattcat gatgatatgg agtgtgactg gcgtcggcag ggtttggaga
+     3421 tgatggataa gtggtttatc tatgacttac cgagtcaaat agcacagcag ctcttaacgc
+     3481 tgacaagatc gctcaacctg aattatggcg cagttgatct catattagat aaaaaagggc
+     3541 aatatcattt tcttgaaatc aacccatgcg gcgaattctt ctggctggat cacttcgcag
+     3601 gtttggacat ttgccaagaa attgcaagat tattatatga aggcgtggct taagggtcat
+     3661 caaacttctc cctatagtca gcatttctct ctagtcctga aataagaaat gctgatgata
+     3721 cttcaatgca aagctacttc tcttcctccc atattccctc agattcataa gcatataagt
+     3781 aaatcatggc gtaacaacag taagtgagtg tgacttgtaa aatcagccag aagcctgttt
+     3841 ctgtggagat catcggtgcc tggagacctt catagaaaaa gcgaataaaa tctacaattg
+     3901 caagaatgag gaccagtttc caaaatgact tgttcaataa gcgaacaccc aagatgtaac
+     3961 agagacaacc agagacctcc agaacacttg ccattgtaat taagatattg aaaaacgtga
+     4021 gtaactccgt tccatctgat agcgtatcta ttgctgaaat caggtaattt gggatcagta
+     4081 tcaacaacca agtgagctta aatggctgaa aatttacaaa tcgaggaatg taagaaagat
+     4141 tctgcataac ttctcaactc aaacaaaaag gcacggagga aaagcctcag tcaattgaat
+     4201 tagatgatac gtaaggcaat gtgaatgtag tatgaatgag ttatttaatt taagaaaaaa
+     4261 tcattatatg tgaataaacg actgatttat cgttcttaat gctggagtta aaaacggatg
+     4321 acacgaaaaa actgaacctc aggcgaggtt caagttttgc catttaagta tgattggaag
+     4381 gtttgtaaca attcgctgag tacaaaagga tctgcatttg cgtggtccat attcacactc
+     4441 aatggtgcag tatattcttc attaacccat ttacgcttac cgaaataaaa atagggccta
+     4501 ccggagagtt tttttgcgcg atggatttga aaagctgaga aatccaaatc aggtaagttt
+     4561 ccaataaagg atgaaatcga ccaaatcaat ggatccatag tacctgttaa gtccgctggt
+     4621 tcagtgatcg tttttcgata ttgcatgaca aactctggcc actccatttg aacgacattt
+     4681 tcaatcaatg cgtctttgaa ccgggcatcg ccaccaattg caattggaaa atacacaggt
+     4741 aggtttttaa aaacgtacca atcgtttcca atttttcggg tactaaaagt ccattcctga
+     4801 tggagagctt tcattaactg ccagactata taggcttgaa aagaagcgcc tggaacctcc
+     4861 tggaaatctt gttcatagac ttggcgggca gttgtgaggt taacatctaa cgtgatggac
+     4921 aaataggggt tagcgaccat gttttcttga tgaaaaaaag gcaaagccca ttgttcatat
+     4981 tggctgagtt tctgtagatc gagcttctct ccttggtatt tttctaatac ttcttgtagc
+     5041 tgcaagtgta ttcctcctgt cttgtgcgga taataatgag cggaaagtat catgtgaatc
+     5101 tatcttattc aataatgggt cgtattttta actcagtgag gagaatgcta acgtatggat
+     5161 tagaaatttg tttgctatac tgatcaatct gttcaactca tccttacctc ttgtgtgatt
+     5221 caaattctaa ttaaaagaaa ccaatttgac tattacgctt ttaataccgc tgatgagctg
+     5281 gtcgctactg cgaagaatgc ttcacgccct agaaatttca acatcgccat gaagttgctt
+     5341 accaatgagc tgagccctta tcgttatgaa gtttttgttc aagacattgg gatcacttct
+     5401 agaaaaacga tgttaggcgg gatcatggat aaaagagaaa taatttcttt atacgacgaa
+     5461 aggccttgta tcggtgaata taagtttcgt atggataaag gggaataccg ttatacgatt
+     5521 tttgatgata actcgcatgg tgcaattatc caggctgata atccttatat gtatgattta
+     5581 tatattaatg atgataaagt tggggaatgt aaactcggcg ggaatatctt gagaaagctt
+//

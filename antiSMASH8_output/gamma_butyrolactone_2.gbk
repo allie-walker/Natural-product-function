@@ -1,0 +1,241 @@
+LOCUS       BGC0000850.1            2474 bp    DNA     linear   UNK 01-JAN-1980
+DEFINITION  Gamma-butyrolactone biosynthetic gene cluster.
+ACCESSION   BGC0000850
+VERSION     BGC0000850.1
+KEYWORDS    .
+SOURCE      
+  ORGANISM  .
+            .
+COMMENT     ##antiSMASH-Data-START##
+            Version  :: 8.0.0
+            Run date :: 2025-05-21 16:48:44
+            ##antiSMASH-Data-END##
+FEATURES             Location/Qualifiers
+     gene            complement(1..648)
+                     /gene="sabR"
+     CDS             complement(1..648)
+                     /codon_start=1
+                     /db_xref="GI:226354807"
+                     /gene="sabR"
+                     /gene_functions="regulatory (smcogs) SMCOG1224: TetR family
+                     transcriptional regulator"
+                     /gene_kind="regulatory"
+                     /note="similar to GBL receptor"
+                     /product="SabR"
+                     /protein_id="ACO51011.1"
+                     /transl_table=11
+                     /translation="MAKQERAIRTRQAIVEAAGEVFDEHGYTSTTIAMVLERSAVTKGA
+                     LYFHFPSKEALAQAVLGEQVPFGSVPAQACKLQEIVDMTFVVGQRLLTSSLLRGSIRLA
+                     VDQEAPARIDHGGPYRQWSQRLEDLLEQARDRGELLPTVQPRQTVELLVGCFSGIQLMS
+                     RALSGRADLGERLSVLWTHILPSIAVPGLLPALDTKADRGVRVLGSPERVAS"
+     source          1..2474
+                     /db_xref="taxon:42234"
+                     /mol_type="genomic DNA"
+                     /organism="Streptomyces acidiscabies"
+                     /strain="84.104"
+     misc_feature    1..2474
+                     /note="GBL gene cluster"
+     region          1..2474
+                     /candidate_cluster_numbers="1"
+                     /contig_edge="True"
+                     /product="butyrolactone"
+                     /region_number="1"
+                     /rules="AfsA"
+                     /tool="antismash"
+     cand_cluster    1..2474
+                     /candidate_cluster_number="1"
+                     /contig_edge="True"
+                     /detection_rules="AfsA"
+                     /kind="single"
+                     /product="butyrolactone"
+                     /protoclusters="1"
+                     /tool="antismash"
+     protocluster    1..2474
+                     /aStool="rule-based-clusters"
+                     /category="other"
+                     /contig_edge="True"
+                     /core_location="[737:1745](+)"
+                     /cutoff="20000"
+                     /detection_rule="AfsA"
+                     /neighbourhood="5000"
+                     /product="butyrolactone"
+                     /protocluster_number="1"
+                     /tool="antismash"
+     proto_core      738..1745
+                     /aStool="rule-based-clusters"
+                     /tool="antismash"
+                     /cutoff="20000"
+                     /detection_rule="AfsA"
+                     /neighbourhood="5000"
+                     /product="butyrolactone"
+                     /protocluster_number="1"
+     PFAM_domain     complement(469..609)
+                     /aSDomain="TetR_N"
+                     /aSTool="fullhmmer"
+                     /database="35.0"
+                     /db_xref="PF00440.26"
+                     /db_xref="GO:0003677"
+                     /description="Bacterial regulatory proteins, tetR family"
+                     /detection="hmmscan"
+                     /domain_id="fullhmmer_sabR_0001"
+                     /evalue="4.60E-15"
+                     /gene_ontologies="GO:0003677: DNA binding"
+                     /label="sabR"
+                     /locus_tag="sabR"
+                     /protein_end="60"
+                     /protein_start="13"
+                     /score="55.3"
+                     /tool="antismash"
+                     /translation="IVEAAGEVFDEHGYTSTTIAMVLERSAVTKGALYFHFPSKEALAQ
+                     AV"
+     gene            738..1745
+                     /gene="sabA"
+     CDS             738..1745
+                     /codon_start=1
+                     /db_xref="GI:226354808"
+                     /gene="sabA"
+                     /gene_functions="biosynthetic (rule-based-clusters)
+                     butyrolactone: AfsA"
+                     /gene_kind="biosynthetic"
+                     /note="similar to GBL synthase"
+                     /product="SabA"
+                     /protein_id="ACO51012.1"
+                     /sec_met_domain="AfsA (E-value: 7.5e-25, bitscore: 74.7,
+                     seeds: 34, tool: rule-based-clusters)"
+                     /transl_table=11
+                     /translation="MPNRSPRTLTFAVGTIHRPPWLMGDRREDAMTRPRQSADTPSLTA
+                     TVPRQFVHRAALAETFLTGWERTEADRFTVCAQWPRAHGLHVSPDWCSYDPLLVVETVR
+                     QAGTLIMHTEYGVPLDRQFVLNAFEVTTDPHRLEVGPVPAEPTVELDFTEVRYRGGQPA
+                     ACRYSARVLCCGEQAATADVAFTCVGEAVYRRLRGGRTPGTVTAVPLPPGLPPQVVDRA
+                     LPTDVVLALPGLDPGAPGGSWQLRVNTAHPVFFDHPLDHVPGMLLLEAARQAARFALPG
+                     KYAPSAYRAVFHRYAELDEPVWIEARDEGGGHLQVVGVQRESAVFECGVDAAAG"
+     PFAM_domain     888..1298
+                     /aSDomain="AfsA"
+                     /aSTool="fullhmmer"
+                     /database="35.0"
+                     /db_xref="PF03756.16"
+                     /description="A-factor biosynthesis hotdog domain"
+                     /detection="hmmscan"
+                     /domain_id="fullhmmer_sabA_0002"
+                     /evalue="1.70E-22"
+                     /label="sabA"
+                     /locus_tag="sabA"
+                     /protein_end="187"
+                     /protein_start="50"
+                     /score="80.0"
+                     /tool="antismash"
+                     /translation="FVHRAALAETFLTGWERTEADRFTVCAQWPRAHGLHVSPDWCSYD
+                     PLLVVETVRQAGTLIMHTEYGVPLDRQFVLNAFEVTTDPHRLEVGPVPAEPTVELDFTE
+                     VRYRGGQPAACRYSARVLCCGEQAATADVAFTC"
+     misc_feature    990..992
+                     /note="tta leucine codon, possible target for bldA
+                     regulation"
+                     /tool="antismash"
+     PFAM_domain     1392..1658
+                     /aSDomain="AfsA"
+                     /aSTool="fullhmmer"
+                     /database="35.0"
+                     /db_xref="PF03756.16"
+                     /description="A-factor biosynthesis hotdog domain"
+                     /detection="hmmscan"
+                     /domain_id="fullhmmer_sabA_0003"
+                     /evalue="7.10E-15"
+                     /label="sabA"
+                     /locus_tag="sabA"
+                     /protein_end="307"
+                     /protein_start="218"
+                     /score="55.3"
+                     /tool="antismash"
+                     /translation="VDRALPTDVVLALPGLDPGAPGGSWQLRVNTAHPVFFDHPLDHVP
+                     GMLLLEAARQAARFALPGKYAPSAYRAVFHRYAELDEPVWIEAR"
+     protein_bind    1768..1793
+                     /bound_moiety="SabR"
+                     /note="ARE binding site for SabR"
+     gene            1779..2474
+                     /gene="sabS"
+     CDS             1779..2474
+                     /codon_start=1
+                     /db_xref="GI:226354809"
+                     /gene="sabS"
+                     /gene_functions="regulatory (smcogs) SMCOG1057: TetR family
+                     transcriptional regulator"
+                     /gene_kind="regulatory"
+                     /note="GBL receptor"
+                     /product="SabS"
+                     /protein_id="ACO51013.1"
+                     /transl_table=11
+                     /translation="MTRSFTGPGVSQAMARQLRAEQTRATIITAAADLFDRHGYESTSL
+                     SDIVEHAQVTKGALYFHFAAKEDLAHAIMELQSQASQRVAGEIDNRGYSSLEALMRLTF
+                     GLTRLSVEGPIARAGLRLATGGVAVRPPLRRPFSEWGELINRGLSGAVREADIHQDVDI
+                     EAVAHSLVCFFVGTRVVGRSREASGRLPRRMAEMWYVLIRGLVPVPRRPRYLSLASRLE
+                     REITAACVS"
+     misc_feature    1818
+                     /gene="sabS"
+                     /note="possible alternate site of translation initiation"
+     misc_feature    1830..1832
+                     /note="tta leucine codon, possible target for bldA
+                     regulation"
+                     /tool="antismash"
+     PFAM_domain     1857..1997
+                     /aSDomain="TetR_N"
+                     /aSTool="fullhmmer"
+                     /database="35.0"
+                     /db_xref="PF00440.26"
+                     /db_xref="GO:0003677"
+                     /description="Bacterial regulatory proteins, tetR family"
+                     /detection="hmmscan"
+                     /domain_id="fullhmmer_sabS_0004"
+                     /evalue="9.40E-17"
+                     /gene_ontologies="GO:0003677: DNA binding"
+                     /label="sabS"
+                     /locus_tag="sabS"
+                     /protein_end="73"
+                     /protein_start="26"
+                     /score="60.7"
+                     /tool="antismash"
+                     /translation="IITAAADLFDRHGYESTSLSDIVEHAQVTKGALYFHFAAKEDLAH
+                     AI"
+ORIGIN
+        1 tcacgaagcc accctttcgg gcgaccccag gacccgcacg ccccggtccg ccttcgtgtc
+       61 cagcgcgggc agcagccccg gtacggcgat gctcggcagg atgtgcgtcc acagcaccga
+      121 cagccgctcg ccgaggtccg cgcgcccgga cagcgcccgg gacatcagct ggatcccgct
+      181 gaagcagccg acgagcagct ccaccgtctg ccggggctgt accgtcggca gcaactcccc
+      241 ccggtcccgg gcctgttcga gcaggtcctc cagccgctgg gaccactgcc ggtacggccc
+      301 tccgtgatcg atgcgggccg gcgcctcctg gtcgaccgcg aggcggatgc tccctctcaa
+      361 caaggaactg gtcagcaggc gttggccgac gacgaacgtc atgtcgacga tctcctggag
+      421 cttgcacgcc tgtgccggga cgctcccgaa cggcacctgc tcgcccagca ccgcctgcgc
+      481 cagcgcctcc ttggacggga agtggaagta cagcgcgccc ttggtgacgg cggagcgctc
+      541 caggaccatg gcgatggtgg tggacgtgta accgtgctcg tcgaaaacct caccggccgc
+      601 ttccacgatg gcttggcgcg ttctgatggc gcgctcctgt ttagccataa gagcccctcc
+      661 gcgggaccga gttggccgat cccgcgatcg tgtgtctgtt cggcccgatc ataggatgcc
+      721 gtcgactgat ctcattgatg ccaaaccggt cgcctcgtac tctaacgttc gctgtgggga
+      781 cgattcaccg tccgccgtgg ctcatgggtg accgcaggga ggatgcgatg acccgaccgc
+      841 ggcagtctgc tgacaccccg tccctgacgg caaccgtccc tcgccagttc gtccaccgcg
+      901 cagccctcgc cgaaacgttt ctcaccggct gggagcgcac cgaggccgac cgtttcaccg
+      961 tgtgcgcaca gtggccccgt gcccatgggt tacacgtgtc cccggactgg tgctcctacg
+     1021 accccttgct cgtggtggag acggtccgtc aggccggcac cctgatcatg cacaccgagt
+     1081 acggcgtccc gctggaccgg cagttcgtgc tcaacgcctt cgaagtcacc acggatccgc
+     1141 accggttgga ggtcgggccg gtgccggccg agccgaccgt cgaactcgac ttcaccgagg
+     1201 tgcgctaccg gggcggccag cctgccgcct gccgctactc cgcccgcgtc ctgtgctgcg
+     1261 gggagcaggc cgcgaccgcc gacgtcgcct tcacctgcgt cggcgaggcc gtctaccgca
+     1321 ggctgcgcgg cggccggacg cccggcacgg tgacggccgt tccgctgccg cccgggctgc
+     1381 cgccgcaggt cgtggaccgg gcactgccca ccgacgtcgt cctcgccctc cccggcctcg
+     1441 atccgggggc gcccggcggg agttggcagc tccgggtaaa taccgcacac cccgttttct
+     1501 tcgaccatcc gctcgatcac gtccccggga tgctcctgct ggaggcggcc cggcaggcag
+     1561 cccggttcgc tcttccgggc aaatatgccc ccagcgcata ccgggcggtc ttccacaggt
+     1621 acgctgagct ggacgaaccc gtctggatcg aggctcgcga cgaaggcggc ggacacctcc
+     1681 aagtcgtcgg cgtgcaacgg gagtcggcag tcttcgagtg tggggtcgac gccgccgcag
+     1741 ggtgagttat tgtgtacagg gggtgagaaa caaacggcat gacccgttct tttaccggcc
+     1801 caggagtgtc tcaggcgatg gcgaggcagt tacgcgccga acagacccgc gcgacgatca
+     1861 tcacggcggc ggccgatctg ttcgaccgac atggttacga atcgacgagc ctcagtgaca
+     1921 tcgtcgagca cgcccaagtc accaagggcg ccctgtactt ccacttcgcg gccaaggagg
+     1981 acctggccca cgcgatcatg gaactccagt cccaggcctc gcagcgcgtc gcgggcgaga
+     2041 tcgacaaccg gggctactcc tccctcgaag cgctgatgcg gctcacgttc ggcctgaccc
+     2101 ggctgtccgt cgaagggccc atcgcccggg ccgggttgag gctcgcgacc gggggagtcg
+     2161 cggtgagacc cccgctgcgc cgccccttct ccgagtgggg tgagctgatc aaccgcgggc
+     2221 tgtccggggc ggtccgtgag gccgacatac accaggacgt cgacatcgag gcggtcgcgc
+     2281 actccctggt ctgcttcttc gtcggcaccc gcgtggtggg ccgctcccgc gaggcctccg
+     2341 gccggcttcc gcgccggatg gcggagatgt ggtacgtcct gatccgcggc ctcgtcccgg
+     2401 tcccgcgcag accgcgctat ctgagcctgg cgtcgaggct ggagcgggag atcacggcgg
+     2461 cgtgcgtgtc ctga
+//

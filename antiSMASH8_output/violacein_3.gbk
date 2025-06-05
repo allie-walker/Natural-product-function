@@ -1,0 +1,424 @@
+LOCUS       BGC0000828.1            9077 bp    DNA     linear   UNK 01-JAN-1980
+DEFINITION  Violacein biosynthetic gene cluster.
+ACCESSION   BGC0000828
+VERSION     BGC0000828.1
+KEYWORDS    .
+SOURCE      
+  ORGANISM  .
+            .
+COMMENT     ##antiSMASH-Data-START##
+            Version  :: 8.0.0
+            Run date :: 2025-05-22 10:44:14
+            ##antiSMASH-Data-END##
+FEATURES             Location/Qualifiers
+     source          1..9077
+                     /db_xref="taxon:536"
+                     /mol_type="genomic DNA"
+                     /note="vector:pVBG04"
+                     /organism="Chromobacterium violaceum"
+                     /strain="JCM 1249"
+     region          1..9077
+                     /candidate_cluster_numbers="1"
+                     /contig_edge="True"
+                     /product="indole"
+                     /region_number="1"
+                     /rules="(indsynth or dmat or indole_PTase)"
+                     /tool="antismash"
+     cand_cluster    1..9077
+                     /candidate_cluster_number="1"
+                     /contig_edge="True"
+                     /detection_rules="(indsynth or dmat or indole_PTase)"
+                     /kind="single"
+                     /product="indole"
+                     /protoclusters="1"
+                     /tool="antismash"
+     protocluster    1..9077
+                     /aStool="rule-based-clusters"
+                     /category="other"
+                     /contig_edge="True"
+                     /core_location="[1882:4879](+)"
+                     /cutoff="20000"
+                     /detection_rule="(indsynth or dmat or indole_PTase)"
+                     /neighbourhood="10000"
+                     /product="indole"
+                     /protocluster_number="1"
+                     /tool="antismash"
+     proto_core      1883..4879
+                     /aStool="rule-based-clusters"
+                     /tool="antismash"
+                     /cutoff="20000"
+                     /detection_rule="(indsynth or dmat or indole_PTase)"
+                     /neighbourhood="10000"
+                     /product="indole"
+                     /protocluster_number="1"
+     gene            552..1808
+                     /gene="vio A"
+     CDS             552..1808
+                     /codon_start=1
+                     /db_xref="GI:6006346"
+                     /gene="vio_A"
+                     /note="tryptophan 2-monooxygenase; achacin precursor;
+                     Azotobacter chroococcum hydrogenase (DNA); S.lividans gene
+                     for chitinase (DNA)"
+                     /product="Vio A"
+                     /protein_id="BAA84782.1"
+                     /transl_table=11
+                     /translation="MKHSSDICIVGAGISGLTCASHLLDSPACRGLSLRIFDMQQEAGG
+                     RIRSKMLDGKASIELGAGRYSPQLHPHFQSAMQHYSQKSEVYPFTQLKFKSHVQQKLKR
+                     AMNELSPRLKEHGKESFLQFVSRYQGHDSAVGMIRSMGYDALFLPDISAEMAYDIVGKH
+                     PEIQSVTDNDANQWFAAETGFAGLIQGIKAKVKAAGARFSLGYRLLSVRTDGDGYLLQL
+                     AGDDGWKLEHRTRHLILAIPPSAMAGLNVDFPEAWSGARYGSLPLFKGFLTYGEPWWLD
+                     YKLDDQVLIVDNPLRKIYFKGDKYLFFYTDSEMANYWRGCVAEGEDGYLEQIRTHLASA
+                     LGIVRERIPQPLAHVHKYWAHGVEFCRDSDIDHPSALSHRDSGIIACSDAYTEHCGWME
+                     GGLLSAREASRLLLQRIAA"
+     PFAM_domain     576..776
+                     /aSDomain="NAD_binding_8"
+                     /aSTool="fullhmmer"
+                     /database="35.0"
+                     /db_xref="PF13450.9"
+                     /description="NAD(P)-binding Rossmann-like domain"
+                     /detection="hmmscan"
+                     /domain_id="fullhmmer_vio_A_0001"
+                     /evalue="7.10E-10"
+                     /label="vio_A"
+                     /locus_tag="vio_A"
+                     /protein_end="75"
+                     /protein_start="8"
+                     /score="39.1"
+                     /tool="antismash"
+                     /translation="IVGAGISGLTCASHLLDSPACRGLSLRIFDMQQEAGGRIRSKMLD
+                     GKASIELGAGRYSPQLHPHFQS"
+     PFAM_domain     837..1787
+                     /aSDomain="Amino_oxidase"
+                     /aSTool="fullhmmer"
+                     /database="35.0"
+                     /db_xref="PF01593.27"
+                     /db_xref="GO:0016491"
+                     /description="Flavin containing amine oxidoreductase"
+                     /detection="hmmscan"
+                     /domain_id="fullhmmer_vio_A_0002"
+                     /evalue="8.50E-20"
+                     /gene_ontologies="GO:0016491: oxidoreductase activity"
+                     /label="vio_A"
+                     /locus_tag="vio_A"
+                     /protein_end="412"
+                     /protein_start="95"
+                     /score="71.6"
+                     /tool="antismash"
+                     /translation="SHVQQKLKRAMNELSPRLKEHGKESFLQFVSRYQGHDSAVGMIRS
+                     MGYDALFLPDISAEMAYDIVGKHPEIQSVTDNDANQWFAAETGFAGLIQGIKAKVKAAG
+                     ARFSLGYRLLSVRTDGDGYLLQLAGDDGWKLEHRTRHLILAIPPSAMAGLNVDFPEAWS
+                     GARYGSLPLFKGFLTYGEPWWLDYKLDDQVLIVDNPLRKIYFKGDKYLFFYTDSEMANY
+                     WRGCVAEGEDGYLEQIRTHLASALGIVRERIPQPLAHVHKYWAHGVEFCRDSDIDHPSA
+                     LSHRDSGIIACSDAYTEHCGWMEGGLLSAREASRLL"
+     aSDomain        1883..4876
+                     /aSDomain="TIGR04492"
+                     /aSTool="tigrfam"
+                     /description="VioB: iminophenyl-pyruvate dimer synthase
+                     VioB"
+                     /detection="hmmscan"
+                     /domain_id="TIGRFam_vio_B_0001"
+                     /evalue="0.00E+00"
+                     /identifier="TIGR04492"
+                     /label="vio_B"
+                     /locus_tag="vio_B"
+                     /protein_end="998"
+                     /protein_start="0"
+                     /score="1922.2"
+                     /tool="antismash"
+                     /translation="MSILDFPRIHFRGWARVNAPTANRDPHGHIDMASNTVAMAGEPFD
+                     LARHPTEFHRHLRSLGPRFGLDGRADPEGPFSLAEGYNAAGNNHFSWESATVSHVQWDG
+                     GEADRGDGLVGARLALWGHYNDYLRTTFNRARWVDSDPTRRDAAQIYAGQFTISPAGAG
+                     PGTPWLFTADIDDSHGARWTRGGHIAERGGHFLDEEFGLARLFQFSVPKDHPHFLFHPG
+                     PFDSEAWRRLQLALEDDDVLGLTVQYALFNMSTPPQPNSPVFHDMVGVVGLWRRGELAS
+                     YPAGRLLRPRQPGLGDLTLRVNGGRVALNLACAIPFSTRAAQPSAPDRLTPDLGAKLPL
+                     GDLLLRDEDGALLARVPQALYQDYWTNHGIVDLPLLREPRGSLTLSSELAEWREQDWVT
+                     QSDASNLYLEAPDRRHGRFFPESIALRSYFRGEARARPDIPHRIEGMGLVGVESRQDGD
+                     AAEWRLTGLRPGPARIVLDDGAEAIPLRVLPDDWALDDATVEEVDYAFLYRHVMAYYEL
+                     VYPFMSDKVFSLADRCKCETYARLMWQMCDPQNRNKSYYMPSTRELSAPKARLFLKYLA
+                     HVEGQARLQAPPPAGPARIESKAQLAAELRKAVDLELSVMLQYLYAAYSIPNYAQGQQR
+                     VRDGAWTAEQLQLACGSGDRRRDGGIRAALLEIAHEEMIHYLVVNNLLMALGEPFYAGV
+                     PLMGEAARQAFGLDTEFALEPFSESTLARFVRLEWPHFIPAPGKSIADCYAAIRQAFLD
+                     LPDLFGGEAGKRGGEHHLFLNELTNRAHPGYQLEVFDRDSALFGIAFVTDQGEGGALDS
+                     PHYEHSHFQRLREMSARIMAQSAPFEPALPALRNPVLDESPGCQRVADGRARALMALYQ
+                     GVYELMFAMMAQHFAVKPLGSLRRSRLMNAAIDLMTGLLRPLSCALMNLPSGIAGRTAG
+                     PPLPGPVDTRSYDDYALGCRMLARRCERLLEQASMLEPGWLPDAQMELLDFYRRQMLDL
+                     ACGKLSREA"
+     gene            1883..4879
+                     /gene="vio B"
+     CDS             1883..4879
+                     /codon_start=1
+                     /db_xref="GI:6006347"
+                     /gene="vio_B"
+                     /gene_functions="biosynthetic (rule-based-clusters) indole:
+                     indsynth"
+                     /gene_kind="biosynthetic"
+                     /note="polyketide synthase; Actinomadura hibisca polyketide
+                     synthase (DNA); Azotobacter chroococcum hydrogenase (DNA);
+                     Streptomyces coelicolor lipase"
+                     /product="Vio B"
+                     /protein_id="BAA84783.1"
+                     /sec_met_domain="indsynth (E-value: 0.0, bitscore: 1593.1,
+                     seeds: 14, tool: rule-based-clusters)"
+                     /transl_table=11
+                     /translation="MSILDFPRIHFRGWARVNAPTANRDPHGHIDMASNTVAMAGEPFD
+                     LARHPTEFHRHLRSLGPRFGLDGRADPEGPFSLAEGYNAAGNNHFSWESATVSHVQWDG
+                     GEADRGDGLVGARLALWGHYNDYLRTTFNRARWVDSDPTRRDAAQIYAGQFTISPAGAG
+                     PGTPWLFTADIDDSHGARWTRGGHIAERGGHFLDEEFGLARLFQFSVPKDHPHFLFHPG
+                     PFDSEAWRRLQLALEDDDVLGLTVQYALFNMSTPPQPNSPVFHDMVGVVGLWRRGELAS
+                     YPAGRLLRPRQPGLGDLTLRVNGGRVALNLACAIPFSTRAAQPSAPDRLTPDLGAKLPL
+                     GDLLLRDEDGALLARVPQALYQDYWTNHGIVDLPLLREPRGSLTLSSELAEWREQDWVT
+                     QSDASNLYLEAPDRRHGRFFPESIALRSYFRGEARARPDIPHRIEGMGLVGVESRQDGD
+                     AAEWRLTGLRPGPARIVLDDGAEAIPLRVLPDDWALDDATVEEVDYAFLYRHVMAYYEL
+                     VYPFMSDKVFSLADRCKCETYARLMWQMCDPQNRNKSYYMPSTRELSAPKARLFLKYLA
+                     HVEGQARLQAPPPAGPARIESKAQLAAELRKAVDLELSVMLQYLYAAYSIPNYAQGQQR
+                     VRDGAWTAEQLQLACGSGDRRRDGGIRAALLEIAHEEMIHYLVVNNLLMALGEPFYAGV
+                     PLMGEAARQAFGLDTEFALEPFSESTLARFVRLEWPHFIPAPGKSIADCYAAIRQAFLD
+                     LPDLFGGEAGKRGGEHHLFLNELTNRAHPGYQLEVFDRDSALFGIAFVTDQGEGGALDS
+                     PHYEHSHFQRLREMSARIMAQSAPFEPALPALRNPVLDESPGCQRVADGRARALMALYQ
+                     GVYELMFAMMAQHFAVKPLGSLRRSRLMNAAIDLMTGLLRPLSCALMNLPSGIAGRTAG
+                     PPLPGPVDTRSYDDYALGCRMLARRCERLLEQASMLEPGWLPDAQMELLDFYRRQMLDL
+                     ACGKLSREA"
+     PFAM_domain     3695..4363
+                     /aSDomain="Ferritin-like"
+                     /aSTool="fullhmmer"
+                     /database="35.0"
+                     /db_xref="PF12902.10"
+                     /description="Ferritin-like"
+                     /detection="hmmscan"
+                     /domain_id="fullhmmer_vio_B_0003"
+                     /evalue="3.90E-40"
+                     /label="vio_B"
+                     /locus_tag="vio_B"
+                     /protein_end="827"
+                     /protein_start="604"
+                     /score="138.2"
+                     /tool="antismash"
+                     /translation="LRKAVDLELSVMLQYLYAAYSIPNYAQGQQRVRDGAWTAEQLQLA
+                     CGSGDRRRDGGIRAALLEIAHEEMIHYLVVNNLLMALGEPFYAGVPLMGEAARQAFGLD
+                     TEFALEPFSESTLARFVRLEWPHFIPAPGKSIADCYAAIRQAFLDLPDLFGGEAGKRGG
+                     EHHLFLNELTNRAHPGYQLEVFDRDSALFGIAFVTDQGEGGALDSPHYEHSHFQRLREM
+                     S"
+     gene            4881..6170
+                     /gene="vio C"
+     CDS             4881..6170
+                     /codon_start=1
+                     /db_xref="GI:6006348"
+                     /gene="vio_C"
+                     /gene_functions="biosynthetic-additional
+                     (rule-based-clusters) Pyr_redox_2"
+                     /gene_functions="other (smcogs) SMCOG1087: hypothetical
+                     protein"
+                     /gene_kind="biosynthetic-additional"
+                     /note="zeaxanthin epoxidase precursor; Actinomadura hibisca
+                     polyketide synthase (DNA); Cellulomonas biazotea
+                     cellobiaseepoxidase precursor (DNA)"
+                     /product="Vio C"
+                     /protein_id="BAA84784.1"
+                     /sec_met_domain="Pyr_redox_2 (E-value: 2.2e-11, bitscore:
+                     31.6, seeds: 64, tool: rule-based-clusters)"
+                     /transl_table=11
+                     /translation="MKRAIIVGGGLAGGLTAIYLAKRGYEVHVVEKRGDPLRDLSSYVD
+                     VVSSRAIGVSMTVRGIKSVLAAGIPRAELDACGEPIVAMAFSVGGQYRMRELKPLEDFR
+                     PLSLNRAAFQKLLNKYANLAGVRYYFEHKCLDVDLDGKSVLIQGKDGQPQRLQGDMIIG
+                     ADGAHSAVRQAMQSGLRRFEFQQTFFRHGYKTLVLPDAQALGYRKDTLYFFGMDSGGLF
+                     AGRAATIPDGSVSIAVCLPYSGSPSLTTTDEPTMRAFFDRYFGGLPRDARDEMLRQFLA
+                     KPSNDLINVRSSTFHYKGNVLLLGDAAHATAPFLGQGMNMALEDARTFVELLDRHQGDQ
+                     DKAFPEFTELRKVQADAMQDMARANYDVLSCSNPIFFMRARYTRYMHSKFPGLYPPDMA
+                     EKLYFTSEPYDRLQQIQRKQNVWYKIGRVN"
+     PFAM_domain     4890..5873
+                     /aSDomain="FAD_binding_3"
+                     /aSTool="fullhmmer"
+                     /database="35.0"
+                     /db_xref="PF01494.22"
+                     /db_xref="GO:0071949"
+                     /description="FAD binding domain"
+                     /detection="hmmscan"
+                     /domain_id="fullhmmer_vio_C_0004"
+                     /evalue="7.20E-26"
+                     /gene_ontologies="GO:0071949: FAD binding"
+                     /label="vio_C"
+                     /locus_tag="vio_C"
+                     /protein_end="331"
+                     /protein_start="3"
+                     /score="91.4"
+                     /tool="antismash"
+                     /translation="AIIVGGGLAGGLTAIYLAKRGYEVHVVEKRGDPLRDLSSYVDVVS
+                     SRAIGVSMTVRGIKSVLAAGIPRAELDACGEPIVAMAFSVGGQYRMRELKPLEDFRPLS
+                     LNRAAFQKLLNKYANLAGVRYYFEHKCLDVDLDGKSVLIQGKDGQPQRLQGDMIIGADG
+                     AHSAVRQAMQSGLRRFEFQQTFFRHGYKTLVLPDAQALGYRKDTLYFFGMDSGGLFAGR
+                     AATIPDGSVSIAVCLPYSGSPSLTTTDEPTMRAFFDRYFGGLPRDARDEMLRQFLAKPS
+                     NDLINVRSSTFHYKGNVLLLGDAAHATAPFLGQGMNMALEDARTFVE"
+     gene            6170..7291
+                     /gene="vio D"
+     CDS             6170..7291
+                     /codon_start=1
+                     /db_xref="GI:6006349"
+                     /gene="vio_D"
+                     /note="NADH oxidase (noxA-1) oxidoreductase; Azotobacter
+                     chroococcum hydrogenase (DNA);Streptomyces coelicolor
+                     lipase (DNA)"
+                     /product="Vio D"
+                     /protein_id="BAA84785.1"
+                     /transl_table=11
+                     /translation="MKILVIGAGPAGLVFASQLKQARPLWAIDIVEKNDEQEVLGWGVV
+                     LPGRPGQHPANPLSYLDAPERLNPQFLEDFKLVHHNEPSLMSTGVLLCGVERRGLVHAL
+                     RDKCRSQGIAIRFESPLLEHGELPLADYDLVVLANGVNHKTAHFTEALVPQVDYGRNKY
+                     IWYGTSQLFDQMNLVFRTHGKDIFIAHAYKYSDTMSTFIVECSEETYARARLGEMSEEA
+                     SAEYVAKVFQAELGGHGLVSQPGLGWRNFMTLSHDRCHDGKLVLLGDALQSGHFSIGHG
+                     TTMAVVVAQLLVKALCTEDGVPAALKRFEERALPLVQLFRGHADNSRVWFETVEERMHL
+                     SSAEFVQSFDARRKSLPPMPEALAQNLRYALQR"
+ORIGIN
+        1 cggggatcaa tcacagccgg ccggacggct gcctgcagga cggcgacgtg gtgtcgttca
+       61 aggattgggc gcgcgcggcc gactactacc tgaccgcctg ggttggcggc agccatgccg
+      121 accagctgta tctgtggcag ccggcgtctg gggatgggga acgattccgg ctgcggatgg
+      181 gcgcatcgcc gcagtatctg gactggcgcg gactattgcg tttcgccaaa cgccgttgag
+      241 ggattgcttg gcttttgtat ccaattctcc acgtcatgcc ctgacccttg gaacagtatt
+      301 agccacattg tcagacaata tggttgatga atgagtccgg ttgaactaat gtggcttgaa
+      361 attacaaaag cattttattg ttaaaataaa atgtcaaacg attttttgtg cccggattga
+      421 ccgggcatga cgaggaaacg aaaggcagca tcccgattcc aaggcgcgag tgccgtaggt
+      481 tttcgccgcc catgcccgtc cgccgttgcc gcgcggcggg cgtgagttga ctagtcaaaa
+      541 ggacattcgc gatgaagcat tcttccgata tctgcattgt cggcgccggc atcagcggcc
+      601 tgacctgcgc cagccatctg ctcgactcgc ccgcttgccg cggcctgtcg ctgcgcatct
+      661 tcgacatgca gcaggaggcg ggcggccgca tccgctcgaa gatgctggat ggcaaggcgt
+      721 cgatagagct gggcgcgggg cgatactccc cgcagctgca cccgcatttc cagagcgcga
+      781 tgcagcatta cagccagaag agcgaggtgt atccgttcac ccagctgaaa ttcaagagcc
+      841 atgtccagca gaagctgaag cgggcgatga acgagttgtc gcccaggctg aaagagcatg
+      901 gcaaggaatc ctttctccag ttcgtcagcc gctaccaggg ccatgacagc gcggtgggca
+      961 tgatccgctc catgggctac gacgcgctgt tcctgcccga catctcggcc gagatggcct
+     1021 acgacatcgt cggcaagcac ccggaaatcc agagcgtgac cgataacgac gccaaccagt
+     1081 ggttcgcggc ggaaacgggc tttgcgggcc tgatccaggg catcaaggcc aaggtcaagg
+     1141 ctgccggcgc gcgcttcagc ctgggttacc ggctgctgtc ggtgaggacg gacggcgacg
+     1201 gctacctgct gcaactggcc ggcgacgacg gctggaagct ggaacaccgg acccgccatc
+     1261 tgatcctggc cattcctccg tcggcgatgg ccgggctcaa tgtcgacttc cccgaggcgt
+     1321 ggagcggcgc gcgctacggc tcgctgccgc tgttcaaggg tttcctcacc tacggcgagc
+     1381 catggtggct ggactacaag ctggacgacc aggtgctgat cgtcgacaac ccgctgcgca
+     1441 agatctactt caagggcgac aagtacctgt tcttctacac cgacagcgag atggccaatt
+     1501 actggcgcgg ctgcgtggcc gaaggagagg acggctacct ggagcagatc cgcacccatc
+     1561 tggccagcgc gctgggcatc gttcgcgagc gcattcccca gcccctcgcc catgtgcaca
+     1621 agtattgggc gcatggcgtg gagttctgcc gcgacagcga tatcgaccat ccgtccgcgc
+     1681 tcagccaccg cgacagcggc atcatcgcct gttcggacgc ctacaccgag cactgcggct
+     1741 ggatggaggg cggcctgctc agcgcccgcg aagccagccg tctgctgctg cagcgcatcg
+     1801 ccgcgtgaac ggtccggccg ccgcatcgcg tcgccgcccg gttccgggcg gcgcttgtca
+     1861 gccatgaccg ttcgggaaac acatgagcat tctggatttt ccacgcatcc atttccgcgg
+     1921 ctgggcgcgg gtcaacgcgc ccaccgccaa ccgcgatccg cacggccaca tcgacatggc
+     1981 cagcaatacg gtggccatgg caggcgaacc gttcgacctc gcgcgccatc cgaccgagtt
+     2041 ccaccgccac ctgcggtcgc tggggccgcg tttcggcctg gacggccggg ctgacccgga
+     2101 agggccgttc agcctggccg agggctacaa cgcggccggc aacaaccatt tctcctggga
+     2161 gagcgccacc gtcagccacg tgcagtggga tggcggcgaa gcggaccgcg gcgacggcct
+     2221 ggtcggcgcc aggctggcgc tgtgggggca ttacaacgat tacctgcgca ccaccttcaa
+     2281 ccgcgcgcgc tgggtggaca gcgaccccac ccgccgcgac gcggcgcaga tctacgccgg
+     2341 gcagttcacg atcagcccgg ccggcgccgg accgggcacg ccctggctgt tcaccgccga
+     2401 catcgacgac agccacggcg cgcgctggac gcgcggcggc cacatcgccg agcgcggcgg
+     2461 ccatttcctg gacgaggagt tcggcctggc gcggctgttc cagttctcgg tgcccaaaga
+     2521 ccatccgcac ttcctgttcc acccggggcc attcgattcc gaagcctggc gcaggctgca
+     2581 gctggcgctg gaggacgacg acgtgctcgg cctgacggtg cagtacgcgc tgttcaatat
+     2641 gtcgacgccg ccgcaaccca actcgccggt gttccacgac atggtcggcg tggtcggcct
+     2701 gtggcggcgc ggcgaactgg ccagctaccc ggccggccgg ctgctgcgtc cgcgccagcc
+     2761 cgggctgggc gatctgacgc tgcgcgtaaa cggcggccgc gtggcgctga atctggcctg
+     2821 cgccattccg ttctccaccc gggcggcgca gccgtccgcg ccggacaggc tgacgcccga
+     2881 tctcggggcc aagctgccgt tgggcgacct gctgctgcgc gacgaggacg gcgcgttgct
+     2941 ggcgcgggtg ccgcaggcgc tttaccagga ttactggacg aaccacggca tcgtcgacct
+     3001 gccgctgctg cgcgagccca ggggctcgct gacgctgtcc agcgagctgg ccgaatggcg
+     3061 cgagcaggac tgggtcacgc agtccgacgc ctccaatctt tatttggaag cgccggaccg
+     3121 ccgccacggc cgtttctttc cggaaagcat cgcgctgcgc agctatttcc gcggcgaggc
+     3181 ccgcgcgcgc ccggacattc cccaccggat cgaggggatg ggtctggtcg gcgtggagtc
+     3241 gcgccaggac ggcgatgccg ccgaatggcg gctgaccggc ctgcggcccg gcccggcgcg
+     3301 catcgtgctc gacgacggcg cggaggcgat cccgctgcgg gtgctgccgg acgactgggc
+     3361 gttggacgac gcgacggtgg aggaggtcga ttacgccttc ctgtaccggc acgtgatggc
+     3421 ctattacgag ctggtctacc cgttcatgtc cgacaaggtg ttcagcctgg ccgaccgctg
+     3481 caagtgcgag acctacgcca ggctgatgtg gcagatgtgc gatccgcaga accggaacaa
+     3541 gagctactac atgcccagca cccgcgagct gtcggcgccc aaggccaggc tgttcctcaa
+     3601 atacctggcc catgtcgagg gccaggccag gctgcaggcg ccgccgccgg ccgggccggc
+     3661 gcgcatcgag agcaaggccc agctggcggc cgagctgcgc aaggcggtgg atctggagtt
+     3721 gtcggtgatg ctgcagtacc tgtacgccgc ctattccatt cccaattacg cccagggcca
+     3781 gcagcgggtg cgcgacggcg cgtggacggc ggagcagctg cagctggcct gcggcagcgg
+     3841 cgaccggcgc cgcgacggcg gcatccgcgc cgcgctgctg gagatcgccc acgaggagat
+     3901 gatccattac ctggtggtca acaacctgct gatggcgctg ggcgagccgt tctacgccgg
+     3961 cgtgccgctg atgggcgagg cggcgcggca ggcgttcggc ctggacaccg aattcgcgct
+     4021 ggagccgttc tccgagtcga cgctggcgcg cttcgtccgg ctggaatggc cgcacttcat
+     4081 ccctgcgccg ggcaaatcca tcgccgactg ctacgccgcc atccgccagg cctttctcga
+     4141 tctgcccgac ctgttcggcg gcgaggccgg caagcgcggc ggcgagcacc acttgttcct
+     4201 caacgagctg accaaccgcg cccatcccgg ctaccagctg gaggtgttcg atcgcgacag
+     4261 cgcgctgttc ggcatcgcct tcgtcaccga ccagggcgag ggcggggcgc tggactcgcc
+     4321 gcattacgag cattcgcatt tccagcggct gcgggagatg tcggccagga tcatggcgca
+     4381 gtccgcgccg ttcgagccgg cgttgccggc gctgcgcaac ccggtgctgg acgagtcgcc
+     4441 gggctgccag cgcgtggcgg acggacgggc gcgcgcgctg atggcgctgt accagggcgt
+     4501 gtacgagctg atgttcgcga tgatggcgca gcacttcgcg gtcaagccgc tgggcagcct
+     4561 caggcgctcg cggctgatga acgcggcgat cgacctgatg accggcctgc tcaggccgct
+     4621 gtcctgcgcg ctgatgaacc tgccgtcggg catcgccgga cgcaccgccg ggccgccgct
+     4681 gccggggccg gtggataccc gcagctacga cgactacgcg ctgggctgcc ggatgctggc
+     4741 gcggcgctgc gagcgcctgc tggagcaggc gtcgatgctg gagccgggct ggctgcccga
+     4801 cgcgcaaatg gaactgctgg atttctaccg ccggcagatg ctggatttgg cttgtggaaa
+     4861 gctttctaga gaggcctgaa atgaaaagag caatcatagt cggaggcggg ctcgccggcg
+     4921 ggctgaccgc catctacctg gcgaagcgcg gctacgaggt ccacgtggtg gaaaagcgcg
+     4981 gcgacccgct gcgggacctg tcttcctacg tggatgtggt cagctcgcgg gcgataggcg
+     5041 tcagcatgac cgtgcgcggc atcaagtcgg tgctggcggc cggcattccg cgcgcggagc
+     5101 tggacgcctg cggcgaaccc atcgtggcga tggcgttttc cgtcggcggc cagtaccgga
+     5161 tgcgggagct caagccgctg gaggatttcc gcccgctgtc gctgaaccgc gcggcgtttc
+     5221 agaagctgct gaacaagtac gccaacctgg ccggcgtccg ctactacttc gagcacaagt
+     5281 gcctggacgt ggatctggac ggcaagtcgg tgctgatcca gggcaaggac ggccagccgc
+     5341 agcgcttgca gggcgatatg atcatcggcg ccgacggcgc gcactcggcg gtgcggcagg
+     5401 cgatgcagag cgggttgcgc cgcttcgaat tccagcagac tttcttccgc cacggctaca
+     5461 agacgctggt gctgccggac gcgcaggcgc tgggctaccg caaggacacg ctgtatttct
+     5521 tcggcatgga ctccggcggc ctgttcgccg gccgcgccgc caccatcccg gacggcagcg
+     5581 tcagcatcgc ggtctgcctg ccgtacagcg gcagccccag cctgaccacc accgacgagc
+     5641 cgacgatgcg cgcctttttc gaccgttact tcggcggcct gccgcgggac gcgcgcgacg
+     5701 agatgctgcg ccagttcctg gccaagccca gcaacgacct gatcaacgtc cgttccagca
+     5761 ccttccacta caagggcaat gtgctgctgc tgggcgacgc cgcccacgcc accgcgcctt
+     5821 tcctcggcca gggcatgaac atggcgctgg aggacgcgcg caccttcgtc gagctgctgg
+     5881 accgccacca gggcgaccag gacaaggcct ttcccgagtt caccgagctg cgcaaggtgc
+     5941 aggccgacgc gatgcaggac atggcgcgcg ccaactacga cgtgctcagc tgctccaatc
+     6001 ccatcttctt catgcgggcc cgctacaccc gctacatgca tagcaagttt cccggccttt
+     6061 acccgccgga catggcggag aagctgtact tcacgtccga gccgtacgac agactgcagc
+     6121 agatccagag aaaacagaac gtttggtaca agatagggag ggtcaactga tgaagattct
+     6181 ggtcatcggc gcggggccgg ccggcctggt gttcgccagc caactgaaac aggcgcgtcc
+     6241 gctgtgggcg atagacatcg tcgaaaagaa cgacgagcag gaagtgctgg gctggggcgt
+     6301 ggtgctgccc ggccggcccg gccagcatcc ggccaatccg ctgtcctacc tggacgcgcc
+     6361 ggagaggctg aatccgcagt tcctggaaga cttcaagctg gtccaccaca acgagcccag
+     6421 cctgatgagc accggcgtgc tgctgtgcgg cgtggagcgc cgcggcctgg tgcacgcctt
+     6481 gcgcgacaag tgccgctcgc agggcatcgc catccgcttc gaatcgccgc tgctggagca
+     6541 tggcgagctg ccgctggccg actacgacct ggtggtgctg gccaacggcg tcaatcacaa
+     6601 gaccgcccac ttcaccgagg cgctggtgcc gcaggtggac tacggccgca acaagtacat
+     6661 ctggtacggc accagccagc tgttcgacca gatgaacctg gtgttccgca cccacggcaa
+     6721 ggacattttc atcgcccacg cctacaagta ctcggacacg atgagcacct tcatcgtcga
+     6781 gtgcagcgag gagacctatg cccgcgcccg cctgggcgag atgtcggaag aggcgtcggc
+     6841 cgaatacgtc gccaaggtgt tccaggccga gctgggcggc cacggcctgg tgagccagcc
+     6901 cggcctcggc tggcgcaact tcatgaccct gagccacgac cgctgccacg acggcaagct
+     6961 ggtgctgctg ggcgacgcgc tgcagtccgg ccacttctcc atcggccacg gcaccacgat
+     7021 ggcggtggtg gtggcgcagc tgctggtgaa ggcgctgtgc accgaggacg gcgtgccggc
+     7081 cgcgctgaag cgcttcgagg agcgcgcgct gccgctggtc cagctgttcc gcggccatgc
+     7141 cgacaacagc cgggtctggt tcgagacggt ggaggagcgc atgcacctgt ccagcgccga
+     7201 gttcgtgcag agcttcgacg cgcgccgcaa gtcgctgccg ccgatgccgg aagcgctggc
+     7261 gcagaacctg cgctacgcgc tgcaacgctg aggaggccgc atggaaaacc gggaaccgcc
+     7321 gctgctgccg gcgcgctgga gcagcgccta tgtgtcgtac tggagtccga tgctgccgga
+     7381 tgaccagctg acgtccggct actgctggtt cgactacgag cgcgacatct gtcggataga
+     7441 cggcctgttc aatccctggt cggagcgcga caccggctac cggctgtgga tgtccgaggt
+     7501 cggcaacgcc gccagcggcc gcacctggaa gcagaaggtg gcctatggcc gcgagcggac
+     7561 cgccctgggc gagcagctgt gcgagcggcc gctggacgac gagaccggcc cgttcgccga
+     7621 gctgttcctg ccgcgcgacg tgctgcgccg gctgggcgcc cgccatatcg gccgccgcgt
+     7681 ggtgctgggc agggaagccg acggctggcg ctaccagcgt ccgggcaagg ggccgtccac
+     7741 gttgtacctg gacgccgcca gcggtacgcc gctgaggatg gtgaccgggg acgaggcgtc
+     7801 gcgcgcgtcg ctgcgcgatt tccccaacgt cagcgaggcc gagattcccg acgccgtctt
+     7861 cgccgccaag cgctagggcc tggatcgggc agaaaaacgg ggctgctttc gggcagcccc
+     7921 attgtcgtcg ccggacgagg atcaggcggg aacggccagc gccgcgggcg agaaggcgcg
+     7981 gcgctgccag aacggctgct ccggccagcg gttttcctgc cggtaatgcc gccgccgctc
+     8041 cgccagatag cggcggaagc agtcgtcggc gcgcttggcg taggcgcgag ccggcgccag
+     8101 ctcgccgtcc agcatcgcga cgatggccgg cgcggcggcc agcgcgtcgc cgagcgcgca
+     8161 ggcgatgccg gacgaggtca gcgggtccag gcccatcagc gcgtcgccga cgcagatcca
+     8221 gccggggccg gcggcgcggg cgacgcagcc gctgtgcgcg gcgaaggcgt gcgcggcgtc
+     8281 gatccgctgc ggcggcggca gcctctccga cagcagccgg gtggcgcgcc aggcagccag
+     8341 gaaattggcg ggatgttcca gccccagttc ccgggccagg tcctggtccg tcatcagcgt
+     8401 ggccagcgcg cggccgtccg gcagcgccgc ggcataccac cagccgtagg gcgcggactc
+     8461 caccagcgag tagccgctca gttgtccggg gccgtcgacg cggcacgcca gcgcctgcag
+     8521 ccggtccagc ctgcatcggg aaatgcccag cctggcggcc agcggcgagc gcctgccgcc
+     8581 ggcatccacc accacccgcg cctccacttc gccgaggccg cgcactcgca gccgccagcc
+     8641 gccagcggcc ggcgcgatgg catcgacgcc ggattcgccc aacacggcca cgccgcgcgc
+     8701 catcgcctcc tgccgcaacg catggtcgaa gccggcgcga tccagatgcc agccgtggcc
+     8761 gcggccgcgg tacaggaagt ggtccagccg cggcgactcg ctcccccaca gcgagaggtt
+     8821 gccgtggtag cccggctggc cgtccagcgc atggccggcg cccaggcgct cgagcaggcc
+     8881 ggcgacatcc ggcgtcgccg attcgccgat gcggaaaggc tgggccagcg ggcggtccag
+     8941 cagcagcgcc tccacgccct gcgcctgcag cgccagcgcg agggcgctgc cggccgggcc
+     9001 ggcgccggct atcgccaccg ggtagcggct aacgctcatt gcgcggttcc ggccgcggcg
+     9061 gatgggcggg atcgaag
+//

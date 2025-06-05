@@ -1,0 +1,1235 @@
+LOCUS       BGC0000695.1           17214 bp    DNA     linear   UNK 01-JAN-1980
+DEFINITION  Fortimicin biosynthetic gene cluster.
+ACCESSION   BGC0000695
+VERSION     BGC0000695.1
+KEYWORDS    .
+SOURCE      
+  ORGANISM  .
+            .
+COMMENT     ##antiSMASH-Data-START##
+            Version      :: 7.1.0
+            Run date     :: 2025-04-17 23:12:18
+            ##antiSMASH-Data-END##
+FEATURES             Location/Qualifiers
+     protocluster    1..17214
+                     /aStool="rule-based-clusters"
+                     /category="other"
+                     /contig_edge="True"
+                     /core_location="[10000:11131]"
+                     /cutoff="20000"
+                     /detection_rule="(indsynth or dmat or indole_PTase)"
+                     /neighbourhood="10000"
+                     /product="indole"
+                     /protocluster_number="1"
+                     /tool="antismash"
+     proto_core      10001..11131
+                     /aStool="rule-based-clusters"
+                     /tool="antismash"
+                     /cutoff="20000"
+                     /detection_rule="(indsynth or dmat or indole_PTase)"
+                     /neighbourhood="10000"
+                     /product="indole"
+                     /protocluster_number="1"
+     cand_cluster    1..17214
+                     /candidate_cluster_number="1"
+                     /contig_edge="True"
+                     /detection_rules="(indsynth or dmat or indole_PTase)"
+                     /kind="single"
+                     /product="indole"
+                     /protoclusters="1"
+                     /tool="antismash"
+     region          1..17214
+                     /candidate_cluster_numbers="1"
+                     /contig_edge="True"
+                     /product="indole"
+                     /region_number="1"
+                     /rules="(indsynth or dmat or indole_PTase)"
+                     /tool="antismash"
+     gene            complement(442..1230)
+                     /gene="forL"
+     CDS             complement(442..1230)
+                     /codon_start=1
+                     /db_xref="GI:85813924"
+                     /db_xref="GOA:Q2MFZ4"
+                     /db_xref="InterPro:IPR007197"
+                     /db_xref="UniProtKB/TrEMBL:Q2MFZ4"
+                     /gene="forL"
+                     /gene_functions="biosynthetic-additional
+                     (rule-based-clusters) Fer4_12"
+                     /gene_functions="biosynthetic-additional
+                     (rule-based-clusters) PF04055"
+                     /gene_kind="biosynthetic-additional"
+                     /note="ORF MolI14.24c"
+                     /product="putative fortimicin biosynthetic oxidoreductase"
+                     /protein_id="CAF31553.1"
+                     /sec_met_domain="Fer4_12 (E-value: 1.1e-07, bitscore: 22.6,
+                     seeds: 84, tool: rule-based-clusters)"
+                     /sec_met_domain="PF04055 (E-value: 9.4e-19, bitscore: 58.8,
+                     seeds: 518, tool: rule-based-clusters)"
+                     /transl_table=11
+                     /translation="MTAEGVPIWDRFPSHQRLCVNFTLTCNIACDHCIVESSPRRRERL
+                     STDEVRATLSEAWENGRRHVTFSGGEVFLYPREMREVITWARELGYVVDVESNAFWARS
+                     DELAREKLTPFVEAGISGLALSADIYHMKYFPVERPITAARTARSFGLATEIQFCRSHH
+                     RERDEEIIAALAAAGEPYVVLELLDRGRAREMLQVWRGHRVEELSECDDLTTTLHATGD
+                     VYACCQLDIGVDQMKRTPVFLGSIRSADSDAAARDRREQL"
+     PFAM_domain     complement(763..1173)
+                     /aSDomain="Radical_SAM"
+                     /aSTool="fullhmmer"
+                     /database="35.0"
+                     /db_xref="PF04055.24"
+                     /db_xref="GO:0003824"
+                     /db_xref="GO:0051536"
+                     /description="Radical SAM superfamily"
+                     /detection="hmmscan"
+                     /domain_id="fullhmmer_forL_0001"
+                     /evalue="1.10E-15"
+                     /gene_ontologies="GO:0003824: catalytic activity"
+                     /gene_ontologies="GO:0051536: iron-sulfur cluster binding"
+                     /label="forL"
+                     /locus_tag="forL"
+                     /protein_end="156"
+                     /protein_start="19"
+                     /score="58.6"
+                     /tool="antismash"
+                     /translation="VNFTLTCNIACDHCIVESSPRRRERLSTDEVRATLSEAWENGRRH
+                     VTFSGGEVFLYPREMREVITWARELGYVVDVESNAFWARSDELAREKLTPFVEAGISGL
+                     ALSADIYHMKYFPVERPITAARTARSFGLATEI"
+     gene            1583..1882
+                     /gene="fmrR"
+     CDS             1583..1882
+                     /codon_start=1
+                     /db_xref="GI:85813925"
+                     /db_xref="InterPro:IPR010769"
+                     /db_xref="UniProtKB/TrEMBL:Q2MFZ3"
+                     /gene="fmrR"
+                     /note="possible fortimicin production protein; ORF
+                     MolI14.25"
+                     /product="hypothetical protein"
+                     /protein_id="CAF31554.1"
+                     /transl_table=11
+                     /translation="MLVTRDPITADGALLLKTYHCVEDRLSGAGLRLVAEVAANKVVVS
+                     FPLRVMNGRAAVFTRPHNDALSRLADERGWAVRRARLSTEEFVDVDKERGGTEH"
+     PFAM_domain     1601..1837
+                     /aSDomain="FmrO"
+                     /aSTool="fullhmmer"
+                     /database="35.0"
+                     /db_xref="PF07091.14"
+                     /description="Ribosomal RNA methyltransferase (FmrO)"
+                     /detection="hmmscan"
+                     /domain_id="fullhmmer_fmrR_0002"
+                     /evalue="5.10E-24"
+                     /label="fmrR"
+                     /locus_tag="fmrR"
+                     /protein_end="85"
+                     /protein_start="6"
+                     /score="85.3"
+                     /tool="antismash"
+                     /translation="PITADGALLLKTYHCVEDRLSGAGLRLVAEVAANKVVVSFPLRVM
+                     NGRAAVFTRPHNDALSRLADERGWAVRRARLSTE"
+     gene            1920..2801
+                     /gene="fmrO"
+     CDS             1920..2801
+                     /codon_start=1
+                     /db_xref="GI:85813926"
+                     /db_xref="GOA:Q2MFZ2"
+                     /db_xref="InterPro:IPR010769"
+                     /db_xref="UniProtKB/TrEMBL:Q2MFZ2"
+                     /gene="fmrO"
+                     /gene_functions="resistance (resist) ArmA_Rmt (Score:
+                     150.1; E-value: 4.6e-46)"
+                     /gene_kind="resistance"
+                     /note="ORF MolI14.26"
+                     /product="16S rRNA methyltransferase"
+                     /protein_id="CAF31555.1"
+                     /transl_table=11
+                     /translation="MLAAAKYRNLDPAFVERLAQEAAERFRDRGQAVKYAKRKLHQAFG
+                     AFVAGTPAQAVAACVAKIAAGAEPKEAGREAMRAHASSAERVDWLEPFYERVAQWCGPA
+                     SSVIDLACGLNPLAVPWMALAPGATYACYDVDRTMAEALRALGTVYPVRVNAAAVDLVA
+                     AVPAAGVDVALVLKTLTTVEQQRGGAAQRLIAALDCRHVVVSLPRRSLSGRRGYADDPD
+                     AIVQRAVHGTGYEVVDEAAFGTEALYHLVPLAGTAGRPAPAEGAAEPGATRPVVDVPAT
+                     ARPDADRVDPTG"
+     PFAM_domain     1926..2660
+                     /aSDomain="FmrO"
+                     /aSTool="fullhmmer"
+                     /database="35.0"
+                     /db_xref="PF07091.14"
+                     /description="Ribosomal RNA methyltransferase (FmrO)"
+                     /detection="hmmscan"
+                     /domain_id="fullhmmer_fmrO_0003"
+                     /evalue="1.70E-51"
+                     /label="fmrO"
+                     /locus_tag="fmrO"
+                     /protein_end="247"
+                     /protein_start="2"
+                     /score="175.4"
+                     /tool="antismash"
+                     /translation="AAAKYRNLDPAFVERLAQEAAERFRDRGQAVKYAKRKLHQAFGAF
+                     VAGTPAQAVAACVAKIAAGAEPKEAGREAMRAHASSAERVDWLEPFYERVAQWCGPASS
+                     VIDLACGLNPLAVPWMALAPGATYACYDVDRTMAEALRALGTVYPVRVNAAAVDLVAAV
+                     PAAGVDVALVLKTLTTVEQQRGGAAQRLIAALDCRHVVVSLPRRSLSGRRGYADDPDAI
+                     VQRAVHGTGYEVVDEAAFGTEAL"
+     gene            2912..3853
+                     /gene="forT"
+     CDS             2912..3853
+                     /codon_start=1
+                     /db_xref="GI:85813927"
+                     /db_xref="GOA:Q2MFZ1"
+                     /db_xref="InterPro:IPR000878"
+                     /db_xref="InterPro:IPR008189"
+                     /db_xref="UniProtKB/TrEMBL:Q2MFZ1"
+                     /gene="forT"
+                     /gene_functions="biosynthetic-additional
+                     (rule-based-clusters) TP_methylase"
+                     /gene_kind="biosynthetic-additional"
+                     /note="ORF MolI14.27"
+                     /product="putative fortimicin production protein"
+                     /protein_id="CAF31556.1"
+                     /sec_met_domain="TP_methylase (E-value: 3.1e-32, bitscore:
+                     102.6, seeds: 87, tool: rule-based-clusters)"
+                     /transl_table=11
+                     /translation="MASIQLARTTRGGDGVARADGTRQADEAGSGTLYLVPTPIGNPGD
+                     ITLRAIEVLRRVGVVASEDTRHTYRLFQSLEIDARLVSYHDHNEESRSRQLLGLLREGT
+                     DVALVSDAGTPLVNDPGYRLVAAAVEADVPVRPLPGATASVTALIGSGMPNHQFHYVGF
+                     LPRKEAARRAALTALRSTPATLIFFEAPHRIVAMLADLAAVLGDRPAALARNLTKDDEE
+                     FLRGRLNELTARLRVEQVVRGQFTVVVAGSPEAHADEDRALAARLTETLVRHGAEARLI
+                     REVVREVTGLPRNWVYEQVRLATERSGPLGNS"
+     PFAM_domain     3005..3604
+                     /aSDomain="TP_methylase"
+                     /aSTool="fullhmmer"
+                     /database="35.0"
+                     /db_xref="PF00590.23"
+                     /db_xref="GO:0008168"
+                     /description="Tetrapyrrole (Corrin/Porphyrin) Methylases"
+                     /detection="hmmscan"
+                     /domain_id="fullhmmer_forT_0004"
+                     /evalue="1.60E-30"
+                     /gene_ontologies="GO:0008168: methyltransferase activity"
+                     /label="forT"
+                     /locus_tag="forT"
+                     /protein_end="231"
+                     /protein_start="31"
+                     /score="106.7"
+                     /tool="antismash"
+                     /translation="TLYLVPTPIGNPGDITLRAIEVLRRVGVVASEDTRHTYRLFQSLE
+                     IDARLVSYHDHNEESRSRQLLGLLREGTDVALVSDAGTPLVNDPGYRLVAAAVEADVPV
+                     RPLPGATASVTALIGSGMPNHQFHYVGFLPRKEAARRAALTALRSTPATLIFFEAPHRI
+                     VAMLADLAAVLGDRPAALARNLTKDDEEFLRGRLNEL"
+     aSDomain        3008..3811
+                     /aSDomain="TIGR00096"
+                     /aSTool="tigrfam"
+                     /description="TIGR00096: 16S rRNA
+                     (cytidine(1402)-2'-O)-methyltransferase"
+                     /detection="hmmscan"
+                     /domain_id="TIGRFam_forT_0001"
+                     /evalue="1.50E-70"
+                     /identifier="TIGR00096"
+                     /label="forT"
+                     /locus_tag="forT"
+                     /protein_end="300"
+                     /protein_start="32"
+                     /score="235.7"
+                     /tool="antismash"
+                     /translation="LYLVPTPIGNPGDITLRAIEVLRRVGVVASEDTRHTYRLFQSLEI
+                     DARLVSYHDHNEESRSRQLLGLLREGTDVALVSDAGTPLVNDPGYRLVAAAVEADVPVR
+                     PLPGATASVTALIGSGMPNHQFHYVGFLPRKEAARRAALTALRSTPATLIFFEAPHRIV
+                     AMLADLAAVLGDRPAALARNLTKDDEEFLRGRLNELTARLRVEQVVRGQFTVVVAGSPE
+                     AHADEDRALAARLTETLVRHGAEARLIREVVREVTGLPRNWVYEQV"
+     gene            complement(3886..4242)
+                     /gene="fosG"
+     CDS             complement(3886..4242)
+                     /codon_start=1
+                     /db_xref="GI:85813928"
+                     /db_xref="HSSP:O02058"
+                     /db_xref="InterPro:IPR007115"
+                     /db_xref="UniProtKB/TrEMBL:Q2MFZ0"
+                     /gene="fosG"
+                     /note="ORF MolI14.28c"
+                     /product="putative fortimicin production protein"
+                     /protein_id="CAF31557.1"
+                     /transl_table=11
+                     /translation="MEIFREFTFEAAHRLPNVPEGHKCARLHGHSYRVTVHVSGDVDPH
+                     SGWVMDFGDLKKAVEPIRDRLDHHYLNEVPGLENPTSEVLARWIWDRLAGSLPLSAVGV
+                     RETCTSGCVYRGDR"
+     PFAM_domain     complement(3895..4239)
+                     /aSDomain="PTPS"
+                     /aSTool="fullhmmer"
+                     /database="35.0"
+                     /db_xref="PF01242.22"
+                     /description="6-pyruvoyl tetrahydropterin synthase"
+                     /detection="hmmscan"
+                     /domain_id="fullhmmer_fosG_0005"
+                     /evalue="6.00E-38"
+                     /label="fosG"
+                     /locus_tag="fosG"
+                     /protein_end="116"
+                     /protein_start="1"
+                     /score="129.7"
+                     /tool="antismash"
+                     /translation="EIFREFTFEAAHRLPNVPEGHKCARLHGHSYRVTVHVSGDVDPHS
+                     GWVMDFGDLKKAVEPIRDRLDHHYLNEVPGLENPTSEVLARWIWDRLAGSLPLSAVGVR
+                     ETCTSGCVYRG"
+     aSDomain        complement(3961..4239)
+                     /aSDomain="TIGR03367"
+                     /aSTool="tigrfam"
+                     /description="queuosine_QueD: queuosine biosynthesis
+                     protein QueD"
+                     /detection="hmmscan"
+                     /domain_id="TIGRFam_fosG_0002"
+                     /evalue="1.90E-35"
+                     /identifier="TIGR03367"
+                     /label="fosG"
+                     /locus_tag="fosG"
+                     /protein_end="94"
+                     /protein_start="1"
+                     /score="119.1"
+                     /tool="antismash"
+                     /translation="EIFREFTFEAAHRLPNVPEGHKCARLHGHSYRVTVHVSGDVDPHS
+                     GWVMDFGDLKKAVEPIRDRLDHHYLNEVPGLENPTSEVLARWIWDRLA"
+     gene            complement(4242..4880)
+                     /gene="fosF"
+     CDS             complement(4242..4880)
+                     /codon_start=1
+                     /db_xref="GI:85813929"
+                     /db_xref="GOA:Q2MFY9"
+                     /db_xref="InterPro:IPR007197"
+                     /db_xref="UniProtKB/TrEMBL:Q2MFY9"
+                     /gene="fosF"
+                     /note="ORF MolI14.29c"
+                     /product="putative fortimicin production protein"
+                     /protein_id="CAF31558.1"
+                     /transl_table=11
+                     /translation="MYRVKEIFYTLQGEGSHAGRPAVFCRFTSCNLWTGREEERHRAIC
+                     QFCDTDFVGTDGPGGGRFATAAELAAAVVAAWRGEDHPRSRPYVVCTGGEPLLQLDEAA
+                     VRALHDAGFEVAVETNGTRPAPPGIDWVCVSPKAGADLVLTRGDDLKLVYPQPGAEPAR
+                     FEGLDFAHFMLQPMDGPDRVANTEAAVRYCLEHPQWRLSLQTHKYIGIA"
+     aSDomain        complement(4248..4877)
+                     /aSDomain="TIGR04508"
+                     /aSTool="tigrfam"
+                     /description="queE_Cx14CxxC: 7-carboxy-7-deazaguanine
+                     synthase"
+                     /detection="hmmscan"
+                     /domain_id="TIGRFam_fosF_0003"
+                     /evalue="1.10E-107"
+                     /identifier="TIGR04508"
+                     /label="fosF"
+                     /locus_tag="fosF"
+                     /protein_end="211"
+                     /protein_start="1"
+                     /score="356.5"
+                     /tool="antismash"
+                     /translation="YRVKEIFYTLQGEGSHAGRPAVFCRFTSCNLWTGREEERHRAICQ
+                     FCDTDFVGTDGPGGGRFATAAELAAAVVAAWRGEDHPRSRPYVVCTGGEPLLQLDEAAV
+                     RALHDAGFEVAVETNGTRPAPPGIDWVCVSPKAGADLVLTRGDDLKLVYPQPGAEPARF
+                     EGLDFAHFMLQPMDGPDRVANTEAAVRYCLEHPQWRLSLQTHKYIGI"
+     misc_feature    complement(4587..4589)
+                     /note="tta leucine codon, possible target for bldA
+                     regulation"
+                     /tool="antismash"
+     gene            complement(4887..5588)
+                     /gene="fosE"
+     CDS             complement(4887..5588)
+                     /codon_start=1
+                     /db_xref="GI:85813930"
+                     /db_xref="GOA:Q2MFY8"
+                     /db_xref="InterPro:IPR004479"
+                     /db_xref="UniProtKB/TrEMBL:Q2MFY8"
+                     /gene="fosE"
+                     /gene_functions="biosynthetic-additional
+                     (rule-based-clusters) Asn_synthase"
+                     /gene_kind="biosynthetic-additional"
+                     /note="ORF MolI14.30c"
+                     /product="putative fortimicin production protein; unknown
+                     ATP/GTP-binding protein"
+                     /protein_id="CAF31559.1"
+                     /sec_met_domain="Asn_synthase (E-value: 2.1e-11, bitscore:
+                     34.4, seeds: 78, tool: rule-based-clusters)"
+                     /transl_table=11
+                     /translation="MPTEKRKAVVLLSGGLDSATVLAMAVHEGYEAHALSFRYGQRHTV
+                     ELKAAARVAKALGATRHVVADIDLRVFGGSALTDDSLAVPHHASADELGGDIPVTYVPA
+                     RNTIFLSFALAWAETLDASDIFIGVSALDYSGYPDCRPEYIAAYEAMANLATKAGVEGR
+                     QRLRIHTPLIQLTKAETIRRGLELGVDYAWTHSCYDPVDGRACGTCDSCLLRGRGFAEL
+                     GLTDPALSAGG"
+     PFAM_domain     complement(4923..5570)
+                     /aSDomain="QueC"
+                     /aSTool="fullhmmer"
+                     /database="35.0"
+                     /db_xref="PF06508.16"
+                     /description="Queuosine biosynthesis protein QueC"
+                     /detection="hmmscan"
+                     /domain_id="fullhmmer_fosE_0006"
+                     /evalue="6.20E-76"
+                     /label="fosE"
+                     /locus_tag="fosE"
+                     /protein_end="222"
+                     /protein_start="6"
+                     /score="254.7"
+                     /tool="antismash"
+                     /translation="KAVVLLSGGLDSATVLAMAVHEGYEAHALSFRYGQRHTVELKAAA
+                     RVAKALGATRHVVADIDLRVFGGSALTDDSLAVPHHASADELGGDIPVTYVPARNTIFL
+                     SFALAWAETLDASDIFIGVSALDYSGYPDCRPEYIAAYEAMANLATKAGVEGRQRLRIH
+                     TPLIQLTKAETIRRGLELGVDYAWTHSCYDPVDGRACGTCDSCLLRGRGFAEL"
+     aSDomain        complement(4944..5567)
+                     /aSDomain="TIGR00364"
+                     /aSTool="tigrfam"
+                     /description="TIGR00364: queuosine biosynthesis protein
+                     QueC"
+                     /detection="hmmscan"
+                     /domain_id="TIGRFam_fosE_0004"
+                     /evalue="1.50E-63"
+                     /identifier="TIGR00364"
+                     /label="fosE"
+                     /locus_tag="fosE"
+                     /protein_end="215"
+                     /protein_start="7"
+                     /score="212.0"
+                     /tool="antismash"
+                     /translation="AVVLLSGGLDSATVLAMAVHEGYEAHALSFRYGQRHTVELKAAAR
+                     VAKALGATRHVVADIDLRVFGGSALTDDSLAVPHHASADELGGDIPVTYVPARNTIFLS
+                     FALAWAETLDASDIFIGVSALDYSGYPDCRPEYIAAYEAMANLATKAGVEGRQRLRIHT
+                     PLIQLTKAETIRRGLELGVDYAWTHSCYDPVDGRACGTCDSCLLR"
+     gene            complement(5748..6161)
+                     /gene="fosD"
+     CDS             complement(5748..6161)
+                     /codon_start=1
+                     /db_xref="GI:85813931"
+                     /db_xref="UniProtKB/TrEMBL:Q2MFY7"
+                     /gene="fosD"
+                     /note="ORF MolI14.31c"
+                     /product="possible fortimicin production protein"
+                     /protein_id="CAF31560.1"
+                     /transl_table=11
+                     /translation="MAGLRNRDLRHLFPFTYAAPWLRCSGRPWPSHRSPPGPVAVPPGR
+                     AERCLALGGAPASGLSTGVRAKRAEEPRWIPYTPTLVLMALVTTAMAVPLLPNGLPRVP
+                     GNLFTMPATARPFDSAAAARPEPAEQPVKAGKS"
+     gene            complement(6502..6873)
+                     /gene="fosC"
+     CDS             complement(6502..6873)
+                     /codon_start=1
+                     /db_xref="GI:85813932"
+                     /db_xref="GOA:Q2MFY6"
+                     /db_xref="InterPro:IPR001474"
+                     /db_xref="UniProtKB/TrEMBL:Q2MFY6"
+                     /gene="fosC"
+                     /note="ORF MolI14.32c"
+                     /product="possible fortimicin production protein"
+                     /protein_id="CAF31561.1"
+                     /transl_table=11
+                     /translation="MALTKLGRANTPPDRSLETFPIGDSSQEITIDCREFTCRCPITGQ
+                     PDWATIRIDYRPGDRGVETKSLKLYLETFRDEGIFHEHLATKMRDDLVATLEPVFLKVT
+                     VNFNVRGGIALAASSTYER"
+     aSDomain        complement(6508..6822)
+                     /aSDomain="TIGR03139"
+                     /aSTool="tigrfam"
+                     /description="QueF-II: 7-cyano-7-deazaguanine reductase"
+                     /detection="hmmscan"
+                     /domain_id="TIGRFam_fosC_0005"
+                     /evalue="5.60E-35"
+                     /identifier="TIGR03139"
+                     /label="fosC"
+                     /locus_tag="fosC"
+                     /protein_end="122"
+                     /protein_start="17"
+                     /score="117.7"
+                     /tool="antismash"
+                     /translation="ETFPIGDSSQEITIDCREFTCRCPITGQPDWATIRIDYRPGDRGV
+                     ETKSLKLYLETFRDEGIFHEHLATKMRDDLVATLEPVFLKVTVNFNVRGGIALAASSTY
+                     E"
+     PFAM_domain     complement(6514..6738)
+                     /aSDomain="QueF"
+                     /aSTool="fullhmmer"
+                     /database="35.0"
+                     /db_xref="PF14489.9"
+                     /db_xref="GO:0008616"
+                     /db_xref="GO:0033739"
+                     /description="QueF-like protein"
+                     /detection="hmmscan"
+                     /domain_id="fullhmmer_fosC_0007"
+                     /evalue="1.10E-24"
+                     /gene_ontologies="GO:0008616: queuosine biosynthetic
+                     process"
+                     /gene_ontologies="GO:0033739: preQ1 synthase activity"
+                     /label="fosC"
+                     /locus_tag="fosC"
+                     /protein_end="120"
+                     /protein_start="45"
+                     /score="86.5"
+                     /tool="antismash"
+                     /translation="PDWATIRIDYRPGDRGVETKSLKLYLETFRDEGIFHEHLATKMRD
+                     DLVATLEPVFLKVTVNFNVRGGIALAASST"
+     gene            6872..7348
+                     /gene="fmrP"
+     CDS             6872..7348
+                     /codon_start=1
+                     /db_xref="GI:85813933"
+                     /db_xref="GOA:Q2MFY5"
+                     /db_xref="InterPro:IPR010769"
+                     /db_xref="UniProtKB/TrEMBL:Q2MFY5"
+                     /gene="fmrP"
+                     /note="ORF MolI14.33"
+                     /product="16S rRNA methyltransferase; fortimicin
+                     resistance"
+                     /protein_id="CAF31562.1"
+                     /transl_table=11
+                     /translation="MDRSGSASSLPRSSRTLTTASNTSWTSSGSMDSRGWVDHTASSHA
+                     IRSATGRWTRLGRSARRTAPGSPASRLDEPADVTLLLKTPPCLDTQQRGGGWEVIDIVN
+                     SPIVVATLPTRSLGRQSKGMSQNYSQSFELQAKERSCRIHRLEIGNELIYIVQK"
+     PFAM_domain     7091..7336
+                     /aSDomain="FmrO"
+                     /aSTool="fullhmmer"
+                     /database="35.0"
+                     /db_xref="PF07091.14"
+                     /description="Ribosomal RNA methyltransferase (FmrO)"
+                     /detection="hmmscan"
+                     /domain_id="fullhmmer_fmrP_0008"
+                     /evalue="4.70E-23"
+                     /label="fmrP"
+                     /locus_tag="fmrP"
+                     /protein_end="155"
+                     /protein_start="73"
+                     /score="82.2"
+                     /tool="antismash"
+                     /translation="EPADVTLLLKTPPCLDTQQRGGGWEVIDIVNSPIVVATLPTRSLG
+                     RQSKGMSQNYSQSFELQAKERSCRIHRLEIGNELIYI"
+     gene            complement(7689..8498)
+                     /gene="fmrB"
+     CDS             complement(7689..8498)
+                     /codon_start=1
+                     /db_xref="GI:85813934"
+                     /db_xref="GOA:Q2MFY4"
+                     /db_xref="InterPro:IPR010769"
+                     /db_xref="UniProtKB/TrEMBL:Q2MFY4"
+                     /function="fortimicin resistance"
+                     /gene="fmrB"
+                     /gene_functions="resistance (resist) ArmA_Rmt (Score:
+                     125.4; E-value: 1.5e-38)"
+                     /gene_kind="resistance"
+                     /note="ORF MolI14.34c"
+                     /product="16S rRNA methyltransferase"
+                     /protein_id="CAF31563.1"
+                     /transl_table=11
+                     /translation="MTTSPPAVEKVLARLTAAAKYRNVHPETIADLVRWEARATGDPAE
+                     LERLVRARLHKVAALHLLTARPAALRKALDRADLADPGARREWCRQVLAGHFSSAERLP
+                     DLDAFYPALFGLVPPPRTVADLACALNPFSLPWLRDVTDARYVGYDFNSSFVALGNAFL
+                     ARACPESEVRHGDVLSGDHEVTADLALLLKTYHCMEGRRPGAGLALVDRLACRHVVVSF
+                     PTRAMNGRAAVFVPRHLEELAELARDRGWSWSRVTLDTEDLVAIGKG"
+     PFAM_domain     complement(7707..8450)
+                     /aSDomain="FmrO"
+                     /aSTool="fullhmmer"
+                     /database="35.0"
+                     /db_xref="PF07091.14"
+                     /description="Ribosomal RNA methyltransferase (FmrO)"
+                     /detection="hmmscan"
+                     /domain_id="fullhmmer_fmrB_0009"
+                     /evalue="6.60E-74"
+                     /label="fmrB"
+                     /locus_tag="fmrB"
+                     /protein_end="264"
+                     /protein_start="16"
+                     /score="248.8"
+                     /tool="antismash"
+                     /translation="AAAKYRNVHPETIADLVRWEARATGDPAELERLVRARLHKVAALH
+                     LLTARPAALRKALDRADLADPGARREWCRQVLAGHFSSAERLPDLDAFYPALFGLVPPP
+                     RTVADLACALNPFSLPWLRDVTDARYVGYDFNSSFVALGNAFLARACPESEVRHGDVLS
+                     GDHEVTADLALLLKTYHCMEGRRPGAGLALVDRLACRHVVVSFPTRAMNGRAAVFVPRH
+                     LEELAELARDRGWSWSRVTLDTEDLV"
+     gene            complement(8507..9664)
+                     /gene="fosA"
+     CDS             complement(8507..9664)
+                     /codon_start=1
+                     /db_xref="GI:85813935"
+                     /db_xref="GOA:Q2MFY3"
+                     /db_xref="InterPro:IPR002616"
+                     /db_xref="UniProtKB/TrEMBL:Q2MFY3"
+                     /gene="fosA"
+                     /note="ORF MolI14.35c"
+                     /product="possible fortimicin production protein"
+                     /protein_id="CAF31564.1"
+                     /transl_table=11
+                     /translation="MTPADRSAPAGPSLDTAHGSVALPTFLPDATRASVRAVDTLDLAT
+                     VGIQAVMVNAMHLAQRPGLRTVKRAGGLHRFMAWDGVIVSDSGGFQVLSLLRKQGKTGA
+                     IRSGGVTFQESPSAKKIVLTPEKVMEWQFGLRSDVVVALDDCTGPEDSPAEQFASTERT
+                     IRWFRQAREAYDLQCRQRRSAEPPLLVGVVQGGTDPELRQRCVDALVESGAQGFGFGGW
+                     PLSAEGKLEREMFALLARITPQDAPLFALGVGRPEHLVTLCELDTRWVFDCTIPTRDAR
+                     HGRLYAFVPDIADRLLTPDRAFYQNVYILDEENSWKDEPICATCDCPTCRRYSRSYLHH
+                     LFRVKDGLADRLATMHNLRFYTRLLEMIKGGRMARPTLREPIRLG"
+     PFAM_domain     complement(8558..9625)
+                     /aSDomain="TGT"
+                     /aSTool="fullhmmer"
+                     /database="35.0"
+                     /db_xref="PF01702.21"
+                     /db_xref="GO:0006400"
+                     /db_xref="GO:0016763"
+                     /description="Queuine tRNA-ribosyltransferase"
+                     /detection="hmmscan"
+                     /domain_id="fullhmmer_fosA_0010"
+                     /evalue="1.50E-78"
+                     /gene_ontologies="GO:0006400: tRNA modification"
+                     /gene_ontologies="GO:0016763: pentosyltransferase activity"
+                     /label="fosA"
+                     /locus_tag="fosA"
+                     /protein_end="369"
+                     /protein_start="13"
+                     /score="264.6"
+                     /tool="antismash"
+                     /translation="LDTAHGSVALPTFLPDATRASVRAVDTLDLATVGIQAVMVNAMHL
+                     AQRPGLRTVKRAGGLHRFMAWDGVIVSDSGGFQVLSLLRKQGKTGAIRSGGVTFQESPS
+                     AKKIVLTPEKVMEWQFGLRSDVVVALDDCTGPEDSPAEQFASTERTIRWFRQAREAYDL
+                     QCRQRRSAEPPLLVGVVQGGTDPELRQRCVDALVESGAQGFGFGGWPLSAEGKLEREMF
+                     ALLARITPQDAPLFALGVGRPEHLVTLCELDTRWVFDCTIPTRDARHGRLYAFVPDIAD
+                     RLLTPDRAFYQNVYILDEENSWKDEPICATCDCPTCRRYSRSYLHHLFRVKDGLADRLA
+                     TMHNLRFYTRLLEMIK"
+     aSDomain        complement(8558..9628)
+                     /aSDomain="TIGR00449"
+                     /aSTool="tigrfam"
+                     /description="tgt_general: tRNA-guanine family
+                     transglycosylase"
+                     /detection="hmmscan"
+                     /domain_id="TIGRFam_fosA_0006"
+                     /evalue="2.70E-80"
+                     /identifier="TIGR00449"
+                     /label="fosA"
+                     /locus_tag="fosA"
+                     /protein_end="369"
+                     /protein_start="12"
+                     /score="268.0"
+                     /tool="antismash"
+                     /translation="SLDTAHGSVALPTFLPDATRASVRAVDTLDLATVGIQAVMVNAMH
+                     LAQRPGLRTVKRAGGLHRFMAWDGVIVSDSGGFQVLSLLRKQGKTGAIRSGGVTFQESP
+                     SAKKIVLTPEKVMEWQFGLRSDVVVALDDCTGPEDSPAEQFASTERTIRWFRQAREAYD
+                     LQCRQRRSAEPPLLVGVVQGGTDPELRQRCVDALVESGAQGFGFGGWPLSAEGKLEREM
+                     FALLARITPQDAPLFALGVGRPEHLVTLCELDTRWVFDCTIPTRDARHGRLYAFVPDIA
+                     DRLLTPDRAFYQNVYILDEENSWKDEPICATCDCPTCRRYSRSYLHHLFRVKDGLADRL
+                     ATMHNLRFYTRLLEMIK"
+     gene            10001..11131
+                     /gene="MolI14.36"
+     CDS             10001..11131
+                     /codon_start=1
+                     /db_xref="GI:85813936"
+                     /db_xref="UniProtKB/TrEMBL:Q2MFY2"
+                     /gene="MolI14.36"
+                     /gene_functions="biosynthetic (rule-based-clusters) indole:
+                     indole_PTase"
+                     /gene_kind="biosynthetic"
+                     /product="conserved hypothetical protein"
+                     /protein_id="CAF31565.1"
+                     /sec_met_domain="indole_PTase (E-value: 7.7e-100, bitscore:
+                     324.6, seeds: 22, tool: rule-based-clusters)"
+                     /transl_table=11
+                     /translation="MAGLSVSDHLDGQLARLCEVAGADPVEPRNLLAGLLGPVGPRPLY
+                     EPPAWPSGVSDDHTPVEFSIAFNEAEPPTLRILGETLGSPPGPLANLSATRGFLDAQAR
+                     RAGLSTSRLDSVRDLFATDDPQGDFAMWCSLVFRSSRRPEFKVYLNPEVKGVERSPALV
+                     SEALHRLGLGASYRALLDHGVRPGELGRGDRLTFFAVDLHDGPQARVKLYLTHHEAEVW
+                     DVTRAASVVDGVDVAEIEEFCVVAGGGTRRFDGRPLVGSYTFTEGADRPVGYSIYVPIR
+                     SYVTDDQEARDRVAALLVRYGFDTDGLDRAIAAVTPRPLRDGVGLIAHVSLRLGAPRPG
+                     VTVYLSAEAYRVSPPRPRRMPAGRDVSPAPVGRTRP"
+     aSDomain        10019..11038
+                     /aSDomain="TIGR03429"
+                     /aSTool="tigrfam"
+                     /description="arom_pren_DMATS: aromatic prenyltransferase,
+                     DMATS type"
+                     /detection="hmmscan"
+                     /domain_id="TIGRFam_MolI14.36_0007"
+                     /evalue="1.90E-51"
+                     /identifier="TIGR03429"
+                     /label="MolI14.36"
+                     /locus_tag="MolI14.36"
+                     /protein_end="346"
+                     /protein_start="6"
+                     /score="173.5"
+                     /tool="antismash"
+                     /translation="SDHLDGQLARLCEVAGADPVEPRNLLAGLLGPVGPRPLYEPPAWP
+                     SGVSDDHTPVEFSIAFNEAEPPTLRILGETLGSPPGPLANLSATRGFLDAQARRAGLST
+                     SRLDSVRDLFATDDPQGDFAMWCSLVFRSSRRPEFKVYLNPEVKGVERSPALVSEALHR
+                     LGLGASYRALLDHGVRPGELGRGDRLTFFAVDLHDGPQARVKLYLTHHEAEVWDVTRAA
+                     SVVDGVDVAEIEEFCVVAGGGTRRFDGRPLVGSYTFTEGADRPVGYSIYVPIRSYVTDD
+                     QEARDRVAALLVRYGFDTDGLDRAIAAVTPRPLRDGVGLIAHVSLRLGAPRPGVTVYLS
+                     "
+     PFAM_domain     10118..10912
+                     /aSDomain="Trp_DMAT"
+                     /aSTool="fullhmmer"
+                     /database="35.0"
+                     /db_xref="PF11991.11"
+                     /db_xref="GO:0009820"
+                     /db_xref="GO:0016765"
+                     /description="Tryptophan dimethylallyltransferase"
+                     /detection="hmmscan"
+                     /domain_id="fullhmmer_MolI14.36_0011"
+                     /evalue="8.50E-17"
+                     /gene_ontologies="GO:0009820: alkaloid metabolic process"
+                     /gene_ontologies="GO:0016765: transferase activity,
+                     transferring alkyl or aryl (other than methyl) groups"
+                     /label="MolI14.36"
+                     /locus_tag="MolI14.36"
+                     /protein_end="304"
+                     /protein_start="39"
+                     /score="61.7"
+                     /tool="antismash"
+                     /translation="GPRPLYEPPAWPSGVSDDHTPVEFSIAFNEAEPPTLRILGETLGS
+                     PPGPLANLSATRGFLDAQARRAGLSTSRLDSVRDLFATDDPQGDFAMWCSLVFRSSRRP
+                     EFKVYLNPEVKGVERSPALVSEALHRLGLGASYRALLDHGVRPGELGRGDRLTFFAVDL
+                     HDGPQARVKLYLTHHEAEVWDVTRAASVVDGVDVAEIEEFCVVAGGGTRRFDGRPLVGS
+                     YTFTEGADRPVGYSIYVPIRSYVTDDQEARDRVAALLVRYGFD"
+     gene            11156..12571
+                     /gene="MolI14.37"
+     CDS             11156..12571
+                     /NRPS_PKS="Domain: Beta_elim_lyase (47-425). E-value:
+                     2.2e-73. Score: 238.9. Matches aSDomain:
+                     nrpspksdomains_MolI14.37_Beta_elim_lyase.1"
+                     /codon_start=1
+                     /db_xref="GI:85813937"
+                     /db_xref="GOA:Q2MFY1"
+                     /db_xref="InterPro:IPR001597"
+                     /db_xref="InterPro:IPR011166"
+                     /db_xref="UniProtKB/TrEMBL:Q2MFY1"
+                     /gene="MolI14.37"
+                     /product="putative tryptophanase"
+                     /protein_id="CAF31566.1"
+                     /transl_table=11
+                     /translation="MDVRKALPAVPIKVVEPIPFLTAEERRRALADAGYNPFNLRADQI
+                     TIDLLSDSGTGATSAAQEAAAALGDESYAGARSWFRFRDEVRDLTGYPRILPVHQGRAG
+                     ERVLFGSLLKPGQICISNTHFDTTHANVLLAGAEPRDLPCNEAADLDSDEPFKGNIDLA
+                     ALERTLAGPEGHRVGLVLMTITNNGLGAQPVSMANLAAVRELCRRHRVPFFLDAARFAE
+                     NAWLVNQREAGYGTWTPRQIATRAFQLADGCVVSLKKDGLAAIGGFIGLRDDELHAACE
+                     ANLIATEGFSTYGGLAGHDLERLTQGLREVVDPAYLRARAASTERLAELLDDVGVDTVR
+                     PAGIHALYLNAGRLLPHLSPREFPGHALGCQLFLDGGIRCAELGSLYLGEMDEHHRLLT
+                     PAPFELVRLAIPRRVYTDTHLEYVAAVLADIAKDPEQVSGYRIVSAPPLLRHFKVRLEP
+                     LPPAAGRSVASYG"
+     aSDomain        11297..12430
+                     /aSDomain="Beta_elim_lyase"
+                     /aSTool="nrps_pks_domains"
+                     /database="nrpspksdomains.hmm"
+                     /detection="hmmscan"
+                     /domain_id="nrpspksdomains_MolI14.37_Beta_elim_lyase.1"
+                     /evalue="2.20E-73"
+                     /label="MolI14.37_Beta_elim_lyase.1"
+                     /locus_tag="MolI14.37"
+                     /protein_end="425"
+                     /protein_start="47"
+                     /score="238.9"
+                     /tool="antismash"
+                     /translation="DLLSDSGTGATSAAQEAAAALGDESYAGARSWFRFRDEVRDLTGY
+                     PRILPVHQGRAGERVLFGSLLKPGQICISNTHFDTTHANVLLAGAEPRDLPCNEAADLD
+                     SDEPFKGNIDLAALERTLAGPEGHRVGLVLMTITNNGLGAQPVSMANLAAVRELCRRHR
+                     VPFFLDAARFAENAWLVNQREAGYGTWTPRQIATRAFQLADGCVVSLKKDGLAAIGGFI
+                     GLRDDELHAACEANLIATEGFSTYGGLAGHDLERLTQGLREVVDPAYLRARAASTERLA
+                     ELLDDVGVDTVRPAGIHALYLNAGRLLPHLSPREFPGHALGCQLFLDGGIRCAELGSLY
+                     LGEMDEHHRLLTPAPFELVRLAIPRRVYTDTHLEYVAA"
+     PFAM_domain     11297..12430
+                     /aSDomain="Beta_elim_lyase"
+                     /aSTool="fullhmmer"
+                     /database="35.0"
+                     /db_xref="PF01212.24"
+                     /db_xref="GO:0006520"
+                     /db_xref="GO:0016829"
+                     /description="Beta-eliminating lyase"
+                     /detection="hmmscan"
+                     /domain_id="fullhmmer_MolI14.37_0012"
+                     /evalue="7.60E-71"
+                     /gene_ontologies="GO:0006520: amino acid metabolic process"
+                     /gene_ontologies="GO:0016829: lyase activity"
+                     /label="MolI14.37"
+                     /locus_tag="MolI14.37"
+                     /protein_end="425"
+                     /protein_start="47"
+                     /score="238.9"
+                     /tool="antismash"
+                     /translation="DLLSDSGTGATSAAQEAAAALGDESYAGARSWFRFRDEVRDLTGY
+                     PRILPVHQGRAGERVLFGSLLKPGQICISNTHFDTTHANVLLAGAEPRDLPCNEAADLD
+                     SDEPFKGNIDLAALERTLAGPEGHRVGLVLMTITNNGLGAQPVSMANLAAVRELCRRHR
+                     VPFFLDAARFAENAWLVNQREAGYGTWTPRQIATRAFQLADGCVVSLKKDGLAAIGGFI
+                     GLRDDELHAACEANLIATEGFSTYGGLAGHDLERLTQGLREVVDPAYLRARAASTERLA
+                     ELLDDVGVDTVRPAGIHALYLNAGRLLPHLSPREFPGHALGCQLFLDGGIRCAELGSLY
+                     LGEMDEHHRLLTPAPFELVRLAIPRRVYTDTHLEYVAA"
+     CDS_motif       11621..11782
+                     /aSTool="nrps_pks_domains"
+                     /database="abmotifs"
+                     /detection="hmmscan"
+                     /domain_id="nrpspksmotif_MolI14.37_0001"
+                     /evalue="2.70E-02"
+                     /label="C2_LCL_024-062"
+                     /locus_tag="MolI14.37"
+                     /protein_end="209"
+                     /protein_start="155"
+                     /score="6.9"
+                     /tool="antismash"
+                     /translation="FKGNIDLAALERTLAGPEGHRVGLVLMTITNNGLGAQPVSMANLA
+                     AVRELCRRH"
+     CDS             complement(12651..>12782)
+                     /codon_start=1
+                     /db_xref="GI:85813939"
+                     /db_xref="GOA:Q2MFY0"
+                     /db_xref="InterPro:IPR004130"
+                     /db_xref="UniProtKB/TrEMBL:Q2MFY0"
+                     /gene="MolJ05.1c"
+                     /locus_tag="MolJ05.1_1"
+                     /note="ORF Moli14.38c"
+                     /product="MolJ05.1_1"
+                     /protein_id="CAF31567.1"
+                     /transl_table=11
+                     /translation="MRAALELDPAVPLLWCDARDRESSKQALIELVRHALSRLAVGA"
+     gene            complement(12651..13205)
+                     /gene="MolJ05.1c"
+     CDS             complement(12651..13205)
+                     /codon_start=1
+                     /db_xref="GI:85813938"
+                     /db_xref="GOA:Q2MFX9"
+                     /db_xref="InterPro:IPR004130"
+                     /db_xref="UniProtKB/TrEMBL:Q2MFX9"
+                     /gene="MolJ05.1c"
+                     /product="putative GTPase"
+                     /protein_id="CAG38669.1"
+                     /transl_table=11
+                     /translation="MDRKSVKVVVAGGFGTGKTTLVGSVSEIPPLVTEEVLTQASVGVD
+                     DITGIEGKASTTVALDFGRITIAPDVVLYLFGTPGQDRFWFIWDELAQGAVRRDVLVDT
+                     RRLGTSFPAIDYFERRGIPFLVAVNRFHSECLYSADEIRAALELDPAVPLLWCDARDRE
+                     SSKQALIELVRHALSRLAVGA"
+     PFAM_domain     complement(12675..13178)
+                     /aSDomain="ATP_bind_1"
+                     /aSTool="fullhmmer"
+                     /database="35.0"
+                     /db_xref="PF03029.20"
+                     /description="Conserved hypothetical ATP binding protein"
+                     /detection="hmmscan"
+                     /domain_id="fullhmmer_MolJ05.1c_0013"
+                     /evalue="6.00E-23"
+                     /label="MolJ05.1c"
+                     /locus_tag="MolJ05.1c"
+                     /protein_end="177"
+                     /protein_start="9"
+                     /score="82.0"
+                     /tool="antismash"
+                     /translation="VAGGFGTGKTTLVGSVSEIPPLVTEEVLTQASVGVDDITGIEGKA
+                     STTVALDFGRITIAPDVVLYLFGTPGQDRFWFIWDELAQGAVRRDVLVDTRRLGTSFPA
+                     IDYFERRGIPFLVAVNRFHSECLYSADEIRAALELDPAVPLLWCDARDRESSKQALIEL
+                     VRHAL"
+     gene            complement(13250..13615)
+                     /gene="MolJ05.2c"
+     CDS             complement(13250..13615)
+                     /codon_start=1
+                     /db_xref="GI:85813940"
+                     /db_xref="InterPro:IPR007995"
+                     /db_xref="UniProtKB/TrEMBL:Q2MFX8"
+                     /gene="MolJ05.2c"
+                     /product="conserved hypothetical protein"
+                     /protein_id="CAG38670.1"
+                     /transl_table=11
+                     /translation="MTYDVWDGDDEAEAGRLVPLYILVNGRTSPRNSNLDLATQGHRAA
+                     RRHTRLEWEYREIVSRCATWISIAEIGAYLHRPLTITKVMVDVLVEQGFLDIGSPAQQK
+                     IADRRLLETVLAGLQRL"
+     PFAM_domain     complement(13253..13579)
+                     /aSDomain="DUF742"
+                     /aSTool="fullhmmer"
+                     /database="35.0"
+                     /db_xref="PF05331.14"
+                     /description="Protein of unknown function (DUF742)"
+                     /detection="hmmscan"
+                     /domain_id="fullhmmer_MolJ05.2c_0014"
+                     /evalue="7.20E-20"
+                     /label="MolJ05.2c"
+                     /locus_tag="MolJ05.2c"
+                     /protein_end="121"
+                     /protein_start="12"
+                     /score="71.1"
+                     /tool="antismash"
+                     /translation="EAGRLVPLYILVNGRTSPRNSNLDLATQGHRAARRHTRLEWEYRE
+                     IVSRCATWISIAEIGAYLHRPLTITKVMVDVLVEQGFLDIGSPAQQKIADRRLLETVLA
+                     GLQRL"
+     gene            complement(13612..14040)
+                     /gene="MolJ05.3c"
+     CDS             complement(13612..14040)
+                     /codon_start=1
+                     /db_xref="GI:85813941"
+                     /db_xref="InterPro:IPR004942"
+                     /db_xref="UniProtKB/TrEMBL:Q2MFX7"
+                     /gene="MolJ05.3c"
+                     /product="conserved hypothetical protein"
+                     /protein_id="CAG38671.1"
+                     /transl_table=11
+                     /translation="MNSTPQTDLTWILDDLVEVPDVVYALVLSTDGLIVQKSTSLAQDA
+                     GELLAAGASSLYSVAAGMGRRFDSGPVQQVIIEYRGRTLFVAAAGQNARLAVLCEQSVD
+                     MGTVAYEMSRLVTRIGEYLGSEARPPVLPLSESVGLRP"
+     PFAM_domain     complement(13747..14004)
+                     /aSDomain="Robl_LC7"
+                     /aSTool="fullhmmer"
+                     /database="35.0"
+                     /db_xref="PF03259.20"
+                     /description="Roadblock/LC7 domain"
+                     /detection="hmmscan"
+                     /domain_id="fullhmmer_MolJ05.3c_0015"
+                     /evalue="2.30E-16"
+                     /label="MolJ05.3c"
+                     /locus_tag="MolJ05.3c"
+                     /protein_end="98"
+                     /protein_start="12"
+                     /score="59.4"
+                     /tool="antismash"
+                     /translation="LDDLVEVPDVVYALVLSTDGLIVQKSTSLAQDAGELLAAGASSLY
+                     SVAAGMGRRFDSGPVQQVIIEYRGRTLFVAAAGQNARLAVL"
+     gene            complement(14051..15475)
+                     /gene="MolJ05.4c"
+     CDS             complement(14051..15475)
+                     /codon_start=1
+                     /db_xref="GI:85813942"
+                     /db_xref="GOA:Q2MFX6"
+                     /db_xref="InterPro:IPR013587"
+                     /db_xref="UniProtKB/TrEMBL:Q2MFX6"
+                     /gene="MolJ05.4c"
+                     /product="putative signal transduction histidine kinase"
+                     /protein_id="CAG38672.1"
+                     /transl_table=11
+                     /translation="MAHEQADRESRHRDSDEHGQPTASNPRRGQQQSIKRRVIRLVLIP
+                     SVVALVMWLVASGYLIFQGFYNREVANSVRQVSIPAVSALASLQQERRLSVAYLAQPSR
+                     DLQKLLDRRQQTDQRIAAMRSAADSALGNAPQSIATQWRTLAGHLDELPGVRSTIDARS
+                     ADQQGVYDFYNDLLDAATGLFDTQARIVPDVTAAQGGIAATETFRASDLMSRAGSKIDG
+                     AFGSRSFGQQDYLEFVSLVGAYHAGLANVAPHLQADVRRRHEGITAGSPWKQLVAAENA
+                     LIAGGPWRDGMPRALPFTRAEWDTLTQQVSDDLINLTVEQADKVSAETLRTGNGQLLTA
+                     SLGSLLALSVAVAAILWAIRQSRILVDRALSVRLAQLGRDAAAMVDERLPAMMERLRRR
+                     EKVDVAVELPMQDYGSDEIGQVAQVINRSLQAAAGAAVDEAKTRAAGVAMLMGVARRPQ
+                     RPLQRGLEGHRGPADP"
+     PFAM_domain     complement(14507..15217)
+                     /aSDomain="NIT"
+                     /aSTool="fullhmmer"
+                     /database="35.0"
+                     /db_xref="PF08376.13"
+                     /description="Nitrate and nitrite sensing"
+                     /detection="hmmscan"
+                     /domain_id="fullhmmer_MolJ05.4c_0016"
+                     /evalue="6.60E-26"
+                     /label="MolJ05.4c"
+                     /locus_tag="MolJ05.4c"
+                     /protein_end="323"
+                     /protein_start="86"
+                     /score="92.3"
+                     /tool="antismash"
+                     /translation="SLQQERRLSVAYLAQPSRDLQKLLDRRQQTDQRIAAMRSAADSAL
+                     GNAPQSIATQWRTLAGHLDELPGVRSTIDARSADQQGVYDFYNDLLDAATGLFDTQARI
+                     VPDVTAAQGGIAATETFRASDLMSRAGSKIDGAFGSRSFGQQDYLEFVSLVGAYHAGLA
+                     NVAPHLQADVRRRHEGITAGSPWKQLVAAENALIAGGPWRDGMPRALPFTRAEWDTLTQ
+                     QVSDDLINLTVEQAD"
+     gene            complement(16124..17011)
+                     /gene="MolJ05.5c"
+     CDS             complement(16124..17011)
+                     /codon_start=1
+                     /db_xref="GI:85813943"
+                     /db_xref="GOA:Q2MFX5"
+                     /db_xref="InterPro:IPR000182"
+                     /db_xref="UniProtKB/TrEMBL:Q2MFX5"
+                     /gene="MolJ05.5c"
+                     /product="putative acetyltransferase"
+                     /protein_id="CAG38673.1"
+                     /transl_table=11
+                     /translation="MGQPDAQLAQRQQPPAVQLRRERGAGSSASRTTFLPCRSTPIRTT
+                     SEATGATASCCSTRPATARRSPAYTWNPTPPRCDRSPGYLRSGWPPRPAGTSPDCGSTR
+                     RTSRWWPPWVAGGLRMHRAATELRHDLADLPMPAPLPSGWSLATPGWDDDLHDALVAAY
+                     GPGHPDGAWRDDHTAQVRAMFDDGGPVPPLLPASARVVGPDGRSAGHVLSTGPAPDRPY
+                     GWVVNLGVAPRAQGRGLGRALLTHALYGTRTADLPALALQVADGNSARRLYDAAGFRPV
+                     SRMFSVRLRANRGR"
+     PFAM_domain     complement(16178..16402)
+                     /aSDomain="Acetyltransf_1"
+                     /aSTool="fullhmmer"
+                     /database="35.0"
+                     /db_xref="PF00583.28"
+                     /db_xref="GO:0016747"
+                     /description="Acetyltransferase (GNAT) family"
+                     /detection="hmmscan"
+                     /domain_id="fullhmmer_MolJ05.5c_0017"
+                     /evalue="7.60E-08"
+                     /gene_ontologies="GO:0016747: acyltransferase activity,
+                     transferring groups other than amino-acyl groups"
+                     /label="MolJ05.5c"
+                     /locus_tag="MolJ05.5c"
+                     /protein_end="278"
+                     /protein_start="203"
+                     /score="32.7"
+                     /tool="antismash"
+                     /translation="DGRSAGHVLSTGPAPDRPYGWVVNLGVAPRAQGRGLGRALLTHAL
+                     YGTRTADLPALALQVADGNSARRLYDAAGF"
+ORIGIN
+        1 tgggacgtgg ccgccggggc cctgctggtc cgcgaggcgg gcggcgtggt gaccgactgg
+       61 gagggtgacc ccggccgctg gctggacacc gggcacatcg tggccggttc gccgagtgtg
+      121 catgcgacgg tggtgcggca caccagcacg accgcactgc cggtgctccg gcgcccctga
+      181 ccgtgcgcgg ccgggaacgc gacgcgccac cggcagcggt gcggcccgct gccgcaccgc
+      241 cgtccggctc gctcaggatg ccgcggtcgg cgctgcgtgc agcagctcct ccagcgccgc
+      301 cacccgggcc ggatcgctca gggcccgcat gcagaacgtg cagatgttgg agaacgactc
+      361 ctcgtccaac ggctggaaca gtgggtgctg ccggaccatg gtacggaagt agatcggcga
+      421 ttccgggtcg tagaaggcgc gctacagctg ctcccggcgg tcgcgggccg ccgcgtccga
+      481 gtcggcggag cggatcgagc cgaggaagac cggcgtgcgc ttcatctggt cgaccccgat
+      541 gtcgagctgg cagcaggcgt agacgtcgcc ggtggcgtgg agcgtggtgg tgaggtcatc
+      601 gcactccgac agctcctcga cccggtgccc gcgccacacc tgcagcatct cccgggcgcg
+      661 cccccggtcc agcagctcga gcaccacgta gggctcaccg gccgcggcga gtgcggcgat
+      721 gatctcctcg tcgcgttcgc ggtgatgcga gcggcagaac tgaatctccg tcgccagtcc
+      781 gaacgaccgc gcggtacggg ccgcggtgat cggccgctcc accgggaagt acttcatgtg
+      841 gtagatgtcg gcgctcaaag cgagaccgga gatgccggcc tccacaaatg gcgtgagctt
+      901 ctcccgcgcc aattcgtccg accgtgccca aaatgcgttg gactcgacat cgacgacgta
+      961 tcccagctcc cgtgcccacg tgatcacctc gcgcatctcg cggggataca gaaacacttc
+     1021 accgccgctg aacgtcacat gccggcggcc gttttcccat gcctcggaaa gggtcgcccg
+     1081 gacttcgtcc gtgctaaggc gctcccggcg ccgggggctt gactcgacga tgcagtggtc
+     1141 gcaggcgatg ttgcaggtca gggtgaagtt gacacacagg cgctggtggc tggggaagcg
+     1201 gtcccagatc ggcacaccct cggcggtcac agcggtctcc tttgcgtaat tcgcggagcc
+     1261 tggtgggtca ttctccgaaa gcggtggccg gaaattcgcg gctgccggct cggctcggct
+     1321 cgtttcgggg acggcccgac tcgcccccgc cgctcgggcg ggtcctcata tcgtctcgtg
+     1381 gcgacgcgcc cgtgtccatg tccggtcgta tttcctgtcg gaaattctcg atgacgtcaa
+     1441 ccgacgtgat cgccggtccg gcgggctggc ggggccactt tgctatgccg tacgtcggct
+     1501 acgacttcaa ccgggcactc gcggggcgac cggcgcgttt gcggagcgga tcgaccacgc
+     1561 ggccgaggtc cgccactgtg acatgctggt cacacgggac ccgatcaccg ccgacggggc
+     1621 gctgctgctc aagacgtacc attgcgtgga ggaccggctg tccggcgcgg ggctgcgcct
+     1681 cgtcgccgag gtcgcggcca acaaggtggt ggtgtcgttc ccgctgcgcg tcatgaatgg
+     1741 ccgggccgcg gtgttcaccc gcccccacaa cgacgcgctg tcgcgcctcg ccgacgagcg
+     1801 ggggtgggcg gtgcgccggg cccggctgag caccgaggag ttcgtggacg tcgacaagga
+     1861 gcgcggtggc acggagcact gagacgcggg tagacctggc cgctgaggtg gcccgacagg
+     1921 tgctcgccgc ggcgaagtac cgcaacctgg acccggcgtt cgtcgagcgc ctggcgcagg
+     1981 aggcggcgga gcgattccgc gaccgcggcc aagcggtcaa gtacgccaaa cggaagctgc
+     2041 accaggcatt cggcgcattc gtcgcgggca cgccggcgca ggcggtcgcc gcctgcgtcg
+     2101 cgaagatcgc cgccggagcg gagccgaagg aggcgggccg ggaggcgatg cgggcacacg
+     2161 cctcctcggc ggaacgggtc gactggctgg agccgttcta cgagcgcgtc gcccagtggt
+     2221 gcggcccggc atcctccgtg atcgacctgg cctgcggcct caacccgctg gccgtgccgt
+     2281 ggatggcgct cgctcccggc gccacctacg cctgctacga cgtggaccgg accatggccg
+     2341 aggcgttgcg cgctctgggc acggtttacc cggtccgggt caacgccgcc gccgtcgacc
+     2401 tggtcgcggc ggtgccggcg gcgggggtcg acgtcgcgct cgtgctcaag accctcacca
+     2461 ccgtggagca gcagcgcggc ggtgccgcgc agcggctcat agccgcgctc gactgccgtc
+     2521 acgtcgtggt gagcctgccc cggcgcagcc tgtccgggcg gcgcgggtac gccgacgacc
+     2581 ccgacgcgat cgtccaacgg gcggttcacg gtaccggata cgaggtcgtc gacgaggcgg
+     2641 cgttcggcac cgaggcgctg taccacctcg tgccgttggc cggtaccgcc ggacgccccg
+     2701 ctccggcgga gggcgcggcg gagccgggcg ccacccgtcc ggtcgtcgac gtgccggcca
+     2761 ccgcgcgacc cgacgccgat cgggtggacc cgacggggta ggcgggcccg gcaggccgtc
+     2821 ctcaccctcg tgggcgccgg cggcggccgg cctgaatcca ggaccgccgg gtcctgaggg
+     2881 ccgccgacgg gtacccggac ggcccctgcc ggtggcttcg atacagttgg cccggacgac
+     2941 acgggggggc gacggggtgg caagggcgga cggaacgcgg caggcagacg aggccggttc
+     3001 cggcaccctc tacctggtgc ccacccccat cggcaacccc ggggacatca ctctccgggc
+     3061 catcgaggtg ctgcgccggg tcggcgtcgt ggcctcggaa gacacgcggc acacctaccg
+     3121 gctgttccag tccctggaga tcgacgcccg cctggtgagc taccacgacc acaacgagga
+     3181 gtcccgcagc cggcagttgc tgggtctgct ccgggagggc acggacgtcg cgctcgtctc
+     3241 cgacgccggg actcctctgg tcaacgatcc gggctaccgg ctggtagcgg ctgcggtcga
+     3301 ggccgacgtg ccggtccggc cgctgccggg cgcgaccgcc tcggtgaccg cgctgatcgg
+     3361 ttccgggatg cccaaccacc agttccacta cgtcgggttc ctgccccgga aggaggcggc
+     3421 gcgccgggct gcgctgaccg ccctgcggtc gacaccggcc acgctgatct tcttcgaggc
+     3481 accccaccgg atcgtcgcga tgttggccga cctcgccgcg gtgctcggtg accggccggc
+     3541 ggcgctggcc cgcaacctga ccaaggacga cgaggagttc ctccgcggcc ggctcaacga
+     3601 actgaccgcc cggctccgtg tggagcaggt ggtccggggg cagttcacgg tggtcgtcgc
+     3661 cggttccccc gaggcgcatg cggacgagga ccgcgccctg gccgcgcgcc tcaccgagac
+     3721 gctggtgcgc cacggtgccg aggcccggct aatccgcgag gtggtccggg aggtgaccgg
+     3781 gctaccgcgc aactgggtgt acgagcaggt gcggctggcc accgaacggt cgggtcccct
+     3841 cgggaacagc tgacctgccc gaggccgccc tgccgcccga acgggtcagc ggtcgccgcg
+     3901 gtagacgcag ccagaggtgc aggtctcccg gactcccacc gccgacagcg gcagcgaccc
+     3961 ggccagccgg tcccagatcc agcgggccag cacttcgctg gtcgggttct ccagccccgg
+     4021 cacctcgttc aggtagtggt ggtcgagccg gtcgcggatc ggctcgaccg ccttcttgag
+     4081 gtcgccgaag tccatcaccc agccgctgtg cgggtcgacg tcgccgctga cgtgcaccgt
+     4141 cacccggtac gagtgaccgt gcagccgggc gcacttgtgc ccctcgggca cgttcggcag
+     4201 ccggtgcgcg gcctcgaagg tgaactcccg gaagatctcc atcaggcgat tcctatgtac
+     4261 ttatgggtct gcaggctcaa tcgccactgc gggtgctcca ggcagtaccg caccgcggct
+     4321 tcggtgttgg cgacccggtc ggggccgtcc atcggctgca gcatgaagtg cgcgaagtcc
+     4381 aggccctcga agcgggccgg ctcggcaccc ggctgcgggt agacgagctt caggtcgtcg
+     4441 ccacgggtga gcaccaggtc cgcgcccgcc ttggggctga cgcagaccca gtcgatgccg
+     4501 ggcggcgcgg ggcgggtgcc gttggtctcc accgcgacct cgaagcccgc gtcgtgcagg
+     4561 gcccgtacgg ccgcctcgtc gagttgtaac agtggctcgc cgccggtgca caccacgtat
+     4621 gggcggctgc gcgggtggtc ctcgccccgc caggcggcga cgaccgctgc ggccagctcg
+     4681 gctgcggtgg cgaagcggcc cccgccgggg ccgtccgtgc cgacgaagtc ggtgtcgcag
+     4741 aactggcaga tcgcccggtg ccgctcctcc tcccgcccgg tccagaggtt gcagctcgtg
+     4801 aagcggcaga acaccgccgg tcggccggcg tggctgccct caccctgcag ggtgtagaag
+     4861 atctccttga cccggtacac ggggcgtcac ccgccagcgg acagggcggg gtcggtcagc
+     4921 ccgagttcgg cgaagccgcg cccccgcagc aggcaggagt cgcaggtgcc gcaggcccgg
+     4981 ccgtcgaccg ggtcgtaaca gctgtgcgtc caggcgtagt cgacgcccag ctccagcccc
+     5041 cggcggatgg tctcggcctt ggtcagctgg atcagcgggg tgtggatgcg cagccgctgc
+     5101 cgcccctcga caccggcctt ggtggccagg ttcgccatcg cctcgtaggc ggcgatgtac
+     5161 tccgggcggc agtccgggta gccgctgtag tcgagcgcgc tcaccccgat gaagatgtcg
+     5221 gacgcgtcga gggtctccgc ccaggccaga gcgaacgaca ggaagatcgt gttgcgggcc
+     5281 ggcacgtagg tgaccgggat gtcgccgccc aactcgtcgg cgctggcgtg gtgcgggacg
+     5341 gcgagcgagt cgtcggtcag cgccgagccc ccgaagacgc gcaggtcgat gtcggcgacg
+     5401 acgtgccggg tcgcgccgag cgccttggcc acccgggcgg cggccttcag ctcgacggtg
+     5461 tgccgctggc cgtagcggaa gctcagggcg tgggcctcgt acccctcgtg caccgccatg
+     5521 gcgagcaccg tggcggagtc gagcccgccg ctgagcagca ccacagcctt gcgcttctcc
+     5581 gtcggcatgc gccaacaccc cccttcacct cgccggcacg gcgtcgtgcc ggcggttaag
+     5641 cctactcatg gttcaggtga aggccggccg agggcgacgg gctgcggtgg gcgacacacc
+     5701 gggtcggccg ggggcgacgg tggccggacg ccaccgccgc ccccgggtca ggacttgccg
+     5761 gccttgacgg gctgctccgc cggctcgggt cgggccgccg ctgccgaatc gaacggcctg
+     5821 gcggtcgccg gcatggtaaa gaggttcccc gggacccggg gcaggccgtt gggcagcagc
+     5881 ggcaccgcca tggccgtggt gacgagggcc atcagcacca aggtcggagt gtacggaatc
+     5941 catctgggtt cctcggctct tttggcacgg acgccggtag agaggccgga agccggcgcc
+     6001 ccgccaagtg cgaggcaccg ctccgcccgg ccgggcggga cggcgaccgg ccctggtggt
+     6061 gagcggtgcg acggccaggg acggccggag caccgcagcc agggcgcggc ataggtgaac
+     6121 ggaaagaggt gtcgcaggtc ccggttgcgc agaccagcca ccgctcgcgg cgtatcaccc
+     6181 cctggccggt gcccgaaccc gccaacaccg cgcgacggcg gcagtgcgga acagcgttta
+     6241 cgagacgcgg cacgacgatt gtctcgtgat gcctaccgcc accccccgac gtgttacgcg
+     6301 gactgctggc gcctcagcgc ggccaggccg gaatgccgga gcgtgcacta ggcagggcgc
+     6361 tatgtgtccg gagtgcatct cacaaagcgt gtggagggct ggatgcgggc accagcctga
+     6421 ccgcggacgg aggacgacgg gaacggcgac ggtcagtggt tactgggccg ccgccgtctg
+     6481 tccgggtcgt atcggccggg gtcagcgctc gtacgtgctc gacgcggcga gcgcgatgcc
+     6541 gccccggacg ttgaagttga ccgtgacctt caggaagacc ggctcgagag tggccaccag
+     6601 gtcgtcacgc atcttcgtcg ccaggtgctc gtggaagatc ccctcgtccc ggaaggtctc
+     6661 caggtagagc ttgagactct tcgtctccac tccccggtcc ccggggcggt agtcgatccg
+     6721 gatcgtcgcc cagtccggct gcccggtgat ggggcagcgg caggtgaact cccggcagtc
+     6781 gatggtgatc tcctgcgagc tgtcgccgat cgggaaggtt tcgagggatc ggtcgggcgg
+     6841 ggtgttcgcc cgaccgagct tcgtcagagc catggaccga tcaggctccg cttcgtcgct
+     6901 ccccagatcg tctcggacct tgaccaccgc atccaacacg tcctggacgt cttccggctc
+     6961 catggacagc agggggtggg tggatcatac cgcctcgtcc catgctatcc gctccgcgac
+     7021 cgggaggtgg acgcggttgg ggagatccgc tcgccgtacc gctcccggat cgccggccag
+     7081 tcgccttgac gagccggccg acgtcacgct attgctcaag acgcccccct gtctggacac
+     7141 tcaacaacgc ggtggcggat gggaagttat tgacattgtc aactcaccaa ttgttgtggc
+     7201 aaccctcccg accaggtcgc ttgggcggca atcgaagggc atgtcgcaga actactcaca
+     7261 gagttttgag ttgcaggcca aagagcggtc gtgccgaatt caccgactgg agatcggcaa
+     7321 cgagctgatt tacatcgtcc aaaaatagct ctccaccgtc ttcctcgacc cggcccgcaa
+     7381 ggccgggctg cgcctcttcg ccgggctgaa ggccgtccgg gtgctccgcc gggacgccac
+     7441 caccgtggac ggtgtcggcc ccggcccctt ctccaccgcc gcgatcaccg actactacac
+     7501 cgccgacgac gcgcccggcg ggctcggcgg cctgatcatc gagtcccagc cggaggaggc
+     7561 cctccggctg cgccccgacg agcagatcat tcggctcgaa cccgggagga aaccacggcg
+     7621 atcgtcgagc gcctctggga ggactgaccg gcgaccccgg cgggggccgg cccggccctc
+     7681 cgccggcgtc agcccttgcc gatcgccacc aggtcctcgg tgtcgagcgt gacccgcgac
+     7741 cagctccaac cccggtcgcg ggccagctcg gccagctcct ccaggtgccg ggggacgaag
+     7801 accgccgccc ggccgttcat ggcgcgggtc gggaacgaca ccaccacgtg ccggcacgcc
+     7861 agccggtcga cgagcgccag gcccgcaccg ggcctgcgtc cctccatgca gtggtacgtc
+     7921 ttcagcagca gcgccaggtc cgcggtcacc tcgtggtcgc cgctgagcac gtccccgtgc
+     7981 cggacctcgc tctcggggca ggcgcgggcg aggaaggcgt tgcccagcgc gacgaacgac
+     8041 gagttgaagt cgtagccgac gtaccgggcg tcggtcacgt cccgcagcca cggcaggctg
+     8101 aacgggttca gcgcgcaggc gaggtcggcc accgtacgcg gcggcggcac cagcccgaac
+     8161 agggccgggt agaaggcgtc caggtcgggc aggcgctcgg ccgaggagaa gtgaccggcc
+     8221 agcacctgcc ggcaccactc ccgccgggcc cccgggtcgg cgaggtcggc ccggtccagc
+     8281 gccttgcgca gcgcggcggg ccgcgcggtg agcaggtgca gggcggccac cttgtgcagc
+     8341 cgggcccgga ccaggcgctc cagttcggcc gggtcaccgg tggcccgcgc ctcccatcgg
+     8401 accaggtcgg cgatggtctc cgggtgcacg ttccggtact tggcggcggc ggtgagccgg
+     8461 gcgaggacct tctcgacggc gggcggggac gtcgtcaccg gtcgcctcac cccagccgga
+     8521 tcggctcgcg cagggtcggc cgggccatcc gaccgccctt gatcatctcc aggaggcggg
+     8581 tgtagaagcg caggttgtgc atggtcgcga gccggtccgc gaggccgtcc ttcacccgga
+     8641 acaggtggtg caggtagcta cggctgtacc gacggcaggt cggacagtcg caggtcgcgc
+     8701 agatcggctc gtccttccag gagttctcct cgtccaggat gtagacgttc tggtagaagg
+     8761 cccggtccgg cgtcagcagc cggtcggcga tgtccggcac gaacgcgtag agccggccgt
+     8821 gccgggcgtc ccgggtcggg atggtgcagt cgaagaccca ccgggtgtcc agctcgcaga
+     8881 gcgtgaccag gtgctccggg cggcccaccc caagggcgaa cagcggcgcg tcctgcgggg
+     8941 tgatccgggc gagcagcgcg aacatctccc gttccagctt cccctcggcg ctgagcggcc
+     9001 agccgccgaa cccgaacccc tgcgcccccg actcgaccag cgcgtccacg cagcgttgcc
+     9061 gcagctccgg gtcggtgccg ccctgcacca ccccgaccag cagcggcggt tccgccgagc
+     9121 gtcgctggcg gcactggagg tcgtacgcct cccgcgcctg gcggaaccag cggatggtcc
+     9181 gctcggtcga ggcgaactgc tcggccgggg agtcctccgg gccggtgcag tcgtccaggg
+     9241 cgaccaccac gtcggagcgg agaccgaact gccactccat gaccttctcc ggggtgagca
+     9301 cgatcttctt cgcgctcggc gactcctgga aggtcacccc gccggaccgg atcgccccgg
+     9361 tcttgccctg cttacggagc agggaaagca cctggaaccc gccggaatcg gagacgatca
+     9421 caccgtccca ggccatgaag cggtgcaggc cgccggcccg cttgaccgta cgcaaccccg
+     9481 ggcgctgggc caggtgcatc gcgttgacca tgaccgcctg gatccccacc gtggccaggt
+     9541 ccagcgtgtc gaccgcccgg accgaggccc gggtggcgtc gggaaggaag gtcggcaggg
+     9601 ccaccgatcc gtgcgcggtg tccagcgacg ggcccgccgg ggcggatcgg tccgcgggcg
+     9661 tcatgggatg gcagctcctc ggcaggggcg ggatggacgc ttcaggatac ttgtccgggc
+     9721 ggcgcgggcc ccaccgccgg tcgggctgcg ccgggccgcc gcggccggcg acttcctgct
+     9781 gccgcggtga tccgaggggg cgcgaccggt gcccgtccga gcggacggtg ccgcctcggt
+     9841 gcccgaagga tgtctgccga tgggaattgt tacctacggt ggccttctcc ggccttccgt
+     9901 ccgctcatgt agtgacagac cgtgatcgat gttgaccttt ttgcgacatg atcactaaag
+     9961 tctcgttttt ccgggcctga atcgccgagg gggagaatga atggccggct tgtccgtctc
+    10021 tgaccacctg gacggtcagt tggcgcgcct gtgcgaggtt gccggggccg atcctgtcga
+    10081 acctcggaac ctgttggcgg gcctgctcgg ccccgtcggc ccgcgtccac tgtacgaacc
+    10141 gccggcctgg ccgtccggcg tctccgacga ccatacgccg gtcgagttct ccatcgcctt
+    10201 caacgaggcg gagcccccga cgttgcggat cctgggtgag acgctgggat cgccgcccgg
+    10261 cccgctggcc aacctgtccg ccacgcgcgg cttcctcgac gcgcaggccc gccgggccgg
+    10321 cctgtcgacg tcccggctgg actcggtgcg ggatctgttc gccaccgatg atccgcaggg
+    10381 cgacttcgcc atgtggtgct cgctggtctt ccgcagcagc cggcgacccg agttcaaggt
+    10441 ctacctcaac ccggaggtca agggggtcga gcggtcgccc gccctggtgt ccgaggccct
+    10501 gcaccggctc gggctcggcg cgtcgtaccg ggcgctgctc gaccacggcg tccggccggg
+    10561 ggagctgggc cgcggcgacc ggctgacgtt cttcgccgtc gatctgcacg acgggccgca
+    10621 ggcccgggtc aagctctacc tgacccacca cgaggccgag gtctgggacg tgacgcgggc
+    10681 ggccagcgtg gtcgacggcg tcgacgtggc ggagatcgag gagttctgcg tggtggccgg
+    10741 cggcggcacg cgccgcttcg acggccgccc gctcgtgggc agctacacct tcacggaggg
+    10801 cgccgaccgg ccggtcggct acagcatcta cgtgcccatc cgcagctacg tcaccgacga
+    10861 ccaggaggcc cgcgaccggg tcgcggcgtt gctggtccgc tacgggttcg acaccgacgg
+    10921 gctggaccgg gcgatcgccg ccgtgacgcc ccggccgctc cgcgacggcg tcggactgat
+    10981 cgcgcacgtc tcgctgcggc tgggcgcgcc ccggccgggt gtgaccgtct acctgtcggc
+    11041 cgaggcgtac cgggtgagcc cgccgcgtcc gcggcggatg cccgccggcc gcgacgtgtc
+    11101 gccggctccg gtcggccgta cccgaccctg acccccgcga ggagcgagtt gcccgatgga
+    11161 cgtgcgaaag gccctgcccg ccgtaccgat caaggtcgtc gaaccgatcc ccttcctcac
+    11221 cgcggaggaa cgccggcggg cgctcgcgga tgccggatac aacccgttca acctgcgcgc
+    11281 cgaccagatc accatcgacc tgctgtccga ttccggcacc ggcgcgacgt cggcggcgca
+    11341 ggaggcggcc gccgcgctgg gcgacgagtc gtacgccggc gcgcgatcgt ggttccggtt
+    11401 ccgggacgag gtgcgcgacc tcaccggata cccgcggatc ctgccggtcc accagggccg
+    11461 ggccggcgag cgggtcctgt tcggcagcct gctgaagccc ggccagatct gcatcagcaa
+    11521 cacccacttc gacaccaccc acgcgaacgt cctgctcgcc ggggcggaac cacgggacct
+    11581 cccgtgcaac gaggcggccg acctcgacag cgacgaaccg ttcaagggca acatcgacct
+    11641 ggccgcgctc gaacgcaccc ttgccgggcc cgaggggcac cgggtcggcc tggtgctgat
+    11701 gaccatcacc aacaacggcc tcggcgcgca gccggtctcc atggccaacc tcgcggccgt
+    11761 acgggagctg tgccggcgcc accgcgtgcc gttcttcctg gacgcggcgc gcttcgccga
+    11821 gaacgcctgg ctggtcaacc agcgggaagc gggctacggg acgtggaccc cgcggcagat
+    11881 cgccacccgc gcgttccagc tcgccgacgg ctgcgtggtg agcctgaaga aggacggcct
+    11941 ggcggccatc ggcgggttca tcgggctccg cgacgacgag ttgcacgccg cgtgcgaggc
+    12001 gaacctgatc gcgaccgagg gattctccac ctacggcggg ctcgccggcc acgacctcga
+    12061 acggctcacc caggggctgc gcgaggtggt cgatcccgcg tacctgcgcg cccgtgccgc
+    12121 gtccaccgaa cggctggccg agctgctcga cgacgtgggc gtcgacaccg tccgaccggc
+    12181 gggcatccac gccctgtacc tcaacgccgg ccggctgctg ccgcacctgt ccccgcggga
+    12241 gttccccggg cacgccctgg gctgccagct cttcctcgac ggcgggatcc gctgcgccga
+    12301 gctgggatcg ctctacctgg gcgagatgga cgagcaccac cggctgctca ctcccgctcc
+    12361 cttcgagctg gtgcggctgg cgatcccgcg ccgggtctac accgacacgc acctggagta
+    12421 cgtggccgcc gtcctcgccg acatcgcgaa ggaccccgag caggtcagcg ggtaccggat
+    12481 cgtctcggcg ccgcccctgc tgcgccactt caaggtgcgg ttggagccgc tgccgccggc
+    12541 ggcgggcagg tccgtggcca gctacggctg agcgccacga cgtccccggc tccccgcgcc
+    12601 accgtcggcg cagcggagcc ggggacgtcc ccgtgcgggc ccccgcctcg tcaggcgccg
+    12661 accgccaggc gcgacagggc gtgccggacc agctcgatca gcgcctgctt gctggactcc
+    12721 cggtcccggg cgtcgcacca gagcagcggt acggccgggt ccagctccag cgccgcccgg
+    12781 atctcgtcgg cgctgtacag gcactcgctg tggaaccggt tgacggcgac caggaagggg
+    12841 atgccccgcc gctcgaagta gtcgatggcg gggaagctcg tcccgagcct cctcgtgtcg
+    12901 accagcacat cgcgccgcac cgcgccctgc gcgagctcgt cccagatgaa ccagaaccgg
+    12961 tcctgccccg gcgtgccgaa caggtagagc acgacgtccg gggcgatggt gatgcggccg
+    13021 aagtccaggg cgacggtcgt gctcgccttg ccctcgatgc ccgtgatgtc gtccacgccg
+    13081 acgctggcct gggtcaggac ctcctccgtg accaacggcg ggatctcact gaccgatccg
+    13141 accaaggtgg tcttgccggt gccgaagccg cccgccacaa cgaccttgac cgatttccga
+    13201 tccacgtagg gcccgcggtc ggagtcgttc gaggccacca gtccctcttc tagagccgct
+    13261 gcaggccggc gagaacggtt tccagcagcc gacgatccgc gatcttctgc tgcgccgggg
+    13321 atccgatgtc caggaacccc tgctcgacca gcacgtcgac catcaccttg gtgatggtca
+    13381 gcggtctgtg caggtaggcg ccgatctcgg caatggagat ccaggtggcg cagcggctga
+    13441 cgatctcccg gtactcccac tccaaacgtg tgtgtcggcg ggcagcgcga tgaccctggg
+    13501 tggccaggtc caggttgctg ttgcgtggac tcgtccggcc gttgaccagg atgtacaggg
+    13561 gaacgagccg cccggcctcc gcctcgtcgt cgccgtccca cacgtcgtac gtcatggtcg
+    13621 tagcccgacg gactcgctga gcggcaggac gggcggtcgg gcctccgagc cgaggtactc
+    13681 gccgatgcgg gtcaccagcc ggctcatctc gtaggcgacc gtgcccatgt cgaccgactg
+    13741 ctcgcacagc acggccagcc gcgcgttctg gccggcggcg gcgacgaaca gggtgcggcc
+    13801 ccggtactcg atgatgacct gctgcaccgg cccgctgtcg aagcggcgac ccataccggc
+    13861 cgccacgctg tacagcgacg acgcgccggc cgccagcagc tcaccggcgt cctgcgccag
+    13921 cgacgtggac ttctggacga tcagcccgtc ggtggacagg acgagtgcgt agacgacgtc
+    13981 ggggacctcc acgagatcgt ccaggatcca ggtcagatcg gtctgaggtg tcgagttcac
+    14041 gaaattcgcc ctacggatct gcaggtcctc gatgaccttc aaggccccgc tggaggggtc
+    14101 gttgcgggcg gcgggcgacg cccatcagca tggcgacacc ggcggcccgg gtcttcgcct
+    14161 cgtcgacggc cgcgcctgcg gcggcctgca gcgacctgtt gatgacctgc gcgacctggc
+    14221 cgatctcgtc gctgccgtag tcctgcatcg gaagctcgac cgcgacgtcg accttctcgc
+    14281 gccgccggag gcgttccatc atggccggca gccgctcgtc caccatcgcg gcggcgtccc
+    14341 tacccaactg cgccaggcgg acggagagcg cgcggtcgac caggatccgc gactggcgga
+    14401 tcgcccacag gatcgcggcg acggcgacgg acagcgccag gaggctgccc agggacgcgg
+    14461 tcagcagctg cccgttgccc gtgcggaggg tctccgccga gaccttgtcg gcctgctcga
+    14521 cggtcaggtt gatcaggtcg tcggagacct gctgcgtgag cgtgtcccac tcggccctcg
+    14581 tgaacggcag cgcgcgcggc atcccgtccc gccacgggcc gccggcgatg agcgcgttct
+    14641 ccgcggcgac caactgcttc caggggctgc ccgccgtgat cccctcgtgg cgcctgcgca
+    14701 catccgcctg caggtgcggg gcgacgttgg cgaggccggc gtggtaggcg cccaccaggc
+    14761 tcacgaactc gaggtagtcc tgctggccga acgagcggga gccgaacgcg ccgtcgatct
+    14821 tcgatccggc ccgggacatc aggtcgctgg cgcggaaggt ctcggtcgcc gcgatgccgc
+    14881 cctgggccgc ggtgacgtcg gggacgatcc gggcctgggt gtcgaagagc ccggtcgcgg
+    14941 cgtcgagcag gtcgttgtag aagtcgtaca cgccctgctg gtcggcggac cgggcgtcga
+    15001 tggtgctccg tacgcccggt agctcgtcca ggtggcccgc cagcgtcctc cactgcgtcg
+    15061 cgatggactg cggagcgttg cccaacgccg agtcggccgc gctgcgcatc gccgcgatcc
+    15121 gctggtccgt ctgctgccgc cggtcgagca gcttctgcag gtccctcgac ggctgcgcga
+    15181 ggtaggcgac gctcagccgc cgttcctgct ggagcgaggc cagcgcggac accgccggga
+    15241 tcgacacctg gcggacgctg ttggcgacct cgcggttgta gaagccctgg aagataaggt
+    15301 atccggacgc gacgagccac atgaccagtg cgacgacact ggggatgagc acgagcctga
+    15361 tgacgcgccg tttgatggac tgctgttgac cccggcgcgg gttcgacgcc gttggctggc
+    15421 cgtgttcgtc cgaatcacgg tgcctgcttt cgcggtcggc ctgttcgtgc gccaagttga
+    15481 ataagggcga attcgcggcc gctaaatcgg ccgacggcga tgtgggcgcc accctaccgg
+    15541 tctgtccggt ctagcactac ccgacctagc cggagacgga ttggggccta tcgtctgcac
+    15601 tggtcagggc gggttcgccc ggtctcctgt ggaccgccgc cggcagcgac tacgtgggcc
+    15661 ggacgggtgg accggccgac ggcgcgaccg ggcgcagttc gtcagacgcc cagggggagg
+    15721 cgggcgggaa atcgcgggcc gcgtcggggt gtccgggcat tcccgatccg ccgctgctgc
+    15781 tgccggacga gccgccggcc acgccggatc cgtcgtcctc ggtgaccagg tccggccgcg
+    15841 cgtcggtgtc gtccggggcc gggacgtcgg tgtccgcctc gacctgcacg agccgggcct
+    15901 gctcgtcctc gtcctcggcg tgctccgggt cgaccggcag ttcaccgtaa cgcgcctggt
+    15961 atcccacggt cgcctcccgt cgccgccgta ccggcgctgg ctaccccgtc caccgcgacc
+    16021 gaaacccgac cgaaacccga ccccgcggcc cgctcgtcgc gatggcggca gccctcgccg
+    16081 ggcgatgttg gacgtgggcc gagcctcagg acgctggcct gatttagcgg ccgcgattcg
+    16141 cccttagccg tacggagaac atccggctga ccggccggaa cccggcagcg tcgtacagcc
+    16201 ggcgggcgga gtttccgtcg gcgacctgga gggcgagcgc ggggaggtcc gcggttcggg
+    16261 tgccgtacag ggcgtgggtg agcagggccc ggccgagtcc ccggccctgg gcgcgcggcg
+    16321 ccacgccgag gttgaccacc cagccgtagg gccggtcggg ggcggggccg gtggacagga
+    16381 cgtggccggc gctccgtccg tccggaccga ctacgcgcgc cgaggcgggc agcagcggcg
+    16441 ggacggggcc gccgtcgtcg aacatcgccc gcacctgggc cgtgtggtcg tcgcgccagg
+    16501 caccgtcggg gtgtcccggc ccgtacgccg ccacgagcgc gtcgtgcagg tcgtcgtccc
+    16561 agccgggcgt ggcgagggac cagccggaag gcaacggggc cggcatcggc aggtccgcca
+    16621 ggtcgtggcg cagttcggtg gcggcccggt gcattcgtag cccgccggcc acccagggcg
+    16681 gccaccagcg gctcgtccgg cgtgtcgagc cgcagtccgg cgaggtcccg gcgggcctcg
+    16741 gcggccaccc gctgcggagg taccccgggg aacggtcgca cctgggcggc gtcgggttcc
+    16801 aggtgtacgc gggcgagcgg cgcgccgtcg ccggccgcgt ggagcagcac gacgcggtgg
+    16861 cgcccgtcgc ttcgctggtc gtccggatcg gcgtcgagcg gcatggcaaa aaggtagttc
+    16921 gcgaggccga ggagcctgcg ccgcgctctc gccggagctg gaccgcaggt ggctgctgcc
+    16981 gctgcgccag ctgcgcgtcc ggctgaccca tccgctgcgc gggggctccg gggtgccgct
+    17041 gctcgcgagc gtgcagcagc ttcagctcag cgaggcctac cggcgcgtgg cgccgctgct
+    17101 ccgctccgac gtgcaggagc actgggacga cggcgagtgg cgcttcgtgg gccacgcctg
+    17161 acggtcgggc cggcgacgcc gggcctcgtc aaaggcggaa tttaggaaaa cccg
+//
