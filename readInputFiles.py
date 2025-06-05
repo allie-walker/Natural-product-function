@@ -9,17 +9,15 @@ import numpy as np
 import readFeatureFiles
 import warnings
 
-def checkForHits(feature_vector, pfam_list, resistance_list):
-    pfam_vector = feature_vector[0,0:len(pfam_list)]
-    resistance_vector = feature_vector[0,len(pfam_list):len(pfam_list)+len(resistance_list)]
-    remaining_vector = feature_vector[0,len(pfam_list)+len(resistance_list):feature_vector.shape[1]]
+def checkForHits(feature_vector, pfam_indices, resistance_indices):
+    pfam_vector = feature_vector[0,pfam_indices[0]:pfam_indices[1]]
+    resistance_vector = feature_vector[0,resistance_indices[0]:resistance_indices[1]]
     if np.sum(pfam_vector) == 0:
         warnings.warn("no pfam features found, make sure to run antiSMASH with --fullhmmer option")
         warnings.warn("if antiSMASH was run with fullhmmer then this BGC does not have enough similarity to the training set for useful predictions")
-    if np.sum(resistance_vector) == 0:
+    if np.sum(resistance_vector) == 0 and resistance_indices[1] != 0:
         warnings.warn("no resistance features found, double check RGI input file")
-    if np.sum(remaining_vector) == 0:
-        warnings.warn("no CDS or smCOG features found, double check antiSMASH input file")
+   
 
 def processSecMetFeature(feature):
     subtype = ""
@@ -67,6 +65,8 @@ def readAntismash4(as_features):
     nrp_monomers_pHMM = {}
     nrp_monomers_predicat = {}
     nrp_monomers_sandpuma= {}
+    
+    all_results = {}
     
     for feature in as_features:
         subtype = ""
@@ -149,9 +149,12 @@ def readAntismash4(as_features):
             if domain_description not in pfam_counts:
                 pfam_counts[domain_description] = 0
             pfam_counts[domain_description] += 1
-            
-    return (pfam_counts, smCOGs, CDS_motifs, pks_nrp_subtypes, pk_monomers_signature, pk_monomers_minowa, \
-            pk_monomers_consensus, nrp_monomers_stachelhaus, nrp_monomers_nrps_predictor, nrp_monomers_pHMM, nrp_monomers_predicat, nrp_monomers_sandpuma)
+    
+    all_results = {"CDS_motifs": CDS_motifs, "pk_consensus": pk_monomers_consensus, "nrp_stachelhaus": nrp_monomers_stachelhaus, \
+                   "PFAM": pfam_counts, "nrp_pHMM": nrp_monomers_pHMM, "pks_nrps_type": pks_nrp_subtypes, "pk_minowa": pk_monomers_minowa, \
+                   "pk_signature": pk_monomers_signature, "nrp_predicat": nrp_monomers_predicat, "nrp_nrpspredictor": nrp_monomers_nrps_predictor, \
+                   "SMCOG": smCOGs, "nrp_sandpuma": nrp_monomers_sandpuma}
+    return all_results
 
 def readAntismash5(as_features):
     score_cutoff = 20
@@ -198,10 +201,76 @@ def readAntismash5(as_features):
             pfam_id = pfam_id[pfam_id.find(" ")+1:len(pfam_id)]
             if domain_description not in pfam_counts:
                 pfam_counts[domain_description] = 0
-            pfam_counts[domain_description] += 1                
-            
+            pfam_counts[domain_description] += 1                           
     return (pfam_counts, CDS_motifs, smCOGs, pk_monomers_consensus)
 
+def readAntismash6(as_features):
+    #works for versions 6-8
+    score_cutoff = 20 #PFAM HMM score to be counted
+    CDS_motifs = {}
+    smCOGs = {}
+    pfam_counts = {}
+    tigrfam_counts = {}
+    NRPS_PKS= {}
+    NRPS_PKS_substrate = {}
+
+    for feature in as_features:
+        consensus = ""
+        if feature.type == "aSDomain":
+            if feature.qualifiers["aSTool"][0] == "tigrfam":
+                score = float(feature.qualifiers["score"][0])
+                if score < score_cutoff:
+                    continue
+                domain_description = feature.qualifiers["description"][0]
+                tigrfam_id = feature.qualifiers["identifier"][0]
+                tigrfam_id = tigrfam_id[tigrfam_id.find(" ")+1:len(tigrfam_id)]
+                if domain_description not in tigrfam_counts:
+                    tigrfam_counts[domain_description] = 0
+                tigrfam_counts[domain_description] += 1
+            else:
+                if 'label' not in feature.qualifiers: 
+                    continue
+                motif_name = feature.qualifiers['label'][0]
+                if motif_name not in NRPS_PKS:
+                    NRPS_PKS[motif_name] = 0
+                NRPS_PKS[motif_name] += 1
+                if "specificity" not in feature.qualifiers:
+                    continue
+                for substrate_pred in feature.qualifiers["specificity"]:
+                    if "consensus" not in substrate_pred:
+                        continue
+                    if substrate_pred not in NRPS_PKS_substrate:
+                        NRPS_PKS_substrate[substrate_pred] = 0
+                    NRPS_PKS_substrate[substrate_pred] += 1
+            
+        if feature.type == "CDS_motif":
+            if 'label' not in feature.qualifiers: #this happens for ripp sequences
+                continue
+            motif_name = feature.qualifiers['label'][0]
+            if motif_name not in CDS_motifs:
+                CDS_motifs[motif_name] =0
+            CDS_motifs[motif_name] += 1
+        elif feature.type == "CDS":
+            if "gene_functions" in feature.qualifiers:
+                for note in feature.qualifiers["gene_functions"]:
+                    if "SMCOG" in note:
+                        if ":" not in note or "(" not in note:
+                            continue
+                        smCOG_type = note[note.index(":")+2:note.rfind("(")-1]
+                        if smCOG_type not in smCOGs:
+                            smCOGs[smCOG_type] = 0
+                        smCOGs[smCOG_type] += 1
+        elif feature.type == "PFAM_domain":
+            score = float(feature.qualifiers["score"][0])
+            if score <score_cutoff:
+                continue
+            domain_description = feature.qualifiers["description"][0]
+            pfam_id = feature.qualifiers["db_xref"][0]
+            pfam_id = pfam_id[pfam_id.find(" ")+1:len(pfam_id)]
+            if domain_description not in pfam_counts:
+                pfam_counts[domain_description] = 0
+            pfam_counts[domain_description] += 1                           
+    return (pfam_counts, CDS_motifs, smCOGs, NRPS_PKS,tigrfam_counts, NRPS_PKS_substrate)
 
 
 def readRGIFile3(rgi_infile):
@@ -250,7 +319,10 @@ def readRGIFile5(rgi_infile):
     rgi_infile.close()
     return resistance_genes
 
-def readInputFiles(as_features, as_version, rgi_infile, rgi_version, training_features, data_path, test_SSN_matrix):
+def readInputFiles(as_features, as_version, rgi_infile, rgi_version, training_features, training_features_types, feature_list_by_type, data_path):
+    #TODO: need to read sandpuma features for antismash6
+    #TODO: look into how to handle if there are multiple feature names reapeated in different sources?
+
     CDS_motifs = {}
     smCOGs = {}
     pfam_counts = {}
@@ -263,67 +335,363 @@ def readInputFiles(as_features, as_version, rgi_infile, rgi_version, training_fe
     nrp_monomers_pHMM = {}
     nrp_monomers_predicat = {}
     nrp_monomers_sandpuma= {}
-    try:
-        used_pks_nrps_type_list = readFeatureFiles.readFeatureList(data_path+"feature_matrices/pks_nrps_type_list.txt")
-        used_pk_signature_list = readFeatureFiles.readFeatureList(data_path+"feature_matrices/pk_signature_list.txt")
-        used_pk_minowa_list = readFeatureFiles.readFeatureList(data_path+"feature_matrices/pk_minowa_list.txt")
-        used_pk_consensus_list = readFeatureFiles.readFeatureList(data_path+"feature_matrices/pk_consensus_list.txt")
-        
-        used_nrp_stachelhaus_list = readFeatureFiles.readFeatureList(data_path+"feature_matrices/nrp_stachelhaus_list.txt")
-        used_nrp_nrps_predictor_list = readFeatureFiles.readFeatureList(data_path+"feature_matrices/nrp_nrpspredictor_list.txt")
-        used_nrp_pHMM_list = readFeatureFiles.readFeatureList(data_path+"feature_matrices/nrp_pHMM_list.txt")
-        used_nrp_predicat_list = readFeatureFiles.readFeatureList(data_path+"feature_matrices/nrp_predicat_list.txt")
-        used_nrp_sandpuma_list = readFeatureFiles.readFeatureList(data_path+"feature_matrices/nrp_sandpuma_list.txt")
-        
-        if as_version == 4:
-            used_pfam_list = readFeatureFiles.readFeatureList(data_path+"feature_matrices/PFAM_list.txt")
-            used_CDS_list = readFeatureFiles.readFeatureList(data_path+"feature_matrices/CDS_motifs_list.txt")
-            used_smCOG_list = readFeatureFiles.readFeatureList(data_path+"feature_matrices/SMCOG_list.txt")
-        if as_version == 5:
-            used_pfam_list = readFeatureFiles.readFeatureList(data_path+"feature_matrices/pfam_list5.txt")
-            used_smCOG_list = readFeatureFiles.readFeatureList(data_path+"feature_matrices/smCOG_list5.txt")
-            used_CDS_list = readFeatureFiles.readFeatureList(data_path+"feature_matrices/CDS_motifs_list5.txt")    
-            used_pk_consensus_list = readFeatureFiles.readFeatureList(data_path+"feature_matrices/pk_nrp_consensus_list5.txt")
-        if rgi_version == 3:
-            used_resistance_genes_list = readFeatureFiles.readFeatureList(data_path+"feature_matrices/CARD_gene_list.txt")
-        else:
-            used_resistance_genes_list = readFeatureFiles.readFeatureList(data_path+"feature_matrices/CARD5_gene_list.txt")
-    except:
-        print("did not find file containing training data, please keep script located in directory downloaded from github")
-        exit()
 
     if as_version == 4:
-        (pfam_counts, smCOGs, CDS_motifs, pks_nrp_subtypes, pk_monomers_signature, pk_monomers_minowa, \
-            pk_monomers_consensus, nrp_monomers_stachelhaus, nrp_monomers_nrps_predictor, nrp_monomers_pHMM, nrp_monomers_predicat, nrp_monomers_sandpuma) = readAntismash4(as_features)
-    else:
+        as_results = readAntismash4(as_features)
+    #TODO: add antismash 6, 7, 8
+    elif as_version==5:
         (pfam_counts, CDS_motifs, smCOGs, pk_monomers_consensus) = readAntismash5(as_features)
+        as_results = {}
+        as_results["PFAM5"] = pfam_counts
+        as_results["CDS_motifs"] = CDS_motifs
+        as_results["SMCOG"] = smCOGs
+        as_results["pk_nrp_consensus"] = pk_monomers_consensus
+    else:
+        (pfam_counts, CDS_motifs, smCOGs, NRPS_PKS,tigrfam_counts, NRPS_PKS_substrate) = readAntismash6(as_features)
+        as_results = {}
+        as_results["PFAM"] = pfam_counts
+        as_results["CDS_motifs"] = CDS_motifs
+        as_results["SMCOG"] = smCOGs
+        as_results["NRPS_PKS"] = NRPS_PKS
+        as_results["TIGR_FAM"] = tigrfam_counts
+        as_results["NRPS_PKS_substrate"] = NRPS_PKS_substrate
     if rgi_version == 3:
         resistance_genes = readRGIFile3(rgi_infile)
-    else:
+    elif rgi_version == 5 or rgi_version==6:
          resistance_genes = readRGIFile5(rgi_infile)
     
     
-    
+    #TODO: make sure features get added in correct order!
     test_features = np.zeros((1, training_features.shape[1]))
     i = 0
-    (test_features, i) = tools.addToFeatureMatrix(test_features, i, pfam_counts, used_pfam_list)
-    (test_features, i) = tools.addToFeatureMatrix(test_features, i, resistance_genes, used_resistance_genes_list)
-    (test_features, i) = tools.addToFeatureMatrix(test_features, i, smCOGs, used_smCOG_list)
-    (test_features, i) = tools.addToFeatureMatrix(test_features, i, CDS_motifs, used_CDS_list)
-    if len(test_SSN_matrix) > 0:
-        test_features[0,i:i+test_SSN_matrix.shape[1]] = test_SSN_matrix
-        i += test_SSN_matrix.shape[1] 
-    if as_version ==4:        
-        (test_features, i) = tools.addToFeatureMatrix(test_features, i, pks_nrp_subtypes, used_pks_nrps_type_list)
-        (test_features, i) = tools.addToFeatureMatrix(test_features, i, pk_monomers_signature, used_pk_signature_list)
-        (test_features, i) = tools.addToFeatureMatrix(test_features, i, pk_monomers_minowa, used_pk_minowa_list)
-        (test_features, i) = tools.addToFeatureMatrix(test_features, i, pk_monomers_consensus, used_pk_consensus_list)
-        (test_features, i) = tools.addToFeatureMatrix(test_features, i, nrp_monomers_stachelhaus, used_nrp_stachelhaus_list)
-        (test_features, i) = tools.addToFeatureMatrix(test_features, i, nrp_monomers_nrps_predictor, used_nrp_nrps_predictor_list)
-        (test_features, i) = tools.addToFeatureMatrix(test_features, i, nrp_monomers_pHMM, used_nrp_pHMM_list)
-        (test_features, i) = tools.addToFeatureMatrix(test_features, i, nrp_monomers_predicat, used_nrp_predicat_list)
-        (test_features, i) = tools.addToFeatureMatrix(test_features, i, nrp_monomers_sandpuma, used_nrp_sandpuma_list)
-    else:
-        (test_features, i) = tools.addToFeatureMatrix(test_features, i, pk_monomers_consensus, used_pk_consensus_list)
-    checkForHits(test_features, used_pfam_list, used_resistance_genes_list)    
+    card_start_index = 0
+    card_end_index =0
+    pfam_start_index = 0
+    pfam_end_index =0
+    for t in training_features_types:
+        if t in as_results:
+            if t == "PFAM" or t == "PFAM5":
+                pfam_start_index = i
+            (test_features, i) = tools.addToFeatureMatrix(test_features, i, as_results[t], feature_list_by_type[t])
+            if t == "PFAM" or t == "PFAM5":
+                pfam_end_index = i
+        elif "CARD" in t or "CARD5" in t:
+            card_start_index = i
+            (test_features, i) = tools.addToFeatureMatrix(test_features, i, resistance_genes, feature_list_by_type[t])
+            card_end_index = i
+        else:
+            raise Exception("Unknown feature type " + t)
+    
+        
+
+    checkForHits(test_features, (pfam_start_index, pfam_end_index), (card_start_index, card_end_index))
     return test_features
+
+def readInputFilesLocs(as_features, as_version, rgi_infile, rgi_version, training_features, training_features_types, feature_list_by_type, data_path):
+    features = {}
+    if as_version == 5:
+        (gene_data, pfam_data, cds_motif_data, smcog_data, pks_nrps_data) = readAntismash5Loc(as_features)
+        features["PFAM5"] = pfam_data
+        features["CDS_motifs"] = cds_motif_data
+        features["SMCOG"] = smcog_data
+        features["pk_nrp_consensus"] = pks_nrps_data
+    else:
+        (gene_data, pfam_data, cds_motif_data, smcog_data, pks_nrps_data, pks_nrps_substrate_data, tigrfam_data) = readAntismash6Loc(as_features)
+        features["PFAM"] = pfam_data
+        features["CDS_motifs"] = cds_motif_data
+        features["SMCOG"] = smcog_data
+        features["NRPS_PKS"] = pks_nrps_data
+        features["NRPS_PKS_substrate"] = pks_nrps_substrate_data
+        features["TIGR_FAM"] = tigrfam_data
+    if rgi_version != None:
+        rgi_data = readRGIFile5Loc(rgi_infile)
+        features["CARD_genes"] = rgi_data
+    return (gene_data, features)
+
+def readAntismash5Loc(as_features):
+    score_cutoff = 20
+    CDS_motifs = {}
+    smCOGs = {}
+    pfam_counts = {}
+    pk_monomers_consensus = {}
+    pfam_data = []
+    cds_motif_data = []
+    smcog_data = []
+    pks_nrps_data = []
+    gene_data = []
+    pfam_num = 1
+    cds_num = 1
+    smcog_num = 1
+    nrps_num = 1
+    gene_num = 1
+    for feature in as_features:
+        consensus = ""
+        if feature.type == "aSDomain":
+            if "specificity" not in feature.qualifiers:
+                continue
+            for f in feature.qualifiers["specificity"]:
+                if "consensus" in f:
+                    consensus = f.split(":")[1].replace('"','')
+        if consensus != "" and "no_call" not in consensus and "N/A" not in consensus and "n/a" not in consensus:
+            if consensus not in pk_monomers_consensus:
+                pk_monomers_consensus[consensus] = 0
+            pk_monomers_consensus[consensus] += 1
+            nrps_pks_dict = {}
+            nrps_pks_dict['nrps+_pks_num'] = nrps_num 
+            nrps_pks_dict['start'] = feature.location.start
+            nrps_pks_dict['end'] = feature.location.end
+            nrps_pks_dict['strand'] = feature.location.strand
+            nrps_pks_dict["description"] = consensus
+            pks_nrps_data.append(nrps_pks_dict)
+            nrps_num +=1
+        if feature.type == "CDS_motif":
+            if 'label' not in feature.qualifiers: #this happens for ripp sequences
+                continue
+            motif_name = feature.qualifiers['label'][0]
+            if motif_name not in CDS_motifs:
+                CDS_motifs[motif_name] =0
+            CDS_motifs[motif_name] += 1
+            cds_motif_dict = {}
+            cds_motif_dict['cds_num'] = cds_num 
+            cds_motif_dict['start'] = feature.location.start
+            cds_motif_dict['end'] = feature.location.end
+            cds_motif_dict['strand'] = feature.location.strand
+            cds_motif_dict["description"] = motif_name
+            cds_motif_data.append(cds_motif_dict)
+            cds_num += 1
+        elif feature.type == "CDS":
+            gene_dict = {}
+            gene_dict["gene_num"] = gene_num
+            gene_dict["start"] = feature.location.start
+            gene_dict['end'] = feature.location.end
+            gene_dict['strand'] = feature.location.strand
+            gene_dict['product'] = feature.qualifiers["product"]
+            if 'locus_tag' in feature.qualifiers:
+                gene_dict['locus_tag'] = feature.qualifiers["locus_tag"]
+            else:
+                gene_dict['locus_tag'] = ""
+            gene_data.append(gene_dict)
+            gene_num += 1
+            if "gene_functions" in feature.qualifiers:
+                for note in feature.qualifiers["gene_functions"]:
+                    if "SMCOG" in note:
+                        if ":" not in note or "(" not in note:
+                            continue
+                        smCOG_type = note[note.index(":")+2:note.rfind("(")-1]
+                        smCOG_description = note[note.index(":")+1:note.rfind("(")-1]
+                        if smCOG_type not in smCOGs:
+                            smCOGs[smCOG_type] = 0
+                        smCOGs[smCOG_type] += 1
+                        smcog_dict = {}
+                        smcog_dict['smcog_num'] = smcog_num 
+                        smcog_dict['start'] = feature.location.start
+                        smcog_dict['end'] = feature.location.end
+                        smcog_dict['strand'] = feature.location.strand
+                        smcog_dict["description"] = smCOG_description
+                        smcog_data.append(smcog_dict)
+                        smcog_num = +1
+        elif feature.type == "PFAM_domain":
+            score = float(feature.qualifiers["score"][0])
+            if score <score_cutoff:
+                continue
+            domain_description = feature.qualifiers["description"][0]
+            pfam_id = feature.qualifiers["db_xref"][0]
+            pfam_id = pfam_id[pfam_id.find(" ")+1:len(pfam_id)]
+            if domain_description not in pfam_counts:
+                pfam_counts[domain_description] = 0
+            pfam_counts[domain_description] += 1 
+            pfam_dict = {}
+            pfam_dict['pfam_num'] = pfam_num 
+            pfam_dict['start'] = feature.location.start
+            pfam_dict['end'] = feature.location.end
+            pfam_dict['strand'] = feature.location.strand
+            pfam_dict["description"] = domain_description
+            pfam_dict['pfam_id'] = pfam_id
+            pfam_data.append(pfam_dict)
+            pfam_num += 1                          
+    return (gene_data, pfam_data, cds_motif_data, smcog_data, pks_nrps_data)
+
+def readAntismash6Loc(as_features):
+    #works for versions 6-8
+    score_cutoff = 20 #PFAM HMM score to be counted
+    CDS_motifs = {}
+    smCOGs = {}
+    pfam_counts = {}
+    tigrfam_counts = {}
+    NRPS_PKS= {}
+    NRPS_PKS_substrate = {}
+    
+    pfam_data = []
+    cds_motif_data = []
+    smcog_data = []
+    pks_nrps_data = []
+    pks_nrps_substrate_data = []
+    tigrfam_data = []
+    gene_data = []
+    pfam_num = 1
+    cds_num = 1
+    smcog_num = 1
+    nrps_num = 1
+    nrps_substrate_num = 1
+    tigrfam_num = 1
+    gene_num = 1
+    for feature in as_features:
+        consensus = ""
+        if feature.type == "aSDomain":
+            if feature.qualifiers["aSTool"][0] == "tigrfam":
+                score = float(feature.qualifiers["score"][0])
+                if score < score_cutoff:
+                    continue
+                domain_description = feature.qualifiers["description"][0]
+                tigrfam_id = feature.qualifiers["identifier"][0]
+                tigrfam_id = tigrfam_id[tigrfam_id.find(" ")+1:len(tigrfam_id)]
+                if domain_description not in tigrfam_counts:
+                    tigrfam_counts[domain_description] = 0
+                tigrfam_counts[domain_description] += 1
+                tigrfam_dict = {}
+                tigrfam_dict['tigrfam_num'] = tigrfam_num 
+                tigrfam_dict['start'] = feature.location.start
+                tigrfam_dict['end'] = feature.location.end
+                tigrfam_dict['strand'] = feature.location.strand
+                tigrfam_dict["description"] = tigrfam_id
+                tigrfam_data.append(tigrfam_dict)
+                tigrfam_num +=1
+            else:
+                if 'label' not in feature.qualifiers: 
+                    continue
+                motif_name = feature.qualifiers['label'][0]
+                if motif_name not in NRPS_PKS:
+                    NRPS_PKS[motif_name] = 0
+                NRPS_PKS[motif_name] += 1
+                nrps_pks_dict = {}
+                nrps_pks_dict['nrps+_pks_num'] = nrps_num 
+                nrps_pks_dict['start'] = feature.location.start
+                nrps_pks_dict['end'] = feature.location.end
+                nrps_pks_dict['strand'] = feature.location.strand
+                nrps_pks_dict["description"] = motif_name
+                pks_nrps_data.append(nrps_pks_dict)
+                nrps_num +=1
+                if "specificity" not in feature.qualifiers:
+                    continue
+                for substrate_pred in feature.qualifiers["specificity"]:
+                    if "consensus" not in substrate_pred:
+                        continue
+                    if substrate_pred not in NRPS_PKS_substrate:
+                        NRPS_PKS_substrate[substrate_pred] = 0
+                    NRPS_PKS_substrate[substrate_pred] += 1
+                    nrps_pks_substrate_dict = {}
+                    nrps_pks_substrate_dict['nrps+_pks_num'] = nrps_substrate_num 
+                    nrps_pks_substrate_dict['start'] = feature.location.start
+                    nrps_pks_substrate_dict['end'] = feature.location.end
+                    nrps_pks_substrate_dict['strand'] = feature.location.strand
+                    nrps_pks_substrate_dict["description"] = substrate_pred
+                    pks_nrps_substrate_data.append(nrps_pks_substrate_dict)
+                    nrps_substrate_num +=1
+        if feature.type == "CDS_motif":
+            if 'label' not in feature.qualifiers: #this happens for ripp sequences
+                continue
+            motif_name = feature.qualifiers['label'][0]
+            if motif_name not in CDS_motifs:
+                CDS_motifs[motif_name] =0
+            CDS_motifs[motif_name] += 1
+            cds_motif_dict = {}
+            cds_motif_dict['cds_num'] = cds_num 
+            cds_motif_dict['start'] = feature.location.start
+            cds_motif_dict['end'] = feature.location.end
+            cds_motif_dict['strand'] = feature.location.strand
+            cds_motif_dict["description"] = motif_name
+            cds_motif_data.append(cds_motif_dict)
+            cds_num += 1
+        elif feature.type == "CDS":
+            gene_dict = {}
+            gene_dict["gene_num"] = gene_num
+            gene_dict["start"] = feature.location.start
+            gene_dict['end'] = feature.location.end
+            gene_dict['strand'] = feature.location.strand
+            gene_dict['product'] = feature.qualifiers["product"]
+            if 'locus_tag' in feature.qualifiers:
+                gene_dict['locus_tag'] = feature.qualifiers["locus_tag"]
+            else:
+                gene_dict['locus_tag'] = ""
+            gene_data.append(gene_dict)
+            gene_num += 1
+            if "gene_functions" in feature.qualifiers:
+                for note in feature.qualifiers["gene_functions"]:
+                    if "SMCOG" in note:
+                        if ":" not in note or "(" not in note:
+                            continue
+                        smCOG_type = note[note.index(":")+2:note.rfind("(")-1]
+                        if smCOG_type not in smCOGs:
+                            smCOGs[smCOG_type] = 0
+                        smCOGs[smCOG_type] += 1
+                        smCOGs[smCOG_type] += 1
+                        smcog_dict = {}
+                        smcog_dict['smcog_num'] = smcog_num 
+                        smcog_dict['start'] = feature.location.start
+                        smcog_dict['end'] = feature.location.end
+                        smcog_dict['strand'] = feature.location.strand
+                        smcog_dict["description"] = smCOG_type
+                        smcog_data.append(smcog_dict)
+                        smcog_num = +1
+        elif feature.type == "PFAM_domain":
+            score = float(feature.qualifiers["score"][0])
+            if score <score_cutoff:
+                continue
+            domain_description = feature.qualifiers["description"][0]
+            pfam_id = feature.qualifiers["db_xref"][0]
+            pfam_id = pfam_id[pfam_id.find(" ")+1:len(pfam_id)]
+            if domain_description not in pfam_counts:
+                pfam_counts[domain_description] = 0
+            pfam_counts[domain_description] += 1          
+            pfam_dict = {}
+            pfam_dict['pfam_num'] = pfam_num 
+            pfam_dict['start'] = feature.location.start
+            pfam_dict['end'] = feature.location.end
+            pfam_dict['strand'] = feature.location.strand
+            pfam_dict["description"] = domain_description
+            pfam_dict['pfam_id'] = pfam_id
+            pfam_data.append(pfam_dict)
+            pfam_num += 1                            
+    return (gene_data, pfam_data, cds_motif_data, smcog_data, pks_nrps_data, pks_nrps_substrate_data, tigrfam_data)
+
+
+def readRGIFile5Loc(rgi_infile):
+    rgi_data = []
+    rgi_num = 1
+    bit_score_threshold = 40
+    e_value_threshold = 0.1
+    resistance_genes = {}
+    use_bit_score = True
+    for line in rgi_infile:
+        if "ORF_ID" in line:
+            if line.split("\t")[7] == "Best_Hit_evalue":
+                #warnings.warn('training set was generated using bit scores but RGI output has e-values, will use e-value threshold but this could increase error in predictions')
+                use_bit_score = False
+            continue
+        entries = line.split("\t")
+        bit_score = float(entries[7])
+        if use_bit_score:
+            if bit_score < bit_score_threshold:
+                continue
+        elif bit_score > e_value_threshold:
+            continue
+        best_hit = entries[8]
+        
+        gene_start = float(entries[2])
+        gene_end = float(entries[3])
+        gene_orientation = entries[4]
+        if gene_orientation == "-":
+          gene_orientation = -1
+        else:
+          gene_orientation = 1
+        rgi_dict = {}
+        rgi_dict['rgi_num'] = rgi_num 
+        rgi_dict['start'] = gene_start
+        rgi_dict['end'] = gene_end
+        rgi_dict['strand'] = gene_orientation
+        rgi_dict["description"] = best_hit
+        rgi_data.append(rgi_dict)
+        rgi_num = +1
+        #print(best_hit)
+    rgi_infile.close()
+    return rgi_data

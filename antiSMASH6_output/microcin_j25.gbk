@@ -1,0 +1,345 @@
+LOCUS       BGC0000581.1            4803 bp    DNA     linear   UNK 01-JAN-1980
+DEFINITION  Microcin J25 biosynthetic gene cluster.
+ACCESSION   BGC0000581
+VERSION     BGC0000581.1
+KEYWORDS    .
+SOURCE      
+  ORGANISM  .
+            .
+COMMENT     ##antiSMASH-Data-START##
+            Version      :: 6.1.0
+            Run date     :: 2022-09-19 17:27:41
+            ##antiSMASH-Data-END##
+FEATURES             Location/Qualifiers
+     source          1..4803
+                     /db_xref="taxon:562"
+                     /mol_type="genomic DNA"
+                     /organism="Escherichia coli"
+                     /plasmid="pTUC100"
+                     /strain="AY25"
+     protocluster    1..4803
+                     /aStool="rule-based-clusters"
+                     /category="RiPP"
+                     /contig_edge="True"
+                     /core_location="[61:2535]"
+                     /cutoff="10000"
+                     /detection_rule="(PF13471 and Asn_synthase or micJ25 or
+                     mcjC)"
+                     /neighbourhood="10000"
+                     /product="lassopeptide"
+                     /protocluster_number="1"
+                     /tool="antismash"
+     proto_core      62..2535
+                     /aStool="rule-based-clusters"
+                     /tool="antismash"
+                     /cutoff="10000"
+                     /detection_rule="(PF13471 and Asn_synthase or micJ25 or
+                     mcjC)"
+                     /neighbourhood="10000"
+                     /product="lassopeptide"
+                     /protocluster_number="1"
+     cand_cluster    1..4803
+                     /candidate_cluster_number="1"
+                     /contig_edge="True"
+                     /detection_rules="(PF13471 and Asn_synthase or micJ25 or
+                     mcjC)"
+                     /kind="single"
+                     /product="lassopeptide"
+                     /protoclusters="1"
+                     /tool="antismash"
+     region          1..4803
+                     /candidate_cluster_numbers="1"
+                     /contig_edge="True"
+                     /product="lassopeptide"
+                     /region_number="1"
+                     /rules="(PF13471 and Asn_synthase or micJ25 or mcjC)"
+                     /tool="antismash"
+     gene            complement(62..238)
+                     /gene="mcjA"
+     CDS             complement(62..238)
+                     /codon_start=1
+                     /db_xref="GI:4731432"
+                     /gene="mcjA"
+                     /gene_functions="biosynthetic (rule-based-clusters)
+                     lassopeptide: micJ25"
+                     /gene_functions="biosynthetic-additional (lassopeptides)
+                     predicted lassopeptide"
+                     /gene_kind="biosynthetic"
+                     /product="microcin J25 precursor"
+                     /protein_id="AAD28494.1"
+                     /sec_met_domain="micJ25 (E-value: 1.1e-28, bitscore: 87.0,
+                     seeds: 5, tool: rule-based-clusters)"
+                     /transl_table=11
+                     /translation="MIKHFHFNKLSSGKKNNVPSPAKGVIQIKKSASQLTKGGAGHVPE
+                     YFVGIGTPISFYG"
+     CDS_motif       complement(128..238)
+                     /prepeptide="leader"
+                     /note="peptide class: lassopeptide"
+                     /note="predicted sequence:
+                     MIKHFHFNKLSSGKKNNVPSPAKGVIQIKKSASQLTK"
+                     /locus_tag="mcjA_lassopeptide"
+                     /aSTool="lassopeptides"
+                     /tool="antismash"
+     CDS_motif       complement(62..127)
+                     /prepeptide="core"
+                     /locus_tag="mcjA_lassopeptide"
+                     /peptide="lassopeptide"
+                     /predicted_class="Class II"
+                     /score="5.40"
+                     /molecular_weight="2107.3"
+                     /monoisotopic_mass="2106.0"
+                     /core_sequence="GGAGHVPEYFVGIGTPISFYG"
+                     /aSTool="lassopeptides"
+                     /tool="antismash"
+                     /leader_sequence="MIKHFHFNKLSSGKKNNVPSPAKGVIQIKKSASQLTK"
+                     /leader_location="[127:238](-)"
+     gene            578..1204
+                     /gene="mcjB"
+     CDS             578..1204
+                     /codon_start=1
+                     /db_xref="GI:4731433"
+                     /function="maturation of microcin J25"
+                     /gene="mcjB"
+                     /gene_functions="biosynthetic (rule-based-clusters)
+                     lassopeptide: PF13471"
+                     /gene_functions="biosynthetic-additional
+                     (rule-based-clusters) Lasso_Fused_RRE"
+                     /gene_kind="biosynthetic"
+                     /product="McjB"
+                     /protein_id="AAD28495.1"
+                     /sec_met_domain="PF13471 (E-value: 3.6e-25, bitscore: 76.5,
+                     seeds: 84, tool: rule-based-clusters)"
+                     /sec_met_domain="Lasso_Fused_RRE (E-value: 1.3e-15,
+                     bitscore: 45.5, seeds: 20, tool: rule-based-clusters)"
+                     /transl_table=11
+                     /translation="MIRYCLTSYREDLVILDIINDSFSIVPDAGSLLKERDKLLKEFPQ
+                     LSYFFDSEYHIGSVSRNSDTSFLEERWFLPEPDKTLYKCSLFKRFILLLKVFYYSWNIE
+                     KKGMAWIFISNKKENRLYSLNEEHLIRKEISNLSIIFHLNIFKSDCLTYSYALKRILNS
+                     RNIDAHLVIGVRTQPFYSHSWVEVGGQVINDAPNMRDKLSVIAEI"
+     PFAM_domain     977..1195
+                     /aSDomain="Transglut_core3"
+                     /aSTool="fullhmmer"
+                     /database="34.0"
+                     /db_xref="PF13471.8"
+                     /description="Transglutaminase-like superfamily"
+                     /detection="hmmscan"
+                     /domain_id="fullhmmer_mcjB_0001"
+                     /evalue="4.00E-17"
+                     /label="mcjB"
+                     /locus_tag="mcjB"
+                     /protein_end="206"
+                     /protein_start="133"
+                     /score="62.3"
+                     /tool="antismash"
+                     /translation="ISNLSIIFHLNIFKSDCLTYSYALKRILNSRNIDAHLVIGVRTQP
+                     FYSHSWVEVGGQVINDAPNMRDKLSVIA"
+     gene            1207..2535
+                     /gene="mcjC"
+     CDS             1207..2535
+                     /codon_start=1
+                     /db_xref="GI:4731434"
+                     /function="maturation of microcin J25"
+                     /gene="mcjC"
+                     /gene_functions="biosynthetic (rule-based-clusters)
+                     lassopeptide: Asn_synthase"
+                     /gene_functions="biosynthetic (rule-based-clusters)
+                     lassopeptide: mcjC"
+                     /gene_kind="biosynthetic"
+                     /product="McjC"
+                     /protein_id="AAD28496.1"
+                     /sec_met_domain="mcjC (E-value: 0.0, bitscore: 1073.8,
+                     seeds: 3, tool: rule-based-clusters)"
+                     /sec_met_domain="Asn_synthase (E-value: 4e-09, bitscore:
+                     24.6, seeds: 78, tool: rule-based-clusters)"
+                     /transl_table=11
+                     /translation="MEIFNVKLNDTSIRIIFCKTLSAFRTENTIVMLKGKAVSNGKPVS
+                     TEEIARVVEEKGVSEVIENLDGVFCILIYHFNDLLIGKSIQSGPALFYCKKNMDIFVSD
+                     KISDIKFLNPDMTFSLNITMAEHYLSGNRIATQESLITGIYKVNNGEFIKFNNQLKPVL
+                     LRDEFSITKKNNSTIDSIIDNIEMMRDNRKIALLFSGGLDSALIFHTLKESGNKFCAYH
+                     FFSDESDDSEKYFAKEYCSKYGVDFISVNKNINFNEKLYFNLNPNSPDEIPLIFEQTDE
+                     EGEGQPPIDDDLLYLCGHGGDHIFGQNPSELFGIDAYRSHGLMFMHKKIVEFSNLKGKR
+                     YKDIIFSNISAFINTSNGCSPAKQEHVSDMKLASAQFFATDYTGKINKLTPFLHKNIIQ
+                     HYAGLPVFSLFNQHFDRYPVRYEAFQRFGSDIFWKKTKRSSSS"
+     PFAM_domain     1768..1944
+                     /aSDomain="Asn_synthase"
+                     /aSTool="fullhmmer"
+                     /database="34.0"
+                     /db_xref="PF00733.23"
+                     /db_xref="GO:0004066"
+                     /db_xref="GO:0006529"
+                     /description="Asparagine synthase"
+                     /detection="hmmscan"
+                     /domain_id="fullhmmer_mcjC_0002"
+                     /evalue="1.90E-05"
+                     /gene_ontologies="GO:0004066: asparagine synthase
+                     (glutamine-hydrolyzing) activity"
+                     /gene_ontologies="GO:0006529: asparagine biosynthetic
+                     process"
+                     /label="mcjC"
+                     /locus_tag="mcjC"
+                     /protein_end="246"
+                     /protein_start="187"
+                     /score="24.6"
+                     /tool="antismash"
+                     /translation="MRDNRKIALLFSGGLDSALIFHTLKESGNKFCAYHFFSDESDDSE
+                     KYFAKEYCSKYGVD"
+     gene            2754..4496
+                     /gene="mcjD"
+     CDS             2754..4496
+                     /codon_start=1
+                     /db_xref="GI:4731435"
+                     /function="confers immunity"
+                     /gene="mcjD"
+                     /gene_functions="transport (smcogs) SMCOG1288:ABC
+                     transporter related protein (Score: 186.6; E-value:
+                     1.3e-56)"
+                     /gene_kind="transport"
+                     /note="ABC transporter homolog"
+                     /note="smCOG tree PNG image: smcogs/mcjD.png"
+                     /product="McjD"
+                     /protein_id="AAD28497.1"
+                     /transl_table=11
+                     /translation="MERKQKNSLFNYIYSLMDVRGKFLFFSMLFITSLSSIIISISPLI
+                     LAKITDLLSGSLSNFSYEYLVLLACLYMFCVISNKASVFLFMILQSSLRINMQKKMSLK
+                     YLRELYNENITNLSKNNAGYTTQSLNQASNDIYILVRNVSQNILSPVIQLISTIVVVLS
+                     TKDWFSAGVFFLYILVFVIFNTRLTGSLASLRKHSMDITLNSYSLLSDTVDNMIAAKKN
+                     NALRLISERYEDALTQENNAQKKYWLLSSKVLLLNSLLAVILFGSVFIYNILGVLNGVV
+                     SIGHFIMITSYIILLSTPVENIGALLSEIRQSMSSLAGFIQRHAENKATSPSIPFLNME
+                     RKLNLSIRELSFSYSDDKKILNSVSLDLFTGKMYSLTGPSGSGKSTLVKIISGYYKNYF
+                     GDIYLNDISLRNISDEDLNDAIYYLTQDDYIFMDTLRFNLRLANYDASENEIFKVLKLA
+                     NLSVVNNEPVSLDTHLINRGNNYSGGQKQRISLARLFLRKPAIIIIDEATSALDYINES
+                     EILSSIRTHFPDALIINISHRINLLECSDCVYVLNEGNIVASGHFRDLMVSNEYISGLA
+                     SVTE"
+     PFAM_domain     2838..3653
+                     /aSDomain="ABC_membrane"
+                     /aSTool="fullhmmer"
+                     /database="34.0"
+                     /db_xref="PF00664.25"
+                     /db_xref="GO:0005524"
+                     /db_xref="GO:0016021"
+                     /db_xref="GO:0042626"
+                     /db_xref="GO:0055085"
+                     /description="ABC transporter transmembrane region"
+                     /detection="hmmscan"
+                     /domain_id="fullhmmer_mcjD_0003"
+                     /evalue="1.70E-11"
+                     /gene_ontologies="GO:0005524: ATP binding"
+                     /gene_ontologies="GO:0016021: integral component of
+                     membrane"
+                     /gene_ontologies="GO:0042626: ATPase-coupled transmembrane
+                     transporter activity"
+                     /gene_ontologies="GO:0055085: transmembrane transport"
+                     /label="mcjD"
+                     /locus_tag="mcjD"
+                     /protein_end="300"
+                     /protein_start="28"
+                     /score="44.4"
+                     /tool="antismash"
+                     /translation="LFITSLSSIIISISPLILAKITDLLSGSLSNFSYEYLVLLACLYM
+                     FCVISNKASVFLFMILQSSLRINMQKKMSLKYLRELYNENITNLSKNNAGYTTQSLNQA
+                     SNDIYILVRNVSQNILSPVIQLISTIVVVLSTKDWFSAGVFFLYILVFVIFNTRLTGSL
+                     ASLRKHSMDITLNSYSLLSDTVDNMIAAKKNNALRLISERYEDALTQENNAQKKYWLLS
+                     SKVLLLNSLLAVILFGSVFIYNILGVLNGVVSIGHFIMITSYIILLSTPV"
+     PFAM_domain     3834..4280
+                     /aSDomain="ABC_tran"
+                     /aSTool="fullhmmer"
+                     /database="34.0"
+                     /db_xref="PF00005.29"
+                     /db_xref="GO:0005524"
+                     /description="ABC transporter"
+                     /detection="hmmscan"
+                     /domain_id="fullhmmer_mcjD_0004"
+                     /evalue="9.50E-28"
+                     /gene_ontologies="GO:0005524: ATP binding"
+                     /label="mcjD"
+                     /locus_tag="mcjD"
+                     /protein_end="509"
+                     /protein_start="360"
+                     /score="97.5"
+                     /tool="antismash"
+                     /translation="LNSVSLDLFTGKMYSLTGPSGSGKSTLVKIISGYYKNYFGDIYLN
+                     DISLRNISDEDLNDAIYYLTQDDYIFMDTLRFNLRLANYDASENEIFKVLKLANLSVVN
+                     NEPVSLDTHLINRGNNYSGGQKQRISLARLFLRKPAIIIIDEATS"
+ORIGIN
+        1 aagcttctga tatgtgattt attgttgata gacaaaatga cagagttctt ctttcagaat
+       61 atcagccata gaaagatata ggtgtaccaa tccccacaaa atactcaggc acatgtcctg
+      121 caccaccttt tgtgagttgc gatgctgatt tttttatttg tataaccccc tttgcaggag
+      181 atggaacatt atttttttta ccagaagaca gtttattaaa atgaaaatgc ttaatcattt
+      241 ttacgttcct tatttgatgg aaatagtatg atgattttta cagaggaacc tcacgtcctt
+      301 ctgttagaat tttattagca caaaatacaa ttgagatcaa taatcattac gctttagtaa
+      361 tttatcaata aaatcattta gatacaaaca tccataaact aatcaatctg caaaagtggt
+      421 caaatttagt acaatatttt ggatttttat acatttttct aattatttca gaatatttag
+      481 ccatcaatta agaaaaaaat ttagcttgta gataaattca gaagttttat tattccaatt
+      541 gagtgtaaag gcataactac aggagggagt gtgcaaaatg atccgttact gcttaaccag
+      601 ttatagagag gatcttgtta tcctggatat aattaatgat agtttcagca tagtgcctga
+      661 cgcaggtagc ttgctaaaag aaagagataa attgcttaaa gaattcccac aactatctta
+      721 cttttttgac agtgaatatc atattggaag tgtttctcgt aatagtgaca cttcttttct
+      781 tgaagaacgc tggtttctac cagaacctga caaaacatta tataagtgtt ctctatttaa
+      841 acgatttata ttattactca aagtctttta ctatagctgg aatattgaaa aaaaagggat
+      901 ggcatggatt ttcataagta ataaaaaaga gaataggcta tactccttga atgaagagca
+      961 tcttatccgg aaagaaatta gtaatctttc cattatcttt catcttaata tttttaaatc
+     1021 tgactgtctt acctattcat acgcactaaa aagaattctt aattccagaa atattgatgc
+     1081 tcatcttgtt attggtgtaa ggacacaacc tttttatagc cactcttggg tggaggttgg
+     1141 gggacaagtt atcaatgatg ctcccaatat gcgggataaa ttatctgtta ttgcagagat
+     1201 atagttatgg aaatatttaa tgtcaagtta aatgatactt caattagaat tattttctgt
+     1261 aaaacgcttt ctgccttccg gacagaaaat accatcgtta tgctcaaagg aaaagcagtt
+     1321 tcaaatggca aacctgtatc cacagaggag attgccagag tagtggaaga aaaaggtgtt
+     1381 tcagaagtaa tagaaaattt agatggtgtt ttctgtatcc taatttatca ttttaatgat
+     1441 ctccttatag ggaaaagcat tcaatcaggc cccgctctat tttattgtaa aaagaatatg
+     1501 gatatttttg tttcggataa aatttctgat atcaaatttt tgaatccaga tatgacattc
+     1561 agtctaaata taacaatggc agaacattat ctgtcaggaa atcgaatagc aacccaggaa
+     1621 tcactaatca ctggcattta caaagtaaat aatggtgagt ttataaaatt taataatcag
+     1681 ttgaaacctg tgctacttcg tgatgagttt agtattacca aaaagaacaa ttcaactatc
+     1741 gacagtatca ttgataatat tgagatgatg cgggataata gaaaaatagc cctattattt
+     1801 tccggaggat tggattctgc attaattttt cacacactta aagaatcagg taacaaattc
+     1861 tgcgcttatc attttttttc tgatgaatct gatgacagtg aaaagtattt tgctaaggaa
+     1921 tactgttcaa aatatggagt tgattttata tctgttaata aaaacatcaa ctttaatgaa
+     1981 aaactttatt tcaatttaaa tcctaatagt ccggacgaaa tccctttgat atttgaacag
+     2041 acagatgaag aaggtgaagg tcagcccccc atagacgatg atttattata tctatgtggt
+     2101 cacggtggag atcatatttt cggacaaaat ccttcagaac tttttggcat tgatgcatat
+     2161 cgaagtcatg gcttgatgtt tatgcataaa aaaatagtag aattttccaa tctcaaggga
+     2221 aagagatata aagatatcat attttcaaat atttccgcat tcattaatac atccaacgga
+     2281 tgttctccag caaagcaaga gcacgtatca gatatgaaac ttgcctctgc tcagtttttt
+     2341 gcaactgatt atacaggaaa aattaataaa ctaactccat tcctgcataa aaatattatc
+     2401 cagcattatg ctggcttacc agtttttagt ctatttaacc agcactttga tcgttatccc
+     2461 gttcgttatg aagcgtttca acgatttggt tcagatattt tctggaaaaa aaccaaacgg
+     2521 tcatcttcat catgactaat attcagaatt ctatccggta aaaaggatga actagtgaat
+     2581 acaataaaac agtcaggatt aattgaaata ttaggcatta accatattga attggaaagc
+     2641 attttgtatg aaaatacgac tacacgtctg acaatggaac taccatatat acttaactta
+     2701 taccgtctgg caaaattcat tcaacttcaa tccattgatt ataaaggtta attatggaaa
+     2761 gaaaacagaa aaactcatta tttaattata tttattcatt aatggatgta agaggtaaat
+     2821 ttttattctt ttccatgtta ttcattacat cattatcatc gataatcata tctatttcac
+     2881 cattgattct tgcaaagatt acagatttac tgtctggctc attgtcaaat tttagttatg
+     2941 aatatctggt tttacttgcc tgtttataca tgttttgcgt tatatctaat aaagcaagtg
+     3001 tttttttatt tatgatactg caaagtagtc tacgtattaa catgcagaaa aaaatgtcgc
+     3061 taaagtattt gagagaattg tataacgaaa atataactaa cttgagtaaa aataatgctg
+     3121 gatatacaac gcaaagtctt aaccaggctt caaatgacat ttatattctt gtgagaaatg
+     3181 tttcccagaa tatcctgtca cctgttatac aacttatttc cactattgtt gttgttttat
+     3241 ctacgaagga ctggttttct gccggtgtgt tttttctcta tattctggta tttgtaattt
+     3301 ttaataccag actgactggc agtttagcgt ctctcagaaa acacagcatg gatatcactc
+     3361 ttaactctta tagtctgtta tctgatactg ttgataacat gatagcagct aaaaagaata
+     3421 atgcattaag acttatttct gaacgttatg aagatgctct cactcaggaa aacaatgctc
+     3481 agaaaaaata ctggttactc agttctaaag ttcttttatt gaactcttta cttgctgtaa
+     3541 tattatttgg ttctgtattc atatataata ttttaggtgt gctgaatggt gtagttagta
+     3601 tcggccactt cattatgatt acatcatata tcattcttct ttcaacgcca gtggaaaata
+     3661 taggggcatt gctaagtgag atcaggcagt caatgtctag cctggcaggt tttattcaac
+     3721 gtcatgccga gaataaagcc acatctcctt caataccttt tctcaacatg gagcgaaaat
+     3781 taaacctgtc cataagagag ctttcattta gctatagtga tgataaaaaa atacttaatt
+     3841 cagtcagtct tgaccttttt accggaaaaa tgtattcatt aaccggaccc agtggttcag
+     3901 gaaaatccac ccttgtaaaa ataatatcag gttactataa aaattacttt ggagacattt
+     3961 atctgaatga tatatcctta cgtaatatca gtgatgagga tttgaatgat gctatttact
+     4021 acctaacaca agatgattat atttttatgg atacactacg atttaatctc cggctcgcaa
+     4081 attacgacgc gtcagaaaat gaaatattta aagttcttaa actggcaaat ctttctgtcg
+     4141 tcaacaatga accagtgagt ctggatacac accttataaa cagaggcaat aactattcag
+     4201 gagggcaaaa acaacgaatt tcgttagcgc gactgttttt gagaaaacct gcaataatta
+     4261 ttattgatga agccacatcg gctctggatt atattaatga atcagaaatt ttatcatcaa
+     4321 taagaactca ttttcctgat gcgttaatta taaatattag tcaccgaata aatcttctgg
+     4381 agtgttccga ttgtgtttat gtattgaatg aaggaaatat tgttgcttct ggccatttca
+     4441 gggatttgat ggtcagcaat gaatacatat cgggactggc ttctgttact gaataaaata
+     4501 tctgactcct gctctgtatt cagaaaggga gtcgcttgga aaacggaatt tttcccacgt
+     4561 taagagaatt gggttgcacg agtggttaca tcccggcaag ctaagcccca gaatgtaagg
+     4621 gttgttcgaa atgctctgac cgtccgctaa tcgtttagct tacttcttcc gcacatcccc
+     4681 ttgcgtaaat gtacagaatt gtacgatttc ggacaccaaa accgctgttg tcccgccatt
+     4741 ctggctattc ctgaaagtta tttgactaaa aaatagtctt aacgtggttt attttccgaa
+     4801 ttc
+//

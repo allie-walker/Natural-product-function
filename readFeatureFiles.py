@@ -2,12 +2,82 @@
 """
 Created on Fri Aug 17 14:14:27 2018
 
-@author: allis
+@author: allison
 """
 
 import numpy as np
 from sklearn import linear_model
 import random
+import os
+import sys
+
+
+def getFeatureFilesList(dir_name):
+    """Get a list of all the feature types in the feature directory based on csv files
+    """
+    try:
+        file_list = os.listdir(dir_name)
+    except:
+        sys.exit("Feature directory not found")
+    
+    #get all csv
+    csv_files = [f for f in file_list if ".csv" in f]
+    
+    if len(csv_files) == 0:
+        sys.exit("No csv files found in directory")
+   
+    feature_type_list = [f[0:f.find(".csv")] for f in csv_files]
+    
+    return feature_type_list
+
+def readFeatures(dir_name, feature_type_list):
+    """Reads csv files from directory in order of feature_type_list
+    """
+    i = 0
+    for f in feature_type_list:
+        in_file = f + ".csv"
+        current_matrix = readFeatureMatrix(dir_name + in_file)
+        if i == 0:
+            features = current_matrix
+            i +=1
+        else:
+            features = np.concatenate((features, current_matrix), axis=1)
+    return features
+
+def readFeatureNames(dir_name, feature_type_list):
+    """Reads feature names from text files in directory in order of feature_type_list
+    """
+    i = 0
+    for f in feature_type_list:
+        in_file = f + "_list.txt"
+        try:
+            current_list = readFeatureList(dir_name + in_file)
+        except:
+            sys.exit("No matching label file found for " + f + ".csv, this label file should be called " + in_file)
+        if i == 0:
+            feature_list = current_list
+        else:
+            feature_list = feature_list + current_list
+        i += 1
+    return feature_list
+
+def readFeaturesByType(dir_name, feature_type_list):
+    """Reads features and returns a dictionary matching type to list of features
+    """
+    featureTypeDict = {}
+    for f in feature_type_list:
+        in_file = f + "_list.txt"
+        try:
+            current_list = readFeatureList(dir_name + in_file)
+        except:
+            sys.exit("No matching label file found for " + f + ".csv, this label file should be called " + in_file)
+        featureTypeDict[f] = current_list
+    return featureTypeDict
+
+#TODO: write this method
+def readClassifications(dir_name):
+    return
+
 
 def readFeatureMatrix(filename):
     in_file = open(filename,'r')

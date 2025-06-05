@@ -1,0 +1,1055 @@
+LOCUS       BGC0000275.1           13123 bp    DNA     linear   UNK 01-JAN-1980
+DEFINITION  Tetracenomycin biosynthetic gene cluster.
+ACCESSION   BGC0000275
+VERSION     BGC0000275.1
+KEYWORDS    .
+SOURCE      
+  ORGANISM  .
+            .
+COMMENT     ##antiSMASH-Data-START##
+            Version      :: 6.1.0
+            Run date     :: 2022-09-19 22:12:31
+            ##antiSMASH-Data-END##
+FEATURES             Location/Qualifiers
+     source          1..13123
+                     /db_xref="taxon:1907"
+                     /mol_type="genomic DNA"
+                     /organism="Streptomyces glaucescens"
+     protocluster    1..13123
+                     /aStool="rule-based-clusters"
+                     /category="PKS"
+                     /contig_edge="True"
+                     /core_location="[6778:9285]"
+                     /cutoff="20000"
+                     /detection_rule="(t2ks and t2clf)"
+                     /neighbourhood="35000"
+                     /product="T2PKS"
+                     /protocluster_number="1"
+                     /t2pks_malonyl_elongations="8|9 (Score: 657.9; E-value:
+                     1.1e-200)"
+                     /t2pks_molecular_weights="acetyl-CoA_8 (Da): 376.444"
+                     /t2pks_molecular_weights="acetyl-CoA_9 (Da): 418.481"
+                     /t2pks_product_classes="tetracenomycin"
+                     /t2pks_starter_units="acetyl-CoA (Score: 0.0; E-value: 0)"
+                     /tool="antismash"
+     proto_core      6779..9285
+                     /aStool="rule-based-clusters"
+                     /tool="antismash"
+                     /cutoff="20000"
+                     /detection_rule="(t2ks and t2clf)"
+                     /neighbourhood="35000"
+                     /product="T2PKS"
+                     /protocluster_number="1"
+                     /t2pks_malonyl_elongations="8|9 (Score: 657.9; E-value:
+                     1.1e-200)"
+                     /t2pks_molecular_weights="acetyl-CoA_8 (Da): 376.444"
+                     /t2pks_molecular_weights="acetyl-CoA_9 (Da): 418.481"
+                     /t2pks_product_classes="tetracenomycin"
+                     /t2pks_starter_units="acetyl-CoA (Score: 0.0; E-value: 0)"
+     cand_cluster    1..13123
+                     /SMILES=""
+                     /candidate_cluster_number="1"
+                     /contig_edge="True"
+                     /detection_rules="(t2ks and t2clf)"
+                     /kind="single"
+                     /product="T2PKS"
+                     /protoclusters="1"
+                     /tool="antismash"
+     region          1..13123
+                     /candidate_cluster_numbers="1"
+                     /contig_edge="True"
+                     /product="T2PKS"
+                     /region_number="1"
+                     /rules="(t2ks and t2clf)"
+                     /tool="antismash"
+     gene            complement(59..742)
+                     /gene="tcmR"
+     CDS             complement(59..>742)
+                     /codon_start=1
+                     /db_xref="GI:153489"
+                     /function="repressor of tetracenomycin C resistance and
+                     export gene"
+                     /gene="tcmR"
+                     /gene_functions="regulatory (smcogs) SMCOG1215:TetR family
+                     transcriptional regulator (Score: 155.2; E-value: 3.7e-47)"
+                     /gene_kind="regulatory"
+                     /note="smCOG tree PNG image: smcogs/tcmR.png"
+                     /product="tetracenomycin C resistance and export gene
+                     repressor"
+                     /protein_id="AAA67508.1"
+                     /transl_table=11
+                     /translation="RVDSAETDTPSTRSTPNGPGLRQRKLRRTRDQLIREALELFLAQG
+                     YEHTTVEQIAEAVEVHPRTFFRHFASKEEVALTPISAIDEAFLAALEVRPAGENPLQAM
+                     SGAFRAVLGRVRDGELEGVDGALHMAMMRLVERTPGLLAEYLRRSEEMEGRLARIIAAR
+                     EGVDLDDDFRPRFIVAVFKAVGRVVSREWYLRADTDLEALSVAFESALDSLRPELFADW
+                     RRPGA"
+     PFAM_domain     complement(95..439)
+                     /aSDomain="TetR_C_14"
+                     /aSTool="fullhmmer"
+                     /database="34.0"
+                     /db_xref="PF17754.3"
+                     /description="MftR C-terminal domain"
+                     /detection="hmmscan"
+                     /domain_id="fullhmmer_tcmR_0002"
+                     /evalue="3.80E-10"
+                     /label="tcmR"
+                     /locus_tag="tcmR"
+                     /protein_end="216"
+                     /protein_start="101"
+                     /score="39.8"
+                     /tool="antismash"
+                     /translation="QAMSGAFRAVLGRVRDGELEGVDGALHMAMMRLVERTPGLLAEYL
+                     RRSEEMEGRLARIIAAREGVDLDDDFRPRFIVAVFKAVGRVVSREWYLRADTDLEALSV
+                     AFESALDSLRP"
+     PFAM_domain     complement(515..646)
+                     /aSDomain="TetR_N"
+                     /aSTool="fullhmmer"
+                     /database="34.0"
+                     /db_xref="PF00440.25"
+                     /db_xref="GO:0003677"
+                     /description="Bacterial regulatory proteins, tetR family"
+                     /detection="hmmscan"
+                     /domain_id="fullhmmer_tcmR_0001"
+                     /evalue="4.50E-13"
+                     /gene_ontologies="GO:0003677: DNA binding"
+                     /label="tcmR"
+                     /locus_tag="tcmR"
+                     /protein_end="76"
+                     /protein_start="32"
+                     /score="48.8"
+                     /tool="antismash"
+                     /translation="LIREALELFLAQGYEHTTVEQIAEAVEVHPRTFFRHFASKEEVA"
+     CDS             878..2494
+                     /codon_start=1
+                     /db_xref="GI:153490"
+                     /gene="tcmA"
+                     /gene_functions="transport (smcogs) SMCOG1005:Drug
+                     resistance transporter, EmrB/QacA (Score: 395.9; E-value:
+                     3.1e-120)"
+                     /gene_kind="transport"
+                     /note="smCOG tree PNG image: smcogs/tcmA.png"
+                     /product="tetracenomycin C resistance and export protein"
+                     /protein_id="AAA67509.1"
+                     /transl_table=11
+                     /translation="MSTETHDEPSGVAHTPASGLRGRPWPTLLAVAVGVMMVALDSTIV
+                     AIANPAIQQDLHASLADVQWITNGYLLALAVSLITAGKLGDRFGHRQTFLVGVAGFAVT
+                     SAAIGLSGSVAAIVVFRVLQGLFGALMQPSALGLLRVTFPPGKLNMAIGIWSGVVGAST
+                     AAGPIIGGLLVQHVGWEAVFFINVPVGLAALVAGLVILTDARAERAPKSFDVSGIVLLS
+                     GAMFCLVWGLIKAPAWGWGDLRTLGFLAAAVLAFAGFTLRESRATEPLMPLAMFRSVPL
+                     SAGTVLMVLMAFSFIGGLFFVTFYLQNVHGMSPVESGVHLLPLTGMMIVGAPVSGIVIS
+                     RFGPGGPLVVGMLLTAASLWGMSTLEADSGMGITSLWFVLLGLGLAPVMVGTTDVIVSN
+                     APAELAGVAGGLQQSAMQVGGSLGTAVLGVLMASRVGDVFPDKWAEANLPRVGPREAAA
+                     IEDAAEVGAVPPAGTLPGRHAGTLSEVVHSSFISGMGLAFTVAGAVALVAAAVALFTRK
+                     AEPDERAPEEFPVPASTAGRG"
+     gene            878..2557
+                     /gene="tcmA"
+     aSDomain        959..2422
+                     /aSDomain="TIGR00711"
+                     /aSTool="tigrfam"
+                     /description="efflux_EmrB: drug resistance MFS transporter,
+                     drug:H+ antiporter-2 (14 Spanner) (DHA2) family"
+                     /detection="hmmscan"
+                     /domain_id="TIGRFam_tcmA_0001"
+                     /evalue="1.80E-83"
+                     /identifier="TIGR00711"
+                     /label="tcmA"
+                     /locus_tag="tcmA"
+                     /protein_end="515"
+                     /protein_start="27"
+                     /score="278.9"
+                     /tool="antismash"
+                     /translation="LLAVAVGVMMVALDSTIVAIANPAIQQDLHASLADVQWITNGYLL
+                     ALAVSLITAGKLGDRFGHRQTFLVGVAGFAVTSAAIGLSGSVAAIVVFRVLQGLFGALM
+                     QPSALGLLRVTFPPGKLNMAIGIWSGVVGASTAAGPIIGGLLVQHVGWEAVFFINVPVG
+                     LAALVAGLVILTDARAERAPKSFDVSGIVLLSGAMFCLVWGLIKAPAWGWGDLRTLGFL
+                     AAAVLAFAGFTLRESRATEPLMPLAMFRSVPLSAGTVLMVLMAFSFIGGLFFVTFYLQN
+                     VHGMSPVESGVHLLPLTGMMIVGAPVSGIVISRFGPGGPLVVGMLLTAASLWGMSTLEA
+                     DSGMGITSLWFVLLGLGLAPVMVGTTDVIVSNAPAELAGVAGGLQQSAMQVGGSLGTAV
+                     LGVLMASRVGDVFPDKWAEANLPRVGPREAAAIEDAAEVGAVPPAGTLPGRHAGTLSEV
+                     VHSSFISGMGLAFTVAGAVALVAAAVALFT"
+     PFAM_domain     971..2146
+                     /aSDomain="MFS_1"
+                     /aSTool="fullhmmer"
+                     /database="34.0"
+                     /db_xref="PF07690.18"
+                     /db_xref="GO:0022857"
+                     /db_xref="GO:0055085"
+                     /description="Major Facilitator Superfamily"
+                     /detection="hmmscan"
+                     /domain_id="fullhmmer_tcmA_0003"
+                     /evalue="2.50E-50"
+                     /gene_ontologies="GO:0022857: transmembrane transporter
+                     activity"
+                     /gene_ontologies="GO:0055085: transmembrane transport"
+                     /label="tcmA"
+                     /locus_tag="tcmA"
+                     /protein_end="423"
+                     /protein_start="31"
+                     /score="171.5"
+                     /tool="antismash"
+                     /translation="AVGVMMVALDSTIVAIANPAIQQDLHASLADVQWITNGYLLALAV
+                     SLITAGKLGDRFGHRQTFLVGVAGFAVTSAAIGLSGSVAAIVVFRVLQGLFGALMQPSA
+                     LGLLRVTFPPGKLNMAIGIWSGVVGASTAAGPIIGGLLVQHVGWEAVFFINVPVGLAAL
+                     VAGLVILTDARAERAPKSFDVSGIVLLSGAMFCLVWGLIKAPAWGWGDLRTLGFLAAAV
+                     LAFAGFTLRESRATEPLMPLAMFRSVPLSAGTVLMVLMAFSFIGGLFFVTFYLQNVHGM
+                     SPVESGVHLLPLTGMMIVGAPVSGIVISRFGPGGPLVVGMLLTAASLWGMSTLEADSGM
+                     GITSLWFVLLGLGLAPVMVGTTDVIVSNAPAELAGVAGGLQQSAMQVGGSLG"
+     terminator      2522..2557
+                     /gene="tcmA"
+                     /note="putative transcription terminator; putative"
+     gene            complement(2609..3424)
+                     /gene="tcmP"
+     CDS             complement(2609..>3424)
+                     /codon_start=1
+                     /db_xref="GI:153491"
+                     /function="putative O-methyltransferase for conversion of
+                     tetracenomycin E to tetracenomycin A2"
+                     /gene="tcmP"
+                     /gene_functions="biosynthetic-additional (t2pks) MET
+                     carboxy_O (Score: 277.5; E-value: 1.9e-85)"
+                     /gene_kind="biosynthetic-additional"
+                     /product="O-methyltransferase"
+                     /protein_id="AAA67510.1"
+                     /transl_table=11
+                     /translation="PMGETIRLTGVHETLLATLQARALDNRQPRPVLGDATAEELLRRI
+                     DYDFSRIRTATKDMRIVTFRARKLDEWAGRFLAVHPDAVVLHLACGLDSRAFRMDVPDT
+                     VEWIDVDVPDVIELRSRLYPERDGYRMIGASVTTEDWLDTVPRNRPALVVAEGLTPYLR
+                     EADGEEMLRRVIRHLPTGAVMFDAVLPWTLRFAKYSQLLRATGATFGWGIGNPRSLESR
+                     VPGLRFQEQWSMLDSPFLADARPVEKWVGAGMRSIPQLRFAHRLLRYTF"
+     misc_feature    complement(2747..2749)
+                     /note="tta leucine codon, possible target for bldA
+                     regulation"
+                     /tool="antismash"
+     PFAM_domain     complement(2906..3373)
+                     /aSDomain="LCM"
+                     /aSTool="fullhmmer"
+                     /database="34.0"
+                     /db_xref="PF04072.16"
+                     /db_xref="GO:0008168"
+                     /db_xref="GO:0032259"
+                     /description="Leucine carboxyl methyltransferase"
+                     /detection="hmmscan"
+                     /domain_id="fullhmmer_tcmP_0004"
+                     /evalue="1.80E-15"
+                     /gene_ontologies="GO:0008168: methyltransferase activity"
+                     /gene_ontologies="GO:0032259: methylation"
+                     /label="tcmP"
+                     /locus_tag="tcmP"
+                     /protein_end="173"
+                     /protein_start="17"
+                     /score="57.4"
+                     /tool="antismash"
+                     /translation="TLQARALDNRQPRPVLGDATAEELLRRIDYDFSRIRTATKDMRIV
+                     TFRARKLDEWAGRFLAVHPDAVVLHLACGLDSRAFRMDVPDTVEWIDVDVPDVIELRSR
+                     LYPERDGYRMIGASVTTEDWLDTVPRNRPALVVAEGLTPYLREADGEEMLRR"
+     gene            3954..5639
+                     /gene="tcmG"
+     CDS             3954..5639
+                     /codon_start=1
+                     /db_xref="GI:769829"
+                     /function="putative hydroxylase for conversion of
+                     tetracenomycin A2 to tetracenomycin C"
+                     /gene="tcmG"
+                     /gene_functions="biosynthetic-additional (smcogs)
+                     SMCOG1050:monooxygenase FAD-binding (Score: 414.9; E-value:
+                     9e-126)"
+                     /gene_functions="biosynthetic-additional (t2pks) OXY
+                     (Score: 312.0; E-value: 1.8e-95)"
+                     /gene_kind="biosynthetic-additional"
+                     /note="smCOG tree PNG image: smcogs/tcmG.png"
+                     /product="hydroxylase"
+                     /protein_id="AAA67511.1"
+                     /transl_table=11
+                     /translation="MSTEEVPVLIVGGGLTGLSAALFLSQHGVSCRLVEKHRGTTVLTR
+                     ASGISSRTMELLRGVGLERTVIERGPKLVEGARWRELGQPADQIPWVVIRANGLHDLEN
+                     AVTVEEPSLDVGHLSPTRPYWCGQDRLEPILRDEAVRRGARIDFNTRMEAFTADESGVT
+                     ATIVDQATGEQSTVRARYLIAADGVRSPVRETLGITRTGHGTIGNAMSVLFKADLRDTV
+                     KGRRFVICYLPNPDEPGVLQLPEVPAVLQLFDEDRWIFGFFFDPRETSPEQFTDERCAQ
+                     IIRTATGLPGLPVEVQMARPWEMSHNSARSYRSGRVFLAGDAAHVHPPAGAFGANGGIQ
+                     DAHNLAWKLAAVLKGTAGDALLDTYEQERLPIGAAVADQAWIRHTWRLNDSEELRRALR
+                     ESTLVATGYRYTSDAVLGAAYPEPIPAAHDLTGRPGYRVPHVWLGRGGERVSTVDLGGD
+                     AFVVLAGPDGGEWQAAADKVAQDLGVPVHCHPVGGDGQLTDPDGAFLGTTGLTRNGALL
+                     IRPDGFVAWRAEYLPEDAAGELRSALERILARTSGTPGGTALEG"
+     PFAM_domain     3966..5093
+                     /aSDomain="FAD_binding_3"
+                     /aSTool="fullhmmer"
+                     /database="34.0"
+                     /db_xref="PF01494.21"
+                     /db_xref="GO:0071949"
+                     /description="FAD binding domain"
+                     /detection="hmmscan"
+                     /domain_id="fullhmmer_tcmG_0005"
+                     /evalue="6.90E-119"
+                     /gene_ontologies="GO:0071949: FAD binding"
+                     /label="tcmG"
+                     /locus_tag="tcmG"
+                     /protein_end="380"
+                     /protein_start="4"
+                     /score="397.3"
+                     /tool="antismash"
+                     /translation="EVPVLIVGGGLTGLSAALFLSQHGVSCRLVEKHRGTTVLTRASGI
+                     SSRTMELLRGVGLERTVIERGPKLVEGARWRELGQPADQIPWVVIRANGLHDLENAVTV
+                     EEPSLDVGHLSPTRPYWCGQDRLEPILRDEAVRRGARIDFNTRMEAFTADESGVTATIV
+                     DQATGEQSTVRARYLIAADGVRSPVRETLGITRTGHGTIGNAMSVLFKADLRDTVKGRR
+                     FVICYLPNPDEPGVLQLPEVPAVLQLFDEDRWIFGFFFDPRETSPEQFTDERCAQIIRT
+                     ATGLPGLPVEVQMARPWEMSHNSARSYRSGRVFLAGDAAHVHPPAGAFGANGGIQDAHN
+                     LAWKLAAVLKGTAGDALLDTYEQERLPIGAAVADQA"
+     protein_bind    3987..4052
+                     /bound_moiety="FAD"
+                     /gene="tcmG"
+                     /note="binding site in TcmG protein; putative"
+     gene            5644..5982
+                     /gene="tcmH"
+     CDS             5644..5982
+                     /codon_start=1
+                     /db_xref="GI:153493"
+                     /function="required for conversion of tetracenomycin F2 to
+                     tetracenomycin D3; putative hydroxylase"
+                     /gene="tcmH"
+                     /product="hydroxylase"
+                     /protein_id="AAA67512.1"
+                     /transl_table=11
+                     /translation="MATISPSPDLFTLVNVFGVAPEKQRELRDHLVQVTEDLIRHMPGF
+                     VSATFHLSRDGEQVVNYAQWRSEADFRAMHADPRLQPHFDYCRSVSRPKPIFCEVTHSF
+                     GATSPEGA"
+     PFAM_domain     5674..5877
+                     /aSDomain="ABM"
+                     /aSTool="fullhmmer"
+                     /database="34.0"
+                     /db_xref="PF03992.18"
+                     /description="Antibiotic biosynthesis monooxygenase"
+                     /detection="hmmscan"
+                     /domain_id="fullhmmer_tcmH_0006"
+                     /evalue="1.80E-14"
+                     /label="tcmH"
+                     /locus_tag="tcmH"
+                     /protein_end="78"
+                     /protein_start="10"
+                     /score="53.7"
+                     /tool="antismash"
+                     /translation="FTLVNVFGVAPEKQRELRDHLVQVTEDLIRHMPGFVSATFHLSRD
+                     GEQVVNYAQWRSEADFRAMHADP"
+     gene            5985..6314
+                     /gene="tcmI"
+     CDS             5985..6314
+                     /codon_start=1
+                     /db_xref="GI:153494"
+                     /function="required for conversion of tetracenomycin F2 to
+                     tetracenomycin D3"
+                     /gene="tcmI"
+                     /gene_functions="biosynthetic-additional (smcogs)
+                     SMCOG1225:Polyketide synthesis cyclase (Score: 129.6;
+                     E-value: 7.4e-40)"
+                     /gene_functions="biosynthetic-additional (t2pks) CYC
+                     C4-C21/C2-C23|C2-C19 (Score: 161.0; E-value: 1.7e-50)"
+                     /gene_kind="biosynthetic-additional"
+                     /note="smCOG tree PNG image: smcogs/tcmI.png"
+                     /protein_id="AAA67513.1"
+                     /transl_table=11
+                     /translation="MAYRALMVLRMDPADAEHVAAAFAEHDTTELPLEIGVRRRVLFRF
+                     HDLYMHLIEADDDIMERLYQARSHPLFQEVNERVGQYLTPYAQDWEELKDSKAEVFYSW
+                     TAPDS"
+     PFAM_domain     5994..6299
+                     /aSDomain="Cyclase_polyket"
+                     /aSTool="fullhmmer"
+                     /database="34.0"
+                     /db_xref="PF04673.14"
+                     /db_xref="GO:0030639"
+                     /description="Polyketide synthesis cyclase"
+                     /detection="hmmscan"
+                     /domain_id="fullhmmer_tcmI_0007"
+                     /evalue="7.90E-35"
+                     /gene_ontologies="GO:0030639: polyketide biosynthetic
+                     process"
+                     /label="tcmI"
+                     /locus_tag="tcmI"
+                     /protein_end="105"
+                     /protein_start="3"
+                     /score="119.3"
+                     /tool="antismash"
+                     /translation="RALMVLRMDPADAEHVAAAFAEHDTTELPLEIGVRRRVLFRFHDL
+                     YMHLIEADDDIMERLYQARSHPLFQEVNERVGQYLTPYAQDWEELKDSKAEVFYSWT"
+     gene            6328..6777
+                     /gene="tcmJ"
+     CDS             6328..6777
+                     /codon_start=1
+                     /db_xref="GI:153495"
+                     /function="possibly required for conversion of
+                     tetracenomycin F2 to tetracenomycin D3"
+                     /gene="tcmJ"
+                     /gene_functions="biosynthetic-additional
+                     (rule-based-clusters) MannoseP_isomer"
+                     /gene_functions="biosynthetic-additional (t2pks) CYC C5-C18
+                     (Score: 203.5; E-value: 2.2e-63)"
+                     /gene_kind="biosynthetic-additional"
+                     /protein_id="AAA67514.1"
+                     /sec_met_domain="MannoseP_isomer (E-value: 1.1e-09,
+                     bitscore: 28.0, seeds: 17, tool: rule-based-clusters)"
+                     /transl_table=11
+                     /translation="MTTAQHEGEQTVAAAAKIAMSSVAPSHRQGGSTRALLTPSSVGAT
+                     SGFLGHIELAPGESVTEHYHPFSDKYLYLIEGSLVVRVNGEEVRLERDEALFVTRGQRH
+                     RIENRGNVPARVVFQISPLAPRPELGHVDTEPVPNPAAAPPKVGG"
+     PFAM_domain     6478..6678
+                     /aSDomain="Cupin_2"
+                     /aSTool="fullhmmer"
+                     /database="34.0"
+                     /db_xref="PF07883.13"
+                     /description="Cupin domain"
+                     /detection="hmmscan"
+                     /domain_id="fullhmmer_tcmJ_0008"
+                     /evalue="3.90E-18"
+                     /label="tcmJ"
+                     /locus_tag="tcmJ"
+                     /protein_end="117"
+                     /protein_start="50"
+                     /score="65.0"
+                     /tool="antismash"
+                     /translation="HIELAPGESVTEHYHPFSDKYLYLIEGSLVVRVNGEEVRLERDEA
+                     LFVTRGQRHRIENRGNVPARVV"
+     gene            6779..8059
+                     /gene="tcmK"
+     CDS             6779..8059
+                     /NRPS_PKS="Domain: PKS_KS(Iterative-KS) (8-393). E-value:
+                     4.8e-57. Score: 185.6. Matches aSDomain:
+                     nrpspksdomains_tcmK_PKS_KS.1"
+                     /NRPS_PKS="type: PKS/NRPS-like protein"
+                     /codon_start=1
+                     /db_xref="GI:153496"
+                     /gene="tcmK"
+                     /gene_functions="biosynthetic (rule-based-clusters) T2PKS:
+                     t2ks"
+                     /gene_functions="biosynthetic-additional (smcogs)
+                     SMCOG1022:Beta-ketoacyl synthase (Score: 484; E-value:
+                     6.6e-147)"
+                     /gene_functions="biosynthetic-additional (t2pks) KS (Score:
+                     759.2; E-value: 2.4e-231)"
+                     /gene_kind="biosynthetic"
+                     /note="putative; putative"
+                     /product="tetracenomycin polyketide synthase condensing
+                     enzyme"
+                     /protein_id="AAA67515.1"
+                     /sec_met_domain="t2ks (E-value: 1.2e-234, bitscore: 768.5,
+                     seeds: 25, tool: rule-based-clusters)"
+                     /transl_table=11
+                     /translation="MTRHAEKRVVITGIGVRAPGGAGTAAFWDLLTAGRTATRTISLFD
+                     AAPYRSRIAGEIDFDPIGEGLSPRQASTYDRATQLAVVCAREALKDSGLDPAAVNPERI
+                     GVSIGTAVGCTTGLDREYARVSEGGSRWLVDHTLAVEQLFDYFVPTSICREVAWEAGAE
+                     GPVTVVSTGCTSGLDAVGYGTELIRDGRADVVVCGATDAPISPITVACFDAIKATSANN
+                     DDPAHASRPFDRNRDGFVLGEGSAVFVLEELSAARRRGAHAYAEVRGFATRSNAFHMTG
+                     LKPDGREMAEAITAALDQARRTGDDLHYINAHGSGTRQNDRHETAAFKRSLGQRAYDVP
+                     VSSIKSMIGHSLGAIGSLELAACALAIEHGVIPPTANYEEPDPECDLDYVPNVAREQRV
+                     DTVLSVGSGFGGFQSAAVLARPKETRS"
+     PFAM_domain     6797..7546
+                     /aSDomain="ketoacyl-synt"
+                     /aSTool="fullhmmer"
+                     /database="34.0"
+                     /db_xref="PF00109.28"
+                     /description="Beta-ketoacyl synthase, N-terminal domain"
+                     /detection="hmmscan"
+                     /domain_id="fullhmmer_tcmK_0009"
+                     /evalue="1.10E-54"
+                     /label="tcmK"
+                     /locus_tag="tcmK"
+                     /protein_end="256"
+                     /protein_start="6"
+                     /score="185.8"
+                     /tool="antismash"
+                     /translation="KRVVITGIGVRAPGGAGTAAFWDLLTAGRTATRTISLFDAAPYRS
+                     RIAGEIDFDPIGEGLSPRQASTYDRATQLAVVCAREALKDSGLDPAAVNPERIGVSIGT
+                     AVGCTTGLDREYARVSEGGSRWLVDHTLAVEQLFDYFVPTSICREVAWEAGAEGPVTVV
+                     STGCTSGLDAVGYGTELIRDGRADVVVCGATDAPISPITVACFDAIKATSANNDDPAHA
+                     SRPFDRNRDGFVLGEGSAVFVLEELSAA"
+     aSDomain        6803..7957
+                     /ASF="found active site cysteine: True, scaffold matched
+                     GSSS: False"
+                     /ASF="found active site histidines: True"
+                     /aSDomain="PKS_KS"
+                     /aSTool="nrps_pks_domains"
+                     /database="nrpspksdomains.hmm"
+                     /detection="hmmscan"
+                     /domain_id="nrpspksdomains_tcmK_PKS_KS.1"
+                     /domain_subtype="Iterative-KS"
+                     /evalue="4.80E-57"
+                     /label="tcmK_PKS_KS.1"
+                     /locus_tag="tcmK"
+                     /protein_end="393"
+                     /protein_start="8"
+                     /score="185.6"
+                     /tool="antismash"
+                     /translation="VVITGIGVRAPGGAGTAAFWDLLTAGRTATRTISLFDAAPYRSRI
+                     AGEIDFDPIGEGLSPRQASTYDRATQLAVVCAREALKDSGLDPAAVNPERIGVSIGTAV
+                     GCTTGLDREYARVSEGGSRWLVDHTLAVEQLFDYFVPTSICREVAWEAGAEGPVTVVST
+                     GCTSGLDAVGYGTELIRDGRADVVVCGATDAPISPITVACFDAIKATSANNDDPAHASR
+                     PFDRNRDGFVLGEGSAVFVLEELSAARRRGAHAYAEVRGFATRSNAFHMTGLKPDGREM
+                     AEAITAALDQARRTGDDLHYINAHGSGTRQNDRHETAAFKRSLGQRAYDVPVSSIKSMI
+                     GHSLGAIGSLELAACALAIEHGVIPPTANYEEPDPECDLDYVPNV"
+     PFAM_domain     7568..7915
+                     /aSDomain="Ketoacyl-synt_C"
+                     /aSTool="fullhmmer"
+                     /database="34.0"
+                     /db_xref="PF02801.24"
+                     /description="Beta-ketoacyl synthase, C-terminal domain"
+                     /detection="hmmscan"
+                     /domain_id="fullhmmer_tcmK_0010"
+                     /evalue="6.30E-34"
+                     /label="tcmK"
+                     /locus_tag="tcmK"
+                     /protein_end="379"
+                     /protein_start="263"
+                     /score="116.6"
+                     /tool="antismash"
+                     /translation="YAEVRGFATRSNAFHMTGLKPDGREMAEAITAALDQARRTGDDLH
+                     YINAHGSGTRQNDRHETAAFKRSLGQRAYDVPVSSIKSMIGHSLGAIGSLELAACALAI
+                     EHGVIPPTANYE"
+     gene            8056..9285
+                     /gene="tcmL"
+     CDS             8056..9285
+                     /NRPS_PKS="Domain: PKS_KS(Iterative-KS) (9-406). E-value:
+                     2.1e-32. Score: 104.4. Matches aSDomain:
+                     nrpspksdomains_tcmL_PKS_KS.1"
+                     /NRPS_PKS="type: PKS/NRPS-like protein"
+                     /codon_start=1
+                     /db_xref="GI:153497"
+                     /function="required for tetracenomycin polyketide synthase;
+                     function unknown"
+                     /gene="tcmL"
+                     /gene_functions="biosynthetic (rule-based-clusters) T2PKS:
+                     t2clf"
+                     /gene_functions="biosynthetic-additional (smcogs)
+                     SMCOG1093:Beta-ketoacyl synthase (Score: 635.7; E-value:
+                     4.4e-193)"
+                     /gene_functions="biosynthetic-additional (t2pks) CLF 8|9
+                     (Score: 657.9; E-value: 1.1e-200)"
+                     /gene_kind="biosynthetic"
+                     /protein_id="AAA67516.1"
+                     /sec_met_domain="t2clf (E-value: 1.1e-193, bitscore: 633.1,
+                     seeds: 26, tool: rule-based-clusters)"
+                     /transl_table=11
+                     /translation="MSAPAPVVVTGLGIVAPNGTGTEEYWAATLAGKSGIDVIQRFDPH
+                     GYPVRVGGEVLAFDAAAHLPGRLLPQTDRMTQHALVAAEWALADAGLEPEKQDEYGLGV
+                     LTAAGAGGFEFGQREMQKLWGTGPERVSAYQSFAWFYAVNTGQISIRHGMRGHSSVFVT
+                     EQAGGLDAAAHAARLLRKGTLNTALTGGCEASLCPWGLVAQIPSGFLSEATDPHDAYLP
+                     FDARAAGYVPGEGGAMLVAERADSARERDAATVYGRIAGHASTFDARPGTGRPTGPARA
+                     IRLALEEARVAPEDVDVVYADAAGVPALDRAEAEALAEVFGPGAVPVTAPKTMTGRLYA
+                     GGAALDVATALLSIRDCVVPPTVGTGAPAPGLGIDLVLHQPRELRVDTALVVARGMGGF
+                     NSALVVRRHG"
+     PFAM_domain     8071..8790
+                     /aSDomain="ketoacyl-synt"
+                     /aSTool="fullhmmer"
+                     /database="34.0"
+                     /db_xref="PF00109.28"
+                     /description="Beta-ketoacyl synthase, N-terminal domain"
+                     /detection="hmmscan"
+                     /domain_id="fullhmmer_tcmL_0011"
+                     /evalue="2.90E-41"
+                     /label="tcmL"
+                     /locus_tag="tcmL"
+                     /protein_end="245"
+                     /protein_start="5"
+                     /score="141.8"
+                     /tool="antismash"
+                     /translation="PVVVTGLGIVAPNGTGTEEYWAATLAGKSGIDVIQRFDPHGYPVR
+                     VGGEVLAFDAAAHLPGRLLPQTDRMTQHALVAAEWALADAGLEPEKQDEYGLGVLTAAG
+                     AGGFEFGQREMQKLWGTGPERVSAYQSFAWFYAVNTGQISIRHGMRGHSSVFVTEQAGG
+                     LDAAAHAARLLRKGTLNTALTGGCEASLCPWGLVAQIPSGFLSEATDPHDAYLPFDARA
+                     AGYVPGEGGAMLVAERAD"
+     aSDomain        8083..9273
+                     /aSDomain="PKS_KS"
+                     /aSTool="nrps_pks_domains"
+                     /database="nrpspksdomains.hmm"
+                     /detection="hmmscan"
+                     /domain_id="nrpspksdomains_tcmL_PKS_KS.1"
+                     /domain_subtype="Iterative-KS"
+                     /evalue="2.10E-32"
+                     /label="tcmL_PKS_KS.1"
+                     /locus_tag="tcmL"
+                     /protein_end="406"
+                     /protein_start="9"
+                     /score="104.4"
+                     /tool="antismash"
+                     /translation="TGLGIVAPNGTGTEEYWAATLAGKSGIDVIQRFDPHGYPVRVGGE
+                     VLAFDAAAHLPGRLLPQTDRMTQHALVAAEWALADAGLEPEKQDEYGLGVLTAAGAGGF
+                     EFGQREMQKLWGTGPERVSAYQSFAWFYAVNTGQISIRHGMRGHSSVFVTEQAGGLDAA
+                     AHAARLLRKGTLNTALTGGCEASLCPWGLVAQIPSGFLSEATDPHDAYLPFDARAAGYV
+                     PGEGGAMLVAERADSARERDAATVYGRIAGHASTFDARPGTGRPTGPARAIRLALEEAR
+                     VAPEDVDVVYADAAGVPALDRAEAEALAEVFGPGAVPVTAPKTMTGRLYAGGAALDVAT
+                     ALLSIRDCVVPPTVGTGAPAPGLGIDLVLHQPRELRVDTALVVARGMGGFNSALVVR"
+     CDS_motif       8125..8247
+                     /aSTool="nrps_pks_domains"
+                     /database="abmotifs"
+                     /detection="hmmscan"
+                     /domain_id="nrpspksmotif_tcmL_0001"
+                     /evalue="7.80E-01"
+                     /label="PKSI-AT-M_m3"
+                     /locus_tag="tcmL"
+                     /protein_end="64"
+                     /protein_start="23"
+                     /score="1.6"
+                     /tool="antismash"
+                     /translation="EYWAATLAGKSGIDVIQRFDPHGYPVRVGGEVLAFDAAAHL"
+     CDS_motif       8722..8760
+                     /aSTool="nrps_pks_domains"
+                     /database="abmotifs"
+                     /detection="hmmscan"
+                     /domain_id="nrpspksmotif_tcmL_0002"
+                     /evalue="3.50E-04"
+                     /label="PKSI-KS_m4"
+                     /locus_tag="tcmL"
+                     /protein_end="235"
+                     /protein_start="222"
+                     /score="13.6"
+                     /tool="antismash"
+                     /translation="FDARAAGYVPGEG"
+     PFAM_domain     8821..9147
+                     /aSDomain="Ketoacyl-synt_C"
+                     /aSTool="fullhmmer"
+                     /database="34.0"
+                     /db_xref="PF02801.24"
+                     /description="Beta-ketoacyl synthase, C-terminal domain"
+                     /detection="hmmscan"
+                     /domain_id="fullhmmer_tcmL_0012"
+                     /evalue="3.10E-21"
+                     /label="tcmL"
+                     /locus_tag="tcmL"
+                     /protein_end="364"
+                     /protein_start="255"
+                     /score="75.7"
+                     /tool="antismash"
+                     /translation="YGRIAGHASTFDARPGTGRPTGPARAIRLALEEARVAPEDVDVVY
+                     ADAAGVPALDRAEAEALAEVFGPGAVPVTAPKTMTGRLYAGGAALDVATALLSIRDCVV
+                     PPTVG"
+     gene            9358..9609
+                     /gene="tcmM"
+     CDS             9358..9609
+                     /NRPS_PKS="Domain: PP-binding (7-66). E-value: 9.6e-12.
+                     Score: 37.2. Matches aSDomain:
+                     nrpspksdomains_tcmM_PP-binding.1"
+                     /NRPS_PKS="type: other"
+                     /codon_start=1
+                     /db_xref="GI:153498"
+                     /function="acyl carrier protein for tetracenomycin
+                     polyketide synthase"
+                     /gene="tcmM"
+                     /gene_functions="biosynthetic-additional
+                     (rule-based-clusters) PP-binding"
+                     /gene_functions="biosynthetic-additional (smcogs)
+                     SMCOG1129:acyl carrier protein (Score: 90.8; E-value:
+                     7.2e-28)"
+                     /gene_functions="biosynthetic-additional (t2pks) ACP
+                     (Score: 89.8; E-value: 2e-28)"
+                     /gene_kind="biosynthetic-additional"
+                     /product="acyl carrier protein"
+                     /protein_id="AAA67517.1"
+                     /sec_met_domain="PP-binding (E-value: 2.1e-12, bitscore:
+                     37.2, seeds: 164, tool: rule-based-clusters)"
+                     /transl_table=11
+                     /translation="MPQIGLPRLVEIIRECAGDPDERDLDGDILDVTYQDLGYDSIALL
+                     EISAKLEQDLGVSIPGEELKTPRHTLHLVNTETAGEVA"
+     PFAM_domain     9379..9552
+                     /aSDomain="PP-binding"
+                     /aSTool="fullhmmer"
+                     /database="34.0"
+                     /db_xref="PF00550.27"
+                     /description="Phosphopantetheine attachment site"
+                     /detection="hmmscan"
+                     /domain_id="fullhmmer_tcmM_0013"
+                     /evalue="1.70E-09"
+                     /label="tcmM"
+                     /locus_tag="tcmM"
+                     /protein_end="65"
+                     /protein_start="7"
+                     /score="38.0"
+                     /tool="antismash"
+                     /translation="RLVEIIRECAGDPDERDLDGDILDVTYQDLGYDSIALLEISAKLE
+                     QDLGVSIPGEELK"
+     aSDomain        9379..9555
+                     /aSDomain="PP-binding"
+                     /aSTool="nrps_pks_domains"
+                     /database="nrpspksdomains.hmm"
+                     /detection="hmmscan"
+                     /domain_id="nrpspksdomains_tcmM_PP-binding.1"
+                     /evalue="9.60E-12"
+                     /label="tcmM_PP-binding.1"
+                     /locus_tag="tcmM"
+                     /protein_end="66"
+                     /protein_start="7"
+                     /score="37.2"
+                     /tool="antismash"
+                     /translation="RLVEIIRECAGDPDERDLDGDILDVTYQDLGYDSIALLEISAKLE
+                     QDLGVSIPGEELKT"
+     CDS             9611..11095
+                     /NRPS_PKS="Domain: Polyketide_cyc (10-140). E-value:
+                     7.4e-17. Score: 53.6. Matches aSDomain:
+                     nrpspksdomains_tcmN_Polyketide_cyc.1"
+                     /NRPS_PKS="type: other"
+                     /codon_start=1
+                     /db_xref="GI:153499"
+                     /function="O-methyltransferase"
+                     /function="putative polyketide cyclase"
+                     /gene="tcmN"
+                     /gene_functions="biosynthetic-additional (smcogs)
+                     SMCOG1042:O-methyltransferase (Score: 290.4; E-value:
+                     3.1e-88)"
+                     /gene_functions="biosynthetic-additional (t2pks) CYC C9-C14
+                     (Score: 240.4; E-value: 1.4e-74)"
+                     /gene_functions="biosynthetic-additional (t2pks) MET C11O
+                     (Score: 546.0; E-value: 6.7e-167)"
+                     /gene_kind="biosynthetic-additional"
+                     /note="possible internal translational start site at
+                     position 9950; SAM binding site at position 10617 to 10636"
+                     /protein_id="AAA67518.1"
+                     /transl_table=11
+                     /translation="MAARTDNSIVVNAPFELVWDVTNDIEAWPELFSEYAEAEILRQDG
+                     DGFDFRLKTRPDANGRVWEWVSHRVPDKGSRTVRAHRVETGPFAYMNLHWTYRAVAGGT
+                     EMRWVQEFDMKPGAPFDNAHMTAHLNTTTRANMERIKKIIEDRHREGQRTPASVLPTEL
+                     HAQQLLLLAASGRLARIVHVLTELRIADLLADGPRHVAELAKETDTHELSLYRVLRSAA
+                     SVGVFAEGPVRTFSATPLSDGLRTGNPDGVLPLVKYNNMELTRRPYDEIMHSVRTGEPA
+                     FRRVFGSSFFEHLEANPEAGEFFERFMAHWSRRLVLDGLADQGMERFSRIADLGGGDGW
+                     FLAQILRRHPHATGLLMDLPRVAASAGPVLEEAKVADRVTVLPGDFFTDPVPTGYDAYL
+                     FKGVLHNWSDERAVTVLRRVREAIGDDDARLLIFDQVMAPENEWDHAKLLDIDMLVLFG
+                     GRERVLAEWRQLLLEADFDIVNTPSHTWTTLECRPV"
+     gene            9611..11149
+                     /gene="tcmN"
+     aSDomain        9641..10030
+                     /aSDomain="Polyketide_cyc"
+                     /aSTool="nrps_pks_domains"
+                     /database="nrpspksdomains.hmm"
+                     /detection="hmmscan"
+                     /domain_id="nrpspksdomains_tcmN_Polyketide_cyc.1"
+                     /domain_subtype="Polyketide_cyc"
+                     /evalue="7.40E-17"
+                     /label="tcmN_Polyketide_cyc.1"
+                     /locus_tag="tcmN"
+                     /protein_end="140"
+                     /protein_start="10"
+                     /score="53.6"
+                     /tool="antismash"
+                     /translation="VNAPFELVWDVTNDIEAWPELFSEYAEAEILRQDGDGFDFRLKTR
+                     PDANGRVWEWVSHRVPDKGSRTVRAHRVETGPFAYMNLHWTYRAVAGGTEMRWVQEFDM
+                     KPGAPFDNAHMTAHLNTTTRANMERI"
+     PFAM_domain     9641..10030
+                     /aSDomain="Polyketide_cyc"
+                     /aSTool="fullhmmer"
+                     /database="34.0"
+                     /db_xref="PF03364.22"
+                     /description="Polyketide cyclase / dehydrase and lipid
+                     transport"
+                     /detection="hmmscan"
+                     /domain_id="fullhmmer_tcmN_0014"
+                     /evalue="2.60E-14"
+                     /label="tcmN"
+                     /locus_tag="tcmN"
+                     /protein_end="140"
+                     /protein_start="10"
+                     /score="53.6"
+                     /tool="antismash"
+                     /translation="VNAPFELVWDVTNDIEAWPELFSEYAEAEILRQDGDGFDFRLKTR
+                     PDANGRVWEWVSHRVPDKGSRTVRAHRVETGPFAYMNLHWTYRAVAGGTEMRWVQEFDM
+                     KPGAPFDNAHMTAHLNTTTRANMERI"
+     PFAM_domain     10412..11038
+                     /aSDomain="Methyltransf_2"
+                     /aSTool="fullhmmer"
+                     /database="34.0"
+                     /db_xref="PF00891.20"
+                     /db_xref="GO:0008171"
+                     /description="O-methyltransferase domain"
+                     /detection="hmmscan"
+                     /domain_id="fullhmmer_tcmN_0015"
+                     /evalue="8.50E-38"
+                     /gene_ontologies="GO:0008171: O-methyltransferase activity"
+                     /label="tcmN"
+                     /locus_tag="tcmN"
+                     /protein_end="476"
+                     /protein_start="267"
+                     /score="129.9"
+                     /tool="antismash"
+                     /translation="YDEIMHSVRTGEPAFRRVFGSSFFEHLEANPEAGEFFERFMAHWS
+                     RRLVLDGLADQGMERFSRIADLGGGDGWFLAQILRRHPHATGLLMDLPRVAASAGPVLE
+                     EAKVADRVTVLPGDFFTDPVPTGYDAYLFKGVLHNWSDERAVTVLRRVREAIGDDDARL
+                     LIFDQVMAPENEWDHAKLLDIDMLVLFGGRERVLAEWRQLLLEADF"
+     terminator      11121..11149
+                     /gene="tcmN"
+                     /note="potential; putative"
+     gene            11192..12211
+                     /gene="tcmO"
+     CDS             11192..12211
+                     /codon_start=1
+                     /db_xref="GI:153500"
+                     /function="putative O-methyltransferase for conversion of
+                     tetracenomycin B3 to tetracenomycin E"
+                     /gene="tcmO"
+                     /gene_functions="biosynthetic-additional (smcogs)
+                     SMCOG1042:O-methyltransferase (Score: 272; E-value:
+                     1.2e-82)"
+                     /gene_functions="biosynthetic-additional (t2pks) MET
+                     C13O|C17O (Score: 433.2; E-value: 1.3e-132)"
+                     /gene_kind="biosynthetic-additional"
+                     /note="smCOG tree PNG image: smcogs/tcmO.png"
+                     /product="O-methyltransferase"
+                     /protein_id="AAA67519.1"
+                     /transl_table=11
+                     /translation="MTPHTHVRGPGDILQLTMAFYGSRALISAVELDLFTLLAGKPLPL
+                     GELCERAGIHPRGARDFLDALVALGLLEREGEDTYRNSPAADRHLDRRKPGYVGGYARL
+                     ADTKLFPVWARLTEALRTGEKQVPSQGGFFGGYADPEAARGFLGAMDAVNGGVGHSLAG
+                     ALDWTEYSSFVDLGGARGNLAAHLHRAHPHLRATCFDLPEMEPFFQEHMKSLETTDQVR
+                     FAGGDFFTDPLPRADVFIVGHILHYFGLRQREALIARIHQALTPGGAVLVYDRMIDDDR
+                     RSAALSLLGSLNMLLTSDEGREYTPAECVRWLSDAGFTDVRTTAVSGPDTLAIGRKPR"
+     PFAM_domain     11228..11470
+                     /aSDomain="Dimerisation2"
+                     /aSTool="fullhmmer"
+                     /database="34.0"
+                     /db_xref="PF16864.7"
+                     /description="Dimerisation domain"
+                     /detection="hmmscan"
+                     /domain_id="fullhmmer_tcmO_0016"
+                     /evalue="5.70E-15"
+                     /label="tcmO"
+                     /locus_tag="tcmO"
+                     /protein_end="93"
+                     /protein_start="12"
+                     /score="55.2"
+                     /tool="antismash"
+                     /translation="ILQLTMAFYGSRALISAVELDLFTLLAGKPLPLGELCERAGIHPR
+                     GARDFLDALVALGLLEREGEDTYRNSPAADRHLDRR"
+     PFAM_domain     11528..12145
+                     /aSDomain="Methyltransf_2"
+                     /aSTool="fullhmmer"
+                     /database="34.0"
+                     /db_xref="PF00891.20"
+                     /db_xref="GO:0008171"
+                     /description="O-methyltransferase domain"
+                     /detection="hmmscan"
+                     /domain_id="fullhmmer_tcmO_0017"
+                     /evalue="7.40E-33"
+                     /gene_ontologies="GO:0008171: O-methyltransferase activity"
+                     /label="tcmO"
+                     /locus_tag="tcmO"
+                     /protein_end="318"
+                     /protein_start="112"
+                     /score="113.7"
+                     /tool="antismash"
+                     /translation="WARLTEALRTGEKQVPSQGGFFGGYADPEAARGFLGAMDAVNGGV
+                     GHSLAGALDWTEYSSFVDLGGARGNLAAHLHRAHPHLRATCFDLPEMEPFFQEHMKSLE
+                     TTDQVRFAGGDFFTDPLPRADVFIVGHILHYFGLRQREALIARIHQALTPGGAVLVYDR
+                     MIDDDRRSAALSLLGSLNMLLTSDEGREYTPAECVRWLSDAGF"
+ORIGIN
+        1 gcggccgccc cctcgggggc ctggcgcccc gtcagccacc cgggggtctg acgctccgtc
+       61 aggcccccgg gcgccgccag tcggcgaaca actccggccg cagcgagtcc agagcggact
+      121 cgaacgccac ggagagcgcc tccagatccg tgtcggcgcg caggtaccac tcccggctga
+      181 cgacgcggcc gaccgccttg aacaccgcca cgatgaaccg cggacggaag tcgtcgtcca
+      241 ggtcgacgcc ctcacgcgcg gcgatgatcc gggcgagtcg gccctccatc tcctcgctgc
+      301 gccgcaggta ctccgcgagg agcccggggg tgcgctcgac cagccgcatc atcgccatgt
+      361 gcaacgcgcc gtccacgccc tccagttcac cgtcgcgcac gcgcccaagg acggcccgga
+      421 aggcaccgct catggcctgc agcgggttct cgcccgccgg ccggacctcc agcgcggcga
+      481 ggaacgcctc gtcgatggcg ctgatggggg tgagggccac ctcctccttg ctggcgaagt
+      541 ggcggaagaa cgtgcgcgga tgcacctcga ccgcctcggc gatctgctcc acggtcgtgt
+      601 gctcgtaacc ctgcgccagg aacagctcca gggcctcgcg gatcagctga tcacgcgtac
+      661 ggcgcagctt ccgctggcgc aggccggggc cgttgggggt gctgcgggtg ctgggggtgt
+      721 cggtttcggc ggagtccacc cgccaaccct atcttgcgcc acctggtgac acctgcatgc
+      781 gattgtcaaa tgtcactgac tgctgttagc ttcggggcca tgttctcctc gtcacacacg
+      841 cgtccgtcct gccggaaatc gttaggggga cgctgaaatg agcacggaaa cgcacgacga
+      901 gccgtcaggc gtcgcacaca cccccgcttc cggtctgcgt ggacgtccct ggccgaccct
+      961 gctcgcggtc gcggtcggcg tgatgatggt ggctctggac agcaccatcg tcgccatcgc
+     1021 caacccggcc atccagcagg acctccacgc ctcgctggcc gatgtgcagt ggatcaccaa
+     1081 cggctacctg ctggcgctcg cggtctccct gatcaccgcc ggcaaactgg gcgacaggtt
+     1141 cgggcaccgg cagaccttcc tggtcggagt ggcgggcttc gccgtcacct ccgcggccat
+     1201 cggcctgtcc ggcagcgtcg cggcgatcgt cgtcttccgc gttctccagg gcctgttcgg
+     1261 cgctctgatg cagccgtcgg cgctgggcct gctgcgggtc acgttcccgc ccggcaagct
+     1321 caacatggcg atcggcatct ggagcggcgt ggtcggcgcc tcgaccgcag ccggaccgat
+     1381 catcggcggg ctcctggtgc agcacgtcgg ctgggaggcg gtcttcttca tcaatgtgcc
+     1441 ggtcggcctc gcggcactcg tcgccggcct cgtcatcctg accgacgcgc gcgccgaacg
+     1501 cgccccgaag tccttcgacg tctccggcat cgtgctcctg tccggggcca tgttctgcct
+     1561 ggtgtggggt ctgatcaagg ctccggcctg gggctggggc gacctgcgga cgctgggctt
+     1621 cctggccgcc gccgtgctcg ccttcgccgg attcacactg cgggagagca gggccaccga
+     1681 gccgctgatg ccgctcgcca tgttccgttc cgtgccgctg tccgcgggca ccgtgctcat
+     1741 ggtcctgatg gcgttctcgt tcatcggcgg actcttcttc gtcaccttct acctgcagaa
+     1801 cgtccatggc atgagcccgg tcgagagcgg tgtgcacctg ctgccgctca ccggcatgat
+     1861 gatcgtcggc gcccccgtgt ccggcatcgt gatcagccgg ttcggaccag gcgggccgct
+     1921 ggtggtgggc atgctcctga cggcggcgtc cctgtggggg atgtcgacgc tggaagcgga
+     1981 cagcggtatg gggatcacct cgctctggtt cgtgctgctg ggtctcggtc tcgcgccggt
+     2041 gatggtgggg acgacggacg tcatcgtcag caacgccccg gccgaactgg ccggtgtggc
+     2101 cggtggtctt cagcagtccg cgatgcaggt cggcggaagt ctcggcaccg ccgtactcgg
+     2161 tgtcctcatg gcctcccggg tcggcgacgt cttccccgac aagtgggcgg aggcgaacct
+     2221 gccgcgggtg ggtccgcggg aggccgcggc gatcgaggac gcggccgagg tgggagccgt
+     2281 cccgccggcc ggcaccctcc ccggccggca cgccgggacg ctctccgagg tggtccactc
+     2341 ctcgttcatc tcggggatgg ggctggcctt caccgtggcc ggtgccgtcg cgctcgtggc
+     2401 cgccgccgtc gccctgttca ccaggaaggc cgagcccgac gagagggccc cggaggaatt
+     2461 cccggtcccg gcgtccacgg cagggcgggg ctgaaagcct cggtccctgt ccgccggtga
+     2521 atgccggcgg ggtccggtcc ggcggacccc gccggcaccg ctgtttccgc gatgcccgaa
+     2581 cggaggggac ggaggaaaag tcccggaatc agaaggtgta acgcagcagc cggtgtgcga
+     2641 aacgcagttg cggaatgctg cgcatgccgg ctcccaccca tttctcgacg gggcgggcgt
+     2701 cggcgagaaa cggggaatcg agcatggacc actgctcctg gaaccgtaat cccggcaccc
+     2761 tgctctccag ggagcgggga tttccgattc cccatccgaa ggtggcgccc gtggcgcgca
+     2821 gaagttgtga atatttggcg aatcgaaggg tccacgggag tacggcgtcg aacatgaccg
+     2881 cacccgtcgg aaggtgccgg atcacccgcc ggagcatttc ctctccgtct gcttcccgga
+     2941 gatagggcgt cagcccttcg gcgaccacga gcgccggccg gttgcggggc accgtgtcca
+     3001 gccagtcctc cgtggtgacc gacgctccga tcatccggta tccgtcgcgt tcgggataga
+     3061 gccggctcct cagttcgatg acgtccggga cgtcgacgtc gatccattcc actgtgtcgg
+     3121 gcacgtccat ccggaatgcc cggctgtcca gcccgcatgc gaggtgcagc accaccgcgt
+     3181 ccggatggac cgcgaggaat cgaccggccc actcgtcgag cttcctggcg cggaacgtca
+     3241 cgatccgcat gtccttggtg gctgttctga tgcggctgaa gtcgtagtcg atgcggcgca
+     3301 gcagctcctc cgccgtcgcg tcccccagca cgggtcgcgg ttgtcgattg tccagggcac
+     3361 gggcctgaag tgtggcgagc agcgtctcgt gtacgccggt cagccggatc gtttcaccca
+     3421 tgggacagca gcttccgagg gggcaccgcg tgacgtcaag agaccccctc ggcgggccgt
+     3481 ggcgaaaaga tctggacaca ttgccgtacg caaagtcggg acacttccag gtattcctcg
+     3541 ccaaacagcg ggagcgttcg gccaggcgct tggctcgatc tgatcaacat gtcggaggga
+     3601 ggcgccgtcg cggacggcct gatctttgtc gtcggaaagg taaggggatc gccaagaggt
+     3661 aaaggattca tagggcatgt tcaaaagcat cggtcatcaa aaagggggtt cgtgtttaac
+     3721 tccggagagt cgagggtata catgcccatc aattttccgg tccacttctg accgagtgtc
+     3781 agtgacatct atccggtctc cccgccgaag attgttcgat gttgactcga cggaccggaa
+     3841 gatgttcatc tggatgagcc aagtgccgct ctgctcgtcg gcccgagcaa atccccgatc
+     3901 tcatcgcagg gatgactcgt gtgcccgttt ccgaccgacc gaaaggctgc atcttgtcca
+     3961 ctgaagaagt tccggtactg atagtcggcg gaggtcttac cggactgtcc gcggcactgt
+     4021 tcctcagtca gcacggagtt tcctgccgcc tggtggagaa gcaccgggga accacggtcc
+     4081 tgacccgggc ctcggggatc agctcccgca cgatggaact gttgcggggc gtcggcctgg
+     4141 aacggaccgt gatcgagcgc gggccgaaac tcgtcgaggg agcccgctgg cgggagctcg
+     4201 gccagccggc ggaccagatc ccctgggtcg tcatccgggc caacggcctg cacgacctgg
+     4261 agaacgcggt gaccgtcgag gaaccctcgc tcgacgtcgg ccacctcagc cccacccgcc
+     4321 cctactggtg cgggcaggac cggctggaac ccatcctccg cgacgaggcc gtccgccgtg
+     4381 gggcccgcat cgacttcaac acccgcatgg aggcgttcac ggcggacgag agcggggtca
+     4441 ccgccacgat cgtcgaccag gccaccggcg agcagagcac ggtccgcgcc cggtacctga
+     4501 tcgcggcgga cggggtgcgc agcccggtgc gggagacgct ggggatcacg cgcaccgggc
+     4561 acggcacgat cggcaacgcc atgagcgtcc tgttcaaggc ggacctgcgg gacaccgtca
+     4621 agggccggcg cttcgtcatc tgctacctgc cgaaccccga cgagcccggc gtcctccagc
+     4681 tcccggaggt gccggccgtc ctccagctct tcgacgagga ccgctggatc ttcggcttct
+     4741 tcttcgaccc ccgcgagacc tcgcccgagc agttcaccga cgagcgctgc gcgcagatca
+     4801 tccggaccgc gaccgggctc cccggcctcc cggtcgaggt gcagatggcc aggccctggg
+     4861 agatgtccca caacagtgcc cgctcctacc gcagcggccg ggtcttcctg gccggcgacg
+     4921 ccgcccacgt gcacccaccg gccggtgcct tcggagcgaa cggcggtatc caggacgccc
+     4981 acaacctggc ctggaagctg gcggccgtcc tgaagggaac ggccggcgac gccctgctcg
+     5041 acacctacga gcaggaacgc ctgccgatcg gtgccgccgt cgccgaccag gcgtggatcc
+     5101 ggcacacctg gaggctgaac gactccgagg agctgcgccg cgcgctgcgc gagtcgacgc
+     5161 tggtcgccac cggttaccgg tacacctccg acgcggtcct cggtgccgcc tacccggagc
+     5221 ccatccccgc ggcgcacgac ctcaccggcc ggccggggta ccgcgtgccc cacgtctggc
+     5281 tgggccgggg cggggagcgc gtctcgacgg tcgacctcgg cggggacgcg ttcgtcgtgc
+     5341 tcgccgggcc ggacggaggc gagtggcagg ccgcggccga caaggtcgcg caggacctgg
+     5401 gcgtgccggt gcactgccac ccggtgggcg gcgacgggca actgaccgat cccgacggcg
+     5461 cgttcctcgg caccacgggc ctcacccgga acggggcgct gctgatccgg ccggacggct
+     5521 tcgtggcgtg gcgggccgag tacctgccgg aggacgccgc cggggagctg cggtccgcac
+     5581 tggagcggat cctggcgcgg acctccggca cgcccggcgg cacggcgctg gagggctgac
+     5641 cgcatggcga ccatctcccc ctcgccggac ctgttcaccc tcgtcaacgt cttcggcgtc
+     5701 gcccccgaga agcagcggga actgcgcgac cacctggtgc aggtgaccga ggacctgatc
+     5761 cggcacatgc cgggtttcgt ctccgcgacc ttccacctca gccgcgacgg cgaacaggtc
+     5821 gtcaactacg cacagtggcg gtcggaggcc gacttccgcg ccatgcacgc cgacccgcgg
+     5881 ctgcagcccc acttcgacta ctgccggtcc gtgtcccggc cgaagccgat cttctgcgag
+     5941 gtcacccact ccttcggcgc cacgtcaccg gagggagcgt gaccatggcc taccgggcac
+     6001 tgatggtcct gcgcatggac ccggcggacg cggagcacgt ggcagccgcc ttcgccgagc
+     6061 acgacacgac cgaactgccg ctggagatcg gggtgcgacg gcgggtcctg ttccgcttcc
+     6121 acgatctgta catgcacctc atcgaggccg acgacgacat catggagcgg ctctaccagg
+     6181 cgcgcagcca cccgctgttc caggaggtca acgagcgcgt ggggcagtac ctcacgccgt
+     6241 acgcgcagga ctgggaggag ctgaaggact ccaaggcgga ggtcttctac agctggaccg
+     6301 cccccgactc ctgaccgccg gccatccgtg accaccgctc agcacgaagg agaacagacc
+     6361 gtggcagccg ccgccaagat cgccatgtcc agtgtggcgc ccagtcaccg gcaggggggc
+     6421 agcacccgcg ccctgctgac gccgtcgtcg gtgggtgcga cctccggatt cctcggccac
+     6481 atcgaactgg cgcccgggga gtccgtcacc gagcactacc acccgttctc ggacaagtac
+     6541 ctgtacctga tcgaagggag cctcgtggtc cgggtgaacg gcgaggaggt gcgcctggag
+     6601 cgggacgagg ccctgttcgt gacccggggc cagcggcacc gcatcgagaa ccgaggaaac
+     6661 gttcctgcac gggtggtctt ccagatctcg ccgctcgccc cgcggcccga actcggccat
+     6721 gtcgacaccg agcccgtgcc gaacccggcg gcggcgccgc cgaaggtggg aggctgagat
+     6781 gacccggcac gcggagaagc gggtggtgat caccggcatc ggtgtgcgag ccccgggagg
+     6841 cgccggaacc gcggccttct gggacctgct caccgccgga cgcaccgcca ccaggacgat
+     6901 ctccctgttc gacgccgcgc cctaccggtc ccggatagcc ggagagatcg acttcgaccc
+     6961 gatcggcgag ggcctgtcgc cccggcaggc gtcgacgtac gaccgggcca cgcagctcgc
+     7021 cgtcgtctgc gcccgcgagg cgctgaagga cagcgggctg gacccggccg cggtgaaccc
+     7081 ggaacggatc ggggtgagca tcggcaccgc cgtcggctgc accaccggcc tcgaccgcga
+     7141 gtacgcgcgg gtcagcgagg gcggctcgcg ctggctggtc gaccacacgc tcgcggtgga
+     7201 gcagctcttc gactacttcg tcccgacctc catctgccgg gaggtcgcct gggaggcggg
+     7261 ggccgaggga ccggtgacgg tggtgtcgac cgggtgcacc tcgggcctcg acgccgtcgg
+     7321 atacggcacg gagctcatcc gggacgggcg cgccgacgtg gtcgtctgcg gcgccaccga
+     7381 cgcgccgatc tcccccatca ccgtggcctg cttcgacgcc atcaaggcga cgtcggccaa
+     7441 caacgacgac ccggcccacg cctcccgccc cttcgaccgc aaccgcgacg gcttcgtgct
+     7501 cggggagggc tcggcggtct tcgtcctgga ggagctgtcc gccgcccgcc ggcgaggagc
+     7561 gcacgcctac gcggaggtcc gcggcttcgc cacacggtcg aacgccttcc acatgaccgg
+     7621 tctgaagccg gacggcaggg agatggcgga ggccatcacc gccgccctgg accaggcccg
+     7681 ccgcaccggc gacgacctgc actacatcaa cgcgcacggc tccggcaccc ggcagaacga
+     7741 ccggcacgag acggcggcct tcaagcgcag cctggggcaa cgggcgtacg acgtgcccgt
+     7801 cagctccatc aagtccatga tcggccactc gctcggagcg atcggctccc tcgaactggc
+     7861 cgcctgcgcg ctggcgatcg aacacggcgt gatcccgccc accgccaact acgaggaacc
+     7921 cgaccccgaa tgcgacctcg actacgtgcc gaacgtcgcg cgggaacagc gggtcgacac
+     7981 cgtgctcagc gtcggcagcg gattcggcgg cttccagagc gccgcggtgc tggcccggcc
+     8041 gaaggagacc cgctcatgag cgcgccggcc cccgtcgtgg tcaccggcct gggcatcgtg
+     8101 gcacccaacg gcaccggcac cgaggagtac tgggcggcca cgctcgccgg caagagcggc
+     8161 atcgacgtca tccagcggtt cgacccccac ggctaccccg tccgggtggg aggcgaggtg
+     8221 ctggccttcg acgccgccgc ccatctcccc gggcgcctgc tgccgcagac cgaccgcatg
+     8281 acccagcacg ccctggtggc cgccgaatgg gccctggccg acgccgggct ggagcccgag
+     8341 aagcaggacg agtacggcct cggcgtcctg acggccgccg gcgcgggagg gttcgagttc
+     8401 ggccagcgcg agatgcagaa actctgggga acgggcccgg aacgcgtcag cgcctaccag
+     8461 tcgttcgcct ggttctacgc ggtgaacacc ggccagatct ccatccgcca cggcatgcgc
+     8521 gggcacagct ccgtgttcgt caccgagcag gccggcggtc tcgacgccgc cgcccacgcg
+     8581 gcccgcctgc tgcgcaaggg gaccctgaac accgccctga ccggcggatg cgaagcctcc
+     8641 ctctgcccct ggggcctggt cgcccagatc ccgagcggct tcctgagcga ggccaccgac
+     8701 ccgcacgacg cctacctgcc cttcgacgcg cgggcggccg ggtacgtgcc cggcgagggc
+     8761 ggagccatgc tggtcgccga gcgggcggac tccgcacgcg aacgggacgc cgccacggtc
+     8821 tacgggagga tcgccgggca cgcctccacc ttcgacgccc gccccggcac cggccggccc
+     8881 accgggccgg cccgggccat ccgcctggcc ctcgaagagg cccgggtcgc gcccgaggac
+     8941 gtcgacgtgg tctacgccga cgccgctgga gtgccggccc tcgaccgcgc ggaggcggag
+     9001 gccctcgccg aggtcttcgg gcccggggcc gtaccggtca ccgcgcccaa gacgatgacc
+     9061 ggacggctct acgccggggg agcggccctc gacgtcgcga ccgcgctgct gtccatcagg
+     9121 gactgtgtcg tcccgccgac cgtcggcacc ggtgcgcccg cgccggggct cggcatcgac
+     9181 ctggtgctcc accagccccg tgagctgcgg gtggacaccg ccctggtcgt cgcgcggggc
+     9241 atgggcggat tcaactccgc cctggtcgtc cggcgccacg gctgaccgag ccgccgcccc
+     9301 cgctctccgc gcccgagcgc gcatcacctc atcacaccac tcatccggag gttcaccgtg
+     9361 ccccagatcg gcctgccccg actcgtcgag atcatcaggg aatgcgcagg agaccccgac
+     9421 gaacgggacc tggacggcga catcctcgac gtcacctacc aggacctcgg ctacgactcc
+     9481 atcgccctgc tggagatctc cgcgaagctg gaacaggacc tcggggtgtc gataccgggg
+     9541 gaggagctga agaccccccg gcacaccctc cacctcgtca acaccgagac ggccggggag
+     9601 gtcgcctgac atggcagcgc gcacggacaa ctccatcgtc gtcaacgcgc cgttcgagct
+     9661 cgtctgggac gtcaccaacg acatcgaggc atggccggag ctgttctccg agtacgccga
+     9721 ggcggagatc ctccggcagg acggcgacgg cttcgacttc cggctcaaga cccgccccga
+     9781 cgcgaacgga agggtctggg agtgggtctc ccaccgtgtg cccgacaagg gctcccgcac
+     9841 ggtccgggcg caccgcgtcg agaccgggcc cttcgcctac atgaacctgc actggaccta
+     9901 ccgggccgtg gccgggggca ccgagatgcg gtgggtgcag gagttcgaca tgaagcccgg
+     9961 ggccccgttc gacaacgcgc acatgaccgc tcacctcaac acgacgacac gggcgaacat
+    10021 ggagcgcatc aagaagatca tcgaggacag gcaccgggaa ggacagcgga ccccggcgtc
+    10081 cgtcctgccc accgaactgc acgcccagca actgctgttg ctggccgcct ccgggcgcct
+    10141 ggcgcggatc gtccacgtgc tgaccgagct gaggatcgcc gatctcctcg ccgacggccc
+    10201 ccgtcacgtc gcggaactgg ccaaggagac ggacacccac gagctctccc tctaccgcgt
+    10261 cctgcgcagc gccgcctccg tcggcgtctt cgcggagggg cccgtcagga ccttctccgc
+    10321 gacgcccctg tcggacggac tgcgcaccgg caacccggac ggtgtgctgc ccctggtgaa
+    10381 gtacaacaac atggagctga ccaggcggcc ctacgacgag atcatgcaca gtgtgcgcac
+    10441 cggcgaaccg gccttccggc gggtgttcgg cagctcgttc ttcgagcacc tggaggccaa
+    10501 cccggaagcc ggcgagttct tcgagcggtt catggcccac tggagccgcc ggctcgtcct
+    10561 cgacggactc gccgaccagg gcatggagcg cttctcgcgc atcgcggacc tcggcggtgg
+    10621 cgacggctgg ttcctcgccc agatcctccg gcgccacccg cacgccacgg gcctgctcat
+    10681 ggacctcccg cgggtggccg cgtcggccgg ccccgtcctg gaggaggcca aagtcgccga
+    10741 ccgggtcacc gtgctgcccg gcgacttctt cacggacccc gtccccaccg gctacgacgc
+    10801 ctacctcttc aagggcgtgc tgcacaactg gtccgacgag cgggccgtga ccgtgctgcg
+    10861 ccgggtccgg gaggccatcg gcgacgacga cgcacgcctg ctgatcttcg accaggtcat
+    10921 ggcccccgag aacgagtggg accacgccaa gctgctggac atcgacatgc tggtgctctt
+    10981 cggaggccgc gaacgggtgc tggccgagtg gcggcagctg ctgctcgagg cggacttcga
+    11041 catcgtcaac acgccctccc acacctggac cacgctggag tgccgccccg tctagggcct
+    11101 gtccggatcg tcccggcgcc gcggggtccg gcacccggcc ggaccccgcc cgaaccgcca
+    11161 gcccccacgt tcaaggagag ccgagcacac catgacaccg cacacgcacg tccgcggacc
+    11221 gggcgacatc ctccagctga ccatggcctt ctacggatcg cgcgccctca tcagcgcggt
+    11281 cgaactggac ctgttcaccc tgctcgccgg gaaaccgctg ccgctcggcg agctgtgcga
+    11341 gcgggcgggc atccatcctc gcggcgcgcg ggacttcctc gacgccctgg tggcactggg
+    11401 actcctggag cgcgagggcg aggacaccta ccgcaacagc ccggccgccg accgccatct
+    11461 ggaccggcgc aagcccgggt acgtcggcgg ctacgcccgg ctcgcggaca ccaagctgtt
+    11521 ccccgtctgg gcacggctga cggaggccct gcgcacgggc gagaagcagg tgccgagcca
+    11581 gggcggcttc ttcggcggct acgcggaccc ggaggcggcc cgcggcttcc tcggcgccat
+    11641 ggacgccgtc aacggcggcg tcgggcacag cctggccggc gcgctcgact ggacggagta
+    11701 ctcctccttc gtcgacctcg gcggcgcgcg cggcaacctc gccgcgcacc tgcaccgggc
+    11761 tcacccgcac ctgcgggcca cctgtttcga cctgccggag atggaaccct tcttccagga
+    11821 gcacatgaag tccctggaga cgacggacca ggtgcgcttc gccgggggcg acttcttcac
+    11881 cgaccccctg ccgcgcgcgg acgtgttcat cgtcgggcac atcctccact acttcggtct
+    11941 ccggcagcgc gaggcgctga tcgcccgcat ccaccaggcg ctcaccccgg gcggtgccgt
+    12001 cctcgtctac gaccggatga tcgacgacga ccggcgcagt gccgcactga gcctgctcgg
+    12061 cagcctcaac atgctgctga cctccgacga gggacgcgag tacacccccg cggagtgcgt
+    12121 ccggtggctg tccgacgccg gattcaccga cgtccgcacc accgcggtga gcgggcccga
+    12181 caccctcgcg atcggccgca aaccccggtg aggtggctcg gcaggaccgt ctggctgggg
+    12241 ctgatcggcc tcggcgcgtt ctggaccggg cacctgcccc ccggcccgta cgggcaggac
+    12301 cgggccgggt ccgccccgcc ggccggacac ccggaacggc tcgtccccac ggcgctcacc
+    12361 gcccaggagc tgatcctgtc gcgcgagctg ggctggaccc gctgacctgc cgggaacccc
+    12421 ggcccggtgc gcggcgggca ccccggaccg gggcacgtcc gcgtccgcgg gagtgctcgg
+    12481 cggacgtacc ggcccgcccg gcctccccgg cggcgacgcg gcgccgtcgg gtgcgtggcc
+    12541 gagccgcgcg ccccgtggcc gcggccggcg ccgcggggac ctctcacggg atcccgtgcc
+    12601 tggccgcgcc ccggtcgggg aggcgaggac caccagcgcg cggccgggcc gcgcggtcag
+    12661 gtgaaggtga ccgggccgcg cggtgtgccg accgtgaagg agaacccggc cggcccctcg
+    12721 gcgagggcca gcccggtgtc cagggcggcc agcagggggc ggatctccgc cgggtcggga
+    12781 gccgtcgccg acagccgcag caagggggtg acgggcagcc cggcggcggt ggggtggcgg
+    12841 gaggcgcccc agtcgatgag gaagggcacc agcccggacg ggtgggcgga accgtccgtc
+    12901 agccgccact ccagcagggc gccgtcgggc gtgcggcggc tcatcgcccg ggcgggaccg
+    12961 ggatcgtggc cgcgggcgcg ggccgaggcg atcgccgcgt ccaggtcggt cgtgcggatc
+    13021 gcccaggtca cggtgcgcgg gccgggcagc aggtccacgc cgaacggccg cgggccggcc
+    13081 ggggcgggct gctccgggtc cgggccgatg atctccaggt acc
+//
