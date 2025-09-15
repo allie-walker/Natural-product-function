@@ -1,0 +1,562 @@
+LOCUS       KJ504103                7625 bp    DNA     linear   BCT 26-APR-2014
+DEFINITION  Bacillus cereus strain As 1.348 cerecin biosynthesis gene cluster,
+            complete sequence.
+ACCESSION   KJ504103
+VERSION     KJ504103.1
+KEYWORDS    .
+SOURCE      Bacillus cereus
+  ORGANISM  Bacillus cereus
+            Bacteria; Bacillati; Bacillota; Bacilli; Bacillales; Bacillaceae;
+            Bacillus; Bacillus cereus group.
+REFERENCE   1  (bases 1 to 7625)
+  AUTHORS   Wang,J., Ma,H., Ge,X., Zhang,J., Teng,K. and Zhong,J.
+  TITLE     Investigating the importance of disulfide bridge in newly discovered
+            disulfide-containing bovicin HJ50-like lantibiotics
+  JOURNAL   Unpublished
+REFERENCE   2  (bases 1 to 7625)
+  AUTHORS   Wang,J., Ma,H., Ge,X., Zhang,J., Teng,K. and Zhong,J.
+  TITLE     Direct Submission
+  JOURNAL   Submitted (25-FEB-2014) State Key Laboratory of Microbial Resources,
+            Institute of Microbiology, Chinese Academy of Sciences, Beichen West
+            Road 1st, Chaoyang District, Beijing, Beijing 100101, China
+COMMENT     ##Assembly-Data-START##
+            Assembly Method       :: Vector NTI v. 8.0
+            Assembly Name :: Nucleotide sequence of lantibiotic gene cluster
+            Sequencing Technology :: 454
+            ##Assembly-Data-END##
+            ##antiSMASH-Data-START##
+            Version               :: 8.0.0
+            Run date              :: 2025-08-10 17:33:07
+            ##antiSMASH-Data-END##
+FEATURES             Location/Qualifiers
+     gene            1..168
+                     /gene="bceA"
+     CDS             1..168
+                     /codon_start=1
+                     /gene="bceA"
+                     /gene_functions="biosynthetic-additional
+                     (rule-based-clusters) L_biotic_A"
+                     /gene_functions="biosynthetic-additional (lanthipeptides)
+                     predicted lanthipeptide"
+                     /gene_kind="biosynthetic-additional"
+                     /note="BceA"
+                     /product="cerecin precursor"
+                     /protein_id="AHX39576.1"
+                     /sec_met_domain="L_biotic_A (E-value: 4e-15, bitscore:
+                     44.3, seeds: 15, tool: rule-based-clusters)"
+                     /transl_table=11
+                     /translation="METEKYLQVVEDEEIEQLVGGAGPGWVETLTKDCPWNMPVACVTI
+                     LGQRICKKCY"
+     CDS_motif       1..63
+                     /prepeptide="leader"
+                     /note="peptide class: lanthipeptide"
+                     /note="predicted sequence: METEKYLQVVEDEEIEQLVGG"
+                     /locus_tag="bceA_lanthipeptide"
+                     /aSTool="lanthipeptides"
+                     /tool="antismash"
+     CDS_motif       64..168
+                     /prepeptide="core"
+                     /locus_tag="bceA_lanthipeptide"
+                     /peptide="lanthipeptide"
+                     /predicted_class="Class II"
+                     /score="-0.80"
+                     /molecular_weight="3728.4"
+                     /monoisotopic_mass="3725.8"
+                     /core_sequence="AGPGWVETLTKDCPWNMPVACVTILGQRICKKCY"
+                     /aSTool="lanthipeptides"
+                     /tool="antismash"
+                     /leader_sequence="METEKYLQVVEDEEIEQLVGG"
+                     /leader_location="[0:63](+)"
+     source          1..7625
+                     /db_xref="taxon:1396"
+                     /isolation_source="soil"
+                     /mol_type="genomic DNA"
+                     /organism="Bacillus cereus"
+                     /strain="As 1.348"
+     misc_feature    1..7625
+                     /note="cerecin biosynthesis gene cluster"
+     region          1..7625
+                     /candidate_cluster_numbers="1"
+                     /contig_edge="True"
+                     /product="lanthipeptide-class-ii"
+                     /region_number="1"
+                     /rules="cds(LANC_like and DUF4135)"
+                     /tool="antismash"
+     cand_cluster    1..7625
+                     /candidate_cluster_number="1"
+                     /contig_edge="True"
+                     /detection_rules="cds(LANC_like and DUF4135)"
+                     /kind="single"
+                     /product="lanthipeptide-class-ii"
+                     /protoclusters="1"
+                     /tool="antismash"
+     protocluster    1..7625
+                     /aStool="rule-based-clusters"
+                     /category="RiPP"
+                     /contig_edge="True"
+                     /core_location="[259:3088](+)"
+                     /cutoff="20000"
+                     /detection_rule="cds(LANC_like and DUF4135)"
+                     /neighbourhood="10000"
+                     /product="lanthipeptide-class-ii"
+                     /protocluster_number="1"
+                     /tool="antismash"
+     proto_core      260..3088
+                     /aStool="rule-based-clusters"
+                     /tool="antismash"
+                     /cutoff="20000"
+                     /detection_rule="cds(LANC_like and DUF4135)"
+                     /neighbourhood="10000"
+                     /product="lanthipeptide-class-ii"
+                     /protocluster_number="1"
+     PFAM_domain     13..114
+                     /aSDomain="L_biotic_typeA"
+                     /aSTool="fullhmmer"
+                     /database="35.0"
+                     /db_xref="PF04604.16"
+                     /db_xref="GO:0005576"
+                     /db_xref="GO:0042742"
+                     /description="Type-A lantibiotic"
+                     /detection="hmmscan"
+                     /domain_id="fullhmmer_bceA_0001"
+                     /evalue="1.30E-11"
+                     /gene_ontologies="GO:0005576: extracellular region"
+                     /gene_ontologies="GO:0042742: defense response to
+                     bacterium"
+                     /label="bceA"
+                     /locus_tag="bceA"
+                     /protein_end="38"
+                     /protein_start="4"
+                     /score="44.3"
+                     /tool="antismash"
+                     /translation="KYLQVVEDEEIEQLVGGAGPGWVETLTKDCPWNM"
+     gene            260..3088
+                     /gene="bceM"
+     CDS             260..3088
+                     /codon_start=1
+                     /gene="bceM"
+                     /gene_functions="biosynthetic (rule-based-clusters)
+                     lanthipeptide-class-ii: DUF4135"
+                     /gene_functions="biosynthetic (rule-based-clusters)
+                     lanthipeptide-class-ii: LANC_like"
+                     /gene_functions="biosynthetic-additional (smcogs)
+                     SMCOG1070: lanthionine synthetase C family protein"
+                     /gene_kind="biosynthetic"
+                     /note="BceM"
+                     /product="cerecin modification protein"
+                     /protein_id="AHX39577.1"
+                     /sec_met_domain="DUF4135 (E-value: 8.5e-83, bitscore:
+                     267.2, seeds: 79, tool: rule-based-clusters)"
+                     /sec_met_domain="LANC_like (E-value: 4.8e-39, bitscore:
+                     122.7, seeds: 47, tool: rule-based-clusters)"
+                     /transl_table=11
+                     /translation="MKNNSHEILNTIDNGSHSLVTKEYLEKNFVIFLEDFSCNDVIKND
+                     ENYNFQKIIQTYVVFFKNMMLNKIDFFGNVERISESVMFDLERRLYQVLRPSLIVYINK
+                     LRVENVLIGMDSGEEYKYFTKNFFHFKRFYINFFEILPLLNEKIFTIIENEINYMIWLQ
+                     GALEKDQKEIHKMSAFNIMHVVKVTNLGDYHNNGKRTILLEDKFNNKVILKPVDLKNSI
+                     LYHSLINQLNKDLNTNIFIPQVVNKRNYGYMEYINHESCESTEQIKDYYYNLGVVLSVM
+                     YLINGSDIHNENIIAKQSSPVIIDFETLGSTLNPSITEETSSFILSNSVLNSRMLPIKF
+                     SGGREVIRDYSAIGRVMKNLVKTIKIKNEFTSNPIEIKEETIVEDTVQNLPFFNGDIYE
+                     YDNYIKDIIKGFEDAYNTVLKNKKEYLYILKNSVSKWNYRKVYRNTKIYSLLLDRLNVP
+                     DLLENKSKTIKYLKNILEKNIYLATRKDIIQKEIEALLSYDVPYFFNKYEWGSYESLSS
+                     NEIDLEMKFEKFSYADFLLQRKIIEISLSNQNDNLYKLNTVKETTNFQTNLPTNKIWEA
+                     ITEKILDGCYISRDGDVDFIGLKTNWQGELEINHLNNGIYDGVLGISTLLRNNADPNYI
+                     EIINKLEQKALQEILNRNKNNYGFVNGVNAIISYYLTNFPDTTYIDEKVVLQIFMDINS
+                     DIAKGRYNDKHFDILGGSAGLIITAVKFYQVNPKYKILLEVAENLGDYIVNNMQTHNEF
+                     VYWKAHDTLNLEDSLKGFVHGLSGQLLAFYKLKDILKTNKYDRVIHGIHKSEKMSMSKY
+                     EYTDSWCKGFSGMGISRIKILESYQNEDIQSDLILFKKQILSTLHENSDYCLCHGLMGK
+                     LDFLLELENRGMLERNEKQIVMKVTNNFLNNFDIEDFNPHKIALFTGLGSILYFLQRLE
+                     DNKLNSILYFNA"
+     aSDomain        416..3052
+                     /aSDomain="TIGR03897"
+                     /aSTool="tigrfam"
+                     /description="lanti_2_LanM: type 2 lantibiotic biosynthesis
+                     protein LanM"
+                     /detection="hmmscan"
+                     /domain_id="TIGRFam_bceM_0001"
+                     /evalue="7.80E-193"
+                     /identifier="TIGR03897"
+                     /label="bceM"
+                     /locus_tag="bceM"
+                     /protein_end="931"
+                     /protein_start="52"
+                     /score="640.7"
+                     /tool="antismash"
+                     /translation="IIQTYVVFFKNMMLNKIDFFGNVERISESVMFDLERRLYQVLRPS
+                     LIVYINKLRVENVLIGMDSGEEYKYFTKNFFHFKRFYINFFEILPLLNEKIFTIIENEI
+                     NYMIWLQGALEKDQKEIHKMSAFNIMHVVKVTNLGDYHNNGKRTILLEDKFNNKVILKP
+                     VDLKNSILYHSLINQLNKDLNTNIFIPQVVNKRNYGYMEYINHESCESTEQIKDYYYNL
+                     GVVLSVMYLINGSDIHNENIIAKQSSPVIIDFETLGSTLNPSITEETSSFILSNSVLNS
+                     RMLPIKFSGGREVIRDYSAIGRVMKNLVKTIKIKNEFTSNPIEIKEETIVEDTVQNLPF
+                     FNGDIYEYDNYIKDIIKGFEDAYNTVLKNKKEYLYILKNSVSKWNYRKVYRNTKIYSLL
+                     LDRLNVPDLLENKSKTIKYLKNILEKNIYLATRKDIIQKEIEALLSYDVPYFFNKYEWG
+                     SYESLSSNEIDLEMKFEKFSYADFLLQRKIIEISLSNQNDNLYKLNTVKETTNFQTNLP
+                     TNKIWEAITEKILDGCYISRDGDVDFIGLKTNWQGELEINHLNNGIYDGVLGISTLLRN
+                     NADPNYIEIINKLEQKALQEILNRNKNNYGFVNGVNAIISYYLTNFPDTTYIDEKVVLQ
+                     IFMDINSDIAKGRYNDKHFDILGGSAGLIITAVKFYQVNPKYKILLEVAENLGDYIVNN
+                     MQTHNEFVYWKAHDTLNLEDSLKGFVHGLSGQLLAFYKLKDILKTNKYDRVIHGIHKSE
+                     KMSMSKYEYTDSWCKGFSGMGISRIKILESYQNEDIQSDLILFKKQILSTLHENSDYCL
+                     CHGLMGKLDFLLELENRGMLERNEKQIVMKVTNNFLNNFDIEDFNPHKIALFTGLGSIL
+                     YFLQRLED"
+     PFAM_domain     683..1771
+                     /aSDomain="DUF4135"
+                     /aSTool="fullhmmer"
+                     /database="35.0"
+                     /db_xref="PF13575.9"
+                     /description="Domain of unknown function (DUF4135)"
+                     /detection="hmmscan"
+                     /domain_id="fullhmmer_bceM_0002"
+                     /evalue="5.70E-75"
+                     /label="bceM"
+                     /locus_tag="bceM"
+                     /protein_end="504"
+                     /protein_start="141"
+                     /score="253.0"
+                     /tool="antismash"
+                     /translation="PLLNEKIFTIIENEINYMIWLQGALEKDQKEIHKMSAFNIMHVVK
+                     VTNLGDYHNNGKRTILLEDKFNNKVILKPVDLKNSILYHSLINQLNKDLNTNIFIPQVV
+                     NKRNYGYMEYINHESCESTEQIKDYYYNLGVVLSVMYLINGSDIHNENIIAKQSSPVII
+                     DFETLGSTLNPSITEETSSFILSNSVLNSRMLPIKFSGGREVIRDYSAIGRVMKNLVKT
+                     IKIKNEFTSNPIEIKEETIVEDTVQNLPFFNGDIYEYDNYIKDIIKGFEDAYNTVLKNK
+                     KEYLYILKNSVSKWNYRKVYRNTKIYSLLLDRLNVPDLLENKSKTIKYLKNILEKNIYL
+                     ATRKDIIQKEIEALLSYDVPYFF"
+     PFAM_domain     2093..3064
+                     /aSDomain="LANC_like"
+                     /aSTool="fullhmmer"
+                     /database="35.0"
+                     /db_xref="PF05147.16"
+                     /db_xref="GO:0031179"
+                     /description="Lanthionine synthetase C-like protein"
+                     /detection="hmmscan"
+                     /domain_id="fullhmmer_bceM_0003"
+                     /evalue="1.80E-32"
+                     /gene_ontologies="GO:0031179: peptide modification"
+                     /label="bceM"
+                     /locus_tag="bceM"
+                     /protein_end="935"
+                     /protein_start="611"
+                     /score="112.4"
+                     /tool="antismash"
+                     /translation="NNGIYDGVLGISTLLRNNADPNYIEIINKLEQKALQEILNRNKNN
+                     YGFVNGVNAIISYYLTNFPDTTYIDEKVVLQIFMDINSDIAKGRYNDKHFDILGGSAGL
+                     IITAVKFYQVNPKYKILLEVAENLGDYIVNNMQTHNEFVYWKAHDTLNLEDSLKGFVHG
+                     LSGQLLAFYKLKDILKTNKYDRVIHGIHKSEKMSMSKYEYTDSWCKGFSGMGISRIKIL
+                     ESYQNEDIQSDLILFKKQILSTLHENSDYCLCHGLMGKLDFLLELENRGMLERNEKQIV
+                     MKVTNNFLNNFDIEDFNPHKIALFTGLGSILYFLQRLEDNKLN"
+     gene            3103..5205
+                     /gene="bceT"
+     CDS             3103..5205
+                     /codon_start=1
+                     /gene="bceT"
+                     /gene_functions="biosynthetic-additional
+                     (rule-based-clusters) Peptidase_C39"
+                     /gene_functions="transport (smcogs) SMCOG1288: ABC
+                     transporter related protein"
+                     /gene_kind="transport"
+                     /note="BceT"
+                     /product="ABC transporter protein"
+                     /protein_id="AHX39578.1"
+                     /sec_met_domain="Peptidase_C39 (E-value: 5.3e-34, bitscore:
+                     105.6, seeds: 36, tool: rule-based-clusters)"
+                     /transl_table=11
+                     /translation="MLRKKIKFIPQMTSFDCGPSCLAMIMHYYGSAVQASEIRNSKIIN
+                     KKSAWSLLDIKKVSKSYGLSATAYRIENITDLQRIQKPMIAFWGFNHFVIIERVKANKF
+                     YIVDPKAGPMIIDIRSFEEMFCDYILVIENKKDIQPNTKRREKHILLRYIDHFVSPSQI
+                     VLLALLALLAQISILAFPFILKKFMDILNASKEVDVRYLLIILGSLIVVIGIKSITSII
+                     KVNFQKEIDRKSTTKVFEHMFNTSIEKITTRHAGDLNVRIMSLESIRGYILEDLIEMII
+                     SIVVIIPLLMYLLYTETFYTLILMFFIASSLFINISLGKFIYNANLVETYYLGEHRGKI
+                     NESLKAMYYVKATGIFSRIKSVWQKDYNKYLDTVHKRALKQNALESFNSSLSTIFIIIM
+                     LAVGFYNFSKGEGDLSNIFFFIAISSIIFSPVSTIIGSILNWNSVKPLLLRTLDILEEE
+                     LEKDGSDTKVNILRGSIQFNNISFSFDDKKIIENLSLNIKNNESIAIVGESGSGKSTLA
+                     NLLLKLRTPDKGNILIDDRDIKDWNSEELRKNVGLMTQDGVLFRGSLSENLSYFDINYD
+                     PSKIQESIDKLNLSNYIQFQSINDILISEGGTNFSGGQRQRLAMLRLFMKEYPILILDE
+                     PTNHLDRETANAVIENIFAMPSTKIIITHDENILERVDRVYELTDKKLKQREIFSKSKL
+                     QTLVKG"
+     PFAM_domain     3118..3510
+                     /aSDomain="Peptidase_C39"
+                     /aSTool="fullhmmer"
+                     /database="35.0"
+                     /db_xref="PF03412.18"
+                     /db_xref="GO:0005524"
+                     /db_xref="GO:0006508"
+                     /db_xref="GO:0008233"
+                     /db_xref="GO:0016020"
+                     /description="Peptidase C39 family"
+                     /detection="hmmscan"
+                     /domain_id="fullhmmer_bceT_0004"
+                     /evalue="1.70E-30"
+                     /gene_ontologies="GO:0005524: ATP binding"
+                     /gene_ontologies="GO:0006508: proteolysis"
+                     /gene_ontologies="GO:0008233: peptidase activity"
+                     /gene_ontologies="GO:0016020: membrane"
+                     /label="bceT"
+                     /locus_tag="bceT"
+                     /protein_end="136"
+                     /protein_start="5"
+                     /score="105.6"
+                     /tool="antismash"
+                     /translation="IKFIPQMTSFDCGPSCLAMIMHYYGSAVQASEIRNSKIINKKSAW
+                     SLLDIKKVSKSYGLSATAYRIENITDLQRIQKPMIAFWGFNHFVIIERVKANKFYIVDP
+                     KAGPMIIDIRSFEEMFCDYILVIENKK"
+     PFAM_domain     3592..4395
+                     /aSDomain="ABC_membrane"
+                     /aSTool="fullhmmer"
+                     /database="35.0"
+                     /db_xref="PF00664.26"
+                     /db_xref="GO:0005524"
+                     /db_xref="GO:0016020"
+                     /db_xref="GO:0055085"
+                     /db_xref="GO:0140359"
+                     /description="ABC transporter transmembrane region"
+                     /detection="hmmscan"
+                     /domain_id="fullhmmer_bceT_0005"
+                     /evalue="2.70E-20"
+                     /gene_ontologies="GO:0005524: ATP binding"
+                     /gene_ontologies="GO:0016020: membrane"
+                     /gene_ontologies="GO:0055085: transmembrane transport"
+                     /gene_ontologies="GO:0140359: ABC-type transporter
+                     activity"
+                     /label="bceT"
+                     /locus_tag="bceT"
+                     /protein_end="431"
+                     /protein_start="163"
+                     /score="73.3"
+                     /tool="antismash"
+                     /translation="VLLALLALLAQISILAFPFILKKFMDILNASKEVDVRYLLIILGS
+                     LIVVIGIKSITSIIKVNFQKEIDRKSTTKVFEHMFNTSIEKITTRHAGDLNVRIMSLES
+                     IRGYILEDLIEMIISIVVIIPLLMYLLYTETFYTLILMFFIASSLFINISLGKFIYNAN
+                     LVETYYLGEHRGKINESLKAMYYVKATGIFSRIKSVWQKDYNKYLDTVHKRALKQNALE
+                     SFNSSLSTIFIIIMLAVGFYNFSKGEGDLSNIFFFIAISSIIFSPV"
+     PFAM_domain     4573..5016
+                     /aSDomain="ABC_tran"
+                     /aSTool="fullhmmer"
+                     /database="35.0"
+                     /db_xref="PF00005.30"
+                     /db_xref="GO:0005524"
+                     /description="ABC transporter"
+                     /detection="hmmscan"
+                     /domain_id="fullhmmer_bceT_0006"
+                     /evalue="4.70E-33"
+                     /gene_ontologies="GO:0005524: ATP binding"
+                     /label="bceT"
+                     /locus_tag="bceT"
+                     /protein_end="638"
+                     /protein_start="490"
+                     /score="114.7"
+                     /tool="antismash"
+                     /translation="ENLSLNIKNNESIAIVGESGSGKSTLANLLLKLRTPDKGNILIDD
+                     RDIKDWNSEELRKNVGLMTQDGVLFRGSLSENLSYFDINYDPSKIQESIDKLNLSNYIQ
+                     FQSINDILISEGGTNFSGGQRQRLAMLRLFMKEYPILILDEPTN"
+     gene            5278..6093
+                     /gene="bceF"
+     CDS             5278..6093
+                     /codon_start=1
+                     /gene="bceF"
+                     /gene_functions="transport (smcogs) SMCOG1000: ABC
+                     transporter ATP-binding protein"
+                     /gene_kind="transport"
+                     /note="BceF"
+                     /product="ABC transporter protein"
+                     /protein_id="AHX39579.1"
+                     /transl_table=11
+                     /translation="MKLAIQTKNLTKSFDNQSIVRDLNLSVPEGSLYAFIGPNGAGKTT
+                     TMRMLLGLIPLDNGTILFNNKDIKEWKEELFENVGCFIDSPTYYPNLTAYENLAYVQKM
+                     INKPLDEIDRVLKITGIYKAKDKKVKDFSLGMKQRLGISFAILNDPKILILDEPTNGLD
+                     PEGVHEIRRLLLHLVKNEGKTIFISSHNLAEIEMIADHIALLHKGNLLYEGNLNSIITS
+                     REYIVHVNDTTATERILNTKDIPYSIEKEGVFKLMIDQNSVPNLTRILN"
+     PFAM_domain     5338..5757
+                     /aSDomain="ABC_tran"
+                     /aSTool="fullhmmer"
+                     /database="35.0"
+                     /db_xref="PF00005.30"
+                     /db_xref="GO:0005524"
+                     /description="ABC transporter"
+                     /detection="hmmscan"
+                     /domain_id="fullhmmer_bceF_0007"
+                     /evalue="1.10E-29"
+                     /gene_ontologies="GO:0005524: ATP binding"
+                     /label="bceF"
+                     /locus_tag="bceF"
+                     /protein_end="160"
+                     /protein_start="20"
+                     /score="103.9"
+                     /tool="antismash"
+                     /translation="RDLNLSVPEGSLYAFIGPNGAGKTTTMRMLLGLIPLDNGTILFNN
+                     KDIKEWKEELFENVGCFIDSPTYYPNLTAYENLAYVQKMINKPLDEIDRVLKITGIYKA
+                     KDKKVKDFSLGMKQRLGISFAILNDPKILILDEPTN"
+     gene            6187..6912
+                     /gene="bceE"
+     CDS             6187..6912
+                     /codon_start=1
+                     /gene="bceE"
+                     /note="BceE"
+                     /product="ABC transporter permease protein"
+                     /protein_id="AHX39580.1"
+                     /transl_table=11
+                     /translation="MQFIFKSVNSEMRKIGGRKLLLFSLFFSLLSSFLCISYFIFNKNN
+                     PDMFQSTNLIAITVNFNTLTLSIFSACMWYFIISSENKYGTWAIIYTKPISKFKLLVAK
+                     NLLFILFYLIFNILNFSVMGIYIFINGYEISILYFLKMLMLCTILSLAIPYSQLLFHLI
+                     IKKGILAASLSVIWIFFSVTYGLFPVVFTKTFPIFYALNIVSDVMMKETTILIYLASSS
+                     IYILGIMLLAVSFKYYTYE"
+     PFAM_domain     6211..6726
+                     /aSDomain="ABC2_membrane_4"
+                     /aSTool="fullhmmer"
+                     /database="35.0"
+                     /db_xref="PF12730.10"
+                     /description="ABC-2 family transporter protein"
+                     /detection="hmmscan"
+                     /domain_id="fullhmmer_bceE_0008"
+                     /evalue="2.30E-09"
+                     /label="bceE"
+                     /locus_tag="bceE"
+                     /protein_end="180"
+                     /protein_start="8"
+                     /score="37.6"
+                     /tool="antismash"
+                     /translation="NSEMRKIGGRKLLLFSLFFSLLSSFLCISYFIFNKNNPDMFQSTN
+                     LIAITVNFNTLTLSIFSACMWYFIISSENKYGTWAIIYTKPISKFKLLVAKNLLFILFY
+                     LIFNILNFSVMGIYIFINGYEISILYFLKMLMLCTILSLAIPYSQLLFHLIIKKGILAA
+                     SLSVIWIFF"
+     gene            6969..7625
+                     /gene="bceG"
+     CDS             6969..7625
+                     /codon_start=1
+                     /gene="bceG"
+                     /note="BceG"
+                     /product="ABC transporter permease protein"
+                     /protein_id="AHX39581.1"
+                     /transl_table=11
+                     /translation="MYILLLVFLLIPISFQIFLTVSSQSKDGVFMHIAILSLFCRLFLP
+                     IAIGLLVSFSFVNEFRRKGYMSAIYHGITLKTILSNKFLFCLIITFGYLICALVITSIP
+                     IVLTVDNLGTVYQRLIFSILFMVISSLTIVNLHFLINIIFYKIPLLSLLVGVIGGLGSF
+                     FISHTNYWILFPWSYPIMSLYIDSIEPKQLYIILIVYLLSLLSCIFIIKKSMQGQ"
+ORIGIN
+        1 atggaaactg aaaaatattt acaagtcgta gaagatgaag agattgaaca attagttggt
+       61 ggggcaggac ctggttgggt tgaaacttta actaaagatt gtccttggaa tatgcctgta
+      121 gcatgcgtca cgattttggg acaaagaatt tgtaaaaaat gctactaata gttaaagaga
+      181 gtaaggcgaa aggccttact ctctttaatg agaatgaatt tctaactgtt tctcctacct
+      241 ataaaaagaa gaggttatta tgaaaaataa ttcacatgaa attttgaata caatagataa
+      301 tggatcacat tctttagtaa caaaagaata tctagaaaaa aattttgtta tctttttaga
+      361 ggatttttca tgtaatgatg tcattaagaa tgacgaaaac tataactttc aaaaaataat
+      421 acaaacatat gtagtattct ttaaaaatat gatgttaaat aaaattgatt tttttggaaa
+      481 tgttgagagg atttctgaat cagtaatgtt tgatttagaa agaagactat accaagtttt
+      541 aagaccaagc ttaattgtat acataaataa acttagagta gaaaacgttt tgataggaat
+      601 ggatagcggt gaagaatata agtattttac aaagaacttc tttcatttta aaaggttcta
+      661 tataaatttt tttgaaatat tacctttatt aaatgaaaaa atttttacaa tcattgaaaa
+      721 tgaaataaat tatatgattt ggttacaagg agctcttgaa aaagatcaaa aagaaattca
+      781 taaaatgtca gcttttaata ttatgcatgt agtaaaagtt actaacctag gtgactatca
+      841 taataatgga aagagaacaa tacttttaga agataaattt aataataagg taatcttaaa
+      901 accagttgat ttgaaaaatt ctatcttata tcatagttta attaatcaac tgaataagga
+      961 tttaaatact aatatcttta ttccgcaagt agttaataag agaaattatg gatatatgga
+     1021 atatattaat catgaatcat gtgaatctac tgagcaaatt aaagattatt attataattt
+     1081 aggtgtagtg ctttctgtaa tgtatttgat taatggaagt gacatacata atgaaaatat
+     1141 catagctaaa caatcctcac cagtcataat tgattttgag acattaggaa gtacattaaa
+     1201 tccaagtatc actgaagaaa ccagtagttt tatattatct aattcagtat taaattctag
+     1261 aatgctacct ataaagttta gtggaggtag agaggtaata agagattaca gtgccattgg
+     1321 gagagtaatg aagaatttgg taaaaacaat taaaataaaa aatgaattta catcgaaccc
+     1381 gattgaaata aaagaagaga caatagtaga agatacagtt cagaatttac cgttttttaa
+     1441 cggtgatata tacgagtatg ataattatat aaaagatatt attaaaggtt ttgaggatgc
+     1501 atataataca gtcttaaaaa ataagaagga atatttgtat attttgaaaa atagtgtttc
+     1561 taaatggaat tatcgaaaag tatatcgaaa tacaaaaatt tattctcttt tattagatag
+     1621 actaaatgtt ccagatctat tagagaataa atcaaagact ataaagtatt taaaaaatat
+     1681 acttgagaaa aatatctact tggctactag gaaagatatt attcaaaaag agatagaggc
+     1741 actattatct tatgatgttc catatttctt taataagtat gaatgggggt cttacgagag
+     1801 tttatcaagt aatgaaatag atttagaaat gaaattcgaa aaattttcat atgctgactt
+     1861 tttattacaa agaaaaatca tagaaatatc cctttctaat caaaatgata atctatataa
+     1921 gctgaataca gtaaaggaaa caactaattt tcagactaat ttgcctacaa ataaaatatg
+     1981 ggaggcaatt acagagaaaa ttcttgatgg ttgttatata tcaagagacg gtgatgtaga
+     2041 ttttattgga ttaaaaacaa attggcaagg ggagctcgag ataaaccatt tgaataatgg
+     2101 aatatatgat ggggtattgg gaataagtac attattgaga aataacgctg accctaatta
+     2161 catcgaaatt ataaataaac tcgaacaaaa agctttgcaa gaaatactaa acagaaataa
+     2221 aaataattat ggttttgtaa atggtgttaa tgctatcatt tcttattatt taacaaattt
+     2281 tccggataca acatatattg atgaaaaggt agtattgcaa atatttatgg atatcaactc
+     2341 tgatattgca aaaggtcgat ataacgataa gcattttgac atattagggg gttcagctgg
+     2401 tttaattata actgcagtta agttctatca agttaatcct aagtataaaa tattacttga
+     2461 agtggctgaa aatctcggtg actacattgt caataatatg caaacacata atgaatttgt
+     2521 atattggaaa gctcacgata ctctaaattt agaggattca ttaaaggggt ttgttcatgg
+     2581 attatcagga caacttcttg cattttataa gttaaaagac atattaaaaa caaataagta
+     2641 cgatagagta atacatggta tacataaaag tgagaaaatg agtatgagta aatatgagta
+     2701 tacagatagc tggtgtaaag ggtttagtgg aatggggata tcgagaatta aaattttaga
+     2761 atcgtatcaa aatgaagata tacaatcaga tttaatcctt tttaaaaaac aaatcttaag
+     2821 tacattacat gaaaatagtg attattgttt atgtcatggt ttaatgggga aactagactt
+     2881 tttattggag ttagaaaata gaggtatgct agagcgcaat gaaaaacaaa ttgttatgaa
+     2941 agtaacaaat aactttttga ataattttga tatagaagat tttaatcctc ataaaatcgc
+     3001 attatttaca ggtctaggaa gtattttgta ttttttacaa aggttagagg ataataaact
+     3061 aaatagcatt ttatacttta atgcctagaa taggtgataa atatgttaag aaagaaaatt
+     3121 aagtttatac cgcaaatgac atcttttgat tgtgggccta gttgtctagc gatgattatg
+     3181 cattattatg gttcagcagt acaagcttcg gaaattagaa atagtaaaat tatcaataaa
+     3241 aaatcggcat ggagtttgtt ggatattaaa aaagttagta aatcgtatgg actttctgca
+     3301 actgcatata ggatagaaaa tataactgat ttacaaagga tacaaaagcc gatgatagca
+     3361 ttttggggct ttaatcactt tgtaattatt gaaagggtta aagcaaataa attttatatt
+     3421 gtagatccta aggcagggcc gatgataatt gatataagaa gttttgagga aatgttctgt
+     3481 gactatatcc tagtaataga aaacaaaaaa gatatacagc caaatactaa aaggcgtgaa
+     3541 aaacatatat tacttagata tattgatcat tttgtatctc ctagccagat tgttttatta
+     3601 gcactattag cattgttagc acaaatctca attcttgctt ttccctttat tttgaaaaag
+     3661 tttatggata ttttgaatgc ttcaaaggaa gtggatgtaa gatacctttt aattattttg
+     3721 ggaagtttaa tcgttgttat agggataaaa tctataactt ctattataaa agtaaacttt
+     3781 cagaaagaaa ttgatagaaa aagtacaaca aaagtttttg agcatatgtt taatacctcc
+     3841 atagaaaaga ttactacacg tcatgcaggg gatttaaatg taagaatcat gagcttagaa
+     3901 tcaataagag gatatatttt agaggatcta attgaaatga ttatatcaat agtagttatc
+     3961 attccattat tgatgtatct attatatact gagacttttt atactttaat attgatgttt
+     4021 tttattgcta gttccctatt tatcaatatt tccttaggga aattcatata taatgctaat
+     4081 ttagtcgaaa cgtattacct aggagaacat agagggaaaa ttaatgaatc attaaaagcg
+     4141 atgtattatg taaaggctac agggattttt tctagaatta aatctgtatg gcaaaaagat
+     4201 tataataaat acctagatac ggtacataaa cgagcgctaa aacaaaatgc tttagaatca
+     4261 tttaatagtt ccctatcaac aatatttatt atcataatgc ttgctgtagg attttataat
+     4321 tttagtaaag gagaagggga tttaagtaat attttcttct ttattgctat atctagtatt
+     4381 atattttctc ctgtttcaac aattatagga tcaattttaa attggaattc agttaaacca
+     4441 cttttattaa gaactttaga tatcttggaa gaggaactag aaaaagatgg atcagatact
+     4501 aaagtaaaca ttcttagagg atcgattcaa tttaataata tttcgtttag ttttgatgac
+     4561 aaaaaaataa tagaaaactt aagtttgaac attaaaaata acgaaagtat tgctattgtt
+     4621 ggagaaagtg gcagtggtaa gtccacttta gctaacttat tattaaaatt gcgtactccc
+     4681 gataagggga atatattaat agacgataga gatattaaag attggaacag tgaggaacta
+     4741 agaaaaaatg taggactaat gactcaggat ggagttttat ttagaggaag tttatctgag
+     4801 aatttatctt actttgatat aaattatgat ccatcaaaaa tccaggagtc tattgataaa
+     4861 ttgaatctaa gtaattatat tcaatttcaa agtataaatg atattttaat ctcagaggga
+     4921 ggaacaaatt tctccggtgg ccaaagacaa aggttggcta tgttacgatt gttcatgaaa
+     4981 gaatatccga ttcttatttt ggatgaacca actaaccatt tagataggga aacggcaaat
+     5041 gctgttattg aaaatatatt tgccatgcca tccactaaga ttattatcac tcatgatgaa
+     5101 aatattttag agcgtgtaga tagagtttat gaacttactg ataaaaaatt aaaacaacga
+     5161 gaaatatttt ctaaatctaa attgcaaaca ttagttaaag ggtaaataga atatctaata
+     5221 gatcaagaat ttaatagata cttactttta tttgagaata agaaagtgag gaacaaaatg
+     5281 aaattagcaa tccaaactaa aaatttaaca aagtcttttg acaatcaatc cattgtaagg
+     5341 gatttaaact tatctgttcc tgaaggaagt ttatatgctt ttattggacc aaatggtgca
+     5401 ggaaaaacaa caacaatgcg aatgctatta gggttaattc cattagataa tggaacgata
+     5461 ttatttaata ataaagatat caaagaatgg aaagaagaat tatttgaaaa tgtgggttgt
+     5521 tttattgatt cacctaccta ctatcctaat ttgacagcat atgaaaattt agcctatgta
+     5581 caaaaaatga ttaataagcc tttagatgaa atagacagag tattaaaaat tacgggaata
+     5641 tataaagcaa aagataaaaa agtgaaagat ttttctttag gaatgaaaca aaggctaggt
+     5701 atttcctttg ctattcttaa tgatcctaaa atactaattc ttgatgagcc gacaaatgga
+     5761 ttagacccag agggagtaca cgagataagg cgcttattac ttcatttagt aaaaaatgag
+     5821 ggaaagacaa tatttatttc tagtcataat ttagctgaaa ttgaaatgat agcagatcac
+     5881 atagcattac tacataaggg taacttactc tatgaaggga atttaaacag tattattact
+     5941 tctagagaat atattgttca tgttaatgac actactgcca cagaaaggat tttaaataca
+     6001 aaggatatac cttatagcat agaaaaagaa ggggtattca aactaatgat agatcaaaat
+     6061 agtgttccta atttaaccag aatattaaat taaaaatgat atagatattt ttgaagttag
+     6121 ccctaaaaag ctaacattag aggaagtatt tttatcttta actaaacaaa aggagttact
+     6181 atcataatgc aatttatctt taaaagtgtg aatagtgaga tgaggaaaat tggtgggaga
+     6241 aaattattgt tattttcttt gtttttttca ttattatcaa gctttttgtg tataagttat
+     6301 tttattttta acaagaataa tcccgatatg tttcaatcta cgaatcttat agcaattaca
+     6361 gtaaacttta atacactaac attaagcatt ttttctgctt gtatgtggta ttttatcatt
+     6421 tcttctgaaa ataaatatgg cacttgggcc attatctata caaagccaat ttcaaagttt
+     6481 aaattattgg tagctaaaaa tttattgttt atactgtttt atttaatctt taatatttta
+     6541 aatttttcag ttatgggtat ctatattttt ataaatggat atgaaatatc tatactttat
+     6601 tttttgaaaa tgttgatgct ttgtacaatt ctatctttag caataccata ttctcaatta
+     6661 ctttttcatt tgattataaa aaagggaatt cttgcggcgt ccttgtcagt tatttggatt
+     6721 ttttttagcg taacttatgg attatttcct gtagtattca caaagacatt tccaatattt
+     6781 tatgcattga atatagtaag tgatgtaatg atgaaagaaa caactatttt aatatatctt
+     6841 gcaagttctt caatctatat tttaggaatt atgttattag ctgtgagttt taaatattat
+     6901 acatatgaat aataaagggt gaaataagtg ggtatattag gtgaatataa aaaagtcttc
+     6961 ataatggatt gtatatcctg ttactagtat ttctgttgat accaattagt tttcaaatct
+     7021 ttctaactgt atcatctcaa tcaaaagatg gcgttttcat gcatatagcg attctaagcc
+     7081 ttttttgtag attattttta cctattgcaa taggtctatt agtgtcattt tcttttgtaa
+     7141 acgagttcag aagaaaagga tatatgtctg ctatttatca cggaatcact ttaaaaacta
+     7201 tattaagtaa taagtttttg ttttgcttaa taattacttt tggttattta atatgtgctt
+     7261 tagtcataac tagtatacct atagtattaa cggttgataa tcttgggact gtttatcaaa
+     7321 gattaatttt ttctatactt tttatggtga ttagctcttt aactattgtg aatttacatt
+     7381 ttttaataaa tataatattt tataaaatcc cgttactttc attattagta ggggttatag
+     7441 gcgggttggg tagctttttt atctctcata caaactattg gatactgttt ccttggtcat
+     7501 atccaattat gagtctttat atcgatagca ttgaaccaaa acagttgtat attattctta
+     7561 ttgtatatct attatcatta ctaagttgta tatttattat taaaaaatca atgcaagggc
+     7621 aataa
+//

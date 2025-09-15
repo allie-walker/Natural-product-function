@@ -95,7 +95,7 @@ for f in sorted(os.listdir(input_dir),key=str.lower):
         continue
     record = SeqIO.read(open(input_dir + f, 'r'),"genbank")
     features = record.features
-    cluster_name = f[0:f.index(".")]
+    cluster_name = f[0:f.rfind(".")]
     (cluster_pfam_counts, cluster_CDS_motifs, cluster_smCOGs, cluster_NRPS_PKS,cluster_tigrfam_counts,cluster_NRPS_PKS_substrate)  = readInputFiles.readAntismash6(features)
     pfam_counts[cluster_name] = cluster_pfam_counts
     smCOGs[cluster_name] = cluster_smCOGs
@@ -145,7 +145,7 @@ if RGI_type == "3":
         if ".txt" not in f:
             continue
         in_file = open(RGI_input_dir + f, 'r')
-        cluster_name = f[0:f.index(".")]
+        cluster_name = f[0:f.rfind(".")]
         resistance_genes[cluster_name] = {}
         for line in in_file:
             if "ORF_ID" in line:
@@ -201,7 +201,7 @@ elif RGI_type == "5" or RGI_type == "6":
         if ".txt" not in f:
             continue
         in_file = open(RGI_input_dir + f, 'r')
-        cluster_name = f[0:f.index(".")]
+        cluster_name = f[0:f.rfind(".")]
         resistance_genes[cluster_name] = {}
         for line in in_file:
             if "ORF_ID" in line:
@@ -257,6 +257,8 @@ is_cytotoxic = {}
 is_unknown = {}
 targets_gram_pos = {}
 targets_gram_neg = {}
+is_siderophore = {}
+is_ionophore = {}
 i = 0
 for line in cluster_info:
     #skip header
@@ -281,6 +283,16 @@ for line in cluster_info:
         is_cytotoxic[cluster_name] = 1
     else:
         is_cytotoxic[cluster_name] = 0
+    
+    if "siderophore" in entries[3]:
+        is_siderophore[cluster_name] = 1
+    else:
+        is_siderophore[cluster_name] = 0
+        
+    if "siderophore" in entries[3] or "ionophore" in entries[3]:
+        is_ionophore[cluster_name] =1
+    else:
+        is_ionophore[cluster_name] =0
         
     if "unknown" in entries[3]:
         is_unknown[cluster_name] =1
@@ -301,6 +313,8 @@ antibacterial_out = open(output_dir + "classifications/is_antibacterial.csv",'w'
 antifungal_out = open(output_dir + "classifications/is_antifungal.csv",'w')
 cytotoxic_out = open(output_dir + "classifications/is_cytotoxic.csv",'w')
 unknown_out = open(output_dir + "classifications/is_unknown.csv",'w')
+siderophore_out = open(output_dir + "classifications/is_siderophore.csv",'w')
+ionophore_out = open(output_dir + "classifications/is_ionophore.csv",'w')
 targets_gram_pos_out = open(output_dir + "classifications/targets_gram_pos.csv",'w')
 targets_gram_neg_out = open(output_dir + "classifications/targets_gram_neg.csv",'w')
 
@@ -321,6 +335,8 @@ for c in cluster_list:
         antifungal_out.write(str(is_antifungal[c]) + "\n")
         cytotoxic_out.write(str(is_cytotoxic[c]) + "\n")
         unknown_out.write(str(is_unknown[c]) + "\n")
+        siderophore_out.write(str(is_siderophore[c]) + "\n")
+        ionophore_out.write(str(is_ionophore[c]) + "\n")
         targets_gram_neg_out.write(str(targets_gram_neg[c])+"\n")
         targets_gram_pos_out.write(str(targets_gram_pos[c])+"\n")
     else:
@@ -329,6 +345,8 @@ for c in cluster_list:
         antifungal_out.write("0\n")
         cytotoxic_out.write("0\n")
         unknown_out.write("1\n")
+        siderophore_out.write("0\n")
+        ionophore_out.write("1\n")
         targets_gram_neg_out.write("0\n")
         targets_gram_pos_out.write("0\n")
         
