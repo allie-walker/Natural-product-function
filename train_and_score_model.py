@@ -27,13 +27,14 @@ import sys
 import joblib
 import train_model_tools
 import argparse
+import os
 
 parser = argparse.ArgumentParser(description='Trains np activity prediction models and calculates metrics')
 parser.add_argument('training_dir', type=str, default='directory with training data feature matrices and classifications')
-parser.add_argument('-a', '--acitivity', type=str, default='all', choices=['all',"antibacterial", "antieuk","antifungal", "cytotoxic_antitumor", "antigramneg","antigrampos"], help='activity to predict, default is all which will train on all available activities')
+parser.add_argument('-a', '--activity', type=str, default='all', choices=['all',"antibacterial", "antieuk","antifungal", "cytotoxic_antitumor", "antigramneg","antigrampos"], help='activity to predict, default is all which will train on all available activities')
 args = parser.parse_args()
 training_set_dir = args.training_dir
-activity = args.acitivity
+activity = args.activity
 
 
 #writes cv results from GridSearchCV
@@ -171,7 +172,10 @@ def validateClassifier(outfile, classifier, features, y_vars, regression):
 #classification to train classifiers on 
 #options: antibacterial, antieuk (defined as antifungal, antitumor, or cytotoxic), antifungal, cytotoxic_antitumor, antigramneg, antigrampos
 if activity == 'all':
-    classifications = ["antibacterial", "antieuk","antifungal", "cytotoxic_antitumor", "antigramneg","antigrampos"]
+    if os.path.is_file(training_set_dir + "/classifications/is_siderophore.csv"):
+        classifications = ["antibacterial", "antieuk","antifungal", "cytotoxic_antitumor", "siderophore", "ionophore","antigramneg","antigrampos"]
+    else:
+        classifications = ["antibacterial", "antieuk","antifungal", "cytotoxic_antitumor", "siderophore", "antigrampos"]
 else:
     classifications = [activity]
 #set random seed so antibacterial are consistent
@@ -209,6 +213,9 @@ feature_list = readFeatureFiles.readFeatureNames(feature_dir, feature_type_list)
 is_antibacterial = readFeatureFiles.readClassesMatrix(training_set_dir + "/classifications/is_antibacterial.csv")
 is_antifungal = readFeatureFiles.readClassesMatrix(training_set_dir + "/classifications/is_antifungal.csv")
 is_cytotoxic = readFeatureFiles.readClassesMatrix(training_set_dir + "/classifications/is_cytotoxic.csv")
+if os.path.is_file(training_set_dir + "/classifications/is_siderophore.csv"):
+    is_siderophore = readFeatureFiles.readClassesMatrix(training_set_dir + "/classifications/is_siderophore.csv")
+    is_ionophore = readFeatureFiles.readClassesMatrix(training_set_dir + "/classifications/is_ionophore.csv")
 is_unknown = readFeatureFiles.readClassesMatrix(training_set_dir + "/classifications/is_unknown.csv")
 targets_gram_pos = readFeatureFiles.readClassesMatrix(training_set_dir + "/classifications/targets_gram_pos.csv")
 targets_gram_neg = readFeatureFiles.readClassesMatrix(training_set_dir + "/classifications/targets_gram_neg.csv")
@@ -240,6 +247,14 @@ for classification in classifications:
         features = orig_features[is_not_unknown_indices,:]
     if classification == "cytotoxic_antitumor":
         y_vars = (is_cytotoxic >= 1).astype(int)
+        y_vars = y_vars[is_not_unknown_indices]
+        features = orig_features[is_not_unknown_indices,:]
+    if classification == "siderophore":
+        y_vars = (is_siderophore >= 1).astype(int)
+        y_vars = y_vars[is_not_unknown_indices]
+        features = orig_features[is_not_unknown_indices,:]
+    if classification == "ionophore":
+        y_vars = (is_ionophore >= 1).astype(int)
         y_vars = y_vars[is_not_unknown_indices]
         features = orig_features[is_not_unknown_indices,:]
     if classification == "antigramneg":

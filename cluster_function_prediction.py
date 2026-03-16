@@ -179,6 +179,7 @@ if write_features:
 
 
 #Load appropriate pretrained model
+has_siderophore_model = False
 try:
     svm_bacterial, tree_bacterial, log_bacterial = joblib.load(data_path+"trained_models/" + model_name + "_antibacterial.sav")
     svm_bacterial_prob = svm_bacterial.predict_proba(test_features)
@@ -199,6 +200,17 @@ try:
     svm_antitumor_prob = svm_antitumor.predict_proba(test_features)
     tree_antitumor_prob = tree_antitumor.predict_proba(test_features)
     log_antitumor_prob = log_antitumor.predict_proba(test_features)
+    if os.path.isfile(data_path+"trained_models/" + model_name + "_siderophore.sav"):
+        has_siderophore_model = True
+        svm_siderophore, tree_siderophore, log_siderophore = joblib.load(data_path+"trained_models/" + model_name + "_siderophore.sav")
+        svm_siderophore_prob = svm_siderophore.predict_proba(test_features)
+        tree_siderophore_prob = tree_siderophore.predict_proba(test_features)
+        log_siderophore_prob = log_siderophore.predict_proba(test_features)
+        
+        svm_ionophore, tree_ionophore, log_ionophore = joblib.load(data_path+"trained_models/" + model_name + "_ionophore.sav")
+        svm_ionophore_prob = svm_ionophore.predict_proba(test_features)
+        tree_ionophore_prob = tree_ionophore.predict_proba(test_features)
+        log_ionophore_prob = log_ionophore.predict_proba(test_features)
     
     svm_antigramneg, tree_antigramneg, log_antigramneg = joblib.load(data_path+"trained_models/" + model_name + "_antigramneg.sav")
     svm_antigramneg_prob = svm_antigramneg.predict_proba(test_features)
@@ -246,6 +258,9 @@ if not args.webserver_output:
     tools.writeProbabilitiesToFile(outfile, "antifungal or antitumor or cytotoxic", tree_antieuk_prob, log_antieuk_prob, svm_antieuk_prob)
     tools.writeProbabilitiesToFile(outfile, "antifungal", tree_antifungal_prob, log_antifungal_prob, svm_antifungal_prob)
     tools.writeProbabilitiesToFile(outfile, "antitumor or cytotoxic", tree_antitumor_prob, log_antitumor_prob, svm_antitumor_prob)
+    if has_siderophore_model:
+        tools.writeProbabilitiesToFile(outfile, "siderophore", tree_siderophore_prob, log_siderophore_prob, svm_siderophore_prob)
+        tools.writeProbabilitiesToFile(outfile, "ionophore", tree_ionophore_prob, log_ionophore_prob, svm_ionophore_prob)
     outfile.close()
 else:
     #will have format Success: \n
